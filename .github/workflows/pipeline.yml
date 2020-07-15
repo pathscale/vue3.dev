@@ -15,8 +15,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-		
-	  - name: Upload to bunnycdn
+        
+      - name: Upload to bunnycdn
         env:
           STORAGE_API_KEY: ${{ secrets.BUNNYCDN_STORAGE_API_KEY }}
           ZONE_API_KEY: ${{ secrets.BUNNYCDN_ZONE_API_KEY }}
