@@ -1,0 +1,89 @@
+{
+  "language": "Language",
+  "discord": "Join Our Discord Server",
+  "home": {
+    "title": "Home Station",
+    "subtitle": "Space discovery, battle, chat with friends, all in one",
+    "content": "Welcome to the Space Revenge game website where you can get all the current details, status, updates as well as information on early testing.",
+    "button": "Explore The Game"
+  },
+  "philosophy": {
+    "title": "Built by Gamers for Gamers",
+    "subtitle": "Our Philosophy",
+    "content1": "ZERO pay to win aspects of the game",
+    "content2": "Pure STRATEGY based PvP (imagine more like chess and less mindless clicking)",
+    "content3": "Fair play in various aspects:",
+    "content4": "- Latency hiding game mechanics to avoid low ping advantages",
+    "content5": "- Karma system to discourage bullying",
+    "button": "Visit REVENGE.GAME"
+  },
+  "community": {
+    "title": "A game that really focuses on Community & Social elements",
+    "subtitle": "Community & Social",
+    "content1": "We really emphasize the community aspect of our game and you will see the results across multiple platforms. We directly engage with potential users across Discord, Twitter and in various in-game chats. This full cycle feedback is with people who love gaming and really care what the community has to say. From art direction, game mechanics and the very sensitive topic of monetization we share our thoughts, listen to feedback and collectively brainstorm about ideas on how to make things fun and more enjoyable.",  
+    "button1": "Visit SOCIAL.SOY",
+    "button2": "Back to Top"
+  },
+  "progress": {
+    "title": "Game Progress",
+    "subtitle": "Space discovery, battle, chat with friends, all in one",
+    "text": "Space Revenge Game Progress",
+    "content": "Welcome to the Space Revenge game website where you can get all the current details, status, updates as well as information on early testing.",
+    "date": {
+      "date1": "January, 2019",
+      "date2": "February, 2019",
+      "date3":  "March, 2019",
+      "date4":  "April, 2019",
+      "date5": "Month, YYYY"
+    },
+    "detail": {
+      "detail1": "Pre-Alpha: Progress shared on Discord and Youtube. Lots of art updates as well as UI, game mechanics and other important pieces maybe gettin sneak peeks.",
+      "detail2": "Alpha-3: Battle mechanics, UI and social elements mostrly in place.",
+      "detail3": "Closed Beta-1: Closest friends of Revenge from Discord. Beta Supporter Package 1 and exclusive gifts for you early feedback.",
+      "detail4": "Closed Beta-2: Everyone who signs-up between December 25th- January 1st or buys Beta Supporter Package 2 (Exclusive Beta-2 gifts)",
+      "detail5": "Lorem ipsum dolor sit amet, consectetur adipscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "button": "TO BE CONTINUED..."
+  },
+  "faq": {
+    "title": "FAQs",
+    "subtitle": "Frequently Asked Questions",
+    "question": {
+      "question1": "How is your game different from all the other games available in the app store?",
+      "question2": "I thought this is a war game?!",
+      "question3":  "What platforms are supported?",
+      "question4": "This looks too cute for me!?",
+      "question5": "What kinda of game is this?",
+      "question6": "Turn-based?",
+      "question7": "RPG?",
+      "question8": "MMO?",
+      "question9": "I thought this game would be like King of Avalon?",
+      "question10": "Will you support vertical mode?",
+      "question11": "What are you plans to prevent bullying?",
+      "question12": "How will you block automated gameplay and 'bots'?",
+      "question13": "How will you make money????",
+      "question14": "How will you deal with trolls, people who use abusive language and other negative social elements?",
+      "question15": "How will you deal with cheaters?"
+    },
+    "answer": {
+      "answer1": "Good question! At the core of so many mobile games seems to be companies with greedy intent just trying to micro transaction monetize things like crazy. From the ground up we fair play, zero pay to win elements and tons of positive social engagement.",
+      "answer2": "Yes and no. There is certainly going to be PvP and teamplay battle elements to the game, but also adventure and social as well. We feel this caters to a larger audiance than just war war war all day. PvP when you want to and chill when you don't.",
+      "answer3": "We have builds for PC, iOS, Android, OSX and Linux. At some point if we can justify the cost we will port our game to consoles. All platforms are the same world and we hope to redefine what cross platform gaming is.",
+      "answer4": "This is great feedback and if there's a character style you feel is missing please join our Discord server and share this directly.",
+      "answer5": "Massive Online Adventure, Battle and Social is the best way to summerize. We do a lot of things unconventionally that may be hard to fully explain in one sentenance.",
+      "answer6": "Kinda. It's fast paced strategy we haven't seen in a mobile game before. Attacks happen in-sync and on a timed cycle. For example you will have 10 seconds to decide you next attack move and then the actual attack and animation sequence will take about 5 seconds. This cycle keeps rolling and it's important you don't step away.",
+      "answer7": "In the purist sense not really, but there are so many ways to customize the look of your character that some may argue that it partially is. You can choose any character type or weapon and not worry that it will impact your game. Just enjoy customizing as much as you want.",
+      "answer8": "Yes",
+      "answer9": "NO! LOL! OMG! This question exists because a lot of the roots for what the game SHOULD NOT BE are inspired by that game. However, there are a few things that may look familar like the preview chat window position. For all the bad things with King of Avalon it does have a few things it did implement well enough to build a community.​WHY!? You can not have a build and battle game that is also fair play. Those types of games depend on making people wait or spend money to upgrade. In a pure strategy game there's no castle to upgrade. You slowly refine your skill over time until you are a champion :)",
+      "answer10": "We have mock-up UI plans for the entire game to be vertical mode friendly. (For left and right hand players)",
+      "answer11": "It's very important that new players and existing players don't get abused by bullying. To step back let's try to define how you can have a fight, but not bullying. In our opinion fighting when mutually agreed and evenly matched is good. Bullying comes into play when people who have a lot more 'power' or experience can attack players who are lower capability or 'power'. Since our game doesn't have power aspects this is really limited to experience and skill. Over time your will increase your tier and skill in the game. We will have karma mechanics to discourage experienced players from attacking new players as well as one player singling out a single person to repeatedly harass or attack them.",
+      "answer12": "From the purist gamer in me I get EXTREMELY upset about automated gameplay and bots. This really kills so many online games. We plan to use various anti-bot mechanisms like CAPTCHA and those easy to complete slide the puzzle tests. It will be subtle and hopefully integrated in a fun way :)",
+      "answer13": "Character customizations, pets and e-sports",
+      "answer14": "We will have extensive report and filtering. We plan to use a multi-tier approach to handling reported players. Starting with a community of moderators and ending with official support. Every community is different and it's important that players find a place they feel comfortable. Some groups will be ok with profanity and others won't. We will have each clearly labled so you rarely make an accident and get mixed up with the wrong crowd.",
+      "answer15": "Unlike other games I don't think it's really effective to 'ban' cheaters. They just create new accounts and the root problem is never solved. Once we detect abusive or cheater accounts we will simply nerf them. Our karma system is also tied to luck elements of the game. Each cycle you can have good rolls or bad rolls. If you have done enough negative things in the game like bullying or cheating you will effectively nerf yourself. Every roll will be 1 and you'll move around like a turtle. We may also put a stink cloud or bad aura around toxic players so others have an early visual warning to avoid them. (Which will be easy because they will be so slow)"  
+    }
+  },
+  "cookies": "We use cookies and other similar technologies to improve your experience on our services, personalize advertising and recommend content that interests you. By using our services, you consent to such monitoring. For more information, see our",
+  "policy": "new privacy policy",
+  "agree": "Agree"
+}

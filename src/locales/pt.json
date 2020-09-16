@@ -1,0 +1,89 @@
+{
+  "language": "Lingua",
+  "discord": "Junte-se ao nosso Discord",
+  "home": {
+    "title": "Comecar",
+    "subtitle": "Descubra o Espaco, lute, converse com amigos, tudo em um",
+    "content": "Bem-vindo ao site do jogo Space Revenge, onde voce pode obter todos os detalhes atuais, status e atualizacoes, bem como informacoes sobre os primeiros testes.",
+    "button": "Explore o jogo"
+  },
+  "philosophy": {
+    "title": "Criado por gamers para gamers",
+    "subtitle": "Nossa filosofia",
+    "content1": "Pagamento ZERO para ganhar skins de jogo",
+    "content2": "ESTRATEGIA Pura baseada em PvP (imagine mais xadrez e menos cliques estupidos)",
+    "content3": "Fair play em varios aspectos:",
+    "content4": "- Jogabilidade escondendo latencia para evitar vantagens de baixo ping",
+    "content5": "- Sistema de carma para diminuir o bullying",
+    "button": "Visite REVENGE.GAME"
+  },
+  "community": {
+    "title": "Um jogo que realmente se concentra na comunidade e nos elementos sociais",
+    "subtitle": "Comunidade e Social",
+    "content1": "Nos realmente enfatizamos o aspecto comunitario de nosso jogo e voce vera os resultados em varias plataformas. Nos nos envolvemos diretamente com usuarios em potencial por meio do Discord, Twitter e em varios bate-papos no jogo. Este feedback completo e para pessoas que amam jogos e realmente se preocupam com o que a comunidade tem a dizer. Desde a direcao de arte, a mecanica do jogo e o delicado tema da monetizacao, compartilhamos nossos pensamentos, ouvimos os comentarios e trocamos ideias sobre como tornar as coisas mais divertidas e agradaveis ​​",  
+    "button1": "Visite SOCIAL.SOY",
+    "button2": "De volta ao topo"
+  },
+  "progress": {
+    "title": "Progresso do jogo",
+    "subtitle": "Descubra o espaco, lute e converse com amigos, tudo em um",
+    "text": "Progresso do jogo Space Revenge",
+    "content": "Bem-vindo ao site do jogo Space Revenge, onde voce pode obter todos os detalhes atuais, status e atualizacoes, bem como informacoes sobre os primeiros testes.",
+    "date": {
+      "date1": "Janeiro, 2019",
+      "date2": "Fevereiro, 2019",
+      "date3": "Marco, 2019",
+      "date4": "Abril, 2019",
+      "date5": "Meu, AAAA"
+    },
+    "detail": {
+      "detail1": "Pre-Alpha: Progresso compartilhado no Discord e no Youtube. Muitas atualizacoes de arte, bem como a interface do usuario, a mecanica do jogo e outras pecas importantes, podem dar uma espiada.",
+      "detail2": "Alpha-3: Mecanica de batalha, interface de usuario e elementos sociais no local.",
+      "detail3": "Beta-1 fechado: vinganca dos amigos mais proximos de Discord. Contribuidor 1 Beta Pack e brindes exclusivos para seu feedback inicial",
+      "detail4": "Beta-2 fechado: todos que se inscreverem entre 25 de dezembro e 1º de janeiro ou comprarem o Pacote de Apoiador Beta 2 (presentes exclusivos do Beta-2)",
+      "detail5": "Lorem ipsum dolor sit amet, consectetur adipscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "button": "CONTINUA..."
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Perguntas frequentes",
+    "question": {
+      "question1": "Como o seu jogo difere de todos os outros jogos disponiveis na app store?",
+      "question2": "Achei que fosse um jogo de guerra ?!",
+      "question3": "Quais plataformas sao suportadas?",
+      "question4": "Isso parece muito fofo para mim !?",
+      "question5": "Que tipo de jogo e esse?",
+      "question6": "Por turnos?",
+      "question7": "RPG?",
+      "question8": "MMO?",
+      "question9": "Achei que esse jogo seria como o King of Avalon.",
+      "question10": "Ele suportara o modo retrato?",
+      "question11": "Que planos voce tem para prevenir o bullying?",
+      "question12": "Como voce bloqueara o jogo automatizado e 'bots'?",
+      "question13": "Como voce vai ganhar dinheiro ????",
+      "question14": "Como voce lidara com trolls, pessoas que usam linguagem abusiva e outros elementos sociais negativos?",
+      "question15": "Como voce lidara com trapaceiros?"
+    },
+    "answer": {
+      "answer1": "Boa pergunta! No centro de tantos jogos para celular parece haver empresas com intencoes gananciosas, apenas tentando microtransacoes para monetizar coisas como um louco. Do zero, jogamos limpo, pagamos zero para ganhar itens e toneladas de engajamento social positivo.",
+      "answer2": "Sim e nao. Certamente havera elementos de PvP e batalha em equipe no jogo, mas tambem aventura e social. Acreditamos que isso atende a um publico mais amplo do que apenas guerra guerra guerra o dia todo. PvP quando quiser e relaxe quando nao quiser.",
+      "answer3": "Temos compilacoes para PC, iOS, Android, OSX e Linux. Em algum momento, se pudermos justificar o custo, levaremos nosso jogo para os consoles. Todas as plataformas sao do mesmo mundo e esperamos redefinir o que sao jogos multiplataforma.",
+      "answer4": "Esta e uma otima resposta e se houver um estilo de personagem que voce acha que esta faltando, entre em nosso servidor Discord e compartilhe-o diretamente.",
+      "answer5": "Massive Online Adventure, Battle and Social e a melhor maneira de descreve-lo. Fazemos muitas coisas nao convencionais que podem ser dificeis de explicar completamente em uma frase.",
+      "answer6": "Um pouco. E uma estrategia acelerada que nao vimos antes em um jogo para celular. Os ataques ocorrem sincronizados e em ciclo cronometrado. Por exemplo, voce tera 10 segundos para decidir seu proximo movimento de ataque e, em seguida, o ataque real e a sequencia de animacao levarao aproximadamente 5 segundos. Este ciclo continua funcionando e e importante nao se afastar.",
+      "answer7": "Nao exatamente no sentido purista, mas ha tantas maneiras de personalizar a aparencia de seu personagem que alguns podem argumentar que e parcialmente assim. Voce pode escolher qualquer tipo de personagem ou arma e nao se preocupe se isso afetar seu jogo. Apenas divirta-se personalizando tudo o que voce deseja.",
+      "answer8": "Sim",
+      "answer9": "NaO! Hahaha OMG! Esta questao existe porque muitas das raizes do que o jogo NaO DEVE SER sao inspiradas nele. No entanto, existem algumas coisas que podem parecer familiares, como a posicao da janela de visualizacao do bate-papo. Apesar de todas as coisas ruins com King of Avalon, ele tem algumas coisas que eu implementei bem o suficiente para construir uma comunidade. Voce nao pode ter um jogo de construcao e batalha que tambem seja um jogo justo. Esses tipos de jogos dependem de fazer as pessoas esperar ou gastar dinheiro para atualizar. Em um jogo de estrategia pura, nao ha castelo para melhorar. Aos poucos, voce aprimora suas habilidades ao longo do tempo ate se tornar um campeao :)",
+      "answer10": "Temos planos de simulacao de interface do usuario para todo o jogo para oferecer suporte ao modo retrato. (Para jogadores destros e esquerdos)",
+      "answer11": "E muito importante que novos jogadores e jogadores existentes nao sejam abusados ​​por bullying. Para dar um passo atras, vamos tentar definir como voce pode lutar, mas nao intimidar. Em nossa opiniao, lutar quando combinado mutuamente e equilibrado e bom. O assedio entra em jogo quando pessoas que tem muito mais 'poder' ou experiencia podem atacar jogadores que tem menos habilidade ou 'poder'. Como nosso jogo nao tem aspectos de poder, isso e realmente limitado à experiencia e habilidade. Com o tempo, seu nivel e habilidade no jogo irao aumentar. Teremos mecanicas de carma para desencorajar jogadores experientes de atacar novos jogadores, bem como um jogador que seleciona uma unica pessoa para assedia-los ou ataca-los repetidamente.",
+      "answer12": "Do purista jogador que ha em mim, estou EXTREMAMENTE incomodado com jogos automatizados e bots. Isso realmente mata muitos jogos online. Planejamos usar varios mecanismos anti-bot como CAPTCHA e aqueles faceis de completar com testes de slide de quebra-cabeca. Sera sutil e, espero, se integrar de uma forma divertida :)",
+      "answer13": "Personalizacao de personagens, mascotes e esportes eletrônicos",
+      "answer14": "Teremos muitos relatorios e filtros. Planejamos usar uma abordagem de varias camadas para lidar com jogadores denunciados. Comecando com uma comunidade de moderadores e terminando com o suporte oficial. Cada comunidade e diferente e e importante que os jogadores encontrem um lugar onde se sintam confortaveis. Alguns grupos concordarao com palavroes e outros nao. Teremos cada um claramente identificado para que voce raramente tenha um acidente e se misture com as pessoas erradas.",
+      "answer15": "Ao contrario de outros jogos, nao acho que seja realmente eficaz 'banir' os trapaceiros. Eles apenas criam novas contas e o problema raiz nunca e resolvido. Assim que detectarmos contas abusivas ou fraudulentas, simplesmente as enfraqueceremos. Nosso sistema de carma tambem esta ligado aos elementos de sorte do jogo. Em cada ciclo, voce pode ter rolos bons ou ruins. Se voce ja fez coisas negativas o suficiente no jogo, como bullying ou trapaca, voce se enfraquecera efetivamente. Cada lancamento sera 1 e voce se movera como uma tartaruga. Tambem podemos colocar uma nuvem fetida ou aura ruim ao redor de jogadores toxicos para que outros tenham um aviso visual precoce para evita-los. (Isso sera facil porque eles serao muito lentos)"
+    }
+  },
+  "cookies": "Usamos cookies e outras tecnologias semelhantes para melhorar a sua experiencia nos nossos servicos, personalizar a publicidade e recomendar conteudos do seu interesse. Ao usar nossos servicos, voce concorda com tal monitoramento. Para obter mais informacoes, consulte nosso",
+  "policy": "nova politica de privacidade",
+  "agree": "De acordo"
+}

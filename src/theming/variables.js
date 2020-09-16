@@ -1,0 +1,28 @@
+const variables = {
+  '$button-background-color': '#4958f5',
+  '$button-color': 'white',
+  '$footer-background-color': 'black',
+  '$footer-padding': '10px',
+  '$grey-lighter': '#FBFBFB',
+  '$hero-body-padding': '0',
+  '$navbar-background-color': 'black',
+  '$navbar-dropdown-arrow': 'white',
+  '$navbar-height': '6em',
+  '$navbar-item-active-color': 'white',
+  '$navbar-item-color': '#8b98cc',
+  '$navbar-item-hover-background-color': 'rgba(255, 255, 255, 0%)',
+  '$navbar-item-hover-color': '#6474b0',
+  '$navbar-item-img-max-height': '4em',
+  '$primary-dark': "#c3811d",
+  '$primary-light': "#fdc062",
+  '$primary': "#fba625",
+  '$section-padding': '0.5rem 1.5rem',
+  '$size-7': '0.875em',
+  '$subtitle-family': 'MetrocleanExtrabold',
+  '$title-family': 'MetrocleanExtrabold',
+  '$turquoise-h': "317",
+  '$turquoise-l': "35%",
+  '$turquoise-s': "62%",
+}
+
+export default variables

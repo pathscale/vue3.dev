@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'MetrocleanExtrabold';
+  src: url('../fonts/metroclean-extrabold-webfont.woff2');
+}
+
+@font-face {
+  font-family: 'MetrocleanMedium';
+  src: url('../fonts/metroclean-medium-webfont.woff2');
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: white;
+  display: block !important;
+  animation: fadein 2s;
+	margin: 0;
+  font-family: MetrocleanMedium !important;
+  text-rendering: optimizeLegibility;
+}
+
+.navbar-burger span {
+	width: 30px !important;
+  height: 3px !important;
+  background: white;
+}
+
+
+
+.is-absolute {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.is-relative {
+  position: relative;
+}
+
+.is-100 {
+  width: 100%;
+}
+
+.control.has-icons-right .icon.is-right {
+  background-color: var(--blm-prim);
+  border-radius: 0 var(--blm-input-radius) var(--blm-input-radius) 0;
+}
