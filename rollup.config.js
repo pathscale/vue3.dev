@@ -66,7 +66,7 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
     ' Mach IV Motors is here for all your Kawasaki NOS parts and classic bike needs. We specialize in vintage Japanese, American and European motorcycles. | Mach4motors'
   const socialTitle =
     'We specialize in vintage Japanese, American and European motorcycles. | Mach4motors'
-  const url = 'https://mach4motors--com.b-cdn.net/'
+  const url = 'https://vue3--dev.b-cdn.net/'
   const imageUrl =
     'http://www.mach4motors.com/_/rsrc/1389820088684/home/CL_360.jpg?height=630&width=1200'
 
@@ -102,7 +102,7 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
     <script>
     const $__CDN_LIST = [
       window.location.origin,
-      ${prod ? '"https://mach4motors--com.b-cdn.net/"' : ''}
+      ${prod ? '"https://vue3--dev.b-cdn.net/"' : ''}
     ];
     /**!
      * PathScale CONFIDENTIAL
