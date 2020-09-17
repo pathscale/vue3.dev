@@ -1,19 +1,13 @@
 <script>
 // eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
-import { VColumns, VColumn, VSidebar} from '@pathscale/vue3-ui'
+import { VColumns, VColumn } from '@pathscale/vue3-ui'
 import { ref, watchEffect, computed, reactive } from 'vue'
 import { useI18n } from "vue-composable";
 
 import {
   Cookie,
   Footer,
-  ForgotPassword,
   Navbar,
-  ResetPassword,
-  SubNavbar,
-  SubscribeBar,
-  SignIn,
-  SignUp,
   Sidebar
 } from '../components'
 
@@ -23,13 +17,7 @@ const Component = {
     VColumns,
     Cookie,
     Footer,
-    ForgotPassword,
     Navbar,
-    ResetPassword,
-    SubNavbar,
-    SubscribeBar,
-    SignIn,
-    SignUp,
     Sidebar
   },
   setup() {
@@ -81,13 +69,6 @@ const Component = {
 
     setDocHeight();
 
-    const redirectTo = (path) => {
-      showLanguageMenu.value = false
-      isMenuOpen.value = false 
-      window.history.replaceState(null, null, path)
-      pathname.value = location.pathname.slice(1);
-    }
-
     const languages = {
         es: "es-ES",
         en: "en-EN",
@@ -104,7 +85,6 @@ const Component = {
       isMenuOpen,
       languages,
       pathname,
-      redirectTo,
       showLanguageMenu,
       toggleLanguageMenu,
     }
@@ -115,28 +95,9 @@ export default Component
 </script>
 <template>
   <div>
-    <navbar @showSignIn="state.showSignIn = !state.showSignIn; state.showSignUp = false"
-            @showSignUp="state.showSignUp = !state.showSignUp; state.showSignIn = false"
-            @openSidebar="state.open = true" 
-            @closeAuth="state.showSignIn = false; state.showSignUp = false"
-            :is-auth-active="state.showSignIn ||state.showSignUp " />
-    <sign-in :show="state.showSignIn" @showSignIn="state.showSignIn = false" />
-    <sign-up :show="state.showSignUp" @showSignUp="state.showSignUp = false" />
-    <subscribe-bar />
-    <sub-navbar />
-    <sidebar :open="state.open" @close="state.open = false" />
+    <navbar />
+    <sidebar />
     <router-view />
     <Footer />
   </div>
 </template>
-
-<style>
-.is-visible {
-  height: 40px;
-  padding-top: 10px;
-}
-.is-hidden {
-  height: 0;
-  padding-top: 0;
-}
-</style>

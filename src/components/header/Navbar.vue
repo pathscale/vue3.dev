@@ -30,7 +30,7 @@ export default Component;
           <i class="icon icon-menu has-text-white is-large" />
         </a>
       </v-navbar-item>
-      <v-navbar-item tag="router-link" :to="{ name: 'home' }">
+      <v-navbar-item>
         <img src="http://www.mach4motors.com/_/rsrc/1389820850337/config/customLogo.gif?revision=2" alt="space revenge logo" />
       </v-navbar-item>
     </template>
@@ -41,10 +41,7 @@ export default Component;
     </template>
     <template #end>
       <div class="is-flex">
-        <v-navbar-item class="has-text-white is-aligned-center" 
-                       :class="{'has-border-botton': router.currentRoute.value.name === 'cart' && !isAuthActive}" 
-                       tag="router-link" :to="{ name: 'cart' }"
-                       @click="emit('closeAuth')">
+        <v-navbar-item class="has-text-white is-aligned-center">
           <i class="icon icon-cart has-text-white is-medium" />
           <p class="ml-2">
             My Cart (15)
