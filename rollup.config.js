@@ -101,7 +101,7 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
     <link rel="preconnect" href="${url}">    <script>
     const $__CDN_LIST = [
       window.location.origin,
-      ${prod ? '"https://tailwind1.b-cdn.net/"' : ''}
+      ${prod ? '"https://vue3--dev.b-cdn.net/"' : ''}
     ];
 
     /**!
