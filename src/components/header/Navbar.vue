@@ -1,78 +1,111 @@
 <script>
 // eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
-import { VNavbar, VNavbarItem, VNavbarDropdown, VInput, VColumns, VColumn } from "@pathscale/vue3-ui"
+import { VButton, VNavbar, VNavbarItem, VNavbarDropdown} from "@pathscale/vue3-ui"
 import { useI18n } from "vue-composable";
 
-import { ref } from "vue";
-import { useRouter } from "vue-router";
+import { ref, watchEffect } from "vue"
 
-import logo from '../../assets/images/logo.jpeg'
 
 const Component = {
-  components: { VNavbar, VNavbarItem, VNavbarDropdown, VInput, VColumns, VColumn },
-  emits: ['showSignIn', 'showSignUp', 'openSidebar', 'closeAuth'],
-  props: ['isAuthActive'],
-  setup(props, { emit }) {
+  props: ['activeItem', 'changeLanguage', 'isActive', 'languages', 'toggleLanguageMenu', 'showLanguageMenu', 'isMenuOpen'],
+  components: {    
+    VButton, VNavbar, VNavbarItem, VNavbarDropdown
+  },
+  setup(props, {emit}) {
+    const navbarColor = [
+      'transparent',
+      '#24073b',
+      '#21073B',
+      '#1E073B',
+      '#18073b',
+      '#14073b',
+      '#120b3e',
+      '#111743',
+    ]
+
+     const languages = {
+        es: "es-ES",
+        en: "en-EN",
+        pt: "pt-BR"
+    }
+
+    const isMenuOpened = ref(props.isMenuOpen);
+    const isDropdownOpen = ref(false);
+
     const intl = useI18n();
-    const router = useRouter();
-    const isLogged = ref(false);
-    return { intl, logo, emit, isLogged, router }
+
+     watchEffect(() => {
+      isMenuOpened.value = props.isMenuOpen;
+    })
+
+    watchEffect(() => {
+      emit('isMenuOpened', isMenuOpened.value)
+    })
+    
+    return { 
+     intl,
+     isDropdownOpen,
+     isMenuOpened,
+     languages,
+     navbarColor,
+    }
   }
-}
-export default Component;
+ }
+export default Component
 </script>
 
 <template>
-  <v-navbar transparent>
-    <template #brand>
-      <v-navbar-item class="px-3">
-        <a @click="emit('openSidebar')" :is-active="false" class="has-text-white is-size-3">
-          <i class="icon icon-menu has-text-white is-large" />
-        </a>
-      </v-navbar-item>
-      <v-navbar-item>
-        <img src="http://www.mach4motors.com/_/rsrc/1389820850337/config/customLogo.gif?revision=2" alt="space revenge logo" />
-      </v-navbar-item>
-    </template>
-    <template #start>
-      <v-navbar-item href="#">
-        <v-input name="search" has-icons-right right-icon="&#128269;" size="is-medium" placeholder="Quick Search" class="has-white-black has-background-grey-lighter" />
-      </v-navbar-item>
-    </template>
-    <template #end>
-      <div class="is-flex">
-        <v-navbar-item class="has-text-white is-aligned-center">
-          <i class="icon icon-cart has-text-white is-medium" />
-          <p class="ml-2">
-            My Cart (15)
-          </p>
-        </v-navbar-item>
-        <v-navbar-item class="has-text-white is-aligned-center">
-          <i class="icon icon-face-agent has-text-white" /> 
-          <p class="ml-2">
-            Customer <br /> Support
-          </p>
-        </v-navbar-item>
-        <v-navbar-item class="has-text-white mr-6 is-aligned-center" :class="{'has-border-botton': isAuthActive}">
-          <i class="icon icon-account-circle has-text-white" />
-          <div>
-            <p class="ml-2" @click="emit('showSignIn')">
-              Sign In /
-            </p>
-            <p class="ml-2" @click="emit('showSignUp')">
-              Sign Up
-            </p>
-          </div>
+  <div class="big-menu" :style="`background-color: ${navbarColor[activeItem]}`">
+    <div class="hidden-language-menu" 
+         :style="`height: ${showLanguageMenu ? 40 : 0}px`">
+      <div class="is-flex pt-2">
+        <v-navbar-item 
+          v-for="l in intl.locales.value" :key="l"
+          :value="l"
+          class="mx-3 is-size-6 has-text-centered"
+          @click="changeLanguage(l)">
+          {{
+            languages[l]
+          }}
         </v-navbar-item>
       </div>
-    </template>
-  </v-navbar>
+    </div>
+    <v-navbar transparent v-model="isMenuOpened">
+      <template #brand>
+        <v-navbar-item class="ml-6">
+          <img alt="pathscale logo" />
+        </v-navbar-item>
+      </template>
+      <template #end>
+        <v-navbar-item
+          class="mx-3 my-5 is-size-5 has-text-centered"
+          :class="{'is-active-item': isActive(0) }"
+          :active="isActive(0)">
+          {{ intl.$ts('home.title') }}
+        </v-navbar-item>
+        <v-navbar-item
+          class="mx-3 my-5 is-size-5 has-text-centered"
+          :class="{'is-active-item': isActive(6) }"
+          :active="isActive(6)">
+          {{ intl.$ts('project.subtitle') }}
+        </v-navbar-item>
+        <v-navbar-item
+          class="mx-3 my-5 is-size-5 has-text-centered"
+          :class="{'is-active-item': isActive(7) }"
+          :active="isActive(7)">
+          {{ intl.$ts('history.subtitle') }}
+        </v-navbar-item>
+        <v-navbar-item
+          class="mx-3 my-5 is-size-5 has-text-centered"
+          @click="toggleLanguageMenu">
+          {{ intl.$ts(`language`) }}: {{ languages[intl.locale.value] }}
+        </v-navbar-item>
+        <v-navbar-item tag="div" class="is-hidden-desktop is-hidden-widescreen is-hidden-fullhd mx-3 my-5 is-size-5 has-text-centered">
+          <v-button tag="a" href="mailto:sales@pathscale.com?&subject=PathScale%20Multi-CDN" target="_blank" class="mt-6 is-size-6 is-size-7-touch " rounded type="is-primary" size="is-medium">
+            <strong>{{ intl.$ts('multi_cdn.button') }}</strong>
+          </v-button>
+        </v-navbar-item>
+      </template>
+    </v-navbar>
+  </div>
 </template>
-<style scoped>
-  .has-border-botton {
-    border-bottom: 5px solid var(--blm-prim);
-  }
-
-</style>
-
-
