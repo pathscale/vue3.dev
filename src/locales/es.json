@@ -1,89 +1,24 @@
 {
-  "language": "Lenguaje",
-  "discord": "Unete a nuestro Discord",
+  "language": "Language",
   "home": {
-    "title": "Inicio",
-    "subtitle": "Decubre el Espacio, batalla, charla con amigos, todo en uno",
-    "content": "Bienvenido al sitio web del juego Space Revenge, donde puede obtener todos los detalles actuales, el estado y las actualizaciones, asi como informacion sobre las primeras pruebas.",
-    "button": "Explora El Juego"
+    "title": "Revenge.Game",
+    "content": "Welcome to the Revenge game website where you can get all the current details, status, updates as well as information on early testing and joining our community on Discord.",
+    "button": "Explore The Game"
   },
-  "philosophy": {
-    "title": "Creado por jugadores para jugadores",
-    "subtitle": "Nuestra Filosofia",
-    "content1": "Pago CERO para ganar aspectos del juego",
-    "content2": "ESTRATEGIA pura basada en PvP(imagina mas ajedrez y menos clics sin sentido)",
-    "content3": "Juego limpio en varios aspectos:",
-    "content4": "- Mecanica de juego ocultando latencia para evitar ventajas de ping bajo",
-    "content5": "- Sistema de karma para disminuir el acoso",
-    "button": "Visita REVENGE.GAME"
+  "project": {
+    "title": "Current Projects"
   },
-  "community": {
-    "title": "Un juego que realmente se enfoca en elementos comunitarios y sociales",
-    "subtitle": "Comunidad y Social",
-    "content1": "Realmente enfatizamos el aspecto de comunidad de nuestro juego y veras los resultados en multiples plataformas. Nos relacionamos directamente con usuarios potenciales a traves de Discord, Twitter y en varios chats en el juego. Esta retroalimentacion de ciclo completo es para personas que aman los juegos y realmente se preocupan por lo que la comunidad tiene que decir. Desde la direccion de arte, la mecanica del juego y el tema tan delicado de la monetizacion, compartimos nuestros pensamientos, escuchamos los comentarios y compartimos ideas sobre como hacer las cosas mas divertidas y agradables ",  
-    "button1": "Visita SOCIAL.SOY",
-    "button2": "Ir al Inicio"
+  "resources": {
+    "title": "Game Resources",
+    "subtitle": "A game that really focuses on Community & Social elements",
+    "content1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ornare mi. Vestibulum finibus, mi iaculis vulputate vehicula, nisl nunc venenatis nisl, id fringilla turpis diam eget dolor. Cras lobortis lectus nibh, eu facilisis sapien suscipit sed",  
+    "button1": "VISIT SOCIAL.SOY",
+    "button2": "Back to Top",
+    "button3": "Full PvE Calculator",
+    "button4": "Quick PvE Calculator",
+    "button5": "Lame PvPCalculator"
   },
-  "progress": {
-    "title": "Progreso del juego",
-    "subtitle": "Descubrimiento del espacio, batalla, y charla con amigos, todo en uno",
-    "text": "Progreso del juego Space Revenge",
-    "content": "Bienvenido al sitio web del juego Space Revenge, donde puede obtener todos los detalles actuales, el estado y las actualizaciones, asi como informacion sobre las primeras pruebas.",
-    "date": {
-      "date1": "Enero, 2019",
-      "date2": "Febrero, 2019",
-      "date3": "Marzo, 2019",
-      "date4": "Abril, 2019",
-      "date5": "Mes, AAAA"
-    },
-    "detail": {
-      "detail1": "Pre-Alpha: Progreso compartido en Discord y Youtube. Muchas actualizaciones de arte, asi como la interfaz de usuario, la mecanica del juego y otras piezas importantes, tal vez obtengan adelantos.",
-      "detail2": "Alpha-3: Mecanica de batalla, interfaz de usuario y elementos sociales en su lugar.",
-      "detail3": "Beta-1 cerrada: amigos mas cercanos de Revenge from Discord. Paquete Beta de Colaborador 1 y obsequios exclusivos para sus comentarios iniciales",
-      "detail4": "Beta-2 cerrada: todos los que se registren entre el 25 de diciembre y el 1 de enero o compren el Paquete de Colaborador Beta 2 (regalos exclusivos de Beta-2)",
-      "detail5": "Lorem ipsum dolor sit amet, consectetur adipscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    "button": "CONTINUARÁ..."
-  },
-  "faq": {
-    "title": "Preguntas frecuentes",
-    "subtitle": "Preguntas frecuentes",
-    "question": {
-      "question1": "¿En que se diferencia su juego de todos los demas juegos disponibles en la tienda de aplicaciones?",
-      "question2": "¡¿Pense que esto era un juego de guerra ?!",
-      "question3":  "What platforms are supported?",
-      "question4": "¿¡Esto se ve demasiado lindo para mi !?",
-      "question5": "¿Que clase de juego es este?",
-      "question6": "¿Por turnos?",
-      "question7": "RPG?",
-      "question8": "MMO?",
-      "question9": "Pense que este juego seria como King of Avalon.",
-      "question10": "¿Apoyara el modo vertical?",
-      "question11": "¿Que planes tiene para prevenir el acoso escolar?",
-      "question12": "¿Como bloquearas el juego automatizado y los 'bots'?",
-      "question13": "¿¿¿¿Como vas a ganar dinero????",
-      "question14": "¿Como lidiaras con los trolls, las personas que usan un lenguaje abusivo y otros elementos sociales negativos?",
-      "question15": "¿Como lidiaras con los tramposos?"
-    },
-    "answer": {
-      "answer1": "¡Buena pregunta! En el centro de tantos juegos moviles parece haber empresas con intenciones codiciosas que solo intentan realizar micro transacciones para monetizar cosas como locas. Desde cero, jugamos limpio, pagamos cero para ganar elementos y toneladas de participacion social positiva.",
-      "answer2": "Si y no. Ciertamente habra elementos PvP y batalla en equipo en el juego, pero tambien aventuras y sociales. Creemos que esto atiende a un publico mas amplio que solo guerra guerra guerra todo el dia. PvP cuando quieras y relajate cuando no.",
-      "answer3": "Tenemos compilaciones para PC, iOS, Android, OSX y Linux. En algun momento, si podemos justificar el costo, portaremos nuestro juego a las consolas. Todas las plataformas son el mismo mundo y esperamos redefinir que es el juego multiplataforma.",
-      "answer4": "Esta es una gran respuesta y si hay un estilo de personaje que cree que falta, unase a nuestro servidor de Discord y compartalo directamente.",
-      "answer5": "Massive Online Adventure, Battle y Social es la mejor manera de describirlo. Hacemos muchas cosas de manera poco convencional que pueden ser dificiles de explicar completamente en una oracion.",
-      "answer6": "Un poco. Es una estrategia de ritmo rapido que no hemos visto antes en un juego movil. Los ataques ocurren sincronizados y en un ciclo cronometrado. Por ejemplo, tendra 10 segundos para decidir su proximo movimiento de ataque y luego el ataque real y la secuencia de animacion tomara aproximadamente 5 segundos. Este ciclo sigue funcionando y es importante que no te alejes.",
-      "answer7": "En el sentido purista no realmente, pero hay tantas formas de personalizar el aspecto de tu personaje que algunos pueden argumentar que lo es parcialmente. Puedes elegir cualquier tipo de personaje o arma y no te preocupes de que afecte tu juego. Simplemente disfruta personalizando todo lo que quieras.",
-      "answer8": "Si",
-      "answer9": "¡NO! Jajaja ¡DIOS MIO! Esta pregunta existe porque muchas de las raices de lo que el juego NO DEBE SER estan inspiradas en ese juego. Sin embargo, hay algunas cosas que pueden parecer familiares como la posicion de la ventana de chat de vista previa. A pesar de todas las cosas malas con King of Avalon, tiene algunas cosas que implemento lo suficientemente bien como para construir una comunidad. No puedes tener un juego de construccion y batalla que tambien sea un juego limpio. Ese tipo de juegos depende de hacer que la gente espere o gaste dinero para actualizar. En un juego de estrategia pura, no hay castillo para mejorar. Poco a poco refinas tu habilidad con el tiempo hasta que seas un campeon :)",
-      "answer10": "Tenemos planes de interfaz de usuario de maquetas para que todo el juego sea compatible con el modo vertical. (Para jugadores de mano izquierda y derecha)",
-      "answer11": "Es muy importante que los jugadores nuevos y los jugadores existentes no sean abusados ​​por la intimidacion. Para dar un paso atras, intentemos definir como se puede pelear, pero no intimidar. En nuestra opinion, luchar cuando se acuerda mutuamente y se empareja uniformemente es bueno. El acoso entra en juego cuando las personas que tienen mucho mas 'poder' o experiencia pueden atacar a jugadores que tienen menor capacidad o 'poder'. Dado que nuestro juego no tiene aspectos de poder, esto se limita realmente a la experiencia y la habilidad. Con el tiempo, aumentara su nivel y habilidad en el juego. Tendremos mecanicas de karma para disuadir a los jugadores experimentados de atacar a nuevos jugadores, asi como un jugador que seleccione a una sola persona para acosarlos o atacarlos repetidamente.",
-      "answer12": "Desde el jugador purista que hay en mi, me molesta EXTREMADAMENTE el juego automatizado y los bots. Esto realmente mata a tantos juegos en linea. Planeamos usar varios mecanismos anti-bot como CAPTCHA y aquellos faciles de completar con las pruebas de deslizamiento del rompecabezas. Sera sutil y con suerte se integrara de una manera divertida :)",
-      "answer13": "Personalizaciones de personajes, mascotas y deportes electronicos",
-      "answer14": "Tendremos amplio informe y filtrado. Planeamos utilizar un enfoque de varios niveles para manejar a los jugadores denunciados. Comenzando con una comunidad de moderadores y terminando con soporte oficial. Cada comunidad es diferente y es importante que los jugadores encuentren un lugar en el que se sientan comodos. Algunos grupos estaran de acuerdo con las blasfemias y otros no. Tendremos cada uno claramente etiquetado para que rara vez tenga un accidente y se mezcle con la gente equivocada.",
-      "answer15": "A diferencia de otros juegos, no creo que sea realmente eficaz 'prohibir' a los tramposos. Simplemente crean nuevas cuentas y el problema de raiz nunca se resuelve. Una vez que detectemos cuentas abusivas o tramposas, simplemente las debilitaremos. Nuestro sistema de karma tambien esta ligado a elementos de suerte del juego. En cada ciclo puedes tener buenos rollos o malos rollos. Si ha hecho suficientes cosas negativas en el juego, como intimidar o hacer trampa, efectivamente se debilitara. Cada tirada sera 1 y te moveras como una tortuga. Tambien podemos poner una nube fetida o un aura mala alrededor de los jugadores toxicos para que otros tengan una advertencia visual temprana para evitarlos. (Que sera facil porque seran muy lentos)"
-    }
-  },
-  "cookies": "Utilizamos cookies y otras tecnologias similares para mejorar su experiencia en nuestros servicios, personalizar la publicidad y recomendar contenido que le interese. Al utilizar nuestros servicios, usted da su consentimiento para dicha supervision. Para obtener mas informacion, consulte nuestro",
-  "policy": "nueva politica de privacidad",
-  "agree": "De acuerdo"
+  "cookies": "Utilizamos cookies y otras tecnologías similares para mejorar su experiencia en nuestros servicios, personalizar la publicidad y recomendar contenido que le interese. Al utilizar nuestros servicios, usted da su consentimiento para dicha supervisión. Para obtener más información, consulte nuestro",
+  "policy": "nueva política de privacidad",
+  "agree": "Acepto"
 }

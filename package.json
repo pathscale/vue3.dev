@@ -85,6 +85,6 @@
     "vue": "^3.0.0-rc.9",
     "vue-composable": "1.0.0-beta.5",
     "vue-eslint-parser": "^7.1.0",
-    "vue-router": "^4.0.0-beta.7"
+    "vue3-carousel": "^0.1.4"
   }
 }

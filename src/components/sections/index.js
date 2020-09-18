@@ -1,0 +1,5 @@
+export { default as HomeSection } from "./Home.vue"
+export { default as ProjectSection } from "./Project.vue"
+export { default as ResourcesSection } from "./Resources.vue"
+export { default as FaqSection } from "./Faq.vue"
+export { default as ProgressSection } from "./Progress.vue"
