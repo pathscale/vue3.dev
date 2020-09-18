@@ -281,39 +281,39 @@ export default Component
         </template>
         <template #end>
           <v-navbar-item
-            class="mx-3 my-5 is-size-5 has-text-centered"
+            class="mx-3 my-5 is-size-5 py-4 has-text-centered"
             :class="{'is-active-item': isHomeActive }"
             :active="isHomeActive"
             @click="sectionScroll('home')">
             {{ intl.$ts('home.title') }}
           </v-navbar-item>
           <v-navbar-item
-            class="mx-3 my-5 is-size-5 has-text-centered"
+            class="mx-3 my-5 is-size-5 py-4 has-text-centered"
             :class="{'is-active-item': isActive(1) }"
             :active="isActive(1)"
             @click="sectionScroll('trailer')">
             {{ intl.$ts('trailer.title') }}
           </v-navbar-item>
           <v-navbar-item
-            class="mx-3 my-5 is-size-5 has-text-centered"
+            class="mx-3 my-5 is-size-5 py-4 has-text-centered"
             :class="{'is-active-item': isActive(2) }"
             :active="isActive(2)"
             @click="sectionScroll('clients')">
             {{ intl.$ts('clients.title') }}
           </v-navbar-item>
           <v-navbar-item
-            class="mx-3 my-5 is-size-5 has-text-centered"
+            class="mx-3 my-5 is-size-5 py-4 has-text-centered"
             :class="{'is-active-item': isActive(3) }"
             :active="isActive(3)"
             @click="sectionScroll('blog')">
             {{ intl.$ts('blog.title') }}
           </v-navbar-item>
           <v-navbar-item
-            class="mx-3 my-5 is-size-5 has-text-centered"
+            class="mx-3 my-5 is-size-5 py-4 has-text-centered"
             @click="toggleLanguageMenu">
             {{ intl.$ts(`language`) }}: {{ languages[intl.locale.value] }}
           </v-navbar-item>
-          <v-navbar-item tag="div" class="is-hidden-desktop is-hidden-widescreen is-hidden-fullhd mx-3 my-5 is-size-5 has-text-centered">
+          <v-navbar-item tag="div" class="is-hidden-desktop is-hidden-widescreen is-hidden-fullhd mx-3 my-5 is-size-5 py-4 has-text-centered">
             <v-button tag="a" href="https://social.soy/" target="_blank" rel="noopener"
                       class="mt-6 is-size-6 is-size-7-touch " rounded type="is-primary" size="is-medium">
               <strong>{{ intl.$ts('blog.button1') }}</strong>

@@ -32,7 +32,7 @@ export default Component;
     </div>
     <v-columns>      
       <v-column class="has-text-centered mb-6">
-        <v-button type="is-rounded is-white has-text-primary is-size-6 is-size-7-touch " size="is-medium" @click="sectionScroll('trailer')">
+        <v-button type="is-danger" class="has-text-white is-size-6 is-size-7-touch" rounded size="is-medium" @click="sectionScroll('trailer')">
           {{ intl.$ts('home.button') }} 
           <p class="is-size-3">
             ↓
