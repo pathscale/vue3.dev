@@ -39,9 +39,9 @@ const Component = {
 export default Component
 </script>
 <template>
-  <section class="hero is-fullheight section" id="trailer">
-    <div class="hero-body">
-      <div class="container">
+  <section class="hero is-fullheight section px-0" id="trailer">
+    <div class="hero-body px-0">
+      <div class="container has-background-black-ter is-fullwidth has-border px-5 py-5">
         <p class="title has-text-white has-text-centered">
           {{ intl.$ts('trailer.title') }}
         </p>
@@ -92,3 +92,13 @@ export default Component
     </div>
   </section>
 </template>
+
+<style scoped> 
+  .is-fullwidth {
+    max-width: 100vw;
+  }
+  .has-border {
+    border-top: 0.25rem solid red;
+    border-bottom: 0.25rem solid red;
+  }
+</style>
