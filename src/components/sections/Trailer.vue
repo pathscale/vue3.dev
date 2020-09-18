@@ -39,46 +39,46 @@ const Component = {
 export default Component
 </script>
 <template>
-  <section class="hero is-fullheight section" id="project">
+  <section class="hero is-fullheight section" id="trailer">
     <div class="hero-body">
       <div class="container">
         <p class="title has-text-white has-text-centered">
-          {{ intl.$ts('project.title') }}
+          {{ intl.$ts('trailer.title') }}
         </p>
         <carousel>
-          <slide v-for="(project, index) in projects" :key="index" :items-to-show="1.5" wrap-around initial-slide="1">
+          <slide v-for="(trailer, index) in projects" :key="index" :items-to-show="1.5" wrap-around initial-slide="1">
             <v-columns :mobile="isLandscape" vcentered class="reverse-columns px-2">
               <v-column class="has-text-centered" style="width: 100%">
-                <img :src="project.image" :ref="project.title" />
+                <img :src="trailer.image" :ref="trailer.title" />
                 <v-button
                   tag="a"
-                  :href="project.link"
+                  :href="trailer.link"
                   target="_blank"
                   rel="noopener"
                   class="mt-6 is-size-6 is-size-7-touch is-hidden-desktop is-hidden-fullhd"
                   rounded
                   type="is-white"
                   size="is-medium">
-                  {{ project.button }}
+                  {{ trailer.button }}
                 </v-button>
               </v-column>
               <v-column size="is-full-touch is-half">
                 <p class="subtitle has-text-white">
-                  {{ project.title }} 
+                  {{ trailer.title }} 
                 </p>
                 <p class="has-text-white">
-                  {{ project.description }}
+                  {{ trailer.description }}
                 </p>
                 <v-button
                   tag="a"
-                  :href="project.link"
+                  :href="trailer.link"
                   target="_blank"
                   rel="noopener"
                   class="mt-6 is-size-6 is-size-7-touch is-hidden-touch"
                   rounded
                   type="is-white"
                   size="is-medium">
-                  {{ project.button }}
+                  {{ trailer.button }}
                 </v-button>
               </v-column>
             </v-columns>

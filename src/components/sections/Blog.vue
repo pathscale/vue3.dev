@@ -21,16 +21,16 @@ export default Component
 </script>
 
 <template>
-  <section class="hero is-fullheight section" id="resources" style="overflow-y: auto">
+  <section class="hero is-fullheight section" id="blog" style="overflow-y: auto">
     <div class="hero-body">
       <div class="container">
         <v-columns vcentered hcentered>
           <v-column size="is-full-touch is-half has-text-centered" style="z-index: 1">
             <p class="title has-text-white">
-              {{ intl.$ts('resources.title') }}
+              {{ intl.$ts('blog.title') }}
             </p>
             <div class="has-text-white">
-              {{ intl.$ts('resources.content1') }}
+              {{ intl.$ts('blog.content1') }}
             </div>
           </v-column>
         </v-columns>
@@ -40,7 +40,7 @@ export default Component
       <v-columns hcentered vcentered>
         <v-column class="has-text-centered">
           <v-button class="is-black px-6 py-6 redirect-button" size="is-large">
-            {{ intl.$ts('resources.button3') }}
+            {{ intl.$ts('blog.button3') }}
             <p class="is-size-1">
               →
             </p>
@@ -48,7 +48,7 @@ export default Component
         </v-column>
         <v-column class="has-text-centered">
           <v-button class="is-black px-6 py-6 redirect-button" size="is-large">
-            {{ intl.$ts('resources.button4') }} 
+            {{ intl.$ts('blog.button4') }} 
             <p class="is-size-1">
               →
             </p>
@@ -56,7 +56,7 @@ export default Component
         </v-column>
         <v-column class="has-text-centered">
           <v-button class="is-black px-6 py-6 redirect-button" size="is-large">
-            {{ intl.$ts('resources.button5') }} 
+            {{ intl.$ts('blog.button5') }} 
             <p class="is-size-1">
               →
             </p>
@@ -70,7 +70,7 @@ export default Component
           size="is-medium"
           class="is-size-6 is-size-7-touch"
           @click="sectionScroll('home')">
-          {{ intl.$ts('resources.button2') }}
+          {{ intl.$ts('blog.button2') }}
         </v-button>
         <p class="has-text-white mt-6">
           <strong class="has-text-white">2020 ©</strong>

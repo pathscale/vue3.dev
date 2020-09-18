@@ -87,7 +87,7 @@ export default Component
           class="mx-3 my-5 is-size-5 has-text-centered"
           :class="{'is-active-item': isActive(6) }"
           :active="isActive(6)">
-          {{ intl.$ts('project.subtitle') }}
+          {{ intl.$ts('trailer.subtitle') }}
         </v-navbar-item>
         <v-navbar-item
           class="mx-3 my-5 is-size-5 has-text-centered"

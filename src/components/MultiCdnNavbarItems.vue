@@ -23,14 +23,14 @@ export default Component;
       :class="{'is-active-item': isActive(1) }"
       :active="isActive(1)"
       @click="sectionScroll('why-multi-cdn')">
-      {{ intl.$ts('project.subtitle') }}
+      {{ intl.$ts('trailer.subtitle') }}
     </v-navbar-item>
     <v-navbar-item
       class="mx-3 is-size-6 has-text-centered"
       :class="{'is-active-item': isActive(2) }"
       :active="isActive(2)"
       @click="sectionScroll('data-driven-multi-cdn')">
-      {{ intl.$ts('resources.subtitle') }}
+      {{ intl.$ts('blog.subtitle') }}
     </v-navbar-item>
   </div>
 </template>

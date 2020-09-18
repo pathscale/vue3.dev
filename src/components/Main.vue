@@ -7,8 +7,9 @@ import logo from '../assets/svg/vue3-logo.svg'
 
 import {
   HomeSection,
-  ProjectSection,
-  ResourcesSection,
+  TrailerSection,
+  ClientsSection,
+  BlogSection,
   FaqSection,
   ProgressSection
 } from './sections'
@@ -25,8 +26,9 @@ const Component = {
     VColumns,
     VColumn,
     HomeSection,
-    ProjectSection,
-    ResourcesSection,
+    TrailerSection,
+    ClientsSection,
+    BlogSection,
     MultiCdnNavbarItems,
     CookieBannerFullWidth,
     FaqSection,
@@ -58,8 +60,9 @@ const Component = {
 
     const sections = [
       'home',
-      'project',
-      'resources',
+      'trailer',
+      'clients',
+      'blog',
     ]
     const navbarColor = computed(() => {
       return activeItem.value === 0 ? 'transparent' : '#111';
@@ -75,7 +78,7 @@ const Component = {
 
     function sectionScroll(name) {
       const index = sections.indexOf(name)
-      if (index !== -1 && pathname.value !== "faq" && pathname.value !== "progress" ) {
+      if (index !== -1 ) {
         showLanguageMenu.value = false
         isMenuOpen.value = false
         activeItem.value = index
@@ -288,15 +291,22 @@ export default Component
             class="mx-3 my-5 is-size-5 has-text-centered"
             :class="{'is-active-item': isActive(1) }"
             :active="isActive(1)"
-            @click="sectionScroll('project')">
-            {{ intl.$ts('project.title') }}
+            @click="sectionScroll('trailer')">
+            {{ intl.$ts('trailer.title') }}
           </v-navbar-item>
           <v-navbar-item
             class="mx-3 my-5 is-size-5 has-text-centered"
             :class="{'is-active-item': isActive(2) }"
             :active="isActive(2)"
-            @click="sectionScroll('resources')">
-            {{ intl.$ts('resources.title') }}
+            @click="sectionScroll('clients')">
+            {{ intl.$ts('clients.title') }}
+          </v-navbar-item>
+          <v-navbar-item
+            class="mx-3 my-5 is-size-5 has-text-centered"
+            :class="{'is-active-item': isActive(3) }"
+            :active="isActive(3)"
+            @click="sectionScroll('blog')">
+            {{ intl.$ts('blog.title') }}
           </v-navbar-item>
           <v-navbar-item
             class="mx-3 my-5 is-size-5 has-text-centered"
@@ -306,7 +316,7 @@ export default Component
           <v-navbar-item tag="div" class="is-hidden-desktop is-hidden-widescreen is-hidden-fullhd mx-3 my-5 is-size-5 has-text-centered">
             <v-button tag="a" href="https://social.soy/" target="_blank" rel="noopener"
                       class="mt-6 is-size-6 is-size-7-touch " rounded type="is-primary" size="is-medium">
-              <strong>{{ intl.$ts('resources.button1') }}</strong>
+              <strong>{{ intl.$ts('blog.button1') }}</strong>
             </v-button>
           </v-navbar-item>
         </template>
@@ -320,11 +330,12 @@ export default Component
     </div>
     <progress-section v-if="pathname === 'progress'" :redirect-to="redirectTo" />
     <faq-section v-if="pathname === 'faq'" :redirect-to="redirectTo" />
-    <div v-show="pathname != 'home' || pathname !='project' || pathname != 'resources'" class="well" id="well">
+    <div class="well" id="well">
       <home-section :section-scroll="sectionScroll" />
       <div style="touch-action: none">
-        <project-section />
-        <resources-section :section-scroll="sectionScroll" :redirect-to="redirectTo" />
+        <trailer-section />
+        <clients-section />
+        <blog-section :section-scroll="sectionScroll" :redirect-to="redirectTo" />
       </div>
     </div>
   </div>

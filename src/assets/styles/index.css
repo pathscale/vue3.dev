@@ -87,8 +87,26 @@ p {
 .well {
 	position: relative;
 	overflow: hidden;
-	transition: 1s ease 0s;
+  transition: 1s ease 0s;
 }
+
+
+.well::after {
+  content: "";
+  background-image: url("../svg/vectorstock_954247_Converted3.svg");
+  background-size: auto 100%;
+  background-position: center;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  filter: invert(1);
+}
+
+
 
 .section {
   position: relative;

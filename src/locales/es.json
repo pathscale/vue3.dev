@@ -1,15 +1,18 @@
 {
   "language": "Language",
   "home": {
-    "title": "Revenge.Game",
-    "content": "Welcome to the Revenge game website where you can get all the current details, status, updates as well as information on early testing and joining our community on Discord.",
-    "button": "Explore The Game"
+    "title": "Home Station",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ornare mi. Vestibulum finibus, mi iaculis vulputate vehicula, nisl nunc venenatis nisl, id fringilla turpis diam eget dolor. Cras lobortis lectus nibh, eu facilisis sapien suscipit sed",
+    "button": "Explore The Framework"
   },
-  "project": {
-    "title": "Current Projects"
+  "trailer": {
+    "title": "Our Trailer"
   },
-  "resources": {
-    "title": "Game Resources",
+  "clients": {
+    "title": "Clients"
+  },
+  "blog": {
+    "title": "Tech Blogs",
     "subtitle": "A game that really focuses on Community & Social elements",
     "content1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ornare mi. Vestibulum finibus, mi iaculis vulputate vehicula, nisl nunc venenatis nisl, id fringilla turpis diam eget dolor. Cras lobortis lectus nibh, eu facilisis sapien suscipit sed",  
     "button1": "VISIT SOCIAL.SOY",
@@ -18,7 +21,7 @@
     "button4": "Quick PvE Calculator",
     "button5": "Lame PvPCalculator"
   },
-  "cookies": "Utilizamos cookies y otras tecnologías similares para mejorar su experiencia en nuestros servicios, personalizar la publicidad y recomendar contenido que le interese. Al utilizar nuestros servicios, usted da su consentimiento para dicha supervisión. Para obtener más información, consulte nuestro",
-  "policy": "nueva política de privacidad",
-  "agree": "Acepto"
+  "cookies": "We use cookies and other similar technologies to improve your experience on our services, personalize advertising and recommend content that interests you. By using our services, you consent to such monitoring. For more information, see our",
+  "policy": "new privacy policy",
+  "agree": "Agree"
 }
