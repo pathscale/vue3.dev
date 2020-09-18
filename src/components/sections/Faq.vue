@@ -23,10 +23,10 @@ export default Component
 <template>
   <section class="hero is-fullheight-with-navbar section pt-6 has-gradient-background" style="overflow-y: scroll;">
     <div class="hero-body pt-6">
-      <div class="container has-text-black">
+      <div class="container has-text-white">
         <v-columns>
           <v-column>
-            <h1 class="pb-6 is-size-3 has-text-black has-text-centered has-text-weight-bold">
+            <h1 class="pb-6 is-size-3 has-text-white has-text-centered has-text-weight-bold">
               {{ intl.$ts('faq.subtitle') }}
             </h1>
             <div class="pt-6" v-for="(item, key) in Object.keys(intl.$ts('faq.question'))" :key="key"> 
@@ -62,8 +62,8 @@ export default Component
         </v-column>
       </v-columns>
       <div class="content has-text-centered">
-        <p class="has-text-black mt-6">
-          <strong class="has-text-black">2020 ©</strong>
+        <p class="has-text-white mt-6">
+          <strong class="has-text-white">2020 ©</strong>
           by PathScale Pte Ltd {{ process.env.VUE_APP_VERSION_NUMBER }}
         </p>
       </div>

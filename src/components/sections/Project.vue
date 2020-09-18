@@ -42,7 +42,7 @@ export default Component
   <section class="hero is-fullheight section" id="project">
     <div class="hero-body">
       <div class="container">
-        <p class="title has-text-black has-text-centered">
+        <p class="title has-text-white has-text-centered">
           {{ intl.$ts('project.title') }}
         </p>
         <carousel>
@@ -63,10 +63,10 @@ export default Component
                 </v-button>
               </v-column>
               <v-column size="is-full-touch is-half">
-                <p class="subtitle has-text-black">
+                <p class="subtitle has-text-white">
                   {{ project.title }} 
                 </p>
-                <p class="has-text-black">
+                <p class="has-text-white">
                   {{ project.description }}
                 </p>
                 <v-button

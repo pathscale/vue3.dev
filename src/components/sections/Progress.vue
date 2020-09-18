@@ -23,13 +23,13 @@ export default Component
 <template>
   <section class="hero is-fullheight-with-navbar section pt-6 has-gradient-background" style="overflow-y: scroll;">
     <div class="hero-body pt-6 px-0">
-      <div class="container has-text-black">
+      <div class="container has-text-white">
         <v-columns>
           <v-column>
-            <h1 class="pb-3 is-size-3 has-text-black has-text-centered has-text-weight-bold">
+            <h1 class="pb-3 is-size-3 has-text-white has-text-centered has-text-weight-bold">
               {{ intl.$ts('progress.text') }}
             </h1>
-            <h3 class="pb-6 has-text-black has-text-centered">
+            <h3 class="pb-6 has-text-white has-text-centered">
               {{ intl.$ts('progress.content') }}
             </h3>
             <div>
@@ -37,9 +37,9 @@ export default Component
                 class="is-inline-flex is-fullwidth"
                 :class="{'is-reverse': key % 2}"
                 v-for="(item, key) in Object.keys(intl.$ts('progress.date'))" :key="key">
-                <span class="has-circle has-text-black has-text-weight-bold">{{ key + 1 }}</span>
+                <span class="has-circle has-text-white has-text-weight-bold">{{ key + 1 }}</span>
                 <div class="mt-6 px-4 my-6 py-2" :class="[`has-border-${ key % 2 ? 'right' : 'left'}`, {'has-text-right': key % 2}]">
-                  <h2 class="subtitle has-text-black">
+                  <h2 class="subtitle has-text-white">
                     {{ intl.$ts(`progress.date.date${key + 1}`) }}
                   </h2>
                   <span>
@@ -79,8 +79,8 @@ export default Component
         </v-column>
       </v-columns>
       <div class="content has-text-centered">
-        <p class="has-text-black mt-6">
-          <strong class="has-text-black">2020 ©</strong>
+        <p class="has-text-white mt-6">
+          <strong class="has-text-white">2020 ©</strong>
           by PathScale Pte Ltd {{ process.env.VUE_APP_VERSION_NUMBER }}
         </p>
       </div>

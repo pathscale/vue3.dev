@@ -3,7 +3,7 @@
 import { VNavbar, VNavbarItem, VNavbarDropdown, VButton, VColumns, VColumn } from '@pathscale/vue3-ui'
 import { onMounted, ref, watchEffect, computed } from 'vue'
 import { useI18n } from "vue-composable";
-import logo from '../assets/svg/SR-logo.svg'
+import logo from '../assets/svg/vue3-logo.svg'
 
 import {
   HomeSection,
@@ -62,7 +62,7 @@ const Component = {
       'resources',
     ]
     const navbarColor = computed(() => {
-      return activeItem.value === 0 ? 'transparent' : '#feb400';
+      return activeItem.value === 0 ? 'transparent' : '#111';
     })
     
     let pnls, well
@@ -273,7 +273,7 @@ export default Component
       <v-navbar transparent v-model="isMenuOpen">
         <template #brand>
           <v-navbar-item class="ml-6">
-            <img src="https://revenge--game.b-cdn.net/revenge-graffiti.svg" alt="revenge logo" />
+            <img :src="logo" alt="revenge logo" />
           </v-navbar-item>
         </template>
         <template #end>

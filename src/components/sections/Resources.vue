@@ -26,10 +26,10 @@ export default Component
       <div class="container">
         <v-columns vcentered hcentered>
           <v-column size="is-full-touch is-half has-text-centered" style="z-index: 1">
-            <p class="title has-text-black">
+            <p class="title has-text-white">
               {{ intl.$ts('resources.title') }}
             </p>
-            <div class="has-text-black">
+            <div class="has-text-white">
               {{ intl.$ts('resources.content1') }}
             </div>
           </v-column>
@@ -72,8 +72,8 @@ export default Component
           @click="sectionScroll('home')">
           {{ intl.$ts('resources.button2') }}
         </v-button>
-        <p class="has-text-black mt-6">
-          <strong class="has-text-black">2020 ©</strong>
+        <p class="has-text-white mt-6">
+          <strong class="has-text-white">2020 ©</strong>
           by PathScale Pte Ltd {{ process.env.VUE_APP_VERSION_NUMBER }}
         </p>
       </div>

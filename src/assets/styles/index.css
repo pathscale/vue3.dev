@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-color: #feb400;
+  background-color: black;
   display: block !important;
   animation: fadein 2s;
 	margin: 0;
@@ -44,13 +44,6 @@ p {
 
 #home {
   height: calc(var(--vh, 1vh) * 100);
-  background-image: url("../svg/BG-gradient.svg");
-  background-size: auto 100%;
-}
-
-.has-gradient-background {
-  background-image: url("../svg/BG-gradient.svg");
-  background-size: auto 100%;
 }
 
 .is-relative {
@@ -64,7 +57,7 @@ p {
 
 .is-active-item:after {
   content: "";
-  background: black;
+  background: white;
   position: absolute;
   bottom: 0;
   left: 25%;
@@ -123,7 +116,7 @@ p {
 
 .submenu .is-active-item::before {
   content: "";
-  border: solid black;
+  border: solid white;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
@@ -162,7 +155,7 @@ p {
   }
 
   .navbar-link {
-    color: black !important;
+    color: white !important;
   }
 
   .navbar-burger {
@@ -171,12 +164,12 @@ p {
   }
 
   a.navbar-item {
-    color: black;
+    color: white;
   }
 
   a.navbar-item.is-active {
     font-weight: bold;
-    color: black;
+    color: white;
   }
 
   .is-active-item:after {

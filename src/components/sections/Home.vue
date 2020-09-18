@@ -2,13 +2,15 @@
 // eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
 import { VButton, VColumns, VColumn } from "@pathscale/vue3-ui"
 import { useI18n } from "vue-composable";
+import logo from '../../assets/svg/vue3-logo.svg'
+
 
 const Component = {
   props: ['sectionScroll'],
   components: { VButton, VColumns, VColumn },
   setup() {
     const intl = useI18n();
-    return { intl }
+    return { intl, logo }
   }
 }
 export default Component;
@@ -20,8 +22,8 @@ export default Component;
       <div class="container">
         <v-columns hcentered>
           <v-column size="is-full-touch is-three-quarters" class="has-text-centered">
-            <img src="https://revenge--game.b-cdn.net/revenge-graffiti.svg" ref="social chat" style="width: 100%" />
-            <p class="has-text-black">
+            <img :src="logo" ref="social chat" />
+            <p class="has-text-white">
               {{ intl.$ts('home.content') }}
             </p>
           </v-column>
