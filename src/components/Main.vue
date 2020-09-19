@@ -1,7 +1,7 @@
 <script>
 // eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
 import { VNavbar, VNavbarItem, VNavbarDropdown, VButton, VColumns, VColumn } from '@pathscale/vue3-ui'
-import { onMounted, ref, watchEffect, computed } from 'vue'
+import { ref, watchEffect, computed } from 'vue'
 import { useI18n } from "vue-composable";
 import logo from '../assets/svg/vue3-logo.svg'
 
@@ -10,11 +10,8 @@ import {
   TrailerSection,
   ClientsSection,
   BlogSection,
-  FaqSection,
-  ProgressSection
 } from './sections'
 
-import MultiCdnNavbarItems from './MultiCdnNavbarItems.vue'
 import CookieBannerFullWidth from './CookieBannerFullWidth.vue'
 
 const Component = {
@@ -29,10 +26,7 @@ const Component = {
     TrailerSection,
     ClientsSection,
     BlogSection,
-    MultiCdnNavbarItems,
     CookieBannerFullWidth,
-    FaqSection,
-    ProgressSection
   },
   setup() {
     const activeItem = ref(0)
@@ -58,33 +52,12 @@ const Component = {
       }
     })
 
-    const sections = [
-      'home',
-      'trailer',
-      'clients',
-      'blog',
-    ]
     const navbarColor = computed(() => {
       return activeItem.value === 0 ? 'transparent' : '#111';
     })
     
-    let pnls, well
-    let scdir,
-      hold = false
-
     function isActive(i) {
       return activeItem.value === i
-    }
-
-    function sectionScroll(name) {
-      const index = sections.indexOf(name)
-      if (index !== -1 ) {
-        showLanguageMenu.value = false
-        isMenuOpen.value = false
-        activeItem.value = index
-        history.replaceState('', 'Pathscale', sections[activeItem.value])
-        well.style.transform = 'translateY(-' + index * 100 + 'vh)'
-      }
     }
 
     function toggleLanguageMenu() {
@@ -95,122 +68,6 @@ const Component = {
       showLanguageMenu.value = false
       intl.locale.value = language
     }
-
-    function _scrollY(obj) {
-      let slength, plength, pan
-      const step = 100,
-        vh = window.innerHeight / 100,
-        vmin = Math.min(window.innerHeight, window.innerWidth) / 100
-      if ((this !== undefined && this.id === 'well') || (obj !== undefined && obj.id === 'well')) {
-        pan = this || obj
-        plength = Number.parseInt(pan.offsetHeight / vh)
-      }
-      if (pan === undefined) {
-        return
-      }
-      plength = plength || Number.parseInt(pan.offsetHeight / vmin)
-      slength = Number.parseInt(pan.style.transform.replace('translateY(', ''))
-      if (scdir === 'up' && Math.abs(slength) < plength - plength / pnls) {
-        slength -= step
-      } else if (scdir === 'down' && slength < 0) {
-        slength += step
-      } else if (scdir === 'top') {
-        slength = 0
-      }
-      if (hold === false) {
-        hold = true
-        activeItem.value = Math.abs(slength) / 100
-        history.replaceState('', 'Pathscale', sections[activeItem.value])
-        pan.style.transform = 'translateY(' + slength + 'vh)'
-        setTimeout(function () {
-          hold = false
-        }, 1000)
-      }
-    }
-    /* [swipe detection on touchscreen devices] */
-    function _swipe(obj) {
-      let swdir, sY, dY
-      obj.addEventListener(
-        'touchstart',
-        function (e) {
-          const tchs = e.changedTouches[0]
-          swdir = 'none'
-          sY = tchs.pageY
-          // e.preventDefault();
-        },
-        { passive: true }
-      )
-
-      obj.addEventListener(
-        'touchmove',
-        function (e) {
-          /* [prevent scrolling when inside DIV] */
-        },
-        { passive: true }
-      )
-
-      obj.addEventListener(
-        'touchend',
-        function (e) {
-          const tchs = e.changedTouches[0]
-          dY = tchs.pageY - sY
-          if (Math.abs(dY) < 50) return
-          swdir = dY < 0 ? 'up' : 'down'
-          if (obj.id === 'well') {
-            if (swdir === 'up' && activeItem.value <= 2) {
-              scdir = swdir
-              _scrollY(obj)
-              // eslint-disable-next-line sonarjs/no-duplicated-branches -- temporary
-            } else if (swdir === 'down' && obj.style.transform !== 'translateY(0)') {
-              scdir = swdir
-              _scrollY(obj)
-            }
-            e.stopPropagation()
-          }
-        },
-        false,
-      )
-    }
-
-    onMounted(() => {
-
-      pnls = document.querySelectorAll('.section').length
-      /* [assignments] */
-      well = document.querySelector('#well')
-      if (location.pathname.slice(1)) {
-        sectionScroll(`${location.pathname.slice(1)}`)
-      } else {
-        well.style.transform = 'translateY(0vh)'
-      }
-      well.addEventListener(
-        'wheel',
-        function (e) {
-          if (e.deltaY < 0) {
-            scdir = 'down'
-          }
-          if (e.deltaY > 0) {
-            scdir = 'up'
-          }
-          e.stopPropagation()
-        },
-        { passive: true },
-      )
-      well.addEventListener('wheel', _scrollY, { passive: true })
-      _swipe(well)
-
-      document.addEventListener('keydown', function (event) {
-        const { key } = event
-        if (key === 'ArrowUp' || key === 'ArrowLeft') {
-          if (activeItem.value >= 1) {
-            sectionScroll(sections[activeItem.value - 1])
-          }
-        } else if (key === 'ArrowDown' || key === 'ArrowRight') {
-          if (activeItem.value <= 2) {
-            sectionScroll(sections[activeItem.value + 1])
-          }
-        }
-      })
-    })
 
     function setDocHeight() {
       document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
@@ -246,7 +103,6 @@ const Component = {
       navbarColor,
       pathname,
       redirectTo,
-      sectionScroll,
       showLanguageMenu,
       toggleLanguageMenu,
     }
@@ -283,29 +139,25 @@ export default Component
           <v-navbar-item
             class="mx-3 my-5 is-size-5 py-4 has-text-centered"
             :class="{'is-active-item': isHomeActive }"
-            :active="isHomeActive"
-            @click="sectionScroll('home')">
+            :active="isHomeActive">
             {{ intl.$ts('home.title') }}
           </v-navbar-item>
           <v-navbar-item
             class="mx-3 my-5 is-size-5 py-4 has-text-centered"
             :class="{'is-active-item': isActive(1) }"
-            :active="isActive(1)"
-            @click="sectionScroll('trailer')">
+            :active="isActive(1)">
             {{ intl.$ts('trailer.title') }}
           </v-navbar-item>
           <v-navbar-item
             class="mx-3 my-5 is-size-5 py-4 has-text-centered"
             :class="{'is-active-item': isActive(2) }"
-            :active="isActive(2)"
-            @click="sectionScroll('clients')">
+            :active="isActive(2)">
             {{ intl.$ts('clients.title') }}
           </v-navbar-item>
           <v-navbar-item
             class="mx-3 my-5 is-size-5 py-4 has-text-centered"
             :class="{'is-active-item': isActive(3) }"
-            :active="isActive(3)"
-            @click="sectionScroll('blog')">
+            :active="isActive(3)">
             {{ intl.$ts('blog.title') }}
           </v-navbar-item>
           <v-navbar-item
@@ -321,21 +173,13 @@ export default Component
           </v-navbar-item>
         </template>
       </v-navbar>
-      <div class="navbar-menu submenu" v-show="false">
-        <div class="navbar-start" />
-        <div class="navbar-end">
-          <multi-cdn-navbar-items :is-active="isActive" :section-scroll="sectionScroll" />
-        </div>
-      </div>
     </div>
-    <progress-section v-if="pathname === 'progress'" :redirect-to="redirectTo" />
-    <faq-section v-if="pathname === 'faq'" :redirect-to="redirectTo" />
     <div class="well" id="well">
-      <home-section :section-scroll="sectionScroll" />
+      <home-section />
       <div style="touch-action: none">
         <trailer-section />
         <clients-section />
-        <blog-section :section-scroll="sectionScroll" :redirect-to="redirectTo" />
+        <blog-section :redirect-to="redirectTo" />
       </div>
     </div>
   </div>

@@ -5,7 +5,7 @@ import { useI18n } from "vue-composable";
 import { ref } from 'vue'
 
 const Component = {
-  props: ['redirectTo', 'sectionScroll'],
+  props: ['redirectTo'],
   components: { VButton, VColumns, VColumn, VSelect },
   setup() {
     const intl = useI18n()
@@ -68,8 +68,7 @@ export default Component
           rounded
           type="is-primary"
           size="is-medium"
-          class="is-size-6 is-size-7-touch"
-          @click="sectionScroll('home')">
+          class="is-size-6 is-size-7-touch">
           {{ intl.$ts('blog.button2') }}
         </v-button>
         <p class="has-text-white mt-6">

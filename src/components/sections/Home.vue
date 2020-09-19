@@ -6,7 +6,6 @@ import logo from '../../assets/svg/vue3-logo.svg'
 
 
 const Component = {
-  props: ['sectionScroll'],
   components: { VButton, VColumns, VColumn },
   setup() {
     const intl = useI18n();
@@ -32,7 +31,7 @@ export default Component;
     </div>
     <v-columns>      
       <v-column class="has-text-centered mb-6">
-        <v-button type="is-danger" class="has-text-white is-size-5" rounded size="is-large" @click="sectionScroll('trailer')">
+        <v-button type="is-danger" class="has-text-white is-size-5" rounded size="is-large">
           {{ intl.$ts('home.button') }} 
           <p class="is-size-3">
             ↓

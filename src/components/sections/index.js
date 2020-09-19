@@ -1,6 +1,4 @@
 export { default as HomeSection } from "./Home.vue"
 export { default as TrailerSection } from "./Trailer.vue"
 export { default as BlogSection } from "./Blog.vue"
-export { default as FaqSection } from "./Faq.vue"
-export { default as ProgressSection } from "./Progress.vue"
 export { default as ClientsSection } from "./Clients.vue"

@@ -21,7 +21,7 @@ body {
   font-family: MetrocleanMedium !important;
   text-rendering: optimizeLegibility;
   height: calc(var(--vh, 1vh) * 100);
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 p {
