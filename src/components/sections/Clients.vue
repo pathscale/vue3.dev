@@ -39,7 +39,7 @@ const Component = {
 export default Component
 </script>
 <template>
-  <section class="hero is-fullheight section" id="client">
+  <section class="hero section" id="client">
     <div class="hero-body">
       <div class="container">
         <p class="title has-text-white has-text-centered">

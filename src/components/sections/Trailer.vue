@@ -17,7 +17,7 @@ const Component = {
 export default Component
 </script>
 <template>
-  <section class="hero is-fullheight section px-0" id="trailer">
+  <section class="hero section px-0" id="trailer">
     <div class="hero-body px-0">
       <div class="container has-background-black-ter is-fullwidth has-border py-6">
         <p class="title has-text-white has-text-centered is-1">

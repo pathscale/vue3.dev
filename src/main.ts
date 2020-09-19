@@ -5,7 +5,7 @@ import '@pathscale/bulma-extensions-css-var/css/bulma-extensions-css-var.css';
 import 'vue3-carousel/dist/carousel.css';
 
 import "./assets/styles/index.css";
-import "./assets/styles/scrollbar.css";
+// import "./assets/styles/scrollbar.css";
 import "./assets/styles/carousel.css";
 
 

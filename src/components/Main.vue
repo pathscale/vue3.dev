@@ -176,11 +176,9 @@ export default Component
     </div>
     <div class="well" id="well">
       <home-section />
-      <div style="touch-action: none">
-        <trailer-section />
-        <clients-section />
-        <blog-section :redirect-to="redirectTo" />
-      </div>
+      <trailer-section />
+      <clients-section />
+      <blog-section :redirect-to="redirectTo" />
     </div>
   </div>
 </template>

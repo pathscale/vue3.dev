@@ -21,7 +21,7 @@ export default Component
 </script>
 
 <template>
-  <section class="hero is-fullheight section" id="blog" style="overflow-y: auto">
+  <section class="hero section" id="blog">
     <div class="hero-body">
       <div class="container">
         <v-columns vcentered hcentered>

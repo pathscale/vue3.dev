@@ -16,7 +16,7 @@ export default Component;
 </script>
 
 <template>
-  <section class="hero is-fullheight section" id="home">
+  <section class="hero is-fullheight" id="home">
     <div class="hero-body">
       <div class="container">
         <v-columns hcentered>
