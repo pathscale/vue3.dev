@@ -84,6 +84,10 @@ p {
   outline: none !important;
 }
 
+#well {
+  will-change: transform;
+}
+
 .well {
 	position: relative;
 	overflow: hidden;
