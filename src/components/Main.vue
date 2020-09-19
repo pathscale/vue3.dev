@@ -157,7 +157,7 @@ const Component = {
           if (Math.abs(dY) < 50) return
           swdir = dY < 0 ? 'up' : 'down'
           if (obj.id === 'well') {
-            if (swdir === 'up' && activeItem.value <= 1) {
+            if (swdir === 'up' && activeItem.value <= 2) {
               scdir = swdir
               _scrollY(obj)
               // eslint-disable-next-line sonarjs/no-duplicated-branches -- temporary
@@ -205,7 +205,7 @@ const Component = {
             sectionScroll(sections[activeItem.value - 1])
           }
         } else if (key === 'ArrowDown' || key === 'ArrowRight') {
-          if (activeItem.value <= 1) {
+          if (activeItem.value <= 2) {
             sectionScroll(sections[activeItem.value + 1])
           }
         }
