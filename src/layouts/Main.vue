@@ -1,45 +1,34 @@
 <script>
 // eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
-import { VColumns, VColumn } from '@pathscale/vue3-ui'
-import { ref, watchEffect, computed, reactive } from 'vue'
+import { VNavbar, VNavbarItem, VNavbarDropdown, VButton, VColumns, VColumn } from '@pathscale/vue3-ui'
+import { ref, watchEffect, computed } from 'vue'
 import { useI18n } from "vue-composable";
+import logo from '../assets/svg/vue3-logo.svg'
+
 
 import {
   Cookie,
-  Footer,
-  Navbar,
-  Sidebar
 } from '../components'
 
 const Component = {
   components: {
-    VColumn,
+    VNavbar,
+    VNavbarItem,
+    VNavbarDropdown,
+    VButton,
     VColumns,
-    Cookie,
-    Footer,
-    Navbar,
-    Sidebar
+    VColumn,
+    Cookie
   },
   setup() {
-    const state = reactive({
-      showSignIn: false,
-      showSignUp: false,
-      open: false,
-    })
-
     const activeItem = ref(0)
     const isDropdownOpen = ref(false);
     const isMenuOpen = ref(false);
     const showLanguageMenu = ref(false);
     const pathname = ref(location.pathname.slice(1));
 
-    const isHomeActive = computed(() => pathname.value !== 'faq' && pathname.value !== 'progress' );
+    const isHomeActive = computed(() => activeItem.value === 0 && pathname.value !== 'faq' && pathname.value !== 'progress' );
     const intl = useI18n();
-
-    function isActive(i) {
-      return activeItem.value === i
-    }
-
 
     window.mobileCheck = function() {
         let check = false;
@@ -55,6 +44,13 @@ const Component = {
       }
     })
 
+    const navbarColor = computed(() => {
+      return activeItem.value === 0 ? 'transparent' : '#111';
+    })
+    
+    function isActive(i) {
+      return activeItem.value === i
+    }
 
     function toggleLanguageMenu() {
       showLanguageMenu.value = !showLanguageMenu.value;
@@ -74,27 +70,22 @@ const Component = {
 
     setDocHeight();
 
-    const languages = {
+     const languages = {
         es: "es-ES",
         en: "en-EN",
         pt: "pt-BR"
     }
-
-    const changeIsMenuOpen = (value ) => {
-      isMenuOpen.value = value
-    }
-
     return { 
-      state,
       activeItem,
       changeLanguage,
-      changeIsMenuOpen,
-      isActive,
       intl,
+      isActive,
       isDropdownOpen,
       isHomeActive,
       isMenuOpen,
       languages,
+      logo, 
+      navbarColor,
       pathname,
       showLanguageMenu,
       toggleLanguageMenu,
@@ -105,12 +96,70 @@ const Component = {
 export default Component
 </script>
 <template>
-  <div>
-    <!-- <navbar :active-item="activeItem" :change-language="changeLanguage" :is-active="isActive"
-            :toggle-language-menu="toggleLanguageMenu"
-            :show-language-menu="showLanguageMenu" :is-menu-open="isMenuOpen" @isMenuOpened="changeIsMenuOpen" /> -->
-    <sidebar />
-    <router-view />
-    <Footer />
+  <div class="home is-relative">
+    <CookieBannerFullWidth />
+    <div class="big-menu" :style="`background-color: ${navbarColor}`">
+      <div class="hidden-language-menu" 
+           :style="`height: ${showLanguageMenu ? 40 : 0}px`">
+        <div class="is-flex pt-2">
+          <v-navbar-item 
+            v-for="l in intl.locales.value" :key="l"
+            :value="l"
+            class="mx-3 is-size-6 has-text-centered"
+            @click="changeLanguage(l)">
+            {{
+              languages[l]
+            }}
+          </v-navbar-item>
+        </div>
+      </div>
+      <v-navbar transparent v-model="isMenuOpen">
+        <template #brand>
+          <v-navbar-item class="ml-6">
+            <img :src="logo" alt="revenge logo" />
+          </v-navbar-item>
+        </template>
+        <template #end>
+          <v-navbar-item
+            class="mx-3 my-5 is-size-5 py-4 has-text-centered"
+            :class="{'is-active-item': isHomeActive }"
+            :active="isHomeActive">
+            {{ intl.$ts('home.title') }}
+          </v-navbar-item>
+          <v-navbar-item
+            class="mx-3 my-5 is-size-5 py-4 has-text-centered"
+            :class="{'is-active-item': isActive(1) }"
+            :active="isActive(1)">
+            {{ intl.$ts('trailer.title') }}
+          </v-navbar-item>
+          <v-navbar-item
+            class="mx-3 my-5 is-size-5 py-4 has-text-centered"
+            :class="{'is-active-item': isActive(2) }"
+            :active="isActive(2)">
+            {{ intl.$ts('clients.title') }}
+          </v-navbar-item>
+          <v-navbar-item
+            class="mx-3 my-5 is-size-5 py-4 has-text-centered"
+            :class="{'is-active-item': isActive(3) }"
+            :active="isActive(3)">
+            {{ intl.$ts('blog.title') }}
+          </v-navbar-item>
+          <v-navbar-item
+            class="mx-3 my-5 is-size-5 py-4 has-text-centered"
+            @click="toggleLanguageMenu">
+            {{ intl.$ts(`language`) }}: {{ languages[intl.locale.value] }}
+          </v-navbar-item>
+          <v-navbar-item tag="div" class="is-hidden-desktop is-hidden-widescreen is-hidden-fullhd mx-3 my-5 is-size-5 py-4 has-text-centered">
+            <v-button tag="a" href="https://social.soy/" target="_blank" rel="noopener"
+                      class="mt-6 is-size-6 is-size-7-touch " rounded type="is-primary" size="is-medium">
+              <strong>{{ intl.$ts('blog.button1') }}</strong>
+            </v-button>
+          </v-navbar-item>
+        </template>
+      </v-navbar>
+    </div>
+    <div class="well" id="well">
+      <router-view />
+    </div>
   </div>
 </template>

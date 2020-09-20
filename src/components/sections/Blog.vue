@@ -5,7 +5,6 @@ import { useI18n } from "vue-composable";
 import { ref } from 'vue'
 
 const Component = {
-  props: ['redirectTo'],
   components: { VButton, VColumns, VColumn, VSelect },
   setup() {
     const intl = useI18n()

@@ -2,7 +2,6 @@
 import { watchEffect } from 'vue'
 import { setI18n } from 'vue-composable'
 import { defaultTheme, setTheme } from './theming'
-import Home from './components/Main.vue'
 
 // TODO: bundling .json + code splitting -> copying .json + fetching
 import en from './locales/en.json'
@@ -11,7 +10,6 @@ import pt from './locales/pt.json'
 
 const App = {
   name: 'App',
-  components: { Home },
   setup() {
     setI18n({
       locale: (navigator.language || navigator.userLanguage).slice(0,2),
@@ -29,7 +27,5 @@ const App = {
 export default App
 </script>
 <template>
-  <div>
-    <Home />
-  </div>
+  <router-view />
 </template>

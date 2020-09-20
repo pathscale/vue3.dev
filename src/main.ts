@@ -8,5 +8,7 @@ import "./assets/styles/index.css";
 // import "./assets/styles/scrollbar.css";
 import "./assets/styles/carousel.css";
 
+import { router } from "./router";
 
-createApp(App).mount("#app");
+
+createApp(App).use(router).mount('#app');
