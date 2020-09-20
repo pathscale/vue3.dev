@@ -20,7 +20,7 @@ export default Component
   <section class="hero section px-0" id="trailer">
     <div class="hero-body px-0">
       <div class="container has-background-black-ter is-fullwidth has-border py-6">
-        <p class="title has-text-white has-text-centered is-1">
+        <p class="title has-text-white has-text-centered">
           {{ intl.$ts('trailer.title') }}
         </p>
         <v-columns hcentered>
@@ -28,7 +28,7 @@ export default Component
             <p class="has-text-white is-size-5 is-size-6-touch">
               {{ intl.$ts('trailer.content') }}
             </p>
-            <v-button type="is-primary" rounded inverted outlined class="mt-6 mb-6 is-uppercase" size="is-medium">
+            <v-button type="is-primary" rounded inverted outlined class="mt-6 mb-6 is-uppercase">
               {{ intl.$ts('trailer.button') }}
             </v-button>
           </v-column>

@@ -38,38 +38,30 @@ export default Component
     </div>
     <footer class="footer mb-6">
       <v-columns hcentered vcentered>
-        <v-column class="has-text-centered">
-          <v-button class="is-black px-6 py-6 redirect-button" size="is-large">
-            {{ intl.$ts('blog.button3') }}
-            <p class="is-size-1">
-              →
+        <v-column>
+          <div class="has-background-black-ter px-5 py-5 has-border">
+            <p class="title has-text-white is-size-4">
+              {{ intl.$ts('blog.article') }}
             </p>
-          </v-button>
+            <span class="has-text-white">
+              {{ intl.$ts('blog.content1') }}
+            </span>
+          </div>
         </v-column>
-        <v-column class="has-text-centered">
-          <v-button class="is-black px-6 py-6 redirect-button" size="is-large">
-            {{ intl.$ts('blog.button4') }} 
-            <p class="is-size-1">
-              →
+        <v-column>
+          <div class="has-background-black-ter px-5 py-5 has-border">
+            <p class="title has-text-white is-size-4">
+              {{ intl.$ts('blog.article') }}
             </p>
-          </v-button>
-        </v-column>
-        <v-column class="has-text-centered">
-          <v-button class="is-black px-6 py-6 redirect-button" size="is-large">
-            {{ intl.$ts('blog.button5') }} 
-            <p class="is-size-1">
-              →
-            </p>
-          </v-button>
+            <span class="has-text-white">
+              {{ intl.$ts('blog.content1') }}
+            </span>
+          </div>
         </v-column>
       </v-columns>
       <div class="content has-text-centered">
-        <v-button
-          rounded
-          type="is-primary"
-          size="is-medium"
-          class="is-size-6 is-size-7-touch">
-          {{ intl.$ts('blog.button2') }}
+        <v-button type="is-primary" rounded inverted outlined class="mt-6 mb-6 is-uppercase">
+          {{ intl.$ts('blog.button') }}
         </v-button>
         <p class="has-text-white mt-6">
           <strong class="has-text-white">2020 ©</strong>
@@ -79,3 +71,9 @@ export default Component
     </footer>
   </section>
 </template>
+
+<style scoped>
+  .has-border {
+    border-left: 0.25rem solid red;
+  }
+</style>
