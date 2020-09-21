@@ -24,15 +24,6 @@ body {
   overflow-y: auto;
 }
 
-p {
-  position: relative;
-  z-index: 100;
-}
-
-.button {
-  z-index: 100;
-}
-
 .hidden-language-menu {
   transition: 1s;
   overflow-x: auto;
@@ -40,19 +31,6 @@ p {
   display: flex;
   justify-content: center;
 
-}
-
-#home {
-  height: calc(var(--vh, 1vh) * 100);
-}
-
-.is-relative {
-  position: relative;
-  overflow: hidden;
-}
-
-.is-transparent {
-  background-color: rgba(0,0,0,0) !important;
 }
 
 .is-active-item:after {
@@ -80,20 +58,10 @@ p {
 	color: #fff;
 }
 
-.has-dropdown, .navbar-link {
-  outline: none !important;
-}
 
 #well {
   will-change: transform;
 }
-
-.well {
-	position: relative;
-	overflow: hidden;
-  transition: 1s ease 0s;
-}
-
 
 .well::after {
   content: "";
@@ -124,30 +92,6 @@ p {
   outline: none;
 }
 
-.submenu {
-  background-color: rgba(255, 255, 255, 0.1);
-  font-weight: inherit;
-}
-
-.submenu .is-active-item::before {
-  content: "";
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  margin-right: 10px;
-}
-
-.submenu .is-active-item::after {
-  display: none;
-}
-
-.redirect-button {
-  border-left: solid brown 7px !important
-}
-
 @media only screen and (min-width: 1024px) {
   html {
     overflow: hidden;
@@ -157,7 +101,6 @@ p {
     margin-right: 1rem !important;
   }
 }
-
 @media only screen and (max-width: 1024px) {
 
   .navbar-item img {
@@ -189,33 +132,6 @@ p {
     color: white;
   }
 
-  .is-active-item:after {
-    left: 42%;
-    width: 16%;
-  }
-
-  .navbar-link:not(.is-arrowless) {
-    padding-right: 0;
-  }
-
-  .is-active > .navbar-link:not(.is-arrowless)::after {
-    transform: rotate(135deg);
-  }
-
-  .redirect-button {
-    width: 100%;
-  }
-
-  .hero-body {
-    padding: 3em 0.5em !important
-  }
-
-  @media (orientation: portrait) {
-    .reverse-columns {
-      flex-direction: column-reverse;
-      display: flex;
-    }
-  }
 }
 
 
