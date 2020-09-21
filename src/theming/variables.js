@@ -2,10 +2,12 @@ const variables = {
   '$button-background-color': '#4958f5',
   '$button-border-width': '2px',
   '$button-color': 'white',
+  '$danger': '#aa1e02',
   '$footer-background-color': 'rgba(0,0,0,0)',
   '$footer-padding': '10px',
-  '$navbar-background-color': '#1c1746',
+  '$navbar-background-color': '#000',
   '$navbar-dropdown-arrow': 'white',
+  '$navbar-height': '2.5rem',
   '$navbar-item-active-color': 'white',
   '$navbar-item-color': '#8b98cc',
   '$navbar-item-hover-background-color': 'rgba(255, 255, 255, 0%)',
@@ -19,7 +21,6 @@ const variables = {
   '$turquoise-h': "317",
   '$turquoise-l': "35%",
   '$turquoise-s': "62%",
-  '$danger': '#aa1e02'
 }
 
 export default variables

@@ -43,10 +43,6 @@ const Component = {
         showLanguageMenu.value = false
       }
     })
-
-    const navbarColor = computed(() => {
-      return activeItem.value === 0 ? 'transparent' : '#111';
-    })
     
     function isActive(i) {
       return activeItem.value === i
@@ -85,7 +81,6 @@ const Component = {
       isMenuOpen,
       languages,
       logo, 
-      navbarColor,
       pathname,
       showLanguageMenu,
       toggleLanguageMenu,
@@ -97,8 +92,8 @@ export default Component
 </script>
 <template>
   <div class="home is-relative">
-    <CookieBannerFullWidth />
-    <div class="big-menu" :style="`background-color: ${navbarColor}`">
+    <cookie />
+    <div class="big-menu">
       <div class="hidden-language-menu" 
            :style="`height: ${showLanguageMenu ? 40 : 0}px`">
         <div class="is-flex pt-2">
@@ -113,7 +108,7 @@ export default Component
           </v-navbar-item>
         </div>
       </div>
-      <v-navbar transparent v-model="isMenuOpen">
+      <v-navbar v-model="isMenuOpen">
         <template #brand>
           <v-navbar-item class="ml-6">
             <img :src="logo" alt="revenge logo" />
@@ -121,54 +116,46 @@ export default Component
         </template>
         <template #end>
           <v-navbar-item
-            class="mx-3 my-5 is-size-5 py-4 has-text-centered"
+            class="mx-3 is-size-5 py-4 has-text-centered"
             :class="{'is-active-item': isHomeActive }"
             :active="isHomeActive">
             {{ intl.$ts('home.title') }}
           </v-navbar-item>
           <v-navbar-item
-            class="mx-3 my-5 is-size-5 py-4 has-text-centered"
+            class="mx-3 is-size-5 py-4 has-text-centered"
             :class="{'is-active-item': isActive(1) }"
             :active="isActive(1)">
             {{ intl.$ts('trailer.title') }}
           </v-navbar-item>
           <v-navbar-item
-            class="mx-3 my-5 is-size-5 py-4 has-text-centered"
+            class="mx-3 is-size-5 py-4 has-text-centered"
             :class="{'is-active-item': isActive(2) }"
             :active="isActive(2)">
             {{ intl.$ts('clients.title') }}
           </v-navbar-item>
           <v-navbar-item
-            class="mx-3 my-5 is-size-5 py-4 has-text-centered"
+            class="mx-3 is-size-5 py-4 has-text-centered"
             :class="{'is-active-item': isActive(3) }"
             :active="isActive(3)">
             {{ intl.$ts('blog.title') }}
           </v-navbar-item>
           <v-navbar-item
-            class="mx-3 my-5 is-size-5 py-4 has-text-centered"
+            class="mx-3 is-size-5 py-4 has-text-centered"
             @click="toggleLanguageMenu">
             {{ intl.$ts(`language`) }}: {{ languages[intl.locale.value] }}
           </v-navbar-item>
-          <v-navbar-item tag="div" class="is-hidden-desktop is-hidden-widescreen is-hidden-fullhd mx-3 my-5 is-size-5 py-4 has-text-centered">
-            <v-button tag="a" href="https://social.soy/" target="_blank" rel="noopener"
-                      class="mt-6 is-size-6 is-size-7-touch " rounded type="is-primary" size="is-medium">
-              <strong>{{ intl.$ts('blog.button') }}</strong>
-            </v-button>
-          </v-navbar-item>
           <v-navbar-item
-            tag="a" href="https://github.com/pathscale/vue3-ui" target="_blank" rel="noopener"
-            class="mx-3 my-5 is-size-5 py-4 has-text-centered">
-            <i class="icon icon-github has-text-white is-medium" />
-          </v-navbar-item>
-          <v-navbar-item
-            tag="a" href="https://discord.com/invite/yXHXefX" target="_blank" rel="noopener"
-            class="mx-3 my-5 is-size-5 py-4 has-text-centered">
-            <i class="icon icon-discord has-text-white is-medium" />
-          </v-navbar-item>
-          <v-navbar-item
-            tag="a" href="https://twitter.com/pathscale" target="_blank" rel="noopener"
-            class="mx-3 my-5 is-size-5 py-4 has-text-centered">
-            <i class="icon icon-twitter has-text-white is-medium" />
+            tag="div"
+            class="mx-3 is-size-5 py-4 has-text-centered">
+            <a class="mx-4" href="https://github.com/pathscale/vue3-ui" target="_blank" rel="noopener">
+              <i class="icon icon-github has-text-white is-medium" />
+            </a>
+            <a class="mx-4" href="https://discord.com/invite/yXHXefX" target="_blank" rel="noopener">
+              <i class="icon icon-discord has-text-white is-medium" />
+            </a>
+            <a class="mx-4" href="https://twitter.com/pathscale" target="_blank" rel="noopener">
+              <i class="icon icon-twitter has-text-white is-medium" />
+            </a>
           </v-navbar-item>
         </template>
       </v-navbar>
