@@ -152,8 +152,23 @@ export default Component
           <v-navbar-item tag="div" class="is-hidden-desktop is-hidden-widescreen is-hidden-fullhd mx-3 my-5 is-size-5 py-4 has-text-centered">
             <v-button tag="a" href="https://social.soy/" target="_blank" rel="noopener"
                       class="mt-6 is-size-6 is-size-7-touch " rounded type="is-primary" size="is-medium">
-              <strong>{{ intl.$ts('blog.button1') }}</strong>
+              <strong>{{ intl.$ts('blog.button') }}</strong>
             </v-button>
+          </v-navbar-item>
+          <v-navbar-item
+            tag="a" href="https://github.com/pathscale/vue3-ui" target="_blank" rel="noopener"
+            class="mx-3 my-5 is-size-5 py-4 has-text-centered">
+            <i class="icon icon-github has-text-white is-medium" />
+          </v-navbar-item>
+          <v-navbar-item
+            tag="a" href="https://discord.com/invite/yXHXefX" target="_blank" rel="noopener"
+            class="mx-3 my-5 is-size-5 py-4 has-text-centered">
+            <i class="icon icon-discord has-text-white is-medium" />
+          </v-navbar-item>
+          <v-navbar-item
+            tag="a" href="https://twitter.com/pathscale" target="_blank" rel="noopener"
+            class="mx-3 my-5 is-size-5 py-4 has-text-centered">
+            <i class="icon icon-twitter has-text-white is-medium" />
           </v-navbar-item>
         </template>
       </v-navbar>

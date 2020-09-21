@@ -7,6 +7,8 @@ import 'vue3-carousel/dist/carousel.css';
 import "./assets/styles/index.css";
 // import "./assets/styles/scrollbar.css";
 import "./assets/styles/carousel.css";
+import "./assets/styles/icons.css";
+
 
 import { router } from "./router";
 

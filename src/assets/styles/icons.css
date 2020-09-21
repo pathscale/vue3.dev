@@ -20,68 +20,12 @@
 }
 /* https://materialdesignicons.com/ */
 
-.icon-account-circle {
-    background-image: url("../icons/account-circle.svg")
-}
-.icon-alert-decagram {
-    background-image: url("../icons/alert-decagram.svg")
-}
-.icon-cart {
-    background-image: url("../icons/cart.svg")
-}
-.icon-cart-arrow-right  {
-    background-image: url("../icons/cart-arrow-right.svg")
-}
-.icon-cart-plus {
-    background-image: url("../icons/cart-plus.svg")
-}
-.icon-face-agent {
-    background-image: url("../icons/face-agent.svg")
-}
-.icon-facebook {
-    background-image: url("../icons/facebook.svg")
-}
-.icon-format-list-checks {
-    background-image: url("../icons/format-list-checks.svg")
-}
-.icon-gavel {
-    background-image: url("../icons/gavel.svg")
-}
-.icon-instagram {
-    background-image: url("../icons/instagram.svg")
-}
-.icon-login-variant {
-    background-image: url("../icons/login-variant.svg")
-}
-.icon-map-marker {
-    background-image: url("../icons/map-marker.svg")
-}
-.icon-menu {
-    background-image: url("../icons/menu.svg")
-}
 .icon-twitter {
     background-image: url("../icons/twitter.svg")
 }
-.icon-email {
-    background-image: url("../icons/email.svg")
+.icon-discord {
+    background-image: url("../icons/discord.svg")
 }
-.icon-fax {
-    background-image: url("../icons/fax.svg")
+.icon-github {
+    background-image: url("../icons/github.svg")
 }
-.icon-phone {
-    background-image: url("../icons/phone.svg")
-}
-.icon-star {
-    background-image: url("../icons/star.svg")
-}
-.icon-restore {
-    background-image: url("../icons/restore.svg")
-}
-.icon-menu-up {
-    background-image: url("../icons/menu-up.svg")
-}
-.icon-menu-down {
-    background-image: url("../icons/menu-down.svg")
-}
-
-
