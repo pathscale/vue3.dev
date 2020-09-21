@@ -3,51 +3,50 @@
 import { VButton, VNavbar, VNavbarItem, VNavbarDropdown} from "@pathscale/vue3-ui"
 import { useI18n } from "vue-composable";
 
-import { ref, watchEffect } from "vue"
+import { ref } from "vue"
+import { useRouter } from "vue-router"
 
+
+import logo from '../../assets/svg/vue3-logo.svg'
 
 const Component = {
-  props: ['activeItem', 'changeLanguage', 'isActive', 'languages', 'toggleLanguageMenu', 'showLanguageMenu', 'isMenuOpen'],
   components: {    
     VButton, VNavbar, VNavbarItem, VNavbarDropdown
   },
   setup(props, {emit}) {
-    const navbarColor = [
-      'transparent',
-      '#24073b',
-      '#21073B',
-      '#1E073B',
-      '#18073b',
-      '#14073b',
-      '#120b3e',
-      '#111743',
-    ]
-
      const languages = {
         es: "es-ES",
         en: "en-EN",
         pt: "pt-BR"
     }
 
-    const isMenuOpened = ref(props.isMenuOpen);
-    const isDropdownOpen = ref(false);
-
+    const router = useRouter();
+    const isMenuOpen = ref(false);
+    const showLanguageMenu = ref(false);
     const intl = useI18n();
 
-     watchEffect(() => {
-      isMenuOpened.value = props.isMenuOpen;
-    })
+    const isActive = (name) => {
+      return router.currentRoute.value.name === name
+    }
 
-    watchEffect(() => {
-      emit('isMenuOpened', isMenuOpened.value)
-    })
+    function toggleLanguageMenu() {
+      showLanguageMenu.value = !showLanguageMenu.value;
+    }
+    
+    function changeLanguage(language) {
+      showLanguageMenu.value = false
+      intl.locale.value = language
+    }
     
     return { 
      intl,
-     isDropdownOpen,
-     isMenuOpened,
+     isMenuOpen,
      languages,
-     navbarColor,
+     isActive,
+     logo,
+     toggleLanguageMenu,
+     changeLanguage,
+     showLanguageMenu
     }
   }
  }
@@ -55,7 +54,7 @@ export default Component
 </script>
 
 <template>
-  <div class="big-menu" :style="`background-color: ${navbarColor[activeItem]}`">
+  <div class="big-menu">
     <div class="hidden-language-menu" 
          :style="`height: ${showLanguageMenu ? 40 : 0}px`">
       <div class="is-flex pt-2">
@@ -70,40 +69,54 @@ export default Component
         </v-navbar-item>
       </div>
     </div>
-    <v-navbar transparent v-model="isMenuOpened">
+    <v-navbar v-model="isMenuOpen">
       <template #brand>
         <v-navbar-item class="ml-6">
-          <img alt="pathscale logo" />
+          <img :src="logo" alt="revenge logo" />
         </v-navbar-item>
       </template>
       <template #end>
         <v-navbar-item
-          class="mx-3 my-5 is-size-5 has-text-centered"
-          :class="{'is-active-item': isActive(0) }"
-          :active="isActive(0)">
+          class="mx-3 is-size-5 py-4 has-text-centered"
+          :class="{'is-active-item': isActive('home') }"
+          :active="isActive('home')">
           {{ intl.$ts('home.title') }}
         </v-navbar-item>
         <v-navbar-item
-          class="mx-3 my-5 is-size-5 has-text-centered"
-          :class="{'is-active-item': isActive(6) }"
-          :active="isActive(6)">
-          {{ intl.$ts('trailer.subtitle') }}
+          class="mx-3 is-size-5 py-4 has-text-centered"
+          :class="{'is-active-item': isActive('trailer') }"
+          :active="isActive('trailer')">
+          {{ intl.$ts('trailer.title') }}
         </v-navbar-item>
         <v-navbar-item
-          class="mx-3 my-5 is-size-5 has-text-centered"
-          :class="{'is-active-item': isActive(7) }"
-          :active="isActive(7)">
-          {{ intl.$ts('history.subtitle') }}
+          class="mx-3 is-size-5 py-4 has-text-centered"
+          :class="{'is-active-item': isActive('client') }"
+          :active="isActive('client')">
+          {{ intl.$ts('clients.title') }}
         </v-navbar-item>
         <v-navbar-item
-          class="mx-3 my-5 is-size-5 has-text-centered"
+          class="mx-3 is-size-5 py-4 has-text-centered"
+          :class="{'is-active-item': isActive('blog') }"
+          :active="isActive('blog')">
+          {{ intl.$ts('blog.title') }}
+        </v-navbar-item>
+        <v-navbar-item
+          class="mx-3 is-size-5 py-4 has-text-centered"
           @click="toggleLanguageMenu">
           {{ intl.$ts(`language`) }}: {{ languages[intl.locale.value] }}
         </v-navbar-item>
-        <v-navbar-item tag="div" class="is-hidden-desktop is-hidden-widescreen is-hidden-fullhd mx-3 my-5 is-size-5 has-text-centered">
-          <v-button tag="a" href="mailto:sales@pathscale.com?&subject=PathScale%20Multi-CDN" target="_blank" class="mt-6 is-size-6 is-size-7-touch " rounded type="is-primary" size="is-medium">
-            <strong>{{ intl.$ts('multi_cdn.button') }}</strong>
-          </v-button>
+        <v-navbar-item
+          tag="div"
+          class="mx-3 is-size-5 py-4 has-text-centered">
+          <a class="mx-4" href="https://github.com/pathscale/vue3-ui" target="_blank" rel="noopener">
+            <i class="icon icon-github has-text-white is-medium" />
+          </a>
+          <a class="mx-4" href="https://discord.com/invite/yXHXefX" target="_blank" rel="noopener">
+            <i class="icon icon-discord has-text-white is-medium" />
+          </a>
+          <a class="mx-4" href="https://twitter.com/pathscale" target="_blank" rel="noopener">
+            <i class="icon icon-twitter has-text-white is-medium" />
+          </a>
         </v-navbar-item>
       </template>
     </v-navbar>
