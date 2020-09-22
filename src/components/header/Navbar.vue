@@ -40,7 +40,7 @@ const Component = {
     })
 
     const isActive = (name) => {
-      return router.currentRoute.value.name === name
+      return router.currentRoute.value.path.includes(name)
     }
 
     function toggleLanguageMenu() {
@@ -92,26 +92,22 @@ export default Component
       <template #end>
         <v-navbar-item
           class="mx-3 is-size-5 py-4 has-text-centered"
+          tag="router-link"
+          :to="{name: 'home'}"
           :class="{'is-active-item': isActive('home') }"
           :active="isActive('home')">
           {{ intl.$ts('home.title') }}
         </v-navbar-item>
         <v-navbar-item
           class="mx-3 is-size-5 py-4 has-text-centered"
-          :class="{'is-active-item': isActive('trailer') }"
-          :active="isActive('trailer')">
-          {{ intl.$ts('trailer.title') }}
+          tag="router-link"
+          :to="{name: 'documentation'}"
+          :class="{'is-active-item': isActive('documentation') }"
+          :active="isActive('documentation')">
+          Documentation
         </v-navbar-item>
         <v-navbar-item
-          class="mx-3 is-size-5 py-4 has-text-centered"
-          :class="{'is-active-item': isActive('client') }"
-          :active="isActive('client')">
-          {{ intl.$ts('clients.title') }}
-        </v-navbar-item>
-        <v-navbar-item
-          class="mx-3 is-size-5 py-4 has-text-centered"
-          :class="{'is-active-item': isActive('blog') }"
-          :active="isActive('blog')">
+          class="mx-3 is-size-5 py-4 has-text-centered">
           {{ intl.$ts('blog.title') }}
         </v-navbar-item>
         <v-navbar-item
