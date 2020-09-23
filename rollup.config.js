@@ -61,14 +61,11 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
       return `<meta${attrs}>`
     })
     .join('\n')
-  const name = 'Mach4motors'
-  const description =
-    ' Mach IV Motors is here for all your Kawasaki NOS parts and classic bike needs. We specialize in vintage Japanese, American and European motorcycles. | Mach4motors'
-  const socialTitle =
-    'We specialize in vintage Japanese, American and European motorcycles. | Mach4motors'
+  const name = 'Vue3-ui'
+  const description = 'Very clean Vue3 components styled with love and care. | Vue3-ui'
+  const socialTitle = 'Very clean Vue3 components styled with love and care. | Vue3-ui'
   const url = 'https://vue3--dev.b-cdn.net/'
-  const imageUrl =
-    'http://www.mach4motors.com/_/rsrc/1389820088684/home/CL_360.jpg?height=630&width=1200'
+  const imageUrl = `${url}/vue3-ui.png`
 
   return `
 <!doctype html>
@@ -203,7 +200,7 @@ const config = [
 
       html({
         publicPath: env.parsed.BASE_URL,
-        title: 'Mach4motors',
+        title: 'Vue3-ui',
         template,
       }),
 
