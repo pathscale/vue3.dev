@@ -1,12 +1,11 @@
-const api = [
+const api = 
   {
     props: [
       {
         name: 'type',
         description: 'Button color',
         type: 'String',
-        values: `is-white, is-light, is-dark, is-black, is-text, is-primary, is-link, is-info, is-success, is-warning, is-danger, 
-          The button is available in all the different colors defined by the $colors Sass map.`,
+        values: `is-white, is-light, is-dark, is-black, is-text, is-primary, is-link, is-info, is-success, is-warning, is-danger...`,
         default: '—'
       },
       {
@@ -14,13 +13,13 @@ const api = [
         description: 'The button comes in 4 different sizes',
         type: 'String',
         values: 'is-small, is-normal, is-medium, is-large',
-        default: 'is-normal'
+        default: '—'
       },
       {
         name: 'label',
         description: 'Button label',
         type: 'String',
-        values: '',
+        values: '—',
         default: '—'
       },
       {
@@ -87,6 +86,13 @@ const api = [
         default: 'false'
       },
       {
+        name: 'light',
+        description: 'Light style',
+        type: 'Boolean',
+        values: '—',
+        default: 'false'
+      },
+      {
         name: 'native-type',
         description: 'Button type, like native',
         type: 'String',
@@ -99,13 +105,6 @@ const api = [
         type: 'String',
         values: 'button, a, input, router-link, nuxt-link...',
         default: 'button'
-      },
-      {
-        name: 'light',
-        description: 'Light style',
-        type: 'Boolean',
-        values: '—',
-        default: 'false'
       },
       {
         name: 'Any native attribute',
@@ -128,6 +127,5 @@ const api = [
       }
     ]
   }
-]
 
 export default api;
