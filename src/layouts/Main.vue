@@ -23,7 +23,7 @@ const Component = {
 export default Component
 </script>
 <template>
-  <div class="home is-relative">
+  <div>
     <cookie />
     <navbar />
     <div class="well" id="well">

@@ -22,6 +22,7 @@ body {
   text-rendering: optimizeLegibility;
   height: calc(var(--vh, 1vh) * 100);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .hidden-language-menu {

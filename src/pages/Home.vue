@@ -1,5 +1,4 @@
 <script>
-// eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
 import { useI18n } from "vue-composable";
 
 import { useRouter} from "vue-router"

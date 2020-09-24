@@ -19,14 +19,13 @@ export default Component;
 </script>
 
 <template>
-  <section>
+  <div>
     <h1 class="title">
       Button
     </h1>
     <p>
       The classic button, in different colors, sizes, and states
     </p>
-
     <section id="api" class="pt-4">
       <h2 class="title is-4">
         <a href="/documentation/button/#api" class="router-link-exact-active is-active">#</a> API
@@ -75,5 +74,5 @@ export default Component;
         </v-tab>
       </v-tabs>
     </section>
-  </section>
+  </div>
 </template>
