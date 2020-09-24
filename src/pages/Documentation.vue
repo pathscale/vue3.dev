@@ -10,8 +10,15 @@ const Component = {
   setup() {
     const intl = useI18n();
     const router = useRouter();
+
+    function redirect(name) {
+     router.push({
+        name
+     })
+    }
+
     const { path } = router.currentRoute.value;
-    return { intl, path }
+    return { intl, path, redirect }
   }
 }
 export default Component;
@@ -31,7 +38,7 @@ export default Component;
             <v-menu-list label="Elements">
               <!-- <v-menu-item label="Typography" /> -->
               <!-- <v-menu-item label="Box" /> -->
-              <v-menu-item tag="router-link" :to="{name: 'button'}" label="Button" />
+              <v-menu-item @click="redirect('button') " label="Button" />
               <!-- <v-menu-item label="Content" /> -->
               <!-- <v-menu-item label="Delete" /> -->
               <!-- <v-menu-item label="Form" /> -->
