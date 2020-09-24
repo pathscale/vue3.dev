@@ -2,6 +2,7 @@ const api =
   [ 
     {
       title: 'VButton',
+      description: 'The classic button, in different colors, sizes, and states',
       props: [
         {
           name: 'type',
