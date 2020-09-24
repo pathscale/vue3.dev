@@ -46,7 +46,7 @@ export default Component;
             </tbody>
           </table>
         </v-tab>
-        <v-tab label="Events">
+        <v-tab label="Events" v-if="item.events">
           <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
             <thead>
               <tr>

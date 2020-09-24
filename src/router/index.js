@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Main from "../layouts/Main.vue";
 
-import { Home, Documentation, Button } from "../pages";
+import { Home, Documentation, Button, Image } from "../pages";
 
 const routes = [
   {
@@ -64,6 +64,24 @@ const routes = [
               ]
             }
           },
+          {
+            name: 'image',
+            path: 'image',
+            component: Image,
+            meta: {
+              title: 'Image | Vue3-ui',
+              metaTags: [
+                {
+                  name: 'description',
+                  content: 'A container for responsive images'
+                },
+                {
+                  property: 'og:description',
+                  content: 'A container for responsive images'
+                }
+              ]
+            }
+          }
         ]
         
       },

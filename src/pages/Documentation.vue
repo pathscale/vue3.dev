@@ -38,12 +38,12 @@ export default Component;
             <v-menu-list label="Elements">
               <!-- <v-menu-item label="Typography" /> -->
               <!-- <v-menu-item label="Box" /> -->
-              <v-menu-item @click="redirect('button') " label="Button" />
+              <v-menu-item @click="redirect('button')" label="Button" />
               <!-- <v-menu-item label="Content" /> -->
               <!-- <v-menu-item label="Delete" /> -->
               <!-- <v-menu-item label="Form" /> -->
               <!-- <v-menu-item label="Icon" /> -->
-              <v-menu-item label="Image" />
+              <v-menu-item @click="redirect('image')" label="Image" />
               <!-- <v-menu-item label="Notifications" /> -->
               <v-menu-item label="Progress" />
               <!-- <v-menu-item label="Table" /> -->
