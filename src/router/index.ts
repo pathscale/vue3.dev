@@ -13,19 +13,59 @@ const routes = [
       {
         name: 'home',
         path: 'home',
-        component: Home
+        component: Home,
+        meta: {
+          title: 'Vue3-ui',
+          metaTags: [
+            {
+              name: 'description',
+              content: 'Very clean Vue3 components styled with love and care.'
+            },
+            {
+              property: 'og:description',
+              content: 'Very clean Vue3 components styled with love and care.'
+            }
+          ]
+        }
       },
       {
         name: 'documentation',
         path: 'documentation',
         component: Documentation,
+        meta: {
+          title: 'Documentation | Vue3-ui',
+          metaTags: [
+            {
+              name: 'description',
+              content: 'Very clean Vue3 components styled with love and care.'
+            },
+            {
+              property: 'og:description',
+              content: 'Very clean Vue3 components styled with love and care.'
+            }
+          ]
+        },
         children: [
           {
             name: 'button',
             path: 'button',
-            component: Button
+            component: Button,
+            meta: {
+              title: 'Button | Vue3-ui',
+              metaTags: [
+                {
+                  name: 'description',
+                  content: 'The classic button, in different colors, sizes, and states'
+                },
+                {
+                  property: 'og:description',
+                  content: 'The classic button, in different colors, sizes, and states'
+                }
+              ]
+            }
           },
         ]
+        
       },
     ]
   }
