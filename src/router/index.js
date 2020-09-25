@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Main from "../layouts/Main.vue";
 
-import { Home, Documentation, Button, Image } from "../pages";
+import { Home, Documentation, Button, Image, Progress } from "../pages";
 
 const routes = [
   {
@@ -33,7 +33,7 @@ const routes = [
         path: 'documentation',
         component: Documentation,
         meta: {
-          title: 'Documentation | Vue3-ui',
+          title: 'Documentation',
           metaTags: [
             {
               name: 'description',
@@ -51,7 +51,7 @@ const routes = [
             path: 'button',
             component: Button,
             meta: {
-              title: 'Button | Vue3-ui',
+              title: 'Button',
               metaTags: [
                 {
                   name: 'description',
@@ -69,7 +69,7 @@ const routes = [
             path: 'image',
             component: Image,
             meta: {
-              title: 'Image | Vue3-ui',
+              title: 'Image',
               metaTags: [
                 {
                   name: 'description',
@@ -78,6 +78,24 @@ const routes = [
                 {
                   property: 'og:description',
                   content: 'A container for responsive images'
+                }
+              ]
+            }
+          },
+          {
+            name: 'progress',
+            path: 'progress',
+            component: Progress,
+            meta: {
+              title: 'Progress',
+              metaTags: [
+                {
+                  name: 'description',
+                  content: 'Display an indicator showing the completion progress of a task.'
+                },
+                {
+                  property: 'og:description',
+                  content: 'Display an indicator showing the completion progress of a task.'
                 }
               ]
             }
@@ -103,7 +121,7 @@ router.beforeEach((to, from, next) => {
   const nearestWithMeta = to.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
 
   // If a route with a title was found, set the document (page) title to that value.
-  if(nearestWithTitle) document.title = nearestWithTitle.meta.title;
+  if(nearestWithTitle) document.title = nearestWithTitle.meta.title + '| Vue3-ui';
 
   // Remove any stale meta tags from the document using the key attribute we set below.
   [...document.querySelectorAll('[data-vue-router-controlled]')].map(el => el.remove());

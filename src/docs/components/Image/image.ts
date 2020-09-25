@@ -2,7 +2,6 @@ const api =
   [ 
     {
       title: 'VImage',
-      description: 'A container for responsive images',
       props: [
         {
             name: 'src',

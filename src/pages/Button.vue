@@ -1,7 +1,7 @@
 <script>
 import { useI18n } from "vue-composable";
 
- 
+import { useRouter } from 'vue-router'; 
 import api from '../docs/components/Button/button.ts'
 import { ApiSection } from "../components/sections"
 
@@ -9,7 +9,8 @@ const Component = {
   components: { ApiSection },
   setup() {
     const intl = useI18n();
-    return { intl, api }
+     const router = useRouter();
+    return { intl, api, router }
   }
 }
 export default Component;
@@ -18,14 +19,14 @@ export default Component;
 <template>
   <div>
     <h1 class="title">
-      Button
+      {{ router.currentRoute.value.meta.title }}
     </h1>
     <p>
-      The classic button, in different colors, sizes, and states
+      {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
     <section id="api" class="pt-4">
       <h2 class="title is-4">
-        <a href="/documentation/button/#api" class="router-link-exact-active is-active">#</a> API
+        <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API
       </h2>
       <api-section :api="api" />
     </section>
