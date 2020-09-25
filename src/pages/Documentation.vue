@@ -51,7 +51,7 @@ export default Component;
             </v-menu-list>
             <v-menu-list label="Form controls">
               <v-menu-item label="Input" @click="redirect('input')" />
-              <v-menu-item label="Switch" />
+              <v-menu-item label="Switch" @click="redirect('switch')" />
               <v-menu-item label="Select" />
               <v-menu-item label="Textarea" />
               <v-menu-item label="Checkbox" />

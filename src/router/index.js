@@ -2,19 +2,23 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Main from "../layouts/Main.vue";
 
-import { Home, Documentation, Button, Image, Progress, Tag, Input } from "../pages";
+// eslint-disable-next-line no-restricted-syntax -- All pages will be used
+import * as Pages from "../pages";
 
-const metaTags = (content) => {
-  return [
-    {
-      name: 'description',
-      content
-    },
-    {
-      property: 'og:description',
-      content
-    }
-  ]
+const metaTags = (title, content) => {
+  return {
+    title,
+    metaTags: [
+      {
+        name: 'description',
+        content
+      },
+      {
+        property: 'og:description',
+        content
+      }
+    ]
+  }
 }
 
 const routes = [
@@ -26,68 +30,52 @@ const routes = [
       {
         name: 'home',
         path: 'home',
-        component: Home,
-        meta: {
-          title: 'Vue3-ui',
-          metaTags: metaTags('Very clean Vue3 components styled with love and care.')
-        }
+        component: Pages.Home,
+        meta: metaTags('Meta','Very clean Vue3 components styled with love and care.')
       },
       {
         name: 'documentation',
         path: 'documentation',
-        component: Documentation,
-        meta: {
-          title: 'Documentation',
-          metaTags: metaTags('Very clean Vue3 components styled with love and care.')
-        },
+        component: Pages.Documentation,
+        meta: metaTags('Documentation','Very clean Vue3 components styled with love and care.'),
         children: [
           {
             name: 'button',
             path: 'button',
-            component: Button,
-            meta: {
-              title: 'Button',
-              metaTags: metaTags('The classic button, in different colors, sizes, and states')
-            }
+            component: Pages.Button,
+            meta: metaTags('Button','The classic button, in different colors, sizes, and states'),
           },
           {
             name: 'image',
             path: 'image',
-            component: Image,
-            meta: {
-              title: 'Image',
-              metaTags: metaTags('A container for responsive images')
-            }
+            component: Pages.Image,
+            meta: metaTags('Image','A container for responsive images'),
           },
           {
             name: 'progress',
             path: 'progress',
-            component: Progress,
-            meta: {
-              title: 'Progress',
-              metaTags: metaTags('Display an indicator showing the completion progress of a task.')
-            }
+            component: Pages.Progress,
+            meta: metaTags('Progress', 'Display an indicator showing the completion progress of a task.')
           },
           {
             name: 'tag',
             path: 'tag',
-            component: Tag,
-            meta: {
-              title: 'Tag',
-              metaTags: metaTags("It's very useful as a way to attach information to a block or other component")
-            }
+            component: Pages.Tag,
+            meta: metaTags('Tag', "It's very useful as a way to attach information to a block or other component")
           },
           {
             name: 'input',
             path: 'input',
-            component: Input,
-            meta: {
-              title: 'Input',
-              metaTags: metaTags('The text input and its variations')
-            }
+            component: Pages.Input,
+            meta: metaTags('Input', 'The text input and its variations')
+          },
+          {
+            name: 'switch',
+            path: 'switch',
+            component: Pages.Switch,
+            meta: metaTags('Switch', 'Display the classic checkbox as a switch button with different colors, sizes, and states')
           }
         ]
-        
       },
     ]
   }
