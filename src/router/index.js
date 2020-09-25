@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Main from "../layouts/Main.vue";
 
-import { Home, Documentation, Button, Image, Progress } from "../pages";
+import { Home, Documentation, Button, Image, Progress, Tag } from "../pages";
 
 const routes = [
   {
@@ -96,6 +96,24 @@ const routes = [
                 {
                   property: 'og:description',
                   content: 'Display an indicator showing the completion progress of a task.'
+                }
+              ]
+            }
+          },
+          {
+            name: 'tag',
+            path: 'tag',
+            component: Tag,
+            meta: {
+              title: 'Tag',
+              metaTags: [
+                {
+                  name: 'description',
+                  content: "It's very useful as a way to attach information to a block or other component"
+                },
+                {
+                  property: 'og:description',
+                  content: "It's very useful as a way to attach information to a block or other component"
                 }
               ]
             }
