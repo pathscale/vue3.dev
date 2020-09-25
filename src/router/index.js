@@ -2,7 +2,20 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Main from "../layouts/Main.vue";
 
-import { Home, Documentation, Button, Image, Progress, Tag } from "../pages";
+import { Home, Documentation, Button, Image, Progress, Tag, Input } from "../pages";
+
+const metaTags = (content) => {
+  return [
+    {
+      name: 'description',
+      content
+    },
+    {
+      property: 'og:description',
+      content
+    }
+  ]
+}
 
 const routes = [
   {
@@ -16,16 +29,7 @@ const routes = [
         component: Home,
         meta: {
           title: 'Vue3-ui',
-          metaTags: [
-            {
-              name: 'description',
-              content: 'Very clean Vue3 components styled with love and care.'
-            },
-            {
-              property: 'og:description',
-              content: 'Very clean Vue3 components styled with love and care.'
-            }
-          ]
+          metaTags: metaTags('Very clean Vue3 components styled with love and care.')
         }
       },
       {
@@ -34,16 +38,7 @@ const routes = [
         component: Documentation,
         meta: {
           title: 'Documentation',
-          metaTags: [
-            {
-              name: 'description',
-              content: 'Very clean Vue3 components styled with love and care.'
-            },
-            {
-              property: 'og:description',
-              content: 'Very clean Vue3 components styled with love and care.'
-            }
-          ]
+          metaTags: metaTags('Very clean Vue3 components styled with love and care.')
         },
         children: [
           {
@@ -52,16 +47,7 @@ const routes = [
             component: Button,
             meta: {
               title: 'Button',
-              metaTags: [
-                {
-                  name: 'description',
-                  content: 'The classic button, in different colors, sizes, and states'
-                },
-                {
-                  property: 'og:description',
-                  content: 'The classic button, in different colors, sizes, and states'
-                }
-              ]
+              metaTags: metaTags('The classic button, in different colors, sizes, and states')
             }
           },
           {
@@ -70,16 +56,7 @@ const routes = [
             component: Image,
             meta: {
               title: 'Image',
-              metaTags: [
-                {
-                  name: 'description',
-                  content: 'A container for responsive images'
-                },
-                {
-                  property: 'og:description',
-                  content: 'A container for responsive images'
-                }
-              ]
+              metaTags: metaTags('A container for responsive images')
             }
           },
           {
@@ -88,16 +65,7 @@ const routes = [
             component: Progress,
             meta: {
               title: 'Progress',
-              metaTags: [
-                {
-                  name: 'description',
-                  content: 'Display an indicator showing the completion progress of a task.'
-                },
-                {
-                  property: 'og:description',
-                  content: 'Display an indicator showing the completion progress of a task.'
-                }
-              ]
+              metaTags: metaTags('Display an indicator showing the completion progress of a task.')
             }
           },
           {
@@ -106,16 +74,16 @@ const routes = [
             component: Tag,
             meta: {
               title: 'Tag',
-              metaTags: [
-                {
-                  name: 'description',
-                  content: "It's very useful as a way to attach information to a block or other component"
-                },
-                {
-                  property: 'og:description',
-                  content: "It's very useful as a way to attach information to a block or other component"
-                }
-              ]
+              metaTags: metaTags("It's very useful as a way to attach information to a block or other component")
+            }
+          },
+          {
+            name: 'input',
+            path: 'input',
+            component: Input,
+            meta: {
+              title: 'Input',
+              metaTags: metaTags('The text input and its variations')
             }
           }
         ]

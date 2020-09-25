@@ -1,16 +1,15 @@
 <script>
 import { useI18n } from "vue-composable";
 
- 
-import { useRouter } from 'vue-router';
-import api from '../docs/components/Progress/progress.ts'
-import { ApiSection } from "../components/sections"
+import { useRouter } from 'vue-router'; 
+import api from '../../docs/components/Input/input.ts'
+import { ApiSection } from "../../components/sections"
 
 const Component = {
   components: { ApiSection },
   setup() {
     const intl = useI18n();
-    const router = useRouter();
+     const router = useRouter();
     return { intl, api, router }
   }
 }
