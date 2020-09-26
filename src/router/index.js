@@ -80,6 +80,12 @@ const routes = [
             path: 'select',
             component: Pages.Select,
             meta: metaTags('Select', 'The browser built-in select dropdown, styled accordingly')
+          },
+          {
+            name: 'textarea',
+            path: 'textarea',
+            component: Pages.Textarea,
+            meta: metaTags('Textarea', 'The multiline textarea and its variations')
           }
         ]
       },

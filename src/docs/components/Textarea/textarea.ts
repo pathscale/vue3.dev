@@ -1,7 +1,7 @@
 const api = 
   [ 
     {
-      title: 'VInput',
+      title: 'VTextarea',
       props: [
         {
             name: 'v-model',
@@ -11,46 +11,39 @@ const api =
             default: '—'
         },
         {
-            name: 'type',
-            description: 'The input can be displayed in several ways, depending on the type attribute.',
-            type: 'String',
-            values: 'text, password, email, tel, maxlength, ...',
-            default: 'text'
+          name: 'color',
+          description: 'Textarea color',
+          type: 'String',
+          values: `is-white, is-light, is-dark, is-black, is-text, is-primary, is-link, is-info, is-success, is-warning, is-danger...`,
+          default: '—'
         },
         {
             name: 'size',
-            description: 'Input size',
+            description: 'The textarea element comes in 4 different sizes',
             type: 'String',
-            values: 'is-small, is-medium, is-large',
+            values: 'is-small, is-normal, is-medium, is-large',
             default: '—'
         },
         {
             name: 'loading',
-            description: 'Add the loading state to the input',
+            description: 'Add the loading state to the textarea',
             type: 'Boolean',
             values: '—',
             default: 'false'
         },
         {
-            name: 'icon-right',
-            description: 'Right icon',
-            type: 'String',
-            values: '—',
-            default: '—'
+          name: 'focused',
+          description: 'Focused style',
+          type: 'Boolean',
+          values: '—',
+          default: 'false'
         },
         {
-            name: 'icon-left',
-            description: 'Left Icon',
-            type: 'String',
-            values: '—',
-            default: '—'
-        },
-        {
-            name: 'errorMsg',
-            description: 'Error message',
-            type: 'String',
-            values: '—',
-            default: '—'
+          name: 'hovered',
+          description: 'Hovered style',
+          type: 'Boolean',
+          values: '—',
+          default: 'false'
         },
         {
             name: 'Any native attribute',
