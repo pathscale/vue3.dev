@@ -74,6 +74,12 @@ const routes = [
             path: 'switch',
             component: Pages.Switch,
             meta: metaTags('Switch', 'Display the classic checkbox as a switch button with different colors, sizes, and states')
+          },
+          {
+            name: 'select',
+            path: 'select',
+            component: Pages.Select,
+            meta: metaTags('Select', 'The browser built-in select dropdown, styled accordingly')
           }
         ]
       },
