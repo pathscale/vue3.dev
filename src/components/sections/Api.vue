@@ -1,13 +1,13 @@
 <script>
 // eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
-import { VTag, VTab, VTabs } from "@pathscale/vue3-ui"
+import { VTag, VTab, VTabs, VTooltip } from "@pathscale/vue3-ui"
 import { useI18n } from "vue-composable";
 
 import { ref } from 'vue'
 
 const Component = {
   props: ['api'],
-  components: { VTag,  VTab, VTabs },
+  components: { VTag,  VTab, VTabs, VTooltip },
   setup() {
     const intl = useI18n();
     const tab = ref(0);
@@ -23,6 +23,7 @@ export default Component;
       <p class="pb-4 is-size-4">
         {{ item.title }}
       </p>
+
       <v-tabs v-model="tab" type="is-boxed">
         <v-tab label="Properties">
           <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
@@ -37,10 +38,15 @@ export default Component;
             </thead>
             <tbody>
               <tr v-for="(value, index) in item.props" :key="index">
-                <th><code>{{ value.name }}</code></th>
+                <th>
+                  <v-tooltip label="required" v-if="value.required">
+                    <code>{{ value.name }}</code>*
+                  </v-tooltip>
+                  <code v-if="!value.required">{{ value.name }}</code>
+                </th>
                 <td><v-tag>{{ value.type }}</v-tag></td>
-                <td>{{ value.values }}</td>
-                <td>{{ value.default }}</td>
+                <td>{{ value.values || '—' }}</td>
+                <td>{{ value.default || '—' }}</td>
                 <td>{{ value.description }}</td>
               </tr>
             </tbody>

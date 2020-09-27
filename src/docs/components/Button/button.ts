@@ -8,90 +8,76 @@ const api =
           description: 'Button color',
           type: 'String',
           values: `is-white, is-light, is-dark, is-black, is-text, is-primary, is-link, is-info, is-success, is-warning, is-danger...`,
-          default: '—'
         },
         {
           name: 'size',
           description: 'The button comes in 4 different sizes',
           type: 'String',
           values: 'is-small, is-normal, is-medium, is-large',
-          default: '—'
         },
         {
           name: 'label',
           description: 'Button label',
           type: 'String',
-          values: '—',
-          default: '—'
         },
         {
           name: 'loading',
           description: 'Loading state',
           type: 'Boolean',
-          values: '—',
           default: 'false'
         },
         {
           name: 'rounded',
           description: 'Rounded style',
           type: 'Boolean',
-          values: '—',
           default: 'false'
         },
         {
           name: 'outlined',
           description: 'Outlined style',
           type: 'Boolean',
-          values: '—',
           default: 'false'
         },
         {
           name: 'expanded',
           description: 'Full-width style',
           type: 'Boolean',
-          values: '—',
           default: 'false'
         },
         {
           name: 'inverted',
           description: 'Inverted style',
           type: 'Boolean',
-          values: '—',
           default: 'false'
         },
         {
           name: 'focused',
           description: 'Focused style',
           type: 'Boolean',
-          values: '—',
           default: 'false'
         },
         {
           name: 'active',
           description: 'Active style',
           type: 'Boolean',
-          values: '—',
           default: 'false'
         },
         {
           name: 'hovered',
           description: 'Hovered style',
           type: 'Boolean',
-          values: '—',
           default: 'false'
         },
         {
           name: 'selected',
           description: 'Selected style',
           type: 'Boolean',
-          values: '—',
           default: 'false'
         },
         {
           name: 'light',
           description: 'Light style',
           type: 'Boolean',
-          values: '—',
           default: 'false'
         },
         {
@@ -110,10 +96,6 @@ const api =
         },
         {
           name: 'Any native attribute',
-          description: '—',
-          type: '—',
-          values: '—',
-          default: '—'
         }
       ],
       events: [

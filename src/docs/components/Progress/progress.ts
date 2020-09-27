@@ -15,27 +15,22 @@ const api =
             description: 'Progress bar size',
             type: 'String',
             values: 'is-small, is-medium, is-large',
-            default: '—'
         },
         {
             name: 'value',
             description: 'Progress bar value',
             type: 'Number',
-            values: '—',
-            default: '—'
         },
         {
             name: 'max',
             description: 'Progress bar max value',
             type: 'Number',
-            values: '—',
             default: '100'
         },
         {
             name: 'show-value',
             description: 'Show value inside the progress bar',
             type: 'Boolean',
-            values: '—',
             default: 'false'
         },
         {
@@ -49,14 +44,12 @@ const api =
             name: 'precision',
             description: 'How many decimal digits should be displayed',
             type: 'Number',
-            values: '—',
             default: '2'
         },
         {
             name: 'keep-trailing-zeroes',
             description: 'Truncate or not the trailing zeroes',
             type: 'Boolean',
-            values: '—',
             default: 'false'
         },
       ],

@@ -86,6 +86,12 @@ const routes = [
             path: 'textarea',
             component: Pages.Textarea,
             meta: metaTags('Textarea', 'The multiline textarea and its variations')
+          },
+          {
+            name: 'checkbox',
+            path: 'checkbox',
+            component: Pages.Checkbox,
+            meta: metaTags('Checkbox', 'Display a toggling box to keep your on / off states')
           }
         ]
       },

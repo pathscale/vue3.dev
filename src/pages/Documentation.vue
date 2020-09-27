@@ -1,27 +1,52 @@
 <script>
 // eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
-import { VButton, VColumns, VColumn, VSelect, VField, VInput, VBreadcrumb, VBreadcrumbItem, VSidebar, VMenu, VMenuItem, VMenuList} from "@pathscale/vue3-ui"
-import { useI18n } from "vue-composable";
-import { useRouter } from 'vue-router';
-
+import {
+  VButton,
+  VColumns,
+  VColumn,
+  VSelect,
+  VField,
+  VInput,
+  VBreadcrumb,
+  VBreadcrumbItem,
+  VSidebar,
+  VMenu,
+  VMenuItem,
+  VMenuList,
+} from '@pathscale/vue3-ui'
+import { useI18n } from 'vue-composable'
+import { useRouter } from 'vue-router'
 
 const Component = {
-  components: { VButton, VColumns, VColumn,  VSelect, VField, VInput, VBreadcrumb, VBreadcrumbItem, VSidebar, VMenu, VMenuItem, VMenuList },
+  components: {
+    VButton,
+    VColumns,
+    VColumn,
+    VSelect,
+    VField,
+    VInput,
+    VBreadcrumb,
+    VBreadcrumbItem,
+    VSidebar,
+    VMenu,
+    VMenuItem,
+    VMenuList,
+  },
   setup() {
-    const intl = useI18n();
-    const router = useRouter();
+    const intl = useI18n()
+    const router = useRouter()
 
     function redirect(name) {
-     router.push({
-        name
-     })
+      router.push({
+        name,
+      })
     }
 
-    const { path } = router.currentRoute.value;
+    const { path } = router.currentRoute.value
     return { intl, path, redirect }
-  }
+  },
 }
-export default Component;
+export default Component
 </script>
 
 <template>
@@ -53,11 +78,11 @@ export default Component;
               <v-menu-item label="Input" @click="redirect('input')" />
               <v-menu-item label="Textarea" @click="redirect('textarea')" />
               <v-menu-item label="Select" @click="redirect('select')" />
-              <v-menu-item label="Checkbox" />
               <!-- <v-menu-item label="Radio" /> -->
               <v-menu-item label="File" />
               <v-menu-item label="Switch" @click="redirect('switch')" />
               <v-menu-item label="Field" />
+              <v-menu-item label="Checkbox" @click="redirect('checkbox')" />
             </v-menu-list>
             <v-menu-list label="Components">
               <v-menu-item label="Breadcrumb" />
@@ -86,10 +111,14 @@ export default Component;
       </v-column>
       <v-column class="pt-6">
         <v-breadcrumb>
-          <v-breadcrumb-item tag="router-link" :to="{ name: 'home' }">
-            Home
-          </v-breadcrumb-item>
-          <v-breadcrumb-item v-for="item in path.split('/').slice(1)" :key="item" class="is-capitalized" tag="router-link" :to="{ name: item }">
+          <v-breadcrumb-item tag="router-link" :to="{ name: 'home' }"> Home </v-breadcrumb-item>
+          <v-breadcrumb-item
+            v-for="item in path.split('/').slice(1)"
+            :key="item"
+            class="is-capitalized"
+            tag="router-link"
+            :to="{ name: item }"
+          >
             {{ item }}
           </v-breadcrumb-item>
         </v-breadcrumb>

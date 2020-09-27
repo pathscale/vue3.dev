@@ -7,8 +7,6 @@ const api =
             name: 'v-model',
             description: 'Binding value',
             type: 'String, Number',
-            values: '—',
-            default: '—'
         },
         {
             name: 'type',
@@ -22,42 +20,30 @@ const api =
             description: 'Input size',
             type: 'String',
             values: 'is-small, is-medium, is-large',
-            default: '—'
         },
         {
             name: 'loading',
             description: 'Add the loading state to the input',
             type: 'Boolean',
-            values: '—',
             default: 'false'
         },
         {
             name: 'icon-right',
             description: 'Right icon',
             type: 'String',
-            values: '—',
-            default: '—'
         },
         {
             name: 'icon-left',
             description: 'Left Icon',
             type: 'String',
-            values: '—',
-            default: '—'
         },
         {
             name: 'errorMsg',
             description: 'Error message',
             type: 'String',
-            values: '—',
-            default: '—'
         },
         {
             name: 'Any native attribute',
-            description: '—',
-            type: '—',
-            values: '—',
-            default: '—'
         }
     ],
     events: [
