@@ -46,30 +46,40 @@ export default Component;
               <v-menu-item @click="redirect('image')" label="Image" />
               <!-- <v-menu-item label="Notifications" /> -->
               <v-menu-item @click="redirect('progress')" label="Progress" />
-              <!-- <v-menu-item label="Table" /> -->
+              <v-menu-item label="Table" />
               <v-menu-item label="Tag" @click="redirect('tag')" />
             </v-menu-list>
             <v-menu-list label="Form controls">
               <v-menu-item label="Input" @click="redirect('input')" />
-              <v-menu-item label="Switch" @click="redirect('switch')" />
-              <v-menu-item label="Select" @click="redirect('select')" />
               <v-menu-item label="Textarea" @click="redirect('textarea')" />
+              <v-menu-item label="Select" @click="redirect('select')" />
               <v-menu-item label="Checkbox" />
+              <!-- <v-menu-item label="Radio" /> -->
+              <v-menu-item label="File" />
+              <v-menu-item label="Switch" @click="redirect('switch')" />
+              <v-menu-item label="Field" />
             </v-menu-list>
             <v-menu-list label="Components">
-              <!-- <v-menu-item label="Breadcrumb" /> -->
-              <v-menu-item label="Dropdown" />
+              <v-menu-item label="Breadcrumb" />
               <v-menu-item label="Card" />
-              <!-- <v-menu-item label="Hero" /> -->
-              <!-- <v-menu-item label="Level" /> -->
-              <!-- <v-menu-item label="Media" /> -->
+              <v-menu-item label="Dropdown" />
               <v-menu-item label="Menu" />
               <!-- <v-menu-item label="Message" /> -->
               <v-menu-item label="Modal" />
               <v-menu-item label="Navbar" />
               <!-- <v-menu-item label="Pagination" /> -->
               <!-- <v-menu-item label="Panel" /> -->
+              <v-menu-item label="Collapse" />
+              <v-menu-item label="Accordion" />
               <v-menu-item label="Tabs" />
+            </v-menu-list>
+            <v-menu-list label="Layout">
+              <v-menu-item label="Columns" />
+              <v-menu-item label="Container" />
+              <v-menu-item label="Sidebar" />
+              <!-- <v-menu-item label="Hero" /> -->
+              <!-- <v-menu-item label="Level" /> -->
+              <v-menu-item label="Media" />
             </v-menu-list>
           </v-menu>
         </div>
