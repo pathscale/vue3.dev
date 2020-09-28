@@ -88,20 +88,20 @@ export default Component
               <v-menu-item label="Breadcrumb" @click="redirect('breadcrumb')" />
               <v-menu-item label="Card" @click="redirect('card')" />
               <v-menu-item label="Dropdown" @click="redirect('dropdown')" />
-              <v-menu-item label="Menu" />
+              <v-menu-item label="Menu*" />
               <!-- <v-menu-item label="Message" /> -->
-              <v-menu-item label="Modal" />
-              <v-menu-item label="Navbar" />
+              <v-menu-item label="Modal*" />
+              <v-menu-item label="Navbar*" />
               <!-- <v-menu-item label="Pagination" /> -->
               <!-- <v-menu-item label="Panel" /> -->
-              <v-menu-item label="Collapse" />
-              <v-menu-item label="Accordion" />
-              <v-menu-item label="Tabs" />
+              <v-menu-item label="Collapse*" />
+              <v-menu-item label="Accordion*" />
+              <v-menu-item label="Tabs*" />
             </v-menu-list>
             <v-menu-list label="Layout">
-              <v-menu-item label="Columns" />
+              <v-menu-item label="Columns*" />
               <!-- <v-menu-item label="Container" /> -->
-              <v-menu-item label="Sidebar" />
+              <v-menu-item label="Sidebar*" />
               <!-- <v-menu-item label="Hero" /> -->
               <!-- <v-menu-item label="Level" /> -->
               <v-menu-item label="Media" @click="redirect('media')" />
