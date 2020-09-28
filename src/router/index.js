@@ -105,6 +105,12 @@ const routes = [
             component: Pages.Field,
             meta: metaTags('Field', 'The field container is a simple container for: a text label; a form control; an optional help text')
           },
+          {
+            name: 'breadcrumb',
+            path: 'breadcrumb',
+            component: Pages.Breadcrumb,
+            meta: metaTags('Breadcrumb', 'For improving navigation experience')
+          },
         ]
       },
     ]

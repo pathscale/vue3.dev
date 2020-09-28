@@ -8,9 +8,14 @@ import { ref } from 'vue'
 const Component = {
   props: ['api'],
   components: { VTag,  VTab, VTabs, VTooltip },
-  setup() {
+  setup(props) {
     const intl = useI18n();
-    const tab = ref(0);
+
+    const components = [];
+    props.api.forEach(e => {
+      components.push(0)
+    })
+    const tab = ref(components);
     return { intl, tab }
   }
 }
@@ -20,11 +25,11 @@ export default Component;
 <template>
   <div>
     <div v-for="(item, key) in api" :key="key">
-      <p class="pb-4 is-size-4">
+      <p class="pb-4 is-size-4 pt-4">
         {{ item.title }}
       </p>
 
-      <v-tabs v-model="tab" type="is-boxed">
+      <v-tabs v-model="tab[key]" type="is-boxed">
         <v-tab label="Properties">
           <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
             <thead>

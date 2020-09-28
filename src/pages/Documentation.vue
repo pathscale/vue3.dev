@@ -85,7 +85,7 @@ export default Component
               <v-menu-item label="Checkbox" @click="redirect('checkbox')" />
             </v-menu-list>
             <v-menu-list label="Components">
-              <v-menu-item label="Breadcrumb" />
+              <v-menu-item label="Breadcrumb" @click="redirect('breadcrumb')" />
               <v-menu-item label="Card" />
               <v-menu-item label="Dropdown" />
               <v-menu-item label="Menu" />
