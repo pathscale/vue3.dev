@@ -79,7 +79,7 @@ export default Component
               <v-menu-item label="Textarea" @click="redirect('textarea')" />
               <v-menu-item label="Select" @click="redirect('select')" />
               <!-- <v-menu-item label="Radio" /> -->
-              <v-menu-item label="File" />
+              <v-menu-item label="File" @click="redirect('file')" />
               <v-menu-item label="Switch" @click="redirect('switch')" />
               <v-menu-item label="Field" />
               <v-menu-item label="Checkbox" @click="redirect('checkbox')" />
@@ -111,14 +111,15 @@ export default Component
       </v-column>
       <v-column class="pt-6">
         <v-breadcrumb>
-          <v-breadcrumb-item tag="router-link" :to="{ name: 'home' }"> Home </v-breadcrumb-item>
+          <v-breadcrumb-item tag="router-link" :to="{ name: 'home' }">
+            Home
+          </v-breadcrumb-item>
           <v-breadcrumb-item
             v-for="item in path.split('/').slice(1)"
             :key="item"
             class="is-capitalized"
             tag="router-link"
-            :to="{ name: item }"
-          >
+            :to="{ name: item }">
             {{ item }}
           </v-breadcrumb-item>
         </v-breadcrumb>

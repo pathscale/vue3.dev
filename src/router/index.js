@@ -92,6 +92,12 @@ const routes = [
             path: 'checkbox',
             component: Pages.Checkbox,
             meta: metaTags('Checkbox', 'Display a toggling box to keep your on / off states')
+          },
+          {
+            name: 'file',
+            path: 'file',
+            component: Pages.File,
+            meta: metaTags('File input', 'Let the user choose one or more files from their device storages')
           }
         ]
       },
