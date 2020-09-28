@@ -104,7 +104,7 @@ export default Component
               <v-menu-item label="Sidebar" />
               <!-- <v-menu-item label="Hero" /> -->
               <!-- <v-menu-item label="Level" /> -->
-              <v-menu-item label="Media" />
+              <v-menu-item label="Media" @click="redirect('media')" />
             </v-menu-list>
           </v-menu>
         </div>

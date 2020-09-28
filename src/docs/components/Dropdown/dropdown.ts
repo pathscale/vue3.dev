@@ -60,8 +60,7 @@ const api =
       slots: [
           {
               name: 'trigger',
-              description: 'Trigger content for the dropdown',
-              props: '—'
+              description: 'Trigger content for the dropdown'
           }
       ],
       events: [

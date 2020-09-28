@@ -30,7 +30,7 @@ export default Component;
       </p>
 
       <v-tabs v-model="tab[key]" type="is-boxed">
-        <v-tab label="Properties">
+        <v-tab label="Properties" v-if="item.props">
           <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
             <thead>
               <tr>

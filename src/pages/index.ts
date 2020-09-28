@@ -1,7 +1,6 @@
 export { default as Home } from "./Home.vue"
 export { default as Documentation } from "./Documentation.vue"
 
-
 export { default as Button } from "./components/Button.vue"
 export { default as Image } from "./components/Image.vue"
 export { default as Progress } from "./components/Progress.vue"
@@ -16,3 +15,4 @@ export { default as File } from "./components/File.vue"
 export { default as Breadcrumb } from "./components/Breadcrumb.vue"
 export { default as Card } from "./components/Card.vue"
 export { default as Dropdown } from "./components/Dropdown.vue"
+export { default as Media } from "./components/Media.vue"

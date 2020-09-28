@@ -115,13 +115,19 @@ const routes = [
             name: 'card',
             path: 'card',
             component: Pages.Card,
-            meta: metaTags('Card', 'Component to display media content')
+            meta: metaTags('Card', 'Component to display content')
           },
           {
             name: 'dropdown',
             path: 'dropdown',
             component: Pages.Dropdown,
             meta: metaTags('Dropdown', 'The classic dropdown component')
+          },
+          {
+            name: 'media',
+            path: 'media',
+            component: Pages.Media,
+            meta: metaTags('Media', 'Media component')
           },
         ]
       },
