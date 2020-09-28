@@ -98,7 +98,13 @@ const routes = [
             path: 'file',
             component: Pages.File,
             meta: metaTags('File input', 'Let the user choose one or more files from their device storages')
-          }
+          },
+          {
+            name: 'field',
+            path: 'field',
+            component: Pages.Field,
+            meta: metaTags('Field', 'The field container is a simple container for: a text label; a form control; an optional help text')
+          },
         ]
       },
     ]
