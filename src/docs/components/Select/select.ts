@@ -17,7 +17,7 @@ const api =
             name: 'multiple',
             description: 'Specifies that multiple options can be selected at once',
             type: 'Boolean',
-            default: 'false'
+            
         },
         {
             name: 'native-size',
@@ -35,19 +35,19 @@ const api =
             name: 'expanded',
             description: 'Full-width style',
             type: 'Boolean',
-            default: 'false'
+            
         },
         {
             name: 'loading',
             description: 'Add the loading state to the Select',
             type: 'Boolean',
-            default: 'false'
+            
         },
         {
             name: 'rounded',
             description: 'Rounded style',
             type: 'Boolean',
-            default: 'false'
+            
         },
         {
             name: 'Color',

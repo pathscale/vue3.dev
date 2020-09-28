@@ -81,7 +81,7 @@ export default Component
               <!-- <v-menu-item label="Radio" /> -->
               <v-menu-item label="File" @click="redirect('file')" />
               <v-menu-item label="Switch" @click="redirect('switch')" />
-              <v-menu-item label="Field" />
+              <v-menu-item label="Field" @click="redirect('field')" />
               <v-menu-item label="Checkbox" @click="redirect('checkbox')" />
             </v-menu-list>
             <v-menu-list label="Components">

@@ -29,25 +29,25 @@ const api =
             name: 'rounded',
             description: 'You can add it to to make a rounded tag',
             type: 'Boolean',
-            default: 'false'
+            
         },
         {
             name: 'closable',
             description: 'You can add it to turn the tag into a closable tag',
             type: 'Boolean',
-            default: 'false'
+            
         },
         {
             name: 'attached',
             description: 'Close/delete button style equal to attached tags',
             type: 'Boolean',
-            default: 'false'
+            
         },
         {
             name: 'ellipsis',
             description: 'Adds ellipsis to not overflow the text',
             type: 'Boolean',
-            default: 'false'
+            
         },
         {
             name: 'tabstop',
@@ -59,7 +59,7 @@ const api =
             name: 'disabled',
             description: 'Disable delete button',
             type: 'Boolean',
-            default: 'false'
+            
         },
         {
             name: 'aria-close-label',

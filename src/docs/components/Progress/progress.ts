@@ -31,7 +31,7 @@ const api =
             name: 'show-value',
             description: 'Show value inside the progress bar',
             type: 'Boolean',
-            default: 'false'
+            
         },
         {
             name: 'format',
@@ -50,7 +50,7 @@ const api =
             name: 'keep-trailing-zeroes',
             description: 'Truncate or not the trailing zeroes',
             type: 'Boolean',
-            default: 'false'
+            
         },
       ],
       events: [

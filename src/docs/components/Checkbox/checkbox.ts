@@ -29,13 +29,13 @@ const api =
           name: 'disabled',
           description: 'Same as native disabled',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'required',
           description: 'Same as native required',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'name',
@@ -47,7 +47,7 @@ const api =
           description: 'Size of the checkbox',
           type: 'String',
           values: 'is-small, is-medium, is-large',
-          default: 'false'
+          
         },
         {
             name: 'true-value',
@@ -59,7 +59,7 @@ const api =
             name: 'false-value',
             description: "Returned value when it's not checked",
             type: 'Any',
-            default: 'false'
+            
         }
       ],
       events: [

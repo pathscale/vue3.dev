@@ -24,61 +24,61 @@ const api =
           name: 'loading',
           description: 'Loading state',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'rounded',
           description: 'Rounded style',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'outlined',
           description: 'Outlined style',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'expanded',
           description: 'Full-width style',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'inverted',
           description: 'Inverted style',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'focused',
           description: 'Focused style',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'active',
           description: 'Active style',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'hovered',
           description: 'Hovered style',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'selected',
           description: 'Selected style',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'light',
           description: 'Light style',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'native-type',

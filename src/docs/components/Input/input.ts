@@ -25,7 +25,7 @@ const api =
             name: 'loading',
             description: 'Add the loading state to the input',
             type: 'Boolean',
-            default: 'false'
+            
         },
         {
             name: 'icon-right',

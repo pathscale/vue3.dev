@@ -29,13 +29,13 @@ const api =
             name: 'rounded',
             description: 'Rounded image.',
             type: 'Boolean',
-            default: 'false'
+            
         },
         {
             name: 'centered',
             description: 'Center the image in the container.',
             type: 'Boolean',
-            default: 'false'
+            
         },
     ],
     }

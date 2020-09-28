@@ -24,19 +24,19 @@ const api =
             name: 'loading',
             description: 'Add the loading state to the textarea',
             type: 'Boolean',
-            default: 'false'
+            
         },
         {
           name: 'focused',
           description: 'Focused style',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'hovered',
           description: 'Hovered style',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
             name: 'Any native attribute',

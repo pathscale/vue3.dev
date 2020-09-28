@@ -7,7 +7,7 @@ const api =
             name: 'v-model',
             description: 'Binding value',
             type: 'Any',
-            default: 'false'
+            
         },
         {
             name: 'type',
@@ -39,13 +39,13 @@ const api =
             name: 'false-value',
             description: `Returned value when it's not checked`,
             type: 'Any',
-            default: 'false'
+            
         },
         {
             name: 'disabled',
             description: 'Disable the switch',
             type: 'Boolean',
-            default: 'false'
+            
         },
         {
             name: 'name',
@@ -68,7 +68,7 @@ const api =
             name: 'outlined',
             description: 'Outlined style',
             type: 'Boolean',
-            default: 'false'
+            
         }
     ],
     events: [

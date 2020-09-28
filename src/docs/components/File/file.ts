@@ -7,19 +7,19 @@ const api =
           name: 'has-name',
           description: 'Show file name',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'fullwidth',
           description: 'Full-width style',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'boxed',
           description: 'Boxed block style',
           type: 'Boolean',
-          default: 'false'
+          
         },
         {
           name: 'size',
