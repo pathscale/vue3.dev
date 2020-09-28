@@ -117,6 +117,12 @@ const routes = [
             component: Pages.Card,
             meta: metaTags('Card', 'Component to display media content')
           },
+          {
+            name: 'dropdown',
+            path: 'dropdown',
+            component: Pages.Dropdown,
+            meta: metaTags('Dropdown', 'The classic dropdown component')
+          },
         ]
       },
     ]

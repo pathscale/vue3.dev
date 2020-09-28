@@ -75,6 +75,24 @@ export default Component;
             </tbody>
           </table>
         </v-tab>
+        <v-tab label="Slots" v-if="item.slots">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>props</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(value, index) in item.slots" :key="index">
+                <th><code>{{ value.name }}</code></th>
+                <td>{{ value.description }}</td>
+                <td><v-tag>{{ value.props || '—' }}</v-tag></td>
+              </tr>
+            </tbody>
+          </table>
+        </v-tab>
       </v-tabs>
     </div>
   </div>
