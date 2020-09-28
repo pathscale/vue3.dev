@@ -111,6 +111,12 @@ const routes = [
             component: Pages.Breadcrumb,
             meta: metaTags('Breadcrumb', 'For improving navigation experience')
           },
+          {
+            name: 'card',
+            path: 'card',
+            component: Pages.Card,
+            meta: metaTags('Card', 'Component to display media content')
+          },
         ]
       },
     ]

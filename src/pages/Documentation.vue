@@ -86,7 +86,7 @@ export default Component
             </v-menu-list>
             <v-menu-list label="Components">
               <v-menu-item label="Breadcrumb" @click="redirect('breadcrumb')" />
-              <v-menu-item label="Card" />
+              <v-menu-item label="Card" @click="redirect('card')" />
               <v-menu-item label="Dropdown" />
               <v-menu-item label="Menu" />
               <!-- <v-menu-item label="Message" /> -->
