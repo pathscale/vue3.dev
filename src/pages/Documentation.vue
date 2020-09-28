@@ -100,7 +100,7 @@ export default Component
             </v-menu-list>
             <v-menu-list label="Layout">
               <v-menu-item label="Columns" />
-              <v-menu-item label="Container" />
+              <!-- <v-menu-item label="Container" /> -->
               <v-menu-item label="Sidebar" />
               <!-- <v-menu-item label="Hero" /> -->
               <!-- <v-menu-item label="Level" /> -->
