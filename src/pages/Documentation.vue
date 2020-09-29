@@ -92,7 +92,7 @@ export default Component
               <v-menu-item label="Menu*" />
               <!-- <v-menu-item label="Message" /> -->
               <v-menu-item label="Modal" @click="redirect('modal')" />
-              <v-menu-item label="Navbar*" />
+              <v-menu-item label="Navbar" @click="redirect('navbar')" />
               <!-- <v-menu-item label="Pagination" /> -->
               <!-- <v-menu-item label="Panel" /> -->
               <v-menu-item label="Collapse*" />

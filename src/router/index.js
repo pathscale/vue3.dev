@@ -146,6 +146,12 @@ const routes = [
             path: 'sidebar',
             component: Pages.Sidebar,
             meta: metaTags('Sidebar', 'A classic sidebar, in which you can include any content you want')
+          },
+          {
+            name: 'navbar',
+            path: 'navbar',
+            component: Pages.Navbar,
+            meta: metaTags('Navbar', 'A responsive horizontal navbar that can support images, links, buttons, and dropdowns')
           }
         ]
       },
