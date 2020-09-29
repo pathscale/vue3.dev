@@ -127,7 +127,13 @@ const routes = [
             name: 'media',
             path: 'media',
             component: Pages.Media,
-            meta: metaTags('Media', 'Media component')
+            meta: metaTags('Media', 'The famous media object prevalent in social media interfaces, but useful in any context')
+          },
+          {
+            name: 'columns',
+            path: 'columns',
+            component: Pages.Columns,
+            meta: metaTags('Columns', 'The power of Flexbox in a simple interface')
           },
         ]
       },

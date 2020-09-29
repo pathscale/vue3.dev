@@ -99,7 +99,7 @@ export default Component
               <v-menu-item label="Tabs*" />
             </v-menu-list>
             <v-menu-list label="Layout">
-              <v-menu-item label="Columns*" />
+              <v-menu-item label="Columns" @click="redirect('columns')" />
               <!-- <v-menu-item label="Container" /> -->
               <v-menu-item label="Sidebar*" />
               <!-- <v-menu-item label="Hero" /> -->
