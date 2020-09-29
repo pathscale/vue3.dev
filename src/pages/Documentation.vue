@@ -102,7 +102,7 @@ export default Component
             <v-menu-list label="Layout">
               <v-menu-item label="Columns" @click="redirect('columns')" />
               <!-- <v-menu-item label="Container" /> -->
-              <v-menu-item label="Sidebar*" />
+              <v-menu-item label="Sidebar" @click="redirect('sidebar')" />
               <!-- <v-menu-item label="Hero" /> -->
               <!-- <v-menu-item label="Level" /> -->
               <v-menu-item label="Media" @click="redirect('media')" />

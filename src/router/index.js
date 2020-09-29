@@ -140,6 +140,12 @@ const routes = [
             path: 'modal',
             component: Pages.Modal,
             meta: metaTags('Modal', 'A classic modal overlay, in which you can include any content you want')
+          },
+          {
+            name: 'sidebar',
+            path: 'sidebar',
+            component: Pages.Sidebar,
+            meta: metaTags('Sidebar', 'A classic sidebar, in which you can include any content you want')
           }
         ]
       },

@@ -70,7 +70,7 @@ export default Component;
               <tr v-for="(value, index) in item.events" :key="index">
                 <th><code>{{ value.name }}</code></th>
                 <td>{{ value.description }}</td>
-                <td><v-tag>{{ value.parameters }}</v-tag></td>
+                <td><v-tag>{{ value.parameters || '—' }}</v-tag></td>
               </tr>
             </tbody>
           </table>
