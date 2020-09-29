@@ -73,6 +73,7 @@ export default Component
               <v-menu-item @click="redirect('progress')" label="Progress" />
               <v-menu-item label="Table*" />
               <v-menu-item label="Tag" @click="redirect('tag')" />
+              <v-menu-item label="Tooltip*" />
             </v-menu-list>
             <v-menu-list label="Form controls">
               <v-menu-item label="Input" @click="redirect('input')" />
@@ -90,7 +91,7 @@ export default Component
               <v-menu-item label="Dropdown" @click="redirect('dropdown')" />
               <v-menu-item label="Menu*" />
               <!-- <v-menu-item label="Message" /> -->
-              <v-menu-item label="Modal*" />
+              <v-menu-item label="Modal" @click="redirect('modal')" />
               <v-menu-item label="Navbar*" />
               <!-- <v-menu-item label="Pagination" /> -->
               <!-- <v-menu-item label="Panel" /> -->

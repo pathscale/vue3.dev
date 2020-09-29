@@ -135,6 +135,12 @@ const routes = [
             component: Pages.Columns,
             meta: metaTags('Columns', 'The power of Flexbox in a simple interface')
           },
+          {
+            name: 'modal',
+            path: 'modal',
+            component: Pages.Modal,
+            meta: metaTags('Modal', 'A classic modal overlay, in which you can include any content you want')
+          }
         ]
       },
     ]
