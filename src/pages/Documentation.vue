@@ -71,7 +71,7 @@ export default Component
               <v-menu-item @click="redirect('image')" label="Image" />
               <!-- <v-menu-item label="Notifications" /> -->
               <v-menu-item @click="redirect('progress')" label="Progress" />
-              <v-menu-item label="Table" />
+              <v-menu-item label="Table*" />
               <v-menu-item label="Tag" @click="redirect('tag')" />
             </v-menu-list>
             <v-menu-list label="Form controls">
