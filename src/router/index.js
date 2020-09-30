@@ -152,6 +152,12 @@ const routes = [
             path: 'navbar',
             component: Pages.Navbar,
             meta: metaTags('Navbar', 'A responsive horizontal navbar that can support images, links, buttons, and dropdowns')
+          },
+          {
+            name: 'menu',
+            path: 'menu',
+            component: Pages.Menu,
+            meta: metaTags('Menu', 'A simple menu, for any type of vertical navigation')
           }
         ]
       },
