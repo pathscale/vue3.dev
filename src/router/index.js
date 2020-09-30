@@ -158,6 +158,12 @@ const routes = [
             path: 'menu',
             component: Pages.Menu,
             meta: metaTags('Menu', 'A simple menu, for any type of vertical navigation')
+          },
+          {
+            name: 'tabs',
+            path: 'tabs',
+            component: Pages.Tabs,
+            meta: metaTags('Tabs', 'For any type of horizontal navigation')
           }
         ]
       },
