@@ -164,6 +164,12 @@ const routes = [
             path: 'tabs',
             component: Pages.Tabs,
             meta: metaTags('Tabs', 'For any type of horizontal navigation')
+          },
+          {
+            name: 'tooltip',
+            path: 'tooltip',
+            component: Pages.Tooltip,
+            meta: metaTags('Tooltip', 'Display a tooltip attached to any kind of element with different positioning')
           }
         ]
       },

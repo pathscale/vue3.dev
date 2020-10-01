@@ -73,7 +73,7 @@ export default Component
               <v-menu-item @click="redirect('progress')" label="Progress" />
               <v-menu-item label="Table*" />
               <v-menu-item label="Tag" @click="redirect('tag')" />
-              <v-menu-item label="Tooltip*" />
+              <v-menu-item label="Tooltip" @click="redirect('tooltip')" />
             </v-menu-list>
             <v-menu-list label="Form controls">
               <v-menu-item label="Input" @click="redirect('input')" />
