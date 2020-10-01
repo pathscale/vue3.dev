@@ -23,6 +23,8 @@ import tsickle from '@pathscale/rollup-plugin-tsickle'
 import image from '@rollup/plugin-image'
 import visualizer from 'rollup-plugin-visualizer'
 
+import { string } from 'rollup-plugin-string'
+
 const extensions = ['.ts', '.mjs', '.js', '.vue', '.json']
 const env = dotenv.config({ path: path.join(__dirname, '.env') })
 const prod = process.env.NODE_ENV === 'production'
@@ -136,6 +138,9 @@ const config = [
     ],
 
     plugins: [
+      string({
+        include: '**/*.html',
+      }),
       replace({
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
         'process.env.VUE_APP_VERSION_NUMBER': JSON.stringify(env.parsed.VUE_APP_VERSION_NUMBER),
@@ -187,6 +192,7 @@ const config = [
           language_in: 'ECMASCRIPT_NEXT',
           language_out: 'ECMASCRIPT_2018',
           externs: 'externs/localstorage.js',
+          jscomp_off: '*',
         }),
 
       prod &&
