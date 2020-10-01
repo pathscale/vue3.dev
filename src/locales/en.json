@@ -1,7 +1,7 @@
 {
   "language": "Language",
   "home": {
-    "title": "Home Station",
+    "title": "Home",
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ornare mi. Vestibulum finibus, mi iaculis vulputate vehicula, nisl nunc venenatis nisl, id fringilla turpis diam eget dolor.",
     "button": "Explore The Framework"
   },
@@ -13,7 +13,6 @@
   "clients": {
     "title": "Clients",
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ornare mi. Vestibulum finibus, mi iaculis vulputate vehicula, nisl nunc venenatis nisl, id fringilla turpis diam eget dolor. Cras lobortis lectus nibh, eu facilisis sapien suscipit sed"
-
   },
   "blog": {
     "title": "Tech Blogs",
