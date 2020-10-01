@@ -95,7 +95,7 @@ export default Component
               <v-menu-item label="Navbar" @click="redirect('navbar')" />
               <!-- <v-menu-item label="Pagination" /> -->
               <!-- <v-menu-item label="Panel" /> -->
-              <v-menu-item label="Collapse*" />
+              <!-- <v-menu-item label="Collapse" /> -->
               <v-menu-item label="Accordion*" />
               <v-menu-item label="Tabs" @click="redirect('tabs')" />
             </v-menu-list>
