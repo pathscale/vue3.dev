@@ -3,16 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "shx rm -rf dist && shx mkdir dist && shx cp public/* dist",
+    "prebuild": "shx rm -rf dist && shx mkdir dist && shx cp public/* dist && npm run build:snippets",
     "build": "rollup -c --environment NODE_ENV:production",
     "postbuild": "shx cp serve.json dist",
     "lint": "eslint --ext .js,.ts,.vue,.md,.html --max-warnings=0 .",
     "lint-3rd": "eslint --no-inline-config --ignore-path linting/.3rdparty-eslintignore --no-eslintrc --config linting/.3rdparty-eslintrc.js `es-file-traverse --file ./src/app.ts --typescript --mainFields module --mainFields main --excludePathEntryExpression \"\\.css\" --parser vue-eslint-parser --parserOptions '{\"parser\": \"@typescript-eslint/parser\"}'`",
     "lint-3rd-dist": "eslint -f eslint-formatter-sourcemaps --no-inline-config --ignore-path linting/.3rdparty-eslintignore --no-eslintrc --config linting/.3rdparty-eslintrc.js `es-file-traverse --file ./dist/index.html`",
     "lint-fix": "eslint --ext .js,.ts,.vue,.md,.html --fix src",
-    "prestart": "shx rm -rf dist",
+    "prestart": "shx rm -rf dist && npm run build:snippets",
     "start": "rollup -c -w --environment NODE_ENV:development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:snippets": "rm src/docs/components/raw -r -f && cp -R src/docs/components/showcases src/docs/components/raw && find src/docs/components/raw -depth -name \"*.vue\" -exec sh -c 'mv \"$1\" \"${1%.vue}.txt\"' _ {} \\;"
   },
   "devDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "^0.26.0",
@@ -23,7 +24,7 @@
     "@pathscale/bulma-pull-2981-css-var-only": "^0.9.3",
     "@pathscale/rollup-plugin-tsickle": "0.0.12",
     "@pathscale/rollup-plugin-vue3-ui-css-purge": "0.0.14",
-    "@pathscale/vue3-ui": "latest",
+    "@pathscale/vue3-ui": "^0.8.91",
     "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-babel": "^5.2.0",
     "@rollup/plugin-commonjs": "^15.0.0",

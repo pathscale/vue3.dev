@@ -6,7 +6,7 @@ import api from '../../docs/components/api/button.ts'
 import { SnippetSection, ApiSection } from "../../components"
 
 import Colors from "../../docs/components/showcases/Button/Colors.vue"
-import ColorsCode from "../../docs/components/showcases/Button/Colors.html"
+import ColorsCode from "../../docs/components/raw/Button/Colors.txt"
 
 const Component = {
   components: { SnippetSection, ApiSection },
