@@ -2,7 +2,7 @@
 import { useI18n } from "vue-composable";
 
 import { useRouter } from 'vue-router'; 
-import api from '../../docs/components/Switch/switch.ts'
+import api from '../../docs/components/api/switch.ts'
 import { ApiSection } from "../../components/sections"
 
 const Component = {

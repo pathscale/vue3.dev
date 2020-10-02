@@ -3,7 +3,7 @@ import { useI18n } from "vue-composable";
 
  
 import { useRouter } from 'vue-router';
-import api from '../../docs/components/Progress/progress.ts'
+import api from '../../docs/components/api/progress.ts'
 import { ApiSection } from "../../components/sections"
 
 const Component = {

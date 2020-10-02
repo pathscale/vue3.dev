@@ -2,7 +2,7 @@
 import { useI18n } from "vue-composable";
 
 import { useRouter } from 'vue-router';
-import api from '../../docs/components/Image/image.ts'
+import api from '../../docs/components/api/image.ts'
 import { ApiSection } from "../../components/sections"
 
 const Component = {

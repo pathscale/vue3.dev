@@ -2,7 +2,7 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import api from '../../docs/components/Navbar/navbar.ts'
+import api from '../../docs/components/api/navbar.ts'
 import { ApiSection } from '../../components/sections'
 
 const Component = {
