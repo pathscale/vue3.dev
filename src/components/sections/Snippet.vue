@@ -1,28 +1,4 @@
 
-<template>
-  <div>
-    <h1 class="title is-size-4 pt-5">
-      {{ title }}
-    </h1>
-    <v-columns>
-      <v-column>
-        <component :is="component" />
-      </v-column>
-      <v-column>
-        <v-accordion is-horizontal header-is-trigger background="transparent">
-          <template #trigger>
-            <v-button light class="mb-2">
-              &lt;>
-            </v-button>
-          </template>
-          <template #content>
-            <pre v-highlightjs :class="format"><code>{{ code }}</code></pre>
-          </template>
-        </v-accordion>
-      </v-column>
-    </v-columns>
-  </div>
-</template>
 
 <script>
 /* eslint-disable no-unsanitized/property -- ignore */
@@ -41,13 +17,13 @@ hljs.registerLanguage('xml', xml);
 const Demo = {
 	name: 'Demo',
 	props: {
-		title: String,
 		code: String,
 		format: {
 			type: String,
 			default: 'javascript'
         },
-        component: [Object, Function],
+		component: [Object, Function],
+		path: String
 	},
 	components: { VColumns, VColumn, VAccordion, VButton },
 	directives: {
@@ -75,3 +51,28 @@ const Demo = {
 };
 export default Demo;
 </script>
+
+<template>
+  <div>
+    <h1 class="title is-size-4 pt-5">
+      <a :href="`${path}#demo`" class="is-active">#</a> Showcase
+    </h1>
+    <v-columns>
+      <v-column>
+        <component :is="component" />
+      </v-column>
+      <v-column>
+        <v-accordion is-horizontal header-is-trigger background="transparent">
+          <template #trigger>
+            <v-button light class="mb-2">
+              &lt;>
+            </v-button>
+          </template>
+          <template #content>
+            <pre v-highlightjs :class="format"><code>{{ code }}</code></pre>
+          </template>
+        </v-accordion>
+      </v-column>
+    </v-columns>
+  </div>
+</template>
