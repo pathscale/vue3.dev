@@ -5,15 +5,15 @@ import { useRouter } from 'vue-router';
 import api from '../../docs/components/api/button.ts'
 import { SnippetSection, ApiSection } from "../../components"
 
-import Colors from "../../docs/components/showcases/Button/Colors.vue"
-import ColorsCode from "../../docs/components/raw/Button/Colors.txt"
+import Button from "../../docs/components/showcases/Button.vue"
+import ButtonCode from "../../docs/components/raw/Button.txt"
 
 const Component = {
   components: { SnippetSection, ApiSection },
   setup() {
     const intl = useI18n();
      const router = useRouter();
-    return { intl, api, router, Colors, ColorsCode }
+    return { intl, api, router, Button, ButtonCode }
   }
 }
 export default Component;
@@ -27,7 +27,7 @@ export default Component;
     <p>
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
-    <snippet-section title="Colors" :code="ColorsCode" :component="Colors" />
+    <snippet-section title="Type & States" :code="ButtonCode" :component="Button" />
     <section id="api" class="pt-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API

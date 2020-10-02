@@ -13,7 +13,8 @@
     "prestart": "shx rm -rf dist && npm run build:snippets",
     "start": "rollup -c -w --environment NODE_ENV:development",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:snippets": "rm src/docs/components/raw -r -f && cp -R src/docs/components/showcases src/docs/components/raw && find src/docs/components/raw -depth -name \"*.vue\" -exec sh -c 'mv \"$1\" \"${1%.vue}.txt\"' _ {} \\;"
+    "build:snippets": "rm src/docs/components/raw -r -f && cp -R src/docs/components/showcases src/docs/components/raw && find src/docs/components/raw -depth -name \"*.vue\" -exec sh -c 'mv \"$1\" \"${1%.vue}.txt\"' _ {} \\;",
+    "update": "npm remove @pathscale/vue3-ui && npm i @pathscale/vue3-ui -D"
   },
   "devDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "^0.26.0",
@@ -24,7 +25,7 @@
     "@pathscale/bulma-pull-2981-css-var-only": "^0.9.3",
     "@pathscale/rollup-plugin-tsickle": "0.0.12",
     "@pathscale/rollup-plugin-vue3-ui-css-purge": "0.0.14",
-    "@pathscale/vue3-ui": "^0.8.91",
+    "@pathscale/vue3-ui": "^0.8.93",
     "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-babel": "^5.2.0",
     "@rollup/plugin-commonjs": "^15.0.0",

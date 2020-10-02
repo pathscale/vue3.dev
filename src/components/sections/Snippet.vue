@@ -11,7 +11,7 @@
       <v-column>
         <v-accordion is-horizontal header-is-trigger background="transparent">
           <template #trigger>
-            <v-button light>
+            <v-button light class="mb-2">
               &lt;>
             </v-button>
           </template>
