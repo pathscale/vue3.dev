@@ -4,27 +4,30 @@
     <h1 class="title is-size-4 pt-5">
       {{ title }}
     </h1>
-    <component :is="component" />
-    <div class="codeSnippet">
-      <v-accordion is-horizontal header-is-trigger background="transparent">
-        <template #trigger>
-          <v-button light>
-            &lt;>
-            Code
-          </v-button>
-        </template>
-        <template #content>
-          <pre v-highlightjs :class="format"><code>{{ code }}</code></pre>
-        </template>
-      </v-accordion>
-    </div>
+    <v-columns>
+      <v-column>
+        <component :is="component" />
+      </v-column>
+      <v-column>
+        <v-accordion is-horizontal header-is-trigger background="transparent">
+          <template #trigger>
+            <v-button light>
+              &lt;>
+            </v-button>
+          </template>
+          <template #content>
+            <pre v-highlightjs :class="format"><code>{{ code }}</code></pre>
+          </template>
+        </v-accordion>
+      </v-column>
+    </v-columns>
   </div>
 </template>
 
 <script>
 /* eslint-disable no-unsanitized/property -- ignore */
 // eslint-disable-next-line import/no-unresolved -- temporary
-import { VColumn, VAccordion, VButton } from '@pathscale/vue3-ui'
+import { VColumns, VColumn, VAccordion, VButton } from '@pathscale/vue3-ui'
 
 import 'highlight.js/styles/github.css'
 
@@ -46,7 +49,7 @@ const Demo = {
         },
         component: [Object, Function],
 	},
-	components: { VColumn, VAccordion, VButton },
+	components: { VColumns, VColumn, VAccordion, VButton },
 	directives: {
 		highlightjs: {
 		beforeMount(el, binding) {
