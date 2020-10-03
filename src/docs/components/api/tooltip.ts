@@ -56,7 +56,7 @@ const api =
         },
         {
             name: 'size',
-            description: 'Tooltip multiline size',
+            description: 'Tooltip multiline size, multilined required',
             type: 'String',
             values: 'is-small, is-medium, is-large',
             default: 'is-medium'
