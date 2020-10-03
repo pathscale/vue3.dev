@@ -7,7 +7,7 @@ const Component = {
 export default Component;
 </script>
 <template>
-  <section class="box">
+  <section>
     <v-tooltip type="is-success" label="Top/Always" always>
       <v-button type="is-success">
         Top/Always

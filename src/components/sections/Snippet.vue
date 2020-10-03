@@ -59,7 +59,7 @@ export default Demo;
     </h1>
     <v-columns>
       <v-column>
-        <component :is="component" />
+        <component :is="component" class="box" />
       </v-column>
       <v-column>
         <v-accordion is-horizontal header-is-trigger background="transparent">

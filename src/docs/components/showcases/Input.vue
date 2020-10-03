@@ -13,7 +13,7 @@ const Component = {
 export default Component;
 </script>
 <template>
-  <section class="box">
+  <section>
     <v-field label="Email">
       <v-input color="is-info" v-model="email" type="email" />
     </v-field>

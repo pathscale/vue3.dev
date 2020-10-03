@@ -7,7 +7,7 @@ const Component = {
 export default Component;
 </script>
 <template>
-  <section class="box">
+  <section>
     <v-field label="Sizes">
       <v-select color="is-info" placeholder="info" size="is-small">
         <option>Select dropdown</option>

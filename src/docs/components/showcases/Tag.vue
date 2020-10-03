@@ -7,7 +7,7 @@ const Component = {
 export default Component;
 </script>
 <template>
-  <section class="box">
+  <section>
     <v-field grouped group-multiline>
       <v-tag class="control" type="is-primary" closable attached>
         Primary
