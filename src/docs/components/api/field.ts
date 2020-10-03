@@ -32,7 +32,7 @@ const api =
     },
     {
       name: 'group-multiline',
-      description: 'Allow controls to fill up multiple lines. This is ideal for a long list of elements',
+      description: 'Allow controls to fill up multiple lines. grouped is required',
       type: 'Boolean',
     },
     {
