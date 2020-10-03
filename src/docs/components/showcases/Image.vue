@@ -8,6 +8,7 @@ export default Component;
 </script>
 <template>
   <section>
-    <v-image src="https://bulma.io/images/placeholders/128x128.png" size="is-128x128" rounded centered />
+    <v-image src="https://bulma.io/images/placeholders/128x128.png"
+             size="is-128x128" rounded centered />
   </section>
 </template>
