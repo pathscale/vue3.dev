@@ -44,6 +44,12 @@ const api =
           name: 'Any native attribute',
         }
       ],
+      slots: [
+        {
+          name: 'label',
+          description: 'File label',
+        }
+      ],
       events: [
         {
           name: '[any].native',
