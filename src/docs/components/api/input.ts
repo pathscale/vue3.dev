@@ -38,11 +38,6 @@ const api =
             type: 'String',
         },
         {
-            name: 'errorMsg',
-            description: 'Error message',
-            type: 'String',
-        },
-        {
             name: 'Any native attribute',
         }
     ],
