@@ -50,7 +50,7 @@ const api =
             
         },
         {
-            name: 'Color',
+            name: 'color',
             description: 'Color of the select',
             type: 'String',
             values: 'is-white, is-light, is-dark, is-black, is-text, is-primary, is-link, is-info, is-success, is-warning, is-danger...',
