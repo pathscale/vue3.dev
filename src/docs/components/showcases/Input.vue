@@ -15,7 +15,7 @@ export default Component;
 <template>
   <section class="box">
     <v-field label="Email">
-      <v-input color="is-info" v-model="text" type="email" />
+      <v-input color="is-info" v-model="email" type="email" />
     </v-field>
     <v-field label="Password">
       <v-input color="is-success" type="password" />
