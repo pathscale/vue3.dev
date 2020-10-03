@@ -5,7 +5,7 @@ import { ref } from "vue"
 const Component = {
   components: { VField, VSwitch },
   setup() {
-    const value = ref('Not');
+    const value = ref('NO');
     return { value }
   }
 }
@@ -19,7 +19,7 @@ export default Component;
       </v-switch>
     </v-field>
     <v-field label="Values" :message="value">
-      <v-switch v-model="value" type="is-dark" false-value="Not" true-value="Yes">
+      <v-switch v-model="value" type="is-dark" false-value="NO" true-value="YES">
         Dark
       </v-switch>
     </v-field>
@@ -33,14 +33,14 @@ export default Component;
         Success
       </v-switch>
     </v-field>
-    <v-field label="Disabled">
+    <v-field>
       <v-switch type="is-danger" disabled>
-        Danger
+        Disabled
       </v-switch>
     </v-field>
-    <v-field label="Square">
+    <v-field>
       <v-switch type="is-warning" :rounded="false">
-        Warning
+        Square
       </v-switch>
     </v-field>
     <v-field label="Sizes">
