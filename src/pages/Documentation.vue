@@ -68,10 +68,10 @@ export default Component
               <!-- <v-menu-item label="Delete" /> -->
               <!-- <v-menu-item label="Form" /> -->
               <!-- <v-menu-item label="Icon" /> -->
-              <v-menu-item @click="redirect('image')" label="Image" />
+              <v-menu-item label="Image" @click="redirect('image')" />
               <!-- <v-menu-item label="Notifications" /> -->
-              <v-menu-item @click="redirect('progress')" label="Progress" />
-              <v-menu-item label="Table*" />
+              <v-menu-item label="Progress" @click="redirect('progress')" />
+              <v-menu-item label="Datagrid" @click="redirect('datagrid')" />
               <v-menu-item label="Tag" @click="redirect('tag')" />
               <v-menu-item label="Tooltip" @click="redirect('tooltip')" />
             </v-menu-list>
