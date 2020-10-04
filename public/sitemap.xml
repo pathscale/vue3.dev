@@ -5,22 +5,14 @@
     http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
    <url>
       <loc>https://vue3--dev.b-cdn.net/</loc>
-      <lastmod>2020-08-21</lastmod>
+      <lastmod>2020-10-03</lastmod>
    </url>
    <url>
-      <loc>https://vue3--dev.b-cdn.net/philosophy</loc>
-      <lastmod>2020-08-21</lastmod>
+      <loc>https://vue3--dev.b-cdn.net/home</loc>
+      <lastmod>2020-10-03</lastmod>
    </url>
    <url>
-      <loc>https://vue3--dev.b-cdn.net/community</loc>
-      <lastmod>2020-08-21</lastmod>
-   </url>
-   <url>
-      <loc>https://vue3--dev.b-cdn.net/progress</loc>
-      <lastmod>2020-08-21</lastmod>
-    </url>
-   <url>
-      <loc>https://vue3--dev.b-cdn.net/faq</loc>
-      <lastmod>2020-08-21</lastmod>
+      <loc>https://vue3--dev.b-cdn.net/documentation</loc>
+      <lastmod>2020-10-03</lastmod>
    </url>
 </urlset>
