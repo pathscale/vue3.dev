@@ -44,7 +44,6 @@ const api =
           name: 'shadow',
           description: 'Add a shadow to navbar',
           type: 'Boolean',
-          values: 'true, false',
         }
       ],
       slots: [
