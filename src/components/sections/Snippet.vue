@@ -24,7 +24,10 @@ const Demo = {
         },
 		component: [Object, Function],
 		path: String,
-		title: String,
+		title: {
+			type: String,
+			default: 'Showcase'
+		},
 	},
 	components: { VColumns, VColumn, VAccordion, VButton },
 	directives: {
@@ -56,7 +59,7 @@ export default Demo;
 <template>
   <div>
     <h1 class="title is-size-4 mt-6">
-      <a :href="`${path}#demo`" class="is-active">#</a> {{ title || 'Showcase' }}
+      <a :href="`${path}#demo`" class="is-active">#</a> {{ title }}
     </h1>
     <v-columns>
       <v-column>
