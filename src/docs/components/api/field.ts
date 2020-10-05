@@ -37,7 +37,7 @@ const api =
     },
     {
       name: 'position',
-      description: 'Which position should the addons or the group appear',
+      description: 'Which position should the addons or the group appear, addons or grouped required',
       type: 'String',
       values: 'has-addons-centered, has-addons-right, is-grouped-centered, is-grouped-right',
     },
@@ -56,6 +56,7 @@ const api =
       description: 'Field size',
       type: 'String',
       values: 'is-small, is-normal, is-medium, is-large',
+      default: 'is-normal'
     }
     ],
   }
