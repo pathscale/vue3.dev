@@ -1,53 +1,79 @@
 <template>
   <div class="grid-documentation has-text-black">
-    <h1 class="is-size-1">Data Grid</h1>
-    <p class="is-size-5">Powerful reactive component that displays data in a grid format</p>
+    <h1 class="is-size-1">
+      Data Grid
+    </h1>
+    <p class="is-size-5">
+      Powerful reactive component that displays data in a grid format
+    </p>
 
-    <h1 class="is-size-3 mt-4">Basic data grid</h1>
+    <h1 class="is-size-3 mt-4">
+      Basic data grid
+    </h1>
     <div class="gridExample">
       <v-table is-fullwidth :data="datagrid" />
     </div>
 
-    <h1 class="is-size-3 mt-6">Hoverable data grid</h1>
+    <h1 class="is-size-3 mt-6">
+      Hoverable data grid
+    </h1>
     <div class="gridExample">
       <v-table :data="datagrid" is-fullwidth is-hoverable />
     </div>
 
-    <h1 class="is-size-3 mt-6">Bordered data grid</h1>
+    <h1 class="is-size-3 mt-6">
+      Bordered data grid
+    </h1>
     <div class="gridExample">
       <v-table :data="datagrid" is-fullwidth is-bordered />
     </div>
 
-    <h1 class="is-size-3 mt-6">Narrow data grid</h1>
+    <h1 class="is-size-3 mt-6">
+      Narrow data grid
+    </h1>
     <div class="gridExample">
       <v-table :data="datagrid" is-fullwidth is-bordered is-narrow />
     </div>
 
-    <h1 class="is-size-3 mt-6">Sortable data grid</h1>
+    <h1 class="is-size-3 mt-6">
+      Sortable data grid
+    </h1>
     <div class="gridExample">
       <v-table :data="datagrid" is-fullwidth is-bordered sortable />
     </div>
 
-    <h1 class="is-size-3 mt-6">Searchable data grid</h1>
+    <h1 class="is-size-3 mt-6">
+      Searchable data grid
+    </h1>
     <div class="gridExample">
       <v-table :data="datagrid" is-fullwidth is-bordered searchable />
     </div>
 
-    <h1 class="is-size-3 mt-6">Data grid with custom header</h1>
+    <h1 class="is-size-3 mt-6">
+      Data grid with custom header
+    </h1>
     <div class="gridExample">
       <v-table :data="datagrid" is-fullwidth is-bordered>
-        <template #header> This is a custom header </template>
+        <template #header>
+          This is a custom header
+        </template>
       </v-table>
     </div>
 
-    <h1 class="is-size-3 mt-6">Data grid with custom footer</h1>
+    <h1 class="is-size-3 mt-6">
+      Data grid with custom footer
+    </h1>
     <div class="gridExample">
       <v-table :data="datagrid" is-fullwidth is-bordered>
-        <template #footer> This is a custom footer </template>
+        <template #footer>
+          This is a custom footer
+        </template>
       </v-table>
     </div>
 
-    <h1 class="is-size-3 mt-6">Data grid with custom column styling</h1>
+    <h1 class="is-size-3 mt-6">
+      Data grid with custom column styling
+    </h1>
     <div class="gridExample">
       <v-table
         :data="customStyleGrid"
@@ -56,11 +82,12 @@
         is-striped
         is-bordered
         is-fullwidth
-        sortable
-      />
+        sortable />
     </div>
 
-    <h1 class="is-size-3 mt-6">Data grid with custom component</h1>
+    <h1 class="is-size-3 mt-6">
+      Data grid with custom component
+    </h1>
     <div class="gridExample">
       <v-table
         :data="datagrid"
@@ -69,28 +96,34 @@
         is-striped
         is-bordered
         is-fullwidth
-        sortable
-      >
+        sortable>
         <template #color="props">
           <v-select
             v-model="props.row.color"
             color="is-dark"
             placeholder="primary"
-            class="has-text-dark"
-          >
-            <option value="Blue">Blue</option>
-            <option value="Green">Green</option>
+            class="has-text-dark">
+            <option value="Blue">
+              Blue
+            </option>
+            <option value="Green">
+              Green
+            </option>
           </v-select>
         </template>
       </v-table>
     </div>
 
-    <h1 class="is-size-3 mt-6">Selectable Data Grid</h1>
+    <h1 class="is-size-3 mt-6">
+      Selectable Data Grid
+    </h1>
     <div class="gridExample">
       <v-table :data="datagrid" is-fullwidth is-bordered checkable />
     </div>
 
-    <h1 class="is-size-3 mt-6">Paginated Data Grid</h1>
+    <h1 class="is-size-3 mt-6">
+      Paginated Data Grid
+    </h1>
     <div class="gridExample">
       <v-table
         :data="paginatedDatagrid"
@@ -98,19 +131,26 @@
         is-bordered
         pagination
         :rows-per-page-options="[1, 2, 3, 5, 10]"
-        :rows-per-page="3"
-      />
+        :rows-per-page="3" />
     </div>
 
-    <h1 class="is-size-3 mt-6">Toggle Columns</h1>
+    <h1 class="is-size-3 mt-6">
+      Toggle Columns
+    </h1>
 
-    <v-switch v-model="columns.id.show" class="mr-4 mb-4 mt-4"> ID </v-switch>
-    <v-switch v-model="columns.color.show" class="mr-4 mb-4 mt-4"> Color </v-switch>
+    <v-switch v-model="columns.id.show" class="mr-4 mb-4 mt-4">
+      ID
+    </v-switch>
+    <v-switch v-model="columns.color.show" class="mr-4 mb-4 mt-4">
+      Color
+    </v-switch>
     <div class="gridExample">
       <v-table :data="datagrid" is-fullwidth is-bordered />
     </div>
 
-    <h1 class="is-size-3 mt-6">Expandable Rows</h1>
+    <h1 class="is-size-3 mt-6">
+      Expandable Rows
+    </h1>
     <div class="gridExample">
       <v-table :data="datagrid" is-fullwidth expandable>
         <template #expanded="props">
@@ -138,7 +178,9 @@
       </v-table>
     </div>
 
-    <h1 class="is-size-3 mt-6">Data grid with add/delete rows buttons</h1>
+    <h1 class="is-size-3 mt-6">
+      Data grid with add/delete rows buttons
+    </h1>
     <p>
       You can programmatically add rows to a certain index by using the optional index parameter and
       you can also delete rows from a certain index
@@ -151,16 +193,21 @@
         is-striped
         is-bordered
         is-fullwidth
-        sortable
-      >
+        sortable>
         <template #header>
-          <v-button @click="addRow(2)" light class="mr-4 mb-4"> Add row with index 2 </v-button>
-          <v-button @click="deleteRow(2)" light ckass="mb-4"> Delete row with index 2 </v-button>
+          <v-button @click="addRow(2)" light class="mr-4 mb-4">
+            Add row with index 2
+          </v-button>
+          <v-button @click="deleteRow(2)" light ckass="mb-4">
+            Delete row with index 2
+          </v-button>
         </template>
       </v-table>
     </div>
 
-    <h1 class="is-size-3 mt-6">Draggable Rows</h1>
+    <h1 class="is-size-3 mt-6">
+      Draggable Rows
+    </h1>
     <p class="mb-4">
       The data table will allow for dragging rows if the prop <code>draggable-rows</code> is present
       <br />
@@ -171,15 +218,22 @@
       <v-table :data="datagrid" is-fullwidth draggable-rows />
     </div>
 
-    <h1 class="is-size-3 mt-6">Draggable Columns</h1>
+    <h1 class="is-size-3 mt-6">
+      Draggable Columns
+    </h1>
     <p class="mb-4">
       The data table will allow for dragging columns if the prop <code>draggable-columns</code> is
       present <br />
       The current state of the columns, where the updated order is reflected can be accesed via
       <code>datagrid.columns</code>
     </p>
+    <div class="gridExample">
+      <v-table :data="datagrid" is-fullwidth draggable-columns />
+    </div>
 
-    <h1 class="is-size-3 mt-6">Cell editing</h1>
+    <h1 class="is-size-3 mt-6">
+      Cell editing
+    </h1>
     <p class="mb-4">
       You can edit cells by adding the <code>editable</code> prop to the component or by using the
       <code>datagrid.editCells(row, column, newValue)</code> function
@@ -188,7 +242,9 @@
       <v-table :data="datagrid" is-fullwidth editable />
     </div>
 
-    <h1 class="is-size-3 mt-6">Group by column values</h1>
+    <h1 class="is-size-3 mt-6">
+      Group by column values
+    </h1>
     <p class="mb-4">
       You can configure the table to group rows by common values in one column, simply pass the
       <code>group-by="colname"</code>
@@ -198,16 +254,17 @@
       <v-table :data="datagrid" is-fullwidth group-by="color" />
     </div>
 
-    <h1 class="is-size-3 mt-6">Sticky headers and columns</h1>
+    <h1 class="is-size-3 mt-6">
+      Sticky headers and columns
+    </h1>
     <div class="gridExample">
-      <v-table :data="datagrid" is-fullwidth sticky />
+      <v-table :data="hugeGrid" is-fullwidth sticky />
     </div>
   </div>
 </template>
 
 <script>
 import { ref, computed } from 'vue'
-// eslint-disable-next-line import/no-unresolved -- false positive
 import {
   VColumns,
   VColumn,
@@ -221,6 +278,7 @@ import {
   VTable,
   VSwitch,
   DataGrid,
+// eslint-disable-next-line import/no-unresolved -- components exist
 } from '@pathscale/vue3-ui'
 
 const Grid = {
@@ -415,33 +473,26 @@ const Grid = {
       customIndexGrid.value.deleteRow(index)
     }
 
-    const SIZE = 16
+    const COLS = 50
+    const ROWS = 50
+
     const hugeGrid = ref(new DataGrid())
 
-    hugeGrid.value.addColumn('id', 'ID', 'number')
-    hugeGrid.value.addColumn('col1', 'Col1', 'number')
-    hugeGrid.value.addColumn('col2', 'Col2', 'number')
-    hugeGrid.value.addColumn('col3', 'col3', 'number')
-    hugeGrid.value.addColumn('col4', 'col4', 'number')
-    hugeGrid.value.addColumn('col5', 'col5', 'number')
-    hugeGrid.value.addColumn('col6', 'col6', 'number')
-    hugeGrid.value.addColumn('col7', 'col7', 'number')
-    hugeGrid.value.addColumn('col8', 'col8', 'number')
-    hugeGrid.value.addColumn('col9', 'col9', 'number')
+    for (let i = 0; i < COLS; ++i)
+      hugeGrid.value.addColumn(i.toString(), i.toString(), 'number')
 
-    for (let i = 0; i < 1000; ++i)
-      hugeGrid.value.addRow({
-        id: i,
-        col1: i * 2,
-        col2: i * 3,
-        col3: i * 4,
-        col4: i * 5,
-        col5: i * 6,
-        col6: i * 7,
-        col7: i * 8,
-        col8: i * 9,
-        col9: i * 10,
-      })
+    /* this is a way to "force" stickyness but one should rather specify sticky columns like this
+      ```paginatedDatagrid.value.addColumn('id', 'ID', 'number', true)``` */
+    hugeGrid.value.columns[3].sticky = true
+
+    for(let i = 0; i < ROWS; ++i) {
+      const obj = {}
+
+      for(let j = 0; j < COLS; ++j)
+        obj[j.toString()] = i*j
+      
+      hugeGrid.value.addRow(obj)
+    }
 
     return {
       datagrid,
@@ -464,6 +515,7 @@ export default Grid
   height: 100vh;
   background-color: white;
   overflow: scroll;
+  max-width: 40vw;
 }
 .gridTabs .tabs a {
   color: black !important;
