@@ -71,7 +71,7 @@ export default Component
               <v-menu-item label="Image" @click="redirect('image')" />
               <!-- <v-menu-item label="Notifications" /> -->
               <v-menu-item label="Progress" @click="redirect('progress')" />
-              <v-menu-item label="Datagrid" @click="redirect('datagrid')" />
+              <v-menu-item label="Table" @click="redirect('table')" />
               <v-menu-item label="Tag" @click="redirect('tag')" />
               <v-menu-item label="Tooltip" @click="redirect('tooltip')" />
             </v-menu-list>

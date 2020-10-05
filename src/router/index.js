@@ -172,10 +172,10 @@ const routes = [
             meta: metaTags('Tooltip', 'Display a tooltip attached to any kind of element with different positioning')
           },
           {
-            name: 'datagrid',
-            path: 'datagrid',
-            component: Pages.Datagrid,
-            meta: metaTags('Datagrid', 'Display a table with many features for enhanced data visualization')
+            name: 'table',
+            path: 'table',
+            component: Pages.Table,
+            meta: metaTags('Table', 'Display a table with many features for enhanced data visualization')
           }
         ]
       },
