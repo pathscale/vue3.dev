@@ -6,14 +6,38 @@ import api from '../../docs/components/api/datagrid.ts'
 import { SnippetSection, ApiSection } from '../../components'
 
 import * as Showcases from '../../docs/components/showcases/Table'
-// import ShowcaseCode from "../../docs/components/raw/Datagrid.txt"
+import BasicCode from '../../docs/components/raw/Table/Basic.txt'
+import StyledCode from '../../docs/components/raw/Table/Styled.txt'
+import SearchCode from '../../docs/components/raw/Table/Search.txt'
+import CustomCode from '../../docs/components/raw/Table/Custom.txt'
+import SelectCode from '../../docs/components/raw/Table/Select.txt'
+import PaginateCode from '../../docs/components/raw/Table/Paginate.txt'
+import DynamicCode from '../../docs/components/raw/Table/Dynamic.txt'
+import DragCode from '../../docs/components/raw/Table/Drag.txt'
+import StickyCode from '../../docs/components/raw/Table/Sticky.txt'
+import OthersCode from '../../docs/components/raw/Table/Others.txt'
 
 const Component = {
   components: { SnippetSection, ApiSection },
   setup() {
     const intl = useI18n()
     const router = useRouter()
-    return { intl, api, router, Showcases }
+    return {
+      intl,
+      api,
+      router,
+      Showcases,
+      BasicCode,
+      StyledCode,
+      SearchCode,
+      CustomCode,
+      SelectCode,
+      PaginateCode,
+      DynamicCode,
+      DragCode,
+      StickyCode,
+      OthersCode,
+    }
   },
 }
 export default Component
@@ -28,59 +52,67 @@ export default Component
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
 
-    <h1 class="title mt-6">
-      Examples
-    </h1>
+    <h1 class="title mt-6">Examples</h1>
     <snippet-section
       title="Basic"
-      code=""
+      :code="BasicCode"
       :component="Showcases.Basic"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+    />
     <snippet-section
       title="Styled"
-      code=""
+      :code="StyledCode"
       :component="Showcases.Styled"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+    />
     <snippet-section
       title="Search"
-      code=""
+      :code="SearchCode"
       :component="Showcases.Search"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+    />
     <snippet-section
       title="Custom Components"
-      code=""
+      :code="CustomCode"
       :component="Showcases.Custom"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+    />
     <snippet-section
       title="Select"
-      code=""
+      :code="SelectCode"
       :component="Showcases.Select"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+    />
     <snippet-section
       title="Paginate"
-      code=""
+      :code="PaginateCode"
       :component="Showcases.Paginate"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+    />
     <snippet-section
       title="Dynamic"
-      code=""
+      :code="DynamicCode"
       :component="Showcases.Dynamic"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+    />
     <snippet-section
       title="Drag"
-      code=""
+      :code="DragCode"
       :component="Showcases.Drag"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+    />
     <snippet-section
       title="Sticky"
-      code=""
+      :code="StickyCode"
       :component="Showcases.Sticky"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+    />
     <snippet-section
       title="Others"
-      code=""
+      :code="OthersCode"
       :component="Showcases.Others"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+    />
 
     <section id="api" class="pt-4">
       <h2 class="title is-4">
