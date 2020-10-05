@@ -8,10 +8,10 @@ export default Component;
 </script>
 <template>
   <section>
-    <v-field label="Colors">
-      <v-progress :value="20" />
+    <v-field label="Indeterminate">
+      <v-progress />
     </v-field>
-    <v-field>
+    <v-field label="Colors">
       <v-progress type="is-danger" :value="40" />
     </v-field>
     <v-field>
