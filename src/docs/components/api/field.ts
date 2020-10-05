@@ -53,10 +53,9 @@ const api =
     },
     {
       name: 'size',
-      description: 'Position of label',
+      description: 'Field size',
       type: 'String',
-      values: 'Field comes with 4 size modifiers',
-      default: 'is-small, is-normal, is-medium, is-large'
+      values: 'is-small, is-normal, is-medium, is-large',
     }
     ],
   }
