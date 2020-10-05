@@ -3,7 +3,7 @@
 <script>
 /* eslint-disable no-unsanitized/property -- ignore */
 // eslint-disable-next-line import/no-unresolved -- temporary
-import { VColumns, VColumn, VAccordion, VButton } from '@pathscale/vue3-ui'
+import { VAccordion, VButton } from '@pathscale/vue3-ui'
 
 import 'highlight.js/styles/github.css'
 
@@ -29,7 +29,7 @@ const Demo = {
 			default: 'Showcase'
 		},
 	},
-	components: { VColumns, VColumn, VAccordion, VButton },
+	components: { VAccordion, VButton },
 	directives: {
 		highlightjs: {
 		beforeMount(el, binding) {
@@ -57,15 +57,11 @@ export default Demo;
 </script>
 
 <template>
-  <div>
+  <div class="box">
     <h1 class="title is-size-4 mt-6">
       <a :href="`${path}#demo`" class="is-active">#</a> {{ title }}
     </h1>
-    <v-columns>
-      <v-column>
-        <component :is="component" class="box" />
-      </v-column>
-      <v-column>
+        <component :is="component" />
         <v-accordion is-horizontal header-is-trigger background="transparent">
           <template #trigger>
             <v-button light class="mb-2">
@@ -76,7 +72,5 @@ export default Demo;
             <pre v-highlightjs :class="format"><code>{{ code }}</code></pre>
           </template>
         </v-accordion>
-      </v-column>
-    </v-columns>
   </div>
 </template>
