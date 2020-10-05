@@ -61,10 +61,10 @@ export default Demo;
     <h1 class="title is-size-4 mt-6">
       <a :href="`${path}#demo`" class="is-active">#</a> {{ title }}
     </h1>
-        <component :is="component" />
+        <component :is="component"/>
         <v-accordion is-horizontal header-is-trigger background="transparent">
           <template #trigger>
-            <v-button light class="mb-2">
+            <v-button light class="my-2">
               &lt;>
             </v-button>
           </template>
