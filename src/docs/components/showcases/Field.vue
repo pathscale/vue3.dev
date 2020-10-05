@@ -86,5 +86,9 @@ export default Component;
         <v-input placeholder="Name" />
       </v-field>
     </v-field>
+
+    <v-field label="Message" type="is-danger" message="Message is required!">
+      <v-input color="is-danger" />
+    </v-field>
   </section>
 </template>
