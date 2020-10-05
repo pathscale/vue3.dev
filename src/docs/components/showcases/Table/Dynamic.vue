@@ -55,9 +55,15 @@ export default Component
 </script>
 <template>
   <section>
-    <h4 class="is-size-5 mb-4">Toggle Columns</h4>
-    <v-switch class="mr-4 mb-4 mt-4" v-model="columns.id.show">ID</v-switch>
-    <v-switch class="mr-4 mb-4 mt-4" v-model="columns.color.show">Color</v-switch>
+    <h4 class="is-size-5 mb-4">
+      Toggle Columns
+    </h4>
+    <v-switch class="mr-4 mb-4 mt-4" v-model="columns.id.show">
+      ID
+    </v-switch>
+    <v-switch class="mr-4 mb-4 mt-4" v-model="columns.color.show">
+      Color
+    </v-switch>
     <v-table :data="datagrid" is-fullwidth />
   </section>
 </template>

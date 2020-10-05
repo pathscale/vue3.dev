@@ -31,5 +31,5 @@ const Component = {
 export default Component
 </script>
 <template>
-    <v-table :data="datagrid" sticky />
+  <v-table :data="datagrid" sticky />
 </template>

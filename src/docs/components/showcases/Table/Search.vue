@@ -51,5 +51,5 @@ const Component = {
 export default Component
 </script>
 <template>
-    <v-table :data="datagrid" searchable />
+  <v-table :data="datagrid" searchable />
 </template>

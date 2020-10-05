@@ -56,7 +56,7 @@ export default Demo;
 <template>
   <div>
     <h1 class="title is-size-4 mt-6">
-      <a :href="`${path}#demo`" class="is-active">#</a> {{ title || 'Showcase'}}
+      <a :href="`${path}#demo`" class="is-active">#</a> {{ title || 'Showcase' }}
     </h1>
     <v-columns>
       <v-column>
