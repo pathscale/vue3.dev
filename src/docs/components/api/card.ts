@@ -40,7 +40,17 @@ const api =
           default: 'footer'
         },
       ],
-    }
+    },
+    {
+      title: 'VCardContent',
+    },
+    {
+      title: 'VCardImage',
+    },
+    {
+      title: 'VCardFooterItem',
+    },
+
   ]
 
 export default api;

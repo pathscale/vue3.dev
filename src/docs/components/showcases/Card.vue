@@ -1,8 +1,8 @@
 <script>
-import { VCard, VCardImage, VCardContent, VCardHeader, VCardFooter, VImage, VMedia, VColumns, VColumn } from '@pathscale/vue3-ui'
+import { VCard, VCardImage, VCardContent, VCardHeader, VCardFooter, VCardFooterItem, VImage, VMedia, VColumns, VColumn } from '@pathscale/vue3-ui'
 
 const Component = {
-  components: { VCard, VCardImage, VCardContent, VCardHeader, VCardFooter, VImage, VMedia, VColumns, VColumn },
+  components: { VCard, VCardImage, VCardContent, VCardHeader, VCardFooter, VCardFooterItem, VImage, VMedia, VColumns, VColumn },
 }
 export default Component;
 </script>
@@ -35,7 +35,9 @@ export default Component;
             <br />
           </div>
           <v-card-footer>
-            <time datetime="2020-5-8" class="ml-3">11:22 PM - 5 Oct 2020</time>
+            <v-card-footer-item>
+              <time datetime="2020-5-8">11:22 PM - 5 Oct 2020</time>
+            </v-card-footer-item>
           </v-card-footer>
         </v-card>
       </v-column>
