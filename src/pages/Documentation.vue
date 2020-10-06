@@ -1,5 +1,4 @@
 <script>
-// eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
 import {
   VButton,
   VColumns,
@@ -13,6 +12,7 @@ import {
   VMenu,
   VMenuItem,
   VMenuList,
+// eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
 } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 import { useRouter } from 'vue-router'
@@ -64,6 +64,7 @@ export default Component
               <!-- <v-menu-item label="Typography" /> -->
               <!-- <v-menu-item label="Box" /> -->
               <v-menu-item @click="redirect('button')" label="Button" />
+              <v-menu-item @click="redirect('datagrid')" label="Datagrid" />
               <!-- <v-menu-item label="Content" /> -->
               <!-- <v-menu-item label="Delete" /> -->
               <!-- <v-menu-item label="Form" /> -->

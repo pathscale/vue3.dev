@@ -182,6 +182,12 @@ const routes = [
             path: 'accordion',
             component: Pages.Accordion,
             meta: metaTags('Accordion', 'Expansion panel that saves screen space')
+          },
+          {
+            name: 'datagrid',
+            path: 'datagrid',
+            component: Pages.Datagrid,
+            meta: metaTags('DataGrid', 'Powerful class to store and alter data')
           }
         ]
       },
