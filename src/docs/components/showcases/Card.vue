@@ -1,8 +1,8 @@
 <script>
-import { VCard, VCardImage, VCardContent, VImage, VMedia, VColumns, VColumn } from '@pathscale/vue3-ui'
+import { VCard, VCardImage, VCardContent, VCardHeader, VCardFooter, VImage, VMedia, VColumns, VColumn } from '@pathscale/vue3-ui'
 
 const Component = {
-  components: { VCard, VCardImage, VCardContent, VImage, VMedia, VColumns, VColumn },
+  components: { VCard, VCardImage, VCardContent, VCardHeader, VCardFooter, VImage, VMedia, VColumns, VColumn },
 }
 export default Component;
 </script>
@@ -11,6 +11,7 @@ export default Component;
     <v-columns>
       <v-column size="is-3">
         <v-card>
+          <v-card-header title="User" />
           <v-image src="https://vue3--dev.b-cdn.net/128x128.png" alt="placeholder image" />
           <v-card-content>
             <v-media>
@@ -32,8 +33,10 @@ export default Component;
             Phasellus nec iaculis mauris. <a>@vue3-ui</a>.
             <a href="#">#vue3</a> <a href="#">#responsive</a>
             <br />
-            <time datetime="2020-5-8">11:22 PM - 5 Oct 2020</time>
           </div>
+          <v-card-footer>
+            <time datetime="2020-5-8" class="ml-3">11:22 PM - 5 Oct 2020</time>
+          </v-card-footer>
         </v-card>
       </v-column>
     </v-columns>
