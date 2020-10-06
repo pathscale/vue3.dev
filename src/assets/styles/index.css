@@ -49,14 +49,9 @@ body {
   margin-right: auto;
 }
 
-.navbar-burger {
-  margin-right: 15px !important; 
-}
-
 .navbar-burger span {
-	width: 30px !important;
-	height: 3px !important;
-	color: #fff;
+  color: #fff;
+  left: 15px;
 }
 
 
@@ -106,13 +101,6 @@ body {
 
   .navbar-item img {
     max-height: 2em;
-  }
-
-  .navbar-menu.is-active {
-    height: calc(var(--vh, 1vh) * 100);
-    position: relative;
-    top: calc(-1 * var(--blm-nav-height));
-    overflow-y: scroll;
   }
 
   .navbar-link {
