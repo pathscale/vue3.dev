@@ -88,24 +88,24 @@ export default Component
             <v-menu-list label="Components">
               <v-menu-item label="Breadcrumb" @click="redirect('breadcrumb')" />
               <v-menu-item label="Card" @click="redirect('card')" />
-              <v-menu-item label="Dropdown" @click="redirect('dropdown')" />
-              <v-menu-item label="Menu" @click="redirect('menu')" />
+              <v-menu-item label="Dropdown**" @click="redirect('dropdown')" />
+              <v-menu-item label="Menu**" @click="redirect('menu')" />
               <!-- <v-menu-item label="Message" /> -->
-              <v-menu-item label="Modal" @click="redirect('modal')" />
-              <v-menu-item label="Navbar" @click="redirect('navbar')" />
+              <v-menu-item label="Modal**" @click="redirect('modal')" />
+              <v-menu-item label="Navbar**" @click="redirect('navbar')" />
               <!-- <v-menu-item label="Pagination" /> -->
               <!-- <v-menu-item label="Panel" /> -->
               <!-- <v-menu-item label="Collapse" /> -->
-              <v-menu-item label="Accordion*" />
-              <v-menu-item label="Tabs" @click="redirect('tabs')" />
+              <v-menu-item label="Accordion" @click="redirect('accordion')" />
+              <v-menu-item label="Tabs**" @click="redirect('tabs')" />
             </v-menu-list>
             <v-menu-list label="Layout">
-              <v-menu-item label="Columns" @click="redirect('columns')" />
+              <v-menu-item label="Columns**" @click="redirect('columns')" />
               <!-- <v-menu-item label="Container" /> -->
-              <v-menu-item label="Sidebar" @click="redirect('sidebar')" />
+              <v-menu-item label="Sidebar**" @click="redirect('sidebar')" />
               <!-- <v-menu-item label="Hero" /> -->
               <!-- <v-menu-item label="Level" /> -->
-              <v-menu-item label="Media" @click="redirect('media')" />
+              <v-menu-item label="Media**" @click="redirect('media')" />
             </v-menu-list>
           </v-menu>
         </div>

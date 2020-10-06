@@ -176,6 +176,12 @@ const routes = [
             path: 'table',
             component: Pages.Table,
             meta: metaTags('Table', 'Display a table with many features for enhanced data visualization')
+          },
+          {
+            name: 'accordion',
+            path: 'accordion',
+            component: Pages.Accordion,
+            meta: metaTags('Accordion', 'Expansion panel that saves screen space')
           }
         ]
       },
