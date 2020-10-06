@@ -14,6 +14,7 @@ export default Component;
           <img width="100" height="100" class="has-background-grey-light" />
         </v-navbar-item>
       </template>
+      
       <template #start>
         <v-navbar-item href="#" active>
           Home

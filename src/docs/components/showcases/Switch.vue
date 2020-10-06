@@ -18,16 +18,19 @@ export default Component;
         Default
       </v-switch>
     </v-field>
+
     <v-field label="Values" :message="value">
       <v-switch v-model="value" type="is-dark" false-value="NO" true-value="YES">
         Dark
       </v-switch>
     </v-field>
+
     <v-field label="Pasive Type">
       <v-switch type="is-info" passive-type="is-danger">
         Info
       </v-switch>
     </v-field>
+    
     <v-field label="Outlined">
       <v-switch type="is-success" outlined>
         Success
@@ -43,6 +46,7 @@ export default Component;
         Square
       </v-switch>
     </v-field>
+    
     <v-field label="Sizes">
       <v-switch size="is-small" type="is-success" passive-type="is-success">
         Small

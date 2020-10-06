@@ -26,18 +26,21 @@ export default Component;
         <option>With options</option>
       </v-select>
     </v-field>
+
     <v-field label="Loading">
       <v-select placeholder="loading" loading>
         <option>Select dropdown</option>
         <option>With options</option>
       </v-select>
     </v-field>
+
     <v-field label="Rounded">
       <v-select placeholder="warning" rounded>
         <option>Select dropdown</option>
         <option>With options</option>
       </v-select>
     </v-field>
+    
     <v-field label="Expanded">
       <v-select color="is-danger" placeholder="danger" expanded>
         <option>Select dropdown</option>

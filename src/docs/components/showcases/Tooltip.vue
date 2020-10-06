@@ -13,11 +13,13 @@ export default Component;
         Top/Always
       </v-button>
     </v-tooltip>
+
     <v-tooltip type="is-info" label="Right/Animated" position="is-right" animated>
       <v-button type="is-info">
         Right/Animated
       </v-button>
     </v-tooltip>
+
     <v-tooltip type="is-danger" label="Bottom/Delay 500(ms)" position="is-bottom" 
                :delay="500">
       <v-button type="is-danger">
@@ -30,6 +32,7 @@ export default Component;
         Left/Square
       </v-button>
     </v-tooltip>
+    
     <v-tooltip type="is-dark" label="Multilined/Large/Dashed Multilined/Large/Dashed" 
                position="is-right" multilined size="is-large" dashed> 
       <v-button type="is-text">

@@ -11,6 +11,7 @@ export default Component;
     <v-field label="Indeterminate">
       <v-progress :value="null" />
     </v-field>
+    
     <v-field label="Colors">
       <v-progress type="is-danger" :value="40" />
       <v-progress type="is-success" :value="60" />

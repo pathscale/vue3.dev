@@ -13,6 +13,7 @@ export default Component;
         <v-card>
           <v-card-header title="User" />
           <v-image src="https://vue3--dev.b-cdn.net/128x128.png" alt="placeholder image" />
+
           <v-card-content>
             <v-media>
               <template #left>
@@ -27,13 +28,14 @@ export default Component;
                 </p>
               </template>
             </v-media>
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris. <a>@vue3-ui</a>.
+              <a href="#">#vue3</a> <a href="#">#responsive</a>
+              <br />
+            </div>
           </v-card-content>
-          <div class="content px-4 py-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris. <a>@vue3-ui</a>.
-            <a href="#">#vue3</a> <a href="#">#responsive</a>
-            <br />
-          </div>
+
           <v-card-footer>
             <v-card-footer-item>
               <time datetime="2020-5-8">11:22 PM - 5 Oct 2020</time>

@@ -17,12 +17,15 @@ export default Component;
     <v-field label="Color">
       <v-textarea color="is-info" v-model="text" />
     </v-field>
+
     <v-field label="Size">
       <v-textarea color="is-primary" size="is-large" v-model="text" />
     </v-field>
+
     <v-field label="Loading">
       <v-textarea color="is-danger" v-model="text" loading />
     </v-field>
+    
     <v-field label="Focused">
       <v-textarea color="is-danger" v-model="text" focused />
     </v-field>

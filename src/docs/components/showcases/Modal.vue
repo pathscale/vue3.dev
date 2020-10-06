@@ -24,6 +24,7 @@ export default Component;
         Show Modal Card
       </v-button>
     </div>
+
     <v-modal v-model="state.showModal">
       <img width="640" height="480" class="has-background-grey" />
     </v-modal>
@@ -31,9 +32,11 @@ export default Component;
       <template #title>
         Modal title
       </template>
+
       <template #content>
         <img width="640" height="480" class="has-background-grey" />
       </template>
+      
       <template #footer>
         <v-button type="is-success">
           Save changes
