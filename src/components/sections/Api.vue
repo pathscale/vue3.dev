@@ -93,6 +93,27 @@ export default Component;
             </tbody>
           </table>
         </v-tab>
+        <v-tab label="Methods" v-if="item.methods">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(value, index) in item.methods" :key="index">
+                <th>
+                  <v-tooltip label="required" v-if="value.required">
+                    <code>{{ value.name }}</code>*
+                  </v-tooltip>
+                  <code v-if="!value.required">{{ value.name }}</code>
+                </th>
+                <td>{{ value.description }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </v-tab>
       </v-tabs>
     </div>
   </div>
