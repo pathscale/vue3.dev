@@ -98,7 +98,7 @@ export default Component
               <!-- <v-menu-item label="Panel" /> -->
               <!-- <v-menu-item label="Collapse" /> -->
               <v-menu-item label="Accordion" @click="redirect('accordion')" />
-              <v-menu-item label="Tabs**" @click="redirect('tabs')" />
+              <v-menu-item label="Tabs" @click="redirect('tabs')" />
             </v-menu-list>
             <v-menu-list label="Layout">
               <v-menu-item label="Columns**" @click="redirect('columns')" />
