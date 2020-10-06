@@ -8,12 +8,6 @@ export default Component;
 </script>
 <template>
   <section>
-    <v-tooltip type="is-success" label="Top/Always" always>
-      <v-button type="is-success">
-        Top/Always
-      </v-button>
-    </v-tooltip>
-
     <v-tooltip type="is-info" label="Right/Animated" position="is-right" animated>
       <v-button type="is-info">
         Right/Animated
@@ -24,6 +18,12 @@ export default Component;
                :delay="500">
       <v-button type="is-danger">
         Bottom/Delay 500(ms)
+      </v-button>
+    </v-tooltip>
+
+    <v-tooltip type="is-success" label="Top/Always" always>
+      <v-button type="is-success">
+        Top/Always
       </v-button>
     </v-tooltip>
 
