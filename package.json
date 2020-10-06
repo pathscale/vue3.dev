@@ -25,7 +25,7 @@
     "@pathscale/bulma-pull-2981-css-var-only": "^0.9.3",
     "@pathscale/rollup-plugin-tsickle": "0.0.12",
     "@pathscale/rollup-plugin-vue3-ui-css-purge": "0.0.14",
-    "@pathscale/vue3-ui": "^0.8.96",
+    "@pathscale/vue3-ui": "^0.8.97",
     "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-babel": "^5.2.0",
     "@rollup/plugin-commonjs": "^15.0.0",
