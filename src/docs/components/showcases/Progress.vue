@@ -19,10 +19,10 @@ export default Component;
     </v-field>
 
     <v-field label="Sizes"> 
-      <v-progress size="is-small" value="20" />
+      <v-progress size="is-small" :value="20" />
       <v-progress value="30" />
-      <v-progress size="is-medium" value="40" />
-      <v-progress size="is-large" value="50" />
+      <v-progress size="is-medium" :value="40" />
+      <v-progress size="is-large" :value="50" />
     </v-field>
 
     <v-field label="Show value">

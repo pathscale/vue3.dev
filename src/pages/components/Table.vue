@@ -2,7 +2,7 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import api from '../../docs/components/api/datagrid.ts'
+import api from '../../docs/components/api/table.ts'
 import { SnippetSection, ApiSection } from '../../components'
 
 import * as Showcases from '../../docs/components/showcases/Table'
@@ -52,67 +52,59 @@ export default Component
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
 
-    <h1 class="title mt-6">Examples</h1>
+    <h1 class="title mt-6">
+      Examples
+    </h1>
     <snippet-section
       title="Basic"
       :code="BasicCode"
       :component="Showcases.Basic"
-      :path="router.currentRoute.value.path"
-    />
+      :path="router.currentRoute.value.path" />
     <snippet-section
       title="Styled"
       :code="StyledCode"
       :component="Showcases.Styled"
-      :path="router.currentRoute.value.path"
-    />
+      :path="router.currentRoute.value.path" />
     <snippet-section
       title="Search"
       :code="SearchCode"
       :component="Showcases.Search"
-      :path="router.currentRoute.value.path"
-    />
+      :path="router.currentRoute.value.path" />
     <snippet-section
       title="Custom Components"
       :code="CustomCode"
       :component="Showcases.Custom"
-      :path="router.currentRoute.value.path"
-    />
+      :path="router.currentRoute.value.path" />
     <snippet-section
       title="Select"
       :code="SelectCode"
       :component="Showcases.Select"
-      :path="router.currentRoute.value.path"
-    />
+      :path="router.currentRoute.value.path" />
     <snippet-section
       title="Paginate"
       :code="PaginateCode"
       :component="Showcases.Paginate"
-      :path="router.currentRoute.value.path"
-    />
+      :path="router.currentRoute.value.path" />
     <snippet-section
       title="Dynamic"
       :code="DynamicCode"
       :component="Showcases.Dynamic"
-      :path="router.currentRoute.value.path"
-    />
+      :path="router.currentRoute.value.path" />
     <snippet-section
       title="Drag"
       :code="DragCode"
       :component="Showcases.Drag"
-      :path="router.currentRoute.value.path"
-    />
+      :path="router.currentRoute.value.path" />
     <snippet-section
       title="Sticky"
       :code="StickyCode"
       :component="Showcases.Sticky"
-      :path="router.currentRoute.value.path"
-    />
+      :path="router.currentRoute.value.path" />
     <snippet-section
       title="Others"
       :code="OthersCode"
       :component="Showcases.Others"
-      :path="router.currentRoute.value.path"
-    />
+      :path="router.currentRoute.value.path" />
 
     <section id="api" class="pt-4">
       <h2 class="title is-4">

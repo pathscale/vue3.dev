@@ -1,9 +1,9 @@
 <script>
 import { ref } from 'vue'
-import { DataGrid, VTable, VSelect } from '@pathscale/vue3-ui'
+import { DataGrid, VTable, VSelect, VCard, VCardContent } from '@pathscale/vue3-ui'
 
 const Component = {
-  components: { VTable, VSelect },
+  components: { VTable, VSelect, VCard, VCardContent },
   setup() {
     const datagrid = ref(new DataGrid())
 

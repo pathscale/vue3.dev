@@ -28,7 +28,7 @@ export default Component;
     </v-field>
     
 
-    <v-field :message="value" label="Custom values">
+    <v-field :message="`${value}`" label="Custom values">
       <v-checkbox v-model="value" true-value="YES" false-value="NO">
         Accept?
       </v-checkbox>
