@@ -1,18 +1,26 @@
 'use strict'
 
+const baseConfigs = [
+  'ash-nazg/sauron',
+  'plugin:vue/vue3-strongly-recommended',
+  'plugin:import/errors',
+  'plugin:import/warnings',
+  'plugin:import/typescript',
+  'plugin:prettier/recommended',
+]
+
+const baseTSConfigs = [
+  ...baseConfigs,
+  'plugin:import/typescript',
+  'plugin:@typescript-eslint/recommended',
+]
+
 module.exports = {
   env: {
     browser: true,
     es6: true,
   },
-  extends: [
-    'ash-nazg/sauron',
-    'plugin:vue/vue3-strongly-recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'plugin:import/typescript',
-    'plugin:prettier/recommended',
-  ],
+  extends: baseConfigs,
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -57,11 +65,19 @@ module.exports = {
       },
     },
     {
+      files: '*.ts',
+      extends: baseTSConfigs,
+      plugins: ['@typescript-eslint'],
+      parser: '@typescript-eslint/parser',
+    },
+    {
       files: ['src/shims-vue.d.ts', 'src/shims-tsx.d.ts', 'src/types.d.ts'],
+      extends: baseTSConfigs,
+      plugins: ['@typescript-eslint'],
+      parser: '@typescript-eslint/parser',
       rules: {
         // No imports/exports in plain declaration file
         'import/unambiguous': 'off',
-        'no-unused-vars': 'off',
         'no-shadow': 'off',
       },
     },

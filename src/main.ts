@@ -10,7 +10,6 @@ import "./assets/styles/carousel.css";
 import "./assets/styles/icons.css";
 
 
-import { router } from "./router";
-
+import { router } from "./router/index.js";
 
 createApp(App).use(router).mount('#app');
