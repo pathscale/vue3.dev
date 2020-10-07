@@ -1,5 +1,5 @@
 <script>
-import { ref, watchEffect } from 'vue'
+import { ref, watchEffect, computed } from 'vue'
 import {
   VButton,
   VColumns,
@@ -35,7 +35,7 @@ const Component = {
   setup() {
     const intl = useI18n()
     const router = useRouter()
-    const { path } = router.currentRoute.value
+    const path = computed(() => router.currentRoute.value.path)
     const current = ref({})
 
     function redirect(name) {
