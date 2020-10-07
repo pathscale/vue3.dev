@@ -9,6 +9,7 @@ const Component = {
     return { intl }
   }
 }
+
 export default Component;
 </script>
 

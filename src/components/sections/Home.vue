@@ -3,7 +3,6 @@ import { VButton, VColumns, VColumn } from "@pathscale/vue3-ui"
 import { useI18n } from "vue-composable";
 import logo from '../../assets/svg/vue3-logo.svg'
 
-
 const Component = {
   components: { VButton, VColumns, VColumn },
   setup() {
@@ -11,6 +10,7 @@ const Component = {
     return { intl, logo }
   }
 }
+
 export default Component;
 </script>
 

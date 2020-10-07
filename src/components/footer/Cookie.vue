@@ -26,7 +26,8 @@ const Component = {
     }
     return { handlePrivacyPolicy, handleAgree, intl, state }
   }
- }
+}
+
 export default Component
 </script>
 

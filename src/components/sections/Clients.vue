@@ -6,7 +6,6 @@ import { ref } from 'vue'
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
-
 const Component = {
   components: { VButton, VColumns, VColumn, Carousel, Slide, Pagination, Navigation  },
   setup() {
@@ -35,8 +34,10 @@ const Component = {
     return { intl, isLandscape, projects }
   }
 }
+
 export default Component
 </script>
+
 <template>
   <section class="hero section" id="client">
     <div class="hero-body">

@@ -5,7 +5,6 @@ import { useI18n } from "vue-composable";
 import { ref, watchEffect } from "vue"
 import { useRouter } from "vue-router"
 
-
 import logo from '../../assets/svg/vue3-logo.svg'
 
 const Component = {
@@ -62,7 +61,8 @@ const Component = {
      showLanguageMenu
     }
   }
- }
+}
+
 export default Component
 </script>
 

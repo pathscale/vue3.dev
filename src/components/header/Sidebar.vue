@@ -61,6 +61,7 @@ const Component = {
     return { intl, emit, state, redirect, router }
   }
 }
+
 export default Component;
 </script>
 

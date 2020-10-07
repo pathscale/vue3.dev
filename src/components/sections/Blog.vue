@@ -15,6 +15,7 @@ const Component = {
     return { intl, isLandscape }
   }
 }
+
 export default Component
 </script>
 

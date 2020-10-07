@@ -1,13 +1,14 @@
 <script>
-
 import { ref } from 'vue'
 import { VField, VInput, VButton, VSelect } from '@pathscale/vue3-ui'
 
 const Component = {
   components: { VField, VInput, VButton, VSelect }
 }
+
 export default Component;
 </script>
+
 <template>
   <section>
     <v-field label="Default">

@@ -18,6 +18,7 @@ const Component = {
     return { intl, tab }
   }
 }
+
 export default Component;
 </script>
 
