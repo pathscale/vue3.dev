@@ -96,7 +96,7 @@ export default Component
               <v-menu-item label="Breadcrumb" @click="redirect('breadcrumb')" :active="current.breadcrumb" />
               <v-menu-item label="Card" @click="redirect('card')" :active="current.card" />
               <v-menu-item label="Dropdown" @click="redirect('dropdown')" :active="current.dropdown" />
-              <v-menu-item label="Menu**" @click="redirect('menu')" :active="current.menu" />
+              <v-menu-item label="Menu" @click="redirect('menu')" :active="current.menu" />
               <!-- <v-menu-item label="Message" /> -->
               <v-menu-item label="Modal" @click="redirect('modal')" :active="current.modal" />
               <v-menu-item label="Navbar" @click="redirect('navbar')" :active="current.navbar" />
