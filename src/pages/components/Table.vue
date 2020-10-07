@@ -5,6 +5,7 @@ import { useRouter } from 'vue-router'
 import api from '../../docs/components/api/table.ts'
 import { SnippetSection, ApiSection } from '../../components'
 
+// eslint-disable-next-line no-restricted-syntax -- Using comprehensively
 import * as Showcases from '../../docs/components/showcases/Table'
 import BasicCode from '../../docs/components/raw/Table/Basic.txt'
 import StyledCode from '../../docs/components/raw/Table/Styled.txt'
