@@ -57,7 +57,7 @@ module.exports = {
       },
     },
     {
-      files: 'src/shims-vue.d.ts',
+      files: ['src/shims-vue.d.ts', 'src/types.d.ts'],
       rules: {
         // No imports/exports in plain declaration file
         'import/unambiguous': 'off',

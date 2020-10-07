@@ -31,7 +31,7 @@ export default Component;
         Disabled
       </v-tag>
       <v-tag rounded class="control">
-        Rounded tag label 
+        Rounded tag label
       </v-tag>
       <v-tag class="control" type="is-dark">
         Default

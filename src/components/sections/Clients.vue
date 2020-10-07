@@ -1,5 +1,4 @@
 <script>
-// eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
 import { VButton, VColumns, VColumn } from '@pathscale/vue3-ui'
 import { useI18n } from "vue-composable";
 import { ref } from 'vue'
@@ -64,7 +63,7 @@ export default Component
               </v-column>
               <v-column size="is-full-touch is-half">
                 <p class="subtitle has-text-white">
-                  {{ client.title }} 
+                  {{ client.title }}
                 </p>
                 <p class="has-text-white">
                   {{ client.description }}

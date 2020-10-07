@@ -200,7 +200,7 @@ export const router = createRouter({
   routes,
 });
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _from, next) => {
   // This goes through the matched routes from last to first, finding the closest route with a title.
   // eg. if we have /some/deep/nested/route and /some, /deep, and /nested have titles, nested's will be chosen.
   const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);
@@ -233,4 +233,6 @@ router.beforeEach((to, from, next) => {
   // Add the meta tags to the document head.
   .forEach(tag => document.head.append(tag));
   next();
+
+  return undefined;
 });

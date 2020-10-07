@@ -1,5 +1,4 @@
 <script>
-// eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
 import { VButton, VNavbar, VNavbarItem, VNavbarDropdown} from "@pathscale/vue3-ui"
 import { useI18n } from "vue-composable";
 
@@ -10,7 +9,7 @@ import { useRouter } from "vue-router"
 import logo from '../../assets/svg/vue3-logo.svg'
 
 const Component = {
-  components: {    
+  components: {
     VButton, VNavbar, VNavbarItem, VNavbarDropdown
   },
   setup(props, {emit}) {
@@ -46,13 +45,13 @@ const Component = {
     function toggleLanguageMenu() {
       showLanguageMenu.value = !showLanguageMenu.value;
     }
-    
+
     function changeLanguage(language) {
       showLanguageMenu.value = false
       intl.locale.value = language
     }
-    
-    return { 
+
+    return {
      intl,
      isMenuOpen,
      languages,
@@ -69,10 +68,10 @@ export default Component
 
 <template>
   <div class="big-menu">
-    <div class="hidden-language-menu" 
+    <div class="hidden-language-menu"
          :style="`height: ${showLanguageMenu ? 40 : 0}px`">
       <div class="is-flex pt-2">
-        <v-navbar-item 
+        <v-navbar-item
           v-for="l in intl.locales.value" :key="l"
           :value="l"
           class="mx-3 is-size-6 has-text-centered"

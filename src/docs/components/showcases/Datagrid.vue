@@ -1,6 +1,5 @@
 <script>
 import { ref } from 'vue'
-// eslint-disable-next-line import/no-unresolved -- components exist
 import { DataGrid, VTable } from '@pathscale/vue3-ui'
 
 const Component = {

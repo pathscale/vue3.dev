@@ -1,11 +1,10 @@
 <script>
-// eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
 import { VButton, VColumns, VColumn} from "@pathscale/vue3-ui"
 import { useI18n } from "vue-composable";
 import { reactive, onMounted } from 'vue'
 
 const Component = {
-  components: {    
+  components: {
     VButton, VColumns, VColumn
   },
   setup() {
@@ -18,9 +17,10 @@ const Component = {
       isAccepted ? state.showBanner = false : state.showBanner = true
     })
     function handlePrivacyPolicy() {
+      // eslint-disable-next-line no-console -- Have way to show it works
       console.log('handlePrivacyPolicy')
     }
-    function handleAgree() {      
+    function handleAgree() {
       localStorage.setItem("pathscaleCookiesBanner", "true")
       state.showBanner = false
     }
@@ -33,7 +33,7 @@ export default Component
 <template>
   <transition name="fade">
     <div id="cookie-banner-full-width" v-if="state.showBanner">
-      <v-columns>      
+      <v-columns>
         <v-column size="is-10">
           <span id="text-cookie">
             {{ intl.$ts('cookies') }} <a @click="handlePrivacyPolicy"> {{ intl.$ts('policy') }} </a>.
@@ -75,7 +75,7 @@ export default Component
   box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
 }
 @media only screen and (max-width: 1024px) {
-  #cookie-banner-full-width { 
+  #cookie-banner-full-width {
     padding: 10px;
     margin: -20px;
     position: fixed;
@@ -86,7 +86,7 @@ export default Component
   }
 }
 @media only screen and (orientation: landscape) {
-  #cookie-banner-full-width { 
+  #cookie-banner-full-width {
     bottom: 10vh;
   }
 }

@@ -1,5 +1,4 @@
 <script>
-// eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
 import { VButton, VColumns, VColumn, VSelect } from '@pathscale/vue3-ui'
 import { useI18n } from "vue-composable";
 import { ref } from 'vue'

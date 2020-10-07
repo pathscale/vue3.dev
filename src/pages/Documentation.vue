@@ -13,7 +13,6 @@ import {
   VMenu,
   VMenuItem,
   VMenuList,
-// eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
 } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 import { useRouter } from 'vue-router'

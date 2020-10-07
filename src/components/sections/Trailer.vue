@@ -1,5 +1,4 @@
 <script>
-// eslint-disable-next-line import/no-unresolved -- components does not exist in npm yet
 import { VButton, VColumns, VColumn } from '@pathscale/vue3-ui'
 import { useI18n } from "vue-composable";
 
@@ -38,7 +37,7 @@ export default Component
   </section>
 </template>
 
-<style scoped> 
+<style scoped>
   .is-fullwidth {
     max-width: 100vw;
   }

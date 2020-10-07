@@ -1,8 +1,5 @@
-
-
 <script>
 /* eslint-disable no-unsanitized/property -- ignore */
-// eslint-disable-next-line import/no-unresolved -- temporary
 import { VAccordion, VButton } from '@pathscale/vue3-ui'
 
 import 'highlight.js/styles/github.css'
@@ -53,6 +50,7 @@ const Demo = {
     }
    },
 };
+
 export default Demo;
 </script>
 
@@ -61,16 +59,16 @@ export default Demo;
     <h1 class="title is-size-4 mt-6">
       <a :href="`${path}#demo`" class="is-active">#</a> {{ title }}
     </h1>
-        <component :is="component"/>
-        <v-accordion is-horizontal header-is-trigger background="transparent">
-          <template #trigger>
-            <v-button light class="my-2">
-              &lt;>
-            </v-button>
-          </template>
-          <template #content>
-            <pre v-highlightjs :class="format"><code>{{ code }}</code></pre>
-          </template>
-        </v-accordion>
+    <component :is="component" />
+    <v-accordion is-horizontal header-is-trigger background="transparent">
+      <template #trigger>
+        <v-button light class="my-2">
+          &lt;>
+        </v-button>
+      </template>
+      <template #content>
+        <pre v-highlightjs :class="format"><code>{{ code }}</code></pre>
+      </template>
+    </v-accordion>
   </div>
 </template>
