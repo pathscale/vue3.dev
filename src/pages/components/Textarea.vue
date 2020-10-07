@@ -1,7 +1,7 @@
 <script>
 import { useI18n } from "vue-composable";
 
-import { useRouter } from 'vue-router'; 
+import { useRouter } from 'vue-router';
 import api from '../../docs/components/api/textarea.ts'
 import { SnippetSection, ApiSection } from "../../components"
 
@@ -16,6 +16,7 @@ const Component = {
     return { intl, api, router, Showcase, ShowcaseCode }
   }
 }
+
 export default Component;
 </script>
 

@@ -51,6 +51,7 @@ const Component = {
     return { intl, path, redirect, current }
   },
 }
+
 export default Component
 </script>
 

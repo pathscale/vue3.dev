@@ -1,5 +1,4 @@
 <script>
-
 import {
   Navbar,
   Cookie,
@@ -22,6 +21,7 @@ const Component = {
 
 export default Component
 </script>
+
 <template>
   <div>
     <cookie />

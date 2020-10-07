@@ -11,11 +11,11 @@ import {
 } from '../components/sections'
 
 const Component = {
-  components: { 
+  components: {
     HomeSection,
     TrailerSection,
     ClientsSection,
-    BlogSection, 
+    BlogSection,
   },
   setup() {
     const intl = useI18n();
@@ -23,8 +23,10 @@ const Component = {
     return { intl, router }
   }
 }
+
 export default Component;
 </script>
+
 <template>
   <section>
     <home-section />

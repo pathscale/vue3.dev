@@ -1,7 +1,7 @@
 <script>
 import { useI18n } from "vue-composable";
 
-import { useRouter } from 'vue-router'; 
+import { useRouter } from 'vue-router';
 import api from '../../docs/components/api/media.ts'
 import { ApiSection } from "../../components/sections"
 
@@ -13,6 +13,7 @@ const Component = {
     return { intl, api, router }
   }
 }
+
 export default Component;
 </script>
 

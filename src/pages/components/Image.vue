@@ -16,6 +16,7 @@ const Component = {
     return { intl, api, router, Showcase, ShowcaseCode }
   }
 }
+
 export default Component;
 </script>
 
