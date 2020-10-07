@@ -25,7 +25,7 @@ module.exports = {
   plugins: ['vue', '@typescript-eslint'],
   overrides: [
     {
-      files: ['.eslintrc.js', 'postcss.config.js', '.3rdparty-eslintrc.js', 'tailwind.config.js'],
+      files: ['.eslintrc.js', 'postcss.config.js', '.3rdparty-eslintrc.js', 'babel.config.js'],
       extends: [
         'ash-nazg/sauron-node',
         'plugin:vue/vue3-strongly-recommended',
