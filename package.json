@@ -9,6 +9,7 @@
     "build": "rollup -c --environment NODE_ENV:production",
     "postbuild": "shx cp serve.json dist",
     "lint": "eslint --ext .js,.ts,.vue,.md,.html --max-warnings=0 .",
+    "lint-arg": "eslint --ext .js,.ts,.vue,.md,.html --max-warnings=0",
     "lint-3rd": "eslint --no-inline-config --ignore-path linting/.3rdparty-eslintignore --no-eslintrc --config linting/.3rdparty-eslintrc.js `es-file-traverse --file ./src/app.ts --typescript --mainFields module --mainFields main --excludePathEntryExpression \"\\.css\" --parser vue-eslint-parser --parserOptions '{\"parser\": \"@typescript-eslint/parser\"}'`",
     "lint-3rd-dist": "eslint -f eslint-formatter-sourcemaps --no-inline-config --ignore-path linting/.3rdparty-eslintignore --no-eslintrc --config linting/.3rdparty-eslintrc.js `es-file-traverse --file ./dist/index.html`",
     "lint-fix": "eslint --ext .js,.ts,.vue,.md,.html --fix src",
@@ -27,6 +28,14 @@
   "keywords": [],
   "engines": {
     "node": ">=10.0.0"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,vue,md,html}": "npm run lint-arg --"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "devDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "^0.26.0",
@@ -81,7 +90,9 @@
     "eslint-plugin-vue": "^7.0.0-alpha.5",
     "glob": "^7.1.6",
     "highlight.js": "^10.2.1",
+    "husky": "^4.3.0",
     "i18n-iso-countries": "^6.0.0",
+    "lint-staged": "^10.4.0",
     "node-sass": "^4.14.1",
     "postcss": "^7.0.32",
     "prettier": "^2.1.1",
