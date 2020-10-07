@@ -1,7 +1,7 @@
 <script>
 import { useI18n } from "vue-composable";
 
-import { useRouter } from 'vue-router'; 
+import { useRouter } from 'vue-router';
 import api from '../../docs/components/api/accordion.ts'
 import { SnippetSection, ApiSection } from "../../components"
 
@@ -14,7 +14,7 @@ const Component = {
     const intl = useI18n();
      const router = useRouter();
     return { intl, api, router,
-     // Showcase, 
+     // Showcase,
      // ShowcaseCode
       }
   }
