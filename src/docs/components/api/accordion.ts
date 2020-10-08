@@ -11,27 +11,32 @@ const api =
                 {
                     name: 'trigger-right',
                     type: 'boolean',
-                    description: ''
+                    description: 'Places the trigger at the right of the content'
                 },
                 {
                     name: 'trigger-left',
-                    type: 'boolean'
+                    type: 'boolean',
+                    description: 'Places the trigger at the left of the content'
                 },
                 {
                     name: 'expanded',
-                    type: 'boolean'
+                    type: 'boolean',
+                    description: 'Controls the initial state for the accordion'
                 },
                 {
                     name: 'background',
-                    type: 'string'
+                    type: 'string',
+                    description: 'Set a background for both the trigger and the content'
                 },
                 {
                     name: 'color',
-                    type: 'string'
+                    type: 'string',
+                    description: 'Sets the font color for content'
                 },
                 {
                     name: 'hover',
-                    type: 'boolean'
+                    type: 'boolean',
+                    description: 'Expands the accordion on mouse hover'
                 },
                 {
                     name: 'is-link',
@@ -43,7 +48,8 @@ const api =
                 },
                 {
                     name: 'header-is-trigger',
-                    type: 'boolean'
+                    type: 'boolean',
+                    description: 'Expands the accordion when the trigger gets clicked'
                 }
             ],
             slots: [
