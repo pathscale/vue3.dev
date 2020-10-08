@@ -1,20 +1,23 @@
 <script>
-import { useI18n } from "vue-composable";
+import { useI18n } from 'vue-composable'
 
-import { useRouter } from 'vue-router';
+import { useRouter } from 'vue-router'
 import api from '../../docs/components/api/columns.ts'
-import { ApiSection } from "../../components/sections"
+import { SnippetSection, ApiSection } from '../../components'
+
+import Showcase from '../../docs/components/showcases/Columns.vue'
+import ShowcaseCode from '../../docs/components/raw/Columns.txt'
 
 const Component = {
-  components: { ApiSection },
+  components: { ApiSection, SnippetSection },
   setup() {
-    const intl = useI18n();
-     const router = useRouter();
-    return { intl, api, router }
-  }
+    const intl = useI18n()
+    const router = useRouter()
+    return { intl, api, router, Showcase, ShowcaseCode }
+  },
 }
 
-export default Component;
+export default Component
 </script>
 
 <template>
@@ -25,6 +28,10 @@ export default Component;
     <p>
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
+    <snippet-section
+      :code="ShowcaseCode"
+      :component="Showcase"
+      :path="router.currentRoute.value.path" />
     <section id="api" class="pt-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API

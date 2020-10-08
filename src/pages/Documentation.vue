@@ -110,7 +110,7 @@ export default Component
               <v-menu-item label="Tabs" @click="redirect('tabs')" :active="current.tabs" />
             </v-menu-list>
             <v-menu-list label="Layout">
-              <v-menu-item label="Columns**" @click="redirect('columns')" :active="current.columns" />
+              <v-menu-item label="Columns" @click="redirect('columns')" :active="current.columns" />
               <!-- <v-menu-item label="Container" /> -->
               <v-menu-item label="Sidebar**" @click="redirect('sidebar')" :active="current.sidebar" />
               <!-- <v-menu-item label="Hero" /> -->
