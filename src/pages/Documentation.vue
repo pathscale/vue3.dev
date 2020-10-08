@@ -46,6 +46,9 @@ const Component = {
 
     watchEffect(() => {
       current.value = { [router.currentRoute.value.name]: true }
+
+      if (router.currentRoute.value.name === 'documentation')
+        redirect('installation')
     })
 
     return { intl, path, redirect, current }
@@ -62,7 +65,7 @@ export default Component
         <div class="pt-6 px-5">
           <v-menu>
             <v-menu-list label="Getting Started">
-              <v-menu-item label="Installation" />
+              <v-menu-item label="Installation" @click="redirect('installation')" :active="current.installation" />
               <v-menu-item label="Why Vue3-ui" />
               <v-menu-item label="Theming" />
             </v-menu-list>

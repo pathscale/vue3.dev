@@ -40,6 +40,12 @@ const routes = [
         meta: metaTags('Documentation','Very clean Vue3 components styled with love and care.'),
         children: [
           {
+            name: 'installation',
+            path: 'installation',
+            component: Pages.Installation,
+            meta: metaTags('Installation', 'Install vue3-ui, a vue3 ready components library')
+          },
+          {
             name: 'button',
             path: 'button',
             component: Pages.Button,
