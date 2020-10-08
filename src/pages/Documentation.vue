@@ -35,7 +35,7 @@ const Component = {
   setup() {
     const intl = useI18n()
     const router = useRouter()
-    const path = computed(() => router.currentRoute.value.path)
+    const paths = computed(() => router.currentRoute.value.path.split('/').slice(1))
     const current = ref({})
 
     function redirect(name) {
@@ -51,7 +51,7 @@ const Component = {
         redirect('installation')
     })
 
-    return { intl, path, redirect, current }
+    return { intl, paths, redirect, current }
   },
 }
 
@@ -126,7 +126,7 @@ export default Component
             Home
           </v-breadcrumb-item>
           <v-breadcrumb-item
-            v-for="item in path.split('/').slice(1)"
+            v-for="item in paths"
             :key="item"
             class="is-capitalized"
             tag="router-link"

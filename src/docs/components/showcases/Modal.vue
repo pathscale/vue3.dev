@@ -9,7 +9,13 @@ const Component = {
       showModal: false,
       showModalCard: false,
     })
-    return { state }
+    const setShowModal = () => {
+      state.showModal = true
+    }
+    const setShowModalCard = () => {
+      state.showModalCard = true
+    }
+    return { state, setShowModal, setShowModalCard }
   }
 }
 export default Component;
@@ -17,10 +23,10 @@ export default Component;
 <template>
   <section>
     <div class="buttons">
-      <v-button type="is-success" @click="state.showModal = true">
+      <v-button type="is-success" @click="setShowModal()">
         Show Modal
       </v-button>
-      <v-button type="is-primary" @click="state.showModalCard = true">
+      <v-button type="is-primary" @click="setShowModalCard()">
         Show Modal Card
       </v-button>
     </div>
@@ -36,7 +42,7 @@ export default Component;
       <template #content>
         <img width="640" height="480" class="has-background-grey" />
       </template>
-      
+
       <template #footer>
         <v-button type="is-success">
           Save changes

@@ -58,7 +58,10 @@ const Component = {
      })
       emit('close')
     }
-    return { intl, emit, state, redirect, router }
+    function toggleIconMenuDirection() {
+      return props.expanded ? 'icon-menu-up':'icon-menu-down';
+    }
+    return { intl, emit, state, redirect, router, toggleIconMenuDirection }
   }
 }
 
@@ -89,9 +92,9 @@ export default Component;
         <v-menu>
           <v-menu-list>
             <v-menu-item v-for="item in state.list" :key="item.list" class="py-4 has-text-grey has-text-weight-bold has-border-bottom" @click="redirect(item.href)">
-              <template #label="props">
+              <template>
                 {{ item.title }}
-                <i v-if="item.submenu" class="icon is-pulled-right" :class="props.expanded ? 'icon-menu-up':'icon-menu-down'" />
+                <i v-if="item.submenu" class="icon is-pulled-right" :class="toggleIconMenuDirection()" />
               </template>
             </v-menu-item>
           </v-menu-list>
