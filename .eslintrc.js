@@ -89,8 +89,30 @@ module.exports = {
     },
     {
       files: '*.vue',
+      plugins: ['@pathscale/vue3'],
       rules: {
         'prettier/prettier': 'off',
+        '@pathscale/vue3/v-directive': [
+          'error',
+          {
+            unsafe: [
+              // These just add a single operator
+              // 'SpreadElement',
+              // 'UnaryExpression',
+
+              // This seems unavoidable
+              // 'CallExpression',
+
+              // To avoid these, one can use a call expression
+              'AssignmentExpression',
+              'BinaryExpression',
+              'LogicalExpression',
+              'ConditionalExpression',
+              // This can have design features but preventing to avoid ugliness
+              'TemplateLiteral',
+            ],
+          },
+        ],
       },
     },
   ],
