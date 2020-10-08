@@ -25,9 +25,13 @@ export default Component;
     <v-field label="Loading">
       <v-textarea color="is-danger" v-model="text" loading />
     </v-field>
-    
+
     <v-field label="Focused">
       <v-textarea color="is-danger" v-model="text" focused />
+    </v-field>
+
+    <v-field label="Counter">
+      <v-textarea color="is-info" v-model="text" maxlength="5" has-counter />
     </v-field>
   </section>
 </template>
