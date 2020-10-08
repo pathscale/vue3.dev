@@ -5,8 +5,8 @@ import { useRouter } from 'vue-router';
 import api from '../../docs/components/api/accordion.ts'
 import { SnippetSection, ApiSection } from "../../components"
 
-// import Showcase from "../../docs/components/showcases/Breadcrumb.vue"
-// import ShowcaseCode from "../../docs/components/raw/Breadcrumb.txt"
+import Showcase from "../../docs/components/showcases/Accordion.vue"
+import ShowcaseCode from "../../docs/components/raw/Accordion.txt"
 
 const Component = {
   components: { SnippetSection, ApiSection },
@@ -14,8 +14,8 @@ const Component = {
     const intl = useI18n();
      const router = useRouter();
     return { intl, api, router,
-     // Showcase,
-     // ShowcaseCode
+     Showcase,
+     ShowcaseCode
       }
   }
 }
