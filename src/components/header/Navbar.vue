@@ -84,7 +84,7 @@ export default Component
     </div>
     <v-navbar v-model="isMenuOpen">
       <template #brand>
-        <v-navbar-item class="ml-6">
+        <v-navbar-item class="ml-6" tag="router-link" :to="{ name: 'home' }">
           <img :src="logo" alt="revenge logo" />
         </v-navbar-item>
       </template>
