@@ -35,11 +35,8 @@ export default Component
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
 
-    <h1 class="title mt-6">
-      Examples
-    </h1>
     <snippet-section
-      title="DataGrid"
+      title="Showcase"
       :code="ShowcaseCode"
       :component="Showcase"
       :path="router.currentRoute.value.path" />

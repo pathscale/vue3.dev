@@ -56,7 +56,7 @@ export default Demo;
 
 <template>
   <div class="box">
-    <h1 class="title is-size-4 mt-6">
+    <h1 class="title is-size-4 mt-4">
       <a :href="`${path}#demo`" class="is-active">#</a> {{ title }}
     </h1>
     <component :is="component" />
