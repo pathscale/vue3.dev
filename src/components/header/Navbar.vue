@@ -120,11 +120,8 @@ export default Component
           <a class="mx-4" href="https://github.com/pathscale/vue3-ui" target="_blank" rel="noopener">
             <i class="icon icon-github has-text-white is-medium" />
           </a>
-          <a class="mx-4" href="https://discord.com/invite/yXHXefX" target="_blank" rel="noopener">
+          <a class="mx-4" href="https://discord.com/invite/8ygCBpS" target="_blank" rel="noopener">
             <i class="icon icon-discord has-text-white is-medium" />
-          </a>
-          <a class="mx-4" href="https://twitter.com/pathscale" target="_blank" rel="noopener">
-            <i class="icon icon-twitter has-text-white is-medium" />
           </a>
         </v-navbar-item>
       </template>
