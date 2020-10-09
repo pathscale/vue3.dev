@@ -48,6 +48,12 @@ const Demo = {
         }
       }
     }
+  },
+  setup(props) {
+    function getDemoLink() {
+      return `${props.path}#demo`
+    }
+    return { getDemoLink }
   }
 }
 
@@ -57,7 +63,7 @@ export default Demo
 <template>
   <div class="box">
     <h1 class="title is-size-4 mt-4">
-      <a :href="`${path}#demo`" class="is-active">#</a> {{ title }}
+      <a :href="getDemoLink()" class="is-active">#</a> {{ title }}
     </h1>
     <component :is="component" />
     <v-accordion is-horizontal header-is-trigger background="transparent">
