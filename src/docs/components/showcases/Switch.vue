@@ -9,6 +9,7 @@ const Component = {
     return { value }
   }
 }
+
 export default Component
 </script>
 <template>

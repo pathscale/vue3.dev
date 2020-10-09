@@ -4,6 +4,7 @@ import { VField, VFile } from '@pathscale/vue3-ui'
 const Component = {
   components: { VField, VFile }
 }
+
 export default Component
 </script>
 <template>

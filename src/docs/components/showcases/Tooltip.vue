@@ -4,6 +4,7 @@ import { VTooltip, VButton } from '@pathscale/vue3-ui'
 const Component = {
   components: { VTooltip, VButton }
 }
+
 export default Component
 </script>
 <template>

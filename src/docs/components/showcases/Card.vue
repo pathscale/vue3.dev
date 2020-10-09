@@ -4,6 +4,7 @@ import { VCard, VCardImage, VCardContent, VCardHeader, VCardFooter, VCardFooterI
 const Component = {
   components: { VCard, VCardImage, VCardContent, VCardHeader, VCardFooter, VCardFooterItem, VImage, VMedia, VColumns, VColumn }
 }
+
 export default Component
 </script>
 <template>

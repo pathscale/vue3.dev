@@ -4,6 +4,7 @@ import { VButton } from '@pathscale/vue3-ui'
 const Component = {
   components: { VButton }
 }
+
 export default Component
 </script>
 <template>

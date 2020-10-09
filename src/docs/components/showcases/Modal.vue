@@ -18,6 +18,7 @@ const Component = {
     return { state, setShowModal, setShowModalCard }
   }
 }
+
 export default Component
 </script>
 <template>

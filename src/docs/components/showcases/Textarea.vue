@@ -10,6 +10,7 @@ const Component = {
     return { text }
   }
 }
+
 export default Component
 </script>
 <template>

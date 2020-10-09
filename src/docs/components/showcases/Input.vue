@@ -10,6 +10,7 @@ const Component = {
     return { email }
   }
 }
+
 export default Component
 </script>
 <template>

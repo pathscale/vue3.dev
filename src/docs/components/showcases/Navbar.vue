@@ -4,6 +4,7 @@ import { VNavbar, VNavbarItem, VNavbarDropdown, VButton } from '@pathscale/vue3-
 const Component = {
   components: { VNavbar, VNavbarItem, VNavbarDropdown, VButton }
 }
+
 export default Component
 </script>
 <template>

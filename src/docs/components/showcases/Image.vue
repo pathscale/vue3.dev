@@ -4,6 +4,7 @@ import { VImage } from '@pathscale/vue3-ui'
 const Component = {
   components: { VImage }
 }
+
 export default Component
 </script>
 <template>

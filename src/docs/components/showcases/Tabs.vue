@@ -10,6 +10,7 @@ const Component = {
     return { activeTab, visible }
   }
 }
+
 export default Component
 </script>
 <template>

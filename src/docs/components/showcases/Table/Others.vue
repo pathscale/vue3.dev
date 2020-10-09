@@ -65,6 +65,7 @@ const Component = {
     }
   }
 }
+
 export default Component
 </script>
 <template>
