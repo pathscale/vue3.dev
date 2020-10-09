@@ -114,7 +114,7 @@ export default Component
               <v-menu-item label="Sidebar" @click="redirect('sidebar')" :active="current.sidebar" />
               <!-- <v-menu-item label="Hero" /> -->
               <!-- <v-menu-item label="Level" /> -->
-              <v-menu-item label="Media**" @click="redirect('media')" :active="current.media" />
+              <v-menu-item label="Media" @click="redirect('media')" :active="current.media" />
             </v-menu-list>
           </v-menu>
         </div>

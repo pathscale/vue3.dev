@@ -6,8 +6,7 @@ const Component = {
   components: { VTabs, VTab, VButton },
   setup() {
     const activeTab = ref(0)
-    const visible = ref(true)
-    return { activeTab, visible }
+    return { activeTab }
   }
 }
 
