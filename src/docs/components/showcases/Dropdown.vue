@@ -136,7 +136,7 @@ export default Component
         </template>
 
         <v-dropdown-item value="Pikachu" has-link>
-          <a href="https://google.com" target="_blank" has-link>This is a link</a>
+          <a href="https://google.com" target="_blank" rel="noopener" has-link>This is a link</a>
         </v-dropdown-item>
       </v-dropdown>
     </v-field>

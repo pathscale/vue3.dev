@@ -114,11 +114,13 @@ export default Component
           class="mx-3 is-size-5 py-4 has-text-centered">
           Demo
         </v-navbar-item>
-        <!-- <v-navbar-item
+        <!--
+        <v-navbar-item
           class="mx-3 is-size-5 py-4 has-text-centered"
           @click="toggleLanguageMenu">
           {{ intl.$ts(`language`) }}: {{ languages[intl.locale.value] }}
-        </v-navbar-item> -->
+        </v-navbar-item>
+        -->
         <v-navbar-item
           tag="div"
           class="mx-3 is-size-5 py-4 has-text-centered">

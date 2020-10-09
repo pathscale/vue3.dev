@@ -35,9 +35,9 @@ export default Component
     </v-switch>
   </v-field>
 
-  <v-sidebar :open="state.open" type="is-light" fullheight :reduce="state.reduced" :overlay="state.overlay" @close="close()" position="fixed">
+  <v-sidebar :open="state.open" type="is-light" fullheight :reduce="state.reduced" :overlay="state.overlay" @close="close" position="fixed">
     <section class="section px-1">
-      <v-button tag="a" @click="close()" type="is-text" class="is-pulled-right">
+      <v-button tag="a" @click="close" type="is-text" class="is-pulled-right">
         &#x274C;
       </v-button>
     </section>

@@ -50,5 +50,7 @@ export default Component
   </section>
 </template>
 
+<!--
 <style scoped>
 </style>
+-->

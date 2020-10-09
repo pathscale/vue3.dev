@@ -25,10 +25,10 @@ export default Component
 <template>
   <section>
     <div class="buttons">
-      <v-button type="is-success" @click="setShowModal()">
+      <v-button type="is-success" @click="setShowModal">
         Show Modal
       </v-button>
-      <v-button type="is-primary" @click="setShowModalCard()">
+      <v-button type="is-primary" @click="setShowModalCard">
         Show Modal Card
       </v-button>
     </div>

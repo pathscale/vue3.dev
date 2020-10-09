@@ -92,10 +92,8 @@ export default Component
         <v-menu>
           <v-menu-list>
             <v-menu-item v-for="item in state.list" :key="item.list" class="py-4 has-text-grey has-text-weight-bold has-border-bottom" @click="redirect(item.href)">
-              <template>
-                {{ item.title }}
-                <i v-if="item.submenu" class="icon is-pulled-right" :class="toggleIconMenuDirection()" />
-              </template>
+              {{ item.title }}
+              <i v-if="item.submenu" class="icon is-pulled-right" :class="toggleIconMenuDirection()" />
             </v-menu-item>
           </v-menu-list>
         </v-menu>

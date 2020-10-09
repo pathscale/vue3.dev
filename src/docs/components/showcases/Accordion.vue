@@ -119,7 +119,7 @@ export default component
           </v-button>
         </template>
         <template #content>
-          <a href="https://github.com/pathscale/vue3-ui" target="_blank">Go to source</a>
+          <a href="https://github.com/pathscale/vue3-ui" target="_blank" rel="noopener">Go to source</a>
         </template>
       </v-accordion>
     </v-field>
