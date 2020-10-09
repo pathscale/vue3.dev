@@ -142,7 +142,6 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'space-before-blocks': ['error'],
     'space-infix-ops': ['error'],
-    'wrap-regex': ['error'],
 
     'no-restricted-syntax': [
       'error',
