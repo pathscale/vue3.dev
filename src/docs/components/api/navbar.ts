@@ -1,18 +1,18 @@
-const api = 
-  [ 
+const api =
+  [
     {
       title: 'VNavbar',
       props: [
         {
-        name: 'v-model',
-        description: 'Binding value to control the behaviour of the mobile menu programmatically',
-        type: 'String, Number',
+          name: 'v-model',
+          description: 'Binding value to control the behaviour of the mobile menu programmatically',
+          type: 'String, Number',
         },
         {
-        name: 'type',
-        description: 'Navbar color',
-        type: 'String',
-        values: `is-white, is-light, is-dark, is-black, is-text, is-primary, is-link, is-info, is-success, is-warning, is-danger...`,
+          name: 'type',
+          description: 'Navbar color',
+          type: 'String',
+          values: 'is-white, is-light, is-dark, is-black, is-text, is-primary, is-link, is-info, is-success, is-warning, is-danger...',
         },
         {
           name: 'transparent',
@@ -48,94 +48,94 @@ const api =
       ],
       slots: [
         {
-        name: 'brand',
-        description: 'Brand logo slot',
+          name: 'brand',
+          description: 'Brand logo slot',
         },
         {
-        name: 'start',
-        description: 'Left items slot',
+          name: 'start',
+          description: 'Left items slot',
         },
         {
-        name: 'end',
-        description: 'Right items slot',
+          name: 'end',
+          description: 'Right items slot',
         },
       ]
     },
     {
-    title: 'VNavbarItem',
-    props: [
-      {
-        name: 'tag',
-        description: 'Sets the type of the component that have to render as navbar-item',
-        type: 'String',
-        values: 'a, router-link, div...',
-        default: 'a'
-      },
-      {
-        name: 'active',
-        description: 'Active style',
-        type: 'Boolean'
-      },
-      {
-        name: 'Any attribute',
-        description: 'Native or inherited attributes',
-        type: ' String',
-        values: 'href, to, ...'
-      }
-    ]
+      title: 'VNavbarItem',
+      props: [
+        {
+          name: 'tag',
+          description: 'Sets the type of the component that have to render as navbar-item',
+          type: 'String',
+          values: 'a, router-link, div...',
+          default: 'a'
+        },
+        {
+          name: 'active',
+          description: 'Active style',
+          type: 'Boolean'
+        },
+        {
+          name: 'Any attribute',
+          description: 'Native or inherited attributes',
+          type: ' String',
+          values: 'href, to, ...'
+        }
+      ]
     },
     {
-    title: 'VNavbarDropdown',
-    props: [
-      {
-        name: 'label',
-        description: 'Dropdown menu label',
-        type: 'Boolean',
-      },
-      {
-        name: 'hoverable',
-        description: 'The dropdown will show up on hover',
-        type: 'Boolean',
-      },
-      {
-        name: 'active',
-        description: 'Active style',
-        type: 'Boolean',
-      },
-      {
-        name: 'right',
-        description: 'You can position the dropdown to start from the right',
-        type: 'Boolean',
-      },
-      {
-        name: 'arrowless',
-        description: `Hide dropdown's arrow icon`,
-        type: 'Boolean',
-      },
-      {
-        name: 'boxed',
-        description: 'Boxed style',
-        type: 'Boolean',
-      },
-      {
-        name: 'collapsible',
-        description: 'Collapsible dropdown on mobile',
-        type: 'Boolean',
-        values: ''
-      }
-    ],
-    slots: [
-      {
-        name: 'default',
-        description: 'Menu item body',
-      },
-      {
-        name: 'label',
-        description: 'Dropdown menu custom label',
-        props: '-'
-      }
-    ]
+      title: 'VNavbarDropdown',
+      props: [
+        {
+          name: 'label',
+          description: 'Dropdown menu label',
+          type: 'Boolean',
+        },
+        {
+          name: 'hoverable',
+          description: 'The dropdown will show up on hover',
+          type: 'Boolean',
+        },
+        {
+          name: 'active',
+          description: 'Active style',
+          type: 'Boolean',
+        },
+        {
+          name: 'right',
+          description: 'You can position the dropdown to start from the right',
+          type: 'Boolean',
+        },
+        {
+          name: 'arrowless',
+          description: 'Hide dropdown\'s arrow icon',
+          type: 'Boolean',
+        },
+        {
+          name: 'boxed',
+          description: 'Boxed style',
+          type: 'Boolean',
+        },
+        {
+          name: 'collapsible',
+          description: 'Collapsible dropdown on mobile',
+          type: 'Boolean',
+          values: ''
+        }
+      ],
+      slots: [
+        {
+          name: 'default',
+          description: 'Menu item body',
+        },
+        {
+          name: 'label',
+          description: 'Dropdown menu custom label',
+          props: '-'
+        }
+      ]
     }
   ]
 
-export default api;
+export default api

@@ -1,18 +1,18 @@
-const api = 
-  [ 
-    { 
+const api =
+  [
+    {
       title: 'VSidebar',
       props: [
         {
-            name: 'open',
-            description: 'Open the sidebar',
-            type: 'Boolean',
+          name: 'open',
+          description: 'Open the sidebar',
+          type: 'Boolean',
         },
         {
           name: 'type',
           description: 'Sidebar color',
           type: 'String',
-          values: `is-white, is-light, is-dark, is-black, is-text, is-primary, is-link, is-info, is-success, is-warning, is-danger...`,
+          values: 'is-white, is-light, is-dark, is-black, is-text, is-primary, is-link, is-info, is-success, is-warning, is-danger...',
         },
         {
           name: 'overlay',
@@ -20,11 +20,11 @@ const api =
           type: 'Boolean',
         },
         {
-            name: 'position',
-            description: 'Sidebar display position',
-            type: 'String',
-            values: 'fixed, static, absolute',
-            default: 'fixed'
+          name: 'position',
+          description: 'Sidebar display position',
+          type: 'String',
+          values: 'fixed, static, absolute',
+          default: 'fixed'
         },
         {
           name: 'fullheight',
@@ -76,11 +76,11 @@ const api =
       ],
       events: [
         {
-            name: 'close',
-            description: 'Emited when sidebar is closed',
+          name: 'close',
+          description: 'Emited when sidebar is closed',
         }
       ]
     }
   ]
 
-export default api;
+export default api

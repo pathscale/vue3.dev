@@ -1,5 +1,5 @@
-const api = 
-  [ 
+const api =
+  [
     {
       title: 'VButton',
       props: [
@@ -7,7 +7,7 @@ const api =
           name: 'type',
           description: 'Button color',
           type: 'String',
-          values: `is-white, is-light, is-dark, is-black, is-text, is-primary, is-link, is-info, is-success, is-warning, is-danger...`,
+          values: 'is-white, is-light, is-dark, is-black, is-text, is-primary, is-link, is-info, is-success, is-warning, is-danger...',
         },
         {
           name: 'size',
@@ -24,61 +24,61 @@ const api =
           name: 'loading',
           description: 'Loading state',
           type: 'Boolean',
-          
+
         },
         {
           name: 'rounded',
           description: 'Rounded style',
           type: 'Boolean',
-          
+
         },
         {
           name: 'outlined',
           description: 'Outlined style',
           type: 'Boolean',
-          
+
         },
         {
           name: 'expanded',
           description: 'Full-width style',
           type: 'Boolean',
-          
+
         },
         {
           name: 'inverted',
           description: 'Inverted style',
           type: 'Boolean',
-          
+
         },
         {
           name: 'focused',
           description: 'Focused style',
           type: 'Boolean',
-          
+
         },
         {
           name: 'active',
           description: 'Active style',
           type: 'Boolean',
-          
+
         },
         {
           name: 'hovered',
           description: 'Hovered style',
           type: 'Boolean',
-          
+
         },
         {
           name: 'selected',
           description: 'Selected style',
           type: 'Boolean',
-          
+
         },
         {
           name: 'light',
           description: 'Light style',
           type: 'Boolean',
-          
+
         },
         {
           name: 'native-type',
@@ -113,4 +113,4 @@ const api =
     }
   ]
 
-export default api;
+export default api

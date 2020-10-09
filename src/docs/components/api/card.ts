@@ -1,5 +1,5 @@
-const api = 
-  [ 
+const api =
+  [
     {
       title: 'VCard',
       props: [
@@ -53,4 +53,4 @@ const api =
 
   ]
 
-export default api;
+export default api

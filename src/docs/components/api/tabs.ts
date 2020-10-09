@@ -1,5 +1,5 @@
-const api = 
-[ 
+const api =
+[
   {
     title: 'VTabs',
     props: [
@@ -83,4 +83,4 @@ const api =
   }
 ]
 
-export default api;
+export default api

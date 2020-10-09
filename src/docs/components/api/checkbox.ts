@@ -1,5 +1,5 @@
-const api = 
-  [ 
+const api =
+  [
     {
       title: 'VCheckbox',
       props: [
@@ -23,19 +23,19 @@ const api =
           name: 'type',
           description: 'Checkbox color',
           type: 'String',
-          values: `is-white, is-light, is-dark, is-black, is-text, is-primary, is-link, is-info, is-success, is-warning, is-danger...`,
+          values: 'is-white, is-light, is-dark, is-black, is-text, is-primary, is-link, is-info, is-success, is-warning, is-danger...',
         },
         {
           name: 'disabled',
           description: 'Same as native disabled',
           type: 'Boolean',
-          
+
         },
         {
           name: 'required',
           description: 'Same as native required',
           type: 'Boolean',
-          
+
         },
         {
           name: 'name',
@@ -47,19 +47,19 @@ const api =
           description: 'Size of the checkbox',
           type: 'String',
           values: 'is-small, is-medium, is-large',
-          
+
         },
         {
-            name: 'true-value',
-            description: "Returned value when it's checked",
-            type: 'Any',
-            default: 'true'
+          name: 'true-value',
+          description: 'Returned value when it\'s checked',
+          type: 'Any',
+          default: 'true'
         },
         {
-            name: 'false-value',
-            description: "Returned value when it's not checked",
-            type: 'Any',
-            
+          name: 'false-value',
+          description: 'Returned value when it\'s not checked',
+          type: 'Any',
+
         }
       ],
       events: [
@@ -77,4 +77,4 @@ const api =
     }
   ]
 
-export default api;
+export default api

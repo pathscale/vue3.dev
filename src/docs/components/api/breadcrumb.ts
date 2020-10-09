@@ -1,5 +1,5 @@
-const api = 
-  [ 
+const api =
+  [
     {
       title: 'VBreadcrumb',
       props: [
@@ -7,7 +7,7 @@ const api =
           name: 'alignment',
           description: 'For alternative alignments',
           type: 'String',
-          values: `is-centered, is-right`,
+          values: 'is-centered, is-right',
         },
         {
           name: 'size',
@@ -16,10 +16,10 @@ const api =
           values: 'is-normal, is-medium, is-large',
         },
         {
-            name: 'separator',
-            description: 'Alternative separators',
-            type: 'String',
-            values: 'has-arrow-separator, has-bullet-separator, has-dot-separator and has-succeeds-separator'
+          name: 'separator',
+          description: 'Alternative separators',
+          type: 'String',
+          values: 'has-arrow-separator, has-bullet-separator, has-dot-separator and has-succeeds-separator'
         },
       ],
     },
@@ -54,4 +54,4 @@ const api =
     }
   ]
 
-export default api;
+export default api

@@ -1,5 +1,5 @@
-const api = 
-  [ 
+const api =
+  [
     {
       title: 'VMedia',
       slots: [
@@ -19,4 +19,4 @@ const api =
     }
   ]
 
-export default api;
+export default api

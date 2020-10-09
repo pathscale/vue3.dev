@@ -1,5 +1,5 @@
-const api = 
-  [ 
+const api =
+  [
     {
       title: 'VColumns',
       props: [
@@ -39,7 +39,7 @@ const api =
           description: 'Center columns vertically',
           type: 'Boolean',
         },
-    ],
+      ],
     },
     {
       title: 'VColumn',
@@ -67,8 +67,8 @@ const api =
           type: 'String',
           values: 'is-narrow-mobile, is-narrow-tablet, is-narrow-touch, is-narrow-desktop, is-narrow-widescreen, is-narrow-fullhd'
         }
-    ],
+      ],
     }
   ]
 
-export default api;
+export default api

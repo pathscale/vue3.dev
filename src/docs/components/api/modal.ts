@@ -1,19 +1,19 @@
-const api = 
-  [ 
+const api =
+  [
     {
       title: 'VModal',
       props: [
         {
-            name: 'v-model',
-            description: 'Binding value',
-            type: 'Boolean',
-            required: true,
+          name: 'v-model',
+          description: 'Binding value',
+          type: 'Boolean',
+          required: true,
         },
         {
           name: 'card',
           description: 'Display as a modal card, slots will be required',
           type: 'Boolean',
-      },
+        },
       ],
       slots: [
         {
@@ -32,4 +32,4 @@ const api =
     }
   ]
 
-export default api;
+export default api
