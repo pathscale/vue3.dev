@@ -13,8 +13,7 @@ const Component = {
   setup() {
     const intl = useI18n()
     const router = useRouter()
-    const path = `${router.currentRoute.value.path}#api`
-    return { intl, api, router, path, Showcase, ShowcaseCode }
+    return { intl, api, router, Showcase, ShowcaseCode }
   }
 }
 
@@ -32,7 +31,7 @@ export default Component
     <snippet-section :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
     <section id="api" class="pt-4">
       <h2 class="title is-4">
-        <a :href="path" class="is-active">#</a> API
+        <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API
       </h2>
       <api-section :api="api" />
     </section>
