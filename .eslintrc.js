@@ -197,6 +197,7 @@ module.exports = {
     'vue/no-useless-mustaches': ['error'],
     'vue/no-useless-v-bind': ['error'],
     'vue/padding-line-between-blocks': ['error'],
+    'vue/require-name-property': ['error'],
     'vue/v-for-delimiter-style': ['error'],
     'vue/v-on-function-call': ['error'],
     'vue/html-closing-bracket-newline': [
