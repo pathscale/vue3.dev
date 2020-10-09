@@ -2,9 +2,9 @@
 import { VTag, VField } from '@pathscale/vue3-ui'
 
 const Component = {
-  components: { VTag, VField },
+  components: { VTag, VField }
 }
-export default Component;
+export default Component
 </script>
 <template>
   <section>

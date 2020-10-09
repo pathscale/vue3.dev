@@ -21,9 +21,9 @@ const Component = {
     }
 
     return {
-      datagrid,
+      datagrid
     }
-  },
+  }
 }
 export default Component
 </script>

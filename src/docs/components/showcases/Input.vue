@@ -8,9 +8,9 @@ const Component = {
   setup() {
     const email = ref('')
     return { email }
-  },
+  }
 }
-export default Component;
+export default Component
 </script>
 <template>
   <section>
@@ -29,7 +29,7 @@ export default Component;
     <v-field>
       <v-input color="is-danger" class="is-large" />
     </v-field>
-    
+
     <v-field label="Loading">
       <v-input loading />
     </v-field>

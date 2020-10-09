@@ -2,7 +2,7 @@
 import { VColumns, VColumn } from '@pathscale/vue3-ui'
 
 const component = {
-  components: { VColumns, VColumn },
+  components: { VColumns, VColumn }
 }
 
 export default component

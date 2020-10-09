@@ -1,2 +1,2 @@
-export { setTheme } from "./utils";
-export { default as defaultTheme } from "./variables"
+export { setTheme } from './utils'
+export { default as defaultTheme } from './variables'

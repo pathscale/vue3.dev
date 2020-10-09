@@ -1,13 +1,13 @@
 <script>
-import { useI18n } from "vue-composable";
+import { useI18n } from 'vue-composable'
 
-import { useRouter} from "vue-router"
+import { useRouter } from 'vue-router'
 
 import {
   HomeSection,
   TrailerSection,
   ClientsSection,
-  BlogSection,
+  BlogSection
 } from '../components/sections'
 
 const Component = {
@@ -15,16 +15,16 @@ const Component = {
     HomeSection,
     TrailerSection,
     ClientsSection,
-    BlogSection,
+    BlogSection
   },
   setup() {
-    const intl = useI18n();
-    const router = useRouter();
+    const intl = useI18n()
+    const router = useRouter()
     return { intl, router }
   }
 }
 
-export default Component;
+export default Component
 </script>
 
 <template>

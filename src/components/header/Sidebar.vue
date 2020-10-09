@@ -1,15 +1,15 @@
 <script>
-import { VSidebar, VMenu, VMenuList, VMenuItem } from "@pathscale/vue3-ui"
-import { reactive } from 'vue';
-import { useI18n } from "vue-composable";
-import { useRouter } from "vue-router"
+import { VSidebar, VMenu, VMenuList, VMenuItem } from '@pathscale/vue3-ui'
+import { reactive } from 'vue'
+import { useI18n } from 'vue-composable'
+import { useRouter } from 'vue-router'
 
 const Component = {
   components: { VSidebar, VMenu, VMenuList, VMenuItem },
   emits: ['open', 'close'],
   setup(props, { emit }) {
-    const intl = useI18n();
-    const router = useRouter();
+    const intl = useI18n()
+    const router = useRouter()
     const state = reactive({
       list: [{
         title: 'Shop by Category',
@@ -33,39 +33,39 @@ const Component = {
       },
       {
         title: 'Customer Support',
-        href: 'products',
+        href: 'products'
       },
       {
         title: 'Our Events',
-        href: 'products',
+        href: 'products'
       },
       {
         title: 'About Us',
-        href: 'about',
+        href: 'about'
       },
       {
         title: 'Contact Us',
-        href: 'contact',
+        href: 'contact'
       },
       {
         title: 'FAQs',
-        href: 'faq',
+        href: 'faq'
       }]
     })
     function redirect(name) {
-     router.push({
+      router.push({
         name
-     })
+      })
       emit('close')
     }
     function toggleIconMenuDirection() {
-      return props.expanded ? 'icon-menu-up':'icon-menu-down';
+      return props.expanded ? 'icon-menu-up' : 'icon-menu-down'
     }
     return { intl, emit, state, redirect, router, toggleIconMenuDirection }
   }
 }
 
-export default Component;
+export default Component
 </script>
 
 <template>

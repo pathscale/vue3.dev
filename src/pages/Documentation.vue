@@ -12,7 +12,7 @@ import {
   VSidebar,
   VMenu,
   VMenuItem,
-  VMenuList,
+  VMenuList
 } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 import { useRouter } from 'vue-router'
@@ -30,7 +30,7 @@ const Component = {
     VSidebar,
     VMenu,
     VMenuItem,
-    VMenuList,
+    VMenuList
   },
   setup() {
     const intl = useI18n()
@@ -40,19 +40,18 @@ const Component = {
 
     function redirect(name) {
       router.push({
-        name,
+        name
       })
     }
 
     watchEffect(() => {
       current.value = { [router.currentRoute.value.name]: true }
 
-      if (router.currentRoute.value.name === 'documentation')
-        redirect('installation')
+      if (router.currentRoute.value.name === 'documentation') redirect('installation')
     })
 
     return { intl, paths, redirect, current }
-  },
+  }
 }
 
 export default Component

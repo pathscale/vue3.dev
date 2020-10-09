@@ -1,23 +1,23 @@
 <script>
-import { useI18n } from "vue-composable";
+import { useI18n } from 'vue-composable'
 
-import { useRouter } from 'vue-router';
+import { useRouter } from 'vue-router'
 import api from '../../docs/components/api/input.ts'
-import { SnippetSection, ApiSection } from "../../components"
+import { SnippetSection, ApiSection } from '../../components'
 
-import Showcase from "../../docs/components/showcases/Input.vue"
-import ShowcaseCode from "../../docs/components/raw/Input.txt"
+import Showcase from '../../docs/components/showcases/Input.vue'
+import ShowcaseCode from '../../docs/components/raw/Input.txt'
 
 const Component = {
   components: { SnippetSection, ApiSection },
   setup() {
-    const intl = useI18n();
-     const router = useRouter();
+    const intl = useI18n()
+    const router = useRouter()
     return { intl, api, router, Showcase, ShowcaseCode }
   }
 }
 
-export default Component;
+export default Component
 </script>
 
 <template>

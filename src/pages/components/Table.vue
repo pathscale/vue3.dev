@@ -37,9 +37,9 @@ const Component = {
       DynamicCode,
       DragCode,
       StickyCode,
-      OthersCode,
+      OthersCode
     }
-  },
+  }
 }
 
 export default Component

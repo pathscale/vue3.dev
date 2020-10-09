@@ -1,33 +1,33 @@
 <script>
 import { VButton, VColumns, VColumn } from '@pathscale/vue3-ui'
-import { useI18n } from "vue-composable";
+import { useI18n } from 'vue-composable'
 import { ref } from 'vue'
 
-import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 const Component = {
-  components: { VButton, VColumns, VColumn, Carousel, Slide, Pagination, Navigation  },
+  components: { VButton, VColumns, VColumn, Carousel, Slide, Pagination, Navigation },
   setup() {
-    const intl = useI18n();
+    const intl = useI18n()
     const isLandscape = ref(window.matchMedia('(orientation: landscape)').matches)
     window.addEventListener('orientationchange', () => {
       isLandscape.value = !isLandscape.value
-    });
+    })
 
     const projects = [
       {
-        title: "Space Revenge",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ornare mi. Vestibulum finibus, mi iaculis vulputate vehicula, nisl nunc venenatis nisl, id fringilla turpis diam eget dolor. Cras lobortis lectus nibh, eu facilisis sapien suscipit sed",
-        image: "https://spacerevenge--game.b-cdn.net/battle.webp",
+        title: 'Space Revenge',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ornare mi. Vestibulum finibus, mi iaculis vulputate vehicula, nisl nunc venenatis nisl, id fringilla turpis diam eget dolor. Cras lobortis lectus nibh, eu facilisis sapien suscipit sed',
+        image: 'https://spacerevenge--game.b-cdn.net/battle.webp',
         link: 'https://www.revenge.game/',
-        button: "Spacerevenge.game"
+        button: 'Spacerevenge.game'
       },
       {
-        title: "Social.soy",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ornare mi. Vestibulum finibus, mi iaculis vulputate vehicula, nisl nunc venenatis nisl, id fringilla turpis diam eget dolor. Cras lobortis lectus nibh, eu facilisis sapien suscipit sed",
-        image: "https://spacerevenge--game.b-cdn.net/chat.webp",
-        link:'https://social.soy/',
+        title: 'Social.soy',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ornare mi. Vestibulum finibus, mi iaculis vulputate vehicula, nisl nunc venenatis nisl, id fringilla turpis diam eget dolor. Cras lobortis lectus nibh, eu facilisis sapien suscipit sed',
+        image: 'https://spacerevenge--game.b-cdn.net/chat.webp',
+        link: 'https://social.soy/',
         button: 'Social.soy'
       }
     ]

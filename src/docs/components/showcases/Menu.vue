@@ -2,9 +2,9 @@
 import { VMenu, VMenuItem, VMenuList } from '@pathscale/vue3-ui'
 
 const Component = {
-  components: { VMenu, VMenuItem, VMenuList },
+  components: { VMenu, VMenuItem, VMenuList }
 }
-export default Component;
+export default Component
 </script>
 <template>
   <section>

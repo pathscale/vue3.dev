@@ -7,7 +7,7 @@ const Component = {
   setup() {
     const item = ref(null)
     return { item }
-  },
+  }
 }
 
 export default Component

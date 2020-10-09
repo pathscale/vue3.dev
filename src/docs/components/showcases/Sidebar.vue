@@ -1,6 +1,6 @@
 <script>
-import { VSidebar, VButton, VSwitch, VField } from "@pathscale/vue3-ui"
-import { reactive } from 'vue';
+import { VSidebar, VButton, VSwitch, VField } from '@pathscale/vue3-ui'
+import { reactive } from 'vue'
 
 const Component = {
   components: { VSidebar, VButton, VSwitch, VField },
@@ -8,7 +8,7 @@ const Component = {
     const state = reactive({
       state: true,
       overlay: false,
-      reduced: false,
+      reduced: false
     })
 
     function close() {
@@ -19,7 +19,7 @@ const Component = {
   }
 }
 
-export default Component;
+export default Component
 </script>
 
 <template>
@@ -34,7 +34,7 @@ export default Component;
       Reduced
     </v-switch>
   </v-field>
-  
+
   <v-sidebar :open="state.open" type="is-light" fullheight :reduce="state.reduced" :overlay="state.overlay" @close="close()" position="fixed">
     <section class="section px-1">
       <v-button tag="a" @click="close()" type="is-text" class="is-pulled-right">

@@ -14,7 +14,7 @@ const Component = {
     const intl = useI18n()
     const router = useRouter()
     return { intl, api, router, Showcase, ShowcaseCode }
-  },
+  }
 }
 
 export default Component

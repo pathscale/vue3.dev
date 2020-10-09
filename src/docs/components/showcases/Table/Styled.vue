@@ -16,31 +16,31 @@ const Component = {
       id: 1,
       firstName: 'John',
       lastName: 'Doe',
-      color: 'Blue',
+      color: 'Blue'
     })
     datagrid.value.addRow({
       id: 2,
       firstName: 'Sheri',
       lastName: 'Adamin ',
-      color: 'Green',
+      color: 'Green'
     })
     datagrid.value.addRow({
       id: 3,
       firstName: 'Kristopher',
       lastName: 'Amos',
-      color: 'Blue',
+      color: 'Blue'
     })
     datagrid.value.addRow({
       id: 4,
       firstName: 'Nelly',
       lastName: 'Derby',
-      color: 'Green',
+      color: 'Green'
     })
     datagrid.value.addRow({
       id: 5,
       firstName: 'Philander',
       lastName: 'Barney',
-      color: 'Blue',
+      color: 'Blue'
     })
 
     const customStyleGrid = ref(new DataGrid())
@@ -49,7 +49,7 @@ const Component = {
       'firstName',
       'First Name',
       'string',
-      'has-text-centered is-white',
+      'has-text-centered is-white'
     )
     customStyleGrid.value.addColumn('lastName', 'Last Name', 'string', 'has-text-centered')
     customStyleGrid.value.addColumn('color', 'Color', 'custom', 'has-text-right')
@@ -57,38 +57,38 @@ const Component = {
       id: 1,
       firstName: 'John',
       lastName: 'Doe',
-      color: 'Blue',
+      color: 'Blue'
     })
     customStyleGrid.value.addRow({
       id: 2,
       firstName: 'Sheri',
       lastName: 'Adamin ',
-      color: 'Green',
+      color: 'Green'
     })
     customStyleGrid.value.addRow({
       id: 3,
       firstName: 'Kristopher',
       lastName: 'Amos',
-      color: 'Blue',
+      color: 'Blue'
     })
     customStyleGrid.value.addRow({
       id: 4,
       firstName: 'Nelly',
       lastName: 'Derby',
-      color: 'Green',
+      color: 'Green'
     })
     customStyleGrid.value.addRow({
       id: 5,
       firstName: 'Philander',
       lastName: 'Barney',
-      color: 'Blue',
+      color: 'Blue'
     })
 
     return {
       datagrid,
-      customStyleGrid,
+      customStyleGrid
     }
-  },
+  }
 }
 export default Component
 </script>

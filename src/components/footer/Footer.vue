@@ -1,16 +1,16 @@
 <script>
-import { VNavbar, VNavbarItem, VNavbarDropdown, VInput, VColumns, VColumn } from "@pathscale/vue3-ui"
-import { useI18n } from "vue-composable";
+import { VNavbar, VNavbarItem, VNavbarDropdown, VInput, VColumns, VColumn } from '@pathscale/vue3-ui'
+import { useI18n } from 'vue-composable'
 
 const Component = {
   components: { VNavbar, VNavbarItem, VNavbarDropdown, VInput, VColumns, VColumn },
   setup() {
-    const intl = useI18n();
+    const intl = useI18n()
     return { intl }
   }
 }
 
-export default Component;
+export default Component
 </script>
 
 <template>

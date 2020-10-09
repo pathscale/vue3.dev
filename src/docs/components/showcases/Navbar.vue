@@ -2,9 +2,9 @@
 import { VNavbar, VNavbarItem, VNavbarDropdown, VButton } from '@pathscale/vue3-ui'
 
 const Component = {
-  components: { VNavbar, VNavbarItem, VNavbarDropdown, VButton },
+  components: { VNavbar, VNavbarItem, VNavbarDropdown, VButton }
 }
-export default Component;
+export default Component
 </script>
 <template>
   <section>
@@ -14,7 +14,7 @@ export default Component;
           <img width="100" height="100" class="has-background-grey-light" />
         </v-navbar-item>
       </template>
-      
+
       <template #start>
         <v-navbar-item href="#" active>
           Home

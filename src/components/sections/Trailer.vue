@@ -1,14 +1,14 @@
 <script>
 import { VButton, VColumns, VColumn } from '@pathscale/vue3-ui'
-import { useI18n } from "vue-composable";
+import { useI18n } from 'vue-composable'
 
-import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 const Component = {
-  components: { VButton, VColumns, VColumn, Carousel, Slide, Pagination, Navigation  },
+  components: { VButton, VColumns, VColumn, Carousel, Slide, Pagination, Navigation },
   setup() {
-    const intl = useI18n();
+    const intl = useI18n()
     return { intl }
   }
 }

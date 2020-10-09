@@ -2,9 +2,9 @@
 import { VBreadcrumb, VBreadcrumbItem, VField } from '@pathscale/vue3-ui'
 
 const Component = {
-  components: { VBreadcrumb, VBreadcrumbItem, VField },
+  components: { VBreadcrumb, VBreadcrumbItem, VField }
 }
-export default Component;
+export default Component
 </script>
 <template>
   <section>

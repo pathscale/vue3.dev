@@ -5,8 +5,8 @@ import { useRouter } from 'vue-router'
 import api from '../../docs/components/api/datagrid.ts'
 import { SnippetSection, ApiSection } from '../../components'
 
-import Showcase from "../../docs/components/showcases/Datagrid.vue"
-import ShowcaseCode from "../../docs/components/raw/Datagrid.txt"
+import Showcase from '../../docs/components/showcases/Datagrid.vue'
+import ShowcaseCode from '../../docs/components/raw/Datagrid.txt'
 
 const Component = {
   components: { SnippetSection, ApiSection },
@@ -16,11 +16,11 @@ const Component = {
     return {
       intl,
       api,
-			router,
-			Showcase,
-			ShowcaseCode
+      router,
+      Showcase,
+      ShowcaseCode
     }
-  },
+  }
 }
 
 export default Component

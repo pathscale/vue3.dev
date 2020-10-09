@@ -92,6 +92,14 @@ module.exports = {
       plugins: ['@pathscale/vue3'],
       rules: {
         'prettier/prettier': 'off',
+
+        // Reapply to better match prettier since disabled
+        'arrow-parens': ['error', 'as-needed'],
+        // 'comma-dangle': ['error', 'always'], // Interferes with arrow-parens
+        'comma-dangle': ['error', 'never'],
+        'space-before-function-paren': ['error', 'never'],
+
+        /*
         '@pathscale/vue3/v-directive': [
           'error',
           {
@@ -113,10 +121,31 @@ module.exports = {
             ],
           },
         ],
+        */
       },
     },
   ],
   rules: {
+    // Reapply from ash-nazg
+    semi: ['error', 'never'],
+    quotes: ['error', 'single'],
+    indent: ['error', 2],
+    curly: ['error'],
+    'block-spacing': ['error'],
+    'comma-spacing': ['error'],
+    'eol-last': ['error'],
+    'key-spacing': ['error'],
+    'keyword-spacing': ['error'],
+    'no-extra-semi': ['error'],
+    'no-trailing-spaces': ['error'],
+    'no-tabs': ['error'],
+    'no-multi-spaces': ['error'],
+    'nonblock-statement-body-position': ['error'],
+    'object-curly-spacing': ['error', 'always'],
+    'space-before-blocks': ['error'],
+    'space-infix-ops': ['error'],
+    'wrap-regex': ['error'],
+
     'no-restricted-syntax': [
       'error',
       {
@@ -128,6 +157,7 @@ module.exports = {
     ],
 
     // Disabling for now
+    'max-len': 'off', // ['warn', { code: 80 }],
     'import/extensions': 'off',
     'jsdoc/require-jsdoc': 'off',
     'require-unicode-regexp': 'off',

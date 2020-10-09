@@ -4,7 +4,7 @@ import { VField, VFile } from '@pathscale/vue3-ui'
 const Component = {
   components: { VField, VFile }
 }
-export default Component;
+export default Component
 </script>
 <template>
   <section>
@@ -26,7 +26,7 @@ export default Component;
         </template>
       </v-file>
     </v-field>
-      
+
     <v-field label="Fullwidth">
       <v-file has-name fullwidth color="is-danger">
         <template #label>
@@ -99,7 +99,7 @@ export default Component;
           File
         </template>
         <template #fileName>
-          This is a file name 
+          This is a file name
         </template>
       </v-file>
     </v-field>
@@ -110,7 +110,7 @@ export default Component;
           File
         </template>
         <template #fileName>
-          This is a file name 
+          This is a file name
         </template>
       </v-file>
     </v-field>

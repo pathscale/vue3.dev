@@ -1,11 +1,11 @@
 <script>
 import { VAccordion, VButton, VField, VTag } from '@pathscale/vue3-ui'
 
-const component =  {
-  components: { VAccordion, VButton, VField, VTag },
+const component = {
+  components: { VAccordion, VButton, VField, VTag }
 }
 
-export default component;
+export default component
 </script>
 <template>
   <section>
@@ -21,7 +21,7 @@ export default component;
         </template>
       </v-accordion>
     </v-field>
-    
+
     <v-field>
       <v-accordion is-horizontal>
         <template #header>
@@ -42,7 +42,7 @@ export default component;
           </v-button>
         </template>
         <template #content>
-          Hello 
+          Hello
         </template>
       </v-accordion>
     </v-field>
@@ -54,7 +54,7 @@ export default component;
           </v-button>
         </template>
         <template #content>
-          Hello 
+          Hello
         </template>
       </v-accordion>
     </v-field>
@@ -66,7 +66,7 @@ export default component;
           </v-button>
         </template>
         <template #content>
-          Hello 
+          Hello
         </template>
       </v-accordion>
     </v-field>

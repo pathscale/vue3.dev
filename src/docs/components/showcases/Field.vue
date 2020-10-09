@@ -5,7 +5,7 @@ const Component = {
   components: { VField, VInput, VButton, VSelect }
 }
 
-export default Component;
+export default Component
 </script>
 
 <template>

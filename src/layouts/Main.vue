@@ -1,7 +1,7 @@
 <script>
 import {
   Navbar,
-  Cookie,
+  Cookie
 } from '../components'
 
 const Component = {
@@ -11,12 +11,12 @@ const Component = {
   },
   setup() {
     function setDocHeight() {
-      document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
-    };
-    window.addEventListener('resize', setDocHeight);
-    window.addEventListener('orientationchange', setDocHeight);
-    setDocHeight();
-  },
+      document.documentElement.style.setProperty('--vh', `${window.innerHeight / 100}px`)
+    }
+    window.addEventListener('resize', setDocHeight)
+    window.addEventListener('orientationchange', setDocHeight)
+    setDocHeight()
+  }
 }
 
 export default Component

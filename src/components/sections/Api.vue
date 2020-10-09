@@ -1,25 +1,25 @@
 <script>
-import { VTag, VTab, VTabs, VTooltip } from "@pathscale/vue3-ui"
-import { useI18n } from "vue-composable";
+import { VTag, VTab, VTabs, VTooltip } from '@pathscale/vue3-ui'
+import { useI18n } from 'vue-composable'
 
 import { ref } from 'vue'
 
 const Component = {
   props: ['api'],
-  components: { VTag,  VTab, VTabs, VTooltip },
+  components: { VTag, VTab, VTabs, VTooltip },
   setup(props) {
-    const intl = useI18n();
+    const intl = useI18n()
 
-    const components = [];
+    const components = []
     props.api.forEach(e => {
       components.push(0)
     })
-    const tab = ref(components);
+    const tab = ref(components)
     return { intl, tab }
   }
 }
 
-export default Component;
+export default Component
 </script>
 
 <template>

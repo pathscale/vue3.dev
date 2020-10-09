@@ -1,6 +1,6 @@
 <script>
 import { VButton, VColumns, VColumn, VSelect } from '@pathscale/vue3-ui'
-import { useI18n } from "vue-composable";
+import { useI18n } from 'vue-composable'
 import { ref } from 'vue'
 
 const Component = {
@@ -10,7 +10,7 @@ const Component = {
     const isLandscape = ref(window.matchMedia('(orientation: landscape)').matches)
     window.addEventListener('orientationchange', () => {
       isLandscape.value = !isLandscape.value
-    });
+    })
 
     return { intl, isLandscape }
   }

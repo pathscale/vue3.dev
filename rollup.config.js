@@ -130,10 +130,10 @@ const config = [
     output: [
       {
         format: 'iife',
-        file: `dist/app.js`,
-        entryFileNames: `[name].js`,
-        chunkFileNames: `[name].js`,
-        assetFileNames: `[name][extname]`,
+        file: 'dist/app.js',
+        entryFileNames: '[name].js',
+        chunkFileNames: '[name].js',
+        assetFileNames: '[name][extname]',
       },
     ],
 
@@ -175,7 +175,7 @@ const config = [
 
       styles({
         mode: prod ? 'extract' : 'inject',
-        url: { hash: `[name][extname]`, publicPath: env.parsed.BASE_URL, inline: true },
+        url: { hash: '[name][extname]', publicPath: env.parsed.BASE_URL, inline: true },
         minimize: prod && { preset: ['default', { discardComments: { removeAll: true } }] },
       }),
 

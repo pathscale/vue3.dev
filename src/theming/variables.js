@@ -13,14 +13,14 @@ const variables = {
   '$navbar-item-hover-background-color': 'rgba(255, 255, 255, 0%)',
   '$navbar-item-hover-color': '#6474b0',
   '$navbar-item-img-max-height': '4rem',
-  '$primary': "#111",
+  '$primary': '#111',
   '$section-padding': '0.5rem 1.5rem',
   '$size-7': '0.875em',
   '$subtitle-family': 'MetrocleanExtrabold',
   '$title-family': 'MetrocleanExtrabold',
-  '$turquoise-h': "317",
-  '$turquoise-l': "35%",
-  '$turquoise-s': "62%",
+  '$turquoise-h': '317',
+  '$turquoise-l': '35%',
+  '$turquoise-s': '62%',
 }
 
 export default variables

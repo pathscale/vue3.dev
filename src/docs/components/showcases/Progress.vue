@@ -2,16 +2,16 @@
 import { VProgress, VField } from '@pathscale/vue3-ui'
 
 const Component = {
-  components: { VProgress, VField },
+  components: { VProgress, VField }
 }
-export default Component;
+export default Component
 </script>
 <template>
   <section>
     <v-field label="Indeterminate">
       <v-progress :value="null" />
     </v-field>
-    
+
     <v-field label="Colors">
       <v-progress type="is-danger" :value="40" />
       <v-progress type="is-success" :value="60" />
@@ -19,7 +19,7 @@ export default Component;
       <v-progress type="is-warning" :value="100" />
     </v-field>
 
-    <v-field label="Sizes"> 
+    <v-field label="Sizes">
       <v-progress size="is-small" :value="20" />
       <v-progress :value="30" />
       <v-progress size="is-medium" :value="40" />
@@ -29,7 +29,7 @@ export default Component;
     <v-field label="Show value">
       <v-progress :value="40" show-value />
     </v-field>
-    
+
     <v-field label="Percent">
       <v-progress :value="80" show-value format="percent" />
     </v-field>

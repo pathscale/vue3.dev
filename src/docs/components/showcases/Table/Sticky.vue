@@ -24,9 +24,9 @@ const Component = {
     datagrid.value.columns[3].sticky = true
 
     return {
-      datagrid,
+      datagrid
     }
-  },
+  }
 }
 export default Component
 </script>

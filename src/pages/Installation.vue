@@ -1,7 +1,7 @@
 <script>
-import { useI18n } from "vue-composable";
+import { useI18n } from 'vue-composable'
 
-import { useRouter } from 'vue-router';
+import { useRouter } from 'vue-router'
 // import api from '../../docs/components/api/breadcrumb.ts'
 // import { SnippetSection, ApiSection } from "../../components"
 
@@ -11,13 +11,13 @@ import { useRouter } from 'vue-router';
 const Component = {
 //   components: { SnippetSection, ApiSection },
   setup() {
-    const intl = useI18n();
-     const router = useRouter();
+    const intl = useI18n()
+    const router = useRouter()
     return { intl, router }
   }
 }
 
-export default Component;
+export default Component
 </script>
 
 <template>
@@ -32,7 +32,7 @@ export default Component;
     <h4 class="title is-4 mt-6">
       Install using npm
     </h4>
-    
+
     <div class="box has-background-light is-family-code">
       npm i @pathscale/vue3-ui
     </div>

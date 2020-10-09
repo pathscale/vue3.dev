@@ -16,40 +16,40 @@ const Component = {
       id: 1,
       firstName: 'John',
       lastName: 'Doe',
-      color: 'Blue',
+      color: 'Blue'
     })
     datagrid.value.addRow({
       id: 2,
       firstName: 'Sheri',
       lastName: 'Adamin ',
-      color: 'Green',
+      color: 'Green'
     })
     datagrid.value.addRow({
       id: 3,
       firstName: 'Kristopher',
       lastName: 'Amos',
-      color: 'Blue',
+      color: 'Blue'
     })
     datagrid.value.addRow({
       id: 4,
       firstName: 'Nelly',
       lastName: 'Derby',
-      color: 'Green',
+      color: 'Green'
     })
     datagrid.value.addRow({
       id: 5,
       firstName: 'Philander',
       lastName: 'Barney',
-      color: 'Blue',
+      color: 'Blue'
     })
 
     const columns = computed(() => datagrid.value.getColumnsObject())
 
     return {
       datagrid,
-      columns,
+      columns
     }
-  },
+  }
 }
 export default Component
 </script>

@@ -1,5 +1,5 @@
 <script>
-import { reactive } from "vue"
+import { reactive } from 'vue'
 import { VButton, VModal } from '@pathscale/vue3-ui'
 
 const Component = {
@@ -7,7 +7,7 @@ const Component = {
   setup() {
     const state = reactive({
       showModal: false,
-      showModalCard: false,
+      showModalCard: false
     })
     const setShowModal = () => {
       state.showModal = true
@@ -18,7 +18,7 @@ const Component = {
     return { state, setShowModal, setShowModalCard }
   }
 }
-export default Component;
+export default Component
 </script>
 <template>
   <section>

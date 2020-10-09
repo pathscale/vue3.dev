@@ -4,54 +4,54 @@ import { VAccordion, VButton } from '@pathscale/vue3-ui'
 
 import 'highlight.js/styles/github.css'
 
-import hljs from 'highlight.js/lib/core';
-import javascript from 'highlight.js/lib/languages/javascript';
-import xml from 'highlight.js/lib/languages/xml';
+import hljs from 'highlight.js/lib/core'
+import javascript from 'highlight.js/lib/languages/javascript'
+import xml from 'highlight.js/lib/languages/xml'
 
-hljs.registerLanguage('javascript', javascript);
-hljs.registerLanguage('xml', xml);
+hljs.registerLanguage('javascript', javascript)
+hljs.registerLanguage('xml', xml)
 
 const Demo = {
-	name: 'Demo',
-	props: {
-		code: String,
-		format: {
-			type: String,
-			default: 'javascript'
-        },
-		component: [Object, Function],
-		path: String,
-		title: {
-			type: String,
-			default: 'Showcase'
-		},
-	},
-	components: { VAccordion, VButton },
-	directives: {
-		highlightjs: {
-		beforeMount(el, binding) {
-			const targets = el.querySelectorAll('code')
-			for (const target of targets) {
-				if (binding.value) {
-					target.innerHTML = binding.value
-				}
-				hljs.highlightBlock(target)
-			}
-		},
-		componentUpdated(el, binding) {
-			const targets = el.querySelectorAll('code')
-			for (const target of targets) {
-				if (binding.value) {
-					target.innerHTML = binding.value
-					hljs.highlightBlock(target)
-				}
-			}
-		}
+  name: 'Demo',
+  props: {
+    code: String,
+    format: {
+      type: String,
+      default: 'javascript'
+    },
+    component: [Object, Function],
+    path: String,
+    title: {
+      type: String,
+      default: 'Showcase'
     }
-   },
-};
+  },
+  components: { VAccordion, VButton },
+  directives: {
+    highlightjs: {
+      beforeMount(el, binding) {
+        const targets = el.querySelectorAll('code')
+        for (const target of targets) {
+          if (binding.value) {
+            target.innerHTML = binding.value
+          }
+          hljs.highlightBlock(target)
+        }
+      },
+      componentUpdated(el, binding) {
+        const targets = el.querySelectorAll('code')
+        for (const target of targets) {
+          if (binding.value) {
+            target.innerHTML = binding.value
+            hljs.highlightBlock(target)
+          }
+        }
+      }
+    }
+  }
+}
 
-export default Demo;
+export default Demo
 </script>
 
 <template>

@@ -2,9 +2,9 @@
 import { VButton } from '@pathscale/vue3-ui'
 
 const Component = {
-  components: { VButton },
+  components: { VButton }
 }
-export default Component;
+export default Component
 </script>
 <template>
   <section>
@@ -81,7 +81,7 @@ export default Component;
         </v-button>
       </div>
     </div>
-    
+
     <div class="buttons">
       <v-button size="is-small">
         Small

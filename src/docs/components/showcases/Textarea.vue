@@ -8,9 +8,9 @@ const Component = {
   setup() {
     const text = ref('')
     return { text }
-  },
+  }
 }
-export default Component;
+export default Component
 </script>
 <template>
   <section>

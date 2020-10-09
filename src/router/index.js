@@ -1,9 +1,9 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router'
 
-import Main from "../layouts/Main.vue";
+import Main from '../layouts/Main.vue'
 
 // eslint-disable-next-line no-restricted-syntax -- All pages will be used
-import * as Pages from "../pages";
+import * as Pages from '../pages'
 
 const metaTags = (title, content) => {
   return {
@@ -23,7 +23,7 @@ const metaTags = (title, content) => {
 
 const routes = [
   {
-    path: "/",
+    path: '/',
     redirect: 'home',
     component: Main,
     children: [
@@ -31,13 +31,13 @@ const routes = [
         name: 'home',
         path: 'home',
         component: Pages.Home,
-        meta: metaTags('Meta','Very clean Vue3 components styled with love and care.')
+        meta: metaTags('Meta', 'Very clean Vue3 components styled with love and care.')
       },
       {
         name: 'documentation',
         path: 'documentation',
         component: Pages.Documentation,
-        meta: metaTags('Documentation','Very clean Vue3 components styled with love and care.'),
+        meta: metaTags('Documentation', 'Very clean Vue3 components styled with love and care.'),
         children: [
           {
             name: 'installation',
@@ -49,13 +49,13 @@ const routes = [
             name: 'button',
             path: 'button',
             component: Pages.Button,
-            meta: metaTags('Button','The classic button, in different colors, sizes, and states'),
+            meta: metaTags('Button', 'The classic button, in different colors, sizes, and states'),
           },
           {
             name: 'image',
             path: 'image',
             component: Pages.Image,
-            meta: metaTags('Image','A container for responsive images'),
+            meta: metaTags('Image', 'A container for responsive images'),
           },
           {
             name: 'progress',
@@ -67,7 +67,7 @@ const routes = [
             name: 'tag',
             path: 'tag',
             component: Pages.Tag,
-            meta: metaTags('Tag', "It's very useful as a way to attach information to a block or other component")
+            meta: metaTags('Tag', 'It\'s very useful as a way to attach information to a block or other component')
           },
           {
             name: 'input',
@@ -199,46 +199,46 @@ const routes = [
       },
     ]
   }
-];
+]
 
 export const router = createRouter({
   history: createWebHistory(),
   routes,
-});
+})
 
 router.beforeEach((to, _from, next) => {
   // This goes through the matched routes from last to first, finding the closest route with a title.
   // eg. if we have /some/deep/nested/route and /some, /deep, and /nested have titles, nested's will be chosen.
-  const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);
+  const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title)
 
   // Find the nearest route element with meta tags.
-  const nearestWithMeta = to.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
+  const nearestWithMeta = to.matched.slice().reverse().find(r => r.meta && r.meta.metaTags)
 
   // If a route with a title was found, set the document (page) title to that value.
-  if(nearestWithTitle) document.title = nearestWithTitle.meta.title + '| Vue3-ui';
+  if (nearestWithTitle) document.title = nearestWithTitle.meta.title + '| Vue3-ui';
 
   // Remove any stale meta tags from the document using the key attribute we set below.
-  [...document.querySelectorAll('[data-vue-router-controlled]')].map(el => el.remove());
+  [...document.querySelectorAll('[data-vue-router-controlled]')].map(el => el.remove())
 
   // Skip rendering meta tags if there are none.
-  if(!nearestWithMeta) return next();
+  if (!nearestWithMeta) return next()
 
   // Turn the meta tag definitions into actual elements in the head.
   nearestWithMeta.meta.metaTags.map(tagDef => {
-    const tag = document.createElement('meta');
+    const tag = document.createElement('meta')
 
     Object.keys(tagDef).forEach(key => {
-      tag.setAttribute(key, tagDef[key]);
-    });
+      tag.setAttribute(key, tagDef[key])
+    })
 
     // We use this to track which meta tags we create, so we don't interfere with other ones.
-    tag.dataset.vueRouterControlled = '';
+    tag.dataset.vueRouterControlled = ''
 
-    return tag;
+    return tag
   })
   // Add the meta tags to the document head.
-  .forEach(tag => document.head.append(tag));
-  next();
+    .forEach(tag => document.head.append(tag))
+  next()
 
-  return undefined;
-});
+  return undefined
+})

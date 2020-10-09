@@ -1,6 +1,6 @@
 <script>
-import { VButton, VColumns, VColumn} from "@pathscale/vue3-ui"
-import { useI18n } from "vue-composable";
+import { VButton, VColumns, VColumn } from '@pathscale/vue3-ui'
+import { useI18n } from 'vue-composable'
 import { reactive, onMounted } from 'vue'
 
 const Component = {
@@ -8,12 +8,12 @@ const Component = {
     VButton, VColumns, VColumn
   },
   setup() {
-    const intl = useI18n();
+    const intl = useI18n()
     const state = reactive({
       showBanner: false
     })
     onMounted(() => {
-      const isAccepted = localStorage.getItem("pathscaleCookiesBanner") === "true"
+      const isAccepted = localStorage.getItem('pathscaleCookiesBanner') === 'true'
       isAccepted ? state.showBanner = false : state.showBanner = true
     })
     function handlePrivacyPolicy() {
@@ -21,7 +21,7 @@ const Component = {
       console.log('handlePrivacyPolicy')
     }
     function handleAgree() {
-      localStorage.setItem("pathscaleCookiesBanner", "true")
+      localStorage.setItem('pathscaleCookiesBanner', 'true')
       state.showBanner = false
     }
     return { handlePrivacyPolicy, handleAgree, intl, state }

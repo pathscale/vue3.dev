@@ -1,15 +1,15 @@
 <script>
 import { VField, VSwitch } from '@pathscale/vue3-ui'
-import { ref } from "vue"
+import { ref } from 'vue'
 
 const Component = {
   components: { VField, VSwitch },
   setup() {
-    const value = ref('NO');
+    const value = ref('NO')
     return { value }
   }
 }
-export default Component;
+export default Component
 </script>
 <template>
   <section>
@@ -30,7 +30,7 @@ export default Component;
         Info
       </v-switch>
     </v-field>
-    
+
     <v-field label="Outlined">
       <v-switch type="is-success" outlined>
         Success
@@ -46,7 +46,7 @@ export default Component;
         Square
       </v-switch>
     </v-field>
-    
+
     <v-field label="Sizes">
       <v-switch size="is-small" type="is-success" passive-type="is-success">
         Small

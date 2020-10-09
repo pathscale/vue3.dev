@@ -12,16 +12,16 @@ const App = {
   name: 'App',
   setup() {
     setI18n({
-      locale: (navigator.language || navigator.userLanguage).slice(0,2),
+      locale: (navigator.language || navigator.userLanguage).slice(0, 2),
       fallback: 'en',
       messages: {
         en,
-        es,// : ()=> import('./locales/es.json').default,
+        es, // : ()=> import('./locales/es.json').default,
         pt// : ()=> import('./locales/pt.json').default
-      },
+      }
     })
     watchEffect(() => setTheme(defaultTheme))
-  },
+  }
 }
 
 export default App

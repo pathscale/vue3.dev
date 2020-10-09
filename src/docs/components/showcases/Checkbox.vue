@@ -1,11 +1,11 @@
 <script>
 import { VField, VCheckbox } from '@pathscale/vue3-ui'
-import { ref } from "vue"
+import { ref } from 'vue'
 
 const Component = {
   components: { VField, VCheckbox },
   setup() {
-    const value = ref(false);
+    const value = ref(false)
     function getValue() {
       // Need the `toString` to show `false` when indeterminate
       return value.value.toString()
@@ -14,7 +14,7 @@ const Component = {
   }
 }
 
-export default Component;
+export default Component
 </script>
 
 <template>

@@ -2,9 +2,9 @@
 import { VTooltip, VButton } from '@pathscale/vue3-ui'
 
 const Component = {
-  components: { VTooltip, VButton },
+  components: { VTooltip, VButton }
 }
-export default Component;
+export default Component
 </script>
 <template>
   <section>
@@ -14,7 +14,7 @@ export default Component;
       </v-button>
     </v-tooltip>
 
-    <v-tooltip type="is-danger" label="Bottom/Delay 500(ms)" position="is-bottom" 
+    <v-tooltip type="is-danger" label="Bottom/Delay 500(ms)" position="is-bottom"
                :delay="500">
       <v-button type="is-danger">
         Bottom/Delay 500(ms)
@@ -27,14 +27,14 @@ export default Component;
       </v-button>
     </v-tooltip>
 
-    <v-tooltip type="is-warning" label="Left/Square" position="is-left" square> 
+    <v-tooltip type="is-warning" label="Left/Square" position="is-left" square>
       <v-button type="is-warning">
         Left/Square
       </v-button>
     </v-tooltip>
-    
-    <v-tooltip type="is-dark" label="Multilined/Large/Dashed Multilined/Large/Dashed" 
-               position="is-right" multilined size="is-large" dashed> 
+
+    <v-tooltip type="is-dark" label="Multilined/Large/Dashed Multilined/Large/Dashed"
+               position="is-right" multilined size="is-large" dashed>
       <v-button type="is-text">
         Multilined/Large/Dashed
       </v-button>
