@@ -6,11 +6,17 @@ const Component = {
   components: { VField, VCheckbox },
   setup() {
     const value = ref(false);
-    return { value }
+    function getValue() {
+      // Need the `toString` to show `false` when indeterminate
+      return value.value.toString()
+    }
+    return { value, getValue }
   }
 }
+
 export default Component;
 </script>
+
 <template>
   <section>
     <v-field>
@@ -26,9 +32,8 @@ export default Component;
         Disabled checkbox
       </v-checkbox>
     </v-field>
-    
 
-    <v-field :message="`${value}`" label="Custom values">
+    <v-field :message="getValue()" label="Custom values">
       <v-checkbox v-model="value" true-value="YES" false-value="NO">
         Accept?
       </v-checkbox>
