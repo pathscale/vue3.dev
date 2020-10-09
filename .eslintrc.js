@@ -23,13 +23,13 @@ const vueRules = {
   // 'vue/no-static-inline-styles': ['error'], // Revisit later
   // 'vue/no-unregistered-components': ['error'],
   // 'vue/html-comment-indent': ['error'],
+  // 'vue/no-duplicate-attr-inheritance': ['error'],
 
   'vue/component-name-in-template-casing': ['error'],
   'vue/html-comment-content-newline': ['error'],
   'vue/html-comment-content-spacing': ['error'],
   'vue/match-component-file-name': ['error', { shouldMatchCase: true }],
   'vue/no-boolean-default': ['error'],
-  'vue/no-duplicate-attr-inheritance': ['error'],
   'vue/no-empty-component-block': ['error'],
   'vue/no-multiple-objects-in-class': ['error'],
   'vue/no-potential-component-option-typo': ['error', { presets: ['vue', 'vue-router'] }],
