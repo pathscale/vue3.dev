@@ -45,12 +45,12 @@ export default component
     <v-columns>
       <v-column size="is-1">
         <p class="has-background-primary has-text-white px-4 py-4">
-          is 1
+          is-1
         </p>
       </v-column>
       <v-column size="is-11">
         <p class="has-background-link has-text-white px-4 py-4">
-          is 9
+          is-11
         </p>
       </v-column>
     </v-columns>
@@ -58,12 +58,12 @@ export default component
     <v-columns>
       <v-column size="is-2">
         <p class="has-background-info has-text-white px-4 py-4">
-          is 2
+          is-2
         </p>
       </v-column>
       <v-column size="is-10">
         <p class="has-background-success has-text-white px-4 py-4">
-          is 10
+          is-10
         </p>
       </v-column>
     </v-columns>
@@ -71,12 +71,12 @@ export default component
     <v-columns>
       <v-column size="is-3">
         <p class="has-background-primary has-text-white px-4 py-4">
-          is 3
+          is-3
         </p>
       </v-column>
       <v-column size="is-9">
         <p class="has-background-danger has-text-white px-4 py-4">
-          is 9
+          is-9
         </p>
       </v-column>
     </v-columns>
@@ -84,12 +84,12 @@ export default component
     <v-columns>
       <v-column size="is-4">
         <p class="has-background-success has-text-white px-4 py-4">
-          is 4
+          is-4
         </p>
       </v-column>
       <v-column size="is-8">
         <p class="has-background-link has-text-white px-4 py-4">
-          is 8
+          is-8
         </p>
       </v-column>
     </v-columns>
@@ -97,12 +97,12 @@ export default component
     <v-columns>
       <v-column size="is-5">
         <p class="has-background-info has-text-white px-4 py-4">
-          is 5
+          is-5
         </p>
       </v-column>
       <v-column size="is-7">
         <p class="has-background-primary has-text-white px-4 py-4">
-          is 7
+          is-7
         </p>
       </v-column>
     </v-columns>
@@ -110,12 +110,12 @@ export default component
     <v-columns>
       <v-column size="is-6">
         <p class="has-background-success has-text-white px-4 py-4">
-          is 6
+          is-6
         </p>
       </v-column>
       <v-column size="is-6">
         <p class="has-background-danger has-text-white px-4 py-4">
-          is 6
+          is-6
         </p>
       </v-column>
     </v-columns>
@@ -126,7 +126,7 @@ export default component
     <v-columns>
       <v-column size="is-5" offset="is-offset-7">
         <p class="has-background-primary has-text-white px-4 py-4">
-          is 5, at the end
+          is-5, at the end
         </p>
       </v-column>
     </v-columns>
@@ -134,7 +134,7 @@ export default component
     <v-columns>
       <v-column size="is-4" offset="is-offset-2">
         <p class="has-background-link has-text-white px-4 py-4">
-          is 4, pushed 2
+          is-4, pushed 2
         </p>
       </v-column>
     </v-columns>
@@ -261,7 +261,7 @@ export default component
     <v-columns hcentered>
       <v-column size="is-4">
         <p class="has-background-success has-text-white px-4 py-4">
-          is 4
+          is-4
         </p>
       </v-column>
     </v-columns>
@@ -272,37 +272,37 @@ export default component
     <v-columns multiline>
       <v-column size="is-4">
         <p class="has-background-info has-text-white px-4 py-4">
-          is 4
+          is-4
         </p>
       </v-column>
       <v-column size="is-3">
         <p class="has-background-primary has-text-white px-4 py-4">
-          is 3
+          is-3
         </p>
       </v-column>
       <v-column size="is-5">
         <p class="has-background-link has-text-white px-4 py-4">
-          is 5
+          is-5
         </p>
       </v-column>
       <v-column size="is-6">
         <p class="has-background-success has-text-white px-4 py-4">
-          is 6
+          is-6
         </p>
       </v-column>
       <v-column size="is-8">
         <p class="has-background-warning has-text-white px-4 py-4">
-          is 8
+          is-8
         </p>
       </v-column>
       <v-column size="is-4">
         <p class="has-background-info has-text-white px-4 py-4">
-          is 4
+          is-4
         </p>
       </v-column>
       <v-column size="is-2">
         <p class="has-background-link has-text-white px-4 py-4">
-          is 2
+          is-2
         </p>
       </v-column>
     </v-columns>
