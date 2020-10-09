@@ -99,7 +99,6 @@ module.exports = {
         'comma-dangle': ['error', 'never'],
         'space-before-function-paren': ['error', 'never'],
 
-        /*
         '@pathscale/vue3/v-directive': [
           'error',
           {
@@ -121,7 +120,6 @@ module.exports = {
             ],
           },
         ],
-        */
       },
     },
   ],
