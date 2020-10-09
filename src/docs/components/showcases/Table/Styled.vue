@@ -93,6 +93,7 @@ const Component = {
 
 export default Component
 </script>
+
 <template>
   <section>
     <h4 class="is-size-5 mb-4">

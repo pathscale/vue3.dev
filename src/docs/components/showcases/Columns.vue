@@ -7,6 +7,7 @@ const component = {
 
 export default component
 </script>
+
 <template>
   <section id="demo">
     <h1 class="is-title is-size-4 mb-4 mt-6">

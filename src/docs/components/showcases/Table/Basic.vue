@@ -51,6 +51,7 @@ const Component = {
 
 export default Component
 </script>
+
 <template>
   <v-table :data="datagrid" />
 </template>

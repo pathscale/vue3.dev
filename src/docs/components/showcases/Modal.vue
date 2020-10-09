@@ -21,6 +21,7 @@ const Component = {
 
 export default Component
 </script>
+
 <template>
   <section>
     <div class="buttons">

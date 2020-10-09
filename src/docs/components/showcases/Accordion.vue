@@ -7,6 +7,7 @@ const component = {
 
 export default component
 </script>
+
 <template>
   <section>
     <v-field>

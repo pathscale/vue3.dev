@@ -26,6 +26,7 @@ const App = {
 
 export default App
 </script>
+
 <template>
   <router-view />
 </template>

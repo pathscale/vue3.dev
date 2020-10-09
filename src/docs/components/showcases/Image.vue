@@ -7,6 +7,7 @@ const Component = {
 
 export default Component
 </script>
+
 <template>
   <section>
     <v-image src="https://vue3--dev.b-cdn.net/128x128.png"

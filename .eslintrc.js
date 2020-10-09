@@ -147,6 +147,7 @@ module.exports = {
       'error',
       { blankLine: 'always', prev: '*', next: 'export' },
     ],
+    'vue/padding-line-between-blocks': ['error'],
     'no-restricted-syntax': [
       'error',
       {

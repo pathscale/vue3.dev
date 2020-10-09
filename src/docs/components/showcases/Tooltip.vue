@@ -7,6 +7,7 @@ const Component = {
 
 export default Component
 </script>
+
 <template>
   <section>
     <v-tooltip type="is-info" label="Right/Animated" position="is-right" animated>

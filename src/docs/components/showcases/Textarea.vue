@@ -13,6 +13,7 @@ const Component = {
 
 export default Component
 </script>
+
 <template>
   <section>
     <v-field label="Color">

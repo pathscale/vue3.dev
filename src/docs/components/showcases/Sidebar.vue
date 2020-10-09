@@ -43,6 +43,7 @@ export default Component
     </section>
   </v-sidebar>
 </template>
+
 <style>
 .button.is-text {
     text-decoration: none;
