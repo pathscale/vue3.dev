@@ -2,15 +2,14 @@
 import { VField, VSwitch } from '@pathscale/vue3-ui'
 import { ref } from 'vue'
 
-const Component = {
+export default {
+  name: 'DevShowcaseSwitch',
   components: { VField, VSwitch },
   setup() {
     const value = ref('NO')
     return { value }
   }
 }
-
-export default Component
 </script>
 
 <template>

@@ -1,10 +1,11 @@
 <script>
-import { VButton, VColumns, VColumn, VSelect } from '@pathscale/vue3-ui'
+import { VButton, VColumns, VColumn /* , VSelect */ } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 import { ref } from 'vue'
 
-const Component = {
-  components: { VButton, VColumns, VColumn, VSelect },
+export default {
+  name: 'DevBlog',
+  components: { VButton, VColumns, VColumn /* , VSelect */ },
   setup() {
     const intl = useI18n()
     const isLandscape = ref(window.matchMedia('(orientation: landscape)').matches)
@@ -15,8 +16,6 @@ const Component = {
     return { intl, isLandscape }
   }
 }
-
-export default Component
 </script>
 
 <template>

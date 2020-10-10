@@ -8,7 +8,8 @@ import { SnippetSection, ApiSection } from '../../components'
 import Showcase from '../../docs/components/showcases/Columns.vue'
 import ShowcaseCode from '../../docs/components/raw/Columns.txt'
 
-const Component = {
+export default {
+  name: 'DevPageColumns',
   components: { ApiSection, SnippetSection },
   setup() {
     const intl = useI18n()
@@ -16,8 +17,6 @@ const Component = {
     return { intl, api, router, Showcase, ShowcaseCode }
   }
 }
-
-export default Component
 </script>
 
 <template>

@@ -1,16 +1,15 @@
 <script>
 import { ref } from 'vue'
-import { VTabs, VTab, VButton } from '@pathscale/vue3-ui'
+import { VTabs, VTab /* , VButton */ } from '@pathscale/vue3-ui'
 
-const Component = {
-  components: { VTabs, VTab, VButton },
+export default {
+  name: 'DevShowcaseTabs',
+  components: { VTabs, VTab /* , VButton */ },
   setup() {
     const activeTab = ref(0)
     return { activeTab }
   }
 }
-
-export default Component
 </script>
 
 <template>

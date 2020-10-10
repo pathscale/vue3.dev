@@ -8,7 +8,8 @@ import { SnippetSection, ApiSection } from '../../components'
 import Showcase from '../../docs/components/showcases/Image.vue'
 import ShowcaseCode from '../../docs/components/raw/Image.txt'
 
-const Component = {
+export default {
+  name: 'DevPageImage',
   components: { SnippetSection, ApiSection },
   setup() {
     const intl = useI18n()
@@ -16,8 +17,6 @@ const Component = {
     return { intl, api, router, Showcase, ShowcaseCode }
   }
 }
-
-export default Component
 </script>
 
 <template>

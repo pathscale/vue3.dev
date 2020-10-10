@@ -3,15 +3,14 @@ import { VButton, VColumns, VColumn } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 import logo from '../../assets/svg/vue3-logo.svg'
 
-const Component = {
+export default {
+  name: 'DevHome',
   components: { VButton, VColumns, VColumn },
   setup() {
     const intl = useI18n()
     return { intl, logo }
   }
 }
-
-export default Component
 </script>
 
 <template>

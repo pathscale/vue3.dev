@@ -18,7 +18,8 @@ import DragCode from '../../docs/components/raw/Table/Drag.txt'
 import StickyCode from '../../docs/components/raw/Table/Sticky.txt'
 import OthersCode from '../../docs/components/raw/Table/Others.txt'
 
-const Component = {
+export default {
+  name: 'DevPageTable',
   components: { SnippetSection, ApiSection },
   setup() {
     const intl = useI18n()
@@ -41,8 +42,6 @@ const Component = {
     }
   }
 }
-
-export default Component
 </script>
 
 <template>

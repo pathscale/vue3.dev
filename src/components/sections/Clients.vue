@@ -6,7 +6,8 @@ import { ref } from 'vue'
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
-const Component = {
+export default {
+  name: 'DevClients',
   components: { VButton, VColumns, VColumn, Carousel, Slide, Pagination, Navigation },
   setup() {
     const intl = useI18n()
@@ -34,8 +35,6 @@ const Component = {
     return { intl, isLandscape, projects }
   }
 }
-
-export default Component
 </script>
 
 <template>

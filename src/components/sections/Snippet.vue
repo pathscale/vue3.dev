@@ -11,21 +11,8 @@ import xml from 'highlight.js/lib/languages/xml'
 hljs.registerLanguage('javascript', javascript)
 hljs.registerLanguage('xml', xml)
 
-const Demo = {
+export default {
   name: 'Demo',
-  props: {
-    code: String,
-    format: {
-      type: String,
-      default: 'javascript'
-    },
-    component: [Object, Function],
-    path: String,
-    title: {
-      type: String,
-      default: 'Showcase'
-    }
-  },
   components: { VAccordion, VButton },
   directives: {
     highlightjs: {
@@ -49,6 +36,19 @@ const Demo = {
       }
     }
   },
+  props: {
+    code: String,
+    format: {
+      type: String,
+      default: 'javascript'
+    },
+    component: [Object, Function],
+    path: String,
+    title: {
+      type: String,
+      default: 'Showcase'
+    }
+  },
   setup(props) {
     function getDemoLink() {
       return `${props.path}#demo`
@@ -56,8 +56,6 @@ const Demo = {
     return { getDemoLink }
   }
 }
-
-export default Demo
 </script>
 
 <template>

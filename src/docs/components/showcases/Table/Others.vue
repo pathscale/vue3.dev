@@ -2,7 +2,8 @@
 import { ref } from 'vue'
 import { DataGrid, VTable, VButton } from '@pathscale/vue3-ui'
 
-const Component = {
+export default {
+  name: 'DevShowcaseTableOthers',
   components: { VTable, VButton },
   setup() {
     const datagrid = ref(new DataGrid())
@@ -65,8 +66,6 @@ const Component = {
     }
   }
 }
-
-export default Component
 </script>
 
 <template>

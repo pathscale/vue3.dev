@@ -4,9 +4,12 @@ import { useI18n } from 'vue-composable'
 
 import { ref } from 'vue'
 
-const Component = {
-  props: ['api'],
+export default {
+  name: 'DevAPI',
   components: { VTag, VTab, VTabs, VTooltip },
+  props: {
+    'api': Object
+  },
   setup(props) {
     const intl = useI18n()
 
@@ -18,8 +21,6 @@ const Component = {
     return { intl, tab }
   }
 }
-
-export default Component
 </script>
 
 <template>

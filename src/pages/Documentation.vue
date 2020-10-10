@@ -1,15 +1,17 @@
 <script>
 import { ref, watchEffect, computed } from 'vue'
 import {
+  /*
   VButton,
-  VColumns,
-  VColumn,
   VSelect,
   VField,
   VInput,
+  VSidebar,
+  */
+  VColumns,
+  VColumn,
   VBreadcrumb,
   VBreadcrumbItem,
-  VSidebar,
   VMenu,
   VMenuItem,
   VMenuList
@@ -17,17 +19,20 @@ import {
 import { useI18n } from 'vue-composable'
 import { useRouter } from 'vue-router'
 
-const Component = {
+export default {
+  name: 'DevPageDocumentation',
   components: {
+    /*
     VButton,
-    VColumns,
-    VColumn,
     VSelect,
     VField,
     VInput,
+    VSidebar,
+    */
+    VColumns,
+    VColumn,
     VBreadcrumb,
     VBreadcrumbItem,
-    VSidebar,
     VMenu,
     VMenuItem,
     VMenuList
@@ -53,8 +58,6 @@ const Component = {
     return { intl, paths, redirect, current }
   }
 }
-
-export default Component
 </script>
 
 <template>

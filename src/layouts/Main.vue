@@ -4,7 +4,8 @@ import {
   Cookie
 } from '../components'
 
-const Component = {
+export default {
+  name: 'DevMain',
   components: {
     Cookie,
     Navbar
@@ -18,8 +19,6 @@ const Component = {
     setDocHeight()
   }
 }
-
-export default Component
 </script>
 
 <template>

@@ -1,11 +1,10 @@
 <script>
 import { VColumns, VColumn } from '@pathscale/vue3-ui'
 
-const component = {
+export default {
+  name: 'DevShowcaseColumns',
   components: { VColumns, VColumn }
 }
-
-export default component
 </script>
 
 <template>

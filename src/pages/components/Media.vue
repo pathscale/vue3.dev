@@ -8,7 +8,8 @@ import { SnippetSection, ApiSection } from '../../components'
 import Showcase from '../../docs/components/showcases/Media.vue'
 import ShowcaseCode from '../../docs/components/raw/Media.txt'
 
-const Component = {
+export default {
+  name: 'DevPageMedia',
   components: { SnippetSection, ApiSection },
   setup() {
     const intl = useI18n()
@@ -19,8 +20,6 @@ const Component = {
     }
   }
 }
-
-export default Component
 </script>
 
 <template>

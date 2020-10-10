@@ -1,11 +1,10 @@
 <script>
 import { VTooltip, VButton } from '@pathscale/vue3-ui'
 
-const Component = {
+export default {
+  name: 'DevShowcaseTooltip',
   components: { VTooltip, VButton }
 }
-
-export default Component
 </script>
 
 <template>

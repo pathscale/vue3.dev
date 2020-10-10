@@ -1,11 +1,10 @@
 <script>
 import { VTag, VField } from '@pathscale/vue3-ui'
 
-const Component = {
+export default {
+  name: 'DevShowcaseTag',
   components: { VTag, VField }
 }
-
-export default Component
 </script>
 
 <template>

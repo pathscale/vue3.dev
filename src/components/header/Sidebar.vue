@@ -4,7 +4,8 @@ import { reactive } from 'vue'
 import { useI18n } from 'vue-composable'
 import { useRouter } from 'vue-router'
 
-const Component = {
+export default {
+  name: 'DevSidebar',
   components: { VSidebar, VMenu, VMenuList, VMenuItem },
   emits: ['open', 'close'],
   setup(props, { emit }) {
@@ -64,8 +65,6 @@ const Component = {
     return { intl, emit, state, redirect, router, toggleIconMenuDirection }
   }
 }
-
-export default Component
 </script>
 
 <template>

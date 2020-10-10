@@ -2,7 +2,8 @@
 import { ref, computed } from 'vue'
 import { DataGrid, VTable, VSwitch } from '@pathscale/vue3-ui'
 
-const Component = {
+export default {
+  name: 'DevShowcaseTableDynamic',
   components: { VTable, VSwitch },
   setup() {
     const datagrid = ref(new DataGrid())
@@ -51,8 +52,6 @@ const Component = {
     }
   }
 }
-
-export default Component
 </script>
 
 <template>

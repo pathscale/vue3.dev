@@ -3,15 +3,14 @@
 import { ref } from 'vue'
 import { VField, VTextarea } from '@pathscale/vue3-ui'
 
-const Component = {
+export default {
+  name: 'DevShowcaseTextarea',
   components: { VField, VTextarea },
   setup() {
     const text = ref('')
     return { text }
   }
 }
-
-export default Component
 </script>
 
 <template>

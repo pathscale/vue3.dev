@@ -1,11 +1,10 @@
 <script>
-import { VBreadcrumb, VBreadcrumbItem, VField } from '@pathscale/vue3-ui'
+import { VBreadcrumb, VBreadcrumbItem /* , VField */ } from '@pathscale/vue3-ui'
 
-const Component = {
-  components: { VBreadcrumb, VBreadcrumbItem, VField }
+export default {
+  name: 'DevShowcaseBreadcrumb',
+  components: { VBreadcrumb, VBreadcrumbItem /* , VField */ }
 }
-
-export default Component
 </script>
 
 <template>

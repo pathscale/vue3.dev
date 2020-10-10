@@ -3,7 +3,8 @@ import { VButton, VColumns, VColumn } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 import { reactive, onMounted } from 'vue'
 
-const Component = {
+export default {
+  name: 'Cookie',
   components: {
     VButton, VColumns, VColumn
   },
@@ -27,8 +28,6 @@ const Component = {
     return { handlePrivacyPolicy, handleAgree, intl, state }
   }
 }
-
-export default Component
 </script>
 
 <template>

@@ -2,15 +2,14 @@
 import { ref } from 'vue'
 import { VDropdown, VDropdownItem, VField, VButton } from '@pathscale/vue3-ui'
 
-const Component = {
+export default {
+  name: 'DevShowcaseDropdown',
   components: { VDropdown, VDropdownItem, VField, VButton },
   setup() {
     const item = ref(null)
     return { item }
   }
 }
-
-export default Component
 </script>
 
 <template>
@@ -141,7 +140,7 @@ export default Component
       </v-dropdown>
     </v-field>
 
-    <V-field label="v-model dropdown">
+    <v-field label="v-model dropdown">
       <v-dropdown v-model="item">
         <template #trigger>
           <v-button type="is-primary">
@@ -160,6 +159,6 @@ export default Component
           Squirtle
         </v-dropdown-item>
       </v-dropdown>
-    </V-field>
+    </v-field>
   </section>
 </template>

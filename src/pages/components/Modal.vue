@@ -8,7 +8,8 @@ import { SnippetSection, ApiSection } from '../../components'
 import Showcase from '../../docs/components/showcases/Modal.vue'
 import ShowcaseCode from '../../docs/components/raw/Modal.txt'
 
-const Component = {
+export default {
+  name: 'DevPageModal',
   components: { SnippetSection, ApiSection },
   setup() {
     const intl = useI18n()
@@ -16,8 +17,6 @@ const Component = {
     return { intl, api, router, Showcase, ShowcaseCode }
   }
 }
-
-export default Component
 </script>
 
 <template>

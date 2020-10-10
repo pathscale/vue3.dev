@@ -2,7 +2,8 @@
 import { VField, VCheckbox } from '@pathscale/vue3-ui'
 import { ref } from 'vue'
 
-const Component = {
+export default {
+  name: 'DevShowcaseCheckbox',
   components: { VField, VCheckbox },
   setup() {
     const value = ref(false)
@@ -13,8 +14,6 @@ const Component = {
     return { value, getValue }
   }
 }
-
-export default Component
 </script>
 
 <template>

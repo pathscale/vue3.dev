@@ -1,11 +1,10 @@
 <script>
 import { VField, VInput, VButton, VSelect } from '@pathscale/vue3-ui'
 
-const Component = {
+export default {
+  name: 'DevShowcaseField',
   components: { VField, VInput, VButton, VSelect }
 }
-
-export default Component
 </script>
 
 <template>

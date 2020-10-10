@@ -3,15 +3,14 @@
 import { ref } from 'vue'
 import { VField, VInput } from '@pathscale/vue3-ui'
 
-const Component = {
+export default {
+  name: 'DevShowcaseInput',
   components: { VField, VInput },
   setup() {
     const email = ref('')
     return { email }
   }
 }
-
-export default Component
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script>
-import { VButton, VNavbar, VNavbarItem, VNavbarDropdown } from '@pathscale/vue3-ui'
+import { /* VButton, VNavbarDropdown, */ VNavbar, VNavbarItem } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 
 import { ref, watchEffect } from 'vue'
@@ -7,9 +7,10 @@ import { useRouter } from 'vue-router'
 
 import logo from '../../assets/svg/vue3-logo.svg'
 
-const Component = {
+export default {
+  name: 'DevNavbar',
   components: {
-    VButton, VNavbar, VNavbarItem, VNavbarDropdown
+    /* VButton, VNavbarDropdown, */ VNavbar, VNavbarItem
   },
   setup(props, { emit }) {
     const languages = {
@@ -67,8 +68,6 @@ const Component = {
     }
   }
 }
-
-export default Component
 </script>
 
 <template>

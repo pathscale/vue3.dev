@@ -1,11 +1,10 @@
 <script>
 import { VProgress, VField } from '@pathscale/vue3-ui'
 
-const Component = {
+export default {
+  name: 'DevShowcaseProgress',
   components: { VProgress, VField }
 }
-
-export default Component
 </script>
 
 <template>

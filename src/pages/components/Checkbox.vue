@@ -8,7 +8,8 @@ import { SnippetSection, ApiSection } from '../../components'
 import Showcase from '../../docs/components/showcases/Checkbox.vue'
 import ShowcaseCode from '../../docs/components/raw/Checkbox.txt'
 
-const Component = {
+export default {
+  name: 'DevPageCheckbox',
   components: { SnippetSection, ApiSection },
   setup() {
     const intl = useI18n()
@@ -16,8 +17,6 @@ const Component = {
     return { intl, api, router, Showcase, ShowcaseCode }
   }
 }
-
-export default Component
 </script>
 
 <template>

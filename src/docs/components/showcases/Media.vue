@@ -1,11 +1,10 @@
 <script>
 import { VMedia, VImage, VTextarea, VField, VButton } from '@pathscale/vue3-ui'
 
-const Component = {
+export default {
+  name: 'DevShowcaseMedia',
   components: { VMedia, VImage, VTextarea, VField, VButton }
 }
-
-export default Component
 </script>
 
 <template>

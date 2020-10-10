@@ -1,11 +1,10 @@
 <script>
 import { VAccordion, VButton, VField, VTag } from '@pathscale/vue3-ui'
 
-const component = {
+export default {
+  name: 'DevShowcaseAccordion',
   components: { VAccordion, VButton, VField, VTag }
 }
-
-export default component
 </script>
 
 <template>

@@ -8,8 +8,8 @@ import en from './locales/en.json'
 import es from './locales/es.json'
 import pt from './locales/pt.json'
 
-const App = {
-  name: 'App',
+export default {
+  name: 'DevApp',
   setup() {
     setI18n({
       locale: (navigator.language || navigator.userLanguage).slice(0, 2),
@@ -23,8 +23,6 @@ const App = {
     watchEffect(() => setTheme(defaultTheme))
   }
 }
-
-export default App
 </script>
 
 <template>

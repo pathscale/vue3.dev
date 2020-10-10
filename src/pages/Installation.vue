@@ -8,16 +8,15 @@ import { useRouter } from 'vue-router'
 // import Showcase from "../../docs/components/showcases/Breadcrumb.vue"
 // import ShowcaseCode from "../../docs/components/raw/Breadcrumb.txt"
 
-const Component = {
-//   components: { SnippetSection, ApiSection },
+export default {
+  name: 'DevPageInstallation',
+  // components: { SnippetSection, ApiSection },
   setup() {
     const intl = useI18n()
     const router = useRouter()
     return { intl, router }
   }
 }
-
-export default Component
 </script>
 
 <template>

@@ -1,11 +1,10 @@
 <script>
 import { VButton } from '@pathscale/vue3-ui'
 
-const Component = {
+export default {
+  name: 'DevShowcaseButton',
   components: { VButton }
 }
-
-export default Component
 </script>
 
 <template>

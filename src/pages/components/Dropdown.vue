@@ -8,16 +8,15 @@ import { SnippetSection, ApiSection } from '../../components'
 import Showcase from '../../docs/components/showcases/Dropdown.vue'
 import ShowcaseCode from '../../docs/components/raw/Dropdown.txt'
 
-const Component = {
-  components: { ApiSection, SnippetSection, Showcase },
+export default {
+  name: 'DevPageDropdown',
+  components: { ApiSection, SnippetSection /* , Showcase */ },
   setup() {
     const intl = useI18n()
     const router = useRouter()
     return { intl, api, router, Showcase, ShowcaseCode }
   }
 }
-
-export default Component
 </script>
 
 <template>

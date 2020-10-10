@@ -10,7 +10,8 @@ import {
   BlogSection
 } from '../components/sections'
 
-const Component = {
+export default {
+  name: 'DevPageHome',
   components: {
     HomeSection,
     TrailerSection,
@@ -23,8 +24,6 @@ const Component = {
     return { intl, router }
   }
 }
-
-export default Component
 </script>
 
 <template>

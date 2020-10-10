@@ -2,7 +2,8 @@
 import { VSidebar, VButton, VSwitch, VField } from '@pathscale/vue3-ui'
 import { reactive } from 'vue'
 
-const Component = {
+export default {
+  name: 'DevShowcaseSidebar',
   components: { VSidebar, VButton, VSwitch, VField },
   setup(props) {
     const state = reactive({
@@ -18,8 +19,6 @@ const Component = {
     return { state, close }
   }
 }
-
-export default Component
 </script>
 
 <template>

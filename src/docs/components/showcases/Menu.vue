@@ -1,11 +1,10 @@
 <script>
 import { VMenu, VMenuItem, VMenuList } from '@pathscale/vue3-ui'
 
-const Component = {
+export default {
+  name: 'DevShowcaseMenu',
   components: { VMenu, VMenuItem, VMenuList }
 }
-
-export default Component
 </script>
 
 <template>

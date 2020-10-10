@@ -1,11 +1,10 @@
 <script>
-import { VCard, VCardImage, VCardContent, VCardHeader, VCardFooter, VCardFooterItem, VImage, VMedia, VColumns, VColumn } from '@pathscale/vue3-ui'
+import { VCard, /* VCardImage, */ VCardContent, VCardHeader, VCardFooter, VCardFooterItem, VImage, VMedia, VColumns, VColumn } from '@pathscale/vue3-ui'
 
-const Component = {
-  components: { VCard, VCardImage, VCardContent, VCardHeader, VCardFooter, VCardFooterItem, VImage, VMedia, VColumns, VColumn }
+export default {
+  name: 'DevShowcaseCard',
+  components: { VCard, /* VCardImage, */ VCardContent, VCardHeader, VCardFooter, VCardFooterItem, VImage, VMedia, VColumns, VColumn }
 }
-
-export default Component
 </script>
 
 <template>

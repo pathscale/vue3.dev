@@ -1,11 +1,10 @@
 <script>
 import { VImage } from '@pathscale/vue3-ui'
 
-const Component = {
+export default {
+  name: 'DevShowcaseImage',
   components: { VImage }
 }
-
-export default Component
 </script>
 
 <template>

@@ -2,7 +2,8 @@
 import { reactive } from 'vue'
 import { VButton, VModal } from '@pathscale/vue3-ui'
 
-const Component = {
+export default {
+  name: 'DevShowcaseModal',
   components: { VButton, VModal },
   setup() {
     const state = reactive({
@@ -18,8 +19,6 @@ const Component = {
     return { state, setShowModal, setShowModalCard }
   }
 }
-
-export default Component
 </script>
 
 <template>

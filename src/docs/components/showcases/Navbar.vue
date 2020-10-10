@@ -1,11 +1,10 @@
 <script>
 import { VNavbar, VNavbarItem, VNavbarDropdown, VButton } from '@pathscale/vue3-ui'
 
-const Component = {
+export default {
+  name: 'DevShowcaseNavbar',
   components: { VNavbar, VNavbarItem, VNavbarDropdown, VButton }
 }
-
-export default Component
 </script>
 
 <template>
