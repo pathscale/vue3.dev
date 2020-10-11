@@ -57,9 +57,13 @@ export default {
       return `${props.path}#demo`
     }
 
-    const script = computed(() => props.code.match(/<script>([\s\S]*)<\/script>/g)?.[0] )
-    const template = computed(() => props.code.match(/<template>([\s\S]*)<\/template>/g)?.[0] )
-    const style = computed(() => props.code.match(/<style>([\s\S]*)<\/style>/g)?.[0] )
+    const _script = computed(() => props.code.match(/<script>([\s\S]*)<\/script>/g))
+    const _template = computed(() => props.code.match(/<template>([\s\S]*)<\/template>/g))
+    const _style = computed(() => props.code.match(/<style>([\s\S]*)<\/style>/g))
+
+    const script = computed(() => _script.value ? _script.value[0] : null)
+    const template = computed(() => _template.value ? _template.value[0] : null)
+    const style = computed(() => _style.value ? _style.value[0] : null)
 
     return { getDemoLink, script, template, style, activeTag }
   }
@@ -75,7 +79,7 @@ export default {
     <v-accordion header-is-trigger>
       <template #trigger>
         <v-button light class="my-2">
-          &lt;&gt;
+          &lt;>
         </v-button>
       </template>
       <template #content>
