@@ -59,7 +59,7 @@ export default {
     </div>
 
     <div class="box has-background-light is-family-code">
-      npm i @pathscale/vue3-ui @pathscale/bulma-extensions-css-var" @pathscale/bulma-pull-2981-css-var-only
+      npm i @pathscale/vue3-ui @pathscale/bulma-extensions-css-var @pathscale/bulma-pull-2981-css-var-only
     </div>
 
     <div class="subtitle content">

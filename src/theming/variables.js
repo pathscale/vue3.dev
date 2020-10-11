@@ -1,7 +1,7 @@
 const variables = {
   '$button-background-color': '#4958f5',
   '$button-border-width': '2px',
-  '$button-color': 'white',
+  '$button-color': '#dbdbdb',
   '$danger': '#aa1e02',
   '$footer-background-color': 'rgba(0,0,0,0)',
   '$footer-padding': '10px',
