@@ -60,7 +60,7 @@ export default {
 
 <template>
   <div class="box">
-    <h1 class="title is-size-4 mt-4">
+    <h1 v-if="title" class="title is-size-4 mt-4">
       <a :href="getDemoLink()" class="is-active">#</a> {{ title }}
     </h1>
     <component :is="component" />
