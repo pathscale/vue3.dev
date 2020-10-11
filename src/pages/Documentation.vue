@@ -68,7 +68,7 @@ export default {
           <v-menu>
             <v-menu-list label="Getting Started">
               <v-menu-item label="Installation" @click="redirect('installation')" :active="current.installation" />
-              <v-menu-item label="Theming" @click="redirect('theming')" :active="current.theming" />
+              <v-menu-item label="Design" @click="redirect('design')" :active="current.design" />
             </v-menu-list>
             <v-menu-list label="Elements">
               <!-- <v-menu-item label="Typography" /> -->

@@ -1,7 +1,7 @@
 export { default as Home } from './Home.vue'
 export { default as Documentation } from './Documentation.vue'
 export { default as Installation } from './Installation.vue'
-export { default as Theming } from './Theming.vue'
+export { default as Design } from './Design.vue'
 
 export { default as Breadcrumb } from './components/Breadcrumb.vue'
 export { default as Button } from './components/Button.vue'

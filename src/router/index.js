@@ -46,10 +46,10 @@ const routes = [
             meta: metaTags('Installation', 'Install vue3-ui, a vue3 ready components library')
           },
           {
-            name: 'theming',
-            path: 'theming',
-            component: Pages.Theming,
-            meta: metaTags('Theming', 'Customize vue3-ui and make it your own')
+            name: 'design',
+            path: 'design',
+            component: Pages.Design,
+            meta: metaTags('Design', 'Customize vue3-ui and make it your own')
           },
           {
             name: 'button',
