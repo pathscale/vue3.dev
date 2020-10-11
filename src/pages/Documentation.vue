@@ -68,7 +68,6 @@ export default {
           <v-menu>
             <v-menu-list label="Getting Started">
               <v-menu-item label="Installation" @click="redirect('installation')" :active="current.installation" />
-              <v-menu-item label="Why Vue3-ui" />
               <v-menu-item label="Theming" @click="redirect('theming')" :active="current.theming" />
             </v-menu-list>
             <v-menu-list label="Elements">
