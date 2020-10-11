@@ -1,6 +1,7 @@
 <script>
 /* eslint-disable no-unsanitized/property -- ignore */
-import { VAccordion, VButton } from '@pathscale/vue3-ui'
+import { VAccordion, VButton, VTabs, VTab } from '@pathscale/vue3-ui'
+import { ref, computed } from 'vue'
 
 import 'highlight.js/styles/github.css'
 
@@ -13,7 +14,7 @@ hljs.registerLanguage('xml', xml)
 
 export default {
   name: 'Demo',
-  components: { VAccordion, VButton },
+  components: { VAccordion, VButton, VTabs, VTab },
   directives: {
     highlightjs: {
       beforeMount(el, binding) {
@@ -50,10 +51,17 @@ export default {
     }
   },
   setup(props) {
-    function getDemoLink() {
+    const activeTag = ref(null)
+
+    const getDemoLink = () => {
       return `${props.path}#demo`
     }
-    return { getDemoLink }
+
+    const script = computed(() => props.code.match(/<script>([\s\S]*)<\/script>/g)?.[0] )
+    const template = computed(() => props.code.match(/<template>([\s\S]*)<\/template>/g)?.[0] )
+    const style = computed(() => props.code.match(/<style>([\s\S]*)<\/style>/g)?.[0] )
+
+    return { getDemoLink, script, template, style, activeTag }
   }
 }
 </script>
@@ -64,14 +72,24 @@ export default {
       <a :href="getDemoLink()" class="is-active">#</a> {{ title }}
     </h1>
     <component :is="component" />
-    <v-accordion is-horizontal header-is-trigger background="transparent">
+    <v-accordion header-is-trigger>
       <template #trigger>
         <v-button light class="my-2">
-          &lt;>
+          &lt;&gt;
         </v-button>
       </template>
       <template #content>
-        <pre v-highlightjs :class="format"><code>{{ code }}</code></pre>
+        <v-tabs v-model="activeTag">
+          <v-tab label="Code" v-if="script">
+            <pre v-highlightjs :class="format"><code>{{ script }}</code></pre>
+          </v-tab>
+          <v-tab label="Template" v-if="template">
+            <pre v-highlightjs :class="format"><code>{{ template }}</code></pre>
+          </v-tab>
+          <v-tab label="Style" v-if="style">
+            <pre v-highlightjs :class="format"><code>{{ style }}</code></pre>
+          </v-tab>
+        </v-tabs>
       </template>
     </v-accordion>
   </div>
