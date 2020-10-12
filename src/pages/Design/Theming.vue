@@ -90,6 +90,10 @@ export default {
       Swapping css variables using vanilla javascript
     </h6>
 
+    <p class="mb-4">
+      You can assign values to a css variable by appending properties to your root DOM node
+    </p>
+
     <div class="box has-background-light is-family-code">
       const root = document.documentElement
       <br />
@@ -97,8 +101,24 @@ export default {
     </div>
 
     <h6 class="title is-6 mt-6">
-      Swapping css variables using vue
+      Swapping css variables using <a href="https://pikax.me/vue-composable/">Vue composable</a>
     </h6>
+
+    <p class="mb-4">
+      Css variables can be assigned values using helper functions from vue-composable, a vue3 utility library.
+      <br />
+      <br />
+      For this you will need to add vue-composable as a dependency.
+    </p>
+
+    <div class="box has-background-light is-family-code">
+      npm i vue-composable
+    </div>
+
+    <p class="mb-4">
+      You can now use vue-composable <strong>useCssVariables</strong> method to set your variables
+    </p>
+
     <div class="box has-background-light is-family-code">
       import { useCssVariables } from 'vue-composable'
       <br />

@@ -1,17 +1,11 @@
 <script>
 import { ref, watchEffect, computed } from 'vue'
 import {
-  /*
-  VButton,
-  VSelect,
-  VField,
-  VInput,
-  VSidebar,
-  */
-  VColumns,
-  VColumn,
+  VAccordion,
   VBreadcrumb,
   VBreadcrumbItem,
+  VColumn,
+  VColumns,
   VMenu,
   VMenuItem,
   VMenuList
@@ -22,17 +16,11 @@ import { useRouter } from 'vue-router'
 export default {
   name: 'DevPageDocumentation',
   components: {
-    /*
-    VButton,
-    VSelect,
-    VField,
-    VInput,
-    VSidebar,
-    */
-    VColumns,
-    VColumn,
+    VAccordion,
     VBreadcrumb,
     VBreadcrumbItem,
+    VColumn,
+    VColumns,
     VMenu,
     VMenuItem,
     VMenuList
@@ -42,6 +30,7 @@ export default {
     const router = useRouter()
     const paths = computed(() => router.currentRoute.value.path.split('/').slice(1))
     const current = ref({})
+    const expanded = ref({})
 
     function redirect(name) {
       router.push({
@@ -51,11 +40,11 @@ export default {
 
     watchEffect(() => {
       current.value = { [router.currentRoute.value.name]: true }
-
+      expanded.value.design = ['layout', 'theming'].includes(router.currentRoute.value.name)
       if (router.currentRoute.value.name === 'documentation') redirect('installation')
     })
 
-    return { intl, paths, redirect, current }
+    return { intl, paths, redirect, current, expanded }
   }
 }
 </script>
@@ -68,7 +57,19 @@ export default {
           <v-menu>
             <v-menu-list label="Getting Started">
               <v-menu-item label="Installation" @click="redirect('installation')" :active="current.installation" />
-              <v-menu-item label="Design" @click="redirect('design')" :active="current.design" />
+              <v-accordion header-is-trigger :expanded="expanded.design">
+                <template #trigger>
+                  <v-menu-item label="Design" />
+                </template>
+                <template #content>
+                  <v-menu class="ml-4">
+                    <v-menu-list>
+                      <v-menu-item label="Layout" @click="redirect('layout')" :active="current.layout" />
+                      <v-menu-item label="Theming" @click="redirect('theming')" :active="current.theming" />
+                    </v-menu-list>
+                  </v-menu>
+                </template>
+              </v-accordion>
             </v-menu-list>
             <v-menu-list label="Elements">
               <!-- <v-menu-item label="Typography" /> -->
