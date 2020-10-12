@@ -51,15 +51,16 @@ export default {
     }
   },
   setup(props) {
-
     const getDemoLink = () => {
       return `${props.path}#demo`
     }
 
+    // arrays
     const _script = computed(() => props.code.match(/<script>([\s\S]*)<\/script>/g))
     const _template = computed(() => props.code.match(/<template>([\s\S]*)<\/template>/g))
     const _style = computed(() => props.code.match(/<style>([\s\S]*)<\/style>/g))
 
+    // first elements of arrays as .?[0] is not supported
     const script = computed(() => _script.value ? _script.value[0] : null)
     const template = computed(() => _template.value ? _template.value[0] : null)
     const style = computed(() => _style.value ? _style.value[0] : null)
@@ -76,7 +77,7 @@ export default {
       <a :href="getDemoLink()" class="is-active">#</a> {{ title }}
     </h1>
     <component :is="component" />
-    <v-tabs v-model="activeTab" vanimated>
+    <v-tabs v-model="activeTab" type="is-boxed" class="mt-4" vanimated>
       <v-tab label="Code" v-if="script">
         <pre v-highlightjs :class="format"><code>{{ script }}</code></pre>
       </v-tab>
