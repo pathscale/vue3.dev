@@ -40,6 +40,30 @@ export default {
         &#x274C;
       </v-button>
     </section>
+    <section class="section py-2">
+      <a v-if="state.reduced">
+        H...
+      </a>
+      <a v-else>
+        Home
+      </a>
+    </section>
+    <section class="section py-2">
+      <a v-if="state.reduced">
+        S...
+      </a>
+      <a v-else>
+        Services
+      </a>
+    </section>
+    <section class="section py-2">
+      <a v-if="state.reduced">
+        C...
+      </a>
+      <a v-else>
+        Contact
+      </a>
+    </section>
   </v-sidebar>
 </template>
 
