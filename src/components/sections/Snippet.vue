@@ -1,6 +1,6 @@
 <script>
 /* eslint-disable no-unsanitized/property -- ignore */
-import { VAccordion, VButton, VTabs, VTab } from '@pathscale/vue3-ui'
+import { VButton, VTabs, VTab } from '@pathscale/vue3-ui'
 import { ref, computed } from 'vue'
 
 import 'highlight.js/styles/github.css'
@@ -14,7 +14,7 @@ hljs.registerLanguage('xml', xml)
 
 export default {
   name: 'Demo',
-  components: { VAccordion, VButton, VTabs, VTab },
+  components: { VButton, VTabs, VTab },
   directives: {
     highlightjs: {
       beforeMount(el, binding) {
@@ -76,25 +76,16 @@ export default {
       <a :href="getDemoLink()" class="is-active">#</a> {{ title }}
     </h1>
     <component :is="component" />
-    <v-accordion header-is-trigger>
-      <template #trigger>
-        <v-button light class="my-2">
-          &lt;>
-        </v-button>
-      </template>
-      <template #content>
-        <v-tabs v-model="activeTab" vanimated>
-          <v-tab label="Code" v-if="script">
-            <pre v-highlightjs :class="format"><code>{{ script }}</code></pre>
-          </v-tab>
-          <v-tab label="Template" v-if="template">
-            <pre v-highlightjs :class="format"><code>{{ template }}</code></pre>
-          </v-tab>
-          <v-tab label="Style" v-if="style">
-            <pre v-highlightjs :class="format"><code>{{ style }}</code></pre>
-          </v-tab>
-        </v-tabs>
-      </template>
-    </v-accordion>
+    <v-tabs v-model="activeTab" vanimated>
+      <v-tab label="Code" v-if="script">
+        <pre v-highlightjs :class="format"><code>{{ script }}</code></pre>
+      </v-tab>
+      <v-tab label="Template" v-if="template">
+        <pre v-highlightjs :class="format"><code>{{ template }}</code></pre>
+      </v-tab>
+      <v-tab label="Style" v-if="style">
+        <pre v-highlightjs :class="format"><code>{{ style }}</code></pre>
+      </v-tab>
+    </v-tabs>
   </div>
 </template>
