@@ -1,10 +1,10 @@
 <script>
-import { VSidebar, VButton, VSwitch, VField } from '@pathscale/vue3-ui'
+import { VSidebar, VButton, VSwitch, VField, VMenu, VMenuList, VMenuItem } from '@pathscale/vue3-ui'
 import { reactive } from 'vue'
 
 export default {
   name: 'DevShowcaseSidebar',
-  components: { VSidebar, VButton, VSwitch, VField },
+  components: { VSidebar, VButton, VSwitch, VField, VMenu, VMenuList, VMenuItem },
   setup(props) {
     const state = reactive({
       state: true,
@@ -41,28 +41,13 @@ export default {
       </v-button>
     </section>
     <section class="section py-2">
-      <a v-if="state.reduced">
-        H...
-      </a>
-      <a v-else>
-        Home
-      </a>
-    </section>
-    <section class="section py-2">
-      <a v-if="state.reduced">
-        S...
-      </a>
-      <a v-else>
-        Services
-      </a>
-    </section>
-    <section class="section py-2">
-      <a v-if="state.reduced">
-        C...
-      </a>
-      <a v-else>
-        Contact
-      </a>
+      <v-menu>
+        <v-menu-list>
+          <v-menu-item label="Home" icon="&#x1F3E0;" />
+          <v-menu-item label="Contact" icon="&#x1F4DE;" />
+          <v-menu-item label="Services" icon="&#9877;" />
+        </v-menu-list>
+      </v-menu>
     </section>
   </v-sidebar>
 </template>
