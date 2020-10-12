@@ -77,7 +77,7 @@ export default {
       <a :href="getDemoLink()" class="is-active">#</a> {{ title }}
     </h1>
     <component :is="component" />
-    <v-tabs v-model="activeTab" type="is-boxed" class="mt-4" vanimated>
+    <v-tabs v-model="activeTab" type="is-boxed" class="mt-4">
       <v-tab label="Code" v-if="script">
         <pre v-highlightjs :class="format"><code>{{ script }}</code></pre>
       </v-tab>
