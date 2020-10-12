@@ -51,7 +51,6 @@ export default {
     }
   },
   setup(props) {
-    const activeTag = ref(null)
 
     const getDemoLink = () => {
       return `${props.path}#demo`
@@ -65,7 +64,8 @@ export default {
     const template = computed(() => _template.value ? _template.value[0] : null)
     const style = computed(() => _style.value ? _style.value[0] : null)
 
-    return { getDemoLink, script, template, style, activeTag }
+    const activeTab = ref(_template.value ? 1 : 0)
+    return { getDemoLink, script, template, style, activeTab }
   }
 }
 </script>
@@ -83,7 +83,7 @@ export default {
         </v-button>
       </template>
       <template #content>
-        <v-tabs v-model="activeTag">
+        <v-tabs v-model="activeTab" vanimated>
           <v-tab label="Code" v-if="script">
             <pre v-highlightjs :class="format"><code>{{ script }}</code></pre>
           </v-tab>
