@@ -1,7 +1,6 @@
 <script>
 import { ref, watchEffect, computed } from 'vue'
 import {
-  VAccordion,
   VBreadcrumb,
   VBreadcrumbItem,
   VColumn,
@@ -16,7 +15,6 @@ import { useRouter } from 'vue-router'
 export default {
   name: 'DevPageDocumentation',
   components: {
-    VAccordion,
     VBreadcrumb,
     VBreadcrumbItem,
     VColumn,
@@ -61,19 +59,10 @@ export default {
           <v-menu>
             <v-menu-list label="Getting Started">
               <v-menu-item label="Installation" @click="redirect('installation')" :active="current.installation" />
-              <v-accordion header-is-trigger :expanded="expanded.design">
-                <template #trigger>
-                  <v-menu-item label="Design" />
-                </template>
-                <template #content>
-                  <v-menu class="ml-4">
-                    <v-menu-list>
-                      <v-menu-item label="Layout" @click="redirect('layout')" :active="current.layout" />
-                      <v-menu-item label="Theming" @click="redirect('theming')" :active="current.theming" />
-                    </v-menu-list>
-                  </v-menu>
-                </template>
-              </v-accordion>
+              <v-menu-item label="Design">
+                <v-menu-item label="Layout" @click="redirect('layout')" :active="current.layout" />
+                <v-menu-item label="Theming" @click="redirect('theming')" :active="current.theming" />
+              </v-menu-item>
             </v-menu-list>
             <v-menu-list label="Elements">
               <!-- <v-menu-item label="Typography" /> -->
