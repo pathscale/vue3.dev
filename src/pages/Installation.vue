@@ -4,8 +4,8 @@ import { useI18n } from 'vue-composable'
 import { useRouter } from 'vue-router'
 
 
-import Showcase from '../docs/components/showcases/Button.vue'
-import ShowcaseCode from '../docs/components/raw/Button.txt'
+import Showcase from '../docs/components/showcases/HelloWord.vue'
+import ShowcaseCode from '../docs/components/raw/HelloWord.txt'
 
 import { SnippetSection } from '../components'
 
@@ -31,7 +31,7 @@ export default {
     </p>
 
     <h4 class="title is-4 mt-6">
-      Install process with Vue 3 CLI
+      Install process with Vue3 CLI
     </h4>
 
     <div class="content">
@@ -45,13 +45,13 @@ export default {
     </div>
 
     <div class="subtitle content">
-      Create a Vue 3 app
+      Create a Vue3 app
     </div>
 
     <div class="box has-background-light is-family-code">
       vue create hello-world
       <br />
-      ? Please pick a preset: Default (Vue 3 Preview) ([Vue 3] babel, eslint)
+      ? Please pick a preset: Default (Vue3 Preview) ([Vue 3] babel, eslint)
     </div>
 
     <div class="subtitle content">
