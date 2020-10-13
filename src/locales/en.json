@@ -2,7 +2,7 @@
   "language": "Language",
   "home": {
     "title": "Home",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ornare mi. Vestibulum finibus, mi iaculis vulputate vehicula, nisl nunc venenatis nisl, id fringilla turpis diam eget dolor.",
+    "content": "Vue3-ui. Vue3 ready components library built with love and care.",
     "button": "Explore The Framework"
   },
   "trailer": {

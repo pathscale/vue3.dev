@@ -19,7 +19,7 @@ export default {
       <div class="container">
         <v-columns hcentered>
           <v-column size="is-full-touch is-three-quarters" class="has-text-centered">
-            <img :src="logo" ref="social chat" />
+            <img :src="logo" ref="social chat" class="mb-4" />
             <p class="has-text-white is-size-5 is-size-6-touch">
               {{ intl.$ts('home.content') }}
             </p>
