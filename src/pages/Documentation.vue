@@ -28,7 +28,6 @@ export default {
     const router = useRouter()
     const paths = computed(() => router.currentRoute.value.path.split('/').slice(1))
     const current = ref({})
-    const expanded = ref({})
 
     const isActiveBreadcrumb = item => {
       return item === router.currentRoute.value.name
@@ -42,11 +41,10 @@ export default {
 
     watchEffect(() => {
       current.value = { [router.currentRoute.value.name]: true }
-      expanded.value.design = ['layout', 'theming'].includes(router.currentRoute.value.name)
       if (router.currentRoute.value.name === 'documentation') redirect('installation')
     })
 
-    return { intl, paths, redirect, current, expanded, isActiveBreadcrumb }
+    return { intl, paths, redirect, current, isActiveBreadcrumb }
   }
 }
 </script>
