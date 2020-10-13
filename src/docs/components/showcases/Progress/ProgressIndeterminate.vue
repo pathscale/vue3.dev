@@ -9,7 +9,7 @@ export default {
 
 <template>
   <section>
-    <v-field label="Indeterminate">
+    <v-field>
       <v-progress :value="null" />
     </v-field>
   </section>

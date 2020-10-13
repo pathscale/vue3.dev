@@ -9,7 +9,7 @@ export default {
 
 <template>
   <section>
-    <v-field label="Show value">
+    <v-field>
       <v-progress :value="40" show-value />
     </v-field>
   </section>

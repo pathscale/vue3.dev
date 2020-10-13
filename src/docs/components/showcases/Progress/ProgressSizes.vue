@@ -9,7 +9,7 @@ export default {
 
 <template>
   <section>
-    <v-field label="Sizes">
+    <v-field>
       <v-progress size="is-small" :value="20" />
       <v-progress :value="30" />
       <v-progress size="is-medium" :value="40" />

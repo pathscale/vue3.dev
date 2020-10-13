@@ -9,7 +9,7 @@ export default {
 
 <template>
   <section>
-    <v-field label="Percent">
+    <v-field>
       <v-progress :value="80" show-value format="percent" />
     </v-field>
   </section>

@@ -9,7 +9,7 @@ export default {
 
 <template>
   <section>
-    <v-field label="Colors">
+    <v-field>
       <v-progress type="is-danger" :value="40" />
       <v-progress type="is-success" :value="60" />
       <v-progress type="is-info" :value="80" />
