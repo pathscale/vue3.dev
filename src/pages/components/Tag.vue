@@ -6,8 +6,13 @@ import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
 import api from '../../docs/components/api/tag.ts'
 import variables from '../../docs/components/variables/tag.json'
-import Showcase from '../../docs/components/showcases/Tag.vue'
-import ShowcaseCode from '../../docs/components/raw/Tag.txt'
+// eslint-disable-next-line no-restricted-syntax -- using all components
+import * as Showcases from '../../docs/components/showcases/Tag'
+import ClosableCode from '../../docs/components/raw/Tag/Closable.txt'
+import ColorsCode from '../../docs/components/raw/Tag/Colors.txt'
+import SizesCode from '../../docs/components/raw/Tag/Sizes.txt'
+import StatesCode from '../../docs/components/raw/Tag/States.txt'
+import StylesCode from '../../docs/components/raw/Tag/Styles.txt'
 
 export default {
   name: 'DevPageTag',
@@ -15,7 +20,7 @@ export default {
   setup() {
     const intl = useI18n()
     const router = useRouter()
-    return { intl, api, variables, router, Showcase, ShowcaseCode }
+    return { intl, api, variables, router, Showcases, ClosableCode, ColorsCode, SizesCode, StatesCode, StylesCode }
   }
 }
 </script>
@@ -28,7 +33,31 @@ export default {
     <p>
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
-    <snippet-section :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Closable"
+      :code="ClosableCode"
+      :component="Showcases.Closable"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Colors"
+      :code="ColorsCode"
+      :component="Showcases.Colors"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Sizes"
+      :code="SizesCode"
+      :component="Showcases.Sizes"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="States"
+      :code="StatesCode"
+      :component="Showcases.States"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Styles"
+      :code="StylesCode"
+      :component="Showcases.Styles"
+      :path="router.currentRoute.value.path" />
     <section id="api" class="pt-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API
