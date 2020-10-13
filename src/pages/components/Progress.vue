@@ -6,8 +6,13 @@ import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
 import api from '../../docs/components/api/progress.ts'
 import variables from '../../docs/components/variables/progress.json'
-import Showcase from '../../docs/components/showcases/Progress.vue'
-import ShowcaseCode from '../../docs/components/raw/Progress.txt'
+// eslint-disable-next-line no-restricted-syntax -- using all of them
+import * as Showcases from '../../docs/components/showcases/Progress'
+import ColorsCode from '../../docs/components/raw/Progress/ProgressColors.txt'
+import IndeterminateCode from '../../docs/components/raw/Progress/ProgressIndeterminate.txt'
+import PercentCode from '../../docs/components/raw/Progress/ProgressPercent.txt'
+import SizesCode from '../../docs/components/raw/Progress/ProgressSizes.txt'
+import ValueCode from '../../docs/components/raw/Progress/ProgressValue.txt'
 
 export default {
   name: 'DevPageProgress',
@@ -15,7 +20,7 @@ export default {
   setup() {
     const intl = useI18n()
     const router = useRouter()
-    return { intl, api, variables, router, Showcase, ShowcaseCode }
+    return { intl, api, variables, router, Showcases, ColorsCode, IndeterminateCode, PercentCode, SizesCode, ValueCode }
   }
 }
 </script>
@@ -28,7 +33,11 @@ export default {
     <p>
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
-    <snippet-section :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
+    <snippet-section :code="ShowcaseCode" :component="Showcases.Colors" :path="router.currentRoute.value.path" />
+    <snippet-section :code="ShowcaseCode" :component="Showcases.Indeterminate" :path="router.currentRoute.value.path" />
+    <snippet-section :code="ShowcaseCode" :component="Showcases.Percent" :path="router.currentRoute.value.path" />
+    <snippet-section :code="ShowcaseCode" :component="Showcases.Sizes" :path="router.currentRoute.value.path" />
+    <snippet-section :code="ShowcaseCode" :component="Showcases.Value" :path="router.currentRoute.value.path" />
     <section id="api" class="pt-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API

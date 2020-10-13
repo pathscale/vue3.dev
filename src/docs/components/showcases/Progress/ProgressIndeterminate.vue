@@ -1,0 +1,22 @@
+<script>
+import { VProgress, VField } from '@pathscale/vue3-ui'
+
+export default {
+  name: 'DevShowcaseProgress',
+  components: { VProgress, VField }
+}
+</script>
+
+<template>
+  <section>
+    <v-field label="Indeterminate">
+      <v-progress :value="null" />
+    </v-field>
+  </section>
+</template>
+
+<style scoped>
+.progress-wrapper {
+  margin-top: 1em;
+}
+</style>
