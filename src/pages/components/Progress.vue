@@ -45,19 +45,19 @@ export default {
       :component="Showcases.Indeterminate"
       :path="router.currentRoute.value.path" />
     <snippet-section
-      title="Percent"
-      :code="PercentCode"
-      :component="Showcases.Percent"
-      :path="router.currentRoute.value.path" />
-    <snippet-section
       title="Sizes"
       :code="SizesCode"
       :component="Showcases.Sizes"
       :path="router.currentRoute.value.path" />
     <snippet-section
-      title="value"
+      title="Show Value"
       :code="ValueCode"
       :component="Showcases.Value"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Show Percentage Value"
+      :code="PercentCode"
+      :component="Showcases.Percent"
       :path="router.currentRoute.value.path" />
     <section id="api" class="py-4">
       <h2 class="title is-4">

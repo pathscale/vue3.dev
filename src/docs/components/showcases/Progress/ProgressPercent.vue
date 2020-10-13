@@ -1,16 +1,14 @@
 <script>
-import { VProgress, VField } from '@pathscale/vue3-ui'
+import { VProgress } from '@pathscale/vue3-ui'
 
 export default {
   name: 'DevShowcaseProgress',
-  components: { VProgress, VField }
+  components: { VProgress }
 }
 </script>
 
 <template>
-  <v-field>
-    <v-progress :value="80" show-value format="percent" />
-  </v-field>
+  <v-progress :value="80" show-value format="percent" />
 </template>
 
 <style scoped>
