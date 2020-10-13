@@ -32,6 +32,10 @@ export default {
     const current = ref({})
     const expanded = ref({})
 
+    const isActiveBreadcrumb = item => {
+      return item === router.currentRoute.value.name
+    }
+
     function redirect(name) {
       router.push({
         name
@@ -44,7 +48,7 @@ export default {
       if (router.currentRoute.value.name === 'documentation') redirect('installation')
     })
 
-    return { intl, paths, redirect, current, expanded }
+    return { intl, paths, redirect, current, expanded, isActiveBreadcrumb }
   }
 }
 </script>
@@ -132,6 +136,7 @@ export default {
             :key="item"
             class="is-capitalized"
             tag="router-link"
+            :active="isActiveBreadcrumb(item)"
             :to="{ name: item }">
             {{ item }}
           </v-breadcrumb-item>
