@@ -8,13 +8,11 @@ export default {
 </script>
 
 <template>
-  <section>
-    <v-tooltip type="is-danger" label="Delay 500(ms)" position="is-right" :delay="500">
-      <v-button type="is-danger">
-        Delay 500(ms)
-      </v-button>
-    </v-tooltip>
-  </section>
+  <v-tooltip type="is-danger" label="Delay 500(ms)" position="is-right" :delay="500">
+    <v-button type="is-danger">
+      Delay 500(ms)
+    </v-button>
+  </v-tooltip>
 </template>
 
 <style scoped>

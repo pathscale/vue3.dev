@@ -8,13 +8,11 @@ export default {
 </script>
 
 <template>
-  <section>
-    <v-tooltip type="is-success" label="Always" always position="is-right">
-      <v-button type="is-success">
-        Always
-      </v-button>
-    </v-tooltip>
-  </section>
+  <v-tooltip type="is-success" label="Always" always position="is-right">
+    <v-button type="is-success">
+      Always
+    </v-button>
+  </v-tooltip>
 </template>
 
 <style scoped>

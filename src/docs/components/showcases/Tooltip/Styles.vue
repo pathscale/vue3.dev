@@ -8,23 +8,21 @@ export default {
 </script>
 
 <template>
-  <section>
-    <v-tooltip type="is-info" label="Squared" squared>
-      <v-button type="is-info">
-        Squared
-      </v-button>
-    </v-tooltip>
-    <v-tooltip type="is-success" label="Dashed" dashed>
-      <v-button type="is-success">
-        Dashed
-      </v-button>
-    </v-tooltip>
-    <v-tooltip type="is-warning" label="Multilined" multilined>
-      <v-button type="is-warning">
-        Multilined
-      </v-button>
-    </v-tooltip>
-  </section>
+  <v-tooltip type="is-info" label="Squared" squared>
+    <v-button type="is-info">
+      Squared
+    </v-button>
+  </v-tooltip>
+  <v-tooltip type="is-success" label="Dashed" dashed>
+    <v-button type="is-success">
+      Dashed
+    </v-button>
+  </v-tooltip>
+  <v-tooltip type="is-warning" label="Multilined" multilined>
+    <v-button type="is-warning">
+      Multilined
+    </v-button>
+  </v-tooltip>
 </template>
 
 <style scoped>

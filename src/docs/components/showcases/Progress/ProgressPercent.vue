@@ -8,11 +8,9 @@ export default {
 </script>
 
 <template>
-  <section>
-    <v-field>
-      <v-progress :value="80" show-value format="percent" />
-    </v-field>
-  </section>
+  <v-field>
+    <v-progress :value="80" show-value format="percent" />
+  </v-field>
 </template>
 
 <style scoped>

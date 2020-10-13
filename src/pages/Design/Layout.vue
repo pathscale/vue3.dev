@@ -19,12 +19,10 @@ export default {
 </script>
 
 <template>
-  <section>
-    <h1 class="title">
-      {{ router.currentRoute.value.meta.title }}
-    </h1>
-    <p>
-      {{ router.currentRoute.value.meta.metaTags[0].content }}
-    </p>
-  </section>
+  <h1 class="title">
+    {{ router.currentRoute.value.meta.title }}
+  </h1>
+  <p>
+    {{ router.currentRoute.value.meta.metaTags[0].content }}
+  </p>
 </template>

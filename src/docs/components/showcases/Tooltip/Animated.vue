@@ -8,13 +8,11 @@ export default {
 </script>
 
 <template>
-  <section>
-    <v-tooltip type="is-info" label="Animated" position="is-right" animated>
-      <v-button type="is-info">
-        Animated
-      </v-button>
-    </v-tooltip>
-  </section>
+  <v-tooltip type="is-info" label="Animated" position="is-right" animated>
+    <v-button type="is-info">
+      Animated
+    </v-button>
+  </v-tooltip>
 </template>
 
 <style scoped>

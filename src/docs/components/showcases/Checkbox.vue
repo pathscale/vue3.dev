@@ -17,25 +17,23 @@ export default {
 </script>
 
 <template>
-  <section>
-    <v-field>
-      <v-checkbox v-model="value">
-        Active checkbox
-      </v-checkbox>
-      <br />
-      <v-checkbox indeterminate>
-        Indeterminate checkbox
-      </v-checkbox>
-      <br />
-      <v-checkbox disabled>
-        Disabled checkbox
-      </v-checkbox>
-    </v-field>
+  <v-field>
+    <v-checkbox v-model="value">
+      Active checkbox
+    </v-checkbox>
+    <br />
+    <v-checkbox indeterminate>
+      Indeterminate checkbox
+    </v-checkbox>
+    <br />
+    <v-checkbox disabled>
+      Disabled checkbox
+    </v-checkbox>
+  </v-field>
 
-    <v-field :message="getValue()" label="Custom values">
-      <v-checkbox v-model="value" true-value="YES" false-value="NO">
-        Accept?
-      </v-checkbox>
-    </v-field>
-  </section>
+  <v-field :message="getValue()" label="Custom values">
+    <v-checkbox v-model="value" true-value="YES" false-value="NO">
+      Accept?
+    </v-checkbox>
+  </v-field>
 </template>

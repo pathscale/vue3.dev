@@ -8,14 +8,12 @@ export default {
 </script>
 
 <template>
-  <section>
-    <v-field>
-      <v-progress type="is-danger" :value="40" />
-      <v-progress type="is-success" :value="60" />
-      <v-progress type="is-info" :value="80" />
-      <v-progress type="is-warning" :value="100" />
-    </v-field>
-  </section>
+  <v-field>
+    <v-progress type="is-danger" :value="40" />
+    <v-progress type="is-success" :value="60" />
+    <v-progress type="is-info" :value="80" />
+    <v-progress type="is-warning" :value="100" />
+  </v-field>
 </template>
 
 <style scoped>

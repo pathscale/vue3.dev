@@ -94,45 +94,43 @@ export default {
 </script>
 
 <template>
-  <section>
-    <h4 class="is-size-5 mb-4">
-      Table with boders
-    </h4>
-    <v-table :data="datagrid" is-bordered />
+  <h4 class="is-size-5 mb-4">
+    Table with boders
+  </h4>
+  <v-table :data="datagrid" is-bordered />
 
-    <h4 class="is-size-5 mb-4 mt-6">
-      Table with stripes
-    </h4>
-    <v-table :data="datagrid" is-striped />
+  <h4 class="is-size-5 mb-4 mt-6">
+    Table with stripes
+  </h4>
+  <v-table :data="datagrid" is-striped />
 
-    <h4 class="is-size-5 mb-4 mt-6">
-      Compact table
-    </h4>
-    <v-table :data="datagrid" is-narrow />
+  <h4 class="is-size-5 mb-4 mt-6">
+    Compact table
+  </h4>
+  <v-table :data="datagrid" is-narrow />
 
-    <h4 class="is-size-5 mb-4 mt-6">
-      Table with hover effect
-    </h4>
-    <v-table :data="datagrid" is-hoverable />
+  <h4 class="is-size-5 mb-4 mt-6">
+    Table with hover effect
+  </h4>
+  <v-table :data="datagrid" is-hoverable />
 
-    <h4 class="is-size-5 mb-4 mt-6">
-      Table with full width
-    </h4>
-    <v-table :data="datagrid" is-fullwidth />
+  <h4 class="is-size-5 mb-4 mt-6">
+    Table with full width
+  </h4>
+  <v-table :data="datagrid" is-fullwidth />
 
-    <h4 class="is-size-5 mb-4 mt-6">
-      Table with all modifiers
-    </h4>
-    <v-table :data="datagrid" is-fullwidth is-striped is-narrow is-hoverable is-bordered />
+  <h4 class="is-size-5 mb-4 mt-6">
+    Table with all modifiers
+  </h4>
+  <v-table :data="datagrid" is-fullwidth is-striped is-narrow is-hoverable is-bordered />
 
-    <h4 class="is-size-5 mb-4 mt-6">
-      Data grid with custom column styling
-    </h4>
-    <v-table
-      :data="customStyleGrid"
-      is-hoverable
-      is-striped
-      is-bordered
-      is-fullwidth />
-  </section>
+  <h4 class="is-size-5 mb-4 mt-6">
+    Data grid with custom column styling
+  </h4>
+  <v-table
+    :data="customStyleGrid"
+    is-hoverable
+    is-striped
+    is-bordered
+    is-fullwidth />
 </template>

@@ -27,10 +27,8 @@ export default {
 </script>
 
 <template>
-  <section>
-    <home-section />
-    <trailer-section />
-    <clients-section />
-    <blog-section />
-  </section>
+  <home-section />
+  <trailer-section />
+  <clients-section />
+  <blog-section />
 </template>

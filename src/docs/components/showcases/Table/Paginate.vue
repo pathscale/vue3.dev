@@ -29,15 +29,13 @@ export default {
 </script>
 
 <template>
-  <section>
-    <h4 class="is-size-5 mb-4">
-      Table with 100 rows
-    </h4>
-    <v-table
-      :data="datagrid"
-      pagination
-      :rows-per-page-options="[1, 2, 5, 10, 20]"
-      :rows-per-page="10"
-      is-fullwidth />
-  </section>
+  <h4 class="is-size-5 mb-4">
+    Table with 100 rows
+  </h4>
+  <v-table
+    :data="datagrid"
+    pagination
+    :rows-per-page-options="[1, 2, 5, 10, 20]"
+    :rows-per-page="10"
+    is-fullwidth />
 </template>

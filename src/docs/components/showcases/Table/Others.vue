@@ -69,39 +69,37 @@ export default {
 </script>
 
 <template>
-  <section>
-    <h4 class="is-size-5 mb-4">
-      Table with sortable columns
-    </h4>
-    <v-table :data="datagrid" is-fullwidth sortable />
+  <h4 class="is-size-5 mb-4">
+    Table with sortable columns
+  </h4>
+  <v-table :data="datagrid" is-fullwidth sortable />
 
-    <h4 class="is-size-5 mb-4 mt-6">
-      Table with editable cells
-    </h4>
-    <v-table :data="datagrid" is-fullwidth editable />
+  <h4 class="is-size-5 mb-4 mt-6">
+    Table with editable cells
+  </h4>
+  <v-table :data="datagrid" is-fullwidth editable />
 
-    <h4 class="is-size-5 mb-4 mt-6">
-      Table with rows grouped by column values
-    </h4>
-    <v-table :data="datagrid" is-fullwidth editable group-by="color" />
+  <h4 class="is-size-5 mb-4 mt-6">
+    Table with rows grouped by column values
+  </h4>
+  <v-table :data="datagrid" is-fullwidth editable group-by="color" />
 
-    <h4 class="is-size-5 mb-4 mt-6">
-      Data grid with add/delete rows buttons
-    </h4>
-    <p>
-      You can programmatically add rows to a certain index by using the optional index parameter and
-      you can also delete rows from a certain index
-    </p>
+  <h4 class="is-size-5 mb-4 mt-6">
+    Data grid with add/delete rows buttons
+  </h4>
+  <p>
+    You can programmatically add rows to a certain index by using the optional index parameter and
+    you can also delete rows from a certain index
+  </p>
 
-    <v-table :data="datagrid" searchable is-hoverable is-striped is-bordered is-fullwidth sortable>
-      <template #header>
-        <v-button @click="addRow(2)" light class="mr-4 mb-4">
-          Add row with index 2
-        </v-button>
-        <v-button @click="deleteRow(2)" light ckass="mb-4">
-          Delete row with index 2
-        </v-button>
-      </template>
-    </v-table>
-  </section>
+  <v-table :data="datagrid" searchable is-hoverable is-striped is-bordered is-fullwidth sortable>
+    <template #header>
+      <v-button @click="addRow(2)" light class="mr-4 mb-4">
+        Add row with index 2
+      </v-button>
+      <v-button @click="deleteRow(2)" light ckass="mb-4">
+        Delete row with index 2
+      </v-button>
+    </template>
+  </v-table>
 </template>

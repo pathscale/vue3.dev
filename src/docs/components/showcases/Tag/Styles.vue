@@ -8,11 +8,9 @@ export default {
 </script>
 
 <template>
-  <section>
-    <v-field grouped group-multiline>
-      <v-tag rounded class="control">
-        Rounded tag label
-      </v-tag>
-    </v-field>
-  </section>
+  <v-field grouped group-multiline>
+    <v-tag rounded class="control">
+      Rounded tag label
+    </v-tag>
+  </v-field>
 </template>

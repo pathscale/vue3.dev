@@ -8,9 +8,7 @@ export default {
 </script>
 
 <template>
-  <section>
-    <v-image src="https://vue3--dev.b-cdn.net/128x128.png"
-             alt="placeholder image"
-             size="is-128x128" rounded centered />
-  </section>
+  <v-image src="https://vue3--dev.b-cdn.net/128x128.png"
+           alt="placeholder image"
+           size="is-128x128" rounded centered />
 </template>

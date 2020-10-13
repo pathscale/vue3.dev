@@ -8,20 +8,18 @@ export default {
 </script>
 
 <template>
-  <section>
-    <v-field grouped group-multiline>
-      <v-tag class="control" type="is-info">
-        Info
-      </v-tag>
-      <v-tag class="control" type="is-success">
-        Success
-      </v-tag>
-      <v-tag class="control" type="is-warning">
-        Warning
-      </v-tag>
-      <v-tag class="control" type="is-danger">
-        Danger
-      </v-tag>
-    </v-field>
-  </section>
+  <v-field grouped group-multiline>
+    <v-tag class="control" type="is-info">
+      Info
+    </v-tag>
+    <v-tag class="control" type="is-success">
+      Success
+    </v-tag>
+    <v-tag class="control" type="is-warning">
+      Warning
+    </v-tag>
+    <v-tag class="control" type="is-danger">
+      Danger
+    </v-tag>
+  </v-field>
 </template>

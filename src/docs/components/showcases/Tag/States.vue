@@ -8,11 +8,9 @@ export default {
 </script>
 
 <template>
-  <section>
-    <v-field grouped group-multiline>
-      <v-tag class="control" disabled>
-        Disabled
-      </v-tag>
-    </v-field>
-  </section>
+  <v-field grouped group-multiline>
+    <v-tag class="control" disabled>
+      Disabled
+    </v-tag>
+  </v-field>
 </template>

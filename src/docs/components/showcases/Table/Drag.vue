@@ -52,15 +52,13 @@ export default {
 </script>
 
 <template>
-  <section>
-    <h4 class="is-size-5 mb-4">
-      Draggable Columns
-    </h4>
-    <v-table :data="datagrid" draggable-columns is-fullwidth />
+  <h4 class="is-size-5 mb-4">
+    Draggable Columns
+  </h4>
+  <v-table :data="datagrid" draggable-columns is-fullwidth />
 
-    <h4 class="is-size-5 mb-4 mt-6">
-      Draggable Rows
-    </h4>
-    <v-table :data="datagrid" draggable-rows is-fullwidth />
-  </section>
+  <h4 class="is-size-5 mb-4 mt-6">
+    Draggable Rows
+  </h4>
+  <v-table :data="datagrid" draggable-rows is-fullwidth />
 </template>

@@ -8,11 +8,9 @@ export default {
 </script>
 
 <template>
-  <section>
-    <v-field>
-      <v-progress :value="40" show-value />
-    </v-field>
-  </section>
+  <v-field>
+    <v-progress :value="40" show-value />
+  </v-field>
 </template>
 
 <style scoped>
