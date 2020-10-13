@@ -58,8 +58,12 @@ export default {
             <v-menu-list label="Getting Started">
               <v-menu-item label="Installation" @click="redirect('installation')" :active="current.installation" />
               <v-menu-item label="Design">
-                <v-menu-item label="Layout" @click="redirect('layout')" :active="current.layout" />
                 <v-menu-item label="Theming" @click="redirect('theming')" :active="current.theming" />
+                <v-menu-item label="Layout">
+                  <v-menu-item label="Columns" @click="redirect('columns')" :active="current.columns" />
+                  <v-menu-item label="Sidebar" @click="redirect('sidebar')" :active="current.sidebar" />
+                  <v-menu-item label="Media" @click="redirect('media')" :active="current.media" />
+                </v-menu-item>
               </v-menu-item>
             </v-menu-list>
             <v-menu-list label="Elements">
@@ -102,14 +106,16 @@ export default {
               <v-menu-item label="Accordion" @click="redirect('accordion')" :active="current.accordion" />
               <v-menu-item label="Tabs" @click="redirect('tabs')" :active="current.tabs" />
             </v-menu-list>
-            <v-menu-list label="Layout">
+            <!--
+ <v-menu-list label="Layout">
               <v-menu-item label="Columns" @click="redirect('columns')" :active="current.columns" />
-              <!-- <v-menu-item label="Container" /> -->
+              <v-menu-item label="Container" />
               <v-menu-item label="Sidebar" @click="redirect('sidebar')" :active="current.sidebar" />
-              <!-- <v-menu-item label="Hero" /> -->
-              <!-- <v-menu-item label="Level" /> -->
+              <v-menu-item label="Hero" />
+              <v-menu-item label="Level" />
               <v-menu-item label="Media" @click="redirect('media')" :active="current.media" />
             </v-menu-list>
+-->
           </v-menu>
         </div>
       </v-column>
