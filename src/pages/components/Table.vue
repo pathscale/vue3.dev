@@ -113,7 +113,7 @@ export default {
       </h2>
       <api-section :api="api" />
     </section>
-    <section id="variables" class="pt-4">
+    <section id="variables" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#variables`" class="is-active">#</a> Variables
       </h2>

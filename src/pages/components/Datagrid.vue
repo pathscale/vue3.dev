@@ -41,7 +41,7 @@ export default {
       :component="Showcase"
       :path="router.currentRoute.value.path" />
 
-    <section id="api" class="pt-4">
+    <section id="api" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API
       </h2>

@@ -6,6 +6,7 @@ import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
 import api from '../../docs/components/api/tabs.ts'
 import variables from '../../docs/components/variables/tabs.json'
+
 import Showcase from '../../docs/components/showcases/Tabs.vue'
 import ShowcaseCode from '../../docs/components/raw/Tabs.txt'
 
@@ -35,7 +36,7 @@ export default {
       </h2>
       <api-section :api="api" />
     </section>
-    <section id="variables" class="pt-4">
+    <section id="variables" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#variables`" class="is-active">#</a> Variables
       </h2>

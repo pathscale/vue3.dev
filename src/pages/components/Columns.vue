@@ -8,7 +8,6 @@ import api from '../../docs/components/api/columns.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
 import * as Showcases from '../../docs/components/showcases/Columns'
-
 import ColumnsBasicCode from '../../docs/components/raw/Columns/ColumnsBasic.txt'
 import ColumnsSizesCode from '../../docs/components/raw/Columns/ColumnsSizes.txt'
 import ColumnsOffsetCode from '../../docs/components/raw/Columns/ColumnsOffset.txt'
@@ -88,7 +87,7 @@ export default {
       :code="ColumnsMultilineCode"
       :component="Showcases.ColumnsMultiline"
       :path="router.currentRoute.value.path" />
-    <section id="api" class="pt-4">
+    <section id="api" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API
       </h2>

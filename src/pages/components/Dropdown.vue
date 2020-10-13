@@ -6,6 +6,7 @@ import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
 import api from '../../docs/components/api/dropdown.ts'
 import variables from '../../docs/components/variables/dropdown.json'
+
 import Showcase from '../../docs/components/showcases/Dropdown.vue'
 import ShowcaseCode from '../../docs/components/raw/Dropdown.txt'
 
@@ -29,13 +30,13 @@ export default {
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
     <snippet-section :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
-    <section id="api" class="pt-4">
+    <section id="api" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API
       </h2>
       <api-section :api="api" />
     </section>
-    <section id="variables" class="pt-4">
+    <section id="variables" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#variables`" class="is-active">#</a> Variables
       </h2>

@@ -46,12 +46,6 @@ const routes = [
             meta: metaTags('Installation', 'Install vue3-ui, a vue3 ready components library')
           },
           {
-            name: 'layout',
-            path: 'layout',
-            component: Pages.Layout,
-            meta: metaTags('Layout', 'Vue3-ui presentation layouts')
-          },
-          {
             name: 'theming',
             path: 'theming',
             component: Pages.Theming,
