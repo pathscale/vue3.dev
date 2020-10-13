@@ -29,22 +29,11 @@ export default {
     </p>
 
     <h4 class="title is-4 mt-6">
-      Plug your own styles
+      Vue3-ui CSS package
     </h4>
 
     <p>
-      Vue3-ui does not ship with any css, instead our components ship with css classes that you can style freely.
-    </p>
-
-    <h4 class="title is-4 mt-6">
-      Optional css package
-    </h4>
-
-    <p>
-      You can add styles to vue3-ui very quickly by installing our custom css package.
-      <br />
-      <br />
-      It has been developed to style the same class names that vue3-ui components export. It's a perfect match.
+      You can add styles to vue3-ui quickly by installing our custom css package.
     </p>
 
     <h5 class="title is-5 mt-6">
