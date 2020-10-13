@@ -92,7 +92,7 @@ export default {
           <img :src="logo" alt="revenge logo" />
         </v-navbar-item>
       </template>
-      <template #end>
+      <template #start>
         <v-navbar-item
           class="mx-3 is-size-5 py-4 has-text-centered"
           tag="router-link"
@@ -113,13 +113,8 @@ export default {
           class="mx-3 is-size-5 py-4 has-text-centered">
           Demo
         </v-navbar-item>
-        <!--
-        <v-navbar-item
-          class="mx-3 is-size-5 py-4 has-text-centered"
-          @click="toggleLanguageMenu">
-          {{ intl.$ts(`language`) }}: {{ languages[intl.locale.value] }}
-        </v-navbar-item>
-        -->
+      </template>
+      <template #end>
         <v-navbar-item
           tag="div"
           class="mx-3 is-size-5 py-4 has-text-centered">

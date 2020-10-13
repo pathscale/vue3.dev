@@ -44,8 +44,11 @@ body {
   height: 4px;
 }
 
+.navbar-start {
+  margin-left: auto !important;
+}
+
 .navbar-end {
-  margin-left: 0px !important;
   margin-right: auto;
 }
 
