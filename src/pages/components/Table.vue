@@ -2,8 +2,9 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import api from '../../docs/components/api/table.ts'
 import { SnippetSection, ApiSection } from '../../components'
+
+import api from '../../docs/components/api/table.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
 import * as Showcases from '../../docs/components/showcases/Table'

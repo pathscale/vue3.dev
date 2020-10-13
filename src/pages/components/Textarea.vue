@@ -2,8 +2,9 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import api from '../../docs/components/api/textarea.ts'
 import { SnippetSection, ApiSection } from '../../components'
+
+import api from '../../docs/components/api/textarea.ts'
 
 import Showcase from '../../docs/components/showcases/Textarea.vue'
 import ShowcaseCode from '../../docs/components/raw/Textarea.txt'

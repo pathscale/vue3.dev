@@ -1,10 +1,8 @@
 <script>
-import { useI18n } from 'vue-composable'
-
 import { useRouter } from 'vue-router'
-import api from '../../docs/components/api/accordion.ts'
 import { SnippetSection, ApiSection } from '../../components'
 
+import api from '../../docs/components/api/accordion.ts'
 import Showcase from '../../docs/components/showcases/Accordion.vue'
 import ShowcaseCode from '../../docs/components/raw/Accordion.txt'
 
@@ -12,12 +10,8 @@ export default {
   name: 'DevPageAccordion',
   components: { SnippetSection, ApiSection },
   setup() {
-    const intl = useI18n()
     const router = useRouter()
-    return { intl, api, router,
-      Showcase,
-      ShowcaseCode
-    }
+    return { api, router, Showcase, ShowcaseCode }
   }
 }
 </script>

@@ -2,8 +2,9 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import api from '../../docs/components/api/input.ts'
 import { SnippetSection, ApiSection } from '../../components'
+
+import api from '../../docs/components/api/input.ts'
 
 import Showcase from '../../docs/components/showcases/Input.vue'
 import ShowcaseCode from '../../docs/components/raw/Input.txt'

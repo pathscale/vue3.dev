@@ -2,8 +2,9 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import api from '../../docs/components/api/navbar.ts'
 import { SnippetSection, ApiSection } from '../../components'
+
+import api from '../../docs/components/api/navbar.ts'
 
 import Showcase from '../../docs/components/showcases/Navbar.vue'
 import ShowcaseCode from '../../docs/components/raw/Navbar.txt'

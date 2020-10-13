@@ -2,8 +2,9 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import api from '../../docs/components/api/menu.ts'
 import { SnippetSection, ApiSection } from '../../components'
+
+import api from '../../docs/components/api/menu.ts'
 
 import Showcase from '../../docs/components/showcases/Menu.vue'
 import ShowcaseCode from '../../docs/components/raw/Menu.txt'

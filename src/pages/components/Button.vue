@@ -2,10 +2,10 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import api from '../../docs/components/api/button.ts'
-import variables from '../../docs/components/variables/button.json'
 import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
+import api from '../../docs/components/api/button.ts'
+import variables from '../../docs/components/variables/button.json'
 import Showcase from '../../docs/components/showcases/Button.vue'
 import ShowcaseCode from '../../docs/components/raw/Button.txt'
 
