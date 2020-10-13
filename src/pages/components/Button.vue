@@ -4,7 +4,6 @@ import { useI18n } from 'vue-composable'
 import { useRouter } from 'vue-router'
 import api from '../../docs/components/api/button.ts'
 import variables from '../../docs/components/variables/button.json'
-
 import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
 import Showcase from '../../docs/components/showcases/Button.vue'
