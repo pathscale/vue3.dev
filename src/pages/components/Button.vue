@@ -6,8 +6,13 @@ import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
 import api from '../../docs/components/api/button.ts'
 import variables from '../../docs/components/variables/button.json'
-import Showcase from '../../docs/components/showcases/Button.vue'
-import ShowcaseCode from '../../docs/components/raw/Button.txt'
+
+// eslint-disable-next-line no-restricted-syntax -- Using comprehensively
+import * as Showcases from '../../docs/components/showcases/Button'
+import ColorsCode from '../../docs/components/raw/Button/ButtonColors.txt'
+import StylesCode from '../../docs/components/raw/Button/ButtonStyles.txt'
+import SizesCode from '../../docs/components/raw/Button/ButtonSizes.txt'
+import StatesCode from '../../docs/components/raw/Button/ButtonStates.txt'
 
 export default {
   name: 'DevPageButton',
@@ -15,7 +20,8 @@ export default {
   setup() {
     const intl = useI18n()
     const router = useRouter()
-    return { intl, api, variables, router, Showcase, ShowcaseCode }
+
+    return { intl, api, variables, router, Showcases, ColorsCode, StylesCode, SizesCode, StatesCode }
   }
 }
 </script>
@@ -28,7 +34,27 @@ export default {
     <p>
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
-    <snippet-section :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Colors"
+      :code="ColorsCode"
+      :component="Showcases.ButtonColors"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Styles"
+      :code="StylesCode"
+      :component="Showcases.ButtonStyles"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="States"
+      :code="StatesCode"
+      :component="Showcases.ButtonStates"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Sizes"
+      :code="SizesCode"
+      :component="Showcases.ButtonSizes"
+      :path="router.currentRoute.value.path" />
+
     <section id="api" class="pt-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API
