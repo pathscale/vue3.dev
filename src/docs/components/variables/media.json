@@ -1,0 +1,5 @@
+{
+    "$media-border-color": "$border",
+    "$media-spacing": "1rem",
+    "$media-spacing-large": "1.5rem"
+}
