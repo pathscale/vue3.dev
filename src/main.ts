@@ -8,6 +8,7 @@ import './assets/styles/index.css'
 // import "./assets/styles/scrollbar.css";
 import './assets/styles/carousel.css'
 import './assets/styles/icons.css'
+import './assets/styles/flexbox.css'
 
 import { router } from './router/index.js'
 

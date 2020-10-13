@@ -26,9 +26,16 @@ export default {
 <template>
   <div>
     <div v-for="(item, key) in api" :key="key">
-      <p class="pb-4 is-size-4 pt-4">
-        {{ item.title }}
-      </p>
+      <div class="is-aligned-center">
+        <p class="pb-4 is-size-4 pt-4">
+          {{ item.title }}
+        </p>
+        <a class="mx-4" v-if="item.github" :href="item.github" target="_blank" rel="noopener">
+          <i class="icon icon-github is-medium" />
+        </a>
+      </div>
+
+
 
       <v-tabs v-model="tab[key]" type="is-boxed">
         <v-tab label="Properties" v-if="item.props">

@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VButton',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Button/Button.vue',
       props: [
         {
           name: 'type',
