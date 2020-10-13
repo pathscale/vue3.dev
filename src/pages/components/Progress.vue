@@ -33,11 +33,11 @@ export default {
     <p>
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
-    <snippet-section :code="ShowcaseCode" :component="Showcases.Colors" :path="router.currentRoute.value.path" />
-    <snippet-section :code="ShowcaseCode" :component="Showcases.Indeterminate" :path="router.currentRoute.value.path" />
-    <snippet-section :code="ShowcaseCode" :component="Showcases.Percent" :path="router.currentRoute.value.path" />
-    <snippet-section :code="ShowcaseCode" :component="Showcases.Sizes" :path="router.currentRoute.value.path" />
-    <snippet-section :code="ShowcaseCode" :component="Showcases.Value" :path="router.currentRoute.value.path" />
+    <snippet-section :code="ColorsCode" :component="Showcases.Colors" :path="router.currentRoute.value.path" />
+    <snippet-section :code="IndeterminateCode" :component="Showcases.Indeterminate" :path="router.currentRoute.value.path" />
+    <snippet-section :code="PercentCode" :component="Showcases.Percent" :path="router.currentRoute.value.path" />
+    <snippet-section :code="SizesCode" :component="Showcases.Sizes" :path="router.currentRoute.value.path" />
+    <snippet-section :code="ValueCode" :component="Showcases.Value" :path="router.currentRoute.value.path" />
     <section id="api" class="pt-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API
