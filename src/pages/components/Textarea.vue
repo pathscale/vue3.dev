@@ -6,8 +6,13 @@ import { SnippetSection, ApiSection } from '../../components'
 
 import api from '../../docs/components/api/textarea.ts'
 
-import Showcase from '../../docs/components/showcases/Textarea.vue'
-import ShowcaseCode from '../../docs/components/raw/Textarea.txt'
+// eslint-disable-next-line no-restricted-syntax -- using all
+import * as Showcases from '../../docs/components/showcases/Textarea'
+import ColorCode from '../../docs/components/raw/Textarea/Color.txt'
+import SizeCode from '../../docs/components/raw/Textarea/Size.txt'
+import LoadingCode from '../../docs/components/raw/Textarea/Loading.txt'
+import FocusedCode from '../../docs/components/raw/Textarea/Focused.txt'
+import CounterCode from '../../docs/components/raw/Textarea/Counter.txt'
 
 export default {
   name: 'DevPageTextarea',
@@ -15,7 +20,7 @@ export default {
   setup() {
     const intl = useI18n()
     const router = useRouter()
-    return { intl, api, router, Showcase, ShowcaseCode }
+    return { intl, api, router, Showcases, ColorCode, SizeCode, LoadingCode, FocusedCode, CounterCode }
   }
 }
 </script>
@@ -28,7 +33,31 @@ export default {
     <p>
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
-    <snippet-section :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Color"
+      :code="ColorCode"
+      :component="Showcases.Color"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Size"
+      :code="SizeCode"
+      :component="Showcases.Size"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Loading"
+      :code="LoadingCode"
+      :component="Showcases.Loading"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Focused"
+      :code="FocusedCode"
+      :component="Showcases.Focused"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Counter"
+      :code="CounterCode"
+      :component="Showcases.Counter"
+      :path="router.currentRoute.value.path" />
     <section id="api" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API
