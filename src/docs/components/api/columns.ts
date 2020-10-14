@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VColumns',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Columns/Columns.vue',
       props: [
         {
           name: 'mobile',
@@ -43,6 +44,7 @@ const api =
     },
     {
       title: 'VColumn',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Columns/Column.vue',
       props: [
         {
           name: 'size',

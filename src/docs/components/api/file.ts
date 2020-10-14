@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VFile',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/FileInput/FileInput.vue',
       props: [
         {
           name: 'has-name',

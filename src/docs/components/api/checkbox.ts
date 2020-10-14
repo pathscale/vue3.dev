@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VCheckbox',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Checkbox/Checkbox.vue',
       props: [
         {
           name: 'v-model',

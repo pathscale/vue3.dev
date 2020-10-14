@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VField',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Field/Field.vue',
       props: [
         {
           name: 'type',

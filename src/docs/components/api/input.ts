@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VInput',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Input/Input.vue',
       props: [
         {
           name: 'v-model',

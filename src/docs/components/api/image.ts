@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VImage',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Image/Image.vue',
       props: [
         {
           name: 'src',

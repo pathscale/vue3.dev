@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VSelect',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Select/Select.vue',
       props: [
         {
           name: 'v-model',

@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VProgress',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Progress/Progress.vue',
       props: [
         {
           name: 'type',

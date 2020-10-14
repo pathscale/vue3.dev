@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VSwitch',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Switch/Switch.vue',
       props: [
         {
           name: 'v-model',

@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VTextarea',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Textarea/Textarea.vue',
       props: [
         {
           name: 'v-model',
