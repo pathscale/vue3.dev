@@ -1,5 +1,5 @@
 <script>
-import { /* VButton, VNavbarDropdown, */ VNavbar, VNavbarItem } from '@pathscale/vue3-ui'
+import { VNavbar, VNavbarItem } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 
 import { ref, watchEffect } from 'vue'
@@ -10,7 +10,7 @@ import logo from '../../assets/svg/vue3-logo.svg'
 export default {
   name: 'DevNavbar',
   components: {
-    /* VButton, VNavbarDropdown, */ VNavbar, VNavbarItem
+    VNavbar, VNavbarItem
   },
   setup(props, { emit }) {
     const languages = {
@@ -23,6 +23,10 @@ export default {
     const isMenuOpen = ref(false)
     const showLanguageMenu = ref(false)
     const intl = useI18n()
+
+    const closeMenu = () => {
+      showLanguageMenu.value = false
+    }
 
     window.mobileCheck = function() {
       let check = false;
@@ -64,7 +68,8 @@ export default {
       toggleLanguageMenu,
       changeLanguage,
       getLanguageMenuHeight,
-      showLanguageMenu
+      showLanguageMenu,
+      closeMenu
     }
   }
 }
@@ -98,6 +103,7 @@ export default {
           tag="router-link"
           :to="{name: 'home'}"
           :class="{'is-active-item': isActive('home') }"
+          @click="closeMenu"
           :active="isActive('home')">
           {{ intl.$ts('home.title') }}
         </v-navbar-item>
@@ -106,11 +112,13 @@ export default {
           tag="router-link"
           :to="{name: 'documentation'}"
           :class="{'is-active-item': isActive('documentation') }"
+          @click="closeMenu"
           :active="isActive('documentation')">
           Documentation
         </v-navbar-item>
         <v-navbar-item
-          class="mx-3 is-size-5 py-4 has-text-centered">
+          class="mx-3 is-size-5 py-4 has-text-centered"
+          @click="closeMenu">
           Demo
         </v-navbar-item>
       </template>
