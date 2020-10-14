@@ -21,16 +21,4 @@ export default {
   <v-field label="Password">
     <v-input color="is-success" type="password" />
   </v-field>
-
-  <v-field label="Sizes">
-    <v-input color="is-warning" class="is-small" />
-  </v-field>
-
-  <v-field>
-    <v-input color="is-danger" class="is-large" />
-  </v-field>
-
-  <v-field label="Loading">
-    <v-input loading />
-  </v-field>
 </template>
