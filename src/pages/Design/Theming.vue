@@ -89,7 +89,7 @@ export default {
   </div>
 
   <h6 class="title is-6 mt-6">
-    Swapping css variables using <a href="https://pikax.me/vue-composable/">Vue composable</a>
+    Swapping css variables using Vue composable
   </h6>
 
   <p class="mb-4">
