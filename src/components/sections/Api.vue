@@ -31,11 +31,9 @@ export default {
           {{ item.title }}
         </p>
         <a class="mx-4" v-if="item.github" :href="item.github" target="_blank" rel="noopener">
-          <i class="icon icon-github is-medium" />
+          <i class="icon icon-github" />
         </a>
       </div>
-
-
 
       <v-tabs v-model="tab[key]" type="is-boxed">
         <v-tab label="Properties" v-if="item.props">
