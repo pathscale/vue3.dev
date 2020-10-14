@@ -14,6 +14,8 @@ export default {
 
     function close() {
       state.open = false
+      state.overlay = false
+      state.reduced = false
     }
 
     return { state, close }
@@ -26,10 +28,10 @@ export default {
     <v-switch v-model="state.open" type="is-dark">
       Open
     </v-switch>
-    <v-switch v-model="state.overlay" type="is-dark">
+    <v-switch v-model="state.overlay" type="is-dark" v-if="state.open">
       Overlay
     </v-switch>
-    <v-switch v-model="state.reduced" type="is-dark">
+    <v-switch v-model="state.reduced" type="is-dark" v-if="state.open">
       Reduced
     </v-switch>
   </v-field>
