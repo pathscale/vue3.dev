@@ -20,7 +20,7 @@ export default {
     <v-tab label="Thursday" disabled />
   </v-tabs>
 
-  <v-tabs v-model="activeTab" size="is-normal">
+  <v-tabs v-model="activeTab" size="is-medium">
     <v-tab label="Monday" />
     <v-tab label="Tuesday" />
     <v-tab label="Wednesday" />
