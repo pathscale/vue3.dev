@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VModal',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Modal/Modal.vue',
       props: [
         {
           name: 'v-model',

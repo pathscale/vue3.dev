@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VBreadcrumb',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Breadcrumb/Breadcrumb.vue',
       props: [
         {
           name: 'alignment',
@@ -25,6 +26,7 @@ const api =
     },
     {
       title: 'VBreadcrumbItem',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Breadcrumb/BreadcrumbItem.vue',
       props: [
         {
           name: 'tag',

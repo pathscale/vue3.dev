@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VTag',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Tag/Tag.vue',
       props: [
         {
           name: 'type',

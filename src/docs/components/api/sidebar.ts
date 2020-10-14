@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VSidebar',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Sidebar/Sidebar.vue',
       props: [
         {
           name: 'open',

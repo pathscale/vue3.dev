@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VMenu',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Menu/Menu.vue',
       slots: [
         {
           name: 'default',
@@ -33,6 +34,7 @@ const api =
     },
     {
       title: 'VMenuItem',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Menu/MenuItem.vue',
       props: [
         {
           name: 'label',

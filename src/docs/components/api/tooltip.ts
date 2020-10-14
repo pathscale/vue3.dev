@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VTooltip',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Tooltip/Tooltip.vue',
       props: [
         {
           name: 'active',

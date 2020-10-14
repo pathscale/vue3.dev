@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VNavbar',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Navbar/Navbar.vue',
       props: [
         {
           name: 'v-model',
@@ -63,6 +64,7 @@ const api =
     },
     {
       title: 'VNavbarItem',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Navbar/NavbarItem.vue',
       props: [
         {
           name: 'tag',
@@ -86,6 +88,7 @@ const api =
     },
     {
       title: 'VNavbarDropdown',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Navbar/NavbarDropdown.vue',
       props: [
         {
           name: 'label',

@@ -2,6 +2,7 @@ const api =
     [
       {
         title: 'VDropdown',
+        github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Dropdown/Dropdown.vue',
         props: [
           {
             name: 'v-model',
@@ -78,6 +79,7 @@ const api =
       },
       {
         title: 'VDropdownItem',
+        github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Dropdown/DropdownItem.vue',
         props: [
           {
             name: 'value',

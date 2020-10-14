@@ -2,6 +2,7 @@ const api =
   [
     {
       title: 'VTable',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Table/Table.vue',
       props: [
         {
           name: 'data',

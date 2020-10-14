@@ -2,6 +2,7 @@ const api =
     [
       {
         title: 'VAccordion',
+        github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Accordion/Accordion.vue',
         props: [
           {
             name: 'is-horizontal',
@@ -66,6 +67,7 @@ const api =
       },
       {
         title: 'VAccordionMenu',
+        github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Accordion/AccordionMenu.vue',
         slots: [
           {
             name: 'label',

@@ -2,6 +2,7 @@ const api =
 [
   {
     title: 'VTabs',
+    github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Tabs/Tabs.vue',
     props: [
       {
         name: 'v-model',
@@ -55,6 +56,7 @@ const api =
   },
   {
     title: 'VTab',
+    github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Tabs/Tab.vue',
     props: [
       {
         name: 'label',
