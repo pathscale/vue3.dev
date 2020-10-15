@@ -1,25 +1,13 @@
 <script>
-import { VBreadcrumb, VBreadcrumbItem /* , VField */ } from '@pathscale/vue3-ui'
+import { VBreadcrumb, VBreadcrumbItem } from '@pathscale/vue3-ui'
 
 export default {
   name: 'DevShowcaseBreadcrumb',
-  components: { VBreadcrumb, VBreadcrumbItem /* , VField */ }
+  components: { VBreadcrumb, VBreadcrumbItem }
 }
 </script>
 
 <template>
-  <v-breadcrumb>
-    <v-breadcrumb-item>
-      Home
-    </v-breadcrumb-item>
-    <v-breadcrumb-item>
-      Documentation
-    </v-breadcrumb-item>
-    <v-breadcrumb-item active>
-      Breadcrumb
-    </v-breadcrumb-item>
-  </v-breadcrumb>
-
   <v-breadcrumb separator="has-dot-separator">
     <v-breadcrumb-item>
       Home
@@ -44,7 +32,7 @@ export default {
     </v-breadcrumb-item>
   </v-breadcrumb>
 
-  <v-breadcrumb size="is-medium" separator="has-bullet-separator">
+  <v-breadcrumb separator="has-bullet-separator">
     <v-breadcrumb-item>
       Home
     </v-breadcrumb-item>
@@ -56,7 +44,7 @@ export default {
     </v-breadcrumb-item>
   </v-breadcrumb>
 
-  <v-breadcrumb size="is-large" separator="has-succeeds-separator">
+  <v-breadcrumb separator="has-succeeds-separator">
     <v-breadcrumb-item>
       Home
     </v-breadcrumb-item>
