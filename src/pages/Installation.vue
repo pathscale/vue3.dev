@@ -76,6 +76,6 @@ export default {
       Update <b>HelloWord.vue </b> with the bottom snippet code, you should get a similar output in http://localhost:8080/
     </div>
 
-    <snippet-section :title="null" :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
+    <snippet-section title="" :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
   </div>
 </template>
