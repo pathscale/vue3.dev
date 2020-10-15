@@ -3,6 +3,7 @@ export { default as Documentation } from './Documentation.vue'
 export { default as Installation } from './Installation.vue'
 export { default as Validation } from './Validation.vue'
 export { default as Theming } from './Design/Theming.vue'
+export { default as Appstate } from './Appstate.vue'
 
 export { default as Breadcrumb } from './components/Breadcrumb.vue'
 export { default as Button } from './components/Button.vue'
