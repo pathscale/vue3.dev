@@ -81,7 +81,7 @@ export default {
                 <v-menu-item label="Tag" @click="redirect('tag')" :active="current.tag" />
                 <v-menu-item label="Tooltip" @click="redirect('tooltip')" :active="current.tooltip" />
               </v-menu-item>
-              <v-menu-item label="Form controls" expanded>
+              <v-menu-item label="Form" expanded>
                 <v-menu-item label="Input" @click="redirect('input')" :active="current.input" />
                 <v-menu-item label="Textarea" @click="redirect('textarea')" :active="current.textarea" />
                 <v-menu-item label="Select" @click="redirect('select')" :active="current.select" />
@@ -90,6 +90,7 @@ export default {
                 <v-menu-item label="Switch" @click="redirect('switch')" :active="current.switch" />
                 <v-menu-item label="Field" @click="redirect('field')" :active="current.field" />
                 <v-menu-item label="Checkbox" @click="redirect('checkbox')" :active="current.checkbox" />
+                <v-menu-item label="Validation" @click="redirect('validation')" :active="current.validation" />
               </v-menu-item>
               <v-menu-item label="Components" expanded>
                 <v-menu-item label="Breadcrumb" @click="redirect('breadcrumb')" :active="current.breadcrumb" />

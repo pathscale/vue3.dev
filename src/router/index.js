@@ -118,6 +118,12 @@ const routes = [
             meta: metaTags('Field', 'The field container is a simple container for: a text label; a form control; an optional help text')
           },
           {
+            name: 'validation',
+            path: 'validation',
+            component: Pages.Validation,
+            meta: metaTags('Validation', 'Usage of validators with vue3-ui form components')
+          },
+          {
             name: 'breadcrumb',
             path: 'breadcrumb',
             component: Pages.Breadcrumb,
