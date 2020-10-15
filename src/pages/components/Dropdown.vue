@@ -7,8 +7,15 @@ import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 import api from '../../docs/components/api/dropdown.ts'
 import variables from '../../docs/components/variables/dropdown.json'
 
-import Showcase from '../../docs/components/showcases/Dropdown.vue'
-import ShowcaseCode from '../../docs/components/raw/Dropdown.txt'
+// eslint-disable-next-line no-restricted-syntax -- Using comprehensively
+import * as Showcases from '../../docs/components/showcases/Dropdown'
+
+import DropdownBasicCode from '../../docs/components/raw/Dropdown/DropdownBasic.txt'
+import DropdownHoverableCode from '../../docs/components/raw/Dropdown/DropdownHoverable.txt'
+import DropdownPositionCode from '../../docs/components/raw/Dropdown/DropdownPosition.txt'
+import DropdownDisabledCode from '../../docs/components/raw/Dropdown/DropdownDisabled.txt'
+import DropdownLinkCode from '../../docs/components/raw/Dropdown/DropdownLink.txt'
+import DropdownVModelCode from '../../docs/components/raw/Dropdown/DropdownVModel.txt'
 
 export default {
   name: 'DevPageDropdown',
@@ -16,7 +23,19 @@ export default {
   setup() {
     const intl = useI18n()
     const router = useRouter()
-    return { intl, api, variables, router, Showcase, ShowcaseCode }
+    return {
+      intl,
+      api,
+      variables,
+      router,
+      Showcases,
+      DropdownBasicCode,
+      DropdownHoverableCode,
+      DropdownPositionCode,
+      DropdownDisabledCode,
+      DropdownLinkCode,
+      DropdownVModelCode
+    }
   }
 }
 </script>
@@ -29,7 +48,36 @@ export default {
     <p>
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
-    <snippet-section :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Basic"
+      :code="DropdownBasicCode"
+      :component="Showcases.DropdownBasic"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Hoverable"
+      :code="DropdownHoverableCode"
+      :component="Showcases.DropdownHoverable"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Disabled"
+      :code="DropdownDisabledCode"
+      :component="Showcases.DropdownDisabled"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Position"
+      :code="DropdownPositionCode"
+      :component="Showcases.DropdownPosition"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="Link"
+      :code="DropdownLinkCode"
+      :component="Showcases.DropdownLink"
+      :path="router.currentRoute.value.path" />
+    <snippet-section
+      title="VModel"
+      :code="DropdownVModelCode"
+      :component="Showcases.DropdownVModel"
+      :path="router.currentRoute.value.path" />
     <section id="api" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API
