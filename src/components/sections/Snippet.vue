@@ -52,7 +52,7 @@ export default {
   },
   setup(props) {
     const getDemoLink = () => {
-      return `${props.path}#demo`
+      return `${props.path}#${props.title.toLowerCase()}`
     }
 
     // arrays
@@ -72,7 +72,7 @@ export default {
 </script>
 
 <template>
-  <div class="box">
+  <div class="box" :id="title.toLowerCase()">
     <h1 v-if="title" class="title is-size-4 mt-4">
       <a :href="getDemoLink()" class="is-active">#</a> {{ title }}
     </h1>
