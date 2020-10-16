@@ -47,5 +47,11 @@ export default {
       </h2>
       <api-section :api="api" />
     </section>
+    <section id="datagrid" class="py-4">
+      <h2 class="title is-4">
+        <a :href="`${router.currentRoute.value.path}#datagrid`" class="is-active">#</a> Datagrid
+      </h2>
+      Check out <a @click="router.push({name: 'table'})">here</a> the Table API documentation
+    </section>
   </div>
 </template>
