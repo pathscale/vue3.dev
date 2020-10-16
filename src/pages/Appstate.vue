@@ -29,12 +29,11 @@ export default {
       {{ router.currentRoute.value.meta.title }}
     </h1>
     <p>
-      {{ router.currentRoute.value.meta.metaTags[0].content }}
+      {{ router.currentRoute.value.meta.metaTags[0].content }} inspired by <a href="https://hookstate.js.org/">Hookstate</a>
     </p>
 
     <snippet-section title="Create state" :code="CreateCode" :component="Showcases.Create" :path="router.currentRoute.value.path" />
     <snippet-section title="Update state" :code="UpdateCode" :component="Showcases.Update" :path="router.currentRoute.value.path" />
-
     <section id="api" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API

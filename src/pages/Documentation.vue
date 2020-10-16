@@ -65,10 +65,12 @@ export default {
                   <v-menu-item label="Media" @click="redirect('media')" :active="current.media" />
                 </v-menu-item>
               </v-menu-item>
+              <v-menu-item label="Appstate" @click="redirect('appstate')" :active="current.appstate" />
+            </v-menu-list>
+            <v-menu-list label="UI Components">
               <v-menu-item label="Elements" expanded>
                 <!-- <v-menu-item label="Typography" /> -->
                 <!-- <v-menu-item label="Box" /> -->
-                <v-menu-item label="Appstate" @click="redirect('appstate')" :active="current.appstate" />
                 <v-menu-item label="Button" @click="redirect('button')" :active="current.button" />
                 <v-menu-item label="Datagrid" @click="redirect('datagrid')" :active="current.datagrid" />
                 <!-- <v-menu-item label="Content" /> -->

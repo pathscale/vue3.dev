@@ -72,7 +72,7 @@ export default {
 </script>
 
 <template>
-  <div class="box" :id="title.toLowerCase()">
+  <div class="box mt-6" :id="title.toLowerCase()">
     <h1 v-if="title" class="title is-size-4 mt-4">
       <a :href="getDemoLink()" class="is-active">#</a> {{ title }}
     </h1>
