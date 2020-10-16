@@ -1,3 +1,5 @@
-*
-!/*.js
-!/*.json
+/src
+/public
+/externs
+/dist
+/*.html

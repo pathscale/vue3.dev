@@ -19,6 +19,7 @@ import livereload from 'rollup-plugin-livereload'
 import compiler from '@ampproject/rollup-plugin-closure-compiler'
 import sucrase from '@rollup/plugin-sucrase'
 import vue3uiPurge from '@pathscale/rollup-plugin-vue3-ui-css-purge'
+// import vue3svg from '@pathscale/vue3-svg-icons'
 import tsickle from '@pathscale/rollup-plugin-tsickle'
 import image from '@rollup/plugin-image'
 import visualizer from 'rollup-plugin-visualizer'
@@ -170,6 +171,7 @@ const config = [
       }),
       commonjs(),
 
+      // vue3svg(),
       prod && vue3uiPurge(),
       vue(),
 
