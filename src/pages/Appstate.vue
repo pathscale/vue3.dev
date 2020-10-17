@@ -29,7 +29,7 @@ export default {
       {{ router.currentRoute.value.meta.title }}
     </h1>
     <p>
-      {{ router.currentRoute.value.meta.metaTags[0].content }} inspired by <a href="https://hookstate.js.org/">Hookstate</a>
+      {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
 
     <snippet-section title="Create state" :code="CreateCode" :component="Showcases.Create" :path="router.currentRoute.value.path" />
