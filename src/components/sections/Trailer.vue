@@ -3,11 +3,10 @@ import { VButton, VColumns, VColumn } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 
 import 'vue3-carousel/dist/carousel.css'
-// import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 export default {
   name: 'DevTrailer',
-  components: { VButton, VColumns, VColumn /* , Carousel, Slide, Pagination, Navigation */ },
+  components: { VButton, VColumns, VColumn },
   setup() {
     const intl = useI18n()
     return { intl }

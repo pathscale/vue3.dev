@@ -65,8 +65,10 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
     })
     .join('\n')
   const name = 'Vue3-ui'
-  const description = 'Very clean Vue3 components styled with love and care. | Vue3-ui'
-  const socialTitle = 'Very clean Vue3 components styled with love and care. | Vue3-ui'
+  const description =
+    'Very clean Vue3 components styled with love and care designed to integrate beautifully with Bulma CSS | Vue3-ui'
+  const socialTitle =
+    'Very clean Vue3 components styled with love and care designed to integrate beautifully with Bulma CSS | Vue3-ui'
   const url = 'https://vue3--dev.b-cdn.net'
   const imageUrl = `${url}/vue3-ui.png`
 
