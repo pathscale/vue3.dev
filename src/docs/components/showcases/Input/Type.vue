@@ -1,5 +1,4 @@
 <script>
-
 import { ref } from 'vue'
 import { VField, VInput } from '@pathscale/vue3-ui'
 
