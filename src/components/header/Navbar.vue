@@ -55,6 +55,13 @@ export default {
       intl.locale.value = language
     }
 
+    function redirect(name) {
+      router.push({
+        name
+      })
+      closeMenu()
+    }
+
     function getLanguageMenuHeight() {
       return `height: ${showLanguageMenu.value ? 40 : 0}px `
     }
@@ -69,7 +76,8 @@ export default {
       changeLanguage,
       getLanguageMenuHeight,
       showLanguageMenu,
-      closeMenu
+      closeMenu,
+      redirect
     }
   }
 }
@@ -93,26 +101,22 @@ export default {
     </div>
     <v-navbar v-model="isMenuOpen">
       <template #brand>
-        <v-navbar-item class="ml-6" tag="router-link" :to="{ name: 'home' }">
-          <img :src="logo" alt="revenge logo" />
+        <v-navbar-item class="ml-6" @click="redirect('home')">
+          <img :src="logo" alt="vue3-ui logo" />
         </v-navbar-item>
       </template>
       <template #start>
         <v-navbar-item
           class="mx-3 is-size-5 py-4 has-text-centered"
-          tag="router-link"
-          :to="{name: 'home'}"
           :class="{'is-active-item': isActive('home') }"
-          @click="closeMenu"
+          @click="redirect('home')"
           :active="isActive('home')">
           {{ intl.$ts('home.title') }}
         </v-navbar-item>
         <v-navbar-item
           class="mx-3 is-size-5 py-4 has-text-centered"
-          tag="router-link"
-          :to="{name: 'documentation'}"
           :class="{'is-active-item': isActive('documentation') }"
-          @click="closeMenu"
+          @click="redirect('documentation')"
           :active="isActive('documentation')">
           Documentation
         </v-navbar-item>
