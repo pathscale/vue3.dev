@@ -1,5 +1,5 @@
 <script>
-import { VNavbar, VNavbarItem } from '@pathscale/vue3-ui'
+import { VNavbar, VNavbarItem, VIcon } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 
 import { ref, watchEffect } from 'vue'
@@ -10,7 +10,7 @@ import logo from '../../assets/svg/vue3-logo.svg'
 export default {
   name: 'DevNavbar',
   components: {
-    VNavbar, VNavbarItem
+    VNavbar, VNavbarItem, VIcon
   },
   setup(props, { emit }) {
     const languages = {
@@ -131,10 +131,10 @@ export default {
           tag="div"
           class="mx-3 is-size-5 py-4 has-text-centered">
           <a class="mx-4" href="https://github.com/pathscale/vue3-ui" target="_blank" rel="noopener">
-            <i class="icon icon-github has-text-white is-medium" />
+            <v-icon src="../../assets/icons/github.svg" name="github-icon" bundle="navbar-icons" />
           </a>
           <a class="mx-4" href="https://discord.com/invite/8ygCBpS" target="_blank" rel="noopener">
-            <i class="icon icon-discord has-text-white is-medium" />
+            <v-icon src="../../assets/icons/discord.svg" name="discord-icon" bundle="navbar-icons" />
           </a>
         </v-navbar-item>
       </template>
