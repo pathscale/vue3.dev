@@ -9,9 +9,9 @@ export default {
 
 <template>
   <v-field>
-    <v-accordion header-is-trigger background="#d9dedb">
+    <v-accordion header-is-trigger>
       <template #header>
-        <div class="py-3 px-3">
+        <div class="py-3 px-3 has-text-danger">
           Click me
         </div>
       </template>
