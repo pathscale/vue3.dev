@@ -19,7 +19,8 @@ export default {
     const intl = useI18n()
     const router = useRouter()
     const state = reactive({
-      cli: false
+      cli: false,
+      rollup: true
     })
 
     const cliIcon = computed(() => {
