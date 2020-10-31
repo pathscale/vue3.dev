@@ -22,3 +22,6 @@
     width: 32px;
 }
 
+.icon-github {
+    background-image: url("../icons/github.svg")
+}
