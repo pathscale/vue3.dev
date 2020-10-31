@@ -58,6 +58,12 @@ const routes = [
             meta: metaTags('Theming', 'Customize vue3-ui and make it your own')
           },
           {
+            name: 'bulma',
+            path: 'bulma',
+            component: Pages.Bulma,
+            meta: metaTags('Bulma', 'Vue3-ui is set of Vue components designed to work great with Bulma, so you can use any css framework\'s feature, plus all our components.')
+          },
+          {
             name: 'button',
             path: 'button',
             component: Pages.Button,
