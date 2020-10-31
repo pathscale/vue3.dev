@@ -41,9 +41,26 @@ export default {
     <h1 class="title">
       {{ router.currentRoute.value.meta.title }}
     </h1>
-    <p>
-      {{ router.currentRoute.value.meta.metaTags[0].content }}
-    </p>
+    <br />
+
+    <div class="content">
+      <p>
+        There are several ways to get started with Vue3-ui. You can either:
+      </p>
+
+      <ol>
+        <li>
+          use the <a href="https://github.com/skaptox/demo" target="_blank" rel="noopener">Getting Started</a> repository to get the latest template version based in
+          <a href="https://rollupjs.org/" target="_blank" rel="noopener">Rollup</a>
+        </li>
+        <li>
+          use npm to install the <a href="https://www.npmjs.com/package/@pathscale/vue3-ui" target="_blank" rel="noopener">@pathscale/vue3-ui</a> package in an Vue3 App generared by
+          <a href="https://github.com/vuejs/vue-cli" target="_blank" rel="noopener">Vue CLI</a>
+        </li>
+      </ol>
+    </div>
+
+
     <v-accordion :expanded="state.rollup" header-is-trigger>
       <template #header>
         <div class="is-inline-flex mt-6" @click="toggle('rollup')">
