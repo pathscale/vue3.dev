@@ -73,9 +73,34 @@ export default {
       </template>
       <template #content>
         <div class="content">
-          Instructions here
+          <a href="https://rollupjs.org/" target="_blank" rel="noopener">Rollup</a> is a module bundler for JavaScript which compiles small pieces of code into something larger and more complex, such as a library or application.
+          <br /> It uses the standardized ES module format for code, instead of previous idiosyncratic solutions such as CommonJS and AMD with less Complexity, frustration and bloating than Webpack
         </div>
-        <snippet-section title="" :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
+
+        <div class="subtitle content">
+          Clone the Demo app from Github
+        </div>
+        <div class="box has-background-light is-family-code">
+          git clone https://github.com/skaptox/demo --depth=1
+          <br />
+          cd demo
+        </div>
+        <div class="subtitle content">
+          Install packages
+        </div>
+        <div class="box has-background-light is-family-code">
+          npm i
+          <br />
+        </div>
+        <div class="subtitle content">
+          Run App
+        </div>
+        <div class="box has-background-light is-family-code">
+          npm start
+        </div>
+        <div class="content">
+          You should get a functional Button showcase in <a href="http://localhost:5000/" target="_blank" rel="noopener">http://localhost:5000/</a>
+        </div>
       </template>
     </v-accordion>
     <v-accordion :expanded="state.cli" header-is-trigger>
@@ -128,7 +153,7 @@ export default {
         </div>
 
         <div class="content">
-          Update <b>HelloWord.vue </b> with the bottom snippet code, you should get a similar output in http://localhost:8080/
+          Update <b>HelloWord.vue </b> with the bottom snippet code, you should get a similar output in <a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a>
         </div>
 
         <snippet-section title="" :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
