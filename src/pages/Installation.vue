@@ -74,7 +74,7 @@ export default {
       <template #content>
         <div class="content">
           <a href="https://rollupjs.org/" target="_blank" rel="noopener">Rollup</a> is a module bundler for JavaScript which compiles small pieces of code into something larger and more complex, such as a library or application.
-          <br /> It uses the standardized ES module format for code, instead of previous idiosyncratic solutions such as CommonJS and AMD with less Complexity, frustration and bloating than Webpack
+          <br /> It uses the standardized ES module format for code, instead of previous idiosyncratic solutions such as CommonJS and AMD with less complexity, frustration and bloating than Webpack
         </div>
 
         <div class="subtitle content">
