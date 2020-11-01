@@ -50,17 +50,22 @@ export default {
 </template>
 
 <style scoped>
-.fade-enter-active, .fade-leave-active {
-    transition: opacity .5s
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s;
 }
-.fade-enter, .fade-leave-to {
-    opacity: 0
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
 }
+
 .is-centered {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 #cookie-banner-full-width {
     position: fixed;
     left: 50%;
@@ -70,10 +75,11 @@ export default {
     border: 1px solid #260e3b;
     z-index: 200;
     padding: 16px;
-    -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.75);
 }
+
 @media only screen and (max-width: 1024px) {
     #cookie-banner-full-width {
         padding: 10px;
@@ -85,19 +91,23 @@ export default {
         width: 100vw;
     }
 }
+
 @media only screen and (orientation: landscape) {
     #cookie-banner-full-width {
         bottom: 10vh;
     }
 }
-#inner-div{
+
+#inner-div {
     display: flex;
 }
-.agree-button{
+
+.agree-button {
     margin-left: 15px;
     margin-right: 10px;
 }
-#text-cookie{
+
+#text-cookie {
     text-align: justify;
     font-family: opensans, helvetica, arial, sans-serif;
     font-size: 14px;

@@ -15,7 +15,7 @@ export default {
       </p>
     </v-column>
     <v-column>
-      <p class="has-background-warning has-text-white px-4 py-4" style="height: 100px">
+      <p class="has-background-warning has-text-white px-4 py-4" style="height: 100px;">
         Vertical Alignment
       </p>
     </v-column>

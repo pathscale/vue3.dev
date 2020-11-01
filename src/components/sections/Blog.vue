@@ -23,7 +23,7 @@ export default {
     <div class="hero-body">
       <div class="container">
         <v-columns vcentered hcentered>
-          <v-column size="is-full-touch is-half has-text-centered" style="z-index: 1">
+          <v-column size="is-full-touch is-half has-text-centered" style="z-index: 1;">
             <p class="title has-text-white">
               {{ intl.$ts('blog.title') }}
             </p>

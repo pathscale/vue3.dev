@@ -21,11 +21,11 @@ export default {
       <v-columns>
         <v-column class="has-background-primary has-text-white">
           Left content
-          <div style="height: 200px" />
+          <div style="height: 200px;" />
         </v-column>
         <v-column class="has-background-success has-text-white">
           Right content
-          <div style="height: 200px" />
+          <div style="height: 200px;" />
         </v-column>
       </v-columns>
     </v-column>

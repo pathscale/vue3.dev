@@ -47,7 +47,7 @@ export default {
         <carousel>
           <slide v-for="(client, index) in projects" :key="index" :items-to-show="1.5" wrap-around initial-slide="1">
             <v-columns :mobile="isLandscape" vcentered class="reverse-columns px-2">
-              <v-column class="has-text-centered" style="width: 100%">
+              <v-column class="has-text-centered" style="width: 100%;">
                 <img :src="client.image" :ref="client.title" />
                 <v-button
                   tag="a"

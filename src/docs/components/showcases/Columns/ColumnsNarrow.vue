@@ -10,7 +10,7 @@ export default {
 <template>
   <v-columns>
     <v-column narrow>
-      <div class="px-4 py-4 has-background-success has-text-white" style="width: 500px">
+      <div class="px-4 py-4 has-background-success has-text-white" style="width: 500px;">
         <p class="title is-5 has-text-white">
           Narrow column
         </p>

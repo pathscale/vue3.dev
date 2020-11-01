@@ -113,6 +113,7 @@
     "shelljs": "^0.8.4",
     "shx": "^0.3.2",
     "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0",
     "stylelint-value-no-unknown-custom-properties": "^3.0.0",
     "typescript": "^4.0.3",
     "vue": "3.0.1",

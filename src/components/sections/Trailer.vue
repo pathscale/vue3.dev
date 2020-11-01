@@ -40,6 +40,7 @@ export default {
 .is-fullwidth {
     max-width: 100vw;
 }
+
 .has-border {
     border-top: 0.25rem solid red;
     border-bottom: 0.25rem solid red;

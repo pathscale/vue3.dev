@@ -2,7 +2,8 @@
     outline: none;
 }
 
-.carousel__prev, .carousel__next {
+.carousel__prev,
+.carousel__next {
     background-color: black !important;
 }
 

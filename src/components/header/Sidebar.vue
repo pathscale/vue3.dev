@@ -105,6 +105,7 @@ export default {
 .sidebar-background {
     background: transparent !important;
 }
+
 .has-border-bottom {
     border-bottom: 1px solid lightgray;
 }
