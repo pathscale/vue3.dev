@@ -26,7 +26,7 @@ export default {
 </template>
 
 <style scoped>
- .button {
+.button {
     margin: .5rem;
-  }
+}
 </style>

@@ -102,10 +102,10 @@ export default {
 </template>
 
 <style>
-  .sidebar-background {
+.sidebar-background {
     background: transparent !important;
-  }
-  .has-border-bottom {
+}
+.has-border-bottom {
     border-bottom: 1px solid lightgray;
-  }
+}
 </style>

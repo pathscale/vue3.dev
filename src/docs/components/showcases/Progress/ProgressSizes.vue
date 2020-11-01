@@ -16,6 +16,6 @@ export default {
 
 <style scoped>
 .progress-wrapper {
-  margin-top: 1em;
+    margin-top: 1em;
 }
 </style>

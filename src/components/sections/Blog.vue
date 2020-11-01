@@ -71,7 +71,7 @@ export default {
 </template>
 
 <style scoped>
-  .has-border {
+.has-border {
     border-left: 0.25rem solid red;
-  }
+}
 </style>

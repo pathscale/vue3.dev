@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
 }
- .is-justified-start {
+.is-justified-start {
     display: flex;
     justify-content: flex-start;
 }
