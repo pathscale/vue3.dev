@@ -33,6 +33,7 @@
     }
   },
   "lint-staged": {
+    "**/*.{css,vue}": "stylelint",
     "**/*.{js,ts,vue,md,html}": "npm run lint-arg --"
   },
   "dependencies": {},
