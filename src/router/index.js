@@ -31,13 +31,13 @@ const routes = [
         name: 'home',
         path: 'home',
         component: Pages.Home,
-        meta: metaTags('Vue3-ui', 'Very clean Vue3 components styled with love and care designed to integrate beautifully with Bulma CSS.')
+        meta: metaTags('Vue3-ui', 'Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS.')
       },
       {
         name: 'documentation',
         path: 'documentation',
         component: Pages.Documentation,
-        meta: metaTags('Documentation', 'Very clean Vue3 components styled with love and care designed to integrate beautifully with Bulma CSS.'),
+        meta: metaTags('Documentation', 'Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS.'),
         children: [
           {
             name: 'installation',
