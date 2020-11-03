@@ -43,26 +43,16 @@ export default {
 
     <div class="content">
       <p>
-        There are several ways to get started with Vue3-ui. You can either:
+        For <b>new projects</b>, the easy way to get started with Vue3-ui is use our <a href="https://github.com/pathscale/vue3-starter" target="_blank" rel="noopener">Vue3 Starter</a> template to create a Vue3-ui ready app usign
+        <a href="https://rollupjs.org/" target="_blank" rel="noopener">Rollup.</a> For <b>existing projects</b>, checkout the <a href="#2">section 2</a>.
       </p>
-
-      <ol>
-        <li>
-          use our <a href="https://github.com/pathscale/vue3-starter" target="_blank" rel="noopener">Vue3 Starter</a> template to create a Vue3-ui ready app based in
-          <a href="https://rollupjs.org/" target="_blank" rel="noopener">Rollup</a>
-        </li>
-        <li>
-          use npm to install the <a href="https://www.npmjs.com/package/@pathscale/vue3-ui" target="_blank" rel="noopener">@pathscale/vue3-ui</a> package and configure it manually
-        </li>
-      </ol>
     </div>
-
 
     <v-accordion :expanded="state.rollup" header-is-trigger>
       <template #header>
-        <div class="is-inline-flex mt-6" @click="toggle('rollup')">
+        <div class="is-inline-flex mt-5" @click="toggle('rollup')">
           <h4 class="title is-4">
-            1. Rollup Install <i>(recommended)</i>
+            1. Starter Template <i>(recommended)</i>
           </h4>
           <v-icon v-if="state.rollup" src="../assets/icons/menu-up.svg" name="menu-up-icon" bundle="navbar-icons" />
           <v-icon v-else src="../assets/icons/menu-down.svg" name="menu-down-icon" bundle="navbar-icons" />
@@ -70,9 +60,8 @@ export default {
       </template>
       <template #content>
         <div class="content">
-          <a href="https://rollupjs.org/" target="_blank" rel="noopener">Rollup</a> is a <i>module bundler for JavaScript which compiles small pieces of code into something larger and more complex, such as a library or application</i>.
+          A Vue3 starter kit that gives you rollup and many optimized goodies out of the box.
         </div>
-
         <div class="subtitle content">
           What's Included
         </div>
@@ -84,7 +73,7 @@ export default {
             <li>Lint-on-save with ESLint</li>
             <li>JavaScript compiled and minified with google-closure-compiler.</li>
             <li>CSS across all components extracted into a single file and minified.</li>
-            <li>Unused CSS removed with our PurgeCSS based <a href="https://github.com/pathscale/rollup-plugin-vue3-ui-css-purge" target="_blank" rel="noopener">plugin</a></li>
+            <li>Unused CSS removed with our PurgeCSS based <a href="#2" target="_blank" rel="noopener">plugin</a></li>
           </ul>
         </div>
 
@@ -115,43 +104,46 @@ export default {
         </div>
       </template>
     </v-accordion>
-    <v-accordion :expanded="state.cli" header-is-trigger>
-      <template #header>
-        <div class="is-inline-flex mt-4" @click="toggle('cli')">
-          <h4 class="title is-4">
-            2. Manual Install
-          </h4>
-          <v-icon v-if="state.cli" src="../assets/icons/menu-up.svg" name="menu-up-icon" bundle="navbar-icons" />
-          <v-icon v-else src="../assets/icons/menu-down.svg" name="menu-down-icon" bundle="navbar-icons" />
-        </div>
-      </template>
-      <template #content>
-        <div class="content">
-          In an existing app with Vue 3 support, follow the instructions below.
-        </div>
-        <div class="subtitle content">
-          Install required packages
-        </div>
 
-        <div class="box has-background-light is-family-code">
-          npm i @pathscale/vue3-ui @pathscale/bulma-extensions-css-var @pathscale/bulma-pull-2981-css-var-only
-        </div>
+    <section id="2">
+      <v-accordion :expanded="state.cli" header-is-trigger id="2">
+        <template #header>
+          <div class="is-inline-flex mt-5" @click="toggle('cli')">
+            <h4 class="title is-4">
+              2. Manual Install
+            </h4>
+            <v-icon v-if="state.cli" src="../assets/icons/menu-up.svg" name="menu-up-icon" bundle="navbar-icons" />
+            <v-icon v-else src="../assets/icons/menu-down.svg" name="menu-down-icon" bundle="navbar-icons" />
+          </div>
+        </template>
+        <template #content>
+          <div class="content">
+            In an <b>existing</b> app with Vue 3 support, follow the instructions below.
+          </div>
+          <div class="subtitle content">
+            Install required packages
+          </div>
 
-        <div class="subtitle content">
-          Import styles in main.js
-        </div>
+          <div class="box has-background-light is-family-code">
+            npm i @pathscale/vue3-ui @pathscale/bulma-extensions-css-var @pathscale/bulma-pull-2981-css-var-only
+          </div>
 
-        <div class="box has-background-light is-family-code">
-          import '@pathscale/bulma-pull-2981-css-var-only/css/bulma.css'
-          <br />
-          import '@pathscale/bulma-extensions-css-var'
-        </div>
+          <div class="subtitle content">
+            Import styles in main.js
+          </div>
 
-        <div class="content">
-          For testing, update <b>App.vue </b> or you entry component with the snippet code below and you should get a similar output in <a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a> or whatever port you are using.
-        </div>
-      </template>
-    </v-accordion>
+          <div class="box has-background-light is-family-code">
+            import '@pathscale/bulma-pull-2981-css-var-only/css/bulma.css'
+            <br />
+            import '@pathscale/bulma-extensions-css-var'
+          </div>
+
+          <div class="content">
+            For testing, update <b>App.vue </b> or you entry component with the snippet code below and you should get a similar output in <a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a> or whatever port you are using.
+          </div>
+        </template>
+      </v-accordion>
+    </section>
     <div class="title is-4 mt-4">
       Additional packages
     </div>
