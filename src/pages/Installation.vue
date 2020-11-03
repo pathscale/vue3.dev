@@ -50,7 +50,7 @@ export default {
 
       <ol>
         <li>
-          use the <a href="https://github.com/skaptox/demo" target="_blank" rel="noopener">Getting Started</a> repository to get the latest template version based in
+          use our <a href="https://github.com/pathscale/vue3-starter" target="_blank" rel="noopener">Vue3 Starter</a> template to create a Vue3-ui ready app based in
           <a href="https://rollupjs.org/" target="_blank" rel="noopener">Rollup</a>
         </li>
         <li>
@@ -65,7 +65,7 @@ export default {
       <template #header>
         <div class="is-inline-flex mt-6" @click="toggle('rollup')">
           <h4 class="title is-4">
-            Rollup Install <i>(recommended)</i>
+            1. Rollup Install <i>(recommended)</i>
           </h4>
           <v-icon v-if="state.rollup" src="../assets/icons/menu-up.svg" name="menu-up-icon" bundle="navbar-icons" />
           <v-icon v-else src="../assets/icons/menu-down.svg" name="menu-down-icon" bundle="navbar-icons" />
@@ -73,33 +73,48 @@ export default {
       </template>
       <template #content>
         <div class="content">
-          <a href="https://rollupjs.org/" target="_blank" rel="noopener">Rollup</a> is a module bundler for JavaScript which compiles small pieces of code into something larger and more complex, such as a library or application.
-          <br /> It uses the standardized ES module format for code, instead of previous idiosyncratic solutions such as CommonJS and AMD with less complexity, frustration and bloating than Webpack
+          <a href="https://rollupjs.org/" target="_blank" rel="noopener">Rollup</a> is a <i>module bundler for JavaScript which compiles small pieces of code into something larger and more complex, such as a library or application</i>.
         </div>
 
         <div class="subtitle content">
-          Clone the Demo app from Github
+          What's Included
+        </div>
+
+        <div class="content">
+          <ul>
+            <li>Vue3-ui and Bulma with Theming support</li>
+            <li>Hot-reload</li>
+            <li>Lint-on-save with ESLint</li>
+            <li>JavaScript compiled and minified with google-closure-compiler.</li>
+            <li>CSS across all components extracted into a single file and minified.</li>
+            <li>Unused CSS removed with our PurgeCSS based <a href="https://github.com/pathscale/rollup-plugin-vue3-ui-css-purge" target="_blank" rel="noopener">plugin</a></li>
+          </ul>
+        </div>
+
+        <div class="subtitle content">
+          Prerequisites
         </div>
         <div class="box has-background-light is-family-code">
-          git clone https://github.com/skaptox/demo --depth=1
-          <br />
-          cd demo
+          npm install -g vue-cli @vue/cli-init
         </div>
         <div class="subtitle content">
-          Install packages
+          Create a new project based on our Vue3 Starter template
+        </div>
+        <div class="box has-background-light is-family-code">
+          vue init pathscale/vue3-starter my-project
+          <br />
+          cd my-project
+        </div>
+        <div class="subtitle content">
+          Install packages and run the app
         </div>
         <div class="box has-background-light is-family-code">
           npm i
           <br />
-        </div>
-        <div class="subtitle content">
-          Run App
-        </div>
-        <div class="box has-background-light is-family-code">
           npm start
         </div>
         <div class="content">
-          You should get a functional Button showcase in <a href="http://localhost:5000/" target="_blank" rel="noopener">http://localhost:5000/</a>
+          You should see something like the example below in <a href="http://localhost:5000/" target="_blank" rel="noopener">http://localhost:5000/</a>
         </div>
       </template>
     </v-accordion>
@@ -107,7 +122,7 @@ export default {
       <template #header>
         <div class="is-inline-flex mt-3" @click="toggle('cli')">
           <h4 class="title is-4">
-            Vue3 CLI Install
+            2. Vue3 CLI Install
           </h4>
           <v-icon v-if="state.cli" src="../assets/icons/menu-up.svg" name="menu-up-icon" bundle="navbar-icons" />
           <v-icon v-else src="../assets/icons/menu-down.svg" name="menu-down-icon" bundle="navbar-icons" />
@@ -115,9 +130,10 @@ export default {
       </template>
       <template #content>
         <div class="content">
-          Vue provides an official CLI for quickly scaffolding ambitious Single Page Applications.
-          It provides batteries-included build setups for a modern frontend workflow.
-          It takes only a few minutes to get up and running with hot-reload, lint-on-save, and production-ready builds.
+          Use  <a href="https://cli.vuejs.org/" target="_blank" rel="noopener">Vue CLI</a> to create an app with hot-reload, lint-on-save, and production-ready builds.
+        </div>
+        <div class="subtitle content">
+          Prerequisites
         </div>
 
         <div class="box has-background-light is-family-code">
@@ -153,11 +169,10 @@ export default {
         </div>
 
         <div class="content">
-          Update <b>HelloWord.vue </b> with the bottom snippet code, you should get a similar output in <a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a>
+          Update <b>HelloWord.vue </b> with the snippet code below and you should get a similar output in <a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a>
         </div>
-
-        <snippet-section title="" :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
       </template>
     </v-accordion>
+    <snippet-section title="" :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
   </div>
 </template>

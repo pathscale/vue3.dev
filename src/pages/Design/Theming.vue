@@ -32,7 +32,7 @@ export default {
   </h4>
 
   <p>
-    You can add styles to vue3-ui quickly by installing our custom css package.
+    You can add styles to Vue3-ui quickly by installing <a href="https://www.npmjs.com/package/@pathscale/bulma-pull-2981-css-var-only" target="_blank" rel="noopener">bulma-pull-2981-css-var-only</a> based in <a href="https://bulma.io/" target="_blank" rel="noopener">Bulma</a>, getting support for CSS Variables and theming changes in running time.
   </p>
 
   <h5 class="title is-5 mt-6">
@@ -40,7 +40,7 @@ export default {
   </h5>
 
   <div class="box has-background-light is-family-code">
-    npm i @pathscale/bulma-extensions-css-var
+    npm i @pathscale/bulma-pull-2981-css-var-only
   </div>
 
   <h5 class="title is-5 mt-6">
@@ -52,29 +52,28 @@ export default {
     <br />
     import App from 'App.vue'
     <br />
-    import '@pathscale/bulma-extensions-css-var'
+    import '@pathscale/bulma-pull-2981-css-var-only'
     <br />
     <br />
     createApp(App).mount('#app')
   </div>
 
-  <h5 class="title is-5 mt-6">
+  <h5 class="title is-4 mt-6">
     Customization
   </h5>
 
   <p>
-    <strong>@pathscale/bulma-extensions-css-var</strong> exports css variables for most of vue3-ui components,
+    <strong>@pathscale/bulma-pull-2981-css-var-only</strong> exports css variables for most of vue3-ui components,
     they can be swapped to create dynamic ui styles and themes.
     <br />
     <br />
-    You will find what css variables are available for what components in their API section.
+    <span class="has-text-danger">
+      You will find what css variables are available for what components in their API section.
+
+    </span>
   </p>
 
-  <h5 class="title is-5 mt-6">
-    Examples
-  </h5>
-
-  <h6 class="title is-6">
+  <h6 class="title is-6 mt-6">
     Swapping css variables using vanilla javascript
   </h6>
 
@@ -93,7 +92,7 @@ export default {
   </h6>
 
   <p class="mb-4">
-    Css variables can be assigned values using helper functions from vue-composable, a vue3 utility library.
+    Css variables can be assigned values using helper functions from <a href="https://pikax.me/vue-composable/" target="_blank" rel="noopener">vue-composable</a>, a vue3 utility library.
     <br />
     <br />
     For this you will need to add vue-composable as a dependency.

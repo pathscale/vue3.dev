@@ -1,9 +1,9 @@
 <script>
-import { VImage } from '@pathscale/vue3-ui'
+import { VImage, VButton } from '@pathscale/vue3-ui'
 
 export default {
   name: 'HelloWord',
-  components: { VImage }
+  components: { VImage, VButton }
 }
 </script>
 
@@ -13,10 +13,15 @@ export default {
     <h1 class="title">
       Welcome to Your Vue3-ui App
     </h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
-      <a href="https://vue3--dev.b-cdn.net/" target="_blank" rel="noopener">Vue3-ui documentation</a>.
+    <p class="my-3">
+      For a guide and recipes on how to use our UI Components,<br />
+      check out the:
     </p>
+
+    <br />
+
+    <v-button type="is-danger" rounded tag="a" href="https://vue3--dev.b-cdn.net/" target="_blank" rel="noopener">
+      Vue3-ui documentation
+    </v-button>
   </section>
 </template>

@@ -94,9 +94,11 @@ export default {
         <a href="https://bulma.io/documentation/helpers/typography-helpers/" rel="noopener noreferrer" target="_blank">Typography</a>
       </li>
       <li>
-        <a href="https://bulma.io/documentation/helpers/flexbox-helpers/" rel="noopener noreferrer" target="_blank">Flexbox </a><i>(pending)</i>
+        <a href="https://bulma.io/documentation/helpers/flexbox-helpers/" rel="noopener noreferrer" target="_blank">Flexbox </a>
       </li>
     </ul>
   </div>
-  Checkout the Bulma <a href="https://bulma.io/documentation/" rel="noopener noreferrer" target="_blank">documentation</a> for more details.
+  <p>
+    Checkout the Bulma <a href="https://bulma.io/documentation/" rel="noopener noreferrer" target="_blank">documentation</a> for more details.
+  </p>
 </template>
