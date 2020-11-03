@@ -43,7 +43,7 @@ export default {
 
     <div class="content">
       <p>
-        For <b>new projects</b>, the easy way to get started with Vue3-ui is use our <a href="https://github.com/pathscale/vue3-starter" target="_blank" rel="noopener">Vue3 Starter</a> template to create a Vue3-ui ready app usign
+        For <b>new projects</b>, the easy way to get started with Vue3-ui is use our <a href="https://github.com/pathscale/vue3-starter" target="_blank" rel="noopener">Vue3 Starter</a> template to create a Vue3-ui ready app using
         <a href="https://rollupjs.org/" target="_blank" rel="noopener">Rollup.</a> For <b>existing projects</b>, checkout the <a href="#2">section 2</a>.
       </p>
     </div>
