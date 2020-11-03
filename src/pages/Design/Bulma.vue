@@ -24,6 +24,8 @@ export default {
   </h1>
   <p>
     {{ router.currentRoute.value.meta.metaTags[0].content }}
+
+    <br /><br /> However, we will recommend you use <a href="https://github.com/pathscale/bulma-pull-2981" rel="noopener noreferrer" target="_blank">this</a> Bulma fork <i>(based in 0.9.0)</i> if you want to get support for css variables and dynamic <a href="/documentation/theming" rel="noopener noreferrer" target="_blank">Theming</a>.
   </p>
 
   <div class="content mt-3">
