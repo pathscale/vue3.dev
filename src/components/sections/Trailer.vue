@@ -38,11 +38,11 @@ export default {
 
 <style scoped>
 .is-fullwidth {
-    max-width: 100vw;
+  max-width: 100vw;
 }
 
 .has-border {
-    border-top: 0.25rem solid red;
-    border-bottom: 0.25rem solid red;
+  border-top: 0.25rem solid red;
+  border-bottom: 0.25rem solid red;
 }
 </style>

@@ -1,27 +1,27 @@
 .svg-github-icon {
-    fill: white;
-    height: 32px;
-    width: 32px;
+  fill: white;
+  height: 32px;
+  width: 32px;
 }
 
 .svg-discord-icon {
-    fill: white;
-    height: 32px;
-    width: 32px;
+  fill: white;
+  height: 32px;
+  width: 32px;
 }
 
 .svg-menu-up-icon {
-    fill: black;
-    height: 25px;
-    width: 32px;
+  fill: black;
+  height: 25px;
+  width: 32px;
 }
 
 .svg-menu-down-icon {
-    fill: black;
-    height: 25px;
-    width: 32px;
+  fill: black;
+  height: 25px;
+  width: 32px;
 }
 
 .icon-github {
-    background-image: url("../icons/github.svg");
+  background-image: url("../icons/github.svg");
 }

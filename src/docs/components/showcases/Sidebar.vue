@@ -56,7 +56,7 @@ export default {
 
 <style>
 .button.is-text {
-    text-decoration: none;
-    outline: none;
+  text-decoration: none;
+  outline: none;
 }
 </style>
