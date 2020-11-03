@@ -44,7 +44,7 @@
     "@mysticatea/eslint-plugin": "^13.0.0",
     "@pathscale/appstate-fast": "0.0.1",
     "@pathscale/bulma-extensions-css-var": "0.0.41",
-    "@pathscale/bulma-pull-2981-css-var-only": "^0.9.3",
+    "@pathscale/bulma-pull-2981-css-var-only": "^0.9.6",
     "@pathscale/eslint-plugin-vue3": "0.0.1",
     "@pathscale/rollup-plugin-tsickle": "0.0.16",
     "@pathscale/rollup-plugin-vue3-ui-css-purge": "0.0.19",
