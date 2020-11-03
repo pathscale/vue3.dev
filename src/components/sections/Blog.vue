@@ -1,11 +1,11 @@
 <script>
-import { VButton, VColumns, VColumn /* , VSelect */ } from '@pathscale/vue3-ui'
+import { VColumns, VColumn } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 import { ref } from 'vue'
 
 export default {
   name: 'DevBlog',
-  components: { VButton, VColumns, VColumn /* , VSelect */ },
+  components: { VColumns, VColumn },
   setup() {
     const intl = useI18n()
     const isLandscape = ref(window.matchMedia('(orientation: landscape)').matches)
@@ -57,15 +57,6 @@ export default {
           </div>
         </v-column>
       </v-columns>
-      <div class="content has-text-centered">
-        <v-button type="is-primary" rounded inverted outlined class="mt-6 mb-6 is-uppercase">
-          {{ intl.$ts('blog.button') }}
-        </v-button>
-        <p class="has-text-white mt-6">
-          <strong class="has-text-white">2020 ©</strong>
-          by PathScale Pte Ltd {{ process.env.VUE_APP_VERSION_NUMBER }}
-        </p>
-      </div>
     </footer>
   </section>
 </template>

@@ -1,10 +1,8 @@
 <script>
-import { /* VNavbar, VNavbarItem, VNavbarDropdown, VInput, */ VColumns, VColumn } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 
 export default {
   name: 'DevFooter',
-  components: { /* VNavbar, VNavbarItem, VNavbarDropdown, VInput, */ VColumns, VColumn },
   setup() {
     const intl = useI18n()
     return { intl }
@@ -13,24 +11,12 @@ export default {
 </script>
 
 <template>
-  <footer class="footer py-5">
+  <footer class="footer pb-5">
     <div class="content has-text-centered">
-      <v-columns vcentered>
-        <v-column>
-          Subscription Plans
-        </v-column>
-        <v-column>
-          Events
-        </v-column>
-      </v-columns>
-      <v-columns vcentered hcentered>
-        <v-column>
-          <p>
-            <strong>2020 ©</strong>
-            by Mach IV Motors {{ process.env.VUE_APP_VERSION_NUMBER }}
-          </p>
-        </v-column>
-      </v-columns>
+      <p class="has-text-white mt-6">
+        <strong class="has-text-white">2020 ©</strong>
+        by PathScale Pte Ltd Version: {{ process.env.VUE_APP_VERSION_NUMBER }}
+      </p>
     </div>
   </footer>
 </template>

@@ -1,14 +1,16 @@
 <script>
 import {
   Navbar,
-  Cookie
+  Cookie,
+  CFooter
 } from '../components'
 
 export default {
   name: 'DevMain',
   components: {
     Cookie,
-    Navbar
+    Navbar,
+    CFooter
   },
   setup() {
     function setDocHeight() {
@@ -28,5 +30,6 @@ export default {
     <div class="well" id="well">
       <router-view />
     </div>
+    <c-footer />
   </div>
 </template>
