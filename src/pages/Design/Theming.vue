@@ -2,19 +2,35 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-// import api from '../../docs/components/api/breadcrumb.ts'
-// import { SnippetSection, ApiSection } from "../../components"
 
-// import Showcase from "../../docs/components/showcases/Breadcrumb.vue"
-// import ShowcaseCode from "../../docs/components/raw/Breadcrumb.txt"
+import { VDropdown, VDropdownItem, VButton } from '@pathscale/vue3-ui'
+import { ref, watchEffect, onUnmounted } from 'vue'
 
 export default {
   name: 'DevPageTheming',
-  // components: { SnippetSection, ApiSection },
+  components: { VDropdown, VDropdownItem, VButton },
   setup() {
     const intl = useI18n()
     const router = useRouter()
-    return { intl, router }
+    const colors = ['black', 'red', 'blue', 'green']
+    const color = ref('#000')
+    const root = document.documentElement
+
+    const isOriginalColor = color.value === '#000'
+
+    function setColor(value) {
+      root.style.setProperty('--blm-nav-bg-clr', value)
+    }
+
+    onUnmounted(() => {
+      root.style.setProperty('--blm-nav-bg-clr', '#000')
+    })
+
+    watchEffect(() => {
+      setColor(color.value)
+    })
+
+    return { intl, router, color, colors, setColor, isOriginalColor }
   }
 }
 </script>
@@ -72,9 +88,33 @@ export default {
     <br />
     <span class="has-text-danger">
       You will find what css variables are available for what components in their <b> API section </b>.
-
     </span>
   </p>
+
+
+  <v-dropdown v-model="color" class="pt-3">
+    <template #trigger>
+      <v-button type="is-info">
+        <span v-if="isOriginalColor">Choose your Navbar color</span>
+        <span v-else>I choose you, {{ color }} </span>
+      </v-button>
+    </template>
+
+    <v-dropdown-item v-for="color in colors" :value="color" :key="color" :style="`background-color: ${color}`">
+      {{ color }}
+    </v-dropdown-item>
+  </v-dropdown>
+
+  <p class="py-3">
+    <i>Select a color to see the magic!</i>
+  </p>
+
+  <code>
+    element.style {
+    <br />&nbsp; --blm-nav-bg-clr: {{ color }};
+    <br />
+    }
+  </code>
 
   <h6 class="title is-6 mt-6">
     Swapping css variables using vanilla javascript
@@ -87,7 +127,7 @@ export default {
   <div class="box has-background-light is-family-code">
     const root = document.documentElement
     <br />
-    root.style.setProperty('--blm-turquoise', 'rgb(24, 0, 75)')
+    root.style.setProperty('--blm-nav-bg-clr', '#000')
   </div>
 
   <h6 class="title is-6 mt-6">
@@ -113,6 +153,6 @@ export default {
     import { useCssVariables } from 'vue-composable'
     <br />
     <br />
-    useCssVariables([{ name: '--blm-turquoise', value: 'rgb(24, 0, 75)' }])
+    useCssVariables([{ name: '--blm-nav-bg-clr', value: '#000' }])
   </div>
 </template>
