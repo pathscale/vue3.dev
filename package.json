@@ -28,8 +28,7 @@
     "update": "npm remove @pathscale/vue3-ui && npm i @pathscale/vue3-ui -D"
   },
   "husky": {
-    "hooks": {
-    }
+    "hooks": {}
   },
   "lint-staged": {
     "**/*.{css,vue}": "stylelint",

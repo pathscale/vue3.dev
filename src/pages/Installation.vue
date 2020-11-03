@@ -10,8 +10,6 @@ import ShowcaseCode from '../docs/components/raw/HelloWord.txt'
 
 import { SnippetSection } from '../components'
 
-
-
 export default {
   name: 'DevPageInstallation',
   components: { SnippetSection, VAccordion, VIcon },
@@ -19,7 +17,7 @@ export default {
     const intl = useI18n()
     const router = useRouter()
     const state = reactive({
-      cli: false,
+      cli: true,
       rollup: true
     })
 
@@ -82,7 +80,7 @@ export default {
 
         <div class="content">
           <ul>
-            <li>Vue3-ui and Bulma with Theming support</li>
+            <li>Vue3-ui and Bulma with CSS variables support</li>
             <li>Hot-reload</li>
             <li>Lint-on-save with ESLint</li>
             <li>JavaScript compiled and minified with google-closure-compiler.</li>

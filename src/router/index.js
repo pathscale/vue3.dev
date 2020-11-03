@@ -55,7 +55,7 @@ const routes = [
             name: 'theming',
             path: 'theming',
             component: Pages.Theming,
-            meta: metaTags('Theming', 'Customize vue3-ui and make it your own')
+            meta: metaTags('Theming', 'Customize Vue3-ui and make it your own.')
           },
           {
             name: 'bulma',

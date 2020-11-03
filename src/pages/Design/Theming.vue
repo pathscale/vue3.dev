@@ -28,11 +28,12 @@ export default {
   </p>
 
   <h4 class="title is-4 mt-6">
-    Vue3-ui CSS package
+    Vue3-ui Styles
   </h4>
 
   <p>
     You can add styles to Vue3-ui quickly by installing <a href="https://www.npmjs.com/package/@pathscale/bulma-pull-2981-css-var-only" target="_blank" rel="noopener">bulma-pull-2981-css-var-only</a> based in <a href="https://bulma.io/" target="_blank" rel="noopener">Bulma</a>, getting support for CSS Variables and theming changes in running time.
+    <br /><br /> Additionally, if you want to use <b>Accordion</b>, <b>Sidebar</b>, <b>Switch</b> or <b>Tooltip</b>, you have to install <a href="https://www.npmjs.com/package/@pathscale/bulma-extensions-css-var" target="_blank" rel="noopener">bulma-extensions-css-var</a>, because those components are not in the Bulma core.
   </p>
 
   <h5 class="title is-5 mt-6">
@@ -40,7 +41,7 @@ export default {
   </h5>
 
   <div class="box has-background-light is-family-code">
-    npm i @pathscale/bulma-pull-2981-css-var-only
+    npm i @pathscale/bulma-pull-2981-css-var-only @pathscale/bulma-extensions-css-var
   </div>
 
   <h5 class="title is-5 mt-6">
@@ -54,6 +55,8 @@ export default {
     <br />
     import '@pathscale/bulma-pull-2981-css-var-only'
     <br />
+    import '@pathscale/bulma-extensions-css-var'
+    <br />
     <br />
     createApp(App).mount('#app')
   </div>
@@ -63,12 +66,12 @@ export default {
   </h5>
 
   <p>
-    <strong>@pathscale/bulma-pull-2981-css-var-only</strong> exports css variables for most of vue3-ui components,
+    <strong>@pathscale/bulma-pull-2981-css-var-only</strong> exports css variables for most of Vue3-ui components,
     they can be swapped to create dynamic ui styles and themes.
     <br />
     <br />
     <span class="has-text-danger">
-      You will find what css variables are available for what components in their API section.
+      You will find what css variables are available for what components in their <b> API section </b>.
 
     </span>
   </p>
