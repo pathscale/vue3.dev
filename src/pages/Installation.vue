@@ -52,8 +52,7 @@ export default {
           <a href="https://rollupjs.org/" target="_blank" rel="noopener">Rollup</a>
         </li>
         <li>
-          use npm to install the <a href="https://www.npmjs.com/package/@pathscale/vue3-ui" target="_blank" rel="noopener">@pathscale/vue3-ui</a> package in an Vue3 App generared by
-          <a href="https://github.com/vuejs/vue-cli" target="_blank" rel="noopener">Vue CLI</a>
+          use npm to install the <a href="https://www.npmjs.com/package/@pathscale/vue3-ui" target="_blank" rel="noopener">@pathscale/vue3-ui</a> package and configure it manually
         </li>
       </ol>
     </div>
@@ -118,9 +117,9 @@ export default {
     </v-accordion>
     <v-accordion :expanded="state.cli" header-is-trigger>
       <template #header>
-        <div class="is-inline-flex mt-3" @click="toggle('cli')">
+        <div class="is-inline-flex mt-4" @click="toggle('cli')">
           <h4 class="title is-4">
-            2. Vue3 CLI Install
+            2. Manual Install
           </h4>
           <v-icon v-if="state.cli" src="../assets/icons/menu-up.svg" name="menu-up-icon" bundle="navbar-icons" />
           <v-icon v-else src="../assets/icons/menu-down.svg" name="menu-down-icon" bundle="navbar-icons" />
@@ -128,26 +127,8 @@ export default {
       </template>
       <template #content>
         <div class="content">
-          Use  <a href="https://cli.vuejs.org/" target="_blank" rel="noopener">Vue CLI</a> to create an app with hot-reload, lint-on-save, and production-ready builds.
+          In an existing app with Vue 3 support, follow the instructions below.
         </div>
-        <div class="subtitle content">
-          Prerequisites
-        </div>
-
-        <div class="box has-background-light is-family-code">
-          npm install -g @vue/cli
-        </div>
-
-        <div class="subtitle content">
-          Create a Vue3 app
-        </div>
-
-        <div class="box has-background-light is-family-code">
-          vue create hello-world
-          <br />
-          ? Please pick a preset: Default (Vue3 Preview) ([Vue 3] babel, eslint)
-        </div>
-
         <div class="subtitle content">
           Install required packages
         </div>
@@ -167,10 +148,22 @@ export default {
         </div>
 
         <div class="content">
-          Update <b>HelloWord.vue </b> with the snippet code below and you should get a similar output in <a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a>
+          For testing, update <b>App.vue </b> or you entry component with the snippet code below and you should get a similar output in <a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a> or whatever port you are using.
         </div>
       </template>
     </v-accordion>
+    <div class="title is-4 mt-4">
+      Additional packages
+    </div>
+    <div class="content">
+      <ul>
+        <li><a href="https://github.com/pathscale/rollup-plugin-vue3-ui-css-purge" target="_blank" rel="noopener">@pathscale/rollup-plugin-vue3-ui-css-purge</a>: remove unused css.</li>
+        <li><a href="https://github.com/pathscale/vue3-svg-icons" target="_blank" rel="noopener">@pathscale/vue3-svg-icons</a>: mega compilation of svg icons.</li>
+        <li><a href="https://github.com/pathscale/rollup-plugin-tsickle" target="_blank" rel="noopener">@pathscale/rollup-plugin-tsickle</a>: typescript transpiler.</li>
+        <li><a href="https://github.com/pathscale/eslint-plugin-vue3" target="_blank" rel="noopener">@pathscale/eslint-plugin-vue3</a>: linting rules to help enforce our rather limited view of the world. Highly opinionated and not for everyone.</li>
+      </ul>
+      To see them working together and more advance config, check out this project <a href="https://github.com/pathscale/vue3.dev/blob/master/rollup.config.js" target="_blank" rel="noopener">rollup.config.js</a>
+    </div>
     <snippet-section title="" :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
   </div>
 </template>
