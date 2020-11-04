@@ -149,11 +149,8 @@ const config = [
         __VUE_OPTIONS_API__: false,
         __VUE_PROD_DEVTOOLS__: false,
       }),
-
       json(),
-
       alias({ entries: { vue: '@vue/runtime-dom' } }),
-
       resolve({
         dedupe: [
           'vue',
@@ -171,24 +168,19 @@ const config = [
         extensions,
       }),
       commonjs(),
-
+      prod && tsickle(),
       vue3svg(),
       prod && vue3uiPurge(),
       vue(),
-
       styles({
         mode: prod ? 'extract' : 'inject',
         url: { hash: '[name][extname]', publicPath: env.parsed.BASE_URL, inline: true },
         minimize: prod && { preset: ['default', { discardComments: { removeAll: true } }] },
       }),
-
       image(),
-
-      prod && tsickle(),
       // prod && typescript(),
       // prod && babel({ babelHelpers: 'bundled', extensions, babelrc: true }),
       !prod && sucrase({ exclude: ['**/node_modules/**'], transforms: ['typescript'] }),
-
       prod &&
         compiler({
           warning_level: 'verbose',
@@ -197,7 +189,6 @@ const config = [
           externs: 'externs/localstorage.js',
           jscomp_off: '*',
         }),
-
       prod &&
         gzip({
           fileName: '.br',
@@ -206,18 +197,14 @@ const config = [
               params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 },
             }),
         }),
-
       html({
         publicPath: env.parsed.BASE_URL,
         title: 'Vue3-ui',
         template,
       }),
-
       watch &&
         serve({ host: '0.0.0.0', contentBase: 'dist', historyApiFallback: true, port: 5000 }),
-
       watch && livereload({ watch: 'dist' }),
-
       prod && analyzer(),
       prod && visualizer(),
     ],
