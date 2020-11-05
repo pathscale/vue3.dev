@@ -6,8 +6,8 @@
     "button": "Explore The Framework"
   },
   "trailer": {
-    "title": "Our Trailer",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ornare mi. Vestibulum finibus, mi iaculis vulputate vehicula, nisl nunc venenatis nisl, id fringilla turpis diam eget dolor. Cras lobortis lectus nibh, eu facilisis sapien suscipit sed",
+    "title": "Overview",
+    "content": "Vue3-ui provides one of the most complete implementations of the Bulma components and grid system, following robust guidelines to do those really easy and fast to use. Designed to support Vue3 from the beginning, our source code is optimized to take full advantage of Vue3 API, offering better performance and reduced javascript load.",
     "button": "View Trailer"
   },
   "clients": {
