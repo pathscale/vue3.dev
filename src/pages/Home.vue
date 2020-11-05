@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router'
 
 import {
   HomeSection,
-  TrailerSection,
+  OverviewSection,
   ClientsSection,
   BlogSection
 } from '../components/sections'
@@ -14,7 +14,7 @@ export default {
   name: 'DevPageHome',
   components: {
     HomeSection,
-    TrailerSection,
+    OverviewSection,
     ClientsSection,
     BlogSection
   },
@@ -28,7 +28,7 @@ export default {
 
 <template>
   <home-section />
-  <trailer-section />
+  <overview-section />
   <clients-section />
   <blog-section />
 </template>
