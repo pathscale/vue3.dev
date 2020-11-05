@@ -23,23 +23,6 @@ export default {
             <p class="has-text-white is-size-5 is-size-6-touch">
               {{ intl.$ts('home.content') }}
             </p>
-            <p align="center" class="section">
-              <a class="mx-2" href="https://www.npmjs.com/package/@pathscale/vue3-ui">
-                <img src="https://img.shields.io/npm/v/@pathscale/vue3-ui?style=for-the-badge" />
-              </a>
-              <a class="mx-2" href="https://www.npmjs.com/package/@pathscale/vue3-ui">
-                <img src="https://img.shields.io/npm/dt/@pathscale/vue3-ui?style=for-the-badge" />
-              </a>
-              <a class="mx-2" href="https://bundlephobia.com/result?p=@pathscale/vue3-ui">
-                <img src="https://img.shields.io/bundlephobia/min/@pathscale/vue3-ui?style=for-the-badge" />
-              </a>
-              <a class="mx-2" href="https://bundlephobia.com/result?p=@pathscale/vue3-ui">
-                <img src="https://img.shields.io/bundlephobia/minzip/@pathscale/vue3-ui?style=for-the-badge" />
-              </a>
-              <a class="mx-2" href="https://github.com/pathscale/vue3-ui/blob/master/LICENSE-MIT.txt">
-                <img src="https://img.shields.io/npm/l/@pathscale/vue3-ui?style=for-the-badge" />
-              </a>
-            </p>
           </v-column>
         </v-columns>
       </div>
