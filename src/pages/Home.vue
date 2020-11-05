@@ -7,7 +7,7 @@ import {
   HomeSection,
   OverviewSection,
   ClientsSection,
-  BlogSection
+  FeaturesSection
 } from '../components/sections'
 
 export default {
@@ -16,7 +16,7 @@ export default {
     HomeSection,
     OverviewSection,
     ClientsSection,
-    BlogSection
+    FeaturesSection
   },
   setup() {
     const intl = useI18n()
@@ -30,5 +30,5 @@ export default {
   <home-section />
   <overview-section />
   <clients-section />
-  <blog-section />
+  <features-section />
 </template>

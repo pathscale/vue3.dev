@@ -1,13 +1,18 @@
-.svg-github-icon {
+.svg-github-icon,
+.svg-discord-icon {
   fill: white;
   height: 32px;
   width: 32px;
 }
 
-.svg-discord-icon {
+.svg-open-icon,
+.svg-format-color-fill-icon,
+.svg-page-layout-body-icon,
+.svg-apps-icon,
+.svg-vuejs-icon {
   fill: white;
-  height: 32px;
-  width: 32px;
+  height: 50px;
+  width: 50px;
 }
 
 .svg-menu-up-icon {
