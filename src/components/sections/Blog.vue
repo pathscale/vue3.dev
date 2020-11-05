@@ -25,34 +25,61 @@ export default {
         <v-columns vcentered hcentered>
           <v-column size="is-full-touch is-half has-text-centered" style="z-index: 1;">
             <p class="title has-text-white">
-              {{ intl.$ts('blog.title') }}
+              Reasons to choose Vue3-ui
             </p>
-            <div class="has-text-white">
-              {{ intl.$ts('blog.content1') }}
-            </div>
           </v-column>
         </v-columns>
       </div>
     </div>
     <footer class="footer mb-6">
-      <v-columns hcentered vcentered>
-        <v-column>
+      <v-columns hcentered vcentered class="features" multiline>
+        <v-column class="has-text-centered">
           <div class="has-background-black-ter px-5 py-5 has-border">
             <p class="title has-text-white is-size-4">
-              {{ intl.$ts('blog.article') }}
+              100% Responsive
             </p>
             <span class="has-text-white">
-              {{ intl.$ts('blog.content1') }}
+              Designed for <b>mobile</b> first
             </span>
           </div>
         </v-column>
-        <v-column>
+        <v-column class="has-text-centered">
           <div class="has-background-black-ter px-5 py-5 has-border">
             <p class="title has-text-white is-size-4">
-              {{ intl.$ts('blog.article') }}
+              Modular
             </p>
             <span class="has-text-white">
-              {{ intl.$ts('blog.content1') }}
+              Import only the components that you need
+            </span>
+          </div>
+        </v-column>
+        <v-column class="has-text-centered">
+          <div class="has-background-black-ter px-5 py-5 has-border">
+            <p class="title has-text-white is-size-4">
+              Modern
+            </p>
+            <span class="has-text-white">
+              Built with <a href="https://v3.vuejs.org/" target="_blank" rel="noopener">Vue 3</a> and <a href="https://bulma.io/" target="_blank" rel="noopener">Bulma CSS v0.9.1</a>
+            </span>
+          </div>
+        </v-column>
+        <v-column class="has-text-centered">
+          <div class="has-background-black-ter px-5 py-5 has-border">
+            <p class="title has-text-white is-size-4">
+              Configurable
+            </p>
+            <span class="has-text-white">
+              Create <a href="/documentation/theming" target="_blank" rel="noopener">themes</a> with CSS variables support
+            </span>
+          </div>
+        </v-column>
+        <v-column class="has-text-centered">
+          <div class="has-background-black-ter px-5 py-5 has-border">
+            <p class="title has-text-white is-size-4">
+              Free
+            </p>
+            <span class="has-text-white">
+              Open source on <b>Github</b>
             </span>
           </div>
         </v-column>
@@ -64,5 +91,6 @@ export default {
 <style scoped>
 .has-border {
   border-left: 0.25rem solid red;
+  min-height: 200px;
 }
 </style>
