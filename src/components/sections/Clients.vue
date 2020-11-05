@@ -19,7 +19,7 @@ export default {
       },
       {
         title: 'Vue3.dev',
-        image: `${url}/vue3-dev.png`,
+        image: `${url}/vue3.dev.png`,
         link: 'https://vue3.dev/'
       }
     ]

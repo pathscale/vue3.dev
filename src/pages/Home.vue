@@ -29,6 +29,6 @@ export default {
 <template>
   <home-section />
   <overview-section />
-  <clients-section />
   <features-section />
+  <clients-section />
 </template>
