@@ -48,7 +48,7 @@ export default {
   </h4>
 
   <p>
-    You can add styles to Vue3-ui quickly by installing <a href="https://www.npmjs.com/package/@pathscale/bulma-pull-2981-css-var-only" target="_blank" rel="noopener">bulma-pull-2981-css-var-only</a> (<a href="https://bulma.io/" target="_blank" rel="noopener">Bulma</a> 0.9.0 fork), getting support for CSS Variables and theming changes in running time.
+    You can add styles to Vue3-ui quickly by installing <a href="https://www.npmjs.com/package/@pathscale/bulma-pull-2981-css-var-only" target="_blank" rel="noopener">bulma-pull-2981-css-var-only</a> (Bulma 0.9.0 fork), getting support for CSS Variables and theming changes in running time.
     <br /><br /> Additionally, if you want to use <b>Accordion</b>, <b>Sidebar</b>, <b>Switch</b> or <b>Tooltip</b>, you have to install <a href="https://www.npmjs.com/package/@pathscale/bulma-extensions-css-var" target="_blank" rel="noopener">bulma-extensions-css-var</a>, because those components are not in the Bulma core.
   </p>
 
@@ -135,7 +135,7 @@ export default {
   </h6>
 
   <p class="mb-4">
-    Css variables can be assigned values using helper functions from <a href="https://pikax.me/vue-composable/" target="_blank" rel="noopener">vue-composable</a>, a vue3 utility library.
+    Css variables can be assigned values using helper functions from <b>vue-composable</b>, a vue3 utility library.
     <br />
     <br />
     For this you will need to add vue-composable as a dependency.

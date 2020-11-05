@@ -69,7 +69,7 @@ export default {
               <v-icon src="../../assets/icons/vuejs.svg" name="vuejs-icon" bundle="navbar-icons" />
             </div>
             <span class="has-text-white">
-              Built with <a href="https://v3.vuejs.org/" target="_blank" rel="noopener">Vue 3</a> and <a href="https://bulma.io/" target="_blank" rel="noopener">Bulma CSS v0.9.1</a>
+              Built with Vue 3 and Bulma CSS
             </span>
           </div>
         </v-column>

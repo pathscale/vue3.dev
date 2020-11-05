@@ -56,7 +56,7 @@ export default {
     <p class="subtitle">
       Columns
     </p>
-    The bulma grid was wrapped by <a @click="redirect('columns')">Columns</a> component.
+    The Bulma grid was wrapped by <a @click="redirect('columns')">Columns</a> component.
 
 
     <p class="subtitle mt-4">
