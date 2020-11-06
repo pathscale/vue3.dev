@@ -2,7 +2,7 @@
   "language": "Language",
   "home": {
     "title": "Home",
-    "content": "Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS.",
+    "content": "Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS. The components that we give you out of the box are very useful to speed up your development process.",
     "button": "Explore The Framework"
   },
   "overview": {

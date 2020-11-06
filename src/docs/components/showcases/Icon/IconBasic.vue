@@ -11,7 +11,7 @@ export default {
   <v-icon class="red" src="../src/assets/icons/github.svg" name="github-icon" bundle="navbar-icons" />
 </template>
 
-<style>
+<style scoped>
 .svg-github-icon {
   fill: black;
   height: 50px;
