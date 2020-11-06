@@ -2,7 +2,7 @@
 import { VIcon } from '@pathscale/vue3-ui'
 
 export default {
-  name: 'DevShowcaseButton',
+  name: 'DevShowcaseIcon',
   components: { VIcon }
 }
 </script>
