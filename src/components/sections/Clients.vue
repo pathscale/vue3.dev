@@ -14,12 +14,12 @@ export default {
     const projects = [
       {
         title: 'Pathscale.com',
-        image: `${url}/pathscale.png`,
+        image: `${url}/pathscale.webp`,
         link: 'https://www.pathscale.com/'
       },
       {
         title: 'Vue3.dev',
-        image: `${url}/vue3.dev.png`,
+        image: `${url}/vue3.dev.webp`,
         link: 'https://vue3.dev/'
       }
     ]
