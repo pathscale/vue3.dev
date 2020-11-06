@@ -5,6 +5,7 @@ export { default as Validation } from './Validation.vue'
 export { default as Theming } from './Design/Theming.vue'
 export { default as Bulma } from './Design/Bulma.vue'
 export { default as Appstate } from './Appstate.vue'
+export { default as Icons } from './Icons.vue'
 
 export { default as Breadcrumb } from './components/Breadcrumb.vue'
 export { default as Button } from './components/Button.vue'

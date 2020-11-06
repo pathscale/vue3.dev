@@ -67,6 +67,7 @@ export default {
                 </v-menu-item>
               </v-menu-item>
               <v-menu-item label="Appstate-fast" @click="redirect('appstate')" :active="current.appstate" />
+              <v-menu-item label="Icons" @click="redirect('icons')" :active="current.icons" />
             </v-menu-list>
             <v-menu-list label="UI Components">
               <v-menu-item label="Elements" expanded>

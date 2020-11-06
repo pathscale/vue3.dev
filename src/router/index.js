@@ -64,6 +64,12 @@ const routes = [
             meta: metaTags('Bulma', 'Vue3-ui is set of Vue components designed to integrate nicely with Bulma, so you can use any feature of the original CSS Framework.')
           },
           {
+            name: 'icons',
+            path: 'icons',
+            component: Pages.Icons,
+            meta: metaTags('Icons', 'Mega compilation of svg icons optimized for fast delivery')
+          },
+          {
             name: 'button',
             path: 'button',
             component: Pages.Button,
