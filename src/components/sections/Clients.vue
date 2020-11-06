@@ -18,6 +18,16 @@ export default {
         link: 'https://www.pathscale.com/'
       },
       {
+        title: 'Revenge.game',
+        image: `${url}/revenge.webp`,
+        link: 'https://www.revenge.game/'
+      },
+      {
+        title: 'SpaceRevenge.game',
+        image: `${url}/space.webp`,
+        link: 'https://www.spacerevenge.game/'
+      },
+      {
         title: 'Vue3.dev',
         image: `${url}/vue3.dev.webp`,
         link: 'https://vue3.dev/'
@@ -35,8 +45,8 @@ export default {
         <p class="title has-text-white has-text-centered">
           {{ intl.$ts('clients.title') }}
         </p>
-        <v-columns vcentered class="reverse-columns px-2" gap="is-6">
-          <v-column v-for="(client, index) in projects" :key="index" class="has-text-centered mx-6">
+        <v-columns vcentered class="reverse-columns px-2">
+          <v-column v-for="(client, index) in projects" :key="index" class="has-text-centered mx-2">
             <a :href="client.link"><img :src="client.image" :ref="client.title" /></a>
           </v-column>
         </v-columns>

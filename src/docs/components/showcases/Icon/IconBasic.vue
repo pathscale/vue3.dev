@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <v-icon src="../src/assets/icons/github.svg" name="github-icon" bundle="navbar-icons" />
+  <v-icon class="red" src="../src/assets/icons/github.svg" name="github-icon" bundle="navbar-icons" />
 </template>
 
 <style>
