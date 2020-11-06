@@ -47,7 +47,7 @@
     "@pathscale/bulma-pull-2981-css-var-only": "^0.9.6",
     "@pathscale/eslint-plugin-vue3": "0.0.1",
     "@pathscale/rollup-plugin-tsickle": "0.0.16",
-    "@pathscale/rollup-plugin-vue3-ui-css-purge": "0.0.24",
+    "@pathscale/rollup-plugin-vue3-ui-css-purge": "0.0.25",
     "@pathscale/vue3-svg-icons": "0.0.7",
     "@pathscale/vue3-ui": "0.8.107",
     "@rollup/plugin-alias": "^3.1.1",
