@@ -58,7 +58,7 @@ export default {
             <v-menu-list label="Getting Started">
               <v-menu-item label="Installation" @click="redirect('installation')" :active="current.installation" expanded />
               <v-menu-item label="Design" expanded>
-                <v-menu-item label="Bulma" @click="redirect('bulma')" :active="current.elements" />
+                <v-menu-item label="Bulma" @click="redirect('bulma')" :active="current.bulma" />
                 <v-menu-item label="Theming" @click="redirect('theming')" :active="current.theming" />
                 <v-menu-item label="Layout" expanded>
                   <v-menu-item label="Columns" @click="redirect('columns')" :active="current.columns" />
