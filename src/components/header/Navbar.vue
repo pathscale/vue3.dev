@@ -25,7 +25,7 @@ export default {
     const intl = useI18n()
 
     const closeMenu = () => {
-      showLanguageMenu.value = false
+      isMenuOpen.value = false
     }
 
     window.mobileCheck = function() {
