@@ -43,7 +43,7 @@ export default {
     })
 
     const isActive = name => {
-      return router.currentRoute.value.path.includes(name)
+      return router.currentRoute.value.path.includes(name) || router.currentRoute.value.name.includes(name)
     }
 
     function toggleLanguageMenu() {

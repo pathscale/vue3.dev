@@ -24,12 +24,11 @@ const metaTags = (title, content) => {
 const routes = [
   {
     path: '/',
-    redirect: 'home',
     component: Main,
     children: [
       {
         name: 'home',
-        path: 'home',
+        path: '/',
         component: Pages.Home,
         meta: metaTags('Vue3-ui', 'Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS.')
       },
