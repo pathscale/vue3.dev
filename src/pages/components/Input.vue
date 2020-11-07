@@ -2,17 +2,17 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { SnippetSection, ApiSection, VariablesSection } from 'src/components'
 
-import api from '../../docs/components/api/input.ts'
-import variables from '../../docs/components/variables/input.json'
+import api from 'src/docs/components/api/input.ts'
+import variables from 'src/docs/components/variables/input.json'
 
 // eslint-disable-next-line no-restricted-syntax -- using all
-import * as Showcases from '../../docs/components/showcases/Input'
-import ColorCode from '../../docs/components/raw/Input/Color.txt'
-import LoadingCode from '../../docs/components/raw/Input/Loading.txt'
-import SizeCode from '../../docs/components/raw/Input/Size.txt'
-import TypeCode from '../../docs/components/raw/Input/Type.txt'
+import * as Showcases from 'src/docs/components/showcases/Input'
+import ColorCode from 'src/docs/components/raw/Input/Color.txt'
+import LoadingCode from 'src/docs/components/raw/Input/Loading.txt'
+import SizeCode from 'src/docs/components/raw/Input/Size.txt'
+import TypeCode from 'src/docs/components/raw/Input/Type.txt'
 
 export default {
   name: 'DevPageInput',

@@ -2,12 +2,12 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { SnippetSection, ApiSection } from 'src/components'
 
-import api from '../../docs/components/api/checkbox.ts'
+import api from 'src/docs/components/api/checkbox.ts'
 
-import Showcase from '../../docs/components/showcases/Checkbox.vue'
-import ShowcaseCode from '../../docs/components/raw/Checkbox.txt'
+import Showcase from 'src/docs/components/showcases/Checkbox.vue'
+import ShowcaseCode from 'src/docs/components/raw/Checkbox.txt'
 
 export default {
   name: 'DevPageCheckbox',

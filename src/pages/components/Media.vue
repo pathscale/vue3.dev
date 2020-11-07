@@ -2,13 +2,13 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { SnippetSection, ApiSection, VariablesSection } from 'src/components'
 
-import api from '../../docs/components/api/media.ts'
-import variables from '../../docs/components/variables/media.json'
+import api from 'src/docs/components/api/media.ts'
+import variables from 'src/docs/components/variables/media.json'
 
-import Showcase from '../../docs/components/showcases/Media.vue'
-import ShowcaseCode from '../../docs/components/raw/Media.txt'
+import Showcase from 'src/docs/components/showcases/Media.vue'
+import ShowcaseCode from 'src/docs/components/raw/Media.txt'
 
 export default {
   name: 'DevPageMedia',

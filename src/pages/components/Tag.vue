@@ -2,18 +2,18 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { SnippetSection, ApiSection, VariablesSection } from 'src/components'
 
-import api from '../../docs/components/api/tag.ts'
-import variables from '../../docs/components/variables/tag.json'
+import api from 'src/docs/components/api/tag.ts'
+import variables from 'src/docs/components/variables/tag.json'
 
 // eslint-disable-next-line no-restricted-syntax -- using all components
-import * as Showcases from '../../docs/components/showcases/Tag'
-import ClosableCode from '../../docs/components/raw/Tag/Closable.txt'
-import ColorsCode from '../../docs/components/raw/Tag/Colors.txt'
-import SizesCode from '../../docs/components/raw/Tag/Sizes.txt'
-import StatesCode from '../../docs/components/raw/Tag/States.txt'
-import StylesCode from '../../docs/components/raw/Tag/Styles.txt'
+import * as Showcases from 'src/docs/components/showcases/Tag'
+import ClosableCode from 'src/docs/components/raw/Tag/Closable.txt'
+import ColorsCode from 'src/docs/components/raw/Tag/Colors.txt'
+import SizesCode from 'src/docs/components/raw/Tag/Sizes.txt'
+import StatesCode from 'src/docs/components/raw/Tag/States.txt'
+import StylesCode from 'src/docs/components/raw/Tag/Styles.txt'
 
 export default {
   name: 'DevPageTag',

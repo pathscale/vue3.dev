@@ -2,13 +2,13 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { SnippetSection, ApiSection, VariablesSection } from 'src/components'
 
-import api from '../../docs/components/api/image.ts'
-import variables from '../../docs/components/variables/image.json'
+import api from 'src/docs/components/api/image.ts'
+import variables from 'src/docs/components/variables/image.json'
 
-import Showcase from '../../docs/components/showcases/Image.vue'
-import ShowcaseCode from '../../docs/components/raw/Image.txt'
+import Showcase from 'src/docs/components/showcases/Image.vue'
+import ShowcaseCode from 'src/docs/components/raw/Image.txt'
 
 export default {
   name: 'DevPageImage',

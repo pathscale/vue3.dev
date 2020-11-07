@@ -2,18 +2,18 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { SnippetSection, ApiSection, VariablesSection } from 'src/components'
 
-import api from '../../docs/components/api/file.ts'
-import variables from '../../docs/components/variables/file.json'
+import api from 'src/docs/components/api/file.ts'
+import variables from 'src/docs/components/variables/file.json'
 
 // eslint-disable-next-line no-restricted-syntax -- using all of them
-import * as Showcases from '../../docs/components/showcases/File'
-import AlignCode from '../../docs/components/raw/File/Align.txt'
-import ColorsCode from '../../docs/components/raw/File/Colors.txt'
-import DefaultCode from '../../docs/components/raw/File/Default.txt'
-import SizeCode from '../../docs/components/raw/File/Size.txt'
-import StyleCode from '../../docs/components/raw/File/Style.txt'
+import * as Showcases from 'src/docs/components/showcases/File'
+import AlignCode from 'src/docs/components/raw/File/Align.txt'
+import ColorsCode from 'src/docs/components/raw/File/Colors.txt'
+import DefaultCode from 'src/docs/components/raw/File/Default.txt'
+import SizeCode from 'src/docs/components/raw/File/Size.txt'
+import StyleCode from 'src/docs/components/raw/File/Style.txt'
 
 export default {
   name: 'DevPageFile',

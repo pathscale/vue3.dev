@@ -2,14 +2,14 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../components'
+import { SnippetSection, ApiSection } from 'src/components'
 
-import api from '../docs/components/api/appstate.ts'
+import api from 'src/docs/components/api/appstate.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- Using all of them
-import * as Showcases from '../docs/components/showcases/Appstate'
-import CreateCode from '../docs/components/raw/Appstate/Create.txt'
-import UpdateCode from '../docs/components/raw/Appstate/Update.txt'
+import * as Showcases from 'src/docs/components/showcases/Appstate'
+import CreateCode from 'src/docs/components/raw/Appstate/Create.txt'
+import UpdateCode from 'src/docs/components/raw/Appstate/Update.txt'
 
 
 export default {

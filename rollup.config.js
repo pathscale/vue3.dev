@@ -24,6 +24,14 @@ import image from '@rollup/plugin-image'
 import visualizer from 'rollup-plugin-visualizer'
 import { string } from 'rollup-plugin-string'
 import vue3svg from '@pathscale/vue3-svg-icons'
+import includePaths from 'rollup-plugin-includepaths'
+
+const includePathOptions = {
+  include: {},
+  paths: ['./'],
+  external: [],
+  extensions: ['.ts', '.mjs', '.js', '.vue', '.json'],
+}
 
 const extensions = ['.ts', '.mjs', '.js', '.vue', '.json']
 const env = dotenv.config({ path: path.join(__dirname, '.env') })
@@ -140,6 +148,7 @@ const config = [
     ],
 
     plugins: [
+      includePaths(includePathOptions),
       string({
         include: '**/*.txt',
       }),

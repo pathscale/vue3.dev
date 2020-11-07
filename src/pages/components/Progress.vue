@@ -2,18 +2,18 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { SnippetSection, ApiSection, VariablesSection } from 'src/components'
 
-import api from '../../docs/components/api/progress.ts'
-import variables from '../../docs/components/variables/progress.json'
+import api from 'src/docs/components/api/progress.ts'
+import variables from 'src/docs/components/variables/progress.json'
 
 // eslint-disable-next-line no-restricted-syntax -- using all of them
-import * as Showcases from '../../docs/components/showcases/Progress'
-import ColorsCode from '../../docs/components/raw/Progress/ProgressColors.txt'
-import IndeterminateCode from '../../docs/components/raw/Progress/ProgressIndeterminate.txt'
-import PercentCode from '../../docs/components/raw/Progress/ProgressPercent.txt'
-import SizesCode from '../../docs/components/raw/Progress/ProgressSizes.txt'
-import ValueCode from '../../docs/components/raw/Progress/ProgressValue.txt'
+import * as Showcases from 'src/docs/components/showcases/Progress'
+import ColorsCode from 'src/docs/components/raw/Progress/ProgressColors.txt'
+import IndeterminateCode from 'src/docs/components/raw/Progress/ProgressIndeterminate.txt'
+import PercentCode from 'src/docs/components/raw/Progress/ProgressPercent.txt'
+import SizesCode from 'src/docs/components/raw/Progress/ProgressSizes.txt'
+import ValueCode from 'src/docs/components/raw/Progress/ProgressValue.txt'
 
 export default {
   name: 'DevPageProgress',

@@ -8,7 +8,7 @@ import {
   OverviewSection,
   ClientsSection,
   FeaturesSection
-} from '../components/sections'
+} from 'src/components/sections'
 
 export default {
   name: 'DevPageHome',

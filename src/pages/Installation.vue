@@ -5,10 +5,10 @@ import { useRouter } from 'vue-router'
 import { VAccordion, VIcon } from '@pathscale/vue3-ui'
 
 import { reactive, computed } from 'vue'
-import Showcase from '../docs/components/showcases/HelloWord.vue'
-import ShowcaseCode from '../docs/components/raw/HelloWord.txt'
+import Showcase from 'src/docs/components/showcases/HelloWord.vue'
+import ShowcaseCode from 'src/docs/components/raw/HelloWord.txt'
 
-import { SnippetSection } from '../components'
+import { SnippetSection } from 'src/components'
 
 export default {
   name: 'DevPageInstallation',
@@ -54,8 +54,8 @@ export default {
           <h4 class="title is-4">
             1. Starter Template <i>(recommended)</i>
           </h4>
-          <v-icon v-if="state.rollup" src="../assets/icons/menu-up.svg" name="menu-up-icon" bundle="navbar-icons" />
-          <v-icon v-else src="../assets/icons/menu-down.svg" name="menu-down-icon" bundle="navbar-icons" />
+          <v-icon v-if="state.rollup" src="src/assets/icons/menu-up.svg" name="menu-up-icon" bundle="navbar-icons" />
+          <v-icon v-else src="src/assets/icons/menu-down.svg" name="menu-down-icon" bundle="navbar-icons" />
         </div>
       </template>
       <template #content>
@@ -112,8 +112,8 @@ export default {
             <h4 class="title is-4">
               2. Manual Install
             </h4>
-            <v-icon v-if="state.cli" src="../assets/icons/menu-up.svg" name="menu-up-icon" bundle="navbar-icons" />
-            <v-icon v-else src="../assets/icons/menu-down.svg" name="menu-down-icon" bundle="navbar-icons" />
+            <v-icon v-if="state.cli" src="src/assets/icons/menu-up.svg" name="menu-up-icon" bundle="navbar-icons" />
+            <v-icon v-else src="src/assets/icons/menu-down.svg" name="menu-down-icon" bundle="navbar-icons" />
           </div>
         </template>
         <template #content>

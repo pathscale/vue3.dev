@@ -39,7 +39,7 @@ export default {
               100% Responsive
             </p>
             <div>
-              <v-icon src="../../assets/icons/page-layout-body.svg" name="page-layout-body-icon" bundle="navbar-icons" />
+              <v-icon src="src/assets/icons/page-layout-body.svg" name="page-layout-body-icon" bundle="navbar-icons" />
             </div>
             <span class="has-text-white">
               Designed for <b>mobile</b> first
@@ -52,7 +52,7 @@ export default {
               Modular
             </p>
             <div>
-              <v-icon src="../../assets/icons/apps.svg" name="apps-icon" bundle="navbar-icons" />
+              <v-icon src="src/assets/icons/apps.svg" name="apps-icon" bundle="navbar-icons" />
             </div>
 
             <span class="has-text-white">
@@ -66,7 +66,7 @@ export default {
               Modern
             </p>
             <div>
-              <v-icon src="../../assets/icons/vuejs.svg" name="vuejs-icon" bundle="navbar-icons" />
+              <v-icon src="src/assets/icons/vuejs.svg" name="vuejs-icon" bundle="navbar-icons" />
             </div>
             <span class="has-text-white">
               Built with Vue 3 and Bulma CSS
@@ -79,7 +79,7 @@ export default {
               Themeable
             </p>
             <div>
-              <v-icon src="../../assets/icons/format-color-fill.svg" name="format-color-fill-icon" bundle="navbar-icons" />
+              <v-icon src="src/assets/icons/format-color-fill.svg" name="format-color-fill-icon" bundle="navbar-icons" />
             </div>
             <span class="has-text-white">
               Create <a href="/documentation/theming" target="_blank" rel="noopener">themes</a> with CSS variables support
@@ -92,7 +92,7 @@ export default {
               Free
             </p>
             <div>
-              <v-icon src="../../assets/icons/github.svg" name="open-icon" bundle="navbar-icons" />
+              <v-icon src="src/assets/icons/github.svg" name="open-icon" bundle="navbar-icons" />
             </div>
             <span class="has-text-white">
               Open source on <b>Github</b>

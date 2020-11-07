@@ -2,20 +2,20 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { SnippetSection, ApiSection } from 'src/components'
 
-import api from '../../docs/components/api/columns.ts'
+import api from 'src/docs/components/api/columns.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
-import * as Showcases from '../../docs/components/showcases/Columns'
-import ColumnsBasicCode from '../../docs/components/raw/Columns/ColumnsBasic.txt'
-import ColumnsSizesCode from '../../docs/components/raw/Columns/ColumnsSizes.txt'
-import ColumnsOffsetCode from '../../docs/components/raw/Columns/ColumnsOffset.txt'
-import ColumnsNestedCode from '../../docs/components/raw/Columns/ColumnsNested.txt'
-import ColumnsNarrowCode from '../../docs/components/raw/Columns/ColumnsNarrow.txt'
-import ColumnsMultilineCode from '../../docs/components/raw/Columns/ColumnsMultiline.txt'
-import ColumnsGapCode from '../../docs/components/raw/Columns/ColumnsGap.txt'
-import ColumnsAligmentCode from '../../docs/components/raw/Columns/ColumnsAligment.txt'
+import * as Showcases from 'src/docs/components/showcases/Columns'
+import ColumnsBasicCode from 'src/docs/components/raw/Columns/ColumnsBasic.txt'
+import ColumnsSizesCode from 'src/docs/components/raw/Columns/ColumnsSizes.txt'
+import ColumnsOffsetCode from 'src/docs/components/raw/Columns/ColumnsOffset.txt'
+import ColumnsNestedCode from 'src/docs/components/raw/Columns/ColumnsNested.txt'
+import ColumnsNarrowCode from 'src/docs/components/raw/Columns/ColumnsNarrow.txt'
+import ColumnsMultilineCode from 'src/docs/components/raw/Columns/ColumnsMultiline.txt'
+import ColumnsGapCode from 'src/docs/components/raw/Columns/ColumnsGap.txt'
+import ColumnsAligmentCode from 'src/docs/components/raw/Columns/ColumnsAligment.txt'
 
 export default {
   name: 'DevPageColumns',

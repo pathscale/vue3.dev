@@ -2,17 +2,17 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { SnippetSection, ApiSection, VariablesSection } from 'src/components'
 
-import api from '../../docs/components/api/tabs.ts'
-import variables from '../../docs/components/variables/tabs.json'
+import api from 'src/docs/components/api/tabs.ts'
+import variables from 'src/docs/components/variables/tabs.json'
 
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
-import * as Showcases from '../../docs/components/showcases/Tabs'
-import BasicCode from '../../docs/components/raw/Tabs/TabsBasic.txt'
-import PositionCode from '../../docs/components/raw/Tabs/TabsPosition.txt'
-import SizesCode from '../../docs/components/raw/Tabs/TabsSizes.txt'
-import TypesCode from '../../docs/components/raw/Tabs/TabsTypes.txt'
+import * as Showcases from 'src/docs/components/showcases/Tabs'
+import BasicCode from 'src/docs/components/raw/Tabs/TabsBasic.txt'
+import PositionCode from 'src/docs/components/raw/Tabs/TabsPosition.txt'
+import SizesCode from 'src/docs/components/raw/Tabs/TabsSizes.txt'
+import TypesCode from 'src/docs/components/raw/Tabs/TabsTypes.txt'
 
 export default {
   name: 'DevPageTabs',

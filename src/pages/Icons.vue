@@ -2,13 +2,13 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../components'
+import { SnippetSection, ApiSection } from 'src/components'
 
-import api from '../docs/components/api/icon.ts'
+import api from 'src/docs/components/api/icon.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- Using all of them
-import * as Showcases from '../docs/components/showcases/Icon'
-import BasicCode from '../docs/components/raw/Icon/IconBasic.txt'
+import * as Showcases from 'src/docs/components/showcases/Icon'
+import BasicCode from 'src/docs/components/raw/Icon/IconBasic.txt'
 
 export default {
   name: 'DevPageInstallation',

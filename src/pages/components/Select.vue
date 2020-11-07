@@ -2,16 +2,16 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { SnippetSection, ApiSection } from 'src/components'
 
-import api from '../../docs/components/api/select.ts'
+import api from 'src/docs/components/api/select.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- using all of them
-import * as Showcases from '../../docs/components/showcases/Select'
-import ColorCode from '../../docs/components/raw/Select/Color.txt'
-import LoadingCode from '../../docs/components/raw/Select/Loading.txt'
-import SizeCode from '../../docs/components/raw/Select/Size.txt'
-import StyleCode from '../../docs/components/raw/Select/Style.txt'
+import * as Showcases from 'src/docs/components/showcases/Select'
+import ColorCode from 'src/docs/components/raw/Select/Color.txt'
+import LoadingCode from 'src/docs/components/raw/Select/Loading.txt'
+import SizeCode from 'src/docs/components/raw/Select/Size.txt'
+import StyleCode from 'src/docs/components/raw/Select/Style.txt'
 
 export default {
   name: 'DevPageSelect',

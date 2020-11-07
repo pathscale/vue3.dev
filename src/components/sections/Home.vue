@@ -1,7 +1,7 @@
 <script>
 import { VButton, VColumns, VColumn } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
-import logo from '../../assets/svg/vue3-logo.svg'
+import logo from 'src/assets/svg/vue3-logo.svg'
 
 export default {
   name: 'DevHome',

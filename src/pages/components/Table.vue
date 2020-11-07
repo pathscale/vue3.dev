@@ -2,23 +2,23 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { SnippetSection, ApiSection, VariablesSection } from 'src/components'
 
-import api from '../../docs/components/api/table.ts'
-import variables from '../../docs/components/variables/table.json'
+import api from 'src/docs/components/api/table.ts'
+import variables from 'src/docs/components/variables/table.json'
 
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
-import * as Showcases from '../../docs/components/showcases/Table'
-import BasicCode from '../../docs/components/raw/Table/Basic.txt'
-import StyledCode from '../../docs/components/raw/Table/Styled.txt'
-import SearchCode from '../../docs/components/raw/Table/Search.txt'
-import CustomCode from '../../docs/components/raw/Table/Custom.txt'
-import SelectCode from '../../docs/components/raw/Table/Select.txt'
-import PaginateCode from '../../docs/components/raw/Table/Paginate.txt'
-import DynamicCode from '../../docs/components/raw/Table/Dynamic.txt'
-import DragCode from '../../docs/components/raw/Table/Drag.txt'
-import StickyCode from '../../docs/components/raw/Table/Sticky.txt'
-import OthersCode from '../../docs/components/raw/Table/Others.txt'
+import * as Showcases from 'src/docs/components/showcases/Table'
+import BasicCode from 'src/docs/components/raw/Table/Basic.txt'
+import StyledCode from 'src/docs/components/raw/Table/Styled.txt'
+import SearchCode from 'src/docs/components/raw/Table/Search.txt'
+import CustomCode from 'src/docs/components/raw/Table/Custom.txt'
+import SelectCode from 'src/docs/components/raw/Table/Select.txt'
+import PaginateCode from 'src/docs/components/raw/Table/Paginate.txt'
+import DynamicCode from 'src/docs/components/raw/Table/Dynamic.txt'
+import DragCode from 'src/docs/components/raw/Table/Drag.txt'
+import StickyCode from 'src/docs/components/raw/Table/Sticky.txt'
+import OthersCode from 'src/docs/components/raw/Table/Others.txt'
 
 export default {
   name: 'DevPageTable',
