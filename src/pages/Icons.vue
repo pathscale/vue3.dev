@@ -42,7 +42,7 @@ export default {
       &nbsp; plugins: [
       <br /> &nbsp;  &nbsp; vue3svg()
       <br />
-      ]
+      &nbsp;&nbsp;]
     </div>
 
     <snippet-section title="Basic Use" :code="BasicCode" :component="Showcases.IconBasic" :path="router.currentRoute.value.path" />

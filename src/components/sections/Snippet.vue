@@ -58,7 +58,7 @@ export default {
     // arrays
     const _script = computed(() => props.code.match(/<script>([\s\S]*)<\/script>/g))
     const _template = computed(() => props.code.match(/<template>([\s\S]*)<\/template>/g))
-    const _style = computed(() => props.code.match(/<style>([\s\S]*)<\/style>/g))
+    const _style = computed(() => props.code.match(/<style(\s(scoped))*>([\s\S]*)<\/style>/g))
 
     // first elements of arrays as .?[0] is not supported
     const script = computed(() => _script.value ? _script.value[0] : null)
