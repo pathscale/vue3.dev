@@ -121,7 +121,6 @@ const baseRules = {
   'jsdoc/require-jsdoc': 'off',
   'require-unicode-regexp': 'off',
   'prefer-named-capture-group': 'off',
-  'import/no-unresolved': 'off', // pending make it works properly with rollup-plugin-includepaths
 }
 
 module.exports = {

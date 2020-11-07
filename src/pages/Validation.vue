@@ -2,11 +2,11 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection } from 'src/components'
+import { SnippetSection } from '../components'
 
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
-import * as Showcases from 'src/docs/components/showcases/Validation'
-import BasicCode from 'src/docs/components/raw/Validation/Basic.txt'
+import * as Showcases from '../docs/components/showcases/Validation'
+import BasicCode from '../docs/components/raw/Validation/Basic.txt'
 
 export default {
   name: 'DevPageValidation',

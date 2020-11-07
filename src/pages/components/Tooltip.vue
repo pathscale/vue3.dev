@@ -2,18 +2,18 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from 'src/components'
+import { SnippetSection, ApiSection } from '../../components'
 
-import api from 'src/docs/components/api/tooltip.ts'
+import api from '../../docs/components/api/tooltip.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- using all components
-import * as Showcases from 'src/docs/components/showcases/Tooltip'
-import AlwaysCode from 'src/docs/components/raw/Tooltip/Always.txt'
-import AnimatedCode from 'src/docs/components/raw/Tooltip/Animated.txt'
-import ColorsCode from 'src/docs/components/raw/Tooltip/Colors.txt'
-import DelayCode from 'src/docs/components/raw/Tooltip/Delay.txt'
-import SizesCode from 'src/docs/components/raw/Tooltip/Sizes.txt'
-import StylesCode from 'src/docs/components/raw/Tooltip/Styles.txt'
+import * as Showcases from '../../docs/components/showcases/Tooltip'
+import AlwaysCode from '../../docs/components/raw/Tooltip/Always.txt'
+import AnimatedCode from '../../docs/components/raw/Tooltip/Animated.txt'
+import ColorsCode from '../../docs/components/raw/Tooltip/Colors.txt'
+import DelayCode from '../../docs/components/raw/Tooltip/Delay.txt'
+import SizesCode from '../../docs/components/raw/Tooltip/Sizes.txt'
+import StylesCode from '../../docs/components/raw/Tooltip/Styles.txt'
 
 export default {
   name: 'DevPageTooltip',

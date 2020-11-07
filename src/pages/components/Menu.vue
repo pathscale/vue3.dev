@@ -2,13 +2,13 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from 'src/components'
+import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
-import api from 'src/docs/components/api/menu.ts'
-import variables from 'src/docs/components/variables/menu.json'
+import api from '../../docs/components/api/menu.ts'
+import variables from '../../docs/components/variables/menu.json'
 
-import Showcase from 'src/docs/components/showcases/Menu.vue'
-import ShowcaseCode from 'src/docs/components/raw/Menu.txt'
+import Showcase from '../../docs/components/showcases/Menu.vue'
+import ShowcaseCode from '../../docs/components/raw/Menu.txt'
 
 export default {
   name: 'DevPageMenu',

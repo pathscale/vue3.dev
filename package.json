@@ -103,7 +103,6 @@
     "rollup": "^2.31.0",
     "rollup-plugin-analyzer": "^3.3.0",
     "rollup-plugin-gzip": "^2.5.0",
-    "rollup-plugin-includepaths": "^0.2.4",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-serve": "^1.0.4",
     "rollup-plugin-string": "^3.0.0",

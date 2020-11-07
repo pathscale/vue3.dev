@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Main from 'src/layouts/Main.vue'
+import Main from '../layouts/Main.vue'
 
 // eslint-disable-next-line no-restricted-syntax -- All pages will be used
-import * as Pages from 'src/pages'
+import * as Pages from '../pages'
 
 const metaTags = (title, content) => {
   return {

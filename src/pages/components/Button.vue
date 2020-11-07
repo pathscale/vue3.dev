@@ -2,17 +2,17 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from 'src/components'
+import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
-import api from 'src/docs/components/api/button.ts'
-import variables from 'src/docs/components/variables/button.json'
+import api from '../../docs/components/api/button.ts'
+import variables from '../../docs/components/variables/button.json'
 
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
-import * as Showcases from 'src/docs/components/showcases/Button'
-import ColorsCode from 'src/docs/components/raw/Button/ButtonColors.txt'
-import StylesCode from 'src/docs/components/raw/Button/ButtonStyles.txt'
-import SizesCode from 'src/docs/components/raw/Button/ButtonSizes.txt'
-import StatesCode from 'src/docs/components/raw/Button/ButtonStates.txt'
+import * as Showcases from '../../docs/components/showcases/Button'
+import ColorsCode from '../../docs/components/raw/Button/ButtonColors.txt'
+import StylesCode from '../../docs/components/raw/Button/ButtonStyles.txt'
+import SizesCode from '../../docs/components/raw/Button/ButtonSizes.txt'
+import StatesCode from '../../docs/components/raw/Button/ButtonStates.txt'
 
 export default {
   name: 'DevPageButton',

@@ -3,7 +3,7 @@ import {
   Navbar,
   Cookie,
   CFooter
-} from 'src/components'
+} from '../components'
 
 export default {
   name: 'DevMain',

@@ -2,17 +2,17 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from 'src/components'
+import { SnippetSection, ApiSection } from '../../components'
 
-import api from 'src/docs/components/api/switch.ts'
+import api from '../../docs/components/api/switch.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- using all of them
-import * as Showcases from 'src/docs/components/showcases/Switch'
-import DefaultCode from 'src/docs/components/raw/Switch/Default.txt'
-import PassiveCode from 'src/docs/components/raw/Switch/Passive.txt'
-import SizesCode from 'src/docs/components/raw/Switch/Sizes.txt'
-import StylesCode from 'src/docs/components/raw/Switch/Style.txt'
-import ValuesCode from 'src/docs/components/raw/Switch/Values.txt'
+import * as Showcases from '../../docs/components/showcases/Switch'
+import DefaultCode from '../../docs/components/raw/Switch/Default.txt'
+import PassiveCode from '../../docs/components/raw/Switch/Passive.txt'
+import SizesCode from '../../docs/components/raw/Switch/Sizes.txt'
+import StylesCode from '../../docs/components/raw/Switch/Style.txt'
+import ValuesCode from '../../docs/components/raw/Switch/Values.txt'
 
 export default {
   name: 'DevPageSwitch',

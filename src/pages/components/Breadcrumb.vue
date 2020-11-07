@@ -2,15 +2,15 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from 'src/components'
+import { SnippetSection, ApiSection } from '../../components'
 
-import api from 'src/docs/components/api/breadcrumb.ts'
+import api from '../../docs/components/api/breadcrumb.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
-import * as Showcases from 'src/docs/components/showcases/Breadcrumb'
-import BreadcrumbBasicCode from 'src/docs/components/raw/Breadcrumb/BreadcrumbBasic.txt'
-import BreadcrumbSizesCode from 'src/docs/components/raw/Breadcrumb/BreadcrumbSizes.txt'
-import BreadcrumbSeparatorCode from 'src/docs/components/raw/Breadcrumb/BreadcrumbSeparator.txt'
+import * as Showcases from '../../docs/components/showcases/Breadcrumb'
+import BreadcrumbBasicCode from '../../docs/components/raw/Breadcrumb/BreadcrumbBasic.txt'
+import BreadcrumbSizesCode from '../../docs/components/raw/Breadcrumb/BreadcrumbSizes.txt'
+import BreadcrumbSeparatorCode from '../../docs/components/raw/Breadcrumb/BreadcrumbSeparator.txt'
 
 
 export default {

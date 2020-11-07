@@ -2,12 +2,12 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from 'src/components'
+import { SnippetSection, ApiSection } from '../../components'
 
-import api from 'src/docs/components/api/accordion.ts'
+import api from '../../docs/components/api/accordion.ts'
 
-import Showcase from 'src/docs/components/showcases/Accordion.vue'
-import ShowcaseCode from 'src/docs/components/raw/Accordion.txt'
+import Showcase from '../../docs/components/showcases/Accordion.vue'
+import ShowcaseCode from '../../docs/components/raw/Accordion.txt'
 
 export default {
   name: 'DevPageAccordion',

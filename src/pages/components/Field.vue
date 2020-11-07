@@ -2,18 +2,18 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from 'src/components'
+import { SnippetSection, ApiSection } from '../../components'
 
-import api from 'src/docs/components/api/field.ts'
+import api from '../../docs/components/api/field.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- using all of them
-import * as Showcases from 'src/docs/components/showcases/Field'
-import AddonsCode from 'src/docs/components/raw/Field/Addons.txt'
-import DefaultCode from 'src/docs/components/raw/Field/Default.txt'
-import GroupedCode from 'src/docs/components/raw/Field/Grouped.txt'
-import HorizontalCode from 'src/docs/components/raw/Field/Horizontal.txt'
-import MessageCode from 'src/docs/components/raw/Field/Message.txt'
-import SizeCode from 'src/docs/components/raw/Field/Size.txt'
+import * as Showcases from '../../docs/components/showcases/Field'
+import AddonsCode from '../../docs/components/raw/Field/Addons.txt'
+import DefaultCode from '../../docs/components/raw/Field/Default.txt'
+import GroupedCode from '../../docs/components/raw/Field/Grouped.txt'
+import HorizontalCode from '../../docs/components/raw/Field/Horizontal.txt'
+import MessageCode from '../../docs/components/raw/Field/Message.txt'
+import SizeCode from '../../docs/components/raw/Field/Size.txt'
 
 export default {
   name: 'DevPageField',

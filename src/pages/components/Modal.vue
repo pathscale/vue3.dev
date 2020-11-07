@@ -2,13 +2,13 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from 'src/components'
+import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
-import api from 'src/docs/components/api/modal.ts'
-import variables from 'src/docs/components/variables/modal.json'
+import api from '../../docs/components/api/modal.ts'
+import variables from '../../docs/components/variables/modal.json'
 
-import Showcase from 'src/docs/components/showcases/Modal.vue'
-import ShowcaseCode from 'src/docs/components/raw/Modal.txt'
+import Showcase from '../../docs/components/showcases/Modal.vue'
+import ShowcaseCode from '../../docs/components/raw/Modal.txt'
 
 export default {
   name: 'DevPageModal',

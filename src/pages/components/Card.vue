@@ -2,13 +2,13 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from 'src/components'
+import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
-import api from 'src/docs/components/api/card.ts'
-import variables from 'src/docs/components/variables/card.json'
+import api from '../../docs/components/api/card.ts'
+import variables from '../../docs/components/variables/card.json'
 
-import Showcase from 'src/docs/components/showcases/Card.vue'
-import ShowcaseCode from 'src/docs/components/raw/Card.txt'
+import Showcase from '../../docs/components/showcases/Card.vue'
+import ShowcaseCode from '../../docs/components/raw/Card.txt'
 
 export default {
   name: 'DevPageCard',

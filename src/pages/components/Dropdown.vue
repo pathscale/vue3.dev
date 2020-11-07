@@ -2,20 +2,20 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from 'src/components'
+import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
-import api from 'src/docs/components/api/dropdown.ts'
-import variables from 'src/docs/components/variables/dropdown.json'
+import api from '../../docs/components/api/dropdown.ts'
+import variables from '../../docs/components/variables/dropdown.json'
 
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
-import * as Showcases from 'src/docs/components/showcases/Dropdown'
+import * as Showcases from '../../docs/components/showcases/Dropdown'
 
-import DropdownBasicCode from 'src/docs/components/raw/Dropdown/DropdownBasic.txt'
-import DropdownHoverableCode from 'src/docs/components/raw/Dropdown/DropdownHoverable.txt'
-import DropdownPositionCode from 'src/docs/components/raw/Dropdown/DropdownPosition.txt'
-import DropdownDisabledCode from 'src/docs/components/raw/Dropdown/DropdownDisabled.txt'
-import DropdownLinkCode from 'src/docs/components/raw/Dropdown/DropdownLink.txt'
-import DropdownVModelCode from 'src/docs/components/raw/Dropdown/DropdownVModel.txt'
+import DropdownBasicCode from '../../docs/components/raw/Dropdown/DropdownBasic.txt'
+import DropdownHoverableCode from '../../docs/components/raw/Dropdown/DropdownHoverable.txt'
+import DropdownPositionCode from '../../docs/components/raw/Dropdown/DropdownPosition.txt'
+import DropdownDisabledCode from '../../docs/components/raw/Dropdown/DropdownDisabled.txt'
+import DropdownLinkCode from '../../docs/components/raw/Dropdown/DropdownLink.txt'
+import DropdownVModelCode from '../../docs/components/raw/Dropdown/DropdownVModel.txt'
 
 export default {
   name: 'DevPageDropdown',

@@ -2,17 +2,17 @@
 import { useI18n } from 'vue-composable'
 
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from 'src/components'
+import { SnippetSection, ApiSection } from '../../components'
 
-import api from 'src/docs/components/api/textarea.ts'
+import api from '../../docs/components/api/textarea.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- using all
-import * as Showcases from 'src/docs/components/showcases/Textarea'
-import ColorCode from 'src/docs/components/raw/Textarea/Color.txt'
-import SizeCode from 'src/docs/components/raw/Textarea/Size.txt'
-import LoadingCode from 'src/docs/components/raw/Textarea/Loading.txt'
-import FocusedCode from 'src/docs/components/raw/Textarea/Focused.txt'
-import CounterCode from 'src/docs/components/raw/Textarea/Counter.txt'
+import * as Showcases from '../../docs/components/showcases/Textarea'
+import ColorCode from '../../docs/components/raw/Textarea/Color.txt'
+import SizeCode from '../../docs/components/raw/Textarea/Size.txt'
+import LoadingCode from '../../docs/components/raw/Textarea/Loading.txt'
+import FocusedCode from '../../docs/components/raw/Textarea/Focused.txt'
+import CounterCode from '../../docs/components/raw/Textarea/Counter.txt'
 
 export default {
   name: 'DevPageTextarea',
