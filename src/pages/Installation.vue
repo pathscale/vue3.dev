@@ -76,20 +76,13 @@ export default {
             <li>Unused CSS removed with our PurgeCSS based plugin</li>
           </ul>
         </div>
-
-        <div class="subtitle content">
-          Prerequisites
-        </div>
-        <div class="box has-background-light is-family-code">
-          npm install -g vue-cli @vue/cli-init
-        </div>
         <div class="subtitle content">
           Create a new project based on our Vue3 Starter template
         </div>
         <div class="box has-background-light is-family-code">
-          vue init pathscale/vue3-starter my-project
+          git clone git@github.com:pathscale/vue3-starter.git --depth 1
           <br />
-          cd my-project
+          cd vue3-starter
         </div>
         <div class="subtitle content">
           Install packages and run the app
