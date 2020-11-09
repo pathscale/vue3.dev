@@ -5,5 +5,5 @@ export default {
 </script>
 
 <template>
-  <img data-src="./128x128.png" alt="1 only data-src" />
+  <img data-src="./128x128.png" alt="128x128" />
 </template>
