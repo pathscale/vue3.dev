@@ -112,7 +112,67 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
      *
      * NOTICE:  All information contained herein is, and remains the property of PathScale PTE Ltd. The intellectual and technical concepts contained herein are proprietary to PathScale PTE Ltd and may be covered by Singapore and Foreign Patents, patents in process, and are protected by trade secret or copyright law. Dissemination of this information or reproduction of this material is strictly forbidden unless prior written permission is obtained from PathScale PTE Ltd.
      */
-    let $__CDN;async function t(t,e){const a=new URL(t,e).href;if(!window.caches)return a;const r=await window.caches.open("v1");let s=await r.match(t);s||(s=await fetch(a,{method:"GET",cache:"no-store"}),await r.put(t,s.clone()));const c=await s.blob();return URL.createObjectURL(c)}async function e(e,a){e.dataset.href&&(e.href&&URL.revokeObjectURL(e.href),e.setAttribute("href",await t(e.dataset.href,a))),e.dataset.src&&(e.src&&URL.revokeObjectURL(e.src),e.setAttribute("src",await t(e.dataset.src,a)))}window.addEventListener("DOMContentLoaded",(async function(){const a=new AbortController,r=$__CDN_LIST.map(t=>async function(t,e){return await fetch(t,{signal:e,cache:"no-store",mode:"no-cors",method:"HEAD",body:null}),t}(t,a.signal));$__CDN=await Promise.race(r),a.abort();const s=Array.from(document.querySelectorAll("[data-src]")),c=Array.from(document.querySelectorAll("[data-href]")),o=s.map(async e=>{const a=e.dataset.src;e.setAttribute("src",await t(a,$__CDN))}),n=c.map(async e=>{const a=e.dataset.href;e.setAttribute("href",await t(a,$__CDN))});await Promise.all(o),await Promise.all(n),new MutationObserver(async t=>{for await(const a of t)if("attributes"===a.type)await e(a.target,$__CDN);else if("childList"===a.type)for await(const t of a.addedNodes)"dataset"in t&&await e(t,$__CDN)}).observe(document,{attributes:!0,attributeFilter:["data-src","data-href"],childList:!0,subtree:!0})}));
+
+    let $__CDN
+    async function t(t, e) {
+      const a = new URL(t, e).href
+      if (!window.caches) return a
+      const r = await window.caches.open('v1')
+      let s = await r.match(t)
+      s || ((s = await fetch(a, { method: 'GET', cache: 'no-store' })), await r.put(t, s.clone()))
+      const c = await s.blob()
+      return URL.createObjectURL(c)
+    }
+    async function e(e, a) {
+      e.dataset.href &&
+        (e.href && URL.revokeObjectURL(e.href), e.setAttribute('href', await t(e.dataset.href, a))),
+        e.dataset.src &&
+          (e.src && URL.revokeObjectURL(e.src), e.setAttribute('src', await t(e.dataset.src, a)))
+    }
+    window.addEventListener('DOMContentLoaded', async function () {
+      console.log("DOMContentLoaded Star")
+      const a = new AbortController(),
+        r = $__CDN_LIST.map(t =>
+          (async function (t, e) {
+            return (
+              await fetch(t, {
+                signal: e,
+                cache: 'no-store',
+                mode: 'no-cors',
+                method: 'HEAD',
+                body: null,
+              }),
+              t
+            )
+          })(t, a.signal),
+        )
+      ;($__CDN = await Promise.race(r)), a.abort()
+      const s = Array.from(document.querySelectorAll('[data-src]')),
+        c = Array.from(document.querySelectorAll('[data-href]')),
+        o = s.map(async e => {
+          const a = e.dataset.src
+          e.setAttribute('src', await t(a, $__CDN))
+        }),
+        n = c.map(async e => {
+          const a = e.dataset.href
+          e.setAttribute('href', await t(a, $__CDN))
+        })
+      await Promise.all(o),
+        await Promise.all(n),
+        new MutationObserver(async t => {
+          for await (const a of t)
+            if ('attributes' === a.type) await e(a.target, $__CDN)
+            else if ('childList' === a.type)
+              for await (const t of a.addedNodes) 'dataset' in t && (await e(t, $__CDN))
+        }).observe(document, {
+          attributes: !0,
+          attributeFilter: ['data-src', 'data-href'],
+          childList: !0,
+          subtree: !0,
+        })
+        console.log("DOMContentLoaded end")
+    })
+    
     </script>
     ${links}
   </head>

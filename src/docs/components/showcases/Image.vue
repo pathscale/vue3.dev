@@ -1,6 +1,19 @@
 <script>
+/* eslint-disable no-console -- ignore */
+import {
+  onBeforeMount,
+  onMounted } from 'vue'
+
 export default {
-  name: 'DevShowcaseImage'
+  name: 'DevShowcaseImage',
+  setup() {
+    onBeforeMount(() => {
+      console.log('onBeforeMount')
+    })
+    onMounted(() => {
+      console.log('onMounted')
+    })
+  }
 }
 </script>
 
