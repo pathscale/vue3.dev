@@ -6,4 +6,5 @@ export default {
 
 <template>
   <img data-src="./128x128.png" alt="128x128" />
+  <img data-src="/128x128.png" alt="128x128" />
 </template>
