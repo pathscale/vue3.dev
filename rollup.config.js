@@ -103,7 +103,6 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
     <script>
     const $__CDN_LIST = [
       window.location.origin
-    }
     ];
     /**!
      * PathScale CONFIDENTIAL
