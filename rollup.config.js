@@ -39,7 +39,7 @@ const addVersion = fileName => {
 }
 
 const template = ({ attributes, files, meta, publicPath, title }) => {
-  publicPath = publicPath.startsWith('/') ? publicPath.slice(1) : publicPath
+  // publicPath = publicPath.startsWith('/') ? publicPath.slice(1) : publicPath
 
   const scripts = (files.js || [])
     .map(({ fileName }) => {
