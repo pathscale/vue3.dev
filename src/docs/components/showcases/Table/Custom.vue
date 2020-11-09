@@ -1,10 +1,10 @@
 <script>
 import { ref } from 'vue'
-import { DataGrid, VTable, VSelect, VCard, VCardContent } from '@pathscale/vue3-ui'
+import { DataGrid, VTable, VSelect, VCard, VCardContent, VImage } from '@pathscale/vue3-ui'
 
 export default {
   name: 'DevShowcaseTableCustom',
-  components: { VTable, VSelect, VCard, VCardContent },
+  components: { VTable, VSelect, VCard, VCardContent, VImage },
   setup() {
     const datagrid = ref(new DataGrid())
 
@@ -90,7 +90,7 @@ export default {
           <div class="media">
             <div class="media-left">
               <figure class="image is-48x48">
-                <img src="https://via.placeholder.com/96" alt="Placeholder image" />
+                <v-image src="https://via.placeholder.com/96" alt="Placeholder image" />
               </figure>
             </div>
             <div class="media-content">

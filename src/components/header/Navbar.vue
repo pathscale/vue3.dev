@@ -1,5 +1,5 @@
 <script>
-import { VNavbar, VNavbarItem, VIcon } from '@pathscale/vue3-ui'
+import { VNavbar, VNavbarItem, VIcon, VImage } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 
 import { ref, watchEffect } from 'vue'
@@ -10,7 +10,7 @@ import logo from '../../assets/svg/vue3-logo.svg'
 export default {
   name: 'DevNavbar',
   components: {
-    VNavbar, VNavbarItem, VIcon
+    VNavbar, VNavbarItem, VIcon, VImage
   },
   setup(props, { emit }) {
     const languages = {
@@ -102,7 +102,7 @@ export default {
     <v-navbar v-model="isMenuOpen">
       <template #brand>
         <v-navbar-item class="ml-6" @click="redirect('home')">
-          <img :src="logo" alt="vue3-ui logo" />
+          <v-image :src="logo" alt="vue3-ui logo" />
         </v-navbar-item>
       </template>
       <template #start>

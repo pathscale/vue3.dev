@@ -1,9 +1,9 @@
 <script>
-import { VCard, /* VCardImage, */ VCardContent, VCardHeader, VCardFooter, VCardFooterItem, VImage, VMedia, VColumns, VColumn } from '@pathscale/vue3-ui'
+import { VCard, VImage, VCardContent, VCardHeader, VCardFooter, VCardFooterItem, VMedia, VColumns, VColumn } from '@pathscale/vue3-ui'
 
 export default {
   name: 'DevShowcaseCard',
-  components: { VCard, /* VCardImage, */ VCardContent, VCardHeader, VCardFooter, VCardFooterItem, VImage, VMedia, VColumns, VColumn }
+  components: { VCard, VImage, VCardContent, VCardHeader, VCardFooter, VCardFooterItem, VMedia, VColumns, VColumn }
 }
 </script>
 
@@ -13,7 +13,6 @@ export default {
       <v-card>
         <v-card-header title="User" />
         <v-image src="https://vue3--dev.b-cdn.net/128x128.png" alt="placeholder image" />
-
         <v-card-content>
           <v-media>
             <template #left>

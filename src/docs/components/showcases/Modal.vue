@@ -1,10 +1,10 @@
 <script>
 import { reactive } from 'vue'
-import { VButton, VModal } from '@pathscale/vue3-ui'
+import { VButton, VModal, VImage } from '@pathscale/vue3-ui'
 
 export default {
   name: 'DevShowcaseModal',
-  components: { VButton, VModal },
+  components: { VButton, VModal, VImage },
   setup() {
     const state = reactive({
       showModal: false,
@@ -32,7 +32,7 @@ export default {
   </div>
 
   <v-modal v-model="state.showModal">
-    <img width="640" height="480" class="has-background-grey" />
+    <v-image width="640" height="480" class="has-background-grey" />
   </v-modal>
   <v-modal v-model="state.showModalCard" card>
     <template #title>
@@ -40,7 +40,7 @@ export default {
     </template>
 
     <template #content>
-      <img width="640" height="480" class="has-background-grey" />
+      <v-image width="640" height="480" class="has-background-grey" />
     </template>
 
     <template #footer>

@@ -20,7 +20,6 @@ export default {
   setup() {
     const intl = useI18n()
     const router = useRouter()
-
     return { intl, api, variables, router, Showcases, ColorsCode, StylesCode, SizesCode, StatesCode }
   }
 }

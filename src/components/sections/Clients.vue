@@ -1,11 +1,11 @@
 <script>
-import { VColumns, VColumn } from '@pathscale/vue3-ui'
+import { VColumns, VColumn, VImage } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 
 
 export default {
   name: 'DevClients',
-  components: { VColumns, VColumn },
+  components: { VColumns, VColumn, VImage },
   setup() {
     const intl = useI18n()
     const url = 'https://vue3--dev.b-cdn.net'
@@ -47,7 +47,7 @@ export default {
         </p>
         <v-columns vcentered class="reverse-columns px-2">
           <v-column v-for="(client, index) in projects" :key="index" class="has-text-centered mx-2">
-            <a :href="client.link"><img :src="client.image" :ref="client.title" /></a>
+            <a :href="client.link"><v-image :src="client.image" :ref="client.title" /></a>
           </v-column>
         </v-columns>
       </div>

@@ -1,9 +1,9 @@
 <script>
-import { VNavbar, VNavbarItem, VNavbarDropdown, VButton } from '@pathscale/vue3-ui'
+import { VNavbar, VNavbarItem, VNavbarDropdown, VButton, VImage } from '@pathscale/vue3-ui'
 
 export default {
   name: 'DevShowcaseNavbar',
-  components: { VNavbar, VNavbarItem, VNavbarDropdown, VButton }
+  components: { VNavbar, VNavbarItem, VNavbarDropdown, VButton, VImage }
 }
 </script>
 
@@ -11,7 +11,7 @@ export default {
   <v-navbar type="is-info">
     <template #brand>
       <v-navbar-item tag="router-link" :to="{ name: 'navbar' }">
-        <img width="100" height="100" class="has-background-grey-light" />
+        <v-image width="100" height="100" class="has-background-grey-light" />
       </v-navbar-item>
     </template>
 
