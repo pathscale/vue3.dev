@@ -16,7 +16,7 @@
 
 ### Live Version
 
-Official documentation and site for <a href="http://vue3--dev.b-cdn.net/">Vue3.dev</a>
+Official documentation and site for <a href="https://vue3.dev/">Vue3.dev</a>
 
 ## Project setup
 
