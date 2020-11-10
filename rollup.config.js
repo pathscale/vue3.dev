@@ -68,7 +68,7 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
     'Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS | Vue3-ui'
   const socialTitle =
     'Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS | Vue3-ui'
-  const url = 'https://vue3--dev.b-cdn.net'
+  const url = 'https://vue3.dev'
   const imageUrl = `${url}/vue3-ui.png`
 
   return `

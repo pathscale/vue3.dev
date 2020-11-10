@@ -1,8 +1,8 @@
 # Vue3.dev
 
 <p align="center">
-  <a href="hhttps://vue3--dev.b-cdn.net">
-        <img src="https://vue3--dev.b-cdn.net/vue3-ui-logo.png" />
+  <a href="hhttps://vue3.dev">
+        <img src="https://vue3.dev/vue3-ui-logo.png" />
   </a>
   <br/>
   <a href="https://www.npmjs.com/package/@pathscale/vue3-ui"><img src="https://img.shields.io/npm/v/@pathscale/vue3-ui?style=for-the-badge" /></a>

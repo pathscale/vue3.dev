@@ -4,15 +4,11 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
     http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
    <url>
-      <loc>https://vue3--dev.b-cdn.net/</loc>
-      <lastmod>2020-10-03</lastmod>
+      <loc>https://vue3.dev/</loc>
+      <lastmod>2020-11-10</lastmod>
    </url>
    <url>
-      <loc>https://vue3--dev.b-cdn.net/home</loc>
-      <lastmod>2020-10-03</lastmod>
-   </url>
-   <url>
-      <loc>https://vue3--dev.b-cdn.net/documentation</loc>
-      <lastmod>2020-10-03</lastmod>
+      <loc>https://vue3.dev/documentation</loc>
+      <lastmod>2020-11-10</lastmod>
    </url>
 </urlset>

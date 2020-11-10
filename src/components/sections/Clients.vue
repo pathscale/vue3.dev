@@ -8,7 +8,7 @@ export default {
   components: { VColumns, VColumn, VImage },
   setup() {
     const intl = useI18n()
-    const url = 'https://vue3--dev.b-cdn.net'
+    const url = 'https://vue3.dev'
 
 
     const projects = [
