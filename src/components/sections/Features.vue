@@ -66,7 +66,7 @@ export default {
               Modern
             </p>
             <div>
-              <v-icon src="../../assets/icons/vuejs.svg" name="vuejs-icon" bundle="navbar-icons" />
+              <v-icon name="vuejs-icon" bundle="navbar-icons" />
             </div>
             <span class="has-text-white">
               Built with Vue 3 and Bulma CSS
@@ -92,7 +92,7 @@ export default {
               Free
             </p>
             <div>
-              <v-icon src="../../assets/icons/github.svg" name="open-icon" bundle="navbar-icons" />
+              <v-icon name="github-icon" bundle="navbar-icons" />
             </div>
             <span class="has-text-white">
               Open source on <b>Github</b>

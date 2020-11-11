@@ -12,4 +12,11 @@ import './assets/styles/flexbox.css'
 
 import { router } from './router/index.js'
 
-createApp(App).use(router).mount('#app')
+import Icons from './Icons.vue'
+
+const app = createApp(App)
+app.component('Icons', Icons)
+
+app.use(router).mount('#app')
+
+
