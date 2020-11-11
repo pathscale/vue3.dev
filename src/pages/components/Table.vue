@@ -53,7 +53,7 @@ export default {
       {{ router.currentRoute.value.meta.title }}
     </h1>
     <p>
-      {{ router.currentRoute.value.meta.metaTags[0].content }}
+      {{ router.currentRoute.value.meta.metaTags[0].content }}. Table component is designed to work together with <a href="datagrid" target="_blank" rel="noopener">DataGrid</a> utility class
     </p>
 
     <snippet-section

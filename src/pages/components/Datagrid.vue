@@ -32,7 +32,7 @@ export default {
       {{ router.currentRoute.value.meta.title }}
     </h1>
     <p>
-      {{ router.currentRoute.value.meta.metaTags[0].content }}
+      {{ router.currentRoute.value.meta.metaTags[0].content }}, designed to integrate with  <a href="table" target="_blank" rel="noopener">Table</a> component
     </p>
 
     <snippet-section
@@ -47,11 +47,11 @@ export default {
       </h2>
       <api-section :api="api" />
     </section>
-    <section id="datagrid" class="py-4">
+    <section id="table" class="py-4">
       <h2 class="title is-4">
-        <a :href="`${router.currentRoute.value.path}#datagrid`" class="is-active">#</a> Datagrid
+        <a :href="`${router.currentRoute.value.path}#table`" class="is-active">#</a> Table
       </h2>
-      Check out <a @click="router.push({name: 'table'})">here</a> the Table API documentation
+      Check out <a @click="router.push({path: 'table'})">here</a> the Table API documentation
     </section>
   </div>
 </template>

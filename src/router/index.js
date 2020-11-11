@@ -222,7 +222,7 @@ const routes = [
             name: 'datagrid',
             path: 'datagrid',
             component: Pages.Datagrid,
-            meta: metaTags('DataGrid', 'Powerful class to store and alter data')
+            meta: metaTags('DataGrid', 'DataGrid is a powerful and UI agnostic class to store and alter data')
           }
         ]
       },

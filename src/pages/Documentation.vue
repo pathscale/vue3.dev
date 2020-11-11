@@ -74,7 +74,6 @@ export default {
                 <!-- <v-menu-item label="Typography" /> -->
                 <!-- <v-menu-item label="Box" /> -->
                 <v-menu-item label="Button" @click="redirect('button')" :active="current.button" />
-                <v-menu-item label="Datagrid" @click="redirect('datagrid')" :active="current.datagrid" />
                 <!-- <v-menu-item label="Content" /> -->
                 <!-- <v-menu-item label="Delete" /> -->
                 <!-- <v-menu-item label="Form" /> -->
@@ -111,6 +110,9 @@ export default {
                 <v-menu-item label="Accordion" @click="redirect('accordion')" :active="current.accordion" />
                 <v-menu-item label="Tabs" @click="redirect('tabs')" :active="current.tabs" />
               </v-menu-item>
+            </v-menu-list>
+            <v-menu-list label="Utilities">
+              <v-menu-item label="Datagrid" @click="redirect('datagrid')" :active="current.datagrid" />
             </v-menu-list>
           </v-menu>
         </div>
