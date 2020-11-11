@@ -1,12 +1,12 @@
 <script>
-import { VTag, VTab, VTabs, VTooltip } from '@pathscale/vue3-ui'
+import { VTag, VTab, VTabs, VTooltip, VIcon } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 
 import { ref } from 'vue'
 
 export default {
   name: 'DevAPI',
-  components: { VTag, VTab, VTabs, VTooltip },
+  components: { VTag, VTab, VTabs, VTooltip, VIcon },
   props: {
     'api': Object
   },
@@ -31,7 +31,7 @@ export default {
           {{ item.title }}
         </p>
         <a class="mx-4" v-if="item.github" :href="item.github" target="_blank" rel="noopener">
-          <i class="icon icon-github" />
+          <v-icon name="github-icon" bundle="icons" />
         </a>
       </div>
 
@@ -124,3 +124,11 @@ export default {
     </div>
   </div>
 </template>
+
+<style scoped>
+.svg-github-icon {
+  fill: black;
+  height: 28px;
+  width: 28px;
+}
+</style>

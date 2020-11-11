@@ -54,8 +54,8 @@ export default {
           <h4 class="title is-4">
             1. Starter Template <i>(recommended)</i>
           </h4>
-          <v-icon v-if="state.rollup" src="../assets/icons/menu-up.svg" name="menu-up-icon" bundle="navbar-icons" />
-          <v-icon v-else src="../assets/icons/menu-down.svg" name="menu-down-icon" bundle="navbar-icons" />
+          <v-icon v-if="state.rollup" name="menu-up-icon" bundle="icons" />
+          <v-icon v-else name="menu-down-icon" bundle="icons" />
         </div>
       </template>
       <template #content>
@@ -105,8 +105,8 @@ export default {
             <h4 class="title is-4">
               2. Manual Install
             </h4>
-            <v-icon v-if="state.cli" src="../assets/icons/menu-up.svg" name="menu-up-icon" bundle="navbar-icons" />
-            <v-icon v-else src="../assets/icons/menu-down.svg" name="menu-down-icon" bundle="navbar-icons" />
+            <v-icon v-if="state.cli" name="menu-up-icon" bundle="icons" />
+            <v-icon v-else name="menu-down-icon" bundle="icons" />
           </div>
         </template>
         <template #content>

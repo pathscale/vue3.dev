@@ -8,9 +8,9 @@ export default {
 </script>
 
 <template>
-  <v-icon name="github-icon" bundle="navbar-icons" />
-  <v-icon name="discord-icon" bundle="navbar-icons" />
-  <v-icon name="vuejs-icon" bundle="navbar-icons" />
+  <v-icon name="github-icon" bundle="icons" />
+  <v-icon name="discord-icon" bundle="icons" />
+  <v-icon name="vuejs-icon" bundle="icons" />
 </template>
 
 <style scoped>

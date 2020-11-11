@@ -131,10 +131,10 @@ export default {
           tag="div"
           class="mx-3 is-size-5 py-4 has-text-centered">
           <a class="mx-4" href="https://github.com/pathscale/vue3-ui" target="_blank" rel="noopener">
-            <v-icon name="github-icon" bundle="navbar-icons" />
+            <v-icon name="github-icon" bundle="icons" />
           </a>
           <a class="mx-4" href="https://discord.com/invite/8ygCBpS" target="_blank" rel="noopener">
-            <v-icon name="discord-icon" bundle="navbar-icons" />
+            <v-icon name="discord-icon" bundle="icons" />
           </a>
         </v-navbar-item>
       </template>
