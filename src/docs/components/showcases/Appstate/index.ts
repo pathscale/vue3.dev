@@ -1,2 +1,1 @@
-export { default as Create } from './Create.vue'
-export { default as Update } from './Update.vue'
+export { default as Global } from './Global.vue'

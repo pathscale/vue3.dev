@@ -8,8 +8,7 @@ import api from '../docs/components/api/appstate.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- Using all of them
 import * as Showcases from '../docs/components/showcases/Appstate'
-import CreateCode from '../docs/components/raw/Appstate/Create.txt'
-import UpdateCode from '../docs/components/raw/Appstate/Update.txt'
+import GlobalCode from '../docs/components/raw/Appstate/Global.txt'
 
 
 export default {
@@ -18,7 +17,7 @@ export default {
   setup() {
     const intl = useI18n()
     const router = useRouter()
-    return { intl, router, Showcases, CreateCode, UpdateCode, api }
+    return { intl, router, Showcases, GlobalCode, api }
   }
 }
 </script>
@@ -32,8 +31,13 @@ export default {
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
 
-    <snippet-section title="Create state" :code="CreateCode" :component="Showcases.Create" :path="router.currentRoute.value.path" />
-    <snippet-section title="Update state" :code="UpdateCode" :component="Showcases.Update" :path="router.currentRoute.value.path" />
+
+    <snippet-section title="Global state" :code="GlobalCode" :component="Showcases.Global" :path="router.currentRoute.value.path" />
+    Create and initialize the state with the <b>createState</b> method. The returned instace could be used to get/set the state outside a Vue component.
+    <br />
+
+    To use the state instance inside a Vue Component, import it with <b>useState</b> method.
+
     <section id="api" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API
