@@ -10,14 +10,14 @@ import * as Showcases from '../../docs/components/showcases/Input'
 import ColorCode from '../../docs/components/raw/Input/Color.txt'
 import LoadingCode from '../../docs/components/raw/Input/Loading.txt'
 import SizeCode from '../../docs/components/raw/Input/Size.txt'
-import TypeCode from '../../docs/components/raw/Input/Type.txt'
+import BasicCode from '../../docs/components/raw/Input/Basic.txt'
 
 export default {
   name: 'DevPageInput',
   components: { SnippetSection, ApiSection, VariablesSection },
   setup() {
     const router = useRouter()
-    return {  api, variables, router, Showcases, ColorCode, LoadingCode, SizeCode, TypeCode }
+    return {  api, variables, router, Showcases, ColorCode, LoadingCode, SizeCode, BasicCode }
   }
 }
 </script>
@@ -31,9 +31,9 @@ export default {
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
     <snippet-section
-      title="Type"
-      :code="TypeCode"
-      :component="Showcases.Type"
+      title="Basic"
+      :code="BasicCode"
+      :component="Showcases.Basic"
       :path="router.currentRoute.value.path" />
     <snippet-section
       title="Color"
