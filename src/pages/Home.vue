@@ -1,8 +1,4 @@
 <script>
-import { useI18n } from 'vue-composable'
-
-import { useRouter } from 'vue-router'
-
 import {
   HomeSection,
   OverviewSection,
@@ -18,11 +14,6 @@ export default {
     ClientsSection,
     FeaturesSection
   },
-  setup() {
-    const intl = useI18n()
-    const router = useRouter()
-    return { intl, router }
-  }
 }
 </script>
 

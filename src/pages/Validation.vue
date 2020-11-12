@@ -1,6 +1,4 @@
 <script>
-import { useI18n } from 'vue-composable'
-
 import { useRouter } from 'vue-router'
 import { SnippetSection } from '../components'
 
@@ -12,9 +10,8 @@ export default {
   name: 'DevPageValidation',
   components: { SnippetSection },
   setup() {
-    const intl = useI18n()
     const router = useRouter()
-    return { intl, router, Showcases, BasicCode }
+    return { router, Showcases, BasicCode }
   }
 }
 </script>

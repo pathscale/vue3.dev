@@ -36,7 +36,6 @@ const vueRules = {
   'vue/require-default-prop': 'off', // Enable?
   // 'vue/no-duplicate-attr-inheritance': ['error'], // Enforce?
   // 'vue/no-static-inline-styles': ['error'], // Use later; require in <style>
-  /*
   'vue/no-unused-properties': [
     'error',
     {
@@ -44,7 +43,6 @@ const vueRules = {
       groups: ['props', 'computed', 'setup'],
     },
   ],
-  */
 
   // 'vue/no-bare-strings-in-template': ['error'], // Use later if i18nizing
   // 'vue/html-comment-indent': ['error'], // Possibly too oppressive

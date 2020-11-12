@@ -1,10 +1,8 @@
 <script>
-import { useI18n } from 'vue-composable'
-
 import { useRouter } from 'vue-router'
 import { VAccordion, VIcon } from '@pathscale/vue3-ui'
 
-import { reactive, computed } from 'vue'
+import { reactive } from 'vue'
 import Showcase from '../docs/components/showcases/HelloWord.vue'
 import ShowcaseCode from '../docs/components/raw/HelloWord.txt'
 
@@ -14,22 +12,16 @@ export default {
   name: 'DevPageInstallation',
   components: { SnippetSection, VAccordion, VIcon },
   setup() {
-    const intl = useI18n()
     const router = useRouter()
     const state = reactive({
-      cli: true,
-      rollup: true
+      manual: true,
+      template: true
     })
-
-    const cliIcon = computed(() => {
-      return state.cli ? 'icon-menu-up' : 'icon-menu-down'
-    }
-    )
 
     function toggle(value) {
       state[value] = !state[value]
     }
-    return { intl, router, Showcase, ShowcaseCode, state, cliIcon, toggle }
+    return { router, Showcase, ShowcaseCode, state, toggle }
   }
 }
 </script>
@@ -48,13 +40,13 @@ export default {
       </p>
     </div>
 
-    <v-accordion :expanded="state.rollup" header-is-trigger>
+    <v-accordion :expanded="state.template" header-is-trigger>
       <template #header>
-        <div class="is-inline-flex mt-5" @click="toggle('rollup')">
+        <div class="is-inline-flex mt-5" @click="toggle('template')">
           <h4 class="title is-4">
             1. Starter Template <i>(recommended)</i>
           </h4>
-          <v-icon v-if="state.rollup" name="menu-up-icon" bundle="icons" />
+          <v-icon v-if="state.template" name="menu-up-icon" bundle="icons" />
           <v-icon v-else name="menu-down-icon" bundle="icons" />
         </div>
       </template>

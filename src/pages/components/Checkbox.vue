@@ -1,6 +1,4 @@
 <script>
-import { useI18n } from 'vue-composable'
-
 import { useRouter } from 'vue-router'
 import { SnippetSection, ApiSection } from '../../components'
 
@@ -13,9 +11,9 @@ export default {
   name: 'DevPageCheckbox',
   components: { SnippetSection, ApiSection },
   setup() {
-    const intl = useI18n()
+    
     const router = useRouter()
-    return { intl, api, router, Showcase, ShowcaseCode }
+    return { api, router, Showcase, ShowcaseCode }
   }
 }
 </script>

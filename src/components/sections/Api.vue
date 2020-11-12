@@ -1,6 +1,5 @@
 <script>
 import { VTag, VTab, VTabs, VTooltip, VIcon } from '@pathscale/vue3-ui'
-import { useI18n } from 'vue-composable'
 
 import { ref } from 'vue'
 
@@ -11,14 +10,13 @@ export default {
     'api': Object
   },
   setup(props) {
-    const intl = useI18n()
 
     const components = []
     props.api.forEach(e => {
       components.push(0)
     })
     const tab = ref(components)
-    return { intl, tab }
+    return { tab }
   }
 }
 </script>

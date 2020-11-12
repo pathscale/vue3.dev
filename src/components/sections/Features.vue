@@ -1,20 +1,9 @@
 <script>
 import { VColumns, VColumn, VIcon } from '@pathscale/vue3-ui'
-import { useI18n } from 'vue-composable'
-import { ref } from 'vue'
 
 export default {
   name: 'DevBlog',
   components: { VColumns, VColumn, VIcon },
-  setup() {
-    const intl = useI18n()
-    const isLandscape = ref(window.matchMedia('(orientation: landscape)').matches)
-    window.addEventListener('orientationchange', () => {
-      isLandscape.value = !isLandscape.value
-    })
-
-    return { intl, isLandscape }
-  }
 }
 </script>
 

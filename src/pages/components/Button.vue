@@ -1,6 +1,4 @@
 <script>
-import { useI18n } from 'vue-composable'
-
 import { useRouter } from 'vue-router'
 import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
@@ -18,9 +16,9 @@ export default {
   name: 'DevPageButton',
   components: { SnippetSection, ApiSection, VariablesSection },
   setup() {
-    const intl = useI18n()
+    
     const router = useRouter()
-    return { intl, api, variables, router, Showcases, ColorsCode, StylesCode, SizesCode, StatesCode }
+    return { api, variables, router, Showcases, ColorsCode, StylesCode, SizesCode, StatesCode }
   }
 }
 </script>

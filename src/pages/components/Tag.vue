@@ -1,6 +1,4 @@
 <script>
-import { useI18n } from 'vue-composable'
-
 import { useRouter } from 'vue-router'
 import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
@@ -19,9 +17,8 @@ export default {
   name: 'DevPageTag',
   components: { SnippetSection, ApiSection, VariablesSection },
   setup() {
-    const intl = useI18n()
     const router = useRouter()
-    return { intl, api, variables, router, Showcases, ClosableCode, ColorsCode, SizesCode, StatesCode, StylesCode }
+    return { api, variables, router, Showcases, ClosableCode, ColorsCode, SizesCode, StatesCode, StylesCode }
   }
 }
 </script>

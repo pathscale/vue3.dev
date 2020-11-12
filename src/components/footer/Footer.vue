@@ -1,12 +1,6 @@
 <script>
-import { useI18n } from 'vue-composable'
-
 export default {
   name: 'DevFooter',
-  setup() {
-    const intl = useI18n()
-    return { intl }
-  }
 }
 </script>
 

@@ -1,6 +1,4 @@
 <script>
-import { useI18n } from 'vue-composable'
-
 import { useRouter } from 'vue-router'
 import { SnippetSection, ApiSection } from '../../components'
 
@@ -21,10 +19,10 @@ export default {
   name: 'DevPageColumns',
   components: { ApiSection, SnippetSection },
   setup() {
-    const intl = useI18n()
+    
     const router = useRouter()
     return {
-      intl, api, router,
+      api, router,
       Showcases,
       ColumnsBasicCode,
       ColumnsSizesCode,

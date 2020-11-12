@@ -9,7 +9,6 @@ import {
   VMenuItem,
   VMenuList
 } from '@pathscale/vue3-ui'
-import { useI18n } from 'vue-composable'
 import { useRouter } from 'vue-router'
 
 export default {
@@ -24,7 +23,6 @@ export default {
     VMenuList
   },
   setup() {
-    const intl = useI18n()
     const router = useRouter()
     const paths = computed(() => router.currentRoute.value.path.split('/').slice(1))
     const current = ref({})
@@ -44,7 +42,7 @@ export default {
       if (router.currentRoute.value.name === 'documentation') redirect('installation')
     })
 
-    return { intl, paths, redirect, current, isActiveBreadcrumb }
+    return { paths, redirect, current, isActiveBreadcrumb }
   }
 }
 </script>

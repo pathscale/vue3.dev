@@ -1,6 +1,4 @@
 <script>
-import { useI18n } from 'vue-composable'
-
 import { useRouter } from 'vue-router'
 
 import { VDropdown, VDropdownItem, VButton } from '@pathscale/vue3-ui'
@@ -10,7 +8,6 @@ export default {
   name: 'DevPageTheming',
   components: { VDropdown, VDropdownItem, VButton },
   setup() {
-    const intl = useI18n()
     const router = useRouter()
     const colors = ['black', 'red', 'blue', 'green']
     const color = ref('#000')
@@ -30,7 +27,7 @@ export default {
       setColor(color.value)
     })
 
-    return { intl, router, color, colors, setColor, isOriginalColor }
+    return {  router, color, colors, isOriginalColor }
   }
 }
 </script>

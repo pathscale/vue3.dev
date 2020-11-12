@@ -1,19 +1,16 @@
 <script>
-import { useI18n } from 'vue-composable'
-
 import { useRouter } from 'vue-router'
 
 export default {
   name: 'DevPageBulma',
   setup() {
-    const intl = useI18n()
     const router = useRouter()
     function redirect(name) {
       router.push({
         name
       })
     }
-    return { intl, router, redirect }
+    return {  router, redirect }
   }
 }
 </script>

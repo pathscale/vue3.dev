@@ -1,6 +1,4 @@
 <script>
-import { useI18n } from 'vue-composable'
-
 import { useRouter } from 'vue-router'
 import { SnippetSection, ApiSection } from '../../components'
 
@@ -19,9 +17,8 @@ export default {
   name: 'DevPageTooltip',
   components: { SnippetSection, ApiSection },
   setup() {
-    const intl = useI18n()
     const router = useRouter()
-    return { intl, api, router, Showcases, AlwaysCode, AnimatedCode, ColorsCode, DelayCode, SizesCode, StylesCode }
+    return { api, router, Showcases, AlwaysCode, AnimatedCode, ColorsCode, DelayCode, SizesCode, StylesCode }
   }
 }
 </script>

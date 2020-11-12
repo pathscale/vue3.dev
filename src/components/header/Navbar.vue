@@ -46,9 +46,9 @@ export default {
       return router.currentRoute.value.path.includes(name) || router.currentRoute.value.name.includes(name)
     }
 
-    function toggleLanguageMenu() {
-      showLanguageMenu.value = !showLanguageMenu.value
-    }
+    // function toggleLanguageMenu() {
+    //   showLanguageMenu.value = !showLanguageMenu.value
+    // }
 
     function changeLanguage(language) {
       showLanguageMenu.value = false
@@ -72,10 +72,8 @@ export default {
       languages,
       isActive,
       logo,
-      toggleLanguageMenu,
       changeLanguage,
       getLanguageMenuHeight,
-      showLanguageMenu,
       closeMenu,
       redirect
     }
