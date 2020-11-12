@@ -1,3 +1,4 @@
+/* eslint-disable node/no-process-env -- Temporarily disable */
 import path from 'path'
 import zlib from 'zlib'
 import dotenv from 'dotenv'
@@ -26,6 +27,7 @@ import { string } from 'rollup-plugin-string'
 import vue3svg from '@pathscale/vue3-svg-icons'
 
 const extensions = ['.ts', '.mjs', '.js', '.vue', '.json']
+
 const env = dotenv.config({ path: path.join(__dirname, '.env') })
 const prod = process.env.NODE_ENV === 'production'
 const watch = Boolean(process.env.ROLLUP_WATCH) || Boolean(process.env.LIVERELOAD)
@@ -192,6 +194,7 @@ const config = [
         gzip({
           fileName: '.br',
           customCompression: content =>
+            // eslint-disable-next-line node/no-sync -- Local build
             zlib.brotliCompressSync(Buffer.from(content), {
               params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 },
             }),
