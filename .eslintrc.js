@@ -1,5 +1,6 @@
 'use strict'
 
+// Non-TS base
 const baseConfigs = [
   'ash-nazg/sauron',
   'plugin:vue/vue3-recommended',
@@ -8,6 +9,7 @@ const baseConfigs = [
   'plugin:prettier/recommended',
 ]
 
+// TS base
 const baseTSConfigs = [
   ...baseConfigs,
   'plugin:import/typescript',
@@ -17,12 +19,15 @@ const baseTSConfigs = [
 // Todo: Remove this in favor of `baseTSConfigs` when TS working in Vue files
 const baseConfigsNoTS = baseTSConfigs.filter(c => !c.includes('@typescript-eslint'))
 
+// `eslint-plugin-vue` rules
 const vueRules = {
   // Disabling as Vue linter won't catch (and we are requiring `name` anyways)
   'import/no-anonymous-default-export': 'off',
 
   // Temporarily disable
-  'vue/require-default-prop': 'off',
+  'vue/require-default-prop': 'off', // Enable?
+  // 'vue/no-duplicate-attr-inheritance': ['error'], // Enforce?
+  // 'vue/no-static-inline-styles': ['error'], // Use later; require in <style>
   /*
   'vue/no-unused-properties': [
     'error',
@@ -31,17 +36,14 @@ const vueRules = {
       groups: ['props', 'computed', 'setup'],
     },
   ],
-   */
+  */
 
-  // 'vue/no-bare-strings-in-template': ['error'], // Use later i18nizing
-  // 'vue/no-static-inline-styles': ['error'], // Revisit later
-  // 'vue/no-unregistered-components': ['error'],
-  // 'vue/html-comment-indent': ['error'],
-  // 'vue/no-duplicate-attr-inheritance': ['error'],
+  // 'vue/no-bare-strings-in-template': ['error'], // Use later if i18nizing
+  // 'vue/html-comment-indent': ['error'], // Possibly too oppressive
 
   // Disable
-  'vue/attributes-order': 'off',
-  'vue/max-attributes-per-line': 'off',
+  'vue/attributes-order': 'off', // Oppressive
+  'vue/max-attributes-per-line': 'off', // A bit oppressive
 
   'vue/block-tag-newline': ['error'],
   'vue/component-name-in-template-casing': ['error', 'kebab-case'],
@@ -55,6 +57,13 @@ const vueRules = {
   'vue/no-reserved-component-names': ['error'],
   'vue/no-restricted-component-options': ['error', 'data', 'computed', 'methods', 'watch'],
   'vue/no-template-target-blank': ['error', { allowReferrer: true }],
+  'vue/no-unregistered-components': [
+    'error',
+    {
+      // Component used in main.ts
+      ignorePatterns: ['router-view'],
+    },
+  ],
   'vue/no-unsupported-features': ['error', { version: '^3.0.0' }],
   'vue/no-useless-mustaches': ['error'],
   'vue/no-useless-v-bind': ['error'],
@@ -84,10 +93,22 @@ const baseRules = {
   // Keep this here so can uncomment to check inline disabling
   // "eslint-comments/no-use": "error",
 
+  // Simplifying
+  'import/extensions': 'off',
+
+  // Disabling for now
+  'max-len': 'off', // ['warn', { code: 80 }],
+  'jsdoc/require-jsdoc': 'off',
+  'require-unicode-regexp': 'off',
+  'prefer-named-capture-group': 'off',
+
+  // More consistent styling of WS before exports
   'padding-line-between-statements': [
     'error',
     { blankLine: 'always', prev: ['const', 'let'], next: 'export' },
   ],
+
+  // Wasteful to use all named imports
   'no-restricted-syntax': [
     'error',
     {
@@ -97,13 +118,6 @@ const baseRules = {
         'which are needed (or switch to a default import).',
     },
   ],
-
-  // Disabling for now
-  'max-len': 'off', // ['warn', { code: 80 }],
-  'import/extensions': 'off',
-  'jsdoc/require-jsdoc': 'off',
-  'require-unicode-regexp': 'off',
-  'prefer-named-capture-group': 'off',
 }
 
 module.exports = {
@@ -123,6 +137,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   overrides: [
+    // Node.js config files (non-Vue, non-TS)
     {
       files: [
         '.eslintrc.js',
@@ -153,14 +168,13 @@ module.exports = {
       },
       rules: {
         ...baseRules,
+
+        // CommonJS:
         strict: ['error', 'global'],
         'import/no-commonjs': 'off',
-
-        // Disabling for now
-        'require-unicode-regexp': 'off',
-        'prefer-named-capture-group': 'off',
       },
     },
+    // TS files
     {
       files: '*.ts',
       extends: baseTSConfigs,
@@ -168,9 +182,9 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       rules: {
         ...baseRules,
-        'padding-line-between-statements': 'off',
       },
     },
+    // TS declaration files
     {
       files: ['src/shims-vue.d.ts', 'src/shims-tsx.d.ts', 'src/types.d.ts'],
       extends: baseTSConfigs,
@@ -180,10 +194,9 @@ module.exports = {
         ...baseRules,
         // No imports/exports in plain declaration file
         'import/unambiguous': 'off',
-        'no-shadow': 'off',
-        'padding-line-between-statements': 'off',
       },
     },
+    // Vue SFC files
     {
       files: '*.vue',
       extends: baseConfigsNoTS,
@@ -193,12 +206,6 @@ module.exports = {
       rules: {
         ...baseRules,
         ...vueRules,
-
-        // Reapply to better match prettier since disabled
-        'arrow-parens': ['error', 'as-needed'],
-        // 'comma-dangle': ['error', 'always'], // Interferes with arrow-parens
-        'comma-dangle': ['error', 'never'],
-        'space-before-function-paren': ['error', 'never'],
 
         '@pathscale/vue3/v-directive': [
           'error',
