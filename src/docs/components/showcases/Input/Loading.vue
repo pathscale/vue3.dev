@@ -9,6 +9,9 @@ export default {
 
 <template>
   <v-field>
-    <v-input loading />
+    <v-input loading placeholder="I'm loading" />
+  </v-field>
+  <v-field>
+    <v-input disabled placeholder="I'm disabled" />
   </v-field>
 </template>

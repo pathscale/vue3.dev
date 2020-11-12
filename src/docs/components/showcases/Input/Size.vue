@@ -9,14 +9,14 @@ export default {
 
 <template>
   <v-field>
-    <v-input color="is-info" class="is-small" />
+    <v-input color="is-info" size="is-small" placeholder="is-small" />
   </v-field>
 
   <v-field>
-    <v-input color="is-success" class="is-medium" />
+    <v-input color="is-success" size="is-medium" placeholder="is-medium" />
   </v-field>
 
   <v-field>
-    <v-input color="is-warning" class="is-large" />
+    <v-input color="is-warning" size="is-large" placeholder="is-large" />
   </v-field>
 </template>

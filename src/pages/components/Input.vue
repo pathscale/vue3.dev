@@ -46,7 +46,7 @@ export default {
       :component="Showcases.Size"
       :path="router.currentRoute.value.path" />
     <snippet-section
-      title="Loading"
+      title="States"
       :code="LoadingCode"
       :component="Showcases.Loading"
       :path="router.currentRoute.value.path" />

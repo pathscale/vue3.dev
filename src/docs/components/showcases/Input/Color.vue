@@ -9,22 +9,22 @@ export default {
 
 <template>
   <v-field>
-    <v-input color="is-info" />
+    <v-input color="is-info" placeholder="is-info" />
   </v-field>
 
   <v-field>
-    <v-input color="is-success" />
+    <v-input color="is-success" placeholder="is-success" />
   </v-field>
 
   <v-field>
-    <v-input color="is-warning" />
+    <v-input color="is-warning" placeholder="is-warning" />
   </v-field>
 
   <v-field>
-    <v-input color="is-danger" />
+    <v-input color="is-danger" placeholder="is-danger" />
   </v-field>
 
   <v-field>
-    <v-input />
+    <v-input placeholder="default" />
   </v-field>
 </template>
