@@ -132,10 +132,7 @@ module.exports = {
   },
   parserOptions: {
     ecmaVersion: 2020,
-    parser: '@typescript-eslint/parser',
-    sourceType: 'module',
   },
-  plugins: ['@typescript-eslint'],
   overrides: [
     // Node.js config files (non-Vue, non-TS)
     {
