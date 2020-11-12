@@ -178,8 +178,6 @@ module.exports = {
     {
       files: '*.ts',
       extends: baseTSConfigs,
-      plugins: ['@typescript-eslint'],
-      parser: '@typescript-eslint/parser',
       rules: {
         ...baseRules,
       },
@@ -188,8 +186,6 @@ module.exports = {
     {
       files: ['src/shims-vue.d.ts', 'src/shims-tsx.d.ts', 'src/types.d.ts'],
       extends: baseTSConfigs,
-      plugins: ['@typescript-eslint'],
-      parser: '@typescript-eslint/parser',
       rules: {
         ...baseRules,
         // No imports/exports in plain declaration file
