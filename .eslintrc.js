@@ -177,14 +177,22 @@ module.exports = {
       extends: baseTSConfigs,
       rules: {
         ...baseRules,
+
+        // Possible non-recommended items to enable?
+        // '@typescript-eslint/no-unsafe-assignment': ['error'],
+        // '@typescript-eslint/no-unsafe-member-access': ['error'],
+        // '@typescript-eslint/no-unsafe-return': ['error'],
+        '@typescript-eslint/naming-convention': ['error'],
       },
     },
     // TS declaration files
     {
-      files: ['src/shims-vue.d.ts', 'src/shims-tsx.d.ts', 'src/types.d.ts'],
+      files: '*.d.ts',
       extends: baseTSConfigs,
       rules: {
         ...baseRules,
+        // Let API be as needed
+        '@typescript-eslint/naming-convention': 'off',
         // No imports/exports in plain declaration file
         'import/unambiguous': 'off',
       },
