@@ -5,7 +5,6 @@ const baseConfigs = [
   'plugin:vue/vue3-recommended',
   'plugin:import/errors',
   'plugin:import/warnings',
-  'plugin:import/typescript',
   'plugin:prettier/recommended',
 ]
 
@@ -14,6 +13,9 @@ const baseTSConfigs = [
   'plugin:import/typescript',
   'plugin:@typescript-eslint/recommended',
 ]
+
+// Todo: Remove this in favor of `baseTSConfigs` when TS working in Vue files
+const baseConfigsNoTS = baseTSConfigs.filter(c => !c.includes('@typescript-eslint'))
 
 const vueRules = {
   // Disabling as Vue linter won't catch (and we are requiring `name` anyways)
@@ -81,25 +83,6 @@ const vueRules = {
 const baseRules = {
   // Keep this here so can uncomment to check inline disabling
   // "eslint-comments/no-use": "error",
-
-  // Reapply from ash-nazg
-  semi: ['error', 'never'],
-  quotes: ['error', 'single'],
-  indent: ['error', 2],
-  curly: ['error'],
-  'block-spacing': ['error'],
-  'comma-spacing': ['error'],
-  'eol-last': ['error'],
-  'key-spacing': ['error'],
-  'keyword-spacing': ['error'],
-  'no-extra-semi': ['error'],
-  'no-trailing-spaces': ['error'],
-  'no-tabs': ['error'],
-  'no-multi-spaces': ['error'],
-  'nonblock-statement-body-position': ['error'],
-  'object-curly-spacing': ['error', 'always'],
-  'space-before-blocks': ['error'],
-  'space-infix-ops': ['error'],
 
   'padding-line-between-statements': [
     'error',
@@ -203,11 +186,13 @@ module.exports = {
     },
     {
       files: '*.vue',
-      plugins: ['@pathscale/vue3'],
+      extends: baseConfigsNoTS,
+      // Need `vue` `parser` and `plugins` re-added since adding `vue3`
+      parser: require.resolve('vue-eslint-parser'),
+      plugins: ['vue', '@pathscale/vue3'],
       rules: {
         ...baseRules,
         ...vueRules,
-        'prettier/prettier': 'off',
 
         // Reapply to better match prettier since disabled
         'arrow-parens': ['error', 'as-needed'],

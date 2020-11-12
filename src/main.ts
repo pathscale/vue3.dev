@@ -18,5 +18,3 @@ const app = createApp(App)
 app.component('Icons', Icons)
 
 app.use(router).mount('#app')
-
-
