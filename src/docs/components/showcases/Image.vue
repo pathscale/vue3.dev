@@ -1,5 +1,5 @@
 <script>
-import VImage from './VImage.vue'
+import { VImage } from "@pathscale/vue3-ui"
 
 export default {
   name: 'DevShowcaseImage',
@@ -8,6 +8,5 @@ export default {
 </script>
 
 <template>
-  <v-image data-src="/pathscale.webp " alt="128x128" />
-  <img src="./128x128.png" alt="128x128" />
+  <v-image data-src="/128x128.png" alt="128x128" size="is-128x128" />
 </template>

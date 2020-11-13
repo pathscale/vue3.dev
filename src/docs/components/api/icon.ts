@@ -22,6 +22,11 @@ const api =
           type: 'String',
           required: true
         },
+        {
+          name: 'custom-class',
+          description: 'CSS classes to be applied on icon',
+          type: 'String',
+        },
       ],
     }
   ]

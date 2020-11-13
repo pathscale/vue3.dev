@@ -1,33 +1,16 @@
-/* Feature icons */
-
-.svg-format-color-fill-icon,
-.svg-page-layout-body-icon,
-.svg-apps-icon,
-.svg-vuejs-icon,
-.svg-github-icon {
+.feature-icon {
   fill: white;
   height: 50px;
   width: 50px;
 }
 
-/* Navbar icons */
-
-.navbar .svg-github-icon,
-.svg-discord-icon {
+.navbar-icon {
   fill: white;
   height: 32px;
   width: 32px;
 }
 
-/* Other icons */
-
-.svg-menu-up-icon {
-  fill: black;
-  height: 25px;
-  width: 32px;
-}
-
-.svg-menu-down-icon {
+.collapse-icon {
   fill: black;
   height: 25px;
   width: 32px;

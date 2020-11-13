@@ -46,8 +46,8 @@ export default {
           <h4 class="title is-4">
             1. Starter Template <i>(recommended)</i>
           </h4>
-          <v-icon v-show="state.template" name="menu-up-icon" bundle="icons" />
-          <v-icon v-show="!state.template" name="menu-down-icon" bundle="icons" />
+          <v-icon custom-class="collapse-icon" v-show="state.template" name="menu-up-icon" bundle="icons" />
+          <v-icon custom-class="collapse-icon" v-show="!state.template" name="menu-down-icon" bundle="icons" />
         </div>
       </template>
       <template #content>
@@ -97,8 +97,8 @@ export default {
             <h4 class="title is-4">
               2. Manual Install
             </h4>
-            <v-icon v-show="state.cli" name="menu-up-icon" bundle="icons" />
-            <v-icon v-show="!state.cli" name="menu-down-icon" bundle="icons" />
+            <v-icon custom-class="collapse-icon" v-show="state.cli" name="menu-up-icon" bundle="icons" />
+            <v-icon custom-class="collapse-icon" v-show="!state.cli" name="menu-down-icon" bundle="icons" />
           </div>
         </template>
         <template #content>
