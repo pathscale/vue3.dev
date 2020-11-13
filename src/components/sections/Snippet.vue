@@ -77,7 +77,7 @@ export default {
     <h1 v-if="title" class="title is-size-4 mt-4">
       <a :href="getDemoLink()" class="is-active">#</a> {{ title }}
     </h1>
-    <div :class="{'is-50': isHalfWidth}">
+    <div :class="{'is-50': isHalfWidth}" v-if="component">
       <component :is="component" />
     </div>
     <v-tabs v-model="activeTab" type="is-boxed" class="mt-4">

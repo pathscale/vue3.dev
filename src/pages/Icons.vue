@@ -1,19 +1,25 @@
 <script>
 import { useRouter } from 'vue-router'
+import {  VTabs, VTab } from '@pathscale/vue3-ui'
+import { ref } from "vue" 
 import { SnippetSection, ApiSection } from '../components'
 
 import api from '../docs/components/api/icon.ts'
+
 
 // eslint-disable-next-line no-restricted-syntax -- Using all of them
 import * as Showcases from '../docs/components/showcases/Icon'
 import BasicCode from '../docs/components/raw/Icon/IconBasic.txt'
 
+ 
+
 export default {
   name: 'DevPageInstallation',
-  components: { SnippetSection, ApiSection },
+  components: { SnippetSection, ApiSection, VTabs, VTab },
   setup() {
     const router = useRouter()
-    return { router, Showcases, BasicCode, api }
+    const activeTab = ref(0);
+    return { router, Showcases, BasicCode, api, activeTab }
   }
 }
 </script>
@@ -30,17 +36,42 @@ export default {
     <div class="subtitle content mt-4">
       Prerequisites
     </div>
-    <div class="box has-background-light is-family-code">
-      <i class=" has-text-grey-light">rollup.config.js</i>
-      <br />
-      <br />
-      import vue3svg from '@pathscale/vue3-svg-icons'
-      <br />
-      &nbsp; plugins: [
-      <br /> &nbsp;  &nbsp; vue3svg()
-      <br />
-      &nbsp;&nbsp;]
-    </div>
+    <v-tabs v-model="activeTab" type="is-boxed" class="mt-4">
+      <v-tab label="rollup.config.js">
+        <div class="box has-background-light is-family-code">
+          import vue3svg from '@pathscale/vue3-svg-icons'
+          <br />
+          plugins: [
+          <br />&nbsp; vue3svg()
+          <br />
+          ]
+        </div>
+      </v-tab>
+      <v-tab label="main.js">
+        <div class="box has-background-light is-family-code">
+          import Icons from './Icons.vue'
+          <br />const app = createApp(App)
+          <br />app.component('Icons', Icons)
+          <br />app.mount('#app')
+        </div>
+      </v-tab>
+      <v-tab label="Icons.vue">
+        <div class="box has-background-light is-family-code">
+          <i class=" has-text-grey-light">Register here all icons you want to use in your app indicating once the <b>src</b> svg icon path</i>
+          <br />
+          &lt;template>
+          <br />&nbsp;&lt;v-icon src="@pathscale/vue3-svg-icons/mdi/discord.svg" name="discord-icon" bundle="icons"/>
+          <br />&nbsp;&lt;v-icon src="@pathscale/vue3-svg-icons/mdi/vuejs.svg" name="vuejs-icon" bundle="icons"/>
+          <br />&nbsp;&lt;v-icon src="@pathscale/vue3-svg-icons/mdi/github.svg" name="github-icon" bundle="icons"/>
+          <br />
+          &lt;/template>
+        </div>
+      </v-tab>
+    </v-tabs>
+
+    <p class="mt-4">
+      Checkout <a href="https://github.com/pathscale/vue3-svg-icons" target="_blank" rel="noopener">here</a> all available icons sets
+    </p>
 
     <snippet-section title="Basic Use" :code="BasicCode" :component="Showcases.IconBasic" :path="router.currentRoute.value.path" />
     <section id="api" class="py-4">

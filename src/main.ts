@@ -16,5 +16,4 @@ import Icons from './Icons.vue'
 
 const app = createApp(App)
 app.component('Icons', Icons)
-
 app.use(router).mount('#app')

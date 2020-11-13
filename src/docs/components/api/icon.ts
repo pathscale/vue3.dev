@@ -12,7 +12,7 @@ const api =
         },
         {
           name: 'src',
-          description: 'path to the .svg icon',
+          description: 'path to the .svg icon (required once)',
           type: 'String',
           required: true
         },

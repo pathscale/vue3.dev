@@ -22,13 +22,13 @@ export default {
 
 .svg-discord-icon {
   fill: #7289da;
-  height: 50px;
-  width: 50px;
+  height: 75px;
+  width: 75px;
 }
 
 .svg-vuejs-icon {
   fill: #41b883;
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
 }
 </style>
