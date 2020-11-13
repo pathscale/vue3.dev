@@ -29,6 +29,7 @@ export default {
       title="Basic"
       :code="BasicCode"
       :component="Showcases.Basic"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+      is-half-width />
   </div>
 </template>

@@ -48,7 +48,8 @@ export default {
     title: {
       type: String,
       default: 'Showcase'
-    }
+    },
+    isHalfWidth: Boolean
   },
   setup(props) {
     const getDemoLink = () => {
@@ -76,7 +77,9 @@ export default {
     <h1 v-if="title" class="title is-size-4 mt-4">
       <a :href="getDemoLink()" class="is-active">#</a> {{ title }}
     </h1>
-    <component :is="component" />
+    <div :class="{'is-50': isHalfWidth}">
+      <component :is="component" />
+    </div>
     <v-tabs v-model="activeTab" type="is-boxed" class="mt-4">
       <v-tab label="Code" v-if="script">
         <pre v-highlightjs :class="format"><code>{{ script }}</code></pre>
@@ -90,3 +93,11 @@ export default {
     </v-tabs>
   </div>
 </template>
+
+<style>
+@media only screen and (min-width: 1024px) {
+  .is-50 {
+    width: 50%;
+  }
+}
+</style>

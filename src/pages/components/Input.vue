@@ -34,22 +34,26 @@ export default {
       title="Basic"
       :code="BasicCode"
       :component="Showcases.Basic"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+      is-half-width />
     <snippet-section
       title="Color"
       :code="ColorCode"
       :component="Showcases.Color"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+      is-half-width />
     <snippet-section
       title="Size"
       :code="SizeCode"
       :component="Showcases.Size"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+      is-half-width />
     <snippet-section
       title="States"
       :code="LoadingCode"
       :component="Showcases.Loading"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+      is-half-width />
     <section id="api" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API

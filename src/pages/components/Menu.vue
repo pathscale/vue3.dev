@@ -26,7 +26,7 @@ export default {
     <p>
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
-    <snippet-section :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
+    <snippet-section :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" is-half-width />
     <section id="api" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API

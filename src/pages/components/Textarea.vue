@@ -34,27 +34,32 @@ export default {
       title="Color"
       :code="ColorCode"
       :component="Showcases.Color"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+      is-half-width />
     <snippet-section
       title="Size"
       :code="SizeCode"
       :component="Showcases.Size"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+      is-half-width />
     <snippet-section
       title="Loading"
       :code="LoadingCode"
       :component="Showcases.Loading"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+      is-half-width />
     <snippet-section
       title="Focused"
       :code="FocusedCode"
       :component="Showcases.Focused"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+      is-half-width />
     <snippet-section
       title="Counter"
       :code="CounterCode"
       :component="Showcases.Counter"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+      is-half-width />
     <section id="api" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API

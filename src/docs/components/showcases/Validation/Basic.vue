@@ -1,10 +1,10 @@
 <script>
 import { reactive, watchEffect, computed } from 'vue'
-import { VField, VInput, VColumns, VColumn } from '@pathscale/vue3-ui'
+import { VField, VInput } from '@pathscale/vue3-ui'
 
 export default {
   name: 'ValidationBasicExample',
-  components: { VColumns, VColumn, VField, VInput },
+  components: {  VField, VInput },
   setup() {
     const state = reactive({
       username: '',
@@ -42,14 +42,10 @@ export default {
 </script>
 
 <template>
-  <v-columns>
-    <v-column size="is-4">
-      <v-field label="Username" :message="errors.username" :type="types.username">
-        <v-input type="text" v-model="state.username" :color="types.username" />
-      </v-field>
-      <v-field label="Password" :message="errors.password" :type="types.password">
-        <v-input type="password" v-model="state.password" :color="types.password" />
-      </v-field>
-    </v-column>
-  </v-columns>
+  <v-field label="Username" :message="errors.username" :type="types.username">
+    <v-input type="text" v-model="state.username" :color="types.username" />
+  </v-field>
+  <v-field label="Password" :message="errors.password" :type="types.password">
+    <v-input type="password" v-model="state.password" :color="types.password" />
+  </v-field>
 </template>
