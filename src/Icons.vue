@@ -16,4 +16,8 @@ export default {
   <v-icon src="@pathscale/vue3-svg-icons/mdi/menu-down.svg" name="menu-down-icon" bundle="icons" />
   <v-icon src="@pathscale/vue3-svg-icons/mdi/menu-up.svg" name="menu-up-icon" bundle="icons" />
   <v-icon src="@pathscale/vue3-svg-icons/mdi/page-layout-body.svg" name="page-layout-body-icon" bundle="icons" />
+  <v-icon src="@pathscale/vue3-svg-icons/mdi/email.svg" name="email-icon" bundle="icons" />
+  <v-icon src="@pathscale/vue3-svg-icons/mdi/account.svg" name="account-icon" bundle="icons" />
+  <v-icon src="@pathscale/vue3-svg-icons/mdi/check.svg" name="check-icon" bundle="icons" />
+  <v-icon src="@pathscale/vue3-svg-icons/mdi/alert.svg" name="alert-icon" bundle="icons" />
 </template>
