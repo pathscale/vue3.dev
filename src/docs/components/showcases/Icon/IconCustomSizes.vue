@@ -8,5 +8,5 @@ export default {
 </script>
 
 <template>
-  <v-icon name="github-icon" bundle="icons" custom-size="100px" />
+  <v-icon name="bower-icon" bundle="icons" custom-size="100px" />
 </template>

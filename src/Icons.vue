@@ -20,4 +20,5 @@ export default {
   <v-icon src="@pathscale/vue3-svg-icons/mdi/account.svg" name="account-icon" bundle="icons" />
   <v-icon src="@pathscale/vue3-svg-icons/mdi/check.svg" name="check-icon" bundle="icons" />
   <v-icon src="@pathscale/vue3-svg-icons/mdi/alert.svg" name="alert-icon" bundle="icons" />
+  <v-icon src="@pathscale/vue3-svg-icons/devicon/bower/bower-original-wordmark.svg" name="bower-icon" bundle="icons" />
 </template>

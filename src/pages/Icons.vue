@@ -12,8 +12,7 @@ import * as Showcases from '../docs/components/showcases/Icon'
 import SizesCode from '../docs/components/raw/Icon/IconSizes.txt'
 import CustomSizesCode from '../docs/components/raw/Icon/IconCustomSizes.txt'
 import ColorsCode from '../docs/components/raw/Icon/IconColors.txt'
-
-
+import CustomClassCode from '../docs/components/raw/Icon/IconCustomClass.txt'
 
 export default {
   name: 'DevPageInstallation',
@@ -21,7 +20,7 @@ export default {
   setup() {
     const router = useRouter()
     const activeTab = ref(0);
-    return { router, Showcases, SizesCode, CustomSizesCode, ColorsCode, api, activeTab }
+    return { router, Showcases, SizesCode, CustomSizesCode, ColorsCode, CustomClassCode, api, activeTab }
   }
 }
 </script>
@@ -65,6 +64,8 @@ export default {
           <br />&nbsp;&lt;v-icon src="@pathscale/vue3-svg-icons/mdi/discord.svg" name="discord-icon" bundle="icons"/>
           <br />&nbsp;&lt;v-icon src="@pathscale/vue3-svg-icons/mdi/vuejs.svg" name="vuejs-icon" bundle="icons"/>
           <br />&nbsp;&lt;v-icon src="@pathscale/vue3-svg-icons/mdi/github.svg" name="github-icon" bundle="icons"/>
+          <br />&nbsp;&lt;v-icon src="@pathscale/vue3-svg-icons/devicon/bower/bower-original-wordmark.svg name="bower-icon" bundle="icons"/>
+
           <br />
           &lt;/template>
         </div>
@@ -78,6 +79,8 @@ export default {
     <snippet-section title="Sizes" :code="SizesCode" :component="Showcases.IconSizes" :path="router.currentRoute.value.path" />
     <snippet-section title="Colors" :code="ColorsCode" :component="Showcases.IconColors" :path="router.currentRoute.value.path" />
     <snippet-section title="Custom Sizes" :code="CustomSizesCode" :component="Showcases.IconCustomSizes" :path="router.currentRoute.value.path" />
+    <snippet-section title="Custom Class" :code="CustomClassCode" :component="Showcases.IconCustomClass" :path="router.currentRoute.value.path" />
+
 
     <section id="api" class="py-4">
       <h2 class="title is-4">
