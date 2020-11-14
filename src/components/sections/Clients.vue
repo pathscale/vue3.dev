@@ -45,7 +45,7 @@ export default {
           {{ intl.$ts('clients.title') }}
         </p>
         <v-columns vcentered class="reverse-columns px-2">
-          <v-column v-for="(client, index) in projects" :key="index" class="has-text-centered mx-2" size="is-4">
+          <v-column v-for="(client, index) in projects" :key="index" class="has-text-centered mx-2" size="is-3">
             <a :href="client.link">
               <v-image :data-src="client.image" :ref="client.title" custom-class="is-fullwidth" />
             </a>
