@@ -9,9 +9,11 @@ import api from '../docs/components/api/icon.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- Using all of them
 import * as Showcases from '../docs/components/showcases/Icon'
-import BasicCode from '../docs/components/raw/Icon/IconBasic.txt'
+import SizesCode from '../docs/components/raw/Icon/IconSizes.txt'
+import CustomSizesCode from '../docs/components/raw/Icon/IconCustomSizes.txt'
+import ColorsCode from '../docs/components/raw/Icon/IconColors.txt'
 
- 
+
 
 export default {
   name: 'DevPageInstallation',
@@ -19,7 +21,7 @@ export default {
   setup() {
     const router = useRouter()
     const activeTab = ref(0);
-    return { router, Showcases, BasicCode, api, activeTab }
+    return { router, Showcases, SizesCode, CustomSizesCode, ColorsCode, api, activeTab }
   }
 }
 </script>
@@ -73,7 +75,10 @@ export default {
       Checkout <a href="https://github.com/pathscale/vue3-svg-icons" target="_blank" rel="noopener">here</a> all available icons sets
     </p>
 
-    <snippet-section title="Basic Use" :code="BasicCode" :component="Showcases.IconBasic" :path="router.currentRoute.value.path" />
+    <snippet-section title="Sizes" :code="SizesCode" :component="Showcases.IconSizes" :path="router.currentRoute.value.path" />
+    <snippet-section title="Colors" :code="ColorsCode" :component="Showcases.IconColors" :path="router.currentRoute.value.path" />
+    <snippet-section title="Custom Sizes" :code="CustomSizesCode" :component="Showcases.IconCustomSizes" :path="router.currentRoute.value.path" />
+
     <section id="api" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API
