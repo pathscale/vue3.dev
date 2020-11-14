@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <v-field label="Label size">
+  <v-field>
     <v-field horizontal label="From" size="is-small">
       <v-input placeholder="Name" />
     </v-field>

@@ -55,7 +55,7 @@ export default {
   </v-field>
 </template>
 
-<style >
+<style>
 .input-icon {
   fill: lightgray;
   width: 20px;

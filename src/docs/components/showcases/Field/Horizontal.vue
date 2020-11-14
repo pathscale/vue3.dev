@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <v-field label="Horizontal">
+  <v-field>
     <v-field horizontal label="From">
       <v-field grouped group-multiline>
         <v-input placeholder="Name" />
