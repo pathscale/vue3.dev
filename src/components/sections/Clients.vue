@@ -8,28 +8,27 @@ export default {
   components: { VColumns, VColumn, VImage },
   setup() {
     const intl = useI18n()
-    const url = 'https://vue3.dev'
 
 
     const projects = [
       {
         title: 'Pathscale.com',
-        image: `${url}/pathscale.webp`,
+        image: `/pathscale.webp`,
         link: 'https://www.pathscale.com/'
       },
       {
         title: 'Revenge.game',
-        image: `${url}/revenge.webp`,
+        image: `/revenge.webp`,
         link: 'https://www.revenge.game/'
       },
       {
         title: 'SpaceRevenge.game',
-        image: `${url}/space.webp`,
+        image: `/space.webp`,
         link: 'https://www.spacerevenge.game/'
       },
       {
         title: 'Vue3.dev',
-        image: `${url}/vue3.dev.webp`,
+        image: `/vue3.dev.webp`,
         link: 'https://vue3.dev/'
       }
     ]
@@ -46,8 +45,10 @@ export default {
           {{ intl.$ts('clients.title') }}
         </p>
         <v-columns vcentered class="reverse-columns px-2">
-          <v-column v-for="(client, index) in projects" :key="index" class="has-text-centered mx-2">
-            <a :href="client.link"><v-image :src="client.image" :ref="client.title" /></a>
+          <v-column v-for="(client, index) in projects" :key="index" class="has-text-centered mx-2" size="is-4">
+            <a :href="client.link">
+              <v-image :data-src="client.image" :ref="client.title" custom-class="is-fullwidth" />
+            </a>
           </v-column>
         </v-columns>
       </div>

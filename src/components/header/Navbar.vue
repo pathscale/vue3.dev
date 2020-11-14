@@ -100,7 +100,7 @@ export default {
     <v-navbar v-model="isMenuOpen">
       <template #brand>
         <v-navbar-item class="ml-6" @click="redirect('home')">
-          <v-image :src="logo" alt="vue3-ui logo" size="is-64x64" />
+          <v-image :src="logo" alt="vue3-ui logo" size="is-64x64" custom-class="is-fullwidth" />
         </v-navbar-item>
       </template>
       <template #start>

@@ -36,7 +36,11 @@ const api =
           name: 'centered',
           description: 'Center the image in the container.',
           type: 'Boolean',
-
+        },
+        {
+          name: 'custom-class',
+          description: 'CSS classes to be applied on image',
+          type: 'String',
         },
       ],
     }
