@@ -35,88 +35,97 @@ export default {
 
       <v-tabs v-model="tab[key]" type="is-boxed">
         <v-tab label="Properties" v-if="item.props">
-          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Values</th>
-                <th>Default</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(value, index) in item.props" :key="index">
-                <th>
-                  <v-tooltip label="required" v-if="value.required">
-                    <code>{{ value.name }}</code>*
-                  </v-tooltip>
-                  <code v-if="!value.required">{{ value.name }}</code>
-                </th>
-                <td><v-tag>{{ value.type }}</v-tag></td>
-                <td>{{ value.values || '—' }}</td>
-                <td>{{ value.default || '—' }}</td>
-                <td>{{ value.description }}</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Values</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(value, index) in item.props" :key="index">
+                  <th>
+                    <v-tooltip label="required" v-if="value.required">
+                      <code>{{ value.name }}</code>*
+                    </v-tooltip>
+                    <code v-if="!value.required">{{ value.name }}</code>
+                  </th>
+                  <td><v-tag>{{ value.type }}</v-tag></td>
+                  <td>{{ value.values || '—' }}</td>
+                  <td>{{ value.default || '—' }}</td>
+                  <td>{{ value.description }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </v-tab>
         <v-tab label="Events" v-if="item.events">
-          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Parameters</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(value, index) in item.events" :key="index">
-                <th><code>{{ value.name }}</code></th>
-                <td>{{ value.description }}</td>
-                <td><v-tag>{{ value.parameters || '—' }}</v-tag></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Parameters</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(value, index) in item.events" :key="index">
+                  <th><code>{{ value.name }}</code></th>
+                  <td>{{ value.description }}</td>
+                  <td><v-tag>{{ value.parameters || '—' }}</v-tag></td>
+                </tr>
+              </tbody>
+            </table>
+            <div />
+          </div>
         </v-tab>
         <v-tab label="Slots" v-if="item.slots">
-          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>props</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(value, index) in item.slots" :key="index">
-                <th><code>{{ value.name }}</code></th>
-                <td>{{ value.description }}</td>
-                <td><v-tag>{{ value.props || '—' }}</v-tag></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>props</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(value, index) in item.slots" :key="index">
+                  <th><code>{{ value.name }}</code></th>
+                  <td>{{ value.description }}</td>
+                  <td><v-tag>{{ value.props || '—' }}</v-tag></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </v-tab>
         <v-tab label="Methods" v-if="item.methods">
-          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(value, index) in item.methods" :key="index">
-                <th>
-                  <v-tooltip label="required" v-if="value.required">
-                    <code>{{ value.name }}</code>*
-                  </v-tooltip>
-                  <code v-if="!value.required">{{ value.name }}</code>
-                </th>
-                <td>{{ value.description }}</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(value, index) in item.methods" :key="index">
+                  <th>
+                    <v-tooltip label="required" v-if="value.required">
+                      <code>{{ value.name }}</code>*
+                    </v-tooltip>
+                    <code v-if="!value.required">{{ value.name }}</code>
+                  </th>
+                  <td>{{ value.description }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </v-tab>
       </v-tabs>
     </div>
