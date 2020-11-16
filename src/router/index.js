@@ -45,10 +45,16 @@ const routes = [
             meta: metaTags('Installation', 'Install vue3-ui, a vue3 ready components library')
           },
           {
-            name: 'appstate',
-            path: 'appstate',
-            component: Pages.Appstate,
-            meta: metaTags('Appstate', 'Fast state management for Vue3 with reduced overhead and robust API')
+            name: 'introducing',
+            path: 'introducing',
+            component: Pages.IntroducingAppState,
+            meta: metaTags('Introducing Appstate', 'Fast state management for Vue3 with reduced overhead and robust API')
+          },
+          {
+            name: 'modules',
+            path: 'modules',
+            component: Pages.ModulesAppState,
+            meta: metaTags('Modules Appstate', 'Fast state management for Vue3 with reduced overhead and robust API')
           },
           {
             name: 'theming',

@@ -1,12 +1,12 @@
 <script>
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../components'
+import { SnippetSection, ApiSection } from '../../components'
 
-import api from '../docs/components/api/appstate.ts'
+import api from '../../docs/components/api/appstate.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- Using all of them
-import * as Showcases from '../docs/components/showcases/Appstate'
-import GlobalCode from '../docs/components/raw/Appstate/Global.txt'
+import * as Showcases from '../../docs/components/showcases/Appstate'
+import GlobalCode from '../../docs/components/raw/Appstate/Global.txt'
 
 
 export default {

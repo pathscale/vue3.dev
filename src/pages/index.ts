@@ -4,7 +4,8 @@ export { default as Installation } from './Installation.vue'
 export { default as Validation } from './Validation.vue'
 export { default as Theming } from './Design/Theming.vue'
 export { default as Bulma } from './Design/Bulma.vue'
-export { default as Appstate } from './Appstate.vue'
+export { default as IntroducingAppState } from './AppState/Introducing.vue'
+export { default as ModulesAppState } from "./AppState/Modules.vue"
 export { default as Icons } from './Icons.vue'
 
 export { default as Breadcrumb } from './components/Breadcrumb.vue'

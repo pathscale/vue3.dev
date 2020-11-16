@@ -64,7 +64,10 @@ export default {
                   <v-menu-item label="Media" @click="redirect('media')" :active="current.media" />
                 </v-menu-item>
               </v-menu-item>
-              <v-menu-item label="Appstate-fast" @click="redirect('appstate')" :active="current.appstate" />
+              <v-menu-item label="Appstate-fast" expanded>
+                <v-menu-item label="Introducing" @click="redirect('introducing')" :active="current.introducing" />
+                <v-menu-item label="Modules" @click="redirect('modules')" :active="current.modules" />
+              </v-menu-item>
               <v-menu-item label="Icons" @click="redirect('icons')" :active="current.icons" />
             </v-menu-list>
             <v-menu-list label="UI Components">
