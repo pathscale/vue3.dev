@@ -35,20 +35,17 @@ export default {
       title="Form addons"
       :code="AddonsCode"
       :component="Showcases.Addons"
-      :path="router.currentRoute.value.path"
-      is-half-width />
+      :path="router.currentRoute.value.path" />
     <snippet-section
       title="Grouped"
       :code="GroupedCode"
       :component="Showcases.Grouped"
-      :path="router.currentRoute.value.path"
-      is-half-width />
+      :path="router.currentRoute.value.path" />
     <snippet-section
       title="Horizontal"
       :code="HorizontalCode"
       :component="Showcases.Horizontal"
-      :path="router.currentRoute.value.path"
-      is-half-width />
+      :path="router.currentRoute.value.path" />
     <snippet-section
       title="Label size"
       :code="SizeCode"
