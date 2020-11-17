@@ -16,11 +16,11 @@ export default {
     const counterState = useState(globalState)
 
     const incrementCounter = () => {
-      counterState._set(counterState.value + 1)
+      counterState.value += 1
     }
 
     const decrementCounter = () => {
-      counterState._set(counterState.value - 1)
+      counterState.value += 1
     }
 
     return { counterState, incrementCounter, decrementCounter, resetCounter }
