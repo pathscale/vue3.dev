@@ -1,20 +1,19 @@
 <script>
 import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { SnippetSection } from '../../components'
 
-import api from '../../docs/components/api/appstate'
 
-// eslint-disable-next-line no-restricted-syntax -- Using all of them
-import * as Showcases from '../../docs/components/showcases/Appstate'
-import GlobalCode from '../../docs/components/raw/Appstate/Global.txt'
+// import api from '../../docs/components/api/appstate'
+// import { Modules } from '../../docs/components/showcases/AppState'
+import GlobalCode from '../../docs/components/raw/Appstate/Modules.txt'
 
 
 export default {
   name: 'DevPageInstallation',
-  components: { SnippetSection, ApiSection },
+  components: { SnippetSection },
   setup() {
     const router = useRouter()
-    return { router, Showcases, GlobalCode, api }
+    return { router, GlobalCode }
   }
 }
 </script>
@@ -29,17 +28,16 @@ export default {
     </p>
 
 
-    <snippet-section title="Global state" :code="GlobalCode" :component="Showcases.Global" :path="router.currentRoute.value.path" />
-    Create and initialize the state with the <b>createState</b> method. The returned instace could be used to get/set the state outside a Vue component.
-    <br />
+    <snippet-section title="Modules Appstate" :code="GlobalCode" :component="null" :path="router.currentRoute.value.path" />
+ 
 
-    To use the state instance inside a Vue Component, import it with <b>useState</b> method.
-
-    <section id="api" class="py-4">
+    <!-- 
+      <section id="api" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API
       </h2>
       <api-section :api="api" />
-    </section>
+    </section> 
+    -->
   </div>
 </template>

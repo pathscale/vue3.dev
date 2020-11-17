@@ -1,12 +1,9 @@
 <script>
 import { useRouter } from 'vue-router'
 import { SnippetSection, ApiSection } from '../../components'
-
 import api from '../../docs/components/api/appstate.ts'
-
-// eslint-disable-next-line no-restricted-syntax -- Using all of them
-import * as Showcases from '../../docs/components/showcases/Appstate'
-import GlobalCode from '../../docs/components/raw/Appstate/Global.txt'
+import { Introducing } from '../../docs/components/showcases/Appstate'
+import GlobalCode from '../../docs/components/raw/Appstate/Introducing.txt'
 
 
 export default {
@@ -14,7 +11,7 @@ export default {
   components: { SnippetSection, ApiSection },
   setup() {
     const router = useRouter()
-    return { router, Showcases, GlobalCode, api }
+    return { router, Showcases: Introducing, GlobalCode, api }
   }
 }
 </script>
@@ -29,7 +26,7 @@ export default {
     </p>
 
 
-    <snippet-section title="Global state" :code="GlobalCode" :component="Showcases.Global" :path="router.currentRoute.value.path" />
+    <snippet-section title="Global state" :code="GlobalCode" :component="Showcases" :path="router.currentRoute.value.path" />
     Create and initialize the state with the <b>createState</b> method. The returned instace could be used to get/set the state outside a Vue component.
     <br />
 
