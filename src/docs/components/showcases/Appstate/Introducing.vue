@@ -2,14 +2,10 @@
 import { createState, useState } from '@pathscale/appstate-fast'
 import { VButton } from '@pathscale/vue3-ui'
 
-const globalState = createState({
-  counter: 0
-})
+const globalState = createState(0)
 
 function resetCounter() {
-  globalState.value = {
-    counter: 0
-  }
+  globalState.value = 0
 }
 
 export default {
@@ -20,15 +16,11 @@ export default {
     const counterState = useState(globalState)
 
     const incrementCounter = () => {
-      counterState.value = {
-        counter: counterState.value.counter + 1
-      }
+      counterState._set(counterState.value + 1)
     }
 
     const decrementCounter = () => {
-      counterState.value = {
-        counter: counterState.value.counter - 1
-      }
+      counterState._set(counterState.value - 1)
     }
 
     return { counterState, incrementCounter, decrementCounter, resetCounter }
@@ -38,7 +30,7 @@ export default {
 
 <template>
   <p class="is-size-3">
-    Counter: {{ counterState.counter }}
+    Counter: {{ counterState }}
   </p>
   <div class="buttons mt-3">
     <v-button type="is-danger" @click="decrementCounter">
