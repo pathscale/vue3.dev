@@ -1,31 +1,30 @@
 <script>
 import { VButton } from '@pathscale/vue3-ui'
-import { watchEffect } from 'vue'
-import { useState, createState } from '@pathscale/appstate-fast'
+import { reactive, watchEffect } from 'vue'
 
-const globalState = createState({ count: 0, memory: 0, times: 0 })
+const globalState = reactive({ count: 0, memory: 0, times: 0 })
 
 export default {
   name: 'AppstateShowcase',
   components: { VButton },
   setup() {
-    const state = useState(globalState);
+    const state = globalState;
     watchEffect(() => {
       // eslint-disable-next-line no-console -- ignore
-      console.log('Memory', state.memory.value)
-      state.times.set(p => p + 1) 
+      console.log('Memory', state.memory)
+      state.times += 1 
     })
 
     const resetCounter = () => {
-      state.memory.set(state.count.value);
-      state.count.set(0);
+      state.memory = state.count;
+      state.count = 0;
     }
 
     const incrementCounter = () => {
-      state.count.set(p => p + 1);
+      state.count += 1;
     }
     const decrementCounter = () => {
-      state.count.set(p => p - 1);
+      state.count -= 1;
     }
     return { incrementCounter, decrementCounter, state, resetCounter}
   }

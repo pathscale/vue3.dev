@@ -2,8 +2,10 @@
 import { useRouter } from 'vue-router'
 import { SnippetSection, ApiSection } from '../../components'
 import api from '../../docs/components/api/appstate.ts'
-import { Introducing } from '../../docs/components/showcases/Appstate'
+import { Introducing, Introducing2 } from '../../docs/components/showcases/Appstate'
 import GlobalCode from '../../docs/components/raw/Appstate/Introducing.txt'
+import GlobalCode2 from '../../docs/components/raw/Appstate/Introducing2.txt'
+
 
 
 export default {
@@ -11,7 +13,7 @@ export default {
   components: { SnippetSection, ApiSection },
   setup() {
     const router = useRouter()
-    return { router, Showcases: Introducing, GlobalCode, api }
+    return { router, Showcases: Introducing, Introducing2, GlobalCode, GlobalCode2, api }
   }
 }
 </script>
@@ -30,6 +32,7 @@ export default {
     With this new concept, you can choose more flexible state management options instead of just using Vuex. <b>Appstate-fast</b> offers better state management performance and is also highly compatible with Vue3.
 
     <snippet-section title="Global state" :code="GlobalCode" :component="Showcases" :path="router.currentRoute.value.path" />
+    <snippet-section title="Global state with Composition API (Remove this)" :code="GlobalCode2" :component="Introducing2" :path="router.currentRoute.value.path" />
     Create and initialize the state with the <b>createState</b> method. The returned instace could be used to get/set the state outside a Vue component.
     <br />
 
