@@ -1,6 +1,7 @@
 <script>
 import { VButton } from '@pathscale/vue3-ui'
 import { watchEffect } from 'vue'
+// eslint-disable-next-line import/no-unresolved -- ignore temporally
 import { useState, createState } from '@pathscale/appstate-fast'
 
 const globalState = createState({ count: 0, memory: 0, times: 0 })
