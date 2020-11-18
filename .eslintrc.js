@@ -107,7 +107,12 @@ const baseRules = {
   'jsdoc/require-jsdoc': 'off',
   'require-unicode-regexp': 'off',
   'prefer-named-capture-group': 'off',
-  'import/no-unresolved': 'off',
+  'import/no-unresolved': [
+    'error',
+    {
+      ignore: ['docs/components/raw/'],
+    },
+  ],
 
   // More consistent styling of WS before exports
   'padding-line-between-statements': [
