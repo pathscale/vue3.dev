@@ -12,7 +12,7 @@ export default {
     const state = useState(globalState);
     watchEffect(() => {
       // eslint-disable-next-line no-console -- ignore
-      console.log('Memory', state.memory.value)
+      console.log('Called when memory changes its value', state.memory.value)
       state.times.set(p => p + 1) 
     })
 
