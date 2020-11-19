@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'MetrocleanExtrabold';
+  font-family: 'metrocleanextrabold';
   src: url('../fonts/metroclean-extrabold-webfont.woff2');
 }
 
 @font-face {
-  font-family: 'MetrocleanMedium';
+  font-family: 'metrocleanmedium';
   src: url('../fonts/metroclean-medium-webfont.woff2');
 }
 
@@ -18,7 +18,7 @@ body {
   display: block !important;
   animation: fadein 2s;
   margin: 0;
-  font-family: MetrocleanMedium !important, sans-serif;
+  font-family: metrocleanmedium !important, sans-serif;
   text-rendering: optimizeLegibility;
   height: calc(var(--vh, 1vh) * 100);
   overflow-y: auto;
