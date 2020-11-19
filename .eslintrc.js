@@ -114,6 +114,8 @@ const baseRules = {
     },
   ],
 
+  'comment-empty-line-before': 'off',
+
   // More consistent styling of WS before exports
   'padding-line-between-statements': [
     'error',
