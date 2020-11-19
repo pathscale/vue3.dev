@@ -15,7 +15,8 @@ export default {
     const router = useRouter()
     const state = reactive({
       manual: true,
-      template: true
+      template: true, 
+      cli: true,
     })
 
     function toggle(value) {
