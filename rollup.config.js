@@ -171,7 +171,7 @@ const config = [
       commonjs(),
       prod && tsickle(),
       vue3svg(),
-      vue3uiPurge(),
+      prod && vue3uiPurge(),
       vue(),
       styles({
         mode: prod ? 'extract' : 'inject',
