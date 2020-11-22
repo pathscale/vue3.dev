@@ -14,9 +14,7 @@ export default {
   setup() {
     const router = useRouter()
     const state = reactive({
-      manual: true,
       template: true, 
-      cli: true,
     })
 
     function toggle(value) {
@@ -36,8 +34,8 @@ export default {
 
     <div class="content">
       <p>
-        For <b>new projects</b>, the easy way to get started with Vue3-ui is use our <a href="https://github.com/pathscale/vue3-starter" target="_blank" rel="noopener">Vue3 Starter</a> template to create a Vue3-ui ready app using
-        Rollup. For <b>existing projects</b>, checkout the <a href="#2">section 2</a>.
+        The easy way to get started with Vue3-ui is use our <a href="https://github.com/pathscale/vue3-starter" target="_blank" rel="noopener">Vue3 Starter</a> template to create a Vue3-ui ready app using
+        Rollup.
       </p>
     </div>
 
@@ -90,46 +88,6 @@ export default {
         </div>
       </template>
     </v-accordion>
-
-    <section id="2">
-      <v-accordion :expanded="state.cli" header-is-trigger id="2">
-        <template #header>
-          <div class="is-inline-flex mt-5" @click="toggle('cli')">
-            <h4 class="title is-4">
-              2. Manual Install
-            </h4>
-            <v-icon custom-class="collapse-icon" v-show="state.cli" name="menu-up-icon" bundle="icons" />
-            <v-icon custom-class="collapse-icon" v-show="!state.cli" name="menu-down-icon" bundle="icons" />
-          </div>
-        </template>
-        <template #content>
-          <div class="content">
-            In an <b>existing</b> app with Vue 3 support, follow the instructions below.
-          </div>
-          <div class="subtitle content">
-            Install required packages
-          </div>
-
-          <div class="box has-background-light is-family-code">
-            npm i @pathscale/vue3-ui @pathscale/bulma-extensions-css-var @pathscale/bulma-pull-2981-css-var-only
-          </div>
-
-          <div class="subtitle content">
-            Import styles in main.js
-          </div>
-
-          <div class="box has-background-light is-family-code">
-            import '@pathscale/bulma-pull-2981-css-var-only/css/bulma.css'
-            <br />
-            import '@pathscale/bulma-extensions-css-var'
-          </div>
-
-          <div class="content">
-            For testing, update <b>App.vue </b> or you entry component with the snippet code below and you should get a similar output in <a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a> or whatever port you are using.
-          </div>
-        </template>
-      </v-accordion>
-    </section>
     <div class="title is-4 mt-4">
       Additional packages
     </div>

@@ -230,12 +230,12 @@ const routes = [
             component: Pages.Datagrid,
             meta: metaTags('DataGrid', 'DataGrid is a powerful and UI agnostic class to store and alter data')
           },
-          {
-            name: 'avatar',
-            path: 'avatar',
-            component: Pages.Avatar,
-            meta: metaTags('Avatar', 'A container for avatar images')
-          }
+          // {
+          //   name: 'avatar',
+          //   path: 'avatar',
+          //   component: Pages.Avatar,
+          //   meta: metaTags('Avatar', 'A container for avatar images')
+          // }
         ]
       },
     ]
