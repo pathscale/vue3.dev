@@ -9,7 +9,7 @@ export default {
 
 <template>
   <div class="is-flex is-justify-content-flex-start is-align-items-center">
-    <v-avatar alt="John Doe" data-src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde" />
     <v-avatar alt="John Doe" />
+    <v-avatar alt="Marry Jane" background="has-background-warning" text="has-text-black" />
   </div>
 </template>

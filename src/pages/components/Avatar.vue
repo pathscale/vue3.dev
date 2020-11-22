@@ -4,15 +4,17 @@ import { SnippetSection, ApiSection } from '../../components'
 
 import api from '../../docs/components/api/avatar.ts'
 
-import Showcase from '../../docs/components/showcases/Avatar.vue'
-import ShowcaseCode from '../../docs/components/raw/Avatar.txt'
+// eslint-disable-next-line no-restricted-syntax -- Using comprehensively
+import * as Showcase from '../../docs/components/showcases/Avatar'
+import AvatarBasic from '../../docs/components/raw/Avatar/AvatarBasic.txt'
+import AvatarWithPhoto from '../../docs/components/raw/Avatar/AvatarWithPhoto.txt'
 
 export default {
   name: 'DevPageAvatar',
   components: { SnippetSection, ApiSection },
   setup() {  
     const router = useRouter()
-    return { api, router, Showcase, ShowcaseCode }
+    return { api, router, Showcase, AvatarBasic, AvatarWithPhoto }
   }
 }
 </script>
@@ -26,7 +28,9 @@ export default {
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
 
-    <snippet-section :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
+    <snippet-section title="Avatar Basic" :code="AvatarBasic" :component="Showcase.AvatarBasic" :path="router.currentRoute.value.path" />
+
+    <snippet-section title="Avatar With Photo" :code="AvatarWithPhoto" :component="Showcase.AvatarWithPhoto" :path="router.currentRoute.value.path" />
 
 
     <section id="api" class="py-4">
