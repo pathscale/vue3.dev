@@ -42,7 +42,8 @@ export default {
       if (router.currentRoute.value.name === 'documentation') redirect('installation')
     })
 
-    return { paths, redirect, current, isActiveBreadcrumb }
+    const isDevelopment = process.env.NODE_ENV === 'development'
+    return { paths, redirect, current, isActiveBreadcrumb, isDevelopment }
   }
 }
 </script>
@@ -54,6 +55,7 @@ export default {
         <div class="pt-6 px-5">
           <v-menu>
             <v-menu-list label="Getting Started">
+              <v-menu-item v-if="isDevelopment" label="Playground" @click="redirect('playground')" :active="current.playground" />
               <v-menu-item label="Installation" @click="redirect('installation')" :active="current.installation" expanded />
               <v-menu-item label="Design" expanded>
                 <v-menu-item label="Bulma" @click="redirect('bulma')" :active="current.bulma" />

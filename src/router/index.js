@@ -39,6 +39,12 @@ const routes = [
         meta: metaTags('Documentation', 'Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS.'),
         children: [
           {
+            name: 'playground',
+            path: 'playground',
+            component: Pages.Playground,
+            meta: metaTags('Playground', 'Cleanroom for develop and component testing')
+          },
+          {
             name: 'installation',
             path: 'installation',
             component: Pages.Installation,
