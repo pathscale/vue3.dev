@@ -11,7 +11,7 @@ const api =
         },
         {
           name: 'placeholder',
-          description: 'Specifies a short hint that describes the expected value of the input field',
+          description: 'Specifies a short hint that describes the expected value of the input field. Only displayed when the binding value is null',
           type: 'String',
         },
         {
