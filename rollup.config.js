@@ -25,6 +25,7 @@ import image from '@rollup/plugin-image'
 import visualizer from 'rollup-plugin-visualizer'
 import { string } from 'rollup-plugin-string'
 import vue3svg from '@pathscale/vue3-svg-icons'
+import copy from 'rollup-plugin-copy'
 
 const extensions = ['.ts', '.mjs', '.js', '.vue', '.json']
 
@@ -209,6 +210,9 @@ const config = [
       watch && livereload({ watch: 'dist' }),
       prod && analyzer(),
       prod && visualizer(),
+      copy({
+        targets: [{ src: 'public/**/*', dest: 'dist/' }],
+      }),
     ],
   },
 ]

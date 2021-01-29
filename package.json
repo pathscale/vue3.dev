@@ -11,7 +11,7 @@
   "author": "PathScale (https://vue3.dev/)",
   "contributors": [],
   "scripts": {
-    "prebuild": "shx rm -rf dist && shx mkdir dist && shx cp public/* dist && npm run build:snippets",
+    "prebuild": "shx rm -rf dist && shx mkdir dist && npm run build:snippets",
     "build": "rollup -c --environment NODE_ENV:production",
     "postbuild": "shx cp serve.json dist",
     "build:snippets": "node build/snippets.js",
@@ -103,6 +103,7 @@
     "prettier": "^2.1.2",
     "rollup": "^2.33.1",
     "rollup-plugin-analyzer": "^3.3.0",
+    "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-gzip": "^2.5.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-serve": "^1.1.0",
