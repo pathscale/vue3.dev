@@ -121,7 +121,24 @@ const api =
           values: 'a column name',
         }
       ],
-
+      slots: [
+        {
+          name: 'header',
+          description: 'custom header component',
+        },
+        {
+          name: 'footer',
+          description: 'custom footer component',
+        },
+        {
+          name: 'expanded',
+          description: 'custom expanded component for expandable table',
+        },
+        {
+          name: 'Any column name',
+          description: 'custom column component',
+        },
+      ]
     }
   ]
 
