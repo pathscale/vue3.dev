@@ -135,7 +135,6 @@ const api =
         {
           name: 'label',
           description: 'Dropdown menu custom label',
-          props: '-'
         }
       ]
     }

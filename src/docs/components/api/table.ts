@@ -137,6 +137,7 @@ const api =
         {
           name: 'Any column name',
           description: 'custom column component',
+          props: 'row'
         },
       ]
     }
