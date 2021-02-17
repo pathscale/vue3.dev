@@ -6,7 +6,6 @@ import 'vue3-carousel/dist/carousel.css'
 
 import { useRouter } from 'vue-router'
 
-
 export default {
   name: 'DevTrailer',
   components: { VButton, VColumns, VColumn },
@@ -17,11 +16,11 @@ export default {
     function redirect(name) {
       document.querySelector('#well').scrollIntoView() // Scroll to top
       router.push({
-        name
+        name,
       })
     }
     return { intl, redirect }
-  }
+  },
 }
 </script>
 
@@ -33,20 +32,35 @@ export default {
           {{ intl.$ts('overview.title') }}
         </p>
         <v-columns hcentered>
-          <v-column size="is-6" class="has-text-centered">
+          <v-column size="is-6" class="has-text-centered px-4">
             <p class="has-text-white is-size-5 is-size-6-touch">
               Vue3-ui provides one of the most complete implementations of the <b>Bulma</b>
-              components and grid system, following robust guidelines to do those really easy and fast to use.
+              components and grid system, following robust guidelines to do those really easy and
+              fast to use.
               <br /><br />
               With full Vue 3 support, our source code is optimized to take full advantage of the
               <b>Composition API</b>, offering better performance and reduced javascript load.
             </p>
             <div class="pt-3">
-              <v-button type="is-primary" rounded inverted outlined class="my-6 mx-5 is-uppercase" @click="redirect('installation')">
+              <v-button
+                type="is-primary"
+                rounded
+                inverted
+                outlined
+                class="my-6 mx-5 is-uppercase"
+                @click="redirect('installation')">
                 Getting Started
               </v-button>
-              <v-button type="is-primary" rounded inverted outlined class="my-6 mx-5 is-uppercase"
-                        tag="a" href="https://github.com/pathscale/vue3-ui" target="_blank" rel="noopener">
+              <v-button
+                type="is-primary"
+                rounded
+                inverted
+                outlined
+                class="my-6 mx-5 is-uppercase"
+                tag="a"
+                href="https://github.com/pathscale/vue3-ui"
+                target="_blank"
+                rel="noopener">
                 Github
               </v-button>
             </div>

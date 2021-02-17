@@ -3,7 +3,7 @@ import {
   HomeSection,
   OverviewSection,
   ClientsSection,
-  FeaturesSection
+  FeaturesSection,
 } from '../components/sections'
 
 export default {
@@ -12,14 +12,14 @@ export default {
     HomeSection,
     OverviewSection,
     ClientsSection,
-    FeaturesSection
+    FeaturesSection,
   },
 }
 </script>
 
 <template>
   <home-section />
-  <overview-section />
+  <overview-section id="overview" />
   <features-section />
   <clients-section />
 </template>
