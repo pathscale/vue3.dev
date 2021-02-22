@@ -20,7 +20,7 @@ export default {
         pt// : ()=> import('./locales/pt.json').default
       }
     })
-    watchEffect(() => setTheme(defaultTheme))
+    watchEffect(() => process.env.NODE_ENV === 'development' && setTheme(defaultTheme))
   }
 }
 </script>
