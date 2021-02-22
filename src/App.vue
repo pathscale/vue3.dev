@@ -1,6 +1,7 @@
 <script>
+import { watchEffect } from 'vue'
 import { setI18n } from 'vue-composable'
-// import { defaultTheme, setTheme } from './theming'
+import { defaultTheme, setTheme } from './theming'
 
 // TODO: bundling .json + code splitting -> copying .json + fetching
 import en from './locales/en.json'
@@ -19,7 +20,7 @@ export default {
         pt// : ()=> import('./locales/pt.json').default
       }
     })
-   //  watchEffect(() => setTheme(defaultTheme))
+    watchEffect(() => setTheme(defaultTheme))
   }
 }
 </script>
