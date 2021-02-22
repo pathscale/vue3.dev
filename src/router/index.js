@@ -213,6 +213,12 @@ const routes = [
             meta: metaTags('Tabs', 'For any type of horizontal navigation')
           },
           {
+            name: 'timeline',
+            path: 'timeline',
+            component: Pages.Timeline,
+            meta: metaTags('Timeline', 'Linear sequence for time events')
+          },
+          {
             name: 'tooltip',
             path: 'tooltip',
             component: Pages.Tooltip,

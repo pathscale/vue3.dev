@@ -113,6 +113,7 @@ export default {
                 <!-- <v-menu-item label="Collapse" /> -->
                 <v-menu-item label="Accordion" @click="redirect('accordion')" :active="current.accordion" />
                 <v-menu-item label="Tabs" @click="redirect('tabs')" :active="current.tabs" />
+                <v-menu-item label="Timeline" @click="redirect('timeline')" :active="current.timeline" />
               </v-menu-item>
             </v-menu-list>
             <v-menu-list label="Utilities">
