@@ -33,6 +33,12 @@ const routes = [
         meta: metaTags('Vue3-ui', 'Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS.')
       },
       {
+        name: 'demo',
+        path: 'demo',
+        component: Pages.Demo,
+        meta: metaTags('Vue3-ui', 'Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS.')
+      },
+      {
         name: 'documentation',
         path: 'documentation',
         component: Pages.Documentation,

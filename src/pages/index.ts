@@ -1,4 +1,5 @@
 export { default as Home } from './Home.vue'
+export { default as Demo } from './Demo.vue'
 export { default as Documentation } from './Documentation.vue'
 export { default as Installation } from './Installation.vue'
 export { default as Validation } from './Validation.vue'

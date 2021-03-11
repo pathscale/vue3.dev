@@ -120,7 +120,9 @@ export default {
         </v-navbar-item>
         <v-navbar-item
           class="mx-3 is-size-5 py-4 has-text-centered"
-          @click="closeMenu">
+          :class="{'is-active-item': isActive('demo') }"
+          @click="redirect('demo')"
+          :active="isActive('demo')">
           Demo
         </v-navbar-item>
       </template>
