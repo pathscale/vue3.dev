@@ -1,4 +1,10 @@
 const variables = {
+
+  // fonts
+  '$family-primary': 'metroclean, Arial, sans-serif',
+  '$subtitle-family': 'metroclean, Arial, sans-serif',
+  '$title-family': 'metroclean, Arial, sans-serif',
+
   '$primary': '#111',
   '$button-background-color': '#4958f5',
   '$button-border-width': '2px',
@@ -15,9 +21,7 @@ const variables = {
   '$navbar-item-hover-background-color': '#000',
   '$navbar-item-img-max-height': '4rem',
   '$section-padding': '0.5rem 1.5rem',
-  '$size-7': '0.875em',
-  '$subtitle-family': 'MetrocleanExtrabold',
-  '$title-family': 'MetrocleanExtrabold',
+  '$size-7': '0.875em'
 }
 
 export default variables

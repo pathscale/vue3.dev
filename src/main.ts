@@ -4,6 +4,8 @@ import '@pathscale/bulma-pull-2981-css-var-only'
 import '@pathscale/bulma-extensions-css-var'
 import 'vue3-carousel/dist/carousel.css'
 
+import '@pathscale/fonts-metroclean'
+
 import './assets/styles/index.css'
 // import "./assets/styles/scrollbar.css";
 import './assets/styles/carousel.css'
