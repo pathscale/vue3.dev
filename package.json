@@ -34,7 +34,7 @@
   },
   "lint-staged": {
     "**/*.{css,vue}": "stylelint",
-    "**/*.{js,ts,vue,md,html}": "npm run lint-arg --"
+    "**/*.{js,ts,vue,md,html}": "eslint --cache --fix"
   },
   "dependencies": {},
   "devDependencies": {
@@ -123,7 +123,7 @@
     "vue": "3.0.4",
     "vue-composable": "^1.0.0-beta.12",
     "vue-eslint-parser": "^7.1.1",
-    "vue-router": "^4.0.0-rc.2",
+    "vue-router": "^4.0.5",
     "vue3-carousel": "^0.1.4"
   },
   "engines": {

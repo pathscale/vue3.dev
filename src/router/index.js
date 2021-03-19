@@ -263,6 +263,15 @@ const routes = [
 export const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      document.querySelector(to.hash).scrollIntoView()
+      return {
+        el: to.hash,
+      }
+    }
+    return { top: 0 }
+  },
 })
 
 router.beforeEach((to, _from, next) => {
