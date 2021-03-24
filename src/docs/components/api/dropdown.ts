@@ -13,7 +13,7 @@ const api =
             name: 'position',
             description: 'Dropdown position',
             type: 'String',
-            values: 'is-right, is-up, is-right is-up',
+            values: 'is-left, is-up, is-down, is-right',
           },
           {
             name: 'disabled',
