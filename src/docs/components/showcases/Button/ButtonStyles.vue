@@ -1,9 +1,9 @@
 <script>
-import { VButton } from '@pathscale/vue3-ui'
+import { VButton, VIcon } from '@pathscale/vue3-ui'
 
 export default {
   name: 'DevShowcaseButton',
-  components: { VButton }
+  components: { VButton, VIcon }
 }
 </script>
 
@@ -11,6 +11,12 @@ export default {
   <div class="buttons">
     <v-button rounded type="is-info">
       Rounded
+    </v-button>
+    <v-button rounded type="is-light">
+      <span>
+        Github
+      </span> 
+      <v-icon name="github-icon" color="white" bundle="icons" />
     </v-button>
   </div>
 
