@@ -31,6 +31,8 @@ export { default as Switch } from './components/Switch.vue'
 export { default as Tabs } from './components/Tabs.vue'
 export { default as Timeline } from './components/Timeline.vue'
 export { default as Tag } from './components/Tag.vue'
+export { default as Slider } from './components/Slider.vue'
+
 export { default as Textarea } from './components/Textarea.vue'
 export { default as Table } from './components/Table.vue'
 export { default as Tooltip } from './components/Tooltip.vue'

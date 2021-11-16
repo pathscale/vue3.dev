@@ -111,6 +111,12 @@ const routes = [
             meta: metaTags('Tag', 'It\'s very useful as a way to attach information to a block or other component')
           },
           {
+            name: 'slider',
+            path: 'slider',
+            component: Pages.Slider,
+            meta: metaTags('Slider', 'Display a classic slider with different colors, sizes, and states')
+          },
+          {
             name: 'input',
             path: 'input',
             component: Pages.Input,

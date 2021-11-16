@@ -88,6 +88,7 @@ export default {
                 <v-menu-item label="Table" @click="redirect('table')" :active="current.table" />
                 <v-menu-item label="Tag" @click="redirect('tag')" :active="current.tag" />
                 <v-menu-item label="Tooltip" @click="redirect('tooltip')" :active="current.tooltip" />
+                <v-menu-item label="Slider" @click="redirect('slider')" :active="current.slider" />
               </v-menu-item>
               <v-menu-item label="Form" expanded>
                 <v-menu-item label="Input" @click="redirect('input')" :active="current.input" />
