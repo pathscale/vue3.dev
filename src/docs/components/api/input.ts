@@ -29,19 +29,20 @@ const api =
 
         },
         {
-          name: 'icon-right',
-          description: 'Right icon',
-          type: 'String',
-        },
-        {
-          name: 'icon-left',
-          description: 'Left Icon',
-          type: 'String',
-        },
-        {
           name: 'Any native attribute',
         }
       ],
+      slots: [
+        {
+          name: 'leftIcon',
+          description: 'Left Icon',
+        },
+        {
+          name: 'rightIcon',
+          description: 'Right icon',
+        },
+      ],
+
       events: [
         {
           name: '[any].native',

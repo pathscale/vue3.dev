@@ -53,6 +53,16 @@ export default {
   <v-field label="Recovery passphrase">
     <v-input maxlength="144" type="textarea" v-model="state.message" size="is-large" />
   </v-field>
+  
+  <v-field label="Amount">
+    <v-input v-model="state.amount" min="0" type="number" placeholder="Enter amount">
+      <template #leftIcon>
+        <span>
+          &#36;
+        </span>
+      </template>
+    </v-input>
+  </v-field>
 </template>
 
 <style>
