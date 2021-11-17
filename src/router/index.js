@@ -117,6 +117,12 @@ const routes = [
             meta: metaTags('Slider', 'Display a classic slider with different colors, sizes, and states')
           },
           {
+            name: 'pagination',
+            path: 'pagination',
+            component: Pages.Pagination,
+            meta: metaTags('Pagination', 'A responsive, usable, and flexible pagination')
+          },
+          {
             name: 'input',
             path: 'input',
             component: Pages.Input,

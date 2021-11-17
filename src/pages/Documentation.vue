@@ -118,6 +118,10 @@ export default {
                   @click="redirect('tooltip')"
                   :active="current.tooltip" />
                 <v-menu-item label="Slider" @click="redirect('slider')" :active="current.slider" />
+                <v-menu-item
+                  label="Pagination"
+                  @click="redirect('pagination')"
+                  :active="current.pagination" />
               </v-menu-item>
               <v-menu-item label="Form" expanded>
                 <v-menu-item label="Input" @click="redirect('input')" :active="current.input" />
