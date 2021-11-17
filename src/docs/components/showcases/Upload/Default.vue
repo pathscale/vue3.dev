@@ -31,7 +31,7 @@ export default {
       Choose a file…
     </template>
     <template #name>
-      {{ file?.name }}
+      <span v-if="file">{{ file.name }}</span>
     </template>
   </v-upload>
 </template> 
