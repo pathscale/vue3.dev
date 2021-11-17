@@ -1,12 +1,25 @@
 <script>
-import { VTag } from '@pathscale/vue3-ui'
+import { ref } from 'vue'
+import { VUpload } from '@pathscale/vue3-ui'
+
 
 export default {
   name: 'DevShowcasePlayground',
-  components: { VTag }
+  components: { VUpload },
+  setup() {
+    const file = ref([])
+    return { file }
+  },
 }
 </script>
 
 <template>
-  <v-tag>Playground</v-tag>
-</template>
+  <v-upload boxed v-model="file">
+    <template #label>
+      Choose a file…
+    </template>
+    <template #name>
+      {{ file?.name }}
+    </template>
+  </v-upload>
+</template> 

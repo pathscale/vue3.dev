@@ -147,10 +147,10 @@ const routes = [
             meta: metaTags('Checkbox', 'Display a toggling box to keep your on / off states')
           },
           {
-            name: 'file',
-            path: 'file',
-            component: Pages.File,
-            meta: metaTags('File input', 'Let the user choose one or more files from their device storages')
+            name: 'upload',
+            path: 'upload',
+            component: Pages.Upload,
+            meta: metaTags('Upload input', 'Let the user choose one or more files from their device storages')
           },
           {
             name: 'field',

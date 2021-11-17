@@ -2,25 +2,34 @@
 import { useRouter } from 'vue-router'
 import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
-import api from '../../docs/components/api/file.ts'
-import variables from '../../docs/components/variables/file.json'
+import api from '../../docs/components/api/upload.ts'
+import variables from '../../docs/components/variables/upload.json'
 
 // eslint-disable-next-line no-restricted-syntax -- using all of them
-import * as Showcases from '../../docs/components/showcases/File'
-import AlignCode from '../../docs/components/raw/File/Align.txt'
-import ColorsCode from '../../docs/components/raw/File/Colors.txt'
-import DefaultCode from '../../docs/components/raw/File/Default.txt'
-import SizeCode from '../../docs/components/raw/File/Size.txt'
-import StyleCode from '../../docs/components/raw/File/Style.txt'
+import * as Showcases from '../../docs/components/showcases/Upload'
+import AlignCode from '../../docs/components/raw/Upload/Align.txt'
+import ColorsCode from '../../docs/components/raw/Upload/Colors.txt'
+import DefaultCode from '../../docs/components/raw/Upload/Default.txt'
+import SizeCode from '../../docs/components/raw/Upload/Size.txt'
+import StyleCode from '../../docs/components/raw/Upload/Style.txt'
 
 export default {
-  name: 'DevPageFile',
+  name: 'DevPageUpload',
   components: { SnippetSection, ApiSection, VariablesSection },
   setup() {
-    
     const router = useRouter()
-    return { api, variables, router, Showcases, AlignCode, ColorsCode, DefaultCode, SizeCode, StyleCode }
-  }
+    return {
+      api,
+      variables,
+      router,
+      Showcases,
+      AlignCode,
+      ColorsCode,
+      DefaultCode,
+      SizeCode,
+      StyleCode,
+    }
+  },
 }
 </script>
 

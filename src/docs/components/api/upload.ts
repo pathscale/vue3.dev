@@ -1,18 +1,32 @@
 const api =
   [
     {
-      title: 'VFile',
+      title: 'VUpload',
       github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/FileInput/FileInput.vue',
       props: [
         {
-          name: 'has-name',
-          description: 'Show file name',
-          type: 'Boolean',
-
+          name: 'v-model',
+          description: 'Binding value',
+          type: 'File, Array',
         },
         {
-          name: 'fullwidth',
-          description: 'Full-width style',
+          name: 'accept',
+          description: 'Same as native   accept',
+          type: 'Boolean',
+        },
+        {
+          name: 'multiple',
+          description: 'Upload multiple files',
+          type: 'Boolean',
+        },
+        {
+          name: 'disabled',
+          description: 'Disabled input',
+          type: 'Boolean',
+        },
+        {
+          name: 'dragDrop',
+          description: 'Support drag and drop',
           type: 'Boolean',
 
         },
@@ -20,7 +34,6 @@ const api =
           name: 'boxed',
           description: 'Boxed block style',
           type: 'Boolean',
-
         },
         {
           name: 'size',
@@ -36,10 +49,19 @@ const api =
           values: 'is-white, is-light, is-dark, is-black, is-text, is-primary, is-link, is-info, is-success, is-warning, is-danger...',
         },
         {
-          name: 'alignment',
-          description: 'You can align the file input',
-          type: 'String',
-          values: 'is-centered, is-right'
+          name: 'centered',
+          description: 'Display centered',
+          type: 'Boolean',
+        },
+        {
+          name: 'right',
+          description: 'Display right',
+          type: 'Boolean',
+        },
+        {
+          name: 'expanded',
+          description: 'Display full width',
+          type: 'Boolean',
         },
         {
           name: 'Any native attribute',
