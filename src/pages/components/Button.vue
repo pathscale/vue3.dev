@@ -11,15 +11,15 @@ import ColorsCode from '../../docs/components/raw/Button/ButtonColors.txt'
 import StylesCode from '../../docs/components/raw/Button/ButtonStyles.txt'
 import SizesCode from '../../docs/components/raw/Button/ButtonSizes.txt'
 import StatesCode from '../../docs/components/raw/Button/ButtonStates.txt'
+import ChipsCode from '../../docs/components/raw/Button/ButtonChips.txt'
 
 export default {
   name: 'DevPageButton',
   components: { SnippetSection, ApiSection, VariablesSection },
   setup() {
-    
     const router = useRouter()
-    return { api, variables, router, Showcases, ColorsCode, StylesCode, SizesCode, StatesCode }
-  }
+    return { api, variables, router, Showcases, ColorsCode, StylesCode, SizesCode, StatesCode, ChipsCode }
+  },
 }
 </script>
 
@@ -50,6 +50,12 @@ export default {
       title="Sizes"
       :code="SizesCode"
       :component="Showcases.ButtonSizes"
+      :path="router.currentRoute.value.path" />
+
+    <snippet-section
+      title="Chips"
+      :code="ChipsCode"
+      :component="Showcases.ButtonChips"
       :path="router.currentRoute.value.path" />
     <section id="api" class="py-4">
       <h2 class="title is-4">
