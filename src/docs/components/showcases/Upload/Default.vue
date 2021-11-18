@@ -1,37 +1,52 @@
 <script>
 import { ref, watchEffect } from 'vue'
-import { VUpload, VIcon } from '@pathscale/vue3-ui'
+import { VUpload, VIcon, VTag } from '@pathscale/vue3-ui'
 
 export default {
   name: 'DevShowcaseUpload',
-  components: { VUpload, VIcon },
+  components: { VUpload, VIcon, VTag },
   setup() {
-    const file = ref(
+    const files = ref([
       {
-        name: 'examples-of-situational-questions_54ce1256-33c3-4551-91d2-ca9dc940b9df.docx',
+        name: 'examples-of-situational-questions.docx',
       },
-    )
+      {
+        name: 'SWTM-2088_Atlassian-Git-Cheatsheet.pdf',
+      },
+    ])
 
     watchEffect(() => {
-      if (file.value) {
-        console.log(file.value)
+      if (files.value) {
+        console.log(files.value)
       }
     })
-    return { file }
+
+    function deleteFile(index) {
+      files.value.splice(index, 1)
+    }
+    return { files, deleteFile }
   },
 }
 </script>
 
 <template>
-  <v-upload v-model="file">
+  <v-upload v-model="files" multiple boxed>
     <template #icon>
-      <v-icon name="upload-icon" bundle="icons" fill="white" />
+      <v-icon name="upload-icon" bundle="icons" />
     </template>
     <template #label>
       Choose a file…
     </template>
-    <template #name>
-      <span v-if="file">{{ file.name }}</span>
-    </template>
   </v-upload>
+  <div class="tags is-block mt-2">
+    <v-tag
+      v-for="(file, index) in files"
+      :key="index"
+      type="is-info"
+      closable
+      @close="deleteFile(index)">
+      {{ file.name }}
+    </v-tag>
+  </div>
 </template> 
+

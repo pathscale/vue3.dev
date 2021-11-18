@@ -41,7 +41,7 @@ export default {
   <v-field>
     <v-upload boxed>
       <template #icon>
-        <v-icon name="upload-icon" bundle="icons" fill="white" />
+        <v-icon name="upload-icon" bundle="icons" />
       </template>
 
       <template #label>
