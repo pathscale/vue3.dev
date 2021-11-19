@@ -173,6 +173,11 @@ export default {
             </v-menu-list>
             <v-menu-list label="Utilities">
               <v-menu-item
+                label="Toast Notification"
+                @click="redirect('toast')"
+                :active="current.toast" />
+
+              <v-menu-item
                 label="Datagrid"
                 @click="redirect('datagrid')"
                 :active="current.datagrid" />

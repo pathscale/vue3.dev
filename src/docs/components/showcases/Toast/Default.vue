@@ -162,7 +162,7 @@ export default {
     const $toast = inject('toast')
 
     const state = reactive({
-      message: `Hi! I'm a Toast`,
+      message: `Bulma's notification implemented as a toast plugin.`,
       options: {
         duration: 4000,
       },
@@ -230,11 +230,13 @@ export default {
 .c-code--object-line {
   display: flex;
 }
+
 .c-code--object-line:not(:last-child)::after {
   content: ',';
   font-family: monospace;
   display: inline-block;
 }
+
 .c-code--object-line > code:last-child {
   margin-left: 8px;
 }

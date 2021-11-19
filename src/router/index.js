@@ -255,6 +255,12 @@ const routes = [
             meta: metaTags('Accordion', 'Expansion panel that saves screen space')
           },
           {
+            name: 'toast',
+            path: 'toast',
+            component: Pages.Toast,
+            meta: metaTags('Toast', 'Bulma\'s notification implemented as a toast plugin.')
+          },
+          {
             name: 'datagrid',
             path: 'datagrid',
             component: Pages.Datagrid,

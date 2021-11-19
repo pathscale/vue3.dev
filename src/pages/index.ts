@@ -34,6 +34,8 @@ export { default as Tag } from './components/Tag.vue'
 export { default as Slider } from './components/Slider.vue'
 
 export { default as Pagination } from './components/Pagination.vue'
+export { default as Toast } from './components/Toast.vue'
+
 
 export { default as Textarea } from './components/Textarea.vue'
 export { default as Table } from './components/Table.vue'
