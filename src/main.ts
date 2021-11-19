@@ -1,4 +1,6 @@
 import { createApp } from 'vue'
+import { Toaster } from "@pathscale/vue3-ui"
+
 import App from './App.vue'
 import '@pathscale/bulma-pull-2981-css-var-only'
 import '@pathscale/bulma-extensions-css-var'
@@ -12,7 +14,6 @@ import './assets/styles/carousel.css'
 import './assets/styles/icons.css'
 import './assets/styles/flexbox.css'
 
-import Toaster from "./docs/components/showcases/Notification/src/index.js"
 
 import { router } from './router/index.js'
 

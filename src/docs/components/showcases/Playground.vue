@@ -1,12 +1,12 @@
 <script>
-import HelloWord from './Notification/components/HelloWorld.vue'
+import Toast from './Toast/Default.vue'
 
 export default {
   name: 'DevShowcasePlayground',
-  components: { HelloWord },
+  components: { Toast },
 }
 </script>
 
 <template>
-  <hello-word />
+  <toast />
 </template>
