@@ -12,9 +12,10 @@ import './assets/styles/carousel.css'
 import './assets/styles/icons.css'
 import './assets/styles/flexbox.css'
 
+import Toaster from "./docs/components/showcases/Notification/src/index.js"
+
 import { router } from './router/index.js'
 
 import './Icons.vue'
 
-const app = createApp(App)
-app.use(router).mount('#app')
+createApp(App).use(Toaster).use(router).mount('#app')

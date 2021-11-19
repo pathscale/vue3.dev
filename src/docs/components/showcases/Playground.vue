@@ -1,12 +1,12 @@
 <script>
-import { VTag } from '@pathscale/vue3-ui'
+import HelloWord from './Notification/components/HelloWorld.vue'
 
 export default {
   name: 'DevShowcasePlayground',
-  components: { VTag }
+  components: { HelloWord },
 }
 </script>
 
 <template>
-  <v-tag>Playground</v-tag>
+  <hello-word />
 </template>
