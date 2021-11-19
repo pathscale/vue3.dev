@@ -16,19 +16,19 @@ const Api = (globalOptions = {}) => {
       eventBus.$emit('toast-clear')
     },
     success(message, options = {}) {
-      options.type = 'success'
+      options.type = 'is-success'
       return this.show(message, options)
     },
     error(message, options = {}) {
-      options.type = 'error'
+      options.type = 'is-danger'
       return this.show(message, options)
     },
     info(message, options = {}) {
-      options.type = 'info'
+      options.type = 'is-info'
       return this.show(message, options)
     },
     warning(message, options = {}) {
-      options.type = 'warning'
+      options.type = 'is-warning'
       return this.show(message, options)
     }
   }

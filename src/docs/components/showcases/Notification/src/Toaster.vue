@@ -3,7 +3,7 @@
     <div
       ref="root"
       v-show="state.isActive"
-      :class="['notification', `is-${type}`, `v-toast--${position}`]"
+      :class="['notification', type, `v-toast--${position}`]"
       @mouseover="toggleTimer(true)"
       @mouseleave="toggleTimer(false)"
       @click="click"
@@ -54,16 +54,11 @@ export default {
     pauseOnHover: {
       type: Boolean,
     },
-    useDefaultCss: {
-      type: Boolean,
-    },
     onClose: {
       type: Function,
-      default() {},
     },
     onClick: {
       type: Function,
-      default() {},
     },
   },
   setup(props) {
@@ -112,12 +107,6 @@ export default {
         state.parentBottom = document.createElement('div')
         state.parentBottom.className = 'v-toast-container v-toast-container--bottom'
       }
-    }
-
-    function setDefaultCss() {
-      const type = props.useDefaultCss ? 'add' : 'remove'
-      state.parentTop.classList[type]('v--default-css')
-      state.parentBottom.classList[type]('v--default-css')
     }
 
     function setupContainer() {
@@ -183,7 +172,6 @@ export default {
 
     onBeforeMount(() => {
       createParents()
-      setDefaultCss()
       setupContainer()
     })
 

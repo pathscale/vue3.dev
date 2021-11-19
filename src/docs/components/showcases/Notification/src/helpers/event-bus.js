@@ -1,3 +1,5 @@
+/* eslint-disable promise/prefer-await-to-callbacks -- ignore */
+// eslint-disable-next-line no-shadow -- ignore */
 class Event {
   constructor() {
     this.queue = {}

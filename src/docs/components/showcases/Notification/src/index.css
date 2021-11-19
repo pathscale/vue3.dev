@@ -76,6 +76,7 @@
     transform: none;
   }
 }
+
 .v-toast-container {
   position: fixed;
   display: flex;

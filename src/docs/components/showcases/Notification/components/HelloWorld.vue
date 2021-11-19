@@ -5,31 +5,31 @@
       <p>Click a button to show a Toast</p>
     </spacing>
     <div class="buttons">
-      <v-button type="is-primary" @click="toast('primary')">
+      <v-button type="is-primary" @click="toast('is-primary')">
         Primary
       </v-button>
-      <v-button type="is-success" @click="toast('success')">
+      <v-button type="is-success" @click="toast('is-success')">
         Success
       </v-button>
-      <v-button type="is-danger" @click="toast('danger')">
+      <v-button type="is-danger" @click="toast('is-danger')">
         Danger
       </v-button>
-      <v-button type="is-warning" @click="toast('warning')">
+      <v-button type="is-warning" @click="toast('is-warning')">
         Warning
       </v-button>
-      <v-button type="is-info" @click="toast('info')">
+      <v-button type="is-info" @click="toast('is-info')">
         Info
       </v-button>
-      <v-button type="is-link" @click="toast('link')">
+      <v-button type="is-link" @click="toast('is-link')">
         Link
       </v-button>
-      <v-button type="is-light" @click="toast('light')">
+      <v-button type="is-light" @click="toast('is-light')">
         Light
       </v-button>
-      <v-button type="is-dark" @click="toast('dark')">
+      <v-button type="is-dark" @click="toast('is-dark')">
         Dark
       </v-button>
-      <v-button type="is-text" @click="toast('text')">
+      <v-button type="is-text" @click="toast('is-text')">
         Text
       </v-button>
     </div>
@@ -109,7 +109,7 @@
           </div>
           <div class="c-column-right">
             <div class="c-code">
-              <code>this.$toast(</code>
+              <code>$toast(</code>
               <spacing left="2">
                 <code class="c-code--string">"{{ state.message }}"</code>
                 <code v-if="hasOptions">,</code>
@@ -172,7 +172,7 @@
 </template>
 
 <script>
-import { reactive, computed, getCurrentInstance } from 'vue'
+import { reactive, computed, inject } from 'vue'
 import { VButton } from '@pathscale/vue3-ui'
 import Spacing from './Spacing.vue'
 import { Positions } from '../src/index'
@@ -187,7 +187,7 @@ export default {
     msg: String,
   },
   setup() {
-    const app = getCurrentInstance()
+    const $toast = inject('toast')
 
     const state = reactive({
       message: `Hi! I'm a Toast`,
@@ -213,10 +213,10 @@ export default {
     })
 
     function onClick(e) {
-      console.log(e)
+      // console.log(e)
     }
 
-    function toast(type = 'default', dismissible = true) {
+    function toast(type = 'is-primary', dismissible = true) {
       const options = {
         dismissible,
         onClick,
@@ -226,7 +226,7 @@ export default {
       typeof state.options.maxToasts === 'string' &&
         (state.options.maxToasts = Number.parseInt(state.options.maxToasts))
 
-      app.appContext.app.$toast.show(state.message, {
+      $toast.show(state.message, {
         ...options,
         ...state.options,
       })
@@ -236,7 +236,7 @@ export default {
       state.options.duration = !e.target.checked ? 4000 : false
     }
 
-    return { state, positions, hasOptions, toast, changeDuration, onClick }
+    return { state, positions, hasOptions, toast, changeDuration }
   },
 }
 </script>

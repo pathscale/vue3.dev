@@ -6,8 +6,8 @@ import './index.css'
 
 const Plugin = (app, options = {}) => {  
   const methods = createToaster(options)
-  app.$toast = methods
   app.config.globalProperties.$toast = methods
+  app.provide('toast', methods)
 }
 
 Toaster.install = Plugin
