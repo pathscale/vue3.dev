@@ -1,27 +1,25 @@
 <template>
-  <input ref="cal" :type="type" />
+  <input ref="input" :type="type" />
 </template>
 
 <script>
 import bulmaCalendar from 'bulma-calendar/dist/js/bulma-calendar.min'
+import { onMounted, ref } from 'vue'
 
 export default {
+  name: 'BulmaCalendar',
   props: {
     clearable: {
       type: Boolean,
-      default: false,
     },
     dialog: {
       type: Boolean,
-      default: false,
     },
     inline: {
       type: Boolean,
-      default: false,
     },
     range: {
       type: Boolean,
-      default: false,
     },
     options: {
       type: Object,
@@ -33,57 +31,57 @@ export default {
       type: String,
       default: 'datetime',
     },
-    modelValue: Date | Array | null,
+    modelValue: [Date, Array],
   },
-  data() {
-    return {
-      date: [null, null],
-    }
-  },
-  mounted() {
-    // Set date
-    if (this.range) {
-      if (Array.isArray(this.modelValue)) {
-        this.date = this.modelValue
-      }
-    } else {
-      this.date[0] = this.modelValue
-    }
+  emits: ['update:modelValue', 'select'],
+  setup(props, { emit, slots }) {
+    const date = ref([null, null])
+    const input = ref(null)
 
-    // Attach Calendar
-    const calendar = bulmaCalendar.attach(this.$refs.cal, {
-      ...this.options,
-      displayMode: this.inline ? 'inline' : this.dialog ? 'dialog' : 'default',
-      isRange: this.range,
-      showClearButton: this.clearable,
-      startDate: this.date[0],
-      startTime: this.date[0],
-      endDate: this.date[1],
-      endTime: this.date[1],
-    })
-
-    // Event Handler
-    calendar[0].on('save', e => {
-      this.date = [e.data.startDate, e.data.endDate]
-
-      if (this.range) {
-        this.$emit('update:modelValue', this.date)
-        return
+    onMounted(() => {
+      // Set date
+      if (props.range) {
+        if (Array.isArray(props.modelValue)) {
+          date.value = props.modelValue
+        }
+      } else {
+        date.value[0] = props.modelValue
       }
 
-      this.$emit('update:modelValue', this.date[0])
+      // Attach Calendar
+      const calendar = bulmaCalendar.attach(input.value, {
+        ...props.options,
+        displayMode: props.inline ? 'inline' : props.dialog ? 'dialog' : 'default',
+        isRange: props.range,
+        showClearButton: props.clearable,
+        startDate: date.value[0],
+        startTime: date.value[0],
+        endDate: date.value[1],
+        endTime: date.value[1],
+      })
+
+      // Event Handler
+      calendar[0].on('save', e => {
+        date.value = [e.data.startDate, e.data.endDate]
+
+        if (props.range) {
+          emit('update:modelValue', date.value)
+          return
+        }
+
+        emit('update:modelValue', date.value[0])
+      })
+
+      calendar[0].on('select', e => {
+        if (props.range) {
+          emit('select', [e.data.startDate, e.data.endDate])
+          return
+        }
+
+        emit('select', e.data.startDate)
+      })
     })
-
-    calendar[0].on('select', e => {
-      console.log('select', this.range, [e.data.startDate, e.data.endDate])
-
-      if (this.range) {
-        this.$emit('select', [e.data.startDate, e.data.endDate])
-        return
-      }
-
-      this.$emit('select', e.data.startDate)
-    })
+    return { input }
   },
 }
 </script>
