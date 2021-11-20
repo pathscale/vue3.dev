@@ -36,7 +36,6 @@
     "**/*.{css,vue}": "stylelint",
     "**/*.{js,ts,vue,md,html}": "eslint --cache --fix"
   },
-  "dependencies": {},
   "devDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "^0.26.0",
     "@babel/core": "^7.12.3",
@@ -69,6 +68,7 @@
     "@vue/compiler-sfc": "^3.0.2",
     "autoprefixer": "^10.0.2",
     "babel-eslint": "^10.1.0",
+    "bulma-calendar": "^6.1.14",
     "cssnano": "^4.1.10",
     "dotenv": "^8.2.0",
     "es-file-traverse": "^0.8.0",

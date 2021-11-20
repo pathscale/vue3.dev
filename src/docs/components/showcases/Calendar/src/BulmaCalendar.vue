@@ -4,6 +4,8 @@
 
 <script>
 import bulmaCalendar from 'bulma-calendar/dist/js/bulma-calendar.min'
+import 'bulma-calendar/dist/css/bulma-calendar.min.css'
+
 import { onMounted, ref } from 'vue'
 
 export default {

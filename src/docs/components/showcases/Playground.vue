@@ -1,12 +1,12 @@
 <script>
-import Toast from './Toast/Default.vue'
+import Calendar from './Calendar/Basic.vue'
 
 export default {
   name: 'DevShowcasePlayground',
-  components: { Toast },
+  components: { Calendar },
 }
 </script>
 
 <template>
-  <toast />
+  <calendar />
 </template>
