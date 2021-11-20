@@ -77,6 +77,16 @@
     </v-column>
     <v-column>
       <div class="c-code my-2">
+        <code> import { inject } from 'vue' </code>
+        <br />
+        ...
+        <br />
+        <code> setup() { </code>
+        <br />
+        <code> const $toast = inject('toast') </code>
+        <br />
+        ...
+        <br />
         <code>$toast(</code>
         <div class="ml-2">
           <code class="c-code--string">"{{ state.message }}"</code>
@@ -148,7 +158,7 @@ import {
 } from '@pathscale/vue3-ui'
 
 export default {
-  name: 'HelloWorld',
+  name: 'DevShowcaseToast',
   components: {
     VButton,
     VColumns,

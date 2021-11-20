@@ -2,7 +2,7 @@ const api =
   [
     {
       title: 'VUpload',
-      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/FileInput/FileInput.vue',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Upload/Upload.vue',
       props: [
         {
           name: 'v-model',

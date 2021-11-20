@@ -258,7 +258,7 @@ const routes = [
             name: 'toast',
             path: 'toast',
             component: Pages.Toast,
-            meta: metaTags('Toast', 'Bulma\'s notification implemented as a toast plugin.')
+            meta: metaTags('Toast', 'Bulma\'s notification implemented as a toast plugin based on vue-toaster')
           },
           {
             name: 'datagrid',

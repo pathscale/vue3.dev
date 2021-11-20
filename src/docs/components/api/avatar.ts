@@ -2,7 +2,7 @@ const api =
   [
     {
       title: 'VAvatar',
-      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Image/Image.vue',
+      github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/primitives/Avatar/Avatar.vue',
       props: [
         {
           name: 'src',
