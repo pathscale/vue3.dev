@@ -2,9 +2,8 @@
 import { useRouter } from 'vue-router'
 import { SnippetSection, ApiSection, VariablesSection } from '../../components'
 
-import api from '../../docs/components/api/slider.ts'
-import variables from '../../docs/components/variables/slider.json'
-
+import api from '../../docs/components/api/pagination.ts'
+import variables from '../../docs/components/variables/pagination.json'
 // eslint-disable-next-line no-restricted-syntax -- using all components
 import * as Showcases from '../../docs/components/showcases/Pagination'
 import DefaultCode from '../../docs/components/raw/Pagination/Default.txt'
