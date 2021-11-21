@@ -35,7 +35,7 @@ jobs:
 
       - name: Build project
         env:
-          NODE_OPTIONS: --max_old_space_size=16384
+          NODE_OPTIONS: --max_old_space_size=4096
         run: |
           echo $NODE_OPTIONS 
           npm run build --if-present
