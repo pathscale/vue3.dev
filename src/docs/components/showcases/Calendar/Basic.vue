@@ -1,12 +1,15 @@
 <script>
-import { VField } from '@pathscale/vue3-ui'
-import { computed, reactive } from 'vue'
-import BulmaCalendar from './src/BulmaCalendar.vue'
+import { VField, VCalendar } from '@pathscale/vue3-ui'
+import { computed, reactive, provide } from 'vue'
+import bulmaCalendar from 'bulma-calendar/dist/js/bulma-calendar.min'
+
+import 'bulma-calendar/dist/css/bulma-calendar.min.css'
 
 export default {
   name: 'DevShowcaseCalendar',
-  components: { VField, BulmaCalendar },
+  components: { VField, VCalendar },
   setup() {
+    provide('$bulmaCalendar', bulmaCalendar)
     const state = reactive({
       date: [null, null],
       options: {
@@ -28,18 +31,7 @@ export default {
 
 <template>
   <v-field label="Date">
-    <bulma-calendar type="date" v-model="state.date" :options="state.options" range />
-    <div v-if="false">
-      <!-- TODO Add whitelist classes to vue3-ui component -->
-      <div class="datepicker-range" />
-      <div class="datepicker-range-end" />
-      <div class="datepicker-range-start" />
-      <div class="is-active" />
-      <div class="is-datetimepicker-default" />
-      <div class="is-decrement-hide" />
-      <div class="is-hidden" />
-      <div class="is-increment-hide" />
-    </div>
+    <v-calendar type="date" v-model="state.date" :options="state.options" range />
   </v-field>
   <v-field label="Range">
     <div class="field">

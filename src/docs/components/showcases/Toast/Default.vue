@@ -83,7 +83,7 @@
         <br />
         <code> setup() { </code>
         <br />
-        <code> const $toast = inject('toast') </code>
+        <code> const $toast = inject('$toast') </code>
         <br />
         ...
         <br />
@@ -169,7 +169,7 @@ export default {
     VSlider,
   },
   setup() {
-    const $toast = inject('toast')
+    const $toast = inject('$toast')
 
     const state = reactive({
       message: `Bulma's notification implemented as a toast plugin.`,
