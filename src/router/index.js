@@ -271,7 +271,13 @@ const routes = [
             path: 'avatar',
             component: Pages.Avatar,
             meta: metaTags('Avatar', 'A container for avatar images')
-          }
+          },
+          {
+            name: 'calendar',
+            path: 'calendar',
+            component: Pages.Calendar,
+            meta: metaTags('Calendar', 'Display a calendar with different colors and sizes, full based on bulma-calendar')
+          },
         ]
       },
     ]

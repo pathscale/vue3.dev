@@ -29,6 +29,17 @@ export default {
 <template>
   <v-field label="Date">
     <bulma-calendar type="date" v-model="state.date" :options="state.options" range />
+    <div v-if="false">
+      <!-- TODO Add whitelist classes to vue3-ui component -->
+      <div class="datepicker-range" />
+      <div class="datepicker-range-end" />
+      <div class="datepicker-range-start" />
+      <div class="is-active" />
+      <div class="is-datetimepicker-default" />
+      <div class="is-decrement-hide" />
+      <div class="is-hidden" />
+      <div class="is-increment-hide" />
+    </div>
   </v-field>
   <v-field label="Range">
     <div class="field">

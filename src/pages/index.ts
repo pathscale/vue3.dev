@@ -43,3 +43,5 @@ export { default as Tooltip } from './components/Tooltip.vue'
 export { default as Accordion } from './components/Accordion.vue'
 export { default as Avatar } from './components/Avatar.vue'
 export { default as Playground } from './components/Playground.vue'
+
+export { default as Calendar } from './components/Calendar.vue'

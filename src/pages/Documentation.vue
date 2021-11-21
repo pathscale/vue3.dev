@@ -176,6 +176,10 @@ export default {
                 label="Toast Notification"
                 @click="redirect('toast')"
                 :active="current.toast" />
+              <v-menu-item
+                label="Calendar"
+                @click="redirect('calendar')"
+                :active="current.calendar" />
 
               <v-menu-item
                 label="Datagrid"
