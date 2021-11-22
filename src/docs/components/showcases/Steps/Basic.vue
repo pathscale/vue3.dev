@@ -1,12 +1,11 @@
 <script>
-import { VField, VInput, VIcon, VButton } from '@pathscale/vue3-ui'
+import { VField, VInput, VButton, VSteps, VStepItem } from '@pathscale/vue3-ui'
 
 import { ref, reactive } from 'vue'
-import { VSteps, VStepItem } from './src'
 
 export default {
   name: 'DevShowcaseTabs',
-  components: { VSteps, VStepItem, VField, VInput, VIcon, VButton },
+  components: { VSteps, VStepItem, VField, VInput, VButton },
   setup() {
     const activeTab = ref(0)
     const state = reactive({
@@ -38,14 +37,7 @@ export default {
         <v-input v-model="state.name" />
       </v-field>
       <v-field label="Email">
-        <v-input type="email" v-model="state.email" maxlength="30">
-          <template #leftIcon>
-            <v-icon custom-class="input-icon" name="email-icon" bundle="icons" />
-          </template>
-          <template #rightIcon>
-            <v-icon custom-class="input-icon" name="alert-icon" bundle="icons" />
-          </template>
-        </v-input>
+        <v-input type="email" v-model="state.email" maxlength="30" />
       </v-field>
 
       <div class="buttons is-justify-content-right">
@@ -58,14 +50,7 @@ export default {
     <!-- Step 2 -->
     <v-step-item title="Account" marker="2" clickable subtitle="You can click me">
       <v-field label="Username">
-        <v-input v-model="state.username" maxlength="30">
-          <template #leftIcon>
-            <v-icon custom-class="input-icon" name="account-icon" bundle="icons" />
-          </template>
-          <template #rightIcon>
-            <v-icon custom-class="input-icon" name="check-icon" bundle="icons" />
-          </template>
-        </v-input>
+        <v-input v-model="state.username" maxlength="30" />
       </v-field>
       <v-field label="Password">
         <v-input type="password" v-model="state.password" />
@@ -87,11 +72,7 @@ export default {
         <v-input maxlength="144" type="textarea" v-model="state.message" />
       </v-field>
       <v-field label="Amount">
-        <v-input v-model="state.amount" min="0" type="number">
-          <template #leftIcon>
-            <span> &#36; </span>
-          </template>
-        </v-input>
+        <v-input v-model="state.amount" min="0" type="number" />
       </v-field>
 
       <div class="buttons is-justify-content-right">
