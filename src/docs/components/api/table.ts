@@ -38,35 +38,35 @@ const api =
           default: '[]'
         },
         {
-          name: 'is-bordered',
+          name: 'bordered',
           description: 'Table shows boders on all cells',
           type: 'Boolean',
 
 
         },
         {
-          name: 'is-striped',
+          name: 'striped',
           description: 'Adds subble background colors for even positioned rows',
           type: 'Boolean',
 
 
         },
         {
-          name: 'is-narrow',
+          name: 'narrow',
           description: 'Reduces the rows height for a more compact table',
           type: 'Boolean',
 
 
         },
         {
-          name: 'is-hoverable',
+          name: 'hoverable',
           description: 'Changes background color for hovered rows',
           type: 'Boolean',
 
 
         },
         {
-          name: 'is-fullwidth',
+          name: 'fullwidth',
           description: 'The table will take the full width of its parent component',
           type: 'Boolean',
 

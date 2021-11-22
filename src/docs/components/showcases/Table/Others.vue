@@ -17,31 +17,31 @@ export default {
       id: 1,
       firstName: 'John',
       lastName: 'Doe',
-      color: 'Blue'
+      color: 'Blue',
     })
     datagrid.value.addRow({
       id: 2,
       firstName: 'Sheri',
       lastName: 'Adamin ',
-      color: 'Green'
+      color: 'Green',
     })
     datagrid.value.addRow({
       id: 3,
       firstName: 'Kristopher',
       lastName: 'Amos',
-      color: 'Blue'
+      color: 'Blue',
     })
     datagrid.value.addRow({
       id: 4,
       firstName: 'Nelly',
       lastName: 'Derby',
-      color: 'Green'
+      color: 'Green',
     })
     datagrid.value.addRow({
       id: 5,
       firstName: 'Philander',
       lastName: 'Barney',
-      color: 'Blue'
+      color: 'Blue',
     })
 
     const addRow = index => {
@@ -50,9 +50,9 @@ export default {
           id: 1,
           firstName: 'Added',
           lastName: 'Row',
-          color: 'Blue'
+          color: 'Blue',
         },
-        index
+        index,
       )
     }
     const deleteRow = index => {
@@ -62,9 +62,9 @@ export default {
     return {
       datagrid,
       addRow,
-      deleteRow
+      deleteRow,
     }
-  }
+  },
 }
 </script>
 
@@ -92,7 +92,7 @@ export default {
     you can also delete rows from a certain index
   </p>
 
-  <v-table :data="datagrid" searchable is-hoverable is-striped is-bordered is-fullwidth sortable>
+  <v-table :data="datagrid" searchable hoverable striped bordered fullwidth sortable>
     <template #header>
       <v-button @click="addRow(2)" light class="mr-4 mb-4">
         Add row with index 2
