@@ -1,5 +1,5 @@
 <script>
-import { computed, onMounted, onUpdated, ref, watchEffect } from 'vue'
+import { computed, ref, watchEffect } from 'vue'
 import { addToStore, useStore } from './Steps.vue'
 
 export default {
@@ -28,18 +28,6 @@ export default {
     const content = ref(null)
     const tabs = useStore()
     const id = JSON.parse(JSON.stringify(tabs.value.tabs)).length
-    const transitionName = computed(() => {
-      return tabs.value.activeTab < id ? 'slide-right' : 'slide-left'
-    })
-
-    const updateActiveHeight = () => {
-      if (tabs.value.vanimated && content.value) {
-        tabs.value.activeHeight = content.value.offsetHeight
-      }
-    }
-
-    onMounted(updateActiveHeight)
-    onUpdated(updateActiveHeight)
 
     addToStore({ ...props, id })
 
@@ -50,18 +38,13 @@ export default {
 
     const isActiveTab = computed(() => tabs.value.activeTab === id)
 
-    return { tabs, transitionName, content, isActiveTab }
+    return { content, isActiveTab }
   },
 }
 </script>
 
 <template>
-  <transition v-if="tabs.animated" :name="transitionName">
-    <div v-if="isActiveTab" ref="content">
-      <slot />
-    </div>
-  </transition>
-  <div v-else-if="isActiveTab" ref="content">
+  <div v-if="isActiveTab" ref="content">
     <slot />
   </div>
 </template>

@@ -142,6 +142,11 @@ export default {
                   label="Checkbox"
                   @click="redirect('checkbox')"
                   :active="current.checkbox" />
+
+                <v-menu-item
+                  label="Calendar"
+                  @click="redirect('calendar')"
+                  :active="current.calendar" />
               </v-menu-item>
               <v-menu-item label="Components" expanded>
                 <v-menu-item
@@ -169,6 +174,8 @@ export default {
                   label="Timeline"
                   @click="redirect('timeline')"
                   :active="current.timeline" />
+
+                <v-menu-item label="Steps" @click="redirect('steps')" :active="current.steps" />
               </v-menu-item>
             </v-menu-list>
             <v-menu-list label="Utilities">
@@ -176,10 +183,6 @@ export default {
                 label="Toast Notification"
                 @click="redirect('toast')"
                 :active="current.toast" />
-              <v-menu-item
-                label="Calendar"
-                @click="redirect('calendar')"
-                :active="current.calendar" />
 
               <v-menu-item
                 label="Datagrid"

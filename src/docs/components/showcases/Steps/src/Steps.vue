@@ -39,7 +39,6 @@ export default {
       activeTab: 0,
       activeHeight: null,
       tabs: [],
-      animated: props.animated,
     })
 
     const setActiveTabID = id => {
@@ -76,7 +75,15 @@ export default {
 
 <template>
   <section>
-    <div class="steps" :class="[type, size]">
+    <div
+      class="steps"
+      :class="[
+        type,
+        size,
+        {
+          'is-animated': animated,
+        },
+      ]">
       <div
         v-for="t in tabs.tabs"
         :key="t"

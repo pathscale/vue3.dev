@@ -278,6 +278,12 @@ const routes = [
             component: Pages.Calendar,
             meta: metaTags('Calendar', 'Display a calendar with different colors and sizes, full based on bulma-calendar')
           },
+          {
+            name: 'steps',
+            path: 'steps',
+            component: Pages.Steps,
+            meta: metaTags('Steps', 'Display steps for a process (like sign-up or an order form) with different colors, sizes, and states')
+          },
         ]
       },
     ]
