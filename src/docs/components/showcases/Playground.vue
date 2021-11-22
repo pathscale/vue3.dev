@@ -1,12 +1,12 @@
 <script>
-import Calendar from './Calendar/Basic.vue'
+import Steps from './Steps/Basic.vue'
 
 export default {
   name: 'DevShowcasePlayground',
-  components: { Calendar },
+  components: { Steps },
 }
 </script>
 
 <template>
-  <calendar />
+  <steps />
 </template>
