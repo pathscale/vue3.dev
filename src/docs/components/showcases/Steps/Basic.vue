@@ -1,5 +1,4 @@
 <script>
-import 'bulma-steps/dist/css/bulma-steps.min.css'
 import { VField, VInput, VIcon, VColumns, VColumn, VButton } from '@pathscale/vue3-ui'
 
 import { ref, reactive } from 'vue'
