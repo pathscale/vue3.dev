@@ -37,6 +37,30 @@ export default {
       :component="Showcases.Basic"
       :path="router.currentRoute.value.path" />
 
+    VCalendar component use <b class="is-bold">@bulma-calendar</b> underhood. For use it, you have
+    to import the bulma-calendar styles
+
+    <br />
+    <br />
+
+    <code> import 'bulma-calendar/dist/css/bulma-calendar.min.css' </code>
+
+    <br />
+    <br />
+
+    and inject the instance in the global scope
+
+    <br />
+    <br />
+
+    <code>
+      import bulmaCalendar from 'bulma-calendar/dist/js/bulma-calendar.min'
+      <br />
+      <br />
+
+      provide('$bulmaCalendar', bulmaCalendar)
+    </code>
+
     <section id="api" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API
