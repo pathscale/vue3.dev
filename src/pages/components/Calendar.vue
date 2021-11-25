@@ -35,7 +35,8 @@ export default {
       title="Basic"
       :code="BasicCode"
       :component="Showcases.Basic"
-      :path="router.currentRoute.value.path" />
+      :path="router.currentRoute.value.path"
+      is-half-width />
 
     VCalendar component use <b class="is-bold">@bulma-calendar</b> underhood. For use it, you have
     to import the bulma-calendar styles
