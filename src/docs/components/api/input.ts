@@ -29,6 +29,14 @@ const api =
 
         },
         {
+          name: 'password-reveal',
+          description: 'Reveal password in input',
+          type: 'Boolean',
+
+        },
+        
+
+        {
           name: 'Any native attribute',
         }
       ],

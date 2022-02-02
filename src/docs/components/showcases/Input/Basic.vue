@@ -47,7 +47,7 @@ export default {
   </v-field>
 
   <v-field label="Password" type="is-warning" message="This password is weak">
-    <v-input type="password" v-model="state.password" color="is-warning" />
+    <v-input type="password" v-model="state.password" color="is-warning" password-reveal />
   </v-field>
 
   <v-field label="Recovery passphrase">
