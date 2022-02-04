@@ -72,17 +72,17 @@ export default {
   <h4 class="is-size-5 mb-4">
     Table with sortable columns
   </h4>
-  <v-table :data="datagrid" is-fullwidth sortable />
+  <v-table :data="datagrid" fullwidth sortable />
 
   <h4 class="is-size-5 mb-4 mt-6">
     Table with editable cells
   </h4>
-  <v-table :data="datagrid" is-fullwidth editable />
+  <v-table :data="datagrid" fullwidth editable />
 
   <h4 class="is-size-5 mb-4 mt-6">
     Table with rows grouped by column values
   </h4>
-  <v-table :data="datagrid" is-fullwidth editable group-by="color" />
+  <v-table :data="datagrid" fullwidth editable group-by="color" />
 
   <h4 class="is-size-5 mb-4 mt-6">
     Data grid with add/delete rows buttons

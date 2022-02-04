@@ -55,7 +55,7 @@ export default {
   <h4 class="is-size-5 mb-4">
     Table with custom header and footer
   </h4>
-  <v-table :data="datagrid" is-fullwidth>
+  <v-table :data="datagrid" fullwidth>
     <template #header>
       <p>This is the header</p>
     </template>
@@ -67,7 +67,7 @@ export default {
   <h4 class="is-size-5 mb-4 mt-6">
     Table with custom component
   </h4>
-  <v-table :data="datagrid" is-fullwidth>
+  <v-table :data="datagrid" fullwidth>
     <template #color="props">
       <v-select v-model="props.row.color" color="is-dark" placeholder="primary" class="darkText">
         <option value="Blue">
@@ -83,7 +83,7 @@ export default {
   <h4 class="is-size-5 mb-4 mt-6">
     Table with expandable rows
   </h4>
-  <v-table :data="datagrid" is-fullwidth expandable>
+  <v-table :data="datagrid" fullwidth expandable>
     <template #expanded="props">
       <v-card>
         <v-card-content>

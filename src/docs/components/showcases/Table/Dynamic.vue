@@ -64,5 +64,5 @@ export default {
   <v-switch class="mr-4 mb-4 mt-4" v-model="columns.color.show">
     Color
   </v-switch>
-  <v-table :data="datagrid" is-fullwidth />
+  <v-table :data="datagrid" fullwidth />
 </template>

@@ -99,6 +99,8 @@
     "shelljs": "^0.8.4",
     "shx": "^0.3.3",
     "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-value-no-unknown-custom-properties": "https://github.com/brettz9/stylelint-value-no-unknown-custom-properties#early-published",
     "typescript": "^4.0.5",
     "vue": "3.0.7",
     "vue-composable": "^1.0.0-beta.24",

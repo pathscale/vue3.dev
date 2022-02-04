@@ -52,5 +52,5 @@ export default {
 </script>
 
 <template>
-  <v-table :data="datagrid" checkable is-fullwidth />
+  <v-table :data="datagrid" checkable fullwidth />
 </template>

@@ -55,10 +55,10 @@ export default {
   <h4 class="is-size-5 mb-4">
     Draggable Columns
   </h4>
-  <v-table :data="datagrid" draggable-columns is-fullwidth />
+  <v-table :data="datagrid" draggable-columns fullwidth />
 
   <h4 class="is-size-5 mb-4 mt-6">
     Draggable Rows
   </h4>
-  <v-table :data="datagrid" draggable-rows is-fullwidth />
+  <v-table :data="datagrid" draggable-rows fullwidth />
 </template>

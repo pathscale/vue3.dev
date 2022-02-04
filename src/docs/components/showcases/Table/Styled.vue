@@ -112,12 +112,12 @@ export default {
   <h4 class="is-size-5 mb-4 mt-6">
     Table with hover effect
   </h4>
-  <v-table :data="datagrid" is-hoverable />
+  <v-table :data="datagrid" hoverable />
 
   <h4 class="is-size-5 mb-4 mt-6">
     Table with full width
   </h4>
-  <v-table :data="datagrid" is-fullwidth />
+  <v-table :data="datagrid" fullwidth />
 
   <h4 class="is-size-5 mb-4 mt-6">
     Table with all modifiers

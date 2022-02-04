@@ -37,5 +37,5 @@ export default {
     pagination
     :rows-per-page-options="[1, 2, 5, 10, 20]"
     :rows-per-page="10"
-    is-fullwidth />
+    fullwidth />
 </template>
