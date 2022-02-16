@@ -9,7 +9,7 @@ export default {
     const state = reactive({
       state: true,
       overlay: false,
-      reduced: false
+      reduced: false,
     })
 
     function close() {
@@ -19,7 +19,7 @@ export default {
     }
 
     return { state, close }
-  }
+  },
 }
 </script>
 
@@ -36,7 +36,14 @@ export default {
     </v-switch>
   </v-field>
 
-  <v-sidebar :open="state.open" type="is-light" fullheight :reduce="state.reduced" :overlay="state.overlay" @close="close" position="fixed">
+  <v-sidebar
+    :open="state.open"
+    type="is-light"
+    fullheight
+    :reduce="state.reduced"
+    :overlay="state.overlay"
+    @close="close"
+    position="fixed">
     <section class="section px-1">
       <v-button tag="a" @click="close" type="is-text" class="is-pulled-right">
         &#x274C;
@@ -45,9 +52,9 @@ export default {
     <section class="section py-2">
       <v-menu>
         <v-menu-list>
-          <v-menu-item label="Home" icon="&#x1F3E0;" />
-          <v-menu-item label="Contact" icon="&#x1F4DE;" />
-          <v-menu-item label="Services" icon="&#9877;" />
+          <v-menu-item :label="state.reduced ? '' : 'Home'" icon="&#x1F3E0;" />
+          <v-menu-item :label="state.reduced ? '' : 'Contact'" icon="&#x1F4DE;" />
+          <v-menu-item :label="state.reduced ? '' : 'Services'" icon="&#9877;" />
         </v-menu-list>
       </v-menu>
     </section>
