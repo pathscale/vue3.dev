@@ -43,6 +43,12 @@ const api =
           description: 'Size to be applied on svg element',
           type: 'String',
         },
+        {
+          name: 'cache-version',
+          description: 'Version of the icon cache',
+          type: 'String',
+          default: '1.0.0'
+        }
       ],
     }
   ]

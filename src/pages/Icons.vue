@@ -50,15 +50,14 @@ export default {
       </v-tab>
       <v-tab label="main.js">
         <div class="box has-background-light is-family-code">
-          import Icons from './Icons.vue'
+          import './Icons.vue' // this will be processed by rollup plugin to generate the icons bundle
           <br />const app = createApp(App)
-          <br />app.component('Icons', Icons)
           <br />app.mount('#app')
         </div>
       </v-tab>
       <v-tab label="Icons.vue">
         <div class="box has-background-light is-family-code">
-          <i class=" has-text-grey-light">Register here all icons you want to use in your app indicating once the <b>src</b> svg icon path</i>
+          <i class=" has-text-grey-light">Register here all icons you want to use in your app indicating once the icon's src (from your assets or our icon sets)</i>
           <br />
           &lt;template>
           <br />&nbsp;&lt;v-icon src="@pathscale/vue3-svg-icons/mdi/discord.svg" name="discord-icon" bundle="icons"/>
