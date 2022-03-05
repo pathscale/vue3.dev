@@ -17,14 +17,17 @@ export default {
       messages: {
         en,
         es, // : ()=> import('./locales/es.json').default,
-        pt// : ()=> import('./locales/pt.json').default
-      }
+        pt, // : ()=> import('./locales/pt.json').default
+      },
     })
     watchEffect(() => setTheme(defaultTheme))
-  }
+  },
 }
 </script>
 
 <template>
   <router-view />
+
+  <!-- whitelist -->
+  <div class="v-toast-container v-toast-container--top v-toast-container--bottom" />
 </template>
