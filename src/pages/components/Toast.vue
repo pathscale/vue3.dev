@@ -39,6 +39,11 @@ export default {
       :component="Showcases.Default"
       :path="router.currentRoute.value.path" />
 
+    <div class="notification is-danger">
+      <span>If you are using @pathscale/rollup-plugin-vue3-ui-css-purge, you have to add to add the
+        toast classes to purger whitelist</span>
+    </div>
+
     <section id="api" class="py-4">
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#api`" class="is-active">#</a> API
