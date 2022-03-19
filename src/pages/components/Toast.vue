@@ -41,7 +41,10 @@ export default {
 
     <div class="notification is-danger">
       <span>If you are using @pathscale/rollup-plugin-vue3-ui-css-purge, you have to add to add the
-        toast classes to purger whitelist</span>
+        toast classes to purger whitelist v-if="false" class="v-toast-container v-toast-container--top
+        v-toast-container--bottom v-toast--top-left v-toast--top v-toast--top-right
+        v-toast--bottom-left v-toast--bottom v-toast--bottom-right"
+      </span>
     </div>
 
     <section id="api" class="py-4">
