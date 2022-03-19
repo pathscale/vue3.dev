@@ -29,5 +29,5 @@ export default {
   <router-view />
 
   <!-- whitelist -->
-  <div class="v-toast-container v-toast-container--top v-toast-container--bottom" />
+  <div v-if="false" class="v-toast-container v-toast-container--top v-toast-container--bottom" />
 </template>
