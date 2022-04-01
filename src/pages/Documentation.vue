@@ -143,10 +143,12 @@ export default {
                   @click="redirect('checkbox')"
                   :active="current.checkbox" />
 
-                <v-menu-item
+                <!--
+ <v-menu-item
                   label="Calendar"
                   @click="redirect('calendar')"
-                  :active="current.calendar" />
+                  :active="current.calendar" /> 
+-->
               </v-menu-item>
               <v-menu-item label="Components" expanded>
                 <v-menu-item
@@ -160,7 +162,7 @@ export default {
                   :active="current.dropdown" />
                 <v-menu-item label="Menu" @click="redirect('menu')" :active="current.menu" />
                 <!-- <v-menu-item label="Message" /> -->
-                <v-menu-item label="Modal" @click="redirect('modal')" :active="current.modal" />
+                <!-- <v-menu-item label="Modal" @click="redirect('modal')" :active="current.modal" /> -->
                 <v-menu-item label="Navbar" @click="redirect('navbar')" :active="current.navbar" />
                 <!-- <v-menu-item label="Pagination" /> -->
                 <!-- <v-menu-item label="Panel" /> -->
