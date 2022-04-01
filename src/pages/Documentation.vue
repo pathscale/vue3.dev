@@ -104,7 +104,7 @@ export default {
                 <!-- <v-menu-item label="Delete" /> -->
                 <!-- <v-menu-item label="Form" /> -->
                 <!-- <v-menu-item label="Icon" /> -->
-                <v-menu-item label="Image" @click="redirect('image')" :active="current.image" />
+                <!-- <v-menu-item label="Image" @click="redirect('image')" :active="current.image" /> -->
                 <v-menu-item label="Avatar" @click="redirect('avatar')" :active="current.avatar" />
                 <!-- <v-menu-item label="Notifications" /> -->
                 <v-menu-item
