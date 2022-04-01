@@ -155,7 +155,7 @@ export default {
                   label="Breadcrumb"
                   @click="redirect('breadcrumb')"
                   :active="current.breadcrumb" />
-                <v-menu-item label="Card" @click="redirect('card')" :active="current.card" />
+                <!-- <v-menu-item label="Card" @click="redirect('card')" :active="current.card" /> -->
                 <v-menu-item
                   label="Dropdown"
                   @click="redirect('dropdown')"
