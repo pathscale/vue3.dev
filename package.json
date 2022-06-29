@@ -13,15 +13,14 @@
   "scripts": {
     "prebuild": "shx rm -rf dist && shx mkdir dist && npm run build:snippets",
     "build": "rollup -c --environment NODE_ENV:production",
-     "postbuild": "shx cp serve.json dist",
+    "postbuild": "shx cp serve.json dist",
     "build:snippets": "node build/snippets.js",
     "fetch-bundle": "./fetchBundle.sh",
     "css-lint": "stylelint src",
     "lint": "eslint --ext .js,.ts,.vue,.html src --fix --max-warnings=0 .",
-    "prestart": "shx rm -rf dist && npm run build:snippets",    
+    "prestart": "shx rm -rf dist && npm run build:snippets",
     "start": "rollup -c -w --environment NODE_ENV:development",
     "prepare": "husky install"
-
   },
   "husky": {
     "hooks": {
@@ -33,7 +32,7 @@
     "**/*.{js,ts,vue,md,html}": "eslint --cache --fix"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.5",
+    "@babel/core": "^7.18.6",
     "@brettz9/eslint-plugin": "^1.0.4",
     "@commitlint/config-conventional": "^17.0.3",
     "@pathscale/appstate-fast": "^0.0.4",
@@ -58,7 +57,7 @@
     "autoprefixer": "^10.4.7",
     "babel-plugin-module-resolver": "^4.1.0",
     "base32-encode": "^2.0.0",
-    "bulma-calendar": "^6.1.14",
+    "bulma-calendar": "^6.1.18",
     "dotenv": "^16.0.1",
     "eslint": "^8.18.0",
     "eslint-config-ash-nazg": "^33.1.0",
@@ -82,7 +81,7 @@
     "eslint-plugin-vue": "^9.1.1",
     "highlight.js": "^11.5.1",
     "husky": "^8.0.1",
-    "lint-staged": "^10.5.1",
+    "lint-staged": "^13.0.3",
     "postcss-html": "^1.4.1",
     "prettier": "^2.7.1",
     "rollup": "^2.75.7",
@@ -95,7 +94,7 @@
     "rollup-plugin-styles": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-visualizer": "^5.6.0",
-    "shelljs": "^0.8.4",
+    "shelljs": "^0.8.5",
     "shx": "^0.3.4",
     "stylelint": "^14.9.1",
     "stylelint-config-standard": "^26.0.0",
