@@ -2,8 +2,6 @@
 import { VButton, VColumns, VColumn } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 
-import 'vue3-carousel/dist/carousel.css'
-
 import { useRouter } from 'vue-router'
 
 export default {

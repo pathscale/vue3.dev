@@ -1,5 +1,3 @@
-/src
-/public
-/externs
-/dist
-/*.html
+dist
+public
+*.vue

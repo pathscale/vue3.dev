@@ -1,30 +1,26 @@
-/* eslint-disable node/no-process-env -- Temporarily disable */
 import path from 'path'
 import zlib from 'zlib'
-import dotenv from 'dotenv'
-
-// import babel from '@rollup/plugin-babel'
+import { terser } from 'rollup-plugin-terser'
+import alias from '@rollup/plugin-alias'
 import commonjs from '@rollup/plugin-commonjs'
+import dotenv from 'dotenv'
+import gzip from 'rollup-plugin-gzip'
+import html, { makeHtmlAttributes } from '@rollup/plugin-html'
+import image from '@rollup/plugin-image'
 import json from '@rollup/plugin-json'
+import livereload from 'rollup-plugin-livereload'
 import replace from '@rollup/plugin-replace'
 import resolve from '@rollup/plugin-node-resolve'
-// import typescript from '@rollup/plugin-typescript'
-import gzip from 'rollup-plugin-gzip'
-import styles from 'rollup-plugin-styles'
-import html, { makeHtmlAttributes } from '@rollup/plugin-html'
-import analyzer from 'rollup-plugin-analyzer'
-import vue from '@pathscale/rollup-plugin-vue3'
-import alias from '@rollup/plugin-alias'
 import serve from 'rollup-plugin-serve'
-import livereload from 'rollup-plugin-livereload'
-import compiler from '@ampproject/rollup-plugin-closure-compiler'
+import styles from 'rollup-plugin-styles'
+import analyzer from 'rollup-plugin-analyzer'
 import sucrase from '@rollup/plugin-sucrase'
+import vue from '@vitejs/plugin-vue'
+import vue3svg from '@pathscale/vue3-svg-icons'
 import vue3uiPurge from '@pathscale/rollup-plugin-vue3-ui-css-purge'
-import tsickle from '@pathscale/rollup-plugin-tsickle'
-import image from '@rollup/plugin-image'
 import visualizer from 'rollup-plugin-visualizer'
 import { string } from 'rollup-plugin-string'
-import vue3svg from '@pathscale/vue3-svg-icons'
+
 import copy from 'rollup-plugin-copy'
 
 const extensions = ['.ts', '.mjs', '.js', '.vue', '.json']
@@ -36,14 +32,14 @@ const watch = Boolean(process.env.ROLLUP_WATCH) || Boolean(process.env.LIVERELOA
 const addVersion = fileName => {
   const ver = prod ? env.parsed.VUE_APP_VERSION_NUMBER : new Date().getTime()
   const { dir, ext, base } = path.parse(fileName)
-  if (ext === '.html') return fileName
+  if (ext === '.html') {
+    return fileName
+  }
   const filename = base + `?v=${ver}`
   return dir ? `${dir}/${filename}` : filename
 }
 
 const template = ({ attributes, files, meta, publicPath, title }) => {
-  // publicPath = publicPath.startsWith('/') ? publicPath.slice(1) : publicPath
-
   const scripts = (files.js || [])
     .map(({ fileName }) => {
       const file = addVersion(fileName)
@@ -125,12 +121,9 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
   </body>
 </html>`
 }
-
 const config = [
-  // Bundle
   {
     input: 'src/main.ts',
-
     output: [
       {
         format: 'iife',
@@ -161,8 +154,8 @@ const config = [
           '@vue/compiler-sfc',
           '@vue/compiler-ssr',
           '@vue/reactivity',
-          '@vue/runtime-dom',
           '@vue/runtime-core',
+          '@vue/runtime-dom',
           '@vue/shared',
           'vuex',
         ],
@@ -170,9 +163,8 @@ const config = [
         extensions,
       }),
       commonjs(),
-      prod && tsickle(),
       vue3svg(),
-      // prod && vue3uiPurge(),
+      // prod && vue3uiPurge({ alias: aliases, debug: false }),
       vue(),
       styles({
         mode: prod ? 'extract' : 'inject',
@@ -180,17 +172,9 @@ const config = [
         minimize: prod && { preset: ['default', { discardComments: { removeAll: true } }] },
       }),
       image(),
-      // prod && typescript(),
-      // prod && babel({ babelHelpers: 'bundled', extensions, babelrc: true }),
-      !prod && sucrase({ exclude: ['**/node_modules/**'], transforms: ['typescript'] }),
-      prod &&
-        compiler({
-          warning_level: 'verbose',
-          language_in: 'ECMASCRIPT_NEXT',
-          language_out: 'ECMASCRIPT_2018',
-          externs: 'externs/localstorage.js',
-          jscomp_off: '*',
-        }),
+      sucrase({ exclude: ['**/node_modules/**'], transforms: ['typescript'] }),
+
+      prod && terser({ format: { comments: false } }),
       prod &&
         gzip({
           fileName: '.br',
@@ -205,8 +189,15 @@ const config = [
         title: 'Vue3-ui',
         template,
       }),
+
       watch &&
-        serve({ host: '0.0.0.0', contentBase: 'dist', historyApiFallback: true, port: 5000 }),
+        serve({
+          host: '0.0.0.0',
+          contentBase: 'dist',
+          historyApiFallback: true,
+          port: 5000,
+        }),
+
       watch && livereload({ watch: 'dist' }),
       prod && analyzer(),
       prod && visualizer(),
