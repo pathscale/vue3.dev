@@ -2,14 +2,14 @@
 import { useRouter } from 'vue-router'
 import { SnippetSection, ApiSection } from '../../components'
 
-import api from '../../docs/components/api/steps.ts'
+import api from '../../docs/components/api/chart.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- using all of them
-import * as Showcases from '../../docs/components/showcases/Steps'
-import BasicCode from '../../docs/components/raw/Steps/Basic.txt'
+import * as Showcases from '../../docs/components/showcases/Chart'
+import BasicCode from '../../docs/components/raw/Chart/Basic.txt'
 
 export default {
-  name: 'DevPageSteps',
+  name: 'DevPageChart',
   components: { SnippetSection, ApiSection },
   setup() {
     const router = useRouter()
@@ -36,7 +36,7 @@ export default {
       :code="BasicCode"
       :component="Showcases.Basic"
       :path="router.currentRoute.value.path"
-      is-half-width />
+      is-half-width/>
 
     <section id="api" class="py-4">
       <h2 class="title is-4">

@@ -353,7 +353,7 @@ const routes = [
           {
             name: 'chart',
             path: 'chart',
-            component: Pages.Steps,
+            component: Pages.Chart,
             meta: metaTags(
               'Chart',
               'Simple and modern SVG charts for the web with zero dependencies.',

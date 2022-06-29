@@ -4,7 +4,7 @@ import { VField, VInput, VButton, VSteps, VStepItem } from '@pathscale/vue3-ui'
 import { ref, reactive } from 'vue'
 
 export default {
-  name: 'DevShowcaseTabs',
+  name: 'DevShowcaseSteps',
   components: { VSteps, VStepItem, VField, VInput, VButton },
   setup() {
     const activeTab = ref(0)
@@ -41,9 +41,7 @@ export default {
       </v-field>
 
       <div class="buttons is-justify-content-right">
-        <v-button type="is-dark" @click="next">
-          Next
-        </v-button>
+        <v-button type="is-dark" @click="next"> Next </v-button>
       </div>
     </v-step-item>
 
@@ -57,12 +55,8 @@ export default {
       </v-field>
 
       <div class="buttons is-justify-content-right">
-        <v-button type="is-light" @click="back">
-          Back
-        </v-button>
-        <v-button type="is-dark" @click="next">
-          Next
-        </v-button>
+        <v-button type="is-light" @click="back"> Back </v-button>
+        <v-button type="is-dark" @click="next"> Next </v-button>
       </div>
     </v-step-item>
 
@@ -76,24 +70,16 @@ export default {
       </v-field>
 
       <div class="buttons is-justify-content-right">
-        <v-button type="is-light" @click="back">
-          Back
-        </v-button>
-        <v-button type="is-dark" @click="next">
-          Next
-        </v-button>
+        <v-button type="is-light" @click="back"> Back </v-button>
+        <v-button type="is-dark" @click="next"> Next </v-button>
       </div>
     </v-step-item>
 
     <!-- Step 4 -->
     <v-step-item title="Finish" class="has-text-centered">
-      <h1 class="title is-4">
-        Your account is now created!
-      </h1>
+      <h1 class="title is-4">Your account is now created!</h1>
       <!-- eslint-disable-next-line @pathscale/vue3/v-directive -->
-      <v-button type="is-dark" @click="activeTab = 0">
-        Restart
-      </v-button>
+      <v-button type="is-dark" @click="activeTab = 0"> Restart </v-button>
     </v-step-item>
   </v-steps>
 </template>
