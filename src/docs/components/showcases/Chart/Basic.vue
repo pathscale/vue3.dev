@@ -1,43 +1,56 @@
 <script>
 import { VChart } from '@pathscale/vue3-ui'
 
-import { reactive, computed } from 'vue'
+import { computed } from 'vue'
 
 export default {
   name: 'DevShowcaseChart',
   components: { VChart },
   setup() {
-    const multiData = reactive({
-      names: [
-        'John',
-        'Jane',
-        'Joe',
-        'Jack',
-      ],
-      candles: [
-        [28, 28, 38, 38, 1],
-        [38, 38, 55, 55, 1],
-        [55, 55, 77, 77, 1],
-        [77, 77, 66, 66, 1],
-        [66, 66, 22, 22, 1],
-      ],
-    })
-
     const candleChart = computed(() => ({
-      title: 'Candle Chart',
       data: {
-        labels: multiData.names,
+        labels: [
+          '12am-3am',
+          '3am-6am',
+          '6am-9am',
+          '9am-12pm',
+          '12pm-3pm',
+          '3pm-6pm',
+          '6pm-9pm',
+          '9pm-12am',
+        ],
+
         datasets: [
           {
-            values: multiData.candles,
+            name: 'Some Data',
+            chartType: 'bar',
+            values: [25, 40, 30, 35, 8, 52, 17, -4],
+          },
+          {
+            name: 'Another Set',
+            chartType: 'bar',
+            values: [25, 50, -10, 15, 18, 32, 27, 14],
+          },
+          {
+            name: 'Yet Another',
+            chartType: 'line',
+            values: [15, 20, -3, -15, 58, 12, -17, 37],
           },
         ],
+
+        yMarkers: [{ label: 'Marker', value: 70, options: { labelPos: 'left' } }],
+        yRegions: [{ label: 'Region', start: -10, end: 50, options: { labelPos: 'right' } }],
       },
-      type: 'candle',
-      height: 400,
-      colors: ['grey'],
-      isNavigable: 1,
-      xUnit: 4,
+
+      title: 'My Awesome Chart',
+      type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
+      height: 300,
+      colors: ['purple', '#ffa3ef', 'light-blue'],
+
+      tooltipOptions: {
+        formatTooltipX: d => String(d).toUpperCase(),
+        formatTooltipY: d => d + ' pts',
+      },
     }))
 
     return {
@@ -50,6 +63,6 @@ export default {
 <template>
   <div>
     <div id="chartRef" />
-    <v-chart v-bind="{ ...candleChart }" :key="candleChart.data.datasets[0].values.length" />
+    <v-chart v-bind="{ ...candleChart }" />
   </div>
 </template>
