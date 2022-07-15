@@ -128,6 +128,7 @@ const baseRules = {
   'unicorn/prefer-add-event-listener': 'off', // TODO: breaks a lot of stuff, figure out if needed at all
   'import/unambiguous': 'off',
   'no-use-before-define': 'off',
+  'compat/compat': 'off',
 }
 
 module.exports = {

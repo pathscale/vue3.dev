@@ -8,19 +8,20 @@ export default {
   components: { VChart },
   setup() {
     const multiData = reactive({
-      names: [],
-      candles: [],
+      names: [
+        'John',
+        'Jane',
+        'Joe',
+        'Jack',
+      ],
+      candles: [
+        [28, 28, 38, 38, 1],
+        [38, 38, 55, 55, 1],
+        [55, 55, 77, 77, 1],
+        [77, 77, 66, 66, 1],
+        [66, 66, 22, 22, 1],
+      ],
     })
-
-    setInterval(() => {
-      multiData.names.push(Date.now())
-      const open = 4000 + Math.random() * 100
-      const hight = 4200 + Math.random() * 100
-      const low = 4000 - Math.random() * 100
-      const close = 4000 + Math.random() * 100
-
-      multiData.candles.push([open, hight, low, close, 2993.45281556])
-    }, 5 * 1000)
 
     const candleChart = computed(() => ({
       title: 'Candle Chart',
@@ -29,22 +30,6 @@ export default {
         datasets: [
           {
             values: multiData.candles,
-            formatted: multiData.candles
-              .map(val => val[0])
-              .map(function(d) {
-                return d * 1000 + ' km'
-              }),
-          },
-        ],
-        yMarkers: [
-          {
-            label: Math.max(...multiData.candles.map(val => val[1]))
-              .toFixed(2)
-              .toString(),
-            value: Math.max(...multiData.candles.map(val => val[1])),
-            options: {
-              labelPos: 'right',
-            },
           },
         ],
       },
@@ -65,7 +50,6 @@ export default {
 <template>
   <div>
     <div id="chartRef" />
-
     <v-chart v-bind="{ ...candleChart }" :key="candleChart.data.datasets[0].values.length" />
   </div>
 </template>
