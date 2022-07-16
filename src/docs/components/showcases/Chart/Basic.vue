@@ -62,7 +62,6 @@ export default {
 
 <template>
   <div>
-    <div id="chartRef" />
     <v-chart v-bind="{ ...candleChart }" />
   </div>
 </template>

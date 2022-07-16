@@ -41,7 +41,7 @@
     "@pathscale/fonts-metroclean": "^1.0.8",
     "@pathscale/rollup-plugin-vue3-ui-css-purge": "^0.0.40",
     "@pathscale/vue3-svg-icons": "^0.0.12",
-    "@pathscale/vue3-ui": "^1.0.1",
+    "@pathscale/vue3-ui": "^1.0.4",
     "@pathscale/wss-adapter": "^1.0.8",
     "@rollup/plugin-alias": "^3.1.9",
     "@rollup/plugin-commonjs": "^22.0.1",

@@ -6,6 +6,7 @@ import api from '../../docs/components/api/chart.ts'
 
 // eslint-disable-next-line no-restricted-syntax -- using all of them
 import * as Showcases from '../../docs/components/showcases/Chart'
+import CandleCode from '../../docs/components/raw/Chart/Candle.txt'
 import BasicCode from '../../docs/components/raw/Chart/Basic.txt'
 
 export default {
@@ -18,6 +19,7 @@ export default {
       router,
       Showcases,
       BasicCode,
+      CandleCode,
     }
   },
 }
@@ -31,6 +33,14 @@ export default {
     <p>
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
+
+    <snippet-section
+      title="Candle Chart"
+      :component="Showcases.Candle"
+      :code="CandleCode"
+      :path="router.currentRoute.value.path"
+      is-half-width/>
+
     <snippet-section
       title="Basic"
       :code="BasicCode"
