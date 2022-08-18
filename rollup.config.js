@@ -15,7 +15,7 @@ import serve from 'rollup-plugin-serve'
 import styles from 'rollup-plugin-styles'
 import analyzer from 'rollup-plugin-analyzer'
 import sucrase from '@rollup/plugin-sucrase'
-import vue from '@vitejs/plugin-vue'
+import vue from '@pathscale/rollup-plugin-vue3'
 import vue3svg from '@pathscale/vue3-svg-icons'
 import vue3uiPurge from '@pathscale/rollup-plugin-vue3-ui-css-purge'
 import visualizer from 'rollup-plugin-visualizer'
@@ -30,7 +30,7 @@ const prod = process.env.NODE_ENV === 'production'
 const watch = Boolean(process.env.ROLLUP_WATCH) || Boolean(process.env.LIVERELOAD)
 
 const addVersion = fileName => {
-  const ver = prod ? env.parsed.VUE_APP_VERSION_NUMBER : new Date().getTime()
+  const ver = prod ? env.parsed.VUE_APP_VERSION_NUMBER : Date.now()
   const { dir, ext, base } = path.parse(fileName)
   if (ext === '.html') {
     return fileName
@@ -179,7 +179,6 @@ const config = [
         gzip({
           fileName: '.br',
           customCompression: content =>
-            // eslint-disable-next-line node/no-sync -- Local build
             zlib.brotliCompressSync(Buffer.from(content), {
               params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 },
             }),

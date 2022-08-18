@@ -1,7 +1,6 @@
 'use strict'
 
 const baseConfigs = [
-  'ash-nazg/sauron',
   'plugin:vue/vue3-recommended',
   'plugin:import/errors',
   'plugin:import/warnings',
