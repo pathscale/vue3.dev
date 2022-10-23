@@ -39,7 +39,7 @@ export default {
 
     watchEffect(() => {
       current.value = { [router.currentRoute.value.name]: true }
-      if (router.currentRoute.value.name === 'documentation') redirect('installation')
+      if (router.currentRoute.value.name === 'documentation') { redirect('installation') }
     })
 
     const isDevelopment = process.env.NODE_ENV === 'development'
@@ -125,6 +125,8 @@ export default {
               </v-menu-item>
               <v-menu-item label="Form" expanded>
                 <v-menu-item label="Input" @click="redirect('input')" :active="current.input" />
+                <v-menu-item label="Autocomplete" @click="redirect('autocomplete')" :active="current.autocomplete" />
+
                 <v-menu-item
                   label="Validation"
                   @click="redirect('validation')"

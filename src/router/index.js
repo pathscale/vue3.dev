@@ -359,6 +359,15 @@ const routes = [
               'Simple and modern SVG charts for the web with zero dependencies.',
             ),
           },
+          {
+            name: 'autocomplete',
+            path: 'autocomplete',
+            component: Pages.Autocomplete,
+            meta: metaTags(
+              'Autocomplete',
+              'Extended input that provide suggestions while the user types.',
+            ),
+          },
         ],
       },
     ],
@@ -396,7 +405,9 @@ router.beforeEach((to, _from, next) => {
   [...document.querySelectorAll('[data-vue-router-controlled]')].map(el => el.remove())
 
   // Skip rendering meta tags if there are none.
-  if (!nearestWithMeta) return next()
+  if (!nearestWithMeta) {
+    return next()
+  }
 
   // Turn the meta tag definitions into actual elements in the head.
   nearestWithMeta.meta.metaTags

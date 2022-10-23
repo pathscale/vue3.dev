@@ -87,3 +87,5 @@ export { default as Tooltip } from './components/Tooltip.vue'
 export { default as Upload } from './components/Upload.vue'
 
 export { default as Chart } from './components/Chart.vue'
+
+export { default as Autocomplete } from './components/Autocomplete.vue'
