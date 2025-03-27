@@ -15,7 +15,7 @@ export default {
     <v-button rounded type="is-light">
       <span>
         Github
-      </span> 
+      </span>
       <v-icon name="github-icon" color="white" bundle="icons" />
     </v-button>
   </div>

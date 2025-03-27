@@ -14,18 +14,18 @@ export default {
 
 <template>
   <v-field>
-    <v-textarea color="is-primary" size="is-small" v-model="text" />
+    <v-textarea v-model="text" color="is-primary" size="is-small" />
   </v-field>
 
   <v-field>
-    <v-textarea color="is-primary" size="is-normal" v-model="text" />
+    <v-textarea v-model="text" color="is-primary" size="is-normal" />
   </v-field>
 
   <v-field>
-    <v-textarea color="is-primary" size="is-medium" v-model="text" />
+    <v-textarea v-model="text" color="is-primary" size="is-medium" />
   </v-field>
 
   <v-field>
-    <v-textarea color="is-primary" size="is-large" v-model="text" />
+    <v-textarea v-model="text" color="is-primary" size="is-large" />
   </v-field>
 </template>

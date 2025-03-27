@@ -1,10 +1,10 @@
 <script>
 import { VSlider } from '@pathscale/vue3-ui'
-import {ref} from 'vue'
+import { ref } from 'vue'
 
 export default {
   name: 'DevShowcaseSlider',
-  components: { VSlider,  },
+  components: { VSlider, },
   setup() {
     const value = ref(30)
     return {
@@ -15,9 +15,9 @@ export default {
 </script>
 
 <template>
-  <v-slider step="1" min="0" max="100" v-model="value" tooltip type="is-success" />
+  <v-slider v-model="value" step="1" min="0" max="100" tooltip type="is-success" />
 
-  <v-slider step="1" min="0" max="100" v-model="value" vertical />
+  <v-slider v-model="value" step="1" min="0" max="100" vertical />
 
   <span>Value: {{ value }}</span>
 </template>

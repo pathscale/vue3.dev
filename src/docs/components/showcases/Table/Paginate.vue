@@ -11,12 +11,12 @@ export default {
     const COLS = 10
     const ROWS = 100
 
-    for (let i = 0; i < COLS; ++i) datagrid.value.addColumn(i.toString(), i.toString(), 'number')
+    for (let i = 0; i < COLS; ++i) { datagrid.value.addColumn(i.toString(), i.toString(), 'number') }
 
     for (let i = 0; i < ROWS; ++i) {
       const obj = {}
 
-      for (let j = 0; j < COLS; ++j) obj[j.toString()] = i * j
+      for (let j = 0; j < COLS; ++j) { obj[j.toString()] = i * j }
 
       datagrid.value.addRow(obj)
     }

@@ -36,7 +36,7 @@ export default {
       :code="TooltipCode"
       :component="Showcases.Tooltip"
       :path="router.currentRoute.value.path"
-      
+
       is-half-width />
     <snippet-section
       title="Colors"
@@ -60,7 +60,7 @@ export default {
       title="Styles"
       :code="StylesCode"
       :component="Showcases.Styles"
-      :path="router.currentRoute.value.path" 
+      :path="router.currentRoute.value.path"
       is-half-width />
     <section id="api" class="pt-4">
       <h2 class="title is-4">

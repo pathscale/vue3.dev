@@ -27,7 +27,7 @@ export default {
       setColor(color.value)
     })
 
-    return {  router, color, colors, isOriginalColor }
+    return { router, color, colors, isOriginalColor }
   }
 }
 </script>
@@ -97,7 +97,7 @@ export default {
       </v-button>
     </template>
 
-    <v-dropdown-item v-for="color in colors" :value="color" :key="color" :style="`background-color: ${color}`">
+    <v-dropdown-item v-for="color in colors" :key="color" :value="color" :style="`background-color: ${color}`">
       {{ color }}
     </v-dropdown-item>
   </v-dropdown>

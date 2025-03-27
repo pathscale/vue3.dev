@@ -15,7 +15,7 @@ export default {
   name: 'DevPageBreadcrumb',
   components: { SnippetSection, ApiSection },
   setup() {
-    
+
     const router = useRouter()
     return { api, router, Showcases, BreadcrumbBasicCode, BreadcrumbSizesCode, BreadcrumbSeparatorCode }
   }

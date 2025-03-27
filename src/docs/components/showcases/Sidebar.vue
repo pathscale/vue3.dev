@@ -28,10 +28,10 @@ export default {
     <v-switch v-model="state.open" type="is-dark">
       Open
     </v-switch>
-    <v-switch v-model="state.overlay" type="is-dark" v-show="state.open">
+    <v-switch v-show="state.open" v-model="state.overlay" type="is-dark">
       Overlay
     </v-switch>
-    <v-switch v-model="state.reduced" type="is-dark" v-show="state.open">
+    <v-switch v-show="state.open" v-model="state.reduced" type="is-dark">
       Reduced
     </v-switch>
   </v-field>
@@ -42,10 +42,10 @@ export default {
     fullheight
     :reduce="state.reduced"
     :overlay="state.overlay"
-    @close="close"
-    position="fixed">
+    position="fixed"
+    @close="close">
     <section class="section px-1">
-      <v-button tag="a" @click="close" type="is-text" class="is-pulled-right">
+      <v-button tag="a" type="is-text" class="is-pulled-right" @click="close">
         &#x274C;
       </v-button>
     </section>

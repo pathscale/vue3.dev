@@ -14,6 +14,6 @@ export default {
 
 <template>
   <v-field>
-    <v-textarea color="is-info" v-model="text" maxlength="5" has-counter />
+    <v-textarea v-model="text" color="is-info" maxlength="5" has-counter />
   </v-field>
 </template>

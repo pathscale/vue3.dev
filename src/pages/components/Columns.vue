@@ -19,7 +19,7 @@ export default {
   name: 'DevPageColumns',
   components: { ApiSection, SnippetSection },
   setup() {
-    
+
     const router = useRouter()
     return {
       api, router,

@@ -25,18 +25,18 @@ export default {
 <template>
   <v-field grouped group-multiline>
     <v-field label="Total">
-      <v-input type="number" v-model="state.total" />
+      <v-input v-model="state.total" type="number" />
     </v-field>
     <v-field label="Items per page">
-      <v-input type="number" v-model="state.perPage" />
+      <v-input v-model="state.perPage" type="number" />
     </v-field>
   </v-field>
   <v-field grouped group-multiline>
     <v-field label="Show buttons before current">
-      <v-input type="number" v-model="state.rangeBefore" min="0" />
+      <v-input v-model="state.rangeBefore" type="number" min="0" />
     </v-field>
     <v-field label="Show buttons after current">
-      <v-input type="number" v-model="state.rangeAfter" min="0" />
+      <v-input v-model="state.rangeAfter" type="number" min="0" />
     </v-field>
   </v-field>
   <v-field grouped group-multiline>
@@ -82,8 +82,8 @@ export default {
 
   <hr />
   <v-pagination
-    :total="state.total"
     v-model:current="state.current"
+    :total="state.total"
     :range-before="state.rangeBefore"
     :range-after="state.rangeAfter"
     :order="state.order"
@@ -95,4 +95,4 @@ export default {
     aria-previous-label="Previous page"
     aria-page-label="Page"
     aria-current-label="Current page" />
-</template> 
+</template>

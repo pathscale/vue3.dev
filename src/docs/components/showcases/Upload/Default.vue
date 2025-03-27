@@ -48,5 +48,5 @@ export default {
       {{ file.name }}
     </v-tag>
   </div>
-</template> 
+</template>
 

@@ -131,7 +131,7 @@ const routes = [
             component: Pages.Tag,
             meta: metaTags(
               'Tag',
-              'It\'s very useful as a way to attach information to a block or other component',
+              "It's very useful as a way to attach information to a block or other component",
             ),
           },
           {
@@ -314,7 +314,7 @@ const routes = [
             component: Pages.Toast,
             meta: metaTags(
               'Toast',
-              'Bulma\'s notification implemented as a toast plugin based on vue-toaster',
+              "Bulma's notification implemented as a toast plugin based on vue-toaster",
             ),
           },
           {
@@ -402,7 +402,11 @@ router.beforeEach((to, _from, next) => {
 
     // Remove any stale meta tags from the document using the key attribute we set below.
   }
-  [...document.querySelectorAll('[data-vue-router-controlled]')].map(el => el.remove())
+
+  // eslint-disable-next-line no-extra-semi -- Prettier
+  ;[...document.querySelectorAll('[data-vue-router-controlled]')].map(el => {
+    return el.remove()
+  })
 
   // Skip rendering meta tags if there are none.
   if (!nearestWithMeta) {

@@ -9,25 +9,25 @@ export default {
   name: 'AppstateShowcase',
   components: { VButton },
   setup() {
-    const state = useState(globalState);
+    const state = useState(globalState)
     watchEffect(() => {
-      // eslint-disable-next-line no-console -- ignore
+
       console.log('Called when memory changes its value', state.memory.value)
       state.times.set(p => p + 1)
     })
 
     const resetCounter = () => {
-      state.memory.set(state.count.value);
-      state.count.set(0);
+      state.memory.set(state.count.value)
+      state.count.set(0)
     }
 
     const incrementCounter = () => {
-      state.count.set(p => p + 1);
+      state.count.set(p => p + 1)
     }
     const decrementCounter = () => {
-      state.count.set(p => p - 1);
+      state.count.set(p => p - 1)
     }
-    return { incrementCounter, decrementCounter, state, resetCounter}
+    return { incrementCounter, decrementCounter, state, resetCounter }
   }
 }
 </script>

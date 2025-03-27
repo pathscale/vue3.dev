@@ -12,7 +12,7 @@ export default {
   name: 'DevPageCard',
   components: { SnippetSection, ApiSection, VariablesSection },
   setup() {
-    
+
     const router = useRouter()
     return { api, variables, router, Showcase, ShowcaseCode }
   }

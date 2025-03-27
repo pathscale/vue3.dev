@@ -1,4 +1,3 @@
-/* eslint-disable import/unambiguous,import/no-commonjs,no-console -- build script */
 const showcaseDir = 'src/docs/components/showcases'
 const rawDir = 'src/docs/components/raw'
 

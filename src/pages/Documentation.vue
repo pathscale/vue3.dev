@@ -58,92 +58,92 @@ export default {
               <v-menu-item
                 v-if="isDevelopment"
                 label="Playground"
-                @click="redirect('playground')"
-                :active="current.playground"/>
+                :active="current.playground"
+                @click="redirect('playground')"/>
               <v-menu-item
                 label="Installation"
-                @click="redirect('installation')"
                 :active="current.installation"
-                expanded/>
+                expanded
+                @click="redirect('installation')"/>
               <v-menu-item label="Design" expanded>
-                <v-menu-item label="Bulma" @click="redirect('bulma')" :active="current.bulma" />
+                <v-menu-item label="Bulma" :active="current.bulma" @click="redirect('bulma')" />
                 <v-menu-item
                   label="Theming"
-                  @click="redirect('theming')"
-                  :active="current.theming"/>
+                  :active="current.theming"
+                  @click="redirect('theming')"/>
                 <v-menu-item label="Layout" expanded>
                   <v-menu-item
                     label="Columns"
-                    @click="redirect('columns')"
-                    :active="current.columns"/>
+                    :active="current.columns"
+                    @click="redirect('columns')"/>
                   <v-menu-item
                     label="Sidebar"
-                    @click="redirect('sidebar')"
-                    :active="current.sidebar"/>
-                  <v-menu-item label="Media" @click="redirect('media')" :active="current.media" />
+                    :active="current.sidebar"
+                    @click="redirect('sidebar')"/>
+                  <v-menu-item label="Media" :active="current.media" @click="redirect('media')" />
                 </v-menu-item>
               </v-menu-item>
               <v-menu-item label="Appstate-fast" expanded>
                 <v-menu-item
                   label="Introducing"
-                  @click="redirect('introducing')"
-                  :active="current.introducing"/>
+                  :active="current.introducing"
+                  @click="redirect('introducing')"/>
                 <v-menu-item
                   label="Modules"
-                  @click="redirect('modules')"
-                  :active="current.modules"/>
+                  :active="current.modules"
+                  @click="redirect('modules')"/>
               </v-menu-item>
-              <v-menu-item label="Icons" @click="redirect('icons')" :active="current.icons" />
+              <v-menu-item label="Icons" :active="current.icons" @click="redirect('icons')" />
             </v-menu-list>
             <v-menu-list label="UI Components">
               <v-menu-item label="Elements" expanded>
                 <!-- <v-menu-item label="Typography" /> -->
                 <!-- <v-menu-item label="Box" /> -->
-                <v-menu-item label="Button" @click="redirect('button')" :active="current.button" />
+                <v-menu-item label="Button" :active="current.button" @click="redirect('button')" />
                 <!-- <v-menu-item label="Content" /> -->
                 <!-- <v-menu-item label="Delete" /> -->
                 <!-- <v-menu-item label="Form" /> -->
                 <!-- <v-menu-item label="Icon" /> -->
                 <!-- <v-menu-item label="Image" @click="redirect('image')" :active="current.image" /> -->
-                <v-menu-item label="Avatar" @click="redirect('avatar')" :active="current.avatar" />
+                <v-menu-item label="Avatar" :active="current.avatar" @click="redirect('avatar')" />
                 <!-- <v-menu-item label="Notifications" /> -->
                 <v-menu-item
                   label="Progress"
-                  @click="redirect('progress')"
-                  :active="current.progress"/>
-                <v-menu-item label="Table" @click="redirect('table')" :active="current.table" />
-                <v-menu-item label="Tag" @click="redirect('tag')" :active="current.tag" />
+                  :active="current.progress"
+                  @click="redirect('progress')"/>
+                <v-menu-item label="Table" :active="current.table" @click="redirect('table')" />
+                <v-menu-item label="Tag" :active="current.tag" @click="redirect('tag')" />
                 <v-menu-item
                   label="Tooltip"
-                  @click="redirect('tooltip')"
-                  :active="current.tooltip"/>
-                <v-menu-item label="Slider" @click="redirect('slider')" :active="current.slider" />
+                  :active="current.tooltip"
+                  @click="redirect('tooltip')"/>
+                <v-menu-item label="Slider" :active="current.slider" @click="redirect('slider')" />
                 <v-menu-item
                   label="Pagination"
-                  @click="redirect('pagination')"
-                  :active="current.pagination"/>
+                  :active="current.pagination"
+                  @click="redirect('pagination')"/>
               </v-menu-item>
               <v-menu-item label="Form" expanded>
-                <v-menu-item label="Input" @click="redirect('input')" :active="current.input" />
-                <v-menu-item label="Autocomplete" @click="redirect('autocomplete')" :active="current.autocomplete" />
+                <v-menu-item label="Input" :active="current.input" @click="redirect('input')" />
+                <v-menu-item label="Autocomplete" :active="current.autocomplete" @click="redirect('autocomplete')" />
 
                 <v-menu-item
                   label="Validation"
-                  @click="redirect('validation')"
-                  :active="current.validation"/>
+                  :active="current.validation"
+                  @click="redirect('validation')"/>
                 <v-menu-item
                   label="Textarea"
-                  @click="redirect('textarea')"
-                  :active="current.textarea"/>
-                <v-menu-item label="Select" @click="redirect('select')" :active="current.select" />
+                  :active="current.textarea"
+                  @click="redirect('textarea')"/>
+                <v-menu-item label="Select" :active="current.select" @click="redirect('select')" />
                 <!-- <v-menu-item label="Radio" /> -->
-                <v-menu-item label="Upload" @click="redirect('upload')" :active="current.file" />
-                <v-menu-item label="Switch" @click="redirect('switch')" :active="current.switch" />
-                <v-menu-item label="Field" @click="redirect('field')" :active="current.field" />
+                <v-menu-item label="Upload" :active="current.file" @click="redirect('upload')" />
+                <v-menu-item label="Switch" :active="current.switch" @click="redirect('switch')" />
+                <v-menu-item label="Field" :active="current.field" @click="redirect('field')" />
                 <v-menu-item
                   label="Checkbox"
-                  @click="redirect('checkbox')"
-                  :active="current.checkbox"/>
+                  :active="current.checkbox"
+                  @click="redirect('checkbox')"/>
 
                 <!--
  <v-menu-item
@@ -155,44 +155,44 @@ export default {
               <v-menu-item label="Components" expanded>
                 <v-menu-item
                   label="Breadcrumb"
-                  @click="redirect('breadcrumb')"
-                  :active="current.breadcrumb"/>
+                  :active="current.breadcrumb"
+                  @click="redirect('breadcrumb')"/>
                 <!-- <v-menu-item label="Card" @click="redirect('card')" :active="current.card" /> -->
                 <v-menu-item
                   label="Dropdown"
-                  @click="redirect('dropdown')"
-                  :active="current.dropdown"/>
-                <v-menu-item label="Menu" @click="redirect('menu')" :active="current.menu" />
+                  :active="current.dropdown"
+                  @click="redirect('dropdown')"/>
+                <v-menu-item label="Menu" :active="current.menu" @click="redirect('menu')" />
                 <!-- <v-menu-item label="Message" /> -->
                 <!-- <v-menu-item label="Modal" @click="redirect('modal')" :active="current.modal" /> -->
-                <v-menu-item label="Navbar" @click="redirect('navbar')" :active="current.navbar" />
+                <v-menu-item label="Navbar" :active="current.navbar" @click="redirect('navbar')" />
                 <!-- <v-menu-item label="Pagination" /> -->
                 <!-- <v-menu-item label="Panel" /> -->
                 <!-- <v-menu-item label="Collapse" /> -->
                 <v-menu-item
                   label="Accordion"
-                  @click="redirect('accordion')"
-                  :active="current.accordion"/>
-                <v-menu-item label="Tabs" @click="redirect('tabs')" :active="current.tabs" />
+                  :active="current.accordion"
+                  @click="redirect('accordion')"/>
+                <v-menu-item label="Tabs" :active="current.tabs" @click="redirect('tabs')" />
                 <v-menu-item
                   label="Timeline"
-                  @click="redirect('timeline')"
-                  :active="current.timeline"/>
+                  :active="current.timeline"
+                  @click="redirect('timeline')"/>
 
-                <v-menu-item label="Steps" @click="redirect('steps')" :active="current.steps" />
-                <v-menu-item label="Chart" @click="redirect('chart')" :active="current.chart" />
+                <v-menu-item label="Steps" :active="current.steps" @click="redirect('steps')" />
+                <v-menu-item label="Chart" :active="current.chart" @click="redirect('chart')" />
               </v-menu-item>
             </v-menu-list>
             <v-menu-list label="Utilities">
               <v-menu-item
                 label="Toast Notification"
-                @click="redirect('toast')"
-                :active="current.toast"/>
+                :active="current.toast"
+                @click="redirect('toast')"/>
 
               <v-menu-item
                 label="Datagrid"
-                @click="redirect('datagrid')"
-                :active="current.datagrid"/>
+                :active="current.datagrid"
+                @click="redirect('datagrid')"/>
             </v-menu-list>
           </v-menu>
         </div>

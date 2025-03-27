@@ -35,20 +35,20 @@
         <v-field label="Position">
           <v-field v-for="position in positions" :key="position.key" class="is-aligned-center">
             <input
+              v-model="state.options.position"
               class="mr-2"
               name="position"
               type="radio"
               :value="position.value"
-              v-model="state.options.position"
               @change="toast" />{{ position.name }}
           </v-field>
         </v-field>
         <v-field
           :label="`Duration: ${state.options.duration}${state.options.duration ? 'ms' : ''}`">
           <v-slider
+            v-model="state.options.duration"
             min="1000"
             max="10000"
-            v-model="state.options.duration"
             :disabled="state.options.duration === false" />
 
           <v-checkbox @change="changeDuration">
@@ -66,7 +66,7 @@
           </v-checkbox>
         </v-field>
         <v-field label="Max Toasts">
-          <v-input type="number" v-model="state.options.maxToasts" placeholder="false" />
+          <v-input v-model="state.options.maxToasts" type="number" placeholder="false" />
         </v-field>
         <v-field>
           <v-checkbox checked @change="state.options.pauseOnHover = $event.target.checked">
@@ -89,55 +89,55 @@
         <br />
         <code>$toast(</code>
         <div class="ml-2">
-          <code class="c-code--string">"{{ state.message }}"</code>
+          <code class="c-code-string">"{{ state.message }}"</code>
           <code v-if="hasOptions">,</code>
         </div>
         <div v-if="hasOptions" class="ml-2">
           <code>{</code>
-          <span class="c-code--object-line" v-if="state.options.type">
+          <span v-if="state.options.type" class="c-code-object-line">
             <code>type:</code>
-            <code class="c-code--string">{{ state.options.type }}</code>
+            <code class="c-code-string">{{ state.options.type }}</code>
           </span>
-          <span class="c-code--object-line" v-if="state.options.position">
+          <span v-if="state.options.position" class="c-code-object-line">
             <code>position:</code>
-            <code class="c-code--string">"{{ state.options.position }}"</code>
+            <code class="c-code-string">"{{ state.options.position }}"</code>
           </span>
-          <span class="c-code--object-line" v-if="state.options.duration !== 4000">
+          <span v-if="state.options.duration !== 4000" class="c-code-object-line">
             <code>duration:</code>
-            <code class="c-code--number">{{ state.options.duration }}</code>
+            <code class="c-code-number">{{ state.options.duration }}</code>
           </span>
 
-          <span class="c-code--object-line" v-if="state.options.dismissible === false">
+          <span v-if="state.options.dismissible === false" class="c-code-object-line">
             <code>dismissible:</code>
-            <code class="c-code--number">{{ state.options.dismissible }}</code>
+            <code class="c-code-number">{{ state.options.dismissible }}</code>
           </span>
 
-          <span class="c-code--object-line" v-if="state.options.queue">
+          <span v-if="state.options.queue" class="c-code-object-line">
             <code>queue:</code>
-            <code class="c-code--number">{{ state.options.queue }}</code>
+            <code class="c-code-number">{{ state.options.queue }}</code>
           </span>
 
           <span
-            class="c-code--object-line"
-            v-if="state.options.maxToasts || state.options.maxToasts === 0">
+            v-if="state.options.maxToasts || state.options.maxToasts === 0"
+            class="c-code-object-line">
             <code>max:</code>
-            <code class="c-code--number">{{ state.options.maxToasts }}</code>
+            <code class="c-code-number">{{ state.options.maxToasts }}</code>
           </span>
 
-          <span class="c-code--object-line" v-if="state.options.pauseOnHover === false">
+          <span v-if="state.options.pauseOnHover === false" class="c-code-object-line">
             <code>pauseOnHover:</code>
-            <code class="c-code--number">{{ state.options.pauseOnHover }}</code>
+            <code class="c-code-number">{{ state.options.pauseOnHover }}</code>
           </span>
 
-          <span class="c-code--object-line" v-if="state.options.useDefaultCss === false">
+          <span v-if="state.options.useDefaultCss === false" class="c-code-object-line">
             <code>useDefaultCss:</code>
-            <code class="c-code--number">{{ state.options.useDefaultCss }}</code>
+            <code class="c-code-number">{{ state.options.useDefaultCss }}</code>
           </span>
         </div>
         <code class="ml-2">}</code>
         <code>)</code>
       </div>
-      <v-button @click="toast" type="is-warning">
+      <v-button type="is-warning" @click="toast">
         Show it
       </v-button>
     </v-column>
@@ -172,7 +172,7 @@ export default {
     const $toast = inject('$toast')
 
     const state = reactive({
-      message: `Bulma's notification implemented as a toast plugin.`,
+      message: "Bulma's notification implemented as a toast plugin.",
       options: {
         duration: 4000,
       },
@@ -233,25 +233,25 @@ export default {
   text-align: left;
 }
 
-.c-code--string {
+.c-code-string {
   color: #ce9178;
 }
 
-.c-code--object-line {
+.c-code-object-line {
   display: flex;
 }
 
-.c-code--object-line:not(:last-child)::after {
-  content: ',';
+.c-code-object-line:not(:last-child)::after {
+  content: ",";
   font-family: monospace;
   display: inline-block;
 }
 
-.c-code--object-line > code:last-child {
+.c-code-object-line > code:last-child {
   margin-left: 8px;
 }
 
-.c-code--number {
+.c-code-number {
   color: #b5cea8;
 }
 

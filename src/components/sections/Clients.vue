@@ -13,22 +13,22 @@ export default {
     const projects = [
       {
         title: 'Pathscale.com',
-        image: `/pathscale.webp`,
+        image: '/pathscale.webp',
         link: 'https://www.pathscale.com/'
       },
       {
         title: 'Revenge.game',
-        image: `/revenge.webp`,
+        image: '/revenge.webp',
         link: 'https://www.revenge.game/'
       },
       {
         title: 'SpaceRevenge.game',
-        image: `/space.webp`,
+        image: '/space.webp',
         link: 'https://www.spacerevenge.game/'
       },
       {
         title: 'Vue3.dev',
-        image: `/vue3.dev.webp`,
+        image: '/vue3.dev.webp',
         link: 'https://vue3.dev/'
       }
     ]
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <template>
-  <section class="hero section" id="client">
+  <section id="client" class="hero section">
     <div class="hero-body">
       <div class="container">
         <p class="title has-text-white has-text-centered">
@@ -47,7 +47,7 @@ export default {
         <v-columns vcentered class="reverse-columns px-2">
           <v-column v-for="(client, index) in projects" :key="index" class="has-text-centered mx-2" size="is-3">
             <a :href="client.link">
-              <v-image :data-src="client.image" :ref="client.title" custom-class="is-fullwidth" />
+              <v-image :ref="client.title" :data-src="client.image" custom-class="is-fullwidth" />
             </a>
           </v-column>
         </v-columns>

@@ -231,5 +231,5 @@ export default {
 
 <template>
   <v-chart v-bind="chartOptions" :data="candleChart" :width="counter" />
-  <v-button @click="onChange" type="is-info">Click me ({{counter}})</v-button>
+  <v-button type="is-info" @click="onChange">Click me ({{counter}})</v-button>
 </template>

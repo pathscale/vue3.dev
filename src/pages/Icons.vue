@@ -1,7 +1,7 @@
 <script>
 import { useRouter } from 'vue-router'
-import {  VTabs, VTab } from '@pathscale/vue3-ui'
-import { ref } from "vue" 
+import { VTabs, VTab } from '@pathscale/vue3-ui'
+import { ref } from 'vue'
 import { SnippetSection, ApiSection } from '../components'
 
 import api from '../docs/components/api/icon.ts'
@@ -19,7 +19,7 @@ export default {
   components: { SnippetSection, ApiSection, VTabs, VTab },
   setup() {
     const router = useRouter()
-    const activeTab = ref(0);
+    const activeTab = ref(0)
     return { router, Showcases, SizesCode, CustomSizesCode, ColorsCode, CustomClassCode, api, activeTab }
   }
 }

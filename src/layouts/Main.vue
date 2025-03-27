@@ -27,7 +27,7 @@ export default {
   <div>
     <cookie />
     <navbar />
-    <div class="well" id="well">
+    <div id="well" class="well">
       <router-view />
     </div>
     <c-footer />

@@ -1,16 +1,20 @@
-'use strict'
+import globals from 'globals'
+import tseslint from 'typescript-eslint' // eslint-disable-line import/no-unresolved
+import pluginVue from 'eslint-plugin-vue'
+import importPlugin from 'eslint-plugin-import'
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
 const baseConfigs = [
-  'plugin:vue/vue3-recommended',
-  'plugin:import/errors',
-  'plugin:import/warnings',
-  'plugin:prettier/recommended',
+  ...pluginVue.configs['flat/recommended'],
+  importPlugin.flatConfigs.errors,
+  importPlugin.flatConfigs.warnings,
+  eslintPluginPrettierRecommended,
 ]
 
 const baseTSConfigs = [
-  ...baseConfigs,
-  'plugin:import/typescript',
-  'plugin:@typescript-eslint/recommended',
+  // ...baseConfigs,
+  importPlugin.flatConfigs.typescript,
+  ...tseslint.configs.recommended,
 ]
 
 const vueRules = {
@@ -60,7 +64,7 @@ const vueRules = {
   'vue/require-direct-export': ['error'],
   'vue/require-name-property': ['error'],
   'vue/v-for-delimiter-style': ['error'],
-  'vue/v-on-function-call': ['error'],
+  // 'vue/v-on-function-call': ['error'],
   'vue/html-closing-bracket-newline': [
     'error',
     {
@@ -85,7 +89,13 @@ const baseRules = {
 
   // Reapply from ash-nazg
   semi: ['error', 'never'],
-  quotes: ['error', 'single'],
+  quotes: [
+    'error',
+    'single',
+    {
+      avoidEscape: true,
+    },
+  ],
   indent: ['error', 2, { SwitchCase: 1 }],
   curly: ['error'],
   'block-spacing': ['error'],
@@ -130,61 +140,79 @@ const baseRules = {
   'compat/compat': 'off',
 }
 
-module.exports = {
-  env: {
-    browser: true,
-    es6: true,
+export default tseslint.config([
+  {
+    name: 'Vue3.dev ignores',
+    ignores: ['externs', 'dist', 'src/docs/components/raw', 'src/types.d.ts'],
   },
-  extends: baseConfigs,
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  plugins: ['vue'],
-  parserOptions: {
-    parser: '@typescript-eslint/parser',
-    ecmaVersion: 6,
-  },
-  overrides: [
-    {
-      files: [
-        '.eslintrc.js',
-        '.ncurc.js',
-        'husky.config.js',
-        'lint-staged.config.js',
-        'babel.config.js',
-        'postcss.config.js',
-        'webpack.config.js',
-        '.3rdparty-eslintrc.js',
-        '.np-config.js',
-      ],
-      extends: baseConfigs,
-      env: {
-        node: true,
-      },
+  ...baseConfigs,
+  {
+    name: 'Vue3.dev base',
+    languageOptions: {
       globals: {
+        ...globals.browser,
+        ...globals.es6,
+      },
+      parserOptions: {
+        parser: tseslint.parser,
+      },
+    },
+    rules: {
+      ...baseRules,
+    },
+    settings: {
+      'import/resolver': {
+        'babel-module': {},
+        node: {
+          extensions: ['.js', '.vue'],
+        },
+      },
+    },
+  },
+  {
+    name: 'Vue3.dev config files',
+    files: [
+      '.ncurc.js',
+      'husky.config.js',
+      'lint-staged.config.js',
+      'babel.config.js',
+      'postcss.config.js',
+      'webpack.config.js',
+      '.3rdparty-eslintrc.js',
+      '.np-config.js',
+    ],
+    languageOptions: {
+      sourceType: 'script',
+      globals: {
+        ...globals.node,
         // Have to add these back due to config inheritance
         __dirname: true,
         module: true,
         require: true,
       },
       parserOptions: {
-        ecmaVersion: 2018,
+        ecmaVersion: 2022,
         sourceType: 'script',
       },
-      rules: {
-        ...baseRules,
-        strict: ['error', 'global'],
-        'import/no-commonjs': 'off',
-      },
     },
-    {
-      files: '*.ts',
-      extends: baseTSConfigs,
-      plugins: ['@typescript-eslint'],
-      parser: '@typescript-eslint/parser',
+    rules: {
+      // ...baseRules,
+      strict: ['error', 'global'],
+      'import/no-commonjs': 'off',
+    },
+  },
+  ...baseTSConfigs.map(config => {
+    return {
+      ...config,
+      name: 'Vue3.dev TypeScript',
+      files: ['**/*.ts'],
+      languageOptions: {
+        parserOptions: {
+          parser: tseslint.parser,
+        },
+      },
       rules: {
-        ...baseRules,
+        // ...baseRules,
         // Reenable later
         'eslint-comments/require-description': 0,
         'eslint-comments/no-unused-disable': 0,
@@ -197,38 +225,31 @@ module.exports = {
         '@typescript-eslint/explicit-module-boundary-types': 0,
         '@typescript-eslint/no-empty-interface': 0,
       },
-    },
-    {
-      files: 'src/shims-vue.d.ts',
+    }
+  }),
+  ...baseTSConfigs.map(config => {
+    return {
+      ...config,
+      name: 'Shim Vue3.dev',
+      files: ['src/shims-vue.d.ts'],
       extends: baseTSConfigs,
       rules: {
-        ...baseRules,
+        // ...baseRules,
         // No imports/exports in plain declaration file
         'import/unambiguous': 'off',
       },
-    },
-    {
-      files: '*.vue',
-      extends: baseConfigs,
-      rules: {
-        ...baseRules,
-        ...vueRules,
-        // Reapply to better match prettier
-        'arrow-parens': ['error', 'as-needed'],
-        // 'comma-dangle': ['error', 'always'], // Interferes with arrow-parens
-        'space-before-function-paren': ['error', 'never'],
-      },
-    },
-  ],
-  rules: {
-    ...baseRules,
-  },
-  settings: {
-    'import/resolver': {
-      'babel-module': {},
-      node: {
-        extensions: ['.js', '.vue'],
-      },
+    }
+  }),
+  {
+    name: 'Vue3.dev',
+    files: ['**/*.vue'],
+    rules: {
+      // ...baseRules,
+      ...vueRules,
+      // Reapply to better match prettier
+      'arrow-parens': ['error', 'as-needed'],
+      // 'comma-dangle': ['error', 'always'], // Interferes with arrow-parens
+      'space-before-function-paren': ['error', 'never'],
     },
   },
-}
+])

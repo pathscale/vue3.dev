@@ -94,10 +94,10 @@ export default {
 
   <v-table :data="datagrid" searchable hoverable striped bordered fullwidth sortable>
     <template #header>
-      <v-button @click="addRow(2)" light class="mr-4 mb-4">
+      <v-button light class="mr-4 mb-4" @click="addRow(2)">
         Add row with index 2
       </v-button>
-      <v-button @click="deleteRow(2)" light ckass="mb-4">
+      <v-button light ckass="mb-4" @click="deleteRow(2)">
         Delete row with index 2
       </v-button>
     </template>

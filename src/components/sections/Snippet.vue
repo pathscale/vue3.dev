@@ -1,5 +1,4 @@
 <script>
-/* eslint-disable no-unsanitized/property -- ignore */
 import { VButton, VTabs, VTab } from '@pathscale/vue3-ui'
 import { ref, computed } from 'vue'
 
@@ -73,21 +72,21 @@ export default {
 </script>
 
 <template>
-  <div class="box mt-6" :id="title.toLowerCase()">
+  <div :id="title.toLowerCase()" class="box mt-6">
     <h1 v-if="title" class="title is-size-4 mt-4">
       <a :href="getDemoLink()" class="is-active">#</a> {{ title }}
     </h1>
-    <div :class="{'is-40': isHalfWidth}" v-if="component">
+    <div v-if="component" :class="{'is-40': isHalfWidth}">
       <component :is="component" />
     </div>
     <v-tabs v-model="activeTab" type="is-boxed" class="mt-4">
-      <v-tab label="Code" v-if="script">
+      <v-tab v-if="script" label="Code">
         <pre v-highlightjs :class="format"><code>{{ script }}</code></pre>
       </v-tab>
-      <v-tab label="Template" v-if="template">
+      <v-tab v-if="template" label="Template">
         <pre v-highlightjs :class="format"><code>{{ template }}</code></pre>
       </v-tab>
-      <v-tab label="Style" v-if="style">
+      <v-tab v-if="style" label="Style">
         <pre v-highlightjs :class="format"><code>{{ style }}</code></pre>
       </v-tab>
     </v-tabs>

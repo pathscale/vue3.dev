@@ -11,7 +11,7 @@ export default {
   name: 'DevPageCheckbox',
   components: { SnippetSection, ApiSection },
   setup() {
-    
+
     const router = useRouter()
     return { api, router, Showcase, ShowcaseCode }
   }

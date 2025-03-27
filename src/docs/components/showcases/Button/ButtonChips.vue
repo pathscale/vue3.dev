@@ -8,7 +8,7 @@ export default {
   setup() {
     const isActive = ref(true)
 
-    
+
 
     const onClick = () => {
       isActive.value = !isActive.value
@@ -24,7 +24,7 @@ export default {
 
 <template>
   <div class="buttons">
-    <v-button type="is-info" focused @click="onClick" :inverted="isActive" rounded>
+    <v-button type="is-info" focused :inverted="isActive" rounded @click="onClick">
       Click me
     </v-button>
   </div>

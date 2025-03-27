@@ -11,7 +11,7 @@ export default {
   name: 'DevPageAccordion',
   components: { SnippetSection, ApiSection },
   setup() {
-    
+
     const router = useRouter()
     return { api, router, Showcase, ShowcaseCode }
   }

@@ -20,7 +20,7 @@ export default {
     })
 
     const displayDate = computed(() => {
-      if (!state.date || !state.date[0] || !state.date[1]) return '- n/a -'
+      if (!state.date || !state.date[0] || !state.date[1]) { return '- n/a -' }
       return state.date[0] + ' to ' + state.date[1]
     })
 
@@ -31,7 +31,7 @@ export default {
 
 <template>
   <v-field label="Date">
-    <v-calendar type="date" v-model="state.date" :options="state.options" range />
+    <v-calendar v-model="state.date" type="date" :options="state.options" range />
   </v-field>
   <v-field label="Range">
     <div class="field">

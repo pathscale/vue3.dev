@@ -14,7 +14,7 @@ export default {
   setup() {
     const router = useRouter()
     const state = reactive({
-      template: true, 
+      template: true,
     })
 
     function toggle(value) {
@@ -45,8 +45,8 @@ export default {
           <h4 class="title is-4">
             1. Starter Template <i>(recommended)</i>
           </h4>
-          <v-icon custom-class="collapse-icon" v-show="state.template" name="menu-up-icon" bundle="icons" />
-          <v-icon custom-class="collapse-icon" v-show="!state.template" name="menu-down-icon" bundle="icons" />
+          <v-icon v-show="state.template" custom-class="collapse-icon" name="menu-up-icon" bundle="icons" />
+          <v-icon v-show="!state.template" custom-class="collapse-icon" name="menu-down-icon" bundle="icons" />
         </div>
       </template>
       <template #content>

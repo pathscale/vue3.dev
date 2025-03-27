@@ -14,6 +14,6 @@ export default {
 
 <template>
   <v-field>
-    <v-textarea color="is-danger" v-model="text" loading />
+    <v-textarea v-model="text" color="is-danger" loading />
   </v-field>
 </template>

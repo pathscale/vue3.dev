@@ -58,10 +58,10 @@ export default {
   <h4 class="is-size-5 mb-4">
     Toggle Columns
   </h4>
-  <v-switch class="mr-4 mb-4 mt-4" v-model="columns.id.show">
+  <v-switch v-model="columns.id.show" class="mr-4 mb-4 mt-4">
     ID
   </v-switch>
-  <v-switch class="mr-4 mb-4 mt-4" v-model="columns.color.show">
+  <v-switch v-model="columns.color.show" class="mr-4 mb-4 mt-4">
     Color
   </v-switch>
   <v-table :data="datagrid" fullwidth />

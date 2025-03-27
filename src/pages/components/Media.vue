@@ -13,7 +13,7 @@ export default {
   components: { SnippetSection, ApiSection, VariablesSection },
   setup() {
     const router = useRouter()
-    return {  api, variables, router, Showcase, ShowcaseCode }
+    return { api, variables, router, Showcase, ShowcaseCode }
   }
 }
 </script>

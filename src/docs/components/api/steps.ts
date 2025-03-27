@@ -1,14 +1,14 @@
-const api =
-[
+const api = [
   {
     title: 'VSteps',
-    github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Steps/Steps.vue',
+    github:
+      'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Steps/Steps.vue',
     props: [
       {
         name: 'v-model',
         description: 'Binding value, active tab',
         type: 'String, Number',
-        required: true
+        required: true,
       },
       {
         name: 'size',
@@ -26,13 +26,14 @@ const api =
       {
         name: 'change',
         description: 'Triggers when tab is changed',
-        parameters: 'value: String|Number'
+        parameters: 'value: String|Number',
       },
-    ]
+    ],
   },
   {
     title: 'VStepItem',
-    github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Steps/VStepItem.vue',
+    github:
+      'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Steps/VStepItem.vue',
     props: [
       {
         name: 'title',
@@ -65,8 +66,8 @@ const api =
         name: 'default',
         description: 'Tab item body',
       },
-    ]
-  }
+    ],
+  },
 ]
 
 export default api

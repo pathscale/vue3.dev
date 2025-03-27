@@ -4,7 +4,7 @@ import { VField, VInput } from '@pathscale/vue3-ui'
 
 export default {
   name: 'ValidationBasicExample',
-  components: {  VField, VInput },
+  components: { VField, VInput },
   setup() {
     const state = reactive({
       username: '',
@@ -43,9 +43,9 @@ export default {
 
 <template>
   <v-field label="Username" :message="errors.username" :type="types.username">
-    <v-input type="text" v-model="state.username" :color="types.username" />
+    <v-input v-model="state.username" type="text" :color="types.username" />
   </v-field>
   <v-field label="Password" :message="errors.password" :type="types.password">
-    <v-input type="password" v-model="state.password" :color="types.password" />
+    <v-input v-model="state.password" type="password" :color="types.password" />
   </v-field>
 </template>

@@ -17,7 +17,7 @@ export default {
   components: { SnippetSection, ApiSection },
   setup() {
     const router = useRouter()
-    return {api, router, Showcases, ColorCode, SizeCode, LoadingCode, FocusedCode, CounterCode }
+    return { api, router, Showcases, ColorCode, SizeCode, LoadingCode, FocusedCode, CounterCode }
   }
 }
 </script>

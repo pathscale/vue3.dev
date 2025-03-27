@@ -1,6 +1,6 @@
 <script>
 import { VField, VSelect } from '@pathscale/vue3-ui'
-import { ref } from "vue"
+import { ref } from 'vue'
 
 export default {
   name: 'DevShowcaseSelect',

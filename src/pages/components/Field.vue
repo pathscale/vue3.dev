@@ -16,7 +16,7 @@ export default {
   name: 'DevPageField',
   components: { SnippetSection, ApiSection },
   setup() {
-    
+
     const router = useRouter()
     return { api, router, Showcases, AddonsCode, GroupedCode, HorizontalCode, MessageCode, SizeCode }
   }

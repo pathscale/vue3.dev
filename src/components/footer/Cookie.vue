@@ -18,7 +18,7 @@ export default {
       isAccepted ? state.showBanner = false : state.showBanner = true
     })
     function handlePrivacyPolicy() {
-      // eslint-disable-next-line no-console -- Have way to show it works
+
       console.log('handlePrivacyPolicy')
     }
     function handleAgree() {
@@ -32,7 +32,7 @@ export default {
 
 <template>
   <transition name="fade">
-    <div id="cookie-banner-full-width" v-if="state.showBanner">
+    <div v-if="state.showBanner" id="cookie-banner-full-width">
       <v-columns>
         <v-column size="is-10">
           <span id="text-cookie">
@@ -75,9 +75,9 @@ export default {
   border: 1px solid #260e3b;
   z-index: 200;
   padding: 16px;
-  -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.75);
-  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 10px 3px rgb(0 0 0 / 75%);
+  box-shadow: 0 0 10px 3px rgb(0 0 0 / 75%);
+  box-shadow: 0 0 10px 3px rgb(0 0 0 / 75%);
 }
 
 @media only screen and (max-width: 1024px) {

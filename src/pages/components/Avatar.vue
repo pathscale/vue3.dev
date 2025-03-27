@@ -12,7 +12,7 @@ import AvatarWithPhoto from '../../docs/components/raw/Avatar/AvatarWithPhoto.tx
 export default {
   name: 'DevPageAvatar',
   components: { SnippetSection, ApiSection },
-  setup() {  
+  setup() {
     const router = useRouter()
     return { api, router, Showcase, AvatarBasic, AvatarWithPhoto }
   }

@@ -14,18 +14,18 @@ export default {
 
 <template>
   <v-field>
-    <v-textarea color="is-info" v-model="text" />
+    <v-textarea v-model="text" color="is-info" />
   </v-field>
 
   <v-field>
-    <v-textarea color="is-success" v-model="text" />
+    <v-textarea v-model="text" color="is-success" />
   </v-field>
 
   <v-field>
-    <v-textarea color="is-warning" v-model="text" />
+    <v-textarea v-model="text" color="is-warning" />
   </v-field>
 
   <v-field>
-    <v-textarea color="is-danger" v-model="text" />
+    <v-textarea v-model="text" color="is-danger" />
   </v-field>
 </template>

@@ -10,7 +10,7 @@ export default {
         name
       })
     }
-    return {  router, redirect }
+    return { router, redirect }
   }
 }
 </script>

@@ -11,7 +11,7 @@ export default {
   name: 'DevPageDatagrid',
   components: { SnippetSection, ApiSection },
   setup() {
-    
+
     const router = useRouter()
     return {
       api,

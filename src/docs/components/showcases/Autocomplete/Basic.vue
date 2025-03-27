@@ -30,5 +30,5 @@ export default {
 
 <template>
   Selected: {{ result }}
-  <v-autocomplete :items="items" v-model="result" />
+  <v-autocomplete v-model="result" :items="items" />
 </template>

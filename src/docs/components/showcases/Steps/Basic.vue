@@ -37,7 +37,7 @@ export default {
         <v-input v-model="state.name" />
       </v-field>
       <v-field label="Email">
-        <v-input type="email" v-model="state.email" maxlength="30" />
+        <v-input v-model="state.email" type="email" maxlength="30" />
       </v-field>
 
       <div class="buttons is-justify-content-right">
@@ -51,7 +51,7 @@ export default {
         <v-input v-model="state.username" maxlength="30" />
       </v-field>
       <v-field label="Password">
-        <v-input type="password" v-model="state.password" />
+        <v-input v-model="state.password" type="password" />
       </v-field>
 
       <div class="buttons is-justify-content-right">
@@ -63,7 +63,7 @@ export default {
     <!-- Step 3 -->
     <v-step-item title="Recovery" marker="3">
       <v-field label="Recovery passphrase">
-        <v-input maxlength="144" type="textarea" v-model="state.message" />
+        <v-input v-model="state.message" maxlength="144" type="textarea" />
       </v-field>
       <v-field label="Amount">
         <v-input v-model="state.amount" min="0" type="number" />

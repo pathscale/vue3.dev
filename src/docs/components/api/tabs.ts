@@ -1,14 +1,14 @@
-const api =
-[
+const api = [
   {
     title: 'VTabs',
-    github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Tabs/Tabs.vue',
+    github:
+      'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Tabs/Tabs.vue',
     props: [
       {
         name: 'v-model',
         description: 'Binding value, active tab',
         type: 'String, Number',
-        required: true
+        required: true,
       },
       {
         name: 'size',
@@ -37,26 +37,27 @@ const api =
         name: 'animated',
         description: 'Tabs have a horizontal transition',
         type: 'Boolean',
-        default: 'true'
+        default: 'true',
       },
       {
         name: 'vanimated',
         description: 'Tabs have a vertical collapse effect',
         type: 'Boolean',
-        default: 'true'
+        default: 'true',
       },
     ],
     events: [
       {
         name: 'change',
         description: 'Triggers when tab is changed',
-        parameters: 'value: String|Number'
+        parameters: 'value: String|Number',
       },
-    ]
+    ],
   },
   {
     title: 'VTab',
-    github: 'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Tabs/Tab.vue',
+    github:
+      'https://github.com/pathscale/vue3-ui/blob/master/src/components/compounds/Tabs/Tab.vue',
     props: [
       {
         name: 'label',
@@ -73,7 +74,7 @@ const api =
         name: 'visible',
         description: 'Tab is visible',
         type: 'Boolean',
-        default: 'true'
+        default: 'true',
       },
     ],
     slots: [
@@ -81,8 +82,8 @@ const api =
         name: 'default',
         description: 'Tab item body',
       },
-    ]
-  }
+    ],
+  },
 ]
 
 export default api

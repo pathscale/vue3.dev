@@ -11,7 +11,7 @@ export default {
   setup() {
     const intl = useI18n()
     function scrollToOverview() {
-      // eslint-disable-next-line no-undef -- defined globally in smothScroll.js
+
       smoothScroll(document.querySelector('#overview'))
     }
     return { intl, logo, scrollToOverview }
@@ -20,12 +20,12 @@ export default {
 </script>
 
 <template>
-  <section class="hero is-fullheight" id="home">
+  <section id="home" class="hero is-fullheight">
     <div class="hero-body">
       <div class="container">
         <v-columns hcentered>
           <v-column size="is-full-touch is-three-quarters" class="has-text-centered">
-            <v-image :src="logo" ref="social chat" class="mb-4" size="is-128x128" centered />
+            <v-image ref="social chat" :src="logo" class="mb-4" size="is-128x128" centered />
             <p class="has-text-white is-size-5 is-size-6-touch">
               {{ intl.$ts('home.content') }}
             </p>

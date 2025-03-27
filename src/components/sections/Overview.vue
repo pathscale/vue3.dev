@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-  <section class="hero section px-0" id="overview">
+  <section id="overview" class="hero section px-0">
     <div class="hero-body px-0">
       <div class="container has-background-black-ter is-fullwidth has-border py-6">
         <p class="title has-text-white has-text-centered">

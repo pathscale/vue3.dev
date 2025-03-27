@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <section class="hero section" id="blog">
+  <section id="blog" class="hero section">
     <div class="hero-body">
       <div class="container">
         <v-columns vcentered hcentered>
