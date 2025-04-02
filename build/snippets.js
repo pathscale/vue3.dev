@@ -1,3 +1,4 @@
+/* eslint-disable import/no-commonjs -- Todo when switch to native ESM */
 const showcaseDir = 'src/docs/components/showcases'
 const rawDir = 'src/docs/components/raw'
 

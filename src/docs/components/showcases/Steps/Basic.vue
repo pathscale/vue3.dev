@@ -12,6 +12,7 @@ export default {
       name: 'John Wick',
       email: 'boogeyman@gmail.com',
       username: 'the_boogeyman',
+      // eslint-disable-next-line sonarjs/no-hardcoded-passwords -- Demo purpose
       password: 'Daisy',
       message: 'Guns. Lots of guns.',
     })

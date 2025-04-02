@@ -25,6 +25,7 @@ export default {
       }
 
       if (!validators.password(state.password)) {
+        // eslint-disable-next-line sonarjs/no-hardcoded-passwords -- Not a real password
         errors.password = 'Must be at least 5 chars long and contain no spaces'
       } else {
         delete errors.password

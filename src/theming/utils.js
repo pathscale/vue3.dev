@@ -139,6 +139,7 @@ const hexToHSL = H => {
     l = 0
 
   if (delta === 0) {
+    // eslint-disable-next-line sonarjs/no-redundant-assignments -- For clarity
     h = 0
   } else if (cmax === r) {
     h = ((g - b) / delta) % 6

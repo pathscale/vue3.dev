@@ -203,10 +203,13 @@ export default {
         dismissible,
         onClick,
       }
-      typeof type === 'string' && (options.type = type)
+      if (typeof type === 'string') {
+        options.type = type
+      }
 
-      typeof state.options.maxToasts === 'string' &&
-        (state.options.maxToasts = Number.parseInt(state.options.maxToasts))
+      if (typeof state.options.maxToasts === 'string') {
+        state.options.maxToasts = Number.parseInt(state.options.maxToasts)
+      }
 
       $toast.show(state.message, {
         ...options,

@@ -17,7 +17,7 @@ import analyzer from 'rollup-plugin-analyzer'
 import sucrase from '@rollup/plugin-sucrase'
 import vue from '@pathscale/rollup-plugin-vue3'
 import vue3svg from '@pathscale/vue3-svg-icons'
-import vue3uiPurge from '@pathscale/rollup-plugin-vue3-ui-css-purge'
+// import vue3uiPurge from '@pathscale/rollup-plugin-vue3-ui-css-purge'
 import visualizer from 'rollup-plugin-visualizer'
 import { string } from 'rollup-plugin-string'
 

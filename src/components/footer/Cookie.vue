@@ -15,7 +15,7 @@ export default {
     })
     onMounted(() => {
       const isAccepted = localStorage.getItem('pathscaleCookiesBanner') === 'true'
-      isAccepted ? state.showBanner = false : state.showBanner = true
+      state.showBanner = !isAccepted
     })
     function handlePrivacyPolicy() {
 
@@ -75,8 +75,6 @@ export default {
   border: 1px solid #260e3b;
   z-index: 200;
   padding: 16px;
-  box-shadow: 0 0 10px 3px rgb(0 0 0 / 75%);
-  box-shadow: 0 0 10px 3px rgb(0 0 0 / 75%);
   box-shadow: 0 0 10px 3px rgb(0 0 0 / 75%);
 }
 

@@ -377,7 +377,7 @@ const routes = [
 export const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(to /* , from, savedPosition */) {
     if (to.hash) {
       document.querySelector(to.hash).scrollIntoView()
       return {

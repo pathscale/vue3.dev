@@ -1,4 +1,4 @@
-window.smoothScroll = function (target) {
+globalThis.smoothScroll = function (target) {
   let scrollContainer = target
   do {
     scrollContainer = scrollContainer.parentNode
@@ -16,7 +16,7 @@ window.smoothScroll = function (target) {
     targetY += target.offsetTop
   } while ((target = target.offsetParent))
 
-  scroll = function (c, a, b, i) {
+  const scroll = function (c, a, b, i) {
     i++
     if (i > 30) {
       return

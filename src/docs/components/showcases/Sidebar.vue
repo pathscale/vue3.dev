@@ -5,7 +5,7 @@ import { reactive } from 'vue'
 export default {
   name: 'DevShowcaseSidebar',
   components: { VSidebar, VButton, VSwitch, VField, VMenu, VMenuList, VMenuItem },
-  setup(props) {
+  setup(/* props */) {
     const state = reactive({
       state: true,
       overlay: false,

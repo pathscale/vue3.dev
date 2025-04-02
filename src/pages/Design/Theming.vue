@@ -97,8 +97,8 @@ export default {
       </v-button>
     </template>
 
-    <v-dropdown-item v-for="color in colors" :key="color" :value="color" :style="`background-color: ${color}`">
-      {{ color }}
+    <v-dropdown-item v-for="clr in colors" :key="clr" :value="clr" :style="`background-color: ${clr}`">
+      {{ clr }}
     </v-dropdown-item>
   </v-dropdown>
 

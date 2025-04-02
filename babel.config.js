@@ -3,7 +3,7 @@
 const path = require('path')
 
 const extensions = ['.ts', '.mjs', '.js', '.vue', '.json']
-module.exports = api => {
+const babelConfig = api => {
   api.cache.invalidate(() => process.env.NODE_ENV === 'production')
   const plugins = [
     [
@@ -11,7 +11,7 @@ module.exports = api => {
       {
         extensions,
         alias: {
-          '~': path.resolve('src').replace(/\\/g, '/'),
+          '~': path.resolve('src').replaceAll('\\', '/'),
           vue: '@vue/runtime-dom',
         },
       },
@@ -19,3 +19,5 @@ module.exports = api => {
   ]
   return { plugins }
 }
+
+module.exports = babelConfig

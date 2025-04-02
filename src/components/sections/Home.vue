@@ -1,4 +1,5 @@
 <script>
+/* globals smoothScroll -- Globally defined */
 import { VButton, VColumns, VColumn, VImage } from '@pathscale/vue3-ui'
 import { useI18n } from 'vue-composable'
 import logo from '../../assets/svg/vue3-logo.svg'

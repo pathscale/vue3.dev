@@ -1,10 +1,12 @@
 import globals from 'globals'
-import tseslint from 'typescript-eslint' // eslint-disable-line import/no-unresolved
+import tseslint from 'typescript-eslint' // eslint-disable-line import/no-unresolved -- Bug
 import pluginVue from 'eslint-plugin-vue'
 import importPlugin from 'eslint-plugin-import'
+import ashNazg from 'eslint-config-ash-nazg'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
 const baseConfigs = [
+  ...ashNazg(['sauron', 'script']),
   ...pluginVue.configs['flat/recommended'],
   importPlugin.flatConfigs.errors,
   importPlugin.flatConfigs.warnings,
@@ -173,6 +175,7 @@ export default tseslint.config([
     name: 'Vue3.dev config files',
     files: [
       '.ncurc.js',
+      '.stylelintrc.js',
       'husky.config.js',
       'lint-staged.config.js',
       'babel.config.js',
@@ -243,6 +246,11 @@ export default tseslint.config([
   {
     name: 'Vue3.dev',
     files: ['**/*.vue'],
+    languageOptions: {
+      globals: {
+        process: 'readonly',
+      },
+    },
     rules: {
       // ...baseRules,
       ...vueRules,

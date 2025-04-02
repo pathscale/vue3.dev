@@ -12,7 +12,7 @@ export default {
   setup(props) {
 
     const components = []
-    props.api.forEach(e => {
+    props.api.forEach(() => {
       components.push(0)
     })
     const tab = ref(components)

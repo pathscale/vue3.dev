@@ -4,9 +4,9 @@ import { VChart, VButton } from '@pathscale/vue3-ui'
 import { computed, ref, toRaw } from 'vue'
 
 function range(min, max) {
-  const len = max - min + 1
-  const arr = new Array(len)
-  for (let i = 0; i < len; i++) {
+  const length = max - min + 1
+  const arr = Array.from({ length })
+  for (let i = 0; i < length; i++) {
     arr[i] = min + i
   }
   return arr
