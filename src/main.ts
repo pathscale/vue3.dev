@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import { Toaster } from '@pathscale/vue3-ui'
 
 import App from './App.vue'
-// import '@bulvar/bulma/css/bulma.css'
+import '@bulvar/bulma/css/bulma.css'
 import '@pathscale/bulma-extensions-css-var'
 
 import '@pathscale/fonts-metroclean'
