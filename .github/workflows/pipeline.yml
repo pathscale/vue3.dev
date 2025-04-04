@@ -15,6 +15,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Show Node.js version
+        run: |
+          echo "Node version: $(node -v)"
+          echo "NPM version: $(npm -v)"
+
       - name: Install Dependencies
         run: |
           npm install --frozen-lockfile
