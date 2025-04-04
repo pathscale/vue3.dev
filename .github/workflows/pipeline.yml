@@ -29,6 +29,15 @@ jobs:
       - name: Install Dependencies
         run: |
           npm install --frozen-lockfile
+          echo "=== Main Dependencies ==="
+          npm list --depth=0
+          echo "=== Vue Dependencies ==="
+          npm list vue @pathscale/vue3-ui vue-router --depth=0
+          echo "=== package.json ==="
+          cat package.json
+          echo "=== package-lock.json (main dependencies only) ==="
+          grep -A 5 '"dependencies":' package-lock.json
+
       - name: Npm audit
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm audit --prod
@@ -48,8 +57,27 @@ jobs:
         env:
           NODE_OPTIONS: --max_old_space_size=4096
         run: |
-          echo $NODE_OPTIONS 
+          echo "=== Starting build ==="
           npm run build --if-present
+          echo "=== Build information ==="
+          ls -la dist/
+          echo "=== index.html content ==="
+          cat dist/index.html
+          echo "=== main.js content ==="
+          cat dist/assets/main.js | head -n 50
+          echo "=== vendor.js content ==="
+          cat dist/assets/vendor.js | head -n 50
+
+      - name: Analyze build for potential issues
+        run: |
+          echo "=== Analyzing potential loops ==="
+          # Look for common loop patterns
+          grep -r "while.*true" dist/ || true
+          grep -r "for.*in" dist/ || true
+          grep -r "setInterval" dist/ || true
+          grep -r "setTimeout" dist/ || true
+          echo "=== Looking for recursive calls ==="
+          grep -r "function.*(" dist/ | grep -v "function.*(" | head -n 20 || true
 
       - name: Configure compression
         run: |
