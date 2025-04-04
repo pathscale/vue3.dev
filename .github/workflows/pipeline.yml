@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 jobs:
   check_build_upload:
     runs-on: ubuntu-latest
