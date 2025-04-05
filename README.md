@@ -22,24 +22,24 @@ Official documentation and site for <a href="https://vue3.dev/">Vue3.dev</a>
 ## Project setup
 
 ```
-npm install
+bun install
 ```
 
 ### Compiles and hot-reloads for development
 
 ```
-npm run start
+bun run start
 ```
 
 ### Compiles and minifies for production
 
 ```
-npm run build
+bun run build
 ```
 
 ### Lints and fixes files
 
 ```
-npm run lint
+bun run lint
 ```
 

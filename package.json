@@ -11,14 +11,14 @@
   "author": "PathScale (https://vue3.dev/)",
   "contributors": [],
   "scripts": {
-    "prebuild": "shx rm -rf dist && shx mkdir dist && npm run build:snippets",
+    "prebuild": "shx rm -rf dist && shx mkdir dist && bun run build:snippets",
     "build": "rollup -c --environment NODE_ENV:production",
     "postbuild": "shx cp serve.json dist",
-    "build:snippets": "node build/snippets.js",
+    "build:snippets": "bun build/snippets.js",
     "fetch-bundle": "./fetchBundle.sh",
     "css-lint": "stylelint src",
     "lint": "eslint --ext .js,.mjs,.ts,.vue src --fix --max-warnings=0 .",
-    "prestart": "shx rm -rf dist && npm run build:snippets",
+    "prestart": "shx rm -rf dist && bun run build:snippets",
     "start": "rollup -c -w --environment NODE_ENV:development",
     "prepare": "husky install"
   },
@@ -42,7 +42,7 @@
     "@pathscale/rollup-plugin-vue3": "^0.0.4",
     "@pathscale/rollup-plugin-vue3-ui-css-purge": "^0.0.40",
     "@pathscale/vue3-svg-icons": "^0.0.12",
-    "@pathscale/vue3-ui": "^1.0.13",
+    "@pathscale/vue3-ui": "^1.0.14",
     "@pathscale/wss-adapter": "^1.0.13",
     "@rollup/plugin-alias": "^3.1.9",
     "@rollup/plugin-commonjs": "^22.0.1",
@@ -93,6 +93,6 @@
     "vue-router": "^4.0.16"
   },
   "engines": {
-    "node": ">=14"
+    "bun": ">=1.0.0"
   }
 }
