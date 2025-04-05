@@ -7,7 +7,7 @@ export default {
   components: { VSidebar, VButton, VSwitch, VField, VMenu, VMenuList, VMenuItem },
   setup(/* props */) {
     const state = reactive({
-      state: true,
+      open: false,
       overlay: false,
       reduced: false,
     })
