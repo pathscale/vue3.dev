@@ -2,33 +2,35 @@
 import { useRouter } from 'vue-router'
 
 import { VDropdown, VDropdownItem, VButton } from '@pathscale/vue3-ui'
-import { ref, watchEffect, onUnmounted } from 'vue'
+import { ref, watch, onUnmounted, computed } from 'vue'
+
+const NAVBAR_BACKGROUND_COLOR = '--navbar-background-color'
 
 export default {
   name: 'DevPageTheming',
   components: { VDropdown, VDropdownItem, VButton },
   setup() {
     const router = useRouter()
-    const colors = ['black', 'red', 'blue', 'green']
-    const color = ref('#000')
     const root = document.documentElement
-
-    const isOriginalColor = color.value === '#000'
+    const colors = ['black', 'red', 'blue', 'green']
+    const originalColor = getComputedStyle(root).getPropertyValue(NAVBAR_BACKGROUND_COLOR)
+    const color = ref(originalColor)
+    const isOriginalColor = computed(() => color.value === originalColor)
 
     function setColor(value) {
-      root.style.setProperty('--blm-nav-bg-clr', value)
+      root.style.setProperty(NAVBAR_BACKGROUND_COLOR, value)
     }
 
     onUnmounted(() => {
-      root.style.setProperty('--blm-nav-bg-clr', '#000')
+      setColor(originalColor)
     })
 
-    watchEffect(() => {
+    watch(color, () => {
       setColor(color.value)
     })
 
     return { router, color, colors, isOriginalColor }
-  }
+  },
 }
 </script>
 
