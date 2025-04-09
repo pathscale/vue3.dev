@@ -40,7 +40,7 @@
     "@pathscale/fonts-metroclean": "^1.0.8",
     "@pathscale/frappe-charts": "^0.0.2",
     "@pathscale/rollup-plugin-vue3": "^0.0.4",
-    "@pathscale/rollup-plugin-vue3-ui-css-purge": "^0.0.40",
+    "@pathscale/rollup-plugin-vue3-ui-css-purge": "^0.0.41",
     "@pathscale/vue3-svg-icons": "^0.0.12",
     "@pathscale/vue3-ui": "^1.0.14",
     "@pathscale/wss-adapter": "^1.0.13",
