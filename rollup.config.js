@@ -145,7 +145,7 @@ const config = [
       replace({
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
         'process.env.VUE_APP_VERSION_NUMBER': JSON.stringify(env.parsed.VUE_APP_VERSION_NUMBER),
-        __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: JSON.stringify(true),
+        __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
         __VUE_OPTIONS_API__: false,
         __VUE_PROD_DEVTOOLS__: false,
         preventAssignment: true,
