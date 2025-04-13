@@ -22,11 +22,11 @@ export default {
       Active checkbox
     </v-checkbox>
     <br />
-    <v-checkbox indeterminate>
+    <v-checkbox indeterminate v-model="value">
       Indeterminate checkbox
     </v-checkbox>
     <br />
-    <v-checkbox disabled>
+    <v-checkbox disabled v-model="value">
       Disabled checkbox
     </v-checkbox>
   </v-field>

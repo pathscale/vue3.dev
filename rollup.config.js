@@ -145,9 +145,10 @@ const config = [
       replace({
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
         'process.env.VUE_APP_VERSION_NUMBER': JSON.stringify(env.parsed.VUE_APP_VERSION_NUMBER),
+        __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: JSON.stringify(true),
         __VUE_OPTIONS_API__: false,
         __VUE_PROD_DEVTOOLS__: false,
-        preventAssignment: true
+        preventAssignment: true,
       }),
       json(),
       alias({ entries: { vue: '@vue/runtime-dom' } }),
@@ -181,13 +182,13 @@ const config = [
 
       prod && terser({ format: { comments: false } }),
       prod &&
-      gzip({
-        fileName: '.br',
-        customCompression: content =>
-          zlib.brotliCompressSync(Buffer.from(content), {
-            params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 },
-          }),
-      }),
+        gzip({
+          fileName: '.br',
+          customCompression: content =>
+            zlib.brotliCompressSync(Buffer.from(content), {
+              params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 },
+            }),
+        }),
       html({
         publicPath: env.parsed.BASE_URL,
         title: 'Vue3-ui',
@@ -195,12 +196,12 @@ const config = [
       }),
 
       watch &&
-      serve({
-        host: '0.0.0.0',
-        contentBase: 'dist',
-        historyApiFallback: true,
-        port: 5000,
-      }),
+        serve({
+          host: '0.0.0.0',
+          contentBase: 'dist',
+          historyApiFallback: true,
+          port: 5000,
+        }),
 
       watch && livereload({ watch: 'dist' }),
       prod && analyzer(),

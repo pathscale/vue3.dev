@@ -22,7 +22,7 @@ export default {
           if (binding.value) {
             target.innerHTML = binding.value
           }
-          hljs.highlightBlock(target)
+          hljs.highlightElement(target)
         }
       },
       componentUpdated(el, binding) {
@@ -30,7 +30,7 @@ export default {
         for (const target of targets) {
           if (binding.value) {
             target.innerHTML = binding.value
-            hljs.highlightBlock(target)
+            hljs.highlightElement(target)
           }
         }
       }
