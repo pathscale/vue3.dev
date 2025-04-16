@@ -1,66 +1,67 @@
 <script>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { VField, VInput, VSwitch, VButton, VColumns, VColumn } from '@pathscale/vue3-ui'
+import tinycolor from 'tinycolor2'
 
 export default {
   name: 'DevPageColors',
   components: { VField, VInput, VSwitch, VButton, VColumns, VColumn },
   setup() {
     const theme = ref('light')
-    const accent = ref('#75BF73')
-    const gray = ref('#8F97C1')
-    const background = ref('#C2C2C2')
+    const accent = ref('#3D63DD')
+    const gray = ref('#8B8D98')
+    const background = ref('#FFFFFF')
 
-    const colorScales = {
-      accent: {
-        backgrounds: [
-          { id: 1, light: '#FFFFFF', dark: '#111111' },
-          { id: 2, light: '#F8F9FA', dark: '#1A1A1A' },
-        ],
-        interactive: [
-          { id: 3, light: '#EDF2FF', dark: '#2A2A2A' },
-          { id: 4, light: '#DBE4FF', dark: '#3A3A3A' },
-          { id: 5, light: '#BAC8FF', dark: '#4A4A4A' },
-        ],
-        borders: [
-          { id: 6, light: '#91A7FF', dark: '#5A5A5A' },
-          { id: 7, light: '#748FFC', dark: '#6A6A6A' },
-          { id: 8, light: '#5C7CFA', dark: '#7A7A7A' },
-        ],
-        solid: [
-          { id: 9, light: '#4C6EF5', dark: '#8A8A8A' },
-          { id: 10, light: '#4263EB', dark: '#9A9A9A' },
-        ],
-        accessible: [
-          { id: 11, light: '#3B5BDB', dark: '#AAAAAA' },
-          { id: 12, light: '#364FC7', dark: '#BBBBBB' },
-        ]
-      },
-      gray: {
-        backgrounds: [
-          { id: 1, light: '#FFFFFF', dark: '#111111' },
-          { id: 2, light: '#F8F9FA', dark: '#1A1A1A' },
-        ],
-        interactive: [
-          { id: 3, light: '#F1F3F5', dark: '#2A2A2A' },
-          { id: 4, light: '#E9ECEF', dark: '#3A3A3A' },
-          { id: 5, light: '#DEE2E6', dark: '#4A4A4A' },
-        ],
-        borders: [
-          { id: 6, light: '#CED4DA', dark: '#5A5A5A' },
-          { id: 7, light: '#ADB5BD', dark: '#6A6A6A' },
-          { id: 8, light: '#868E96', dark: '#7A7A7A' },
-        ],
-        solid: [
-          { id: 9, light: '#495057', dark: '#8A8A8A' },
-          { id: 10, light: '#343A40', dark: '#9A9A9A' },
-        ],
-        accessible: [
-          { id: 11, light: '#212529', dark: '#AAAAAA' },
-          { id: 12, light: '#121416', dark: '#BBBBBB' },
-        ]
+    const generateColorScale = (baseColor, steps) => {
+      const color = tinycolor(baseColor)
+      const scale = []
+
+      for (let i = 0; i < steps; i++) {
+        if (i < 2) {
+          scale.push(color.clone().lighten(60 - (i * 20)).toHexString())
+        } else if (i < 5) {
+          scale.push(color.clone().lighten(35 - ((i - 2) * 12)).toHexString())
+        } else if (i < 8) {
+          scale.push(color.clone().lighten(15 - ((i - 5) * 8)).toHexString())
+        } else if (i < 10) {
+          scale.push(color.clone().darken((i - 8) * 12).toHexString())
+        } else {
+          scale.push(color.clone().darken(25 + ((i - 10) * 12)).toHexString())
+        }
       }
+      return scale
     }
+
+    const colorScales = computed(() => {
+      const accentScale = generateColorScale(accent.value, 12)
+      const grayScale = generateColorScale(gray.value, 12)
+
+      const createCategory = (start, length, lightScale) => {
+        const scale = theme.value === 'light' ? lightScale : [...lightScale].reverse()
+        return Array.from({ length }, (_, i) => ({
+          id: start + i,
+          light: lightScale[start + i - 1],
+          dark: scale[start + i - 1]
+        }))
+      }
+
+      return {
+        accent: {
+          backgrounds: createCategory(1, 2, accentScale),
+          interactive: createCategory(3, 3, accentScale),
+          borders: createCategory(6, 3, accentScale),
+          solid: createCategory(9, 2, accentScale),
+          accessible: createCategory(11, 2, accentScale)
+        },
+        gray: {
+          backgrounds: createCategory(1, 2, grayScale),
+          interactive: createCategory(3, 3, grayScale),
+          borders: createCategory(6, 3, grayScale),
+          solid: createCategory(9, 2, grayScale),
+          accessible: createCategory(11, 2, grayScale)
+        }
+      }
+    })
 
     const toggleTheme = () => {
       theme.value = theme.value === 'light' ? 'dark' : 'light'
