@@ -83,9 +83,7 @@ export default {
     <!-- Columna central -->
     <div class="column">
       <v-card>
-        <v-card-header>
-          <p class="card-header-title">Sign Up</p>
-        </v-card-header>
+
         <v-card-content>
           <v-field label="Full Name">
             <v-input placeholder="John Doe" />
@@ -124,4 +122,4 @@ export default {
       </v-tabs>
     </div>
   </div>
-</template> 
+</template>
