@@ -1,11 +1,27 @@
 <script>
 import { ref, computed } from 'vue'
-import { VField, VInput, VSwitch, VButton, VColumns, VColumn } from '@pathscale/vue3-ui'
+import {
+  VField,
+  VInput,
+  VSwitch,
+  VButton,
+  VColumns,
+  VColumn
+} from '@pathscale/vue3-ui'
+import ComponentShowcase from '../../components/ComponentShowcase.vue'
 import tinycolor from 'tinycolor2'
 
 export default {
   name: 'DevPageColors',
-  components: { VField, VInput, VSwitch, VButton, VColumns, VColumn },
+  components: {
+    VField,
+    VInput,
+    VSwitch,
+    VButton,
+    VColumns,
+    VColumn,
+    ComponentShowcase
+  },
   setup() {
     const theme = ref('light')
     const accent = ref('#3D63DD')
@@ -127,5 +143,7 @@ export default {
         </div>
       </v-column>
     </v-columns>
+
+    <component-showcase />
   </div>
 </template>
