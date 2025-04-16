@@ -90,6 +90,12 @@ const routes = [
             meta: metaTags('Theming', 'Customize Vue3-ui and make it your own.'),
           },
           {
+            name: 'colors',
+            path: 'colors',
+            component: Pages.Colors,
+            meta: metaTags('Colors', 'Colors are a great way to add personality to your application.'),
+          },
+          {
             name: 'bulma',
             path: 'bulma',
             component: Pages.Bulma,

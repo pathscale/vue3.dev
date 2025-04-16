@@ -10,6 +10,8 @@ export { default as Validation } from './Validation.vue'
 
 export { default as Theming } from './Design/Theming.vue'
 
+export { default as Colors } from './Design/Colors.vue'
+
 export { default as Bulma } from './Design/Bulma.vue'
 
 export { default as IntroducingAppState } from './AppState/Introducing.vue'
