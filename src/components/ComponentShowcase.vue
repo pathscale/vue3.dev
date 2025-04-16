@@ -41,7 +41,6 @@ export default {
 <template>
   <h2 class="title mt-6">Component Showcase</h2>
   <div class="columns mt-4">
-    <!-- Primera columna -->
     <div class="column">
       <v-field class="mb-4">
         <v-field addons>
@@ -80,10 +79,8 @@ export default {
       </div>
     </div>
 
-    <!-- Columna central -->
     <div class="column">
       <v-card>
-
         <v-card-content>
           <v-field label="Full Name">
             <v-input placeholder="John Doe" />
@@ -101,7 +98,6 @@ export default {
       </v-card>
     </div>
 
-    <!-- Tercera columna -->
     <div class="column">
       <v-tabs v-model="activeTab" type="is-boxed">
         <v-tab label="Overview">

@@ -1,10 +1,9 @@
 <script>
-import { ref, computed } from 'vue'
+import { ref, computed, watchEffect } from 'vue'
 import {
   VField,
   VInput,
   VSwitch,
-  VButton,
   VColumns,
   VColumn
 } from '@pathscale/vue3-ui'
@@ -17,7 +16,6 @@ export default {
     VField,
     VInput,
     VSwitch,
-    VButton,
     VColumns,
     VColumn,
     ComponentShowcase
@@ -79,9 +77,56 @@ export default {
       }
     })
 
-    const toggleTheme = () => {
-      theme.value = theme.value === 'light' ? 'dark' : 'light'
+    const applyBulmaColorVars = (colorScales, theme = 'light') => {
+      const root = document.documentElement
+
+      const get = (scale, category, index) =>
+        colorScales[scale][category][index]?.[theme]
+
+      const vars = {
+        // Grays → Bulma core grays
+        '--black': get('gray', 'accessible', 1),
+        '--black-bis': get('gray', 'accessible', 0),
+        '--black-ter': get('gray', 'solid', 1),
+        '--grey-darker': get('gray', 'solid', 0),
+        '--grey-dark': get('gray', 'borders', 2),
+        '--grey': get('gray', 'borders', 1),
+        '--grey-light': get('gray', 'borders', 0),
+        '--grey-lighter': get('gray', 'interactive', 2),
+        '--grey-lightest': get('gray', 'interactive', 1),
+        '--white-ter': get('gray', 'interactive', 0),
+        '--white-bis': get('gray', 'backgrounds', 1),
+        '--white': get('gray', 'backgrounds', 0),
+
+        // Accent → Bulma semantic colors
+        '--orange': get('accent', 'interactive', 2),
+        '--yellow': get('accent', 'interactive', 1),
+        '--green': get('accent', 'borders', 0),
+        '--turquoise': get('accent', 'borders', 1),
+        '--cyan': get('accent', 'borders', 0),
+        '--blue': get('accent', 'borders', 2),
+        '--purple': get('accent', 'solid', 1),
+        '--red': get('accent', 'accessible', 0),
+
+        // Primary roles
+        '--primary': get('accent', 'solid', 0),
+        '--primary-light': get('accent', 'interactive', 1),
+        '--primary-dark': get('accent', 'accessible', 0),
+        '--link': get('accent', 'borders', 1),
+        '--info': get('accent', 'interactive', 0)
+      }
+
+      for (const [key, value] of Object.entries(vars)) {
+        if (value) {
+          root.style.setProperty(key, value)
+        }
+      }
     }
+
+    watchEffect(() => {
+      applyBulmaColorVars(colorScales.value, theme.value)
+    })
+
 
     return {
       theme,
@@ -89,7 +134,6 @@ export default {
       gray,
       background,
       colorScales,
-      toggleTheme
     }
   }
 }
@@ -126,7 +170,6 @@ export default {
         </v-field>
       </div>
     </div>
-
     <v-columns v-for="(scale, scaleName) in colorScales" :key="scaleName">
       <v-column hcentered v-for="(colors, category) in scale" :key="category" narrow>
         <span v-if="scaleName === 'accent'" class="mb-4 is-capitalized">{{ category }}</span>
