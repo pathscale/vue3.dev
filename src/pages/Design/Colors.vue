@@ -112,10 +112,10 @@ export default {
     </div>
 
     <v-columns v-for="(scale, scaleName) in colorScales" :key="scaleName">
-      <v-column hcentered v-for="(colors, category) in scale" :key="category">
+      <v-column hcentered v-for="(colors, category) in scale" :key="category" narrow>
         <span v-if="scaleName === 'accent'" class="mb-4 is-capitalized">{{ category }}</span>
         <div class="columns">
-          <div v-for="color in colors" :key="color.id" class="column">
+          <v-column narrow v-for="color in colors" :key="color.id" class="column">
             <div class="box has-text-centered p-4" :style="{
               backgroundColor: theme === 'light' ? color.light : color.dark,
               width: '80px',
@@ -123,7 +123,7 @@ export default {
             }">
               <span class="has-text-white has-text-weight-bold is-size-4">{{ color.id }}</span>
             </div>
-          </div>
+          </v-column>
         </div>
       </v-column>
     </v-columns>
