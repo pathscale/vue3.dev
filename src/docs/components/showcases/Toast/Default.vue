@@ -49,10 +49,14 @@
             v-model="state.options.duration"
             min="1000"
             max="10000"
-            :disabled="state.options.duration === false" />
-
-          <v-checkbox v-model="state.options.duration" @change="changeDuration">
-            Disable duration
+            :disabled="state.options.durationDisabled" />
+          <v-checkbox
+            :model-value="state.options.durationDisabled"
+            @update:model-value="(checked) => {
+              state.options.durationDisabled = checked
+              if (!checked) state.options.duration = 4000
+            }">
+          Disable duration
           </v-checkbox>
         </v-field>
         <v-field>
@@ -69,7 +73,7 @@
           <v-input v-model="state.options.maxToasts" type="number" placeholder="false" />
         </v-field>
         <v-field>
-          <v-checkbox checked v-model="state.options.pauseOnHover" @change="state.options.pauseOnHover = $event.target.checked">
+          <v-checkbox checked v-model="state.options.pauseOnHover">
             Pause on hover
           </v-checkbox>
         </v-field>
@@ -178,6 +182,7 @@ export default {
         dismissible: true,
         queue: false,
         pauseOnHover: true,
+        durationDisabled: false
       },
     })
 
@@ -220,11 +225,7 @@ export default {
       })
     }
 
-    function changeDuration(e) {
-      state.options.duration = !e.target.checked ? 4000 : false
-    }
-
-    return { state, positions, hasOptions, toast, changeDuration }
+    return { state, positions, hasOptions, toast }
   },
 }
 </script>
