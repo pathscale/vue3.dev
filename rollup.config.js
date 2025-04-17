@@ -15,7 +15,7 @@ import serve from 'rollup-plugin-serve'
 import styles from 'rollup-plugin-styles'
 import analyzer from 'rollup-plugin-analyzer'
 import sucrase from '@rollup/plugin-sucrase'
-import vue from '@pathscale/rollup-plugin-vue3'
+import vue from '@vitejs/plugin-vue'
 import vue3svg from '@pathscale/vue3-svg-icons'
 import vue3uiPurge from '@pathscale/rollup-plugin-vue3-ui-css-purge'
 import visualizer from 'rollup-plugin-visualizer'
@@ -147,7 +147,7 @@ const config = [
         'process.env.VUE_APP_VERSION_NUMBER': JSON.stringify(env.parsed.VUE_APP_VERSION_NUMBER),
         __VUE_OPTIONS_API__: false,
         __VUE_PROD_DEVTOOLS__: false,
-        preventAssignment: true
+        preventAssignment: true,
       }),
       json(),
       alias({ entries: { vue: '@vue/runtime-dom' } }),
@@ -181,13 +181,13 @@ const config = [
 
       prod && terser({ format: { comments: false } }),
       prod &&
-      gzip({
-        fileName: '.br',
-        customCompression: content =>
-          zlib.brotliCompressSync(Buffer.from(content), {
-            params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 },
-          }),
-      }),
+        gzip({
+          fileName: '.br',
+          customCompression: content =>
+            zlib.brotliCompressSync(Buffer.from(content), {
+              params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 },
+            }),
+        }),
       html({
         publicPath: env.parsed.BASE_URL,
         title: 'Vue3-ui',
@@ -195,12 +195,12 @@ const config = [
       }),
 
       watch &&
-      serve({
-        host: '0.0.0.0',
-        contentBase: 'dist',
-        historyApiFallback: true,
-        port: 5000,
-      }),
+        serve({
+          host: '0.0.0.0',
+          contentBase: 'dist',
+          historyApiFallback: true,
+          port: 5000,
+        }),
 
       watch && livereload({ watch: 'dist' }),
       prod && analyzer(),

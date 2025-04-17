@@ -55,9 +55,11 @@ export default {
         <div class="pt-6 px-5">
           <v-menu>
             <v-menu-list label="Getting Started">
-              <v-menu-item v-if="isDevelopment" label="Playground" :active="current.playground"
+              <v-menu-item
+v-if="isDevelopment" label="Playground" :active="current.playground"
                 @click="redirect('playground')" />
-              <v-menu-item label="Installation" :active="current.installation" expanded
+              <v-menu-item
+label="Installation" :active="current.installation" expanded
                 @click="redirect('installation')" />
               <v-menu-item label="Design" expanded>
                 <v-menu-item label="Bulma" :active="current.bulma" @click="redirect('bulma')" />
@@ -144,7 +146,8 @@ export default {
       <v-column class="pt-6">
         <v-breadcrumb>
           <v-breadcrumb-item tag="router-link" :to="{ name: 'home' }"> Home </v-breadcrumb-item>
-          <v-breadcrumb-item v-for="item in paths" :key="item" class="is-capitalized" tag="router-link"
+          <v-breadcrumb-item
+v-for="item in paths" :key="item" class="is-capitalized" tag="router-link"
             :active="isActiveBreadcrumb(item)" :to="{ name: item }">
             {{ item }}
           </v-breadcrumb-item>

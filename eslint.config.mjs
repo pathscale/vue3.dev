@@ -145,7 +145,7 @@ const baseRules = {
 export default tseslint.config([
   {
     name: 'Vue3.dev ignores',
-    ignores: ['externs', 'dist', 'src/docs/components/raw', 'src/types.d.ts'],
+    ignores: ['externs', 'dist', 'src/docs/components/raw', 'src/types.d.ts', 'rollup.config.js'],
   },
   ...baseConfigs,
   {
@@ -201,7 +201,7 @@ export default tseslint.config([
     rules: {
       // ...baseRules,
       strict: ['error', 'global'],
-      'import/no-commonjs': 'off',
+      'import/no-commonjs': 'off'
     },
   },
   ...baseTSConfigs.map(config => {

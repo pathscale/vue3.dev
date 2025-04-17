@@ -4,7 +4,6 @@ const variables = {
   // '$subtitle-family': 'metroclean, Arial, sans-serif',
   // '$title-family': 'metroclean, Arial, sans-serif',
   // '$weight-normal': '600', // TODO Must be work with 400 (normal)
-
   // $primary: '#111',
   // '$button-background-color': '#4958f5',
   // '$button-border-width': '2px',

@@ -47,11 +47,13 @@ export default {
   </h4>
 
   <p>
-    You can add styles to Vue3-ui quickly by installing <a href="https://www.npmjs.com/package/@bulvar/bulma"
+    You can add styles to Vue3-ui quickly by installing <a
+href="https://www.npmjs.com/package/@bulvar/bulma"
       target="_blank" rel="noopener">@bulvar/bulma</a>, getting support for CSS
     Variables and theming changes in running time.
     <br /><br /> Additionally, if you want to use <b>Accordion</b>, <b>Sidebar</b>, <b>Switch</b> or <b>Tooltip</b>, you
-    have to install <a href="https://www.npmjs.com/package/@pathscale/bulma-extensions-css-var" target="_blank"
+    have to install <a
+href="https://www.npmjs.com/package/@pathscale/bulma-extensions-css-var" target="_blank"
       rel="noopener">bulma-extensions-css-var</a>, because those components are not in the Bulma core.
   </p>
 
@@ -106,7 +108,8 @@ export default {
       </v-button>
     </template>
 
-    <v-dropdown-item v-for="clr in colors" :key="clr" :value="clr" :style="`background-color: ${clr}`"
+    <v-dropdown-item
+v-for="clr in colors" :key="clr" :value="clr" :style="`background-color: ${clr}`"
       class="has-text-white">
       {{ clr }}
     </v-dropdown-item>

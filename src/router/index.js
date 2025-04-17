@@ -93,7 +93,10 @@ const routes = [
             name: 'colors',
             path: 'colors',
             component: Pages.Colors,
-            meta: metaTags('Colors', 'Colors are a great way to add personality to your application.'),
+            meta: metaTags(
+              'Colors',
+              'Colors are a great way to add personality to your application.',
+            ),
           },
           {
             name: 'bulma',

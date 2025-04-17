@@ -175,7 +175,8 @@ export default {
         <span v-if="scaleName === 'accent'" class="mb-4 is-capitalized">{{ category }}</span>
         <div class="columns">
           <v-column narrow v-for="color in colors" :key="color.id" class="column">
-            <div class="box has-text-centered p-4" :style="{
+            <div
+class="box has-text-centered p-4" :style="{
               backgroundColor: theme === 'light' ? color.light : color.dark,
               width: '80px',
               minWidth: '80px'
