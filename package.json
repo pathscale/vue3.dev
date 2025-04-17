@@ -42,7 +42,7 @@
     "autoprefixer": "^10.4.21",
     "bulma-calendar": "^7.1.1",
     "dotenv": "^16.5.0",
-    "highlight.js": "^11.5.1",
+    "highlight.js": "^11.11.1",
     "rollup": "^2.75.7",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-copy": "^3.4.0",
