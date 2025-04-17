@@ -51,17 +51,17 @@
             max="10000"
             :disabled="state.options.duration === false" />
 
-          <v-checkbox @change="changeDuration">
+          <v-checkbox v-model="state.options.duration" @change="changeDuration">
             Disable duration
           </v-checkbox>
         </v-field>
         <v-field>
-          <v-checkbox checked @change="state.options.dismissible = $event.target.checked">
+          <v-checkbox checked v-model="state.options.dismissible" @change="state.options.dismissible = $event.target.checked">
             Dismissible on click
           </v-checkbox>
         </v-field>
         <v-field>
-          <v-checkbox @change="state.options.queue = $event.target.checked">
+          <v-checkbox v-model="state.options.queue" @change="state.options.queue = $event.target.checked">
             Enqueue
           </v-checkbox>
         </v-field>
@@ -69,7 +69,7 @@
           <v-input v-model="state.options.maxToasts" type="number" placeholder="false" />
         </v-field>
         <v-field>
-          <v-checkbox checked @change="state.options.pauseOnHover = $event.target.checked">
+          <v-checkbox checked v-model="state.options.pauseOnHover" @change="state.options.pauseOnHover = $event.target.checked">
             Pause on hover
           </v-checkbox>
         </v-field>
@@ -175,6 +175,9 @@ export default {
       message: "Bulma's notification implemented as a toast plugin.",
       options: {
         duration: 4000,
+        dismissible: true,
+        queue: false,
+        pauseOnHover: true,
       },
     })
 
