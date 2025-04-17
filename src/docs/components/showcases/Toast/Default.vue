@@ -60,12 +60,12 @@
           </v-checkbox>
         </v-field>
         <v-field>
-          <v-checkbox checked v-model="state.options.dismissible" @change="state.options.dismissible = $event.target.checked">
+          <v-checkbox checked v-model="state.options.dismissible">
             Dismissible on click
           </v-checkbox>
         </v-field>
         <v-field>
-          <v-checkbox v-model="state.options.queue" @change="state.options.queue = $event.target.checked">
+          <v-checkbox v-model="state.options.queue">
             Enqueue
           </v-checkbox>
         </v-field>
