@@ -10,6 +10,7 @@
         "@pathscale/appstate-fast": "^0.0.4",
         "@pathscale/bulma-extensions-css-var": "0.1.1",
         "@pathscale/fonts-metroclean": "^1.0.8",
+        "@pathscale/frappe-charts": "^0.0.2",
         "@pathscale/rollup-plugin-vue3-ui-css-purge": "^0.0.41",
         "@pathscale/vue3-svg-icons": "^0.0.12",
         "@pathscale/vue3-ui": "^1.0.14",
@@ -239,6 +240,8 @@
     "@pathscale/bulma-extensions-css-var": ["@pathscale/bulma-extensions-css-var@0.1.1", "", {}, "sha512-tdzbKuYLTiZ1tQqijveqBkwJt6zYA/EYxDhjiskvpaaq2wxmdbvNmVHvxTXhzPvtoM+58NyjQIKFupY8WsB4Xw=="],
 
     "@pathscale/fonts-metroclean": ["@pathscale/fonts-metroclean@1.0.8", "", {}, "sha512-xdLWuIWs25lxvE7mQPFWH5orGoRjT3waW9M+7Lil7GwVHKAZTsx8brymavrXJBveoURVvmDHNgCNhypHfxxzZg=="],
+
+    "@pathscale/frappe-charts": ["@pathscale/frappe-charts@0.0.2", "", {}, "sha512-Uy9ya0aYd/ZcT5MBEv1N+WLgxvDj4olTS9zNatkYQsAIn6RooMy0YixyvkVv834MyRHhkkPijlj3Aq1vHETppw=="],
 
     "@pathscale/rollup-plugin-vue3-ui-css-purge": ["@pathscale/rollup-plugin-vue3-ui-css-purge@0.0.41", "", { "dependencies": { "@babel/parser": "^7.12.11", "@babel/traverse": "^7.12.12", "@fullhuman/postcss-purgecss": "^3.1.3", "@rollup/pluginutils": "^4.1.0", "fs-extra": "^9.0.1", "htmlparser2": "^6.0.0", "postcss": "^8.2.2", "postcss-color-converter": "^1.0.1", "query-string": "^6.13.8", "resolve": "^1.19.0", "rollup": "^2.35.1", "tslib": "^2.0.3" }, "peerDependencies": { "typescript": "^4.0.0" } }, "sha512-8QeEZ60CI33mkKjUEV3A9ulFZZ6n5gJjwiYjk91+5fXRPuokioFq6dkX5Ot5TdcA7bNWzZ5CuPOQFnqQKCnriA=="],
 

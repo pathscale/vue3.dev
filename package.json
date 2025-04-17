@@ -38,6 +38,7 @@
     "@pathscale/appstate-fast": "^0.0.4",
     "@pathscale/bulma-extensions-css-var": "0.1.1",
     "@pathscale/fonts-metroclean": "^1.0.8",
+    "@pathscale/frappe-charts": "^0.0.2",
     "@pathscale/rollup-plugin-vue3-ui-css-purge": "^0.0.41",
     "@pathscale/vue3-svg-icons": "^0.0.12",
     "@pathscale/vue3-ui": "^1.0.14",
