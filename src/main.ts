@@ -12,6 +12,7 @@ import './assets/styles/index.css'
 import './assets/styles/carousel.css'
 import './assets/styles/icons.css'
 import './assets/styles/flexbox.css'
+import 'bulma-calendar/dist/css/bulma-calendar.min.css'
 
 import { router } from './router/index.js'
 
