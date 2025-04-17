@@ -1,6 +1,7 @@
 import path from 'path'
+import { fileURLToPath } from 'url'
 import zlib from 'zlib'
-import { terser } from 'rollup-plugin-terser'
+import terser from '@rollup/plugin-terser'
 import alias from '@rollup/plugin-alias'
 import commonjs from '@rollup/plugin-commonjs'
 import dotenv from 'dotenv'
@@ -18,10 +19,13 @@ import sucrase from '@rollup/plugin-sucrase'
 import vue from '@vitejs/plugin-vue'
 import vue3svg from '@pathscale/vue3-svg-icons'
 import vue3uiPurge from '@pathscale/rollup-plugin-vue3-ui-css-purge'
-import visualizer from 'rollup-plugin-visualizer'
+import { visualizer } from 'rollup-plugin-visualizer'
 import { string } from 'rollup-plugin-string'
 
 import copy from 'rollup-plugin-copy'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const extensions = ['.ts', '.mjs', '.js', '.vue', '.json']
 
@@ -143,14 +147,20 @@ const config = [
         include: '**/*.txt',
       }),
       replace({
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-        'process.env.VUE_APP_VERSION_NUMBER': JSON.stringify(env.parsed.VUE_APP_VERSION_NUMBER),
-        __VUE_OPTIONS_API__: false,
-        __VUE_PROD_DEVTOOLS__: false,
+        values: {
+          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+          'process.env.VUE_APP_VERSION_NUMBER': JSON.stringify(env.parsed.VUE_APP_VERSION_NUMBER),
+          '__VUE_OPTIONS_API__': 'false',
+          '__VUE_PROD_DEVTOOLS__': 'false',
+        },
         preventAssignment: true,
       }),
       json(),
-      alias({ entries: { vue: '@vue/runtime-dom' } }),
+      alias({ 
+        entries: [
+          { find: 'vue', replacement: '@vue/runtime-dom' }
+        ]
+      }),
       resolve({
         dedupe: [
           'vue',
@@ -208,7 +218,7 @@ const config = [
       copy({
         targets: [{ src: 'public/**/*', dest: 'dist/' }],
       }),
-    ],
+    ].filter(Boolean),
   },
 ]
 
