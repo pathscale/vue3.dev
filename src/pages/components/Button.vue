@@ -1,26 +1,36 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection, VariablesSection } from "../../components";
 
-import api from '../../docs/components/api/button.ts'
-import variables from '../../docs/components/variables/button.json'
+import api from "../../docs/components/api/button.ts";
+import variables from "../../docs/components/variables/button.json";
 
+import ChipsCode from "../../docs/components/raw/Button/ButtonChips.txt";
+import ColorsCode from "../../docs/components/raw/Button/ButtonColors.txt";
+import SizesCode from "../../docs/components/raw/Button/ButtonSizes.txt";
+import StatesCode from "../../docs/components/raw/Button/ButtonStates.txt";
+import StylesCode from "../../docs/components/raw/Button/ButtonStyles.txt";
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
-import * as Showcases from '../../docs/components/showcases/Button'
-import ColorsCode from '../../docs/components/raw/Button/ButtonColors.txt'
-import StylesCode from '../../docs/components/raw/Button/ButtonStyles.txt'
-import SizesCode from '../../docs/components/raw/Button/ButtonSizes.txt'
-import StatesCode from '../../docs/components/raw/Button/ButtonStates.txt'
-import ChipsCode from '../../docs/components/raw/Button/ButtonChips.txt'
+import * as Showcases from "../../docs/components/showcases/Button";
 
 export default {
-  name: 'DevPageButton',
-  components: { SnippetSection, ApiSection, VariablesSection },
-  setup() {
-    const router = useRouter()
-    return { api, variables, router, Showcases, ColorsCode, StylesCode, SizesCode, StatesCode, ChipsCode }
-  },
-}
+	name: "DevPageButton",
+	components: { SnippetSection, ApiSection, VariablesSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			variables,
+			router,
+			Showcases,
+			ColorsCode,
+			StylesCode,
+			SizesCode,
+			StatesCode,
+			ChipsCode,
+		};
+	},
+};
 </script>
 
 <template>

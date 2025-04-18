@@ -1,40 +1,40 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../../components";
 
-import api from '../../docs/components/api/columns.ts'
+import api from "../../docs/components/api/columns.ts";
 
+import ColumnsAligmentCode from "../../docs/components/raw/Columns/ColumnsAligment.txt";
+import ColumnsBasicCode from "../../docs/components/raw/Columns/ColumnsBasic.txt";
+import ColumnsGapCode from "../../docs/components/raw/Columns/ColumnsGap.txt";
+import ColumnsMultilineCode from "../../docs/components/raw/Columns/ColumnsMultiline.txt";
+import ColumnsNarrowCode from "../../docs/components/raw/Columns/ColumnsNarrow.txt";
+import ColumnsNestedCode from "../../docs/components/raw/Columns/ColumnsNested.txt";
+import ColumnsOffsetCode from "../../docs/components/raw/Columns/ColumnsOffset.txt";
+import ColumnsSizesCode from "../../docs/components/raw/Columns/ColumnsSizes.txt";
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
-import * as Showcases from '../../docs/components/showcases/Columns'
-import ColumnsBasicCode from '../../docs/components/raw/Columns/ColumnsBasic.txt'
-import ColumnsSizesCode from '../../docs/components/raw/Columns/ColumnsSizes.txt'
-import ColumnsOffsetCode from '../../docs/components/raw/Columns/ColumnsOffset.txt'
-import ColumnsNestedCode from '../../docs/components/raw/Columns/ColumnsNested.txt'
-import ColumnsNarrowCode from '../../docs/components/raw/Columns/ColumnsNarrow.txt'
-import ColumnsMultilineCode from '../../docs/components/raw/Columns/ColumnsMultiline.txt'
-import ColumnsGapCode from '../../docs/components/raw/Columns/ColumnsGap.txt'
-import ColumnsAligmentCode from '../../docs/components/raw/Columns/ColumnsAligment.txt'
+import * as Showcases from "../../docs/components/showcases/Columns";
 
 export default {
-  name: 'DevPageColumns',
-  components: { ApiSection, SnippetSection },
-  setup() {
-
-    const router = useRouter()
-    return {
-      api, router,
-      Showcases,
-      ColumnsBasicCode,
-      ColumnsSizesCode,
-      ColumnsOffsetCode,
-      ColumnsNestedCode,
-      ColumnsNarrowCode,
-      ColumnsMultilineCode,
-      ColumnsGapCode,
-      ColumnsAligmentCode
-    }
-  }
-}
+	name: "DevPageColumns",
+	components: { ApiSection, SnippetSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			router,
+			Showcases,
+			ColumnsBasicCode,
+			ColumnsSizesCode,
+			ColumnsOffsetCode,
+			ColumnsNestedCode,
+			ColumnsNarrowCode,
+			ColumnsMultilineCode,
+			ColumnsGapCode,
+			ColumnsAligmentCode,
+		};
+	},
+};
 </script>
 
 <template>

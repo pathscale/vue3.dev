@@ -1,24 +1,32 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../../components";
 
-import api from '../../docs/components/api/select.ts'
+import api from "../../docs/components/api/select.ts";
 
+import ColorCode from "../../docs/components/raw/Select/Color.txt";
+import LoadingCode from "../../docs/components/raw/Select/Loading.txt";
+import SizeCode from "../../docs/components/raw/Select/Size.txt";
+import StyleCode from "../../docs/components/raw/Select/Style.txt";
 // eslint-disable-next-line no-restricted-syntax -- using all of them
-import * as Showcases from '../../docs/components/showcases/Select'
-import ColorCode from '../../docs/components/raw/Select/Color.txt'
-import LoadingCode from '../../docs/components/raw/Select/Loading.txt'
-import SizeCode from '../../docs/components/raw/Select/Size.txt'
-import StyleCode from '../../docs/components/raw/Select/Style.txt'
+import * as Showcases from "../../docs/components/showcases/Select";
 
 export default {
-  name: 'DevPageSelect',
-  components: { SnippetSection, ApiSection },
-  setup() {
-    const router = useRouter()
-    return { api, router, Showcases, ColorCode, LoadingCode, SizeCode, StyleCode }
-  }
-}
+	name: "DevPageSelect",
+	components: { SnippetSection, ApiSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			router,
+			Showcases,
+			ColorCode,
+			LoadingCode,
+			SizeCode,
+			StyleCode,
+		};
+	},
+};
 </script>
 
 <template>

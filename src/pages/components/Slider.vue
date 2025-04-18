@@ -1,26 +1,36 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection, VariablesSection } from "../../components";
 
-import api from '../../docs/components/api/slider.ts'
-import variables from '../../docs/components/variables/slider.json'
+import api from "../../docs/components/api/slider.ts";
+import variables from "../../docs/components/variables/slider.json";
 
+import ColorsCode from "../../docs/components/raw/Slider/Colors.txt";
+import SizesCode from "../../docs/components/raw/Slider/Sizes.txt";
+import StatesCode from "../../docs/components/raw/Slider/States.txt";
+import StylesCode from "../../docs/components/raw/Slider/Styles.txt";
+import TooltipCode from "../../docs/components/raw/Slider/Tooltip.txt";
 // eslint-disable-next-line no-restricted-syntax -- using all components
-import * as Showcases from '../../docs/components/showcases/Slider'
-import TooltipCode from '../../docs/components/raw/Slider/Tooltip.txt'
-import ColorsCode from '../../docs/components/raw/Slider/Colors.txt'
-import SizesCode from '../../docs/components/raw/Slider/Sizes.txt'
-import StatesCode from '../../docs/components/raw/Slider/States.txt'
-import StylesCode from '../../docs/components/raw/Slider/Styles.txt'
+import * as Showcases from "../../docs/components/showcases/Slider";
 
 export default {
-  name: 'DevPageSlider',
-  components: { SnippetSection, ApiSection, VariablesSection },
-  setup() {
-    const router = useRouter()
-    return { api, variables, router, Showcases, TooltipCode, ColorsCode, SizesCode, StatesCode, StylesCode }
-  }
-}
+	name: "DevPageSlider",
+	components: { SnippetSection, ApiSection, VariablesSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			variables,
+			router,
+			Showcases,
+			TooltipCode,
+			ColorsCode,
+			SizesCode,
+			StatesCode,
+			StylesCode,
+		};
+	},
+};
 </script>
 
 <template>

@@ -1,25 +1,34 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../../components";
 
-import api from '../../docs/components/api/textarea.ts'
+import api from "../../docs/components/api/textarea.ts";
 
+import ColorCode from "../../docs/components/raw/Textarea/Color.txt";
+import CounterCode from "../../docs/components/raw/Textarea/Counter.txt";
+import FocusedCode from "../../docs/components/raw/Textarea/Focused.txt";
+import LoadingCode from "../../docs/components/raw/Textarea/Loading.txt";
+import SizeCode from "../../docs/components/raw/Textarea/Size.txt";
 // eslint-disable-next-line no-restricted-syntax -- using all
-import * as Showcases from '../../docs/components/showcases/Textarea'
-import ColorCode from '../../docs/components/raw/Textarea/Color.txt'
-import SizeCode from '../../docs/components/raw/Textarea/Size.txt'
-import LoadingCode from '../../docs/components/raw/Textarea/Loading.txt'
-import FocusedCode from '../../docs/components/raw/Textarea/Focused.txt'
-import CounterCode from '../../docs/components/raw/Textarea/Counter.txt'
+import * as Showcases from "../../docs/components/showcases/Textarea";
 
 export default {
-  name: 'DevPageTextarea',
-  components: { SnippetSection, ApiSection },
-  setup() {
-    const router = useRouter()
-    return { api, router, Showcases, ColorCode, SizeCode, LoadingCode, FocusedCode, CounterCode }
-  }
-}
+	name: "DevPageTextarea",
+	components: { SnippetSection, ApiSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			router,
+			Showcases,
+			ColorCode,
+			SizeCode,
+			LoadingCode,
+			FocusedCode,
+			CounterCode,
+		};
+	},
+};
 </script>
 
 <template>

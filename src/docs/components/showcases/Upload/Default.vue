@@ -1,32 +1,32 @@
 <script>
-import { ref, watchEffect } from 'vue'
-import { VUpload, VIcon, VTag } from '@pathscale/vue3-ui'
+import { VIcon, VTag, VUpload } from "@pathscale/vue3-ui";
+import { ref, watchEffect } from "vue";
 
 export default {
-  name: 'DevShowcaseUpload',
-  components: { VUpload, VIcon, VTag },
-  setup() {
-    const files = ref([
-      {
-        name: 'examples-of-situational-questions.docx',
-      },
-      {
-        name: 'SWTM-2088_Atlassian-Git-Cheatsheet.pdf',
-      },
-    ])
+	name: "DevShowcaseUpload",
+	components: { VUpload, VIcon, VTag },
+	setup() {
+		const files = ref([
+			{
+				name: "examples-of-situational-questions.docx",
+			},
+			{
+				name: "SWTM-2088_Atlassian-Git-Cheatsheet.pdf",
+			},
+		]);
 
-    watchEffect(() => {
-      if (files.value) {
-        console.log(files.value)
-      }
-    })
+		watchEffect(() => {
+			if (files.value) {
+				console.log(files.value);
+			}
+		});
 
-    function deleteFile(index) {
-      files.value.splice(index, 1)
-    }
-    return { files, deleteFile }
-  },
-}
+		function deleteFile(index) {
+			files.value.splice(index, 1);
+		}
+		return { files, deleteFile };
+	},
+};
 </script>
 
 <template>

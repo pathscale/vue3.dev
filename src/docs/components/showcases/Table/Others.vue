@@ -1,71 +1,71 @@
 <script>
-import { ref } from 'vue'
-import { DataGrid, VTable, VButton } from '@pathscale/vue3-ui'
+import { DataGrid, VButton, VTable } from "@pathscale/vue3-ui";
+import { ref } from "vue";
 
 export default {
-  name: 'DevShowcaseTableOthers',
-  components: { VTable, VButton },
-  setup() {
-    const datagrid = ref(new DataGrid())
+	name: "DevShowcaseTableOthers",
+	components: { VTable, VButton },
+	setup() {
+		const datagrid = ref(new DataGrid());
 
-    datagrid.value.addColumn('id', 'ID', 'number')
-    datagrid.value.addColumn('firstName', 'First Name', 'string')
-    datagrid.value.addColumn('lastName', 'Last Name', 'string')
-    datagrid.value.addColumn('color', 'Color', 'custom')
+		datagrid.value.addColumn("id", "ID", "number");
+		datagrid.value.addColumn("firstName", "First Name", "string");
+		datagrid.value.addColumn("lastName", "Last Name", "string");
+		datagrid.value.addColumn("color", "Color", "custom");
 
-    datagrid.value.addRow({
-      id: 1,
-      firstName: 'John',
-      lastName: 'Doe',
-      color: 'Blue',
-    })
-    datagrid.value.addRow({
-      id: 2,
-      firstName: 'Sheri',
-      lastName: 'Adamin ',
-      color: 'Green',
-    })
-    datagrid.value.addRow({
-      id: 3,
-      firstName: 'Kristopher',
-      lastName: 'Amos',
-      color: 'Blue',
-    })
-    datagrid.value.addRow({
-      id: 4,
-      firstName: 'Nelly',
-      lastName: 'Derby',
-      color: 'Green',
-    })
-    datagrid.value.addRow({
-      id: 5,
-      firstName: 'Philander',
-      lastName: 'Barney',
-      color: 'Blue',
-    })
+		datagrid.value.addRow({
+			id: 1,
+			firstName: "John",
+			lastName: "Doe",
+			color: "Blue",
+		});
+		datagrid.value.addRow({
+			id: 2,
+			firstName: "Sheri",
+			lastName: "Adamin ",
+			color: "Green",
+		});
+		datagrid.value.addRow({
+			id: 3,
+			firstName: "Kristopher",
+			lastName: "Amos",
+			color: "Blue",
+		});
+		datagrid.value.addRow({
+			id: 4,
+			firstName: "Nelly",
+			lastName: "Derby",
+			color: "Green",
+		});
+		datagrid.value.addRow({
+			id: 5,
+			firstName: "Philander",
+			lastName: "Barney",
+			color: "Blue",
+		});
 
-    const addRow = index => {
-      datagrid.value.addRow(
-        {
-          id: 1,
-          firstName: 'Added',
-          lastName: 'Row',
-          color: 'Blue',
-        },
-        index,
-      )
-    }
-    const deleteRow = index => {
-      datagrid.value.deleteRow(index)
-    }
+		const addRow = (index) => {
+			datagrid.value.addRow(
+				{
+					id: 1,
+					firstName: "Added",
+					lastName: "Row",
+					color: "Blue",
+				},
+				index,
+			);
+		};
+		const deleteRow = (index) => {
+			datagrid.value.deleteRow(index);
+		};
 
-    return {
-      datagrid,
-      addRow,
-      deleteRow,
-    }
-  },
-}
+		return {
+			datagrid,
+			addRow,
+			deleteRow,
+		};
+	},
+};
 </script>
 
 <template>

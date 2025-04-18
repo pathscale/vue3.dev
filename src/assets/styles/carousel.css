@@ -1,18 +1,18 @@
 .carousel > button {
-  outline: none;
+	outline: none;
 }
 
 .carousel__prev,
 .carousel__next {
-  background-color: black !important;
+	background-color: black !important;
 }
 
 .carousel__pagination-button {
-  background-color: #757575 !important;
-  width: 80px !important;
-  outline: none;
+	background-color: #757575 !important;
+	width: 80px !important;
+	outline: none;
 }
 
 .carousel__pagination-button--active {
-  background-color: black !important;
+	background-color: black !important;
 }

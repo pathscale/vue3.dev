@@ -1,21 +1,19 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection } from '../../components'
-
+import { useRouter } from "vue-router";
+import { SnippetSection } from "../../components";
 
 // import api from '../../docs/components/api/appstate'
 // import { Modules } from '../../docs/components/showcases/AppState'
-import GlobalCode from '../../docs/components/raw/Appstate/Modules.txt'
-
+import GlobalCode from "../../docs/components/raw/Appstate/Modules.txt";
 
 export default {
-  name: 'DevPageInstallation',
-  components: { SnippetSection },
-  setup() {
-    const router = useRouter()
-    return { router, GlobalCode }
-  }
-}
+	name: "DevPageInstallation",
+	components: { SnippetSection },
+	setup() {
+		const router = useRouter();
+		return { router, GlobalCode };
+	},
+};
 </script>
 
 <template>

@@ -1,20 +1,20 @@
 <script>
 import {
-  HomeSection,
-  OverviewSection,
-  ClientsSection,
-  FeaturesSection,
-} from '../components/sections'
+	ClientsSection,
+	FeaturesSection,
+	HomeSection,
+	OverviewSection,
+} from "../components/sections";
 
 export default {
-  name: 'DevPageHome',
-  components: {
-    HomeSection,
-    OverviewSection,
-    ClientsSection,
-    FeaturesSection,
-  },
-}
+	name: "DevPageHome",
+	components: {
+		HomeSection,
+		OverviewSection,
+		ClientsSection,
+		FeaturesSection,
+	},
+};
 </script>
 
 <template>

@@ -1,25 +1,31 @@
 <script>
-import { reactive } from 'vue'
-import { VField, VInput, VSelect, VSwitch, VPagination } from '@pathscale/vue3-ui'
+import {
+	VField,
+	VInput,
+	VPagination,
+	VSelect,
+	VSwitch,
+} from "@pathscale/vue3-ui";
+import { reactive } from "vue";
 
 export default {
-  name: 'DevShowcasePagination',
-  components: { VField, VInput, VSelect, VSwitch, VPagination },
-  setup() {
-    const state = reactive({
-      total: 200,
-      current: 10,
-      perPage: 10,
-      rangeBefore: 3,
-      rangeAfter: 1,
-      order: '',
-      size: '',
-      isSimple: false,
-      isRounded: false,
-    })
-    return { state }
-  },
-}
+	name: "DevShowcasePagination",
+	components: { VField, VInput, VSelect, VSwitch, VPagination },
+	setup() {
+		const state = reactive({
+			total: 200,
+			current: 10,
+			perPage: 10,
+			rangeBefore: 3,
+			rangeAfter: 1,
+			order: "",
+			size: "",
+			isSimple: false,
+			isRounded: false,
+		});
+		return { state };
+	},
+};
 </script>
 
 <template>

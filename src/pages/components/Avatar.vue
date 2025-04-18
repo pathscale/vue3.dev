@@ -1,22 +1,22 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../../components";
 
-import api from '../../docs/components/api/avatar.ts'
+import api from "../../docs/components/api/avatar.ts";
 
+import AvatarBasic from "../../docs/components/raw/Avatar/AvatarBasic.txt";
+import AvatarWithPhoto from "../../docs/components/raw/Avatar/AvatarWithPhoto.txt";
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
-import * as Showcase from '../../docs/components/showcases/Avatar'
-import AvatarBasic from '../../docs/components/raw/Avatar/AvatarBasic.txt'
-import AvatarWithPhoto from '../../docs/components/raw/Avatar/AvatarWithPhoto.txt'
+import * as Showcase from "../../docs/components/showcases/Avatar";
 
 export default {
-  name: 'DevPageAvatar',
-  components: { SnippetSection, ApiSection },
-  setup() {
-    const router = useRouter()
-    return { api, router, Showcase, AvatarBasic, AvatarWithPhoto }
-  }
-}
+	name: "DevPageAvatar",
+	components: { SnippetSection, ApiSection },
+	setup() {
+		const router = useRouter();
+		return { api, router, Showcase, AvatarBasic, AvatarWithPhoto };
+	},
+};
 </script>
 
 <template>

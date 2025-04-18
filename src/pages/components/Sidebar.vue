@@ -1,20 +1,20 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../../components";
 
-import api from '../../docs/components/api/sidebar.ts'
+import api from "../../docs/components/api/sidebar.ts";
 
-import Showcase from '../../docs/components/showcases/Sidebar.vue'
-import ShowcaseCode from '../../docs/components/raw/Sidebar.txt'
+import ShowcaseCode from "../../docs/components/raw/Sidebar.txt";
+import Showcase from "../../docs/components/showcases/Sidebar.vue";
 
 export default {
-  name: 'DevPageSidebar',
-  components: { SnippetSection, ApiSection },
-  setup() {
-    const router = useRouter()
-    return { api, router, Showcase, ShowcaseCode }
-  }
-}
+	name: "DevPageSidebar",
+	components: { SnippetSection, ApiSection },
+	setup() {
+		const router = useRouter();
+		return { api, router, Showcase, ShowcaseCode };
+	},
+};
 </script>
 
 <template>

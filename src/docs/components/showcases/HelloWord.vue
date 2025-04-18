@@ -1,10 +1,10 @@
 <script>
-import { VImage, VButton } from '@pathscale/vue3-ui'
+import { VButton, VImage } from "@pathscale/vue3-ui";
 
 export default {
-  name: 'HelloWord',
-  components: { VImage, VButton }
-}
+	name: "HelloWord",
+	components: { VImage, VButton },
+};
 </script>
 
 <template>

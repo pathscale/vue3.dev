@@ -1,10 +1,10 @@
 <script>
-import { VIcon } from '@pathscale/vue3-ui'
+import { VIcon } from "@pathscale/vue3-ui";
 
 export default {
-  name: 'DevIcons',
-  components: { VIcon },
-}
+	name: "DevIcons",
+	components: { VIcon },
+};
 </script>
 
 <template>

@@ -1,28 +1,28 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../../components";
 
-import api from '../../docs/components/api/chart.ts'
+import api from "../../docs/components/api/chart.ts";
 
+import BasicCode from "../../docs/components/raw/Chart/Basic.txt";
+import CandleCode from "../../docs/components/raw/Chart/Candle.txt";
 // eslint-disable-next-line no-restricted-syntax -- using all of them
-import * as Showcases from '../../docs/components/showcases/Chart'
-import CandleCode from '../../docs/components/raw/Chart/Candle.txt'
-import BasicCode from '../../docs/components/raw/Chart/Basic.txt'
+import * as Showcases from "../../docs/components/showcases/Chart";
 
 export default {
-  name: 'DevPageChart',
-  components: { SnippetSection, ApiSection },
-  setup() {
-    const router = useRouter()
-    return {
-      api,
-      router,
-      Showcases,
-      BasicCode,
-      CandleCode,
-    }
-  },
-}
+	name: "DevPageChart",
+	components: { SnippetSection, ApiSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			router,
+			Showcases,
+			BasicCode,
+			CandleCode,
+		};
+	},
+};
 </script>
 
 <template>

@@ -1,32 +1,34 @@
 <script>
-import { VField, VCalendar } from '@pathscale/vue3-ui'
-import { computed, reactive, provide } from 'vue'
-import bulmaCalendar from 'bulma-calendar/dist/js/bulma-calendar.min'
+import { VCalendar, VField } from "@pathscale/vue3-ui";
+import bulmaCalendar from "bulma-calendar/dist/js/bulma-calendar.min";
+import { computed, provide, reactive } from "vue";
 
-import 'bulma-calendar/dist/css/bulma-calendar.min.css'
+import "bulma-calendar/dist/css/bulma-calendar.min.css";
 
 export default {
-  name: 'DevShowcaseCalendar',
-  components: { VField, VCalendar },
-  setup() {
-    provide('$bulmaCalendar', bulmaCalendar)
-    const state = reactive({
-      date: [null, null],
-      options: {
-        dateFormat: 'dd.MM.yyyy',
-        labelFrom: 'From',
-        labelTo: 'To',
-      },
-    })
+	name: "DevShowcaseCalendar",
+	components: { VField, VCalendar },
+	setup() {
+		provide("$bulmaCalendar", bulmaCalendar);
+		const state = reactive({
+			date: [null, null],
+			options: {
+				dateFormat: "dd.MM.yyyy",
+				labelFrom: "From",
+				labelTo: "To",
+			},
+		});
 
-    const displayDate = computed(() => {
-      if (!state.date || !state.date[0] || !state.date[1]) { return '- n/a -' }
-      return state.date[0] + ' to ' + state.date[1]
-    })
+		const displayDate = computed(() => {
+			if (!state.date || !state.date[0] || !state.date[1]) {
+				return "- n/a -";
+			}
+			return state.date[0] + " to " + state.date[1];
+		});
 
-    return { state, displayDate }
-  },
-}
+		return { state, displayDate };
+	},
+};
 </script>
 
 <template>

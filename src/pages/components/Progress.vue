@@ -1,26 +1,36 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection, VariablesSection } from "../../components";
 
-import api from '../../docs/components/api/progress.ts'
-import variables from '../../docs/components/variables/progress.json'
+import api from "../../docs/components/api/progress.ts";
+import variables from "../../docs/components/variables/progress.json";
 
+import ColorsCode from "../../docs/components/raw/Progress/ProgressColors.txt";
+import IndeterminateCode from "../../docs/components/raw/Progress/ProgressIndeterminate.txt";
+import PercentCode from "../../docs/components/raw/Progress/ProgressPercent.txt";
+import SizesCode from "../../docs/components/raw/Progress/ProgressSizes.txt";
+import ValueCode from "../../docs/components/raw/Progress/ProgressValue.txt";
 // eslint-disable-next-line no-restricted-syntax -- using all of them
-import * as Showcases from '../../docs/components/showcases/Progress'
-import ColorsCode from '../../docs/components/raw/Progress/ProgressColors.txt'
-import IndeterminateCode from '../../docs/components/raw/Progress/ProgressIndeterminate.txt'
-import PercentCode from '../../docs/components/raw/Progress/ProgressPercent.txt'
-import SizesCode from '../../docs/components/raw/Progress/ProgressSizes.txt'
-import ValueCode from '../../docs/components/raw/Progress/ProgressValue.txt'
+import * as Showcases from "../../docs/components/showcases/Progress";
 
 export default {
-  name: 'DevPageProgress',
-  components: { SnippetSection, ApiSection, VariablesSection },
-  setup() {
-    const router = useRouter()
-    return { api, variables, router, Showcases, ColorsCode, IndeterminateCode, PercentCode, SizesCode, ValueCode }
-  }
-}
+	name: "DevPageProgress",
+	components: { SnippetSection, ApiSection, VariablesSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			variables,
+			router,
+			Showcases,
+			ColorsCode,
+			IndeterminateCode,
+			PercentCode,
+			SizesCode,
+			ValueCode,
+		};
+	},
+};
 </script>
 
 <template>

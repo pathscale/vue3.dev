@@ -1,26 +1,26 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../../components";
 
-import api from '../../docs/components/api/calendar.ts'
+import api from "../../docs/components/api/calendar.ts";
 
+import BasicCode from "../../docs/components/raw/Calendar/Basic.txt";
 // eslint-disable-next-line no-restricted-syntax -- using all of them
-import * as Showcases from '../../docs/components/showcases/Calendar'
-import BasicCode from '../../docs/components/raw/Calendar/Basic.txt'
+import * as Showcases from "../../docs/components/showcases/Calendar";
 
 export default {
-  name: 'DevPageCalendar',
-  components: { SnippetSection, ApiSection },
-  setup() {
-    const router = useRouter()
-    return {
-      api,
-      router,
-      Showcases,
-      BasicCode,
-    }
-  },
-}
+	name: "DevPageCalendar",
+	components: { SnippetSection, ApiSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			router,
+			Showcases,
+			BasicCode,
+		};
+	},
+};
 </script>
 
 <template>

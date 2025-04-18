@@ -1,18 +1,18 @@
 <script>
-import { useRouter } from 'vue-router'
+import { useRouter } from "vue-router";
 
 export default {
-  name: 'DevPageBulma',
+  name: "DevPageBulma",
   setup() {
-    const router = useRouter()
+    const router = useRouter();
     function redirect(name) {
       router.push({
-        name
-      })
+        name,
+      });
     }
-    return { router, redirect }
-  }
-}
+    return { router, redirect };
+  },
+};
 </script>
 
 <template>
@@ -22,7 +22,10 @@ export default {
   <p>
     {{ router.currentRoute.value.meta.metaTags[0].content }}
 
-    <br /><br /> However, we will recommend you use <a href="https://github.com/pathscale/bulma-pull-2981" rel="noopener noreferrer" target="_blank">this</a> Bulma fork <i>(based in 0.9.0)</i> if you want to get support for css variables and dynamic <a href="/documentation/theming" rel="noopener noreferrer" target="_blank">Theming</a>.
+    <br /><br /> However, we will recommend you use <a href="https://github.com/pathscale/bulma-pull-2981"
+      rel="noopener noreferrer" target="_blank">this</a> Bulma fork <i>(based in 0.9.0)</i> if you want to get support
+    for css variables and dynamic <a href="/documentation/theming" rel="noopener noreferrer"
+      target="_blank">Theming</a>.
   </p>
 
   <div class="content mt-3">
@@ -31,7 +34,8 @@ export default {
     </p>
     <ul>
       <li>
-        <a href="https://bulma.io/documentation/layout/container/" rel="noopener noreferrer" target="_blank">Container</a>
+        <a href="https://bulma.io/documentation/layout/container/" rel="noopener noreferrer"
+          target="_blank">Container</a>
       </li>
       <li>
         <a href="https://bulma.io/documentation/layout/hero/" rel="noopener noreferrer" target="_blank">Hero</a>
@@ -78,26 +82,33 @@ export default {
     </p>
     <ul>
       <li>
-        <a href="https://bulma.io/documentation/helpers/spacing-helpers/" rel="noopener noreferrer" target="_blank">Spacing</a>
+        <a href="https://bulma.io/documentation/helpers/spacing-helpers/" rel="noopener noreferrer"
+          target="_blank">Spacing</a>
       </li>
       <li>
-        <a href="https://bulma.io/documentation/helpers/visibility-helpers/" rel="noopener noreferrer" target="_blank">Visibility</a>
+        <a href="https://bulma.io/documentation/helpers/visibility-helpers/" rel="noopener noreferrer"
+          target="_blank">Visibility</a>
       </li>
       <li>
-        <a href="https://bulma.io/documentation/helpers/other-helpers/" rel="noopener noreferrer" target="_blank">Other</a>
+        <a href="https://bulma.io/documentation/helpers/other-helpers/" rel="noopener noreferrer"
+          target="_blank">Other</a>
       </li>
       <li>
-        <a href="https://bulma.io/documentation/helpers/color-helpers/" rel="noopener noreferrer" target="_blank">Color</a>
+        <a href="https://bulma.io/documentation/helpers/color-helpers/" rel="noopener noreferrer"
+          target="_blank">Color</a>
       </li>
       <li>
-        <a href="https://bulma.io/documentation/helpers/typography-helpers/" rel="noopener noreferrer" target="_blank">Typography</a>
+        <a href="https://bulma.io/documentation/helpers/typography-helpers/" rel="noopener noreferrer"
+          target="_blank">Typography</a>
       </li>
       <li>
-        <a href="https://bulma.io/documentation/helpers/flexbox-helpers/" rel="noopener noreferrer" target="_blank">Flexbox </a>
+        <a href="https://bulma.io/documentation/helpers/flexbox-helpers/" rel="noopener noreferrer"
+          target="_blank">Flexbox </a>
       </li>
     </ul>
   </div>
   <p>
-    Checkout the Bulma <a href="https://bulma.io/documentation/" rel="noopener noreferrer" target="_blank">documentation</a> for more details.
+    Checkout the Bulma <a href="https://bulma.io/documentation/" rel="noopener noreferrer"
+      target="_blank">documentation</a> for more details.
   </p>
 </template>

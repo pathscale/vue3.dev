@@ -1,26 +1,36 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../../components";
 
-import api from '../../docs/components/api/tooltip.ts'
+import api from "../../docs/components/api/tooltip.ts";
 
+import AlwaysCode from "../../docs/components/raw/Tooltip/Always.txt";
+import AnimatedCode from "../../docs/components/raw/Tooltip/Animated.txt";
+import ColorsCode from "../../docs/components/raw/Tooltip/Colors.txt";
+import DelayCode from "../../docs/components/raw/Tooltip/Delay.txt";
+import SizesCode from "../../docs/components/raw/Tooltip/Sizes.txt";
+import StylesCode from "../../docs/components/raw/Tooltip/Styles.txt";
 // eslint-disable-next-line no-restricted-syntax -- using all components
-import * as Showcases from '../../docs/components/showcases/Tooltip'
-import AlwaysCode from '../../docs/components/raw/Tooltip/Always.txt'
-import AnimatedCode from '../../docs/components/raw/Tooltip/Animated.txt'
-import ColorsCode from '../../docs/components/raw/Tooltip/Colors.txt'
-import DelayCode from '../../docs/components/raw/Tooltip/Delay.txt'
-import SizesCode from '../../docs/components/raw/Tooltip/Sizes.txt'
-import StylesCode from '../../docs/components/raw/Tooltip/Styles.txt'
+import * as Showcases from "../../docs/components/showcases/Tooltip";
 
 export default {
-  name: 'DevPageTooltip',
-  components: { SnippetSection, ApiSection },
-  setup() {
-    const router = useRouter()
-    return { api, router, Showcases, AlwaysCode, AnimatedCode, ColorsCode, DelayCode, SizesCode, StylesCode }
-  }
-}
+	name: "DevPageTooltip",
+	components: { SnippetSection, ApiSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			router,
+			Showcases,
+			AlwaysCode,
+			AnimatedCode,
+			ColorsCode,
+			DelayCode,
+			SizesCode,
+			StylesCode,
+		};
+	},
+};
 </script>
 
 <template>

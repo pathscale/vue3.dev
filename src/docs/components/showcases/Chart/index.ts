@@ -1,3 +1,3 @@
-export { default as Basic } from './Basic.vue'
+export { default as Basic } from "./Basic.vue";
 
-export { default as Candle } from './Candle.vue'
+export { default as Candle } from "./Candle.vue";

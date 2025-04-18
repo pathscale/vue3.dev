@@ -1,10 +1,10 @@
 <script>
-import { VColumns, VColumn, VIcon } from '@pathscale/vue3-ui'
+import { VColumn, VColumns, VIcon } from "@pathscale/vue3-ui";
 
 export default {
-  name: 'DevBlog',
-  components: { VColumns, VColumn, VIcon },
-}
+	name: "DevBlog",
+	components: { VColumns, VColumn, VIcon },
+};
 </script>
 
 <template>

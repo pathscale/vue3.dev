@@ -1,15 +1,15 @@
 <script>
-import { ref } from 'vue'
-import { VField, VTextarea } from '@pathscale/vue3-ui'
+import { VField, VTextarea } from "@pathscale/vue3-ui";
+import { ref } from "vue";
 
 export default {
-  name: 'DevShowcaseTextarea',
-  components: { VField, VTextarea },
-  setup() {
-    const text = ref('')
-    return { text }
-  }
-}
+	name: "DevShowcaseTextarea",
+	components: { VField, VTextarea },
+	setup() {
+		const text = ref("");
+		return { text };
+	},
+};
 </script>
 
 <template>

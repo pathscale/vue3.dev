@@ -1,10 +1,10 @@
 <script>
-import { VAccordion, VField } from '@pathscale/vue3-ui'
+import { VAccordion, VField } from "@pathscale/vue3-ui";
 
 export default {
-  name: 'DevShowcaseAccordion',
-  components: { VAccordion, VField }
-}
+	name: "DevShowcaseAccordion",
+	components: { VAccordion, VField },
+};
 </script>
 
 <template>

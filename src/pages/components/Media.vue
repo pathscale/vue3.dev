@@ -1,21 +1,21 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection, VariablesSection } from "../../components";
 
-import api from '../../docs/components/api/media.ts'
-import variables from '../../docs/components/variables/media.json'
+import api from "../../docs/components/api/media.ts";
+import variables from "../../docs/components/variables/media.json";
 
-import Showcase from '../../docs/components/showcases/Media.vue'
-import ShowcaseCode from '../../docs/components/raw/Media.txt'
+import ShowcaseCode from "../../docs/components/raw/Media.txt";
+import Showcase from "../../docs/components/showcases/Media.vue";
 
 export default {
-  name: 'DevPageMedia',
-  components: { SnippetSection, ApiSection, VariablesSection },
-  setup() {
-    const router = useRouter()
-    return { api, variables, router, Showcase, ShowcaseCode }
-  }
-}
+	name: "DevPageMedia",
+	components: { SnippetSection, ApiSection, VariablesSection },
+	setup() {
+		const router = useRouter();
+		return { api, variables, router, Showcase, ShowcaseCode };
+	},
+};
 </script>
 
 <template>

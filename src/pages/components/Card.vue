@@ -1,22 +1,21 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection, VariablesSection } from "../../components";
 
-import api from '../../docs/components/api/card.ts'
-import variables from '../../docs/components/variables/card.json'
+import api from "../../docs/components/api/card.ts";
+import variables from "../../docs/components/variables/card.json";
 
-import Showcase from '../../docs/components/showcases/Card.vue'
-import ShowcaseCode from '../../docs/components/raw/Card.txt'
+import ShowcaseCode from "../../docs/components/raw/Card.txt";
+import Showcase from "../../docs/components/showcases/Card.vue";
 
 export default {
-  name: 'DevPageCard',
-  components: { SnippetSection, ApiSection, VariablesSection },
-  setup() {
-
-    const router = useRouter()
-    return { api, variables, router, Showcase, ShowcaseCode }
-  }
-}
+	name: "DevPageCard",
+	components: { SnippetSection, ApiSection, VariablesSection },
+	setup() {
+		const router = useRouter();
+		return { api, variables, router, Showcase, ShowcaseCode };
+	},
+};
 </script>
 
 <template>

@@ -1,39 +1,39 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection, VariablesSection } from "../../components";
 
-import api from '../../docs/components/api/dropdown.ts'
-import variables from '../../docs/components/variables/dropdown.json'
+import api from "../../docs/components/api/dropdown.ts";
+import variables from "../../docs/components/variables/dropdown.json";
 
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
-import * as Showcases from '../../docs/components/showcases/Dropdown'
+import * as Showcases from "../../docs/components/showcases/Dropdown";
 
-import DropdownBasicCode from '../../docs/components/raw/Dropdown/DropdownBasic.txt'
-import DropdownHoverableCode from '../../docs/components/raw/Dropdown/DropdownHoverable.txt'
-import DropdownPositionCode from '../../docs/components/raw/Dropdown/DropdownPosition.txt'
-import DropdownDisabledCode from '../../docs/components/raw/Dropdown/DropdownDisabled.txt'
-import DropdownLinkCode from '../../docs/components/raw/Dropdown/DropdownLink.txt'
-import DropdownVModelCode from '../../docs/components/raw/Dropdown/DropdownVModel.txt'
+import DropdownBasicCode from "../../docs/components/raw/Dropdown/DropdownBasic.txt";
+import DropdownDisabledCode from "../../docs/components/raw/Dropdown/DropdownDisabled.txt";
+import DropdownHoverableCode from "../../docs/components/raw/Dropdown/DropdownHoverable.txt";
+import DropdownLinkCode from "../../docs/components/raw/Dropdown/DropdownLink.txt";
+import DropdownPositionCode from "../../docs/components/raw/Dropdown/DropdownPosition.txt";
+import DropdownVModelCode from "../../docs/components/raw/Dropdown/DropdownVModel.txt";
 
 export default {
-  name: 'DevPageDropdown',
-  components: { SnippetSection, ApiSection, VariablesSection },
-  setup() {
-    const router = useRouter()
-    return {
-      api,
-      variables,
-      router,
-      Showcases,
-      DropdownBasicCode,
-      DropdownHoverableCode,
-      DropdownPositionCode,
-      DropdownDisabledCode,
-      DropdownLinkCode,
-      DropdownVModelCode
-    }
-  }
-}
+	name: "DevPageDropdown",
+	components: { SnippetSection, ApiSection, VariablesSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			variables,
+			router,
+			Showcases,
+			DropdownBasicCode,
+			DropdownHoverableCode,
+			DropdownPositionCode,
+			DropdownDisabledCode,
+			DropdownLinkCode,
+			DropdownVModelCode,
+		};
+	},
+};
 </script>
 
 <template>

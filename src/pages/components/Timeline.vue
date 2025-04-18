@@ -1,20 +1,20 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../../components";
 
-import api from '../../docs/components/api/timeline.ts'
+import api from "../../docs/components/api/timeline.ts";
 
-import Example from '../../docs/components/showcases/Timeline/Example.vue'
-import ClosableCode from '../../docs/components/raw/Timeline/Example.txt'
+import ClosableCode from "../../docs/components/raw/Timeline/Example.txt";
+import Example from "../../docs/components/showcases/Timeline/Example.vue";
 
 export default {
-  name: 'DevPageTag',
-  components: { SnippetSection, ApiSection },
-  setup() {
-    const router = useRouter()
-    return { api, router, Example, ClosableCode }
-  }
-}
+	name: "DevPageTag",
+	components: { SnippetSection, ApiSection },
+	setup() {
+		const router = useRouter();
+		return { api, router, Example, ClosableCode };
+	},
+};
 </script>
 
 <template>

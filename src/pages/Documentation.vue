@@ -1,51 +1,55 @@
 <script>
-import { ref, watchEffect, computed } from 'vue'
 import {
-  VBreadcrumb,
-  VBreadcrumbItem,
-  VColumn,
-  VColumns,
-  VMenu,
-  VMenuItem,
-  VMenuList,
-} from '@pathscale/vue3-ui'
-import { useRouter } from 'vue-router'
+	VBreadcrumb,
+	VBreadcrumbItem,
+	VColumn,
+	VColumns,
+	VMenu,
+	VMenuItem,
+	VMenuList,
+} from "@pathscale/vue3-ui";
+import { computed, ref, watchEffect } from "vue";
+import { useRouter } from "vue-router";
 
 export default {
-  name: 'DevPageDocumentation',
-  components: {
-    VBreadcrumb,
-    VBreadcrumbItem,
-    VColumn,
-    VColumns,
-    VMenu,
-    VMenuItem,
-    VMenuList,
-  },
-  setup() {
-    const router = useRouter()
-    const paths = computed(() => router.currentRoute.value.path.split('/').slice(1))
-    const current = ref({})
+	name: "DevPageDocumentation",
+	components: {
+		VBreadcrumb,
+		VBreadcrumbItem,
+		VColumn,
+		VColumns,
+		VMenu,
+		VMenuItem,
+		VMenuList,
+	},
+	setup() {
+		const router = useRouter();
+		const paths = computed(() =>
+			router.currentRoute.value.path.split("/").slice(1),
+		);
+		const current = ref({});
 
-    const isActiveBreadcrumb = item => {
-      return item === router.currentRoute.value.name
-    }
+		const isActiveBreadcrumb = (item) => {
+			return item === router.currentRoute.value.name;
+		};
 
-    function redirect(name) {
-      router.push({
-        name,
-      })
-    }
+		function redirect(name) {
+			router.push({
+				name,
+			});
+		}
 
-    watchEffect(() => {
-      current.value = { [router.currentRoute.value.name]: true }
-      if (router.currentRoute.value.name === 'documentation') { redirect('installation') }
-    })
+		watchEffect(() => {
+			current.value = { [router.currentRoute.value.name]: true };
+			if (router.currentRoute.value.name === "documentation") {
+				redirect("installation");
+			}
+		});
 
-    const isDevelopment = process.env.NODE_ENV === 'development'
-    return { paths, redirect, current, isActiveBreadcrumb, isDevelopment }
-  },
-}
+		const isDevelopment = process.env.NODE_ENV === "development";
+		return { paths, redirect, current, isActiveBreadcrumb, isDevelopment };
+	},
+};
 </script>
 
 <template>

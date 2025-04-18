@@ -1,39 +1,39 @@
 <script>
 import {
-  VField,
-  VInput,
-  VButton,
-  VCard,
-  VCardContent,
-  VMenu,
-  VMenuList,
-  VMenuItem,
-  VTag,
-  VTabs,
-  VTab
-} from '@pathscale/vue3-ui'
-import { ref } from 'vue'
+	VButton,
+	VCard,
+	VCardContent,
+	VField,
+	VInput,
+	VMenu,
+	VMenuItem,
+	VMenuList,
+	VTab,
+	VTabs,
+	VTag,
+} from "@pathscale/vue3-ui";
+import { ref } from "vue";
 
 export default {
-  name: 'ComponentShowcase',
-  components: {
-    VField,
-    VInput,
-    VButton,
-    VCard,
-    VCardContent,
-    VMenu,
-    VMenuList,
-    VMenuItem,
-    VTag,
-    VTabs,
-    VTab
-  },
-  setup() {
-    const activeTab = ref(0)
-    return { activeTab }
-  }
-}
+	name: "ComponentShowcase",
+	components: {
+		VField,
+		VInput,
+		VButton,
+		VCard,
+		VCardContent,
+		VMenu,
+		VMenuList,
+		VMenuItem,
+		VTag,
+		VTabs,
+		VTab,
+	},
+	setup() {
+		const activeTab = ref(0);
+		return { activeTab };
+	},
+};
 </script>
 
 <template>

@@ -1,15 +1,15 @@
 <script>
-import { VField, VSelect } from '@pathscale/vue3-ui'
-import { ref } from 'vue'
+import { VField, VSelect } from "@pathscale/vue3-ui";
+import { ref } from "vue";
 
 export default {
-  name: 'DevShowcaseSelect',
-  components: { VField, VSelect },
-  setup() {
-    const selected = ref(null)
-    return { selected }
-  }
-}
+	name: "DevShowcaseSelect",
+	components: { VField, VSelect },
+	setup() {
+		const selected = ref(null);
+		return { selected };
+	},
+};
 </script>
 
 <template>

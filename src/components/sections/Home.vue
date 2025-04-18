@@ -1,23 +1,22 @@
 <script>
 /* globals smoothScroll -- Globally defined */
-import { VButton, VColumns, VColumn, VImage } from '@pathscale/vue3-ui'
-import { useI18n } from 'vue-composable'
-import logo from '../../assets/svg/vue3-logo.svg'
+import { VButton, VColumn, VColumns, VImage } from "@pathscale/vue3-ui";
+import { useI18n } from "vue-composable";
+import logo from "../../assets/svg/vue3-logo.svg";
 
-import '../../smoothScroll'
+import "../../smoothScroll";
 
 export default {
-  name: 'DevHome',
-  components: { VButton, VColumns, VColumn, VImage },
-  setup() {
-    const intl = useI18n()
-    function scrollToOverview() {
-
-      smoothScroll(document.querySelector('#overview'))
-    }
-    return { intl, logo, scrollToOverview }
-  },
-}
+	name: "DevHome",
+	components: { VButton, VColumns, VColumn, VImage },
+	setup() {
+		const intl = useI18n();
+		function scrollToOverview() {
+			smoothScroll(document.querySelector("#overview"));
+		}
+		return { intl, logo, scrollToOverview };
+	},
+};
 </script>
 
 <template>

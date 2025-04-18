@@ -1,46 +1,46 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection, VariablesSection } from "../../components";
 
-import api from '../../docs/components/api/table.ts'
-import variables from '../../docs/components/variables/table.json'
+import api from "../../docs/components/api/table.ts";
+import variables from "../../docs/components/variables/table.json";
 
+import BasicCode from "../../docs/components/raw/Table/Basic.txt";
+import CustomCode from "../../docs/components/raw/Table/Custom.txt";
+import DragCode from "../../docs/components/raw/Table/Drag.txt";
+import DynamicCode from "../../docs/components/raw/Table/Dynamic.txt";
+import OthersCode from "../../docs/components/raw/Table/Others.txt";
+import PaginateCode from "../../docs/components/raw/Table/Paginate.txt";
+import SearchCode from "../../docs/components/raw/Table/Search.txt";
+import SelectCode from "../../docs/components/raw/Table/Select.txt";
+import StickyCode from "../../docs/components/raw/Table/Sticky.txt";
+import StyledCode from "../../docs/components/raw/Table/Styled.txt";
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
-import * as Showcases from '../../docs/components/showcases/Table'
-import BasicCode from '../../docs/components/raw/Table/Basic.txt'
-import StyledCode from '../../docs/components/raw/Table/Styled.txt'
-import SearchCode from '../../docs/components/raw/Table/Search.txt'
-import CustomCode from '../../docs/components/raw/Table/Custom.txt'
-import SelectCode from '../../docs/components/raw/Table/Select.txt'
-import PaginateCode from '../../docs/components/raw/Table/Paginate.txt'
-import DynamicCode from '../../docs/components/raw/Table/Dynamic.txt'
-import DragCode from '../../docs/components/raw/Table/Drag.txt'
-import StickyCode from '../../docs/components/raw/Table/Sticky.txt'
-import OthersCode from '../../docs/components/raw/Table/Others.txt'
+import * as Showcases from "../../docs/components/showcases/Table";
 
 export default {
-  name: 'DevPageTable',
-  components: { SnippetSection, ApiSection, VariablesSection },
-  setup() {
-    const router = useRouter()
-    return {
-      api,
-      variables,
-      router,
-      Showcases,
-      BasicCode,
-      StyledCode,
-      SearchCode,
-      CustomCode,
-      SelectCode,
-      PaginateCode,
-      DynamicCode,
-      DragCode,
-      StickyCode,
-      OthersCode
-    }
-  }
-}
+	name: "DevPageTable",
+	components: { SnippetSection, ApiSection, VariablesSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			variables,
+			router,
+			Showcases,
+			BasicCode,
+			StyledCode,
+			SearchCode,
+			CustomCode,
+			SelectCode,
+			PaginateCode,
+			DynamicCode,
+			DragCode,
+			StickyCode,
+			OthersCode,
+		};
+	},
+};
 </script>
 
 <template>

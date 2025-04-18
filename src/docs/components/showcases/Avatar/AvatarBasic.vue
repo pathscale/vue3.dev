@@ -1,10 +1,10 @@
 <script>
-import { VAvatar } from '@pathscale/vue3-ui'
+import { VAvatar } from "@pathscale/vue3-ui";
 
 export default {
-  name: 'DevShowcaseAvatar',
-  components: { VAvatar }
-}
+	name: "DevShowcaseAvatar",
+	components: { VAvatar },
+};
 </script>
 
 <template>

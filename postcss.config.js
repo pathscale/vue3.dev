@@ -1,7 +1,5 @@
-'use strict'
-
 export default {
-  plugins: {
-    autoprefixer: {},
-  },
-}
+	plugins: {
+		autoprefixer: {},
+	},
+};

@@ -1,25 +1,34 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection, VariablesSection } from "../../components";
 
-import api from '../../docs/components/api/input.ts'
-import variables from '../../docs/components/variables/input.json'
+import api from "../../docs/components/api/input.ts";
+import variables from "../../docs/components/variables/input.json";
 
+import BasicCode from "../../docs/components/raw/Input/Basic.txt";
+import ColorCode from "../../docs/components/raw/Input/Color.txt";
+import LoadingCode from "../../docs/components/raw/Input/Loading.txt";
+import SizeCode from "../../docs/components/raw/Input/Size.txt";
 // eslint-disable-next-line no-restricted-syntax -- using all
-import * as Showcases from '../../docs/components/showcases/Input'
-import ColorCode from '../../docs/components/raw/Input/Color.txt'
-import LoadingCode from '../../docs/components/raw/Input/Loading.txt'
-import SizeCode from '../../docs/components/raw/Input/Size.txt'
-import BasicCode from '../../docs/components/raw/Input/Basic.txt'
+import * as Showcases from "../../docs/components/showcases/Input";
 
 export default {
-  name: 'DevPageInput',
-  components: { SnippetSection, ApiSection, VariablesSection },
-  setup() {
-    const router = useRouter()
-    return { api, variables, router, Showcases, ColorCode, LoadingCode, SizeCode, BasicCode }
-  }
-}
+	name: "DevPageInput",
+	components: { SnippetSection, ApiSection, VariablesSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			variables,
+			router,
+			Showcases,
+			ColorCode,
+			LoadingCode,
+			SizeCode,
+			BasicCode,
+		};
+	},
+};
 </script>
 
 <template>

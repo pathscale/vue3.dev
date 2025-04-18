@@ -1,10 +1,10 @@
 <script>
-import { VButton } from '@pathscale/vue3-ui'
+import { VButton } from "@pathscale/vue3-ui";
 
 export default {
-  name: 'DevShowcaseButton',
-  components: { VButton }
-}
+	name: "DevShowcaseButton",
+	components: { VButton },
+};
 </script>
 
 <template>

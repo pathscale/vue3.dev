@@ -1,19 +1,19 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection } from '../components'
+import { useRouter } from "vue-router";
+import { SnippetSection } from "../components";
 
+import BasicCode from "../docs/components/raw/Validation/Basic.txt";
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
-import * as Showcases from '../docs/components/showcases/Validation'
-import BasicCode from '../docs/components/raw/Validation/Basic.txt'
+import * as Showcases from "../docs/components/showcases/Validation";
 
 export default {
-  name: 'DevPageValidation',
-  components: { SnippetSection },
-  setup() {
-    const router = useRouter()
-    return { router, Showcases, BasicCode }
-  }
-}
+	name: "DevPageValidation",
+	components: { SnippetSection },
+	setup() {
+		const router = useRouter();
+		return { router, Showcases, BasicCode };
+	},
+};
 </script>
 
 <template>

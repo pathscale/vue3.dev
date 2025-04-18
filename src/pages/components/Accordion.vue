@@ -1,21 +1,20 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../../components";
 
-import api from '../../docs/components/api/accordion.ts'
+import api from "../../docs/components/api/accordion.ts";
 
-import Showcase from '../../docs/components/showcases/Accordion.vue'
-import ShowcaseCode from '../../docs/components/raw/Accordion.txt'
+import ShowcaseCode from "../../docs/components/raw/Accordion.txt";
+import Showcase from "../../docs/components/showcases/Accordion.vue";
 
 export default {
-  name: 'DevPageAccordion',
-  components: { SnippetSection, ApiSection },
-  setup() {
-
-    const router = useRouter()
-    return { api, router, Showcase, ShowcaseCode }
-  }
-}
+	name: "DevPageAccordion",
+	components: { SnippetSection, ApiSection },
+	setup() {
+		const router = useRouter();
+		return { api, router, Showcase, ShowcaseCode };
+	},
+};
 </script>
 
 <template>

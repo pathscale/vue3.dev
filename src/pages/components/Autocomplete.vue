@@ -1,26 +1,26 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../../components";
 
-import api from '../../docs/components/api/autocomplete.ts'
+import api from "../../docs/components/api/autocomplete.ts";
 
+import BasicCode from "../../docs/components/raw/Autocomplete/Basic.txt";
 // eslint-disable-next-line no-restricted-syntax -- using all of them
-import * as Showcases from '../../docs/components/showcases/Autocomplete'
-import BasicCode from '../../docs/components/raw/Autocomplete/Basic.txt'
+import * as Showcases from "../../docs/components/showcases/Autocomplete";
 
 export default {
-  name: 'DevPageChart',
-  components: { SnippetSection, ApiSection },
-  setup() {
-    const router = useRouter()
-    return {
-      api,
-      router,
-      Showcases,
-      BasicCode,
-    }
-  },
-}
+	name: "DevPageChart",
+	components: { SnippetSection, ApiSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			router,
+			Showcases,
+			BasicCode,
+		};
+	},
+};
 </script>
 
 <template>

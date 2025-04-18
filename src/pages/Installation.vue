@@ -1,28 +1,28 @@
 <script>
-import { useRouter } from 'vue-router'
-import { VAccordion, VIcon } from '@pathscale/vue3-ui'
+import { VAccordion, VIcon } from "@pathscale/vue3-ui";
+import { useRouter } from "vue-router";
 
-import { reactive } from 'vue'
-import Showcase from '../docs/components/showcases/HelloWord.vue'
-import ShowcaseCode from '../docs/components/raw/HelloWord.txt'
+import { reactive } from "vue";
+import ShowcaseCode from "../docs/components/raw/HelloWord.txt";
+import Showcase from "../docs/components/showcases/HelloWord.vue";
 
-import { SnippetSection } from '../components'
+import { SnippetSection } from "../components";
 
 export default {
-  name: 'DevPageInstallation',
-  components: { SnippetSection, VAccordion, VIcon },
-  setup() {
-    const router = useRouter()
-    const state = reactive({
-      template: true,
-    })
+	name: "DevPageInstallation",
+	components: { SnippetSection, VAccordion, VIcon },
+	setup() {
+		const router = useRouter();
+		const state = reactive({
+			template: true,
+		});
 
-    function toggle(value) {
-      state[value] = !state[value]
-    }
-    return { router, Showcase, ShowcaseCode, state, toggle }
-  }
-}
+		function toggle(value) {
+			state[value] = !state[value];
+		}
+		return { router, Showcase, ShowcaseCode, state, toggle };
+	},
+};
 </script>
 
 <template>

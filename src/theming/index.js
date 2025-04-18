@@ -1,3 +1,3 @@
-export { setTheme } from './utils'
+export { setTheme } from "./utils";
 
-export { default as defaultTheme } from './variables'
+export { default as defaultTheme } from "./variables";

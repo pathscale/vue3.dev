@@ -1,10 +1,10 @@
 <script>
-import { VTooltip, VButton } from '@pathscale/vue3-ui'
+import { VButton, VTooltip } from "@pathscale/vue3-ui";
 
 export default {
-  name: 'DevShowcaseTooltip',
-  components: { VTooltip, VButton }
-}
+	name: "DevShowcaseTooltip",
+	components: { VTooltip, VButton },
+};
 </script>
 
 <template>

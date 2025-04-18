@@ -1,25 +1,34 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../../components";
 
-import api from '../../docs/components/api/switch.ts'
+import api from "../../docs/components/api/switch.ts";
 
+import DefaultCode from "../../docs/components/raw/Switch/Default.txt";
+import PassiveCode from "../../docs/components/raw/Switch/Passive.txt";
+import SizesCode from "../../docs/components/raw/Switch/Sizes.txt";
+import StylesCode from "../../docs/components/raw/Switch/Style.txt";
+import ValuesCode from "../../docs/components/raw/Switch/Values.txt";
 // eslint-disable-next-line no-restricted-syntax -- using all of them
-import * as Showcases from '../../docs/components/showcases/Switch'
-import DefaultCode from '../../docs/components/raw/Switch/Default.txt'
-import PassiveCode from '../../docs/components/raw/Switch/Passive.txt'
-import SizesCode from '../../docs/components/raw/Switch/Sizes.txt'
-import StylesCode from '../../docs/components/raw/Switch/Style.txt'
-import ValuesCode from '../../docs/components/raw/Switch/Values.txt'
+import * as Showcases from "../../docs/components/showcases/Switch";
 
 export default {
-  name: 'DevPageSwitch',
-  components: { SnippetSection, ApiSection },
-  setup() {
-    const router = useRouter()
-    return { api, router, Showcases, DefaultCode, PassiveCode, SizesCode, StylesCode, ValuesCode }
-  }
-}
+	name: "DevPageSwitch",
+	components: { SnippetSection, ApiSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			router,
+			Showcases,
+			DefaultCode,
+			PassiveCode,
+			SizesCode,
+			StylesCode,
+			ValuesCode,
+		};
+	},
+};
 </script>
 
 <template>

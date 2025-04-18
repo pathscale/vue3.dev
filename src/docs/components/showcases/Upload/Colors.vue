@@ -1,10 +1,10 @@
 <script>
-import { VField, VUpload, VIcon } from '@pathscale/vue3-ui'
+import { VField, VIcon, VUpload } from "@pathscale/vue3-ui";
 
 export default {
-  name: 'DevShowcaseFile',
-  components: { VField, VUpload, VIcon },
-}
+	name: "DevShowcaseFile",
+	components: { VField, VUpload, VIcon },
+};
 </script>
 
 <template>

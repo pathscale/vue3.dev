@@ -1,13 +1,13 @@
 <script>
-import { VTag } from '@pathscale/vue3-ui'
+import { VTag } from "@pathscale/vue3-ui";
 
 export default {
-  name: 'DevVariables',
-  components: { VTag },
-  props: {
-    'variables': Object
-  }
-}
+	name: "DevVariables",
+	components: { VTag },
+	props: {
+		variables: Object,
+	},
+};
 </script>
 
 <template>

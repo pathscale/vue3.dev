@@ -1,6 +1,6 @@
 {
-    "$progress-bar-background-color": "$background",
-    "$progress-value-background-color": "$text",
-    "$progress-border-radius": "$radius",
-    "$progress-indeterminate-duration": "1px"
+	"$progress-bar-background-color": "$background",
+	"$progress-value-background-color": "$text",
+	"$progress-border-radius": "$radius",
+	"$progress-indeterminate-duration": "1px"
 }

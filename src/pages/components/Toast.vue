@@ -1,28 +1,28 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection, VariablesSection } from "../../components";
 
-import api from '../../docs/components/api/toast.ts'
-import variables from '../../docs/components/variables/notification.json'
+import api from "../../docs/components/api/toast.ts";
+import variables from "../../docs/components/variables/notification.json";
 
+import DefaultCode from "../../docs/components/raw/Toast/Default.txt";
 // eslint-disable-next-line no-restricted-syntax -- using all of them
-import * as Showcases from '../../docs/components/showcases/Toast'
-import DefaultCode from '../../docs/components/raw/Toast/Default.txt'
+import * as Showcases from "../../docs/components/showcases/Toast";
 
 export default {
-  name: 'DevPageToast',
-  components: { SnippetSection, ApiSection, VariablesSection },
-  setup() {
-    const router = useRouter()
-    return {
-      api,
-      variables,
-      router,
-      Showcases,
-      DefaultCode,
-    }
-  },
-}
+	name: "DevPageToast",
+	components: { SnippetSection, ApiSection, VariablesSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			variables,
+			router,
+			Showcases,
+			DefaultCode,
+		};
+	},
+};
 </script>
 
 <template>

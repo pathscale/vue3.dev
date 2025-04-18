@@ -1,10 +1,10 @@
 <script>
-import { VDropdown, VDropdownItem, VButton } from '@pathscale/vue3-ui'
+import { VButton, VDropdown, VDropdownItem } from "@pathscale/vue3-ui";
 
 export default {
-  name: 'DevShowcaseDropdown',
-  components: { VDropdown, VDropdownItem, VButton }
-}
+	name: "DevShowcaseDropdown",
+	components: { VDropdown, VDropdownItem, VButton },
+};
 </script>
 
 <template>

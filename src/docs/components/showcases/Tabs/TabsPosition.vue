@@ -1,15 +1,15 @@
 <script>
-import { ref } from 'vue'
-import { VTabs, VTab /* , VButton */ } from '@pathscale/vue3-ui'
+import { VTab, /* , VButton */ VTabs } from "@pathscale/vue3-ui";
+import { ref } from "vue";
 
 export default {
-  name: 'DevShowcaseTabs',
-  components: { VTabs, VTab /* , VButton */ },
-  setup() {
-    const activeTab = ref(0)
-    return { activeTab }
-  }
-}
+	name: "DevShowcaseTabs",
+	components: { VTabs, VTab /* , VButton */ },
+	setup() {
+		const activeTab = ref(0);
+		return { activeTab };
+	},
+};
 </script>
 
 <template>

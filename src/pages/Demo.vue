@@ -1,15 +1,20 @@
 <script>
-import { VBreadcrumb, VBreadcrumbItem, VColumn, VColumns } from '@pathscale/vue3-ui'
+import {
+	VBreadcrumb,
+	VBreadcrumbItem,
+	VColumn,
+	VColumns,
+} from "@pathscale/vue3-ui";
 
 export default {
-  name: 'Demo',
-  components: {
-    VBreadcrumb,
-    VBreadcrumbItem,
-    VColumn,
-    VColumns,
-  },
-}
+	name: "Demo",
+	components: {
+		VBreadcrumb,
+		VBreadcrumbItem,
+		VColumn,
+		VColumns,
+	},
+};
 </script>
 
 <template>

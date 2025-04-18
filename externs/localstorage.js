@@ -7,14 +7,14 @@ function localStorage() {}
  * @param {string} value
  * @return {undefined}
  */
-localStorage.setItem = function(name, value) {}
+localStorage.setItem = (name, value) => {};
 /**
  * @param {string} name
  * @return {undefined}
  */
-localStorage.removeItem = function(name) {}
+localStorage.removeItem = (name) => {};
 /**
-* @param {string} name
-* @return {string}
-*/
-localStorage.getItem = function(name) {}
+ * @param {string} name
+ * @return {string}
+ */
+localStorage.getItem = (name) => {};

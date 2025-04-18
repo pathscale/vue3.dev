@@ -1,28 +1,36 @@
 <script>
-import { useRouter } from 'vue-router'
-import { VTabs, VTab } from '@pathscale/vue3-ui'
-import { ref } from 'vue'
-import { SnippetSection, ApiSection } from '../components'
+import { VTab, VTabs } from "@pathscale/vue3-ui";
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../components";
 
-import api from '../docs/components/api/icon.ts'
+import api from "../docs/components/api/icon.ts";
 
-
+import ColorsCode from "../docs/components/raw/Icon/IconColors.txt";
+import CustomClassCode from "../docs/components/raw/Icon/IconCustomClass.txt";
+import CustomSizesCode from "../docs/components/raw/Icon/IconCustomSizes.txt";
+import SizesCode from "../docs/components/raw/Icon/IconSizes.txt";
 // eslint-disable-next-line no-restricted-syntax -- Using all of them
-import * as Showcases from '../docs/components/showcases/Icon'
-import SizesCode from '../docs/components/raw/Icon/IconSizes.txt'
-import CustomSizesCode from '../docs/components/raw/Icon/IconCustomSizes.txt'
-import ColorsCode from '../docs/components/raw/Icon/IconColors.txt'
-import CustomClassCode from '../docs/components/raw/Icon/IconCustomClass.txt'
+import * as Showcases from "../docs/components/showcases/Icon";
 
 export default {
-  name: 'DevPageInstallation',
-  components: { SnippetSection, ApiSection, VTabs, VTab },
-  setup() {
-    const router = useRouter()
-    const activeTab = ref(0)
-    return { router, Showcases, SizesCode, CustomSizesCode, ColorsCode, CustomClassCode, api, activeTab }
-  }
-}
+	name: "DevPageInstallation",
+	components: { SnippetSection, ApiSection, VTabs, VTab },
+	setup() {
+		const router = useRouter();
+		const activeTab = ref(0);
+		return {
+			router,
+			Showcases,
+			SizesCode,
+			CustomSizesCode,
+			ColorsCode,
+			CustomClassCode,
+			api,
+			activeTab,
+		};
+	},
+};
 </script>
 
 <template>

@@ -1,40 +1,38 @@
 <script>
-import { VColumns, VColumn, VImage } from '@pathscale/vue3-ui'
-import { useI18n } from 'vue-composable'
-
+import { VColumn, VColumns, VImage } from "@pathscale/vue3-ui";
+import { useI18n } from "vue-composable";
 
 export default {
-  name: 'DevClients',
-  components: { VColumns, VColumn, VImage },
-  setup() {
-    const intl = useI18n()
+	name: "DevClients",
+	components: { VColumns, VColumn, VImage },
+	setup() {
+		const intl = useI18n();
 
-
-    const projects = [
-      {
-        title: 'Pathscale.com',
-        image: '/pathscale.webp',
-        link: 'https://www.pathscale.com/'
-      },
-      {
-        title: 'Revenge.game',
-        image: '/revenge.webp',
-        link: 'https://www.revenge.game/'
-      },
-      {
-        title: 'SpaceRevenge.game',
-        image: '/space.webp',
-        link: 'https://www.spacerevenge.game/'
-      },
-      {
-        title: 'Vue3.dev',
-        image: '/vue3.dev.webp',
-        link: 'https://vue3.dev/'
-      }
-    ]
-    return { intl, projects }
-  }
-}
+		const projects = [
+			{
+				title: "Pathscale.com",
+				image: "/pathscale.webp",
+				link: "https://www.pathscale.com/",
+			},
+			{
+				title: "Revenge.game",
+				image: "/revenge.webp",
+				link: "https://www.revenge.game/",
+			},
+			{
+				title: "SpaceRevenge.game",
+				image: "/space.webp",
+				link: "https://www.spacerevenge.game/",
+			},
+			{
+				title: "Vue3.dev",
+				image: "/vue3.dev.webp",
+				link: "https://vue3.dev/",
+			},
+		];
+		return { intl, projects };
+	},
+};
 </script>
 
 <template>

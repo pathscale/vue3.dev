@@ -1,21 +1,20 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../../components";
 
-import api from '../../docs/components/api/checkbox.ts'
+import api from "../../docs/components/api/checkbox.ts";
 
-import Showcase from '../../docs/components/showcases/Checkbox.vue'
-import ShowcaseCode from '../../docs/components/raw/Checkbox.txt'
+import ShowcaseCode from "../../docs/components/raw/Checkbox.txt";
+import Showcase from "../../docs/components/showcases/Checkbox.vue";
 
 export default {
-  name: 'DevPageCheckbox',
-  components: { SnippetSection, ApiSection },
-  setup() {
-
-    const router = useRouter()
-    return { api, router, Showcase, ShowcaseCode }
-  }
-}
+	name: "DevPageCheckbox",
+	components: { SnippetSection, ApiSection },
+	setup() {
+		const router = useRouter();
+		return { api, router, Showcase, ShowcaseCode };
+	},
+};
 </script>
 
 <template>

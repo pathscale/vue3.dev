@@ -145,85 +145,87 @@
 </template>
 
 <script>
-import { reactive, computed, inject } from 'vue'
 import {
-  VButton,
-  VColumns,
-  VColumn,
-  ToasterPositions,
-  VField,
-  VInput,
-  VCheckbox,
-  VSlider,
-} from '@pathscale/vue3-ui'
+	ToasterPositions,
+	VButton,
+	VCheckbox,
+	VColumn,
+	VColumns,
+	VField,
+	VInput,
+	VSlider,
+} from "@pathscale/vue3-ui";
+import { computed, inject, reactive } from "vue";
 
 export default {
-  name: 'DevShowcaseToast',
-  components: {
-    VButton,
-    VColumns,
-    VColumn,
-    VField,
-    VInput,
-    VCheckbox,
-    VSlider,
-  },
-  setup() {
-    const $toast = inject('$toast')
+	name: "DevShowcaseToast",
+	components: {
+		VButton,
+		VColumns,
+		VColumn,
+		VField,
+		VInput,
+		VCheckbox,
+		VSlider,
+	},
+	setup() {
+		const $toast = inject("$toast");
 
-    const state = reactive({
-      message: "Bulma's notification implemented as a toast plugin.",
-      options: {
-        duration: 4000,
-      },
-    })
+		const state = reactive({
+			message: "Bulma's notification implemented as a toast plugin.",
+			options: {
+				duration: 4000,
+			},
+		});
 
-    const positions = computed(() => {
-      return Object.keys(ToasterPositions).map(key => {
-        return {
-          key,
-          value: ToasterPositions[key],
-          name: ToasterPositions[key].replace(/-/, ' '),
-        }
-      })
-    })
+		const positions = computed(() => {
+			return Object.keys(ToasterPositions).map((key) => {
+				return {
+					key,
+					value: ToasterPositions[key],
+					name: ToasterPositions[key].replace(/-/, " "),
+				};
+			});
+		});
 
-    const hasOptions = computed(() => {
-      return (
-        state.options && (Object.keys(state.options).length > 1 || state.options.duration !== 4000)
-      )
-    })
+		const hasOptions = computed(() => {
+			return (
+				state.options &&
+				(Object.keys(state.options).length > 1 ||
+					state.options.duration !== 4000)
+			);
+		});
 
-    function onClick(e) {
-      console.log(e)
-    }
+		function onClick(e) {
+			console.log(e);
+		}
 
-    function toast(type = 'is-primary', dismissible = true) {
-      const options = {
-        dismissible,
-        onClick,
-      }
-      if (typeof type === 'string') {
-        options.type = type
-      }
+		function toast(type = "is-primary", dismissible = true) {
+			const options = {
+				dismissible,
+				onClick,
+			};
+			if (typeof type === "string") {
+				options.type = type;
+			}
 
-      if (typeof state.options.maxToasts === 'string') {
-        state.options.maxToasts = Number.parseInt(state.options.maxToasts)
-      }
+			if (typeof state.options.maxToasts === "string") {
+				state.options.maxToasts = Number.parseInt(state.options.maxToasts);
+			}
 
-      $toast.show(state.message, {
-        ...options,
-        ...state.options,
-      })
-    }
+			$toast.show(state.message, {
+				...options,
+				...state.options,
+			});
+		}
 
-    function changeDuration(e) {
-      state.options.duration = !e.target.checked ? 4000 : false
-    }
+		function changeDuration(e) {
+			state.options.duration = !e.target.checked ? 4000 : false;
+		}
 
-    return { state, positions, hasOptions, toast, changeDuration }
-  },
-}
+		return { state, positions, hasOptions, toast, changeDuration };
+	},
+};
 </script>
 
 <style scoped>

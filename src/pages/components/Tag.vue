@@ -1,26 +1,36 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection, VariablesSection } from "../../components";
 
-import api from '../../docs/components/api/tag.ts'
-import variables from '../../docs/components/variables/tag.json'
+import api from "../../docs/components/api/tag.ts";
+import variables from "../../docs/components/variables/tag.json";
 
+import ClosableCode from "../../docs/components/raw/Tag/Closable.txt";
+import ColorsCode from "../../docs/components/raw/Tag/Colors.txt";
+import SizesCode from "../../docs/components/raw/Tag/Sizes.txt";
+import StatesCode from "../../docs/components/raw/Tag/States.txt";
+import StylesCode from "../../docs/components/raw/Tag/Styles.txt";
 // eslint-disable-next-line no-restricted-syntax -- using all components
-import * as Showcases from '../../docs/components/showcases/Tag'
-import ClosableCode from '../../docs/components/raw/Tag/Closable.txt'
-import ColorsCode from '../../docs/components/raw/Tag/Colors.txt'
-import SizesCode from '../../docs/components/raw/Tag/Sizes.txt'
-import StatesCode from '../../docs/components/raw/Tag/States.txt'
-import StylesCode from '../../docs/components/raw/Tag/Styles.txt'
+import * as Showcases from "../../docs/components/showcases/Tag";
 
 export default {
-  name: 'DevPageTag',
-  components: { SnippetSection, ApiSection, VariablesSection },
-  setup() {
-    const router = useRouter()
-    return { api, variables, router, Showcases, ClosableCode, ColorsCode, SizesCode, StatesCode, StylesCode }
-  }
-}
+	name: "DevPageTag",
+	components: { SnippetSection, ApiSection, VariablesSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			variables,
+			router,
+			Showcases,
+			ClosableCode,
+			ColorsCode,
+			SizesCode,
+			StatesCode,
+			StylesCode,
+		};
+	},
+};
 </script>
 
 <template>

@@ -1,26 +1,42 @@
 <script>
-import { VSidebar, VButton, VSwitch, VField, VMenu, VMenuList, VMenuItem } from '@pathscale/vue3-ui'
-import { reactive } from 'vue'
+import {
+	VButton,
+	VField,
+	VMenu,
+	VMenuItem,
+	VMenuList,
+	VSidebar,
+	VSwitch,
+} from "@pathscale/vue3-ui";
+import { reactive } from "vue";
 
 export default {
-  name: 'DevShowcaseSidebar',
-  components: { VSidebar, VButton, VSwitch, VField, VMenu, VMenuList, VMenuItem },
-  setup(/* props */) {
-    const state = reactive({
-      open: false,
-      overlay: false,
-      reduced: false,
-    })
+	name: "DevShowcaseSidebar",
+	components: {
+		VSidebar,
+		VButton,
+		VSwitch,
+		VField,
+		VMenu,
+		VMenuList,
+		VMenuItem,
+	},
+	setup(/* props */) {
+		const state = reactive({
+			open: false,
+			overlay: false,
+			reduced: false,
+		});
 
-    function close() {
-      state.open = false
-      state.overlay = false
-      state.reduced = false
-    }
+		function close() {
+			state.open = false;
+			state.overlay = false;
+			state.reduced = false;
+		}
 
-    return { state, close }
-  },
-}
+		return { state, close };
+	},
+};
 </script>
 
 <template>

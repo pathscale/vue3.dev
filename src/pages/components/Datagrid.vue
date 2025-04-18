@@ -1,26 +1,25 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../../components";
 
-import api from '../../docs/components/api/datagrid.ts'
+import api from "../../docs/components/api/datagrid.ts";
 
-import Showcase from '../../docs/components/showcases/Datagrid.vue'
-import ShowcaseCode from '../../docs/components/raw/Datagrid.txt'
+import ShowcaseCode from "../../docs/components/raw/Datagrid.txt";
+import Showcase from "../../docs/components/showcases/Datagrid.vue";
 
 export default {
-  name: 'DevPageDatagrid',
-  components: { SnippetSection, ApiSection },
-  setup() {
-
-    const router = useRouter()
-    return {
-      api,
-      router,
-      Showcase,
-      ShowcaseCode
-    }
-  }
-}
+	name: "DevPageDatagrid",
+	components: { SnippetSection, ApiSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			router,
+			Showcase,
+			ShowcaseCode,
+		};
+	},
+};
 </script>
 
 <template>

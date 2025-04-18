@@ -1,18 +1,18 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection } from '../../components'
+import { useRouter } from "vue-router";
+import { SnippetSection } from "../../components";
 
-import Showcase from '../../docs/components/showcases/Playground.vue'
-import ShowcaseCode from '../../docs/components/raw/Playground.txt'
+import ShowcaseCode from "../../docs/components/raw/Playground.txt";
+import Showcase from "../../docs/components/showcases/Playground.vue";
 
 export default {
-  name: 'DevPlayground',
-  components: { SnippetSection },
-  setup() {
-    const router = useRouter()
-    return { router, Showcase, ShowcaseCode }
-  }
-}
+	name: "DevPlayground",
+	components: { SnippetSection },
+	setup() {
+		const router = useRouter();
+		return { router, Showcase, ShowcaseCode };
+	},
+};
 </script>
 
 <template>

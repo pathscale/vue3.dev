@@ -1,22 +1,21 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection, VariablesSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection, VariablesSection } from "../../components";
 
-import api from '../../docs/components/api/image.ts'
-import variables from '../../docs/components/variables/image.json'
+import api from "../../docs/components/api/image.ts";
+import variables from "../../docs/components/variables/image.json";
 
-import Showcase from '../../docs/components/showcases/Image.vue'
-import ShowcaseCode from '../../docs/components/raw/Image.txt'
+import ShowcaseCode from "../../docs/components/raw/Image.txt";
+import Showcase from "../../docs/components/showcases/Image.vue";
 
 export default {
-  name: 'DevPageImage',
-  components: { SnippetSection, ApiSection, VariablesSection },
-  setup() {
-
-    const router = useRouter()
-    return { api, variables, router, Showcase, ShowcaseCode }
-  }
-}
+	name: "DevPageImage",
+	components: { SnippetSection, ApiSection, VariablesSection },
+	setup() {
+		const router = useRouter();
+		return { api, variables, router, Showcase, ShowcaseCode };
+	},
+};
 </script>
 
 <template>

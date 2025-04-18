@@ -1,25 +1,30 @@
 <script>
-import { useRouter } from 'vue-router'
-import { SnippetSection, ApiSection } from '../../components'
+import { useRouter } from "vue-router";
+import { ApiSection, SnippetSection } from "../../components";
 
-import api from '../../docs/components/api/breadcrumb.ts'
+import api from "../../docs/components/api/breadcrumb.ts";
 
+import BreadcrumbBasicCode from "../../docs/components/raw/Breadcrumb/BreadcrumbBasic.txt";
+import BreadcrumbSeparatorCode from "../../docs/components/raw/Breadcrumb/BreadcrumbSeparator.txt";
+import BreadcrumbSizesCode from "../../docs/components/raw/Breadcrumb/BreadcrumbSizes.txt";
 // eslint-disable-next-line no-restricted-syntax -- Using comprehensively
-import * as Showcases from '../../docs/components/showcases/Breadcrumb'
-import BreadcrumbBasicCode from '../../docs/components/raw/Breadcrumb/BreadcrumbBasic.txt'
-import BreadcrumbSizesCode from '../../docs/components/raw/Breadcrumb/BreadcrumbSizes.txt'
-import BreadcrumbSeparatorCode from '../../docs/components/raw/Breadcrumb/BreadcrumbSeparator.txt'
-
+import * as Showcases from "../../docs/components/showcases/Breadcrumb";
 
 export default {
-  name: 'DevPageBreadcrumb',
-  components: { SnippetSection, ApiSection },
-  setup() {
-
-    const router = useRouter()
-    return { api, router, Showcases, BreadcrumbBasicCode, BreadcrumbSizesCode, BreadcrumbSeparatorCode }
-  }
-}
+	name: "DevPageBreadcrumb",
+	components: { SnippetSection, ApiSection },
+	setup() {
+		const router = useRouter();
+		return {
+			api,
+			router,
+			Showcases,
+			BreadcrumbBasicCode,
+			BreadcrumbSizesCode,
+			BreadcrumbSeparatorCode,
+		};
+	},
+};
 </script>
 
 <template>
