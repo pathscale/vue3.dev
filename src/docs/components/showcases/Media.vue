@@ -2,8 +2,8 @@
 import { VButton, VField, VImage, VMedia, VTextarea } from "@pathscale/vue3-ui";
 
 export default {
-	name: "DevShowcaseMedia",
-	components: { VMedia, VImage, VTextarea, VField, VButton },
+  name: "DevShowcaseMedia",
+  components: { VMedia, VImage, VTextarea, VField, VButton },
 };
 </script>
 

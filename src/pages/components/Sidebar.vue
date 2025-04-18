@@ -8,12 +8,12 @@ import ShowcaseCode from "../../docs/components/raw/Sidebar.txt";
 import Showcase from "../../docs/components/showcases/Sidebar.vue";
 
 export default {
-	name: "DevPageSidebar",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return { api, router, Showcase, ShowcaseCode };
-	},
+  name: "DevPageSidebar",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return { api, router, Showcase, ShowcaseCode };
+  },
 };
 </script>
 

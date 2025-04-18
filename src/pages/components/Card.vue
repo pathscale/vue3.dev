@@ -9,12 +9,12 @@ import ShowcaseCode from "../../docs/components/raw/Card.txt";
 import Showcase from "../../docs/components/showcases/Card.vue";
 
 export default {
-	name: "DevPageCard",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return { api, variables, router, Showcase, ShowcaseCode };
-	},
+  name: "DevPageCard",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return { api, variables, router, Showcase, ShowcaseCode };
+  },
 };
 </script>
 

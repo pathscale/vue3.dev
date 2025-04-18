@@ -13,21 +13,21 @@ import SizeCode from "../../docs/components/raw/Textarea/Size.txt";
 import * as Showcases from "../../docs/components/showcases/Textarea";
 
 export default {
-	name: "DevPageTextarea",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			router,
-			Showcases,
-			ColorCode,
-			SizeCode,
-			LoadingCode,
-			FocusedCode,
-			CounterCode,
-		};
-	},
+  name: "DevPageTextarea",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      router,
+      Showcases,
+      ColorCode,
+      SizeCode,
+      LoadingCode,
+      FocusedCode,
+      CounterCode,
+    };
+  },
 };
 </script>
 

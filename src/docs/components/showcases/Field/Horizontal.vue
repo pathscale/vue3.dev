@@ -2,8 +2,8 @@
 import { VField, VInput } from "@pathscale/vue3-ui";
 
 export default {
-	name: "DevShowcaseField",
-	components: { VField, VInput },
+  name: "DevShowcaseField",
+  components: { VField, VInput },
 };
 </script>
 

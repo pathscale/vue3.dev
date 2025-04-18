@@ -8,17 +8,17 @@ import ShowcaseCode from "../../docs/components/raw/Datagrid.txt";
 import Showcase from "../../docs/components/showcases/Datagrid.vue";
 
 export default {
-	name: "DevPageDatagrid",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			router,
-			Showcase,
-			ShowcaseCode,
-		};
-	},
+  name: "DevPageDatagrid",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      router,
+      Showcase,
+      ShowcaseCode,
+    };
+  },
 };
 </script>
 

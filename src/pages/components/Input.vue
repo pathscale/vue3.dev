@@ -13,21 +13,21 @@ import SizeCode from "../../docs/components/raw/Input/Size.txt";
 import * as Showcases from "../../docs/components/showcases/Input";
 
 export default {
-	name: "DevPageInput",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			variables,
-			router,
-			Showcases,
-			ColorCode,
-			LoadingCode,
-			SizeCode,
-			BasicCode,
-		};
-	},
+  name: "DevPageInput",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      variables,
+      router,
+      Showcases,
+      ColorCode,
+      LoadingCode,
+      SizeCode,
+      BasicCode,
+    };
+  },
 };
 </script>
 

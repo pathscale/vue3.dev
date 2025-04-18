@@ -14,22 +14,22 @@ import TooltipCode from "../../docs/components/raw/Slider/Tooltip.txt";
 import * as Showcases from "../../docs/components/showcases/Slider";
 
 export default {
-	name: "DevPageSlider",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			variables,
-			router,
-			Showcases,
-			TooltipCode,
-			ColorsCode,
-			SizesCode,
-			StatesCode,
-			StylesCode,
-		};
-	},
+  name: "DevPageSlider",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      variables,
+      router,
+      Showcases,
+      TooltipCode,
+      ColorsCode,
+      SizesCode,
+      StatesCode,
+      StylesCode,
+    };
+  },
 };
 </script>
 

@@ -9,12 +9,12 @@ import ShowcaseCode from "../../docs/components/raw/Navbar.txt";
 import Showcase from "../../docs/components/showcases/Navbar.vue";
 
 export default {
-	name: "DevPageNavbar",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return { api, variables, router, Showcase, ShowcaseCode };
-	},
+  name: "DevPageNavbar",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return { api, variables, router, Showcase, ShowcaseCode };
+  },
 };
 </script>
 

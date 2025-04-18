@@ -9,12 +9,12 @@ import * as Showcases from "../../docs/components/showcases/Pagination";
 import variables from "../../docs/components/variables/pagination.json";
 
 export default {
-	name: "DevPagePagination",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return { api, variables, router, Showcases, DefaultCode };
-	},
+  name: "DevPagePagination",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return { api, variables, router, Showcases, DefaultCode };
+  },
 };
 </script>
 

@@ -13,21 +13,21 @@ import ValuesCode from "../../docs/components/raw/Switch/Values.txt";
 import * as Showcases from "../../docs/components/showcases/Switch";
 
 export default {
-	name: "DevPageSwitch",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			router,
-			Showcases,
-			DefaultCode,
-			PassiveCode,
-			SizesCode,
-			StylesCode,
-			ValuesCode,
-		};
-	},
+  name: "DevPageSwitch",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      router,
+      Showcases,
+      DefaultCode,
+      PassiveCode,
+      SizesCode,
+      StylesCode,
+      ValuesCode,
+    };
+  },
 };
 </script>
 

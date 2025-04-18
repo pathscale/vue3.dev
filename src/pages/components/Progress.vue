@@ -14,22 +14,22 @@ import ValueCode from "../../docs/components/raw/Progress/ProgressValue.txt";
 import * as Showcases from "../../docs/components/showcases/Progress";
 
 export default {
-	name: "DevPageProgress",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			variables,
-			router,
-			Showcases,
-			ColorsCode,
-			IndeterminateCode,
-			PercentCode,
-			SizesCode,
-			ValueCode,
-		};
-	},
+  name: "DevPageProgress",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      variables,
+      router,
+      Showcases,
+      ColorsCode,
+      IndeterminateCode,
+      PercentCode,
+      SizesCode,
+      ValueCode,
+    };
+  },
 };
 </script>
 

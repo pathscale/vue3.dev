@@ -9,17 +9,17 @@ import BasicCode from "../../docs/components/raw/Autocomplete/Basic.txt";
 import * as Showcases from "../../docs/components/showcases/Autocomplete";
 
 export default {
-	name: "DevPageChart",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			router,
-			Showcases,
-			BasicCode,
-		};
-	},
+  name: "DevPageChart",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      router,
+      Showcases,
+      BasicCode,
+    };
+  },
 };
 </script>
 

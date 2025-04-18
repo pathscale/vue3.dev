@@ -9,17 +9,17 @@ import BasicCode from "../../docs/components/raw/Steps/Basic.txt";
 import * as Showcases from "../../docs/components/showcases/Steps";
 
 export default {
-	name: "DevPageSteps",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			router,
-			Showcases,
-			BasicCode,
-		};
-	},
+  name: "DevPageSteps",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      router,
+      Showcases,
+      BasicCode,
+    };
+  },
 };
 </script>
 

@@ -7,12 +7,12 @@ import { SnippetSection } from "../../components";
 import GlobalCode from "../../docs/components/raw/Appstate/Modules.txt";
 
 export default {
-	name: "DevPageInstallation",
-	components: { SnippetSection },
-	setup() {
-		const router = useRouter();
-		return { router, GlobalCode };
-	},
+  name: "DevPageInstallation",
+  components: { SnippetSection },
+  setup() {
+    const router = useRouter();
+    return { router, GlobalCode };
+  },
 };
 </script>
 

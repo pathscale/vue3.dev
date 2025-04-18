@@ -4,29 +4,29 @@ import { VButton, VField, VInput, VStepItem, VSteps } from "@pathscale/vue3-ui";
 import { reactive, ref } from "vue";
 
 export default {
-	name: "DevShowcaseSteps",
-	components: { VSteps, VStepItem, VField, VInput, VButton },
-	setup() {
-		const activeTab = ref(0);
-		const state = reactive({
-			name: "John Wick",
-			email: "boogeyman@gmail.com",
-			username: "the_boogeyman",
-			// eslint-disable-next-line sonarjs/no-hardcoded-passwords -- Demo purpose
-			password: "Daisy",
-			message: "Guns. Lots of guns.",
-		});
+  name: "DevShowcaseSteps",
+  components: { VSteps, VStepItem, VField, VInput, VButton },
+  setup() {
+    const activeTab = ref(0);
+    const state = reactive({
+      name: "John Wick",
+      email: "boogeyman@gmail.com",
+      username: "the_boogeyman",
+      // eslint-disable-next-line sonarjs/no-hardcoded-passwords -- Demo purpose
+      password: "Daisy",
+      message: "Guns. Lots of guns.",
+    });
 
-		const next = () => {
-			activeTab.value += 1;
-		};
+    const next = () => {
+      activeTab.value += 1;
+    };
 
-		const back = () => {
-			activeTab.value -= 1;
-		};
+    const back = () => {
+      activeTab.value -= 1;
+    };
 
-		return { activeTab, state, next, back };
-	},
+    return { activeTab, state, next, back };
+  },
 };
 </script>
 

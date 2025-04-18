@@ -10,18 +10,18 @@ import CandleCode from "../../docs/components/raw/Chart/Candle.txt";
 import * as Showcases from "../../docs/components/showcases/Chart";
 
 export default {
-	name: "DevPageChart",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			router,
-			Showcases,
-			BasicCode,
-			CandleCode,
-		};
-	},
+  name: "DevPageChart",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      router,
+      Showcases,
+      BasicCode,
+      CandleCode,
+    };
+  },
 };
 </script>
 

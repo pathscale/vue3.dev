@@ -23,10 +23,7 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,ts,vue}": [
-      "biome check --write",
-      "biome lint --write"
-    ]
+    "*.{js,ts,vue}": ["biome check --write", "biome lint --write"]
   },
   "devDependencies": {
     "@babel/core": "7.26.10",

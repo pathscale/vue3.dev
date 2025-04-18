@@ -3,21 +3,21 @@ import { VButton, VImage, VModal } from "@pathscale/vue3-ui";
 import { reactive } from "vue";
 
 export default {
-	name: "DevShowcaseModal",
-	components: { VButton, VModal, VImage },
-	setup() {
-		const state = reactive({
-			showModal: false,
-			showModalCard: false,
-		});
-		const setShowModal = () => {
-			state.showModal = true;
-		};
-		const setShowModalCard = () => {
-			state.showModalCard = true;
-		};
-		return { state, setShowModal, setShowModalCard };
-	},
+  name: "DevShowcaseModal",
+  components: { VButton, VModal, VImage },
+  setup() {
+    const state = reactive({
+      showModal: false,
+      showModalCard: false,
+    });
+    const setShowModal = () => {
+      state.showModal = true;
+    };
+    const setShowModalCard = () => {
+      state.showModalCard = true;
+    };
+    return { state, setShowModal, setShowModalCard };
+  },
 };
 </script>
 

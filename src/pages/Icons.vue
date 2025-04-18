@@ -14,22 +14,22 @@ import SizesCode from "../docs/components/raw/Icon/IconSizes.txt";
 import * as Showcases from "../docs/components/showcases/Icon";
 
 export default {
-	name: "DevPageInstallation",
-	components: { SnippetSection, ApiSection, VTabs, VTab },
-	setup() {
-		const router = useRouter();
-		const activeTab = ref(0);
-		return {
-			router,
-			Showcases,
-			SizesCode,
-			CustomSizesCode,
-			ColorsCode,
-			CustomClassCode,
-			api,
-			activeTab,
-		};
-	},
+  name: "DevPageInstallation",
+  components: { SnippetSection, ApiSection, VTabs, VTab },
+  setup() {
+    const router = useRouter();
+    const activeTab = ref(0);
+    return {
+      router,
+      Showcases,
+      SizesCode,
+      CustomSizesCode,
+      ColorsCode,
+      CustomClassCode,
+      api,
+      activeTab,
+    };
+  },
 };
 </script>
 

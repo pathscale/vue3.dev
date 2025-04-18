@@ -9,12 +9,12 @@ import ShowcaseCode from "../../docs/components/raw/Media.txt";
 import Showcase from "../../docs/components/showcases/Media.vue";
 
 export default {
-	name: "DevPageMedia",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return { api, variables, router, Showcase, ShowcaseCode };
-	},
+  name: "DevPageMedia",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return { api, variables, router, Showcase, ShowcaseCode };
+  },
 };
 </script>
 

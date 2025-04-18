@@ -2,23 +2,23 @@
 import { CFooter, Cookie, Navbar } from "../components";
 
 export default {
-	name: "DevMain",
-	components: {
-		Cookie,
-		Navbar,
-		CFooter,
-	},
-	setup() {
-		function setDocHeight() {
-			document.documentElement.style.setProperty(
-				"--vh",
-				`${window.innerHeight / 100}px`,
-			);
-		}
-		window.addEventListener("resize", setDocHeight);
-		globalThis.addEventListener("orientationchange", setDocHeight);
-		setDocHeight();
-	},
+  name: "DevMain",
+  components: {
+    Cookie,
+    Navbar,
+    CFooter,
+  },
+  setup() {
+    function setDocHeight() {
+      document.documentElement.style.setProperty(
+        "--vh",
+        `${window.innerHeight / 100}px`,
+      );
+    }
+    window.addEventListener("resize", setDocHeight);
+    globalThis.addEventListener("orientationchange", setDocHeight);
+    setDocHeight();
+  },
 };
 </script>
 

@@ -9,19 +9,19 @@ import Showcase from "../docs/components/showcases/HelloWord.vue";
 import { SnippetSection } from "../components";
 
 export default {
-	name: "DevPageInstallation",
-	components: { SnippetSection, VAccordion, VIcon },
-	setup() {
-		const router = useRouter();
-		const state = reactive({
-			template: true,
-		});
+  name: "DevPageInstallation",
+  components: { SnippetSection, VAccordion, VIcon },
+  setup() {
+    const router = useRouter();
+    const state = reactive({
+      template: true,
+    });
 
-		function toggle(value) {
-			state[value] = !state[value];
-		}
-		return { router, Showcase, ShowcaseCode, state, toggle };
-	},
+    function toggle(value) {
+      state[value] = !state[value];
+    }
+    return { router, Showcase, ShowcaseCode, state, toggle };
+  },
 };
 </script>
 

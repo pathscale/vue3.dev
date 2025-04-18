@@ -7,15 +7,15 @@ import logo from "../../assets/svg/vue3-logo.svg";
 import "../../smoothScroll";
 
 export default {
-	name: "DevHome",
-	components: { VButton, VColumns, VColumn, VImage },
-	setup() {
-		const intl = useI18n();
-		function scrollToOverview() {
-			smoothScroll(document.querySelector("#overview"));
-		}
-		return { intl, logo, scrollToOverview };
-	},
+  name: "DevHome",
+  components: { VButton, VColumns, VColumn, VImage },
+  setup() {
+    const intl = useI18n();
+    function scrollToOverview() {
+      smoothScroll(document.querySelector("#overview"));
+    }
+    return { intl, logo, scrollToOverview };
+  },
 };
 </script>
 

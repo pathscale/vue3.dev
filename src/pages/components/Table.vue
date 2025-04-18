@@ -19,27 +19,27 @@ import StyledCode from "../../docs/components/raw/Table/Styled.txt";
 import * as Showcases from "../../docs/components/showcases/Table";
 
 export default {
-	name: "DevPageTable",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			variables,
-			router,
-			Showcases,
-			BasicCode,
-			StyledCode,
-			SearchCode,
-			CustomCode,
-			SelectCode,
-			PaginateCode,
-			DynamicCode,
-			DragCode,
-			StickyCode,
-			OthersCode,
-		};
-	},
+  name: "DevPageTable",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      variables,
+      router,
+      Showcases,
+      BasicCode,
+      StyledCode,
+      SearchCode,
+      CustomCode,
+      SelectCode,
+      PaginateCode,
+      DynamicCode,
+      DragCode,
+      StickyCode,
+      OthersCode,
+    };
+  },
 };
 </script>
 

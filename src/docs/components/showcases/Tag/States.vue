@@ -2,8 +2,8 @@
 import { VField, VTag } from "@pathscale/vue3-ui";
 
 export default {
-	name: "DevShowcaseTag",
-	components: { VTag, VField },
+  name: "DevShowcaseTag",
+  components: { VTag, VField },
 };
 </script>
 

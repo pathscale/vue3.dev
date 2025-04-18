@@ -8,12 +8,12 @@ import ClosableCode from "../../docs/components/raw/Timeline/Example.txt";
 import Example from "../../docs/components/showcases/Timeline/Example.vue";
 
 export default {
-	name: "DevPageTag",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return { api, router, Example, ClosableCode };
-	},
+  name: "DevPageTag",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return { api, router, Example, ClosableCode };
+  },
 };
 </script>
 

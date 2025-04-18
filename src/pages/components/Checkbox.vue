@@ -8,12 +8,12 @@ import ShowcaseCode from "../../docs/components/raw/Checkbox.txt";
 import Showcase from "../../docs/components/showcases/Checkbox.vue";
 
 export default {
-	name: "DevPageCheckbox",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return { api, router, Showcase, ShowcaseCode };
-	},
+  name: "DevPageCheckbox",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return { api, router, Showcase, ShowcaseCode };
+  },
 };
 </script>
 

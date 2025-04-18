@@ -10,18 +10,18 @@ import DefaultCode from "../../docs/components/raw/Toast/Default.txt";
 import * as Showcases from "../../docs/components/showcases/Toast";
 
 export default {
-	name: "DevPageToast",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			variables,
-			router,
-			Showcases,
-			DefaultCode,
-		};
-	},
+  name: "DevPageToast",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      variables,
+      router,
+      Showcases,
+      DefaultCode,
+    };
+  },
 };
 </script>
 

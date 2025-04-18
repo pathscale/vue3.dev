@@ -4,31 +4,31 @@ import { onMounted, reactive } from "vue";
 import { useI18n } from "vue-composable";
 
 export default {
-	name: "Cookie",
-	components: {
-		VButton,
-		VColumns,
-		VColumn,
-	},
-	setup() {
-		const intl = useI18n();
-		const state = reactive({
-			showBanner: false,
-		});
-		onMounted(() => {
-			const isAccepted =
-				localStorage.getItem("pathscaleCookiesBanner") === "true";
-			state.showBanner = !isAccepted;
-		});
-		function handlePrivacyPolicy() {
-			console.log("handlePrivacyPolicy");
-		}
-		function handleAgree() {
-			localStorage.setItem("pathscaleCookiesBanner", "true");
-			state.showBanner = false;
-		}
-		return { handlePrivacyPolicy, handleAgree, intl, state };
-	},
+  name: "Cookie",
+  components: {
+    VButton,
+    VColumns,
+    VColumn,
+  },
+  setup() {
+    const intl = useI18n();
+    const state = reactive({
+      showBanner: false,
+    });
+    onMounted(() => {
+      const isAccepted =
+        localStorage.getItem("pathscaleCookiesBanner") === "true";
+      state.showBanner = !isAccepted;
+    });
+    function handlePrivacyPolicy() {
+      console.log("handlePrivacyPolicy");
+    }
+    function handleAgree() {
+      localStorage.setItem("pathscaleCookiesBanner", "true");
+      state.showBanner = false;
+    }
+    return { handlePrivacyPolicy, handleAgree, intl, state };
+  },
 };
 </script>
 

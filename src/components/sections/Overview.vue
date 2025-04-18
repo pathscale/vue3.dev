@@ -5,20 +5,20 @@ import { useI18n } from "vue-composable";
 import { useRouter } from "vue-router";
 
 export default {
-	name: "DevTrailer",
-	components: { VButton, VColumns, VColumn },
-	setup() {
-		const intl = useI18n();
-		const router = useRouter();
+  name: "DevTrailer",
+  components: { VButton, VColumns, VColumn },
+  setup() {
+    const intl = useI18n();
+    const router = useRouter();
 
-		function redirect(name) {
-			document.querySelector("#well").scrollIntoView(); // Scroll to top
-			router.push({
-				name,
-			});
-		}
-		return { intl, redirect };
-	},
+    function redirect(name) {
+      document.querySelector("#well").scrollIntoView(); // Scroll to top
+      router.push({
+        name,
+      });
+    }
+    return { intl, redirect };
+  },
 };
 </script>
 

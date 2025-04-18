@@ -9,12 +9,12 @@ import ShowcaseCode from "../../docs/components/raw/Menu.txt";
 import Showcase from "../../docs/components/showcases/Menu.vue";
 
 export default {
-	name: "DevPageMenu",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return { api, variables, router, Showcase, ShowcaseCode };
-	},
+  name: "DevPageMenu",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return { api, variables, router, Showcase, ShowcaseCode };
+  },
 };
 </script>
 

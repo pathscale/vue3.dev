@@ -1,15 +1,15 @@
 <script>
 import {
-	VButton,
-	VImage,
-	VNavbar,
-	VNavbarDropdown,
-	VNavbarItem,
+  VButton,
+  VImage,
+  VNavbar,
+  VNavbarDropdown,
+  VNavbarItem,
 } from "@pathscale/vue3-ui";
 
 export default {
-	name: "DevShowcaseNavbar",
-	components: { VNavbar, VNavbarItem, VNavbarDropdown, VButton, VImage },
+  name: "DevShowcaseNavbar",
+  components: { VNavbar, VNavbarItem, VNavbarDropdown, VButton, VImage },
 };
 </script>
 

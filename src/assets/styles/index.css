@@ -1,123 +1,123 @@
 @font-face {
-	font-family: "metrocleanextrabold";
-	src: url("../fonts/metroclean-extrabold-webfont.woff2");
+  font-family: "metrocleanextrabold";
+  src: url("../fonts/metroclean-extrabold-webfont.woff2");
 }
 
 @font-face {
-	font-family: "metrocleanmedium";
-	src: url("../fonts/metroclean-medium-webfont.woff2");
+  font-family: "metrocleanmedium";
+  src: url("../fonts/metroclean-medium-webfont.woff2");
 }
 
 html {
-	scroll-behavior: smooth;
-	font-size: 16px;
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-	background-color: black;
-	display: block !important;
-	animation: fadein 2s;
-	margin: 0;
-	text-rendering: optimizeLegibility;
-	height: calc(var(--vh, 1vh) * 100);
-	overflow-y: auto;
-	overflow-x: hidden;
+  background-color: black;
+  display: block !important;
+  animation: fadein 2s;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .hidden-language-menu {
-	transition: 1s;
-	overflow-x: auto;
-	overflow-y: hidden;
-	display: flex;
-	justify-content: center;
+  transition: 1s;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .is-active-item::after {
-	content: "";
-	background: white;
-	position: absolute;
-	bottom: 10px;
-	left: 25%;
-	width: 50%;
-	height: 4px;
+  content: "";
+  background: white;
+  position: absolute;
+  bottom: 10px;
+  left: 25%;
+  width: 50%;
+  height: 4px;
 }
 
 .navbar-start {
-	margin-left: auto !important;
+  margin-left: auto !important;
 }
 
 .navbar-end {
-	margin-right: auto;
+  margin-right: auto;
 }
 
 .navbar-burger span {
-	color: #fff;
-	left: 15px;
+  color: #fff;
+  left: 15px;
 }
 
 #well {
-	will-change: transform;
+  will-change: transform;
 }
 
 .well::after {
-	content: "";
-	background-image: url("../svg/vectorstock_954247_Converted3.svg");
-	background-size: auto 100%;
-	background-position: center;
-	opacity: 0.1;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	position: absolute;
-	z-index: -1;
-	filter: invert(1);
+  content: "";
+  background-image: url("../svg/vectorstock_954247_Converted3.svg");
+  background-size: auto 100%;
+  background-position: center;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  filter: invert(1);
 }
 
 .section {
-	padding-top: 5rem;
+  padding-top: 5rem;
 }
 
 .big-menu {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 200;
-	transition: background-color 1s ease;
-	outline: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  transition: background-color 1s ease;
+  outline: none;
 }
 
 @media only screen and (min-width: 1024px) {
-	html {
-		overflow: hidden;
-	}
+  html {
+    overflow: hidden;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-	.navbar-item img {
-		max-height: 2em;
-	}
+  .navbar-item img {
+    max-height: 2em;
+  }
 
-	.navbar-link {
-		color: white !important;
-	}
+  .navbar-link {
+    color: white !important;
+  }
 
-	.navbar-burger {
-		position: relative;
-		z-index: 100;
-	}
+  .navbar-burger {
+    position: relative;
+    z-index: 100;
+  }
 
-	a.navbar-item {
-		color: white;
-	}
+  a.navbar-item {
+    color: white;
+  }
 
-	a.navbar-item.is-active {
-		font-weight: bold;
-		color: white;
-	}
+  a.navbar-item.is-active {
+    font-weight: bold;
+    color: white;
+  }
 }
 
 .is-fullwidth {
-	width: 100%;
+  width: 100%;
 }

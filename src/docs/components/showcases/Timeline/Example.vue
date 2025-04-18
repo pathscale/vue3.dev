@@ -2,17 +2,17 @@
 import { VTimeline } from "@pathscale/vue3-ui";
 
 export default {
-	name: "VTimelinExample",
-	components: { VTimeline },
-	setup() {
-		return {
-			stages: [
-				{ title: "Create Account" },
-				{ title: "Complete profile", active: true },
-				{ title: "Apply to jobs" },
-			],
-		};
-	},
+  name: "VTimelinExample",
+  components: { VTimeline },
+  setup() {
+    return {
+      stages: [
+        { title: "Create Account" },
+        { title: "Complete profile", active: true },
+        { title: "Apply to jobs" },
+      ],
+    };
+  },
 };
 </script>
 

@@ -6,28 +6,28 @@ import { computed, provide, reactive } from "vue";
 import "bulma-calendar/dist/css/bulma-calendar.min.css";
 
 export default {
-	name: "DevShowcaseCalendar",
-	components: { VField, VCalendar },
-	setup() {
-		provide("$bulmaCalendar", bulmaCalendar);
-		const state = reactive({
-			date: [null, null],
-			options: {
-				dateFormat: "dd.MM.yyyy",
-				labelFrom: "From",
-				labelTo: "To",
-			},
-		});
+  name: "DevShowcaseCalendar",
+  components: { VField, VCalendar },
+  setup() {
+    provide("$bulmaCalendar", bulmaCalendar);
+    const state = reactive({
+      date: [null, null],
+      options: {
+        dateFormat: "dd.MM.yyyy",
+        labelFrom: "From",
+        labelTo: "To",
+      },
+    });
 
-		const displayDate = computed(() => {
-			if (!state.date || !state.date[0] || !state.date[1]) {
-				return "- n/a -";
-			}
-			return `${state.date[0]} to ${state.date[1]}`;
-		});
+    const displayDate = computed(() => {
+      if (!state.date || !state.date[0] || !state.date[1]) {
+        return "- n/a -";
+      }
+      return `${state.date[0]} to ${state.date[1]}`;
+    });
 
-		return { state, displayDate };
-	},
+    return { state, displayDate };
+  },
 };
 </script>
 

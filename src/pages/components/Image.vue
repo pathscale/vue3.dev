@@ -9,12 +9,12 @@ import ShowcaseCode from "../../docs/components/raw/Image.txt";
 import Showcase from "../../docs/components/showcases/Image.vue";
 
 export default {
-	name: "DevPageImage",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return { api, variables, router, Showcase, ShowcaseCode };
-	},
+  name: "DevPageImage",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return { api, variables, router, Showcase, ShowcaseCode };
+  },
 };
 </script>
 

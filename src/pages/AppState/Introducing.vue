@@ -6,12 +6,12 @@ import GlobalCode from "../../docs/components/raw/Appstate/Introducing.txt";
 import { Introducing } from "../../docs/components/showcases/Appstate";
 
 export default {
-	name: "DevPageInstallation",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return { router, Showcases: Introducing, GlobalCode, api };
-	},
+  name: "DevPageInstallation",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return { router, Showcases: Introducing, GlobalCode, api };
+  },
 };
 </script>
 

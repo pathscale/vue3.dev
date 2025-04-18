@@ -12,20 +12,20 @@ import StyleCode from "../../docs/components/raw/Select/Style.txt";
 import * as Showcases from "../../docs/components/showcases/Select";
 
 export default {
-	name: "DevPageSelect",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			router,
-			Showcases,
-			ColorCode,
-			LoadingCode,
-			SizeCode,
-			StyleCode,
-		};
-	},
+  name: "DevPageSelect",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      router,
+      Showcases,
+      ColorCode,
+      LoadingCode,
+      SizeCode,
+      StyleCode,
+    };
+  },
 };
 </script>
 

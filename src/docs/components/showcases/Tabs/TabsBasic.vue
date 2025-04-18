@@ -3,12 +3,12 @@ import { VTab, VTabs } from "@pathscale/vue3-ui";
 import { ref } from "vue";
 
 export default {
-	name: "DevShowcaseTabs",
-	components: { VTabs, VTab },
-	setup() {
-		const activeTab = ref(0);
-		return { activeTab };
-	},
+  name: "DevShowcaseTabs",
+  components: { VTabs, VTab },
+  setup() {
+    const activeTab = ref(0);
+    return { activeTab };
+  },
 };
 </script>
 

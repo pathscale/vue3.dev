@@ -2,8 +2,8 @@
 import { VMenu, VMenuItem, VMenuList } from "@pathscale/vue3-ui";
 
 export default {
-	name: "DevShowcaseMenu",
-	components: { VMenu, VMenuItem, VMenuList },
+  name: "DevShowcaseMenu",
+  components: { VMenu, VMenuItem, VMenuList },
 };
 </script>
 

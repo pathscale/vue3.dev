@@ -3,14 +3,14 @@ import { VSlider } from "@pathscale/vue3-ui";
 import { ref } from "vue";
 
 export default {
-	name: "DevShowcaseSlider",
-	components: { VSlider },
-	setup() {
-		const value = ref(30);
-		return {
-			value,
-		};
-	},
+  name: "DevShowcaseSlider",
+  components: { VSlider },
+  setup() {
+    const value = ref(30);
+    return {
+      value,
+    };
+  },
 };
 </script>
 

@@ -2,8 +2,8 @@
 import { VProgress } from "@pathscale/vue3-ui";
 
 export default {
-	name: "DevShowcaseProgress",
-	components: { VProgress },
+  name: "DevShowcaseProgress",
+  components: { VProgress },
 };
 </script>
 

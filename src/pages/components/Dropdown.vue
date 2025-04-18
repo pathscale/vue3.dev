@@ -16,23 +16,23 @@ import DropdownPositionCode from "../../docs/components/raw/Dropdown/DropdownPos
 import DropdownVModelCode from "../../docs/components/raw/Dropdown/DropdownVModel.txt";
 
 export default {
-	name: "DevPageDropdown",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			variables,
-			router,
-			Showcases,
-			DropdownBasicCode,
-			DropdownHoverableCode,
-			DropdownPositionCode,
-			DropdownDisabledCode,
-			DropdownLinkCode,
-			DropdownVModelCode,
-		};
-	},
+  name: "DevPageDropdown",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      variables,
+      router,
+      Showcases,
+      DropdownBasicCode,
+      DropdownHoverableCode,
+      DropdownPositionCode,
+      DropdownDisabledCode,
+      DropdownLinkCode,
+      DropdownVModelCode,
+    };
+  },
 };
 </script>
 

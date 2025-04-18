@@ -13,21 +13,21 @@ import SizeCode from "../../docs/components/raw/Field/Size.txt";
 import * as Showcases from "../../docs/components/showcases/Field";
 
 export default {
-	name: "DevPageField",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			router,
-			Showcases,
-			AddonsCode,
-			GroupedCode,
-			HorizontalCode,
-			MessageCode,
-			SizeCode,
-		};
-	},
+  name: "DevPageField",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      router,
+      Showcases,
+      AddonsCode,
+      GroupedCode,
+      HorizontalCode,
+      MessageCode,
+      SizeCode,
+    };
+  },
 };
 </script>
 

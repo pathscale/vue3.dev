@@ -2,8 +2,8 @@
 import { VSlider } from "@pathscale/vue3-ui";
 
 export default {
-	name: "DevShowcaseSlider",
-	components: { VSlider },
+  name: "DevShowcaseSlider",
+  components: { VSlider },
 };
 </script>
 

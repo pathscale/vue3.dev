@@ -14,22 +14,22 @@ import StyleCode from "../../docs/components/raw/Upload/Style.txt";
 import * as Showcases from "../../docs/components/showcases/Upload";
 
 export default {
-	name: "DevPageUpload",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			variables,
-			router,
-			Showcases,
-			AlignCode,
-			ColorsCode,
-			DefaultCode,
-			SizeCode,
-			StyleCode,
-		};
-	},
+  name: "DevPageUpload",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      variables,
+      router,
+      Showcases,
+      AlignCode,
+      ColorsCode,
+      DefaultCode,
+      SizeCode,
+      StyleCode,
+    };
+  },
 };
 </script>
 

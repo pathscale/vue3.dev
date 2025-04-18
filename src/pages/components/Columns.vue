@@ -16,24 +16,24 @@ import ColumnsSizesCode from "../../docs/components/raw/Columns/ColumnsSizes.txt
 import * as Showcases from "../../docs/components/showcases/Columns";
 
 export default {
-	name: "DevPageColumns",
-	components: { ApiSection, SnippetSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			router,
-			Showcases,
-			ColumnsBasicCode,
-			ColumnsSizesCode,
-			ColumnsOffsetCode,
-			ColumnsNestedCode,
-			ColumnsNarrowCode,
-			ColumnsMultilineCode,
-			ColumnsGapCode,
-			ColumnsAligmentCode,
-		};
-	},
+  name: "DevPageColumns",
+  components: { ApiSection, SnippetSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      router,
+      Showcases,
+      ColumnsBasicCode,
+      ColumnsSizesCode,
+      ColumnsOffsetCode,
+      ColumnsNestedCode,
+      ColumnsNarrowCode,
+      ColumnsMultilineCode,
+      ColumnsGapCode,
+      ColumnsAligmentCode,
+    };
+  },
 };
 </script>
 
@@ -45,45 +45,21 @@ export default {
     <p>
       {{ router.currentRoute.value.meta.metaTags[0].content }}
     </p>
-    <snippet-section
-      title="Basic"
-      :code="ColumnsBasicCode"
-      :component="Showcases.ColumnsBasic"
+    <snippet-section title="Basic" :code="ColumnsBasicCode" :component="Showcases.ColumnsBasic"
       :path="router.currentRoute.value.path" />
-    <snippet-section
-      title="Sizes"
-      :code="ColumnsSizesCode"
-      :component="Showcases.ColumnsSizes"
+    <snippet-section title="Sizes" :code="ColumnsSizesCode" :component="Showcases.ColumnsSizes"
       :path="router.currentRoute.value.path" />
-    <snippet-section
-      title="Offset"
-      :code="ColumnsOffsetCode"
-      :component="Showcases.ColumnsOffset"
+    <snippet-section title="Offset" :code="ColumnsOffsetCode" :component="Showcases.ColumnsOffset"
       :path="router.currentRoute.value.path" />
-    <snippet-section
-      title="Narrow"
-      :code="ColumnsNarrowCode"
-      :component="Showcases.ColumnsNarrow"
+    <snippet-section title="Narrow" :code="ColumnsNarrowCode" :component="Showcases.ColumnsNarrow"
       :path="router.currentRoute.value.path" />
-    <snippet-section
-      title="Nested"
-      :code="ColumnsNestedCode"
-      :component="Showcases.ColumnsNested"
+    <snippet-section title="Nested" :code="ColumnsNestedCode" :component="Showcases.ColumnsNested"
       :path="router.currentRoute.value.path" />
-    <snippet-section
-      title="Gap"
-      :code="ColumnsGapCode"
-      :component="Showcases.ColumnsGap"
+    <snippet-section title="Gap" :code="ColumnsGapCode" :component="Showcases.ColumnsGap"
       :path="router.currentRoute.value.path" />
-    <snippet-section
-      title="Aligment"
-      :code="ColumnsAligmentCode"
-      :component="Showcases.ColumnsAligment"
+    <snippet-section title="Aligment" :code="ColumnsAligmentCode" :component="Showcases.ColumnsAligment"
       :path="router.currentRoute.value.path" />
-    <snippet-section
-      title="Multiline"
-      :code="ColumnsMultilineCode"
-      :component="Showcases.ColumnsMultiline"
+    <snippet-section title="Multiline" :code="ColumnsMultilineCode" :component="Showcases.ColumnsMultiline"
       :path="router.currentRoute.value.path" />
     <section id="api" class="py-4">
       <h2 class="title is-4">

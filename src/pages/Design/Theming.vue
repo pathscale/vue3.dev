@@ -7,32 +7,32 @@ import { computed, onUnmounted, ref, watch } from "vue";
 const NAVBAR_BACKGROUND_COLOR = "--navbar-background-color";
 
 export default {
-	name: "DevPageTheming",
-	components: { VDropdown, VDropdownItem, VButton },
-	setup() {
-		const router = useRouter();
-		const root = document.documentElement;
-		const colors = ["black", "red", "blue", "green"];
-		const originalColor = getComputedStyle(root).getPropertyValue(
-			NAVBAR_BACKGROUND_COLOR,
-		);
-		const color = ref(originalColor);
-		const isOriginalColor = computed(() => color.value === originalColor);
+  name: "DevPageTheming",
+  components: { VDropdown, VDropdownItem, VButton },
+  setup() {
+    const router = useRouter();
+    const root = document.documentElement;
+    const colors = ["black", "red", "blue", "green"];
+    const originalColor = getComputedStyle(root).getPropertyValue(
+      NAVBAR_BACKGROUND_COLOR,
+    );
+    const color = ref(originalColor);
+    const isOriginalColor = computed(() => color.value === originalColor);
 
-		function setColor(value) {
-			root.style.setProperty(NAVBAR_BACKGROUND_COLOR, value);
-		}
+    function setColor(value) {
+      root.style.setProperty(NAVBAR_BACKGROUND_COLOR, value);
+    }
 
-		onUnmounted(() => {
-			setColor(originalColor);
-		});
+    onUnmounted(() => {
+      setColor(originalColor);
+    });
 
-		watch(color, () => {
-			setColor(color.value);
-		});
+    watch(color, () => {
+      setColor(color.value);
+    });
 
-		return { router, color, colors, isOriginalColor };
-	},
+    return { router, color, colors, isOriginalColor };
+  },
 };
 </script>
 

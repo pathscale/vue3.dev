@@ -3,16 +3,16 @@ import { VCheckbox, VField } from "@pathscale/vue3-ui";
 import { ref } from "vue";
 
 export default {
-	name: "DevShowcaseCheckbox",
-	components: { VField, VCheckbox },
-	setup() {
-		const value = ref(false);
-		function getValue() {
-			// Need the `toString` to show `false` when indeterminate
-			return value.value.toString();
-		}
-		return { value, getValue };
-	},
+  name: "DevShowcaseCheckbox",
+  components: { VField, VCheckbox },
+  setup() {
+    const value = ref(false);
+    function getValue() {
+      // Need the `toString` to show `false` when indeterminate
+      return value.value.toString();
+    }
+    return { value, getValue };
+  },
 };
 </script>
 

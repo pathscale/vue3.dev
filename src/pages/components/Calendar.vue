@@ -9,17 +9,17 @@ import BasicCode from "../../docs/components/raw/Calendar/Basic.txt";
 import * as Showcases from "../../docs/components/showcases/Calendar";
 
 export default {
-	name: "DevPageCalendar",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			router,
-			Showcases,
-			BasicCode,
-		};
-	},
+  name: "DevPageCalendar",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      router,
+      Showcases,
+      BasicCode,
+    };
+  },
 };
 </script>
 

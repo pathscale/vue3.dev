@@ -14,22 +14,22 @@ import StylesCode from "../../docs/components/raw/Button/ButtonStyles.txt";
 import * as Showcases from "../../docs/components/showcases/Button";
 
 export default {
-	name: "DevPageButton",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			variables,
-			router,
-			Showcases,
-			ColorsCode,
-			StylesCode,
-			SizesCode,
-			StatesCode,
-			ChipsCode,
-		};
-	},
+  name: "DevPageButton",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      variables,
+      router,
+      Showcases,
+      ColorsCode,
+      StylesCode,
+      SizesCode,
+      StatesCode,
+      ChipsCode,
+    };
+  },
 };
 </script>
 

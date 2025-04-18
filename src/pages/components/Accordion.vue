@@ -8,12 +8,12 @@ import ShowcaseCode from "../../docs/components/raw/Accordion.txt";
 import Showcase from "../../docs/components/showcases/Accordion.vue";
 
 export default {
-	name: "DevPageAccordion",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return { api, router, Showcase, ShowcaseCode };
-	},
+  name: "DevPageAccordion",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return { api, router, Showcase, ShowcaseCode };
+  },
 };
 </script>
 

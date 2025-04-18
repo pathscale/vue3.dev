@@ -9,19 +9,19 @@ import es from "./locales/es.json";
 import pt from "./locales/pt.json";
 
 export default {
-	name: "DevApp",
-	setup() {
-		setI18n({
-			locale: (navigator.language || navigator.userLanguage).slice(0, 2),
-			fallback: "en",
-			messages: {
-				en,
-				es, // : ()=> import('./locales/es.json').default,
-				pt, // : ()=> import('./locales/pt.json').default
-			},
-		});
-		watchEffect(() => setTheme(defaultTheme));
-	},
+  name: "DevApp",
+  setup() {
+    setI18n({
+      locale: (navigator.language || navigator.userLanguage).slice(0, 2),
+      fallback: "en",
+      messages: {
+        en,
+        es, // : ()=> import('./locales/es.json').default,
+        pt, // : ()=> import('./locales/pt.json').default
+      },
+    });
+    watchEffect(() => setTheme(defaultTheme));
+  },
 };
 </script>
 

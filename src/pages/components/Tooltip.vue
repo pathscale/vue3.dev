@@ -14,22 +14,22 @@ import StylesCode from "../../docs/components/raw/Tooltip/Styles.txt";
 import * as Showcases from "../../docs/components/showcases/Tooltip";
 
 export default {
-	name: "DevPageTooltip",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			router,
-			Showcases,
-			AlwaysCode,
-			AnimatedCode,
-			ColorsCode,
-			DelayCode,
-			SizesCode,
-			StylesCode,
-		};
-	},
+  name: "DevPageTooltip",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      router,
+      Showcases,
+      AlwaysCode,
+      AnimatedCode,
+      ColorsCode,
+      DelayCode,
+      SizesCode,
+      StylesCode,
+    };
+  },
 };
 </script>
 

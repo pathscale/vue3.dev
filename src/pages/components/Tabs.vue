@@ -13,21 +13,21 @@ import TypesCode from "../../docs/components/raw/Tabs/TabsTypes.txt";
 import * as Showcases from "../../docs/components/showcases/Tabs";
 
 export default {
-	name: "DevPageTabs",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			variables,
-			router,
-			Showcases,
-			BasicCode,
-			PositionCode,
-			SizesCode,
-			TypesCode,
-		};
-	},
+  name: "DevPageTabs",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      variables,
+      router,
+      Showcases,
+      BasicCode,
+      PositionCode,
+      SizesCode,
+      TypesCode,
+    };
+  },
 };
 </script>
 

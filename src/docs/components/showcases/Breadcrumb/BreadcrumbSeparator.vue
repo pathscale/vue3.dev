@@ -2,8 +2,8 @@
 import { VBreadcrumb, VBreadcrumbItem } from "@pathscale/vue3-ui";
 
 export default {
-	name: "DevShowcaseBreadcrumb",
-	components: { VBreadcrumb, VBreadcrumbItem },
+  name: "DevShowcaseBreadcrumb",
+  components: { VBreadcrumb, VBreadcrumbItem },
 };
 </script>
 

@@ -1,27 +1,27 @@
 {
-	"language": "Language",
-	"home": {
-		"title": "Home",
-		"content": "Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS. The components that we give you out of the box are very useful to speed up your development process.",
-		"button": "Explore The Framework"
-	},
-	"overview": {
-		"title": "Overview",
-		"content": "Vue3-ui provides one of the most complete implementations of the Bulma components and grid system, following robust guidelines to do those really easy and fast to use. Designed to support Vue3 from the beginning, our source code is optimized to take full advantage of Vue3 API, offering better performance and reduced javascript load.",
-		"button": "View Overview"
-	},
-	"clients": {
-		"title": "Who's Using",
-		"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ornare mi. Vestibulum finibus, mi iaculis vulputate vehicula, nisl nunc venenatis nisl, id fringilla turpis diam eget dolor. Cras lobortis lectus nibh, eu facilisis sapien suscipit sed"
-	},
-	"blog": {
-		"title": "Tech Blogs",
-		"subtitle": "A game that really focuses on Community & Social elements",
-		"content1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ornare mi. Vestibulum finibus, mi iaculis vulputate vehicula, nisl nunc venenatis nisl, id fringilla turpis diam eget dolor. Cras lobortis lectus nibh, eu facilisis sapien suscipit sed",
-		"button": "VISIT RUDE.LY",
-		"article": "Blog Title is Here"
-	},
-	"cookies": "We use cookies and other similar technologies to improve your experience on our services, personalize advertising and recommend content that interests you. By using our services, you consent to such monitoring. For more information, see our",
-	"policy": "new privacy policy",
-	"agree": "Agree"
+  "language": "Language",
+  "home": {
+    "title": "Home",
+    "content": "Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS. The components that we give you out of the box are very useful to speed up your development process.",
+    "button": "Explore The Framework"
+  },
+  "overview": {
+    "title": "Overview",
+    "content": "Vue3-ui provides one of the most complete implementations of the Bulma components and grid system, following robust guidelines to do those really easy and fast to use. Designed to support Vue3 from the beginning, our source code is optimized to take full advantage of Vue3 API, offering better performance and reduced javascript load.",
+    "button": "View Overview"
+  },
+  "clients": {
+    "title": "Who's Using",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ornare mi. Vestibulum finibus, mi iaculis vulputate vehicula, nisl nunc venenatis nisl, id fringilla turpis diam eget dolor. Cras lobortis lectus nibh, eu facilisis sapien suscipit sed"
+  },
+  "blog": {
+    "title": "Tech Blogs",
+    "subtitle": "A game that really focuses on Community & Social elements",
+    "content1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ornare mi. Vestibulum finibus, mi iaculis vulputate vehicula, nisl nunc venenatis nisl, id fringilla turpis diam eget dolor. Cras lobortis lectus nibh, eu facilisis sapien suscipit sed",
+    "button": "VISIT RUDE.LY",
+    "article": "Blog Title is Here"
+  },
+  "cookies": "We use cookies and other similar technologies to improve your experience on our services, personalize advertising and recommend content that interests you. By using our services, you consent to such monitoring. For more information, see our",
+  "policy": "new privacy policy",
+  "agree": "Agree"
 }

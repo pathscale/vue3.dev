@@ -14,22 +14,22 @@ import StylesCode from "../../docs/components/raw/Tag/Styles.txt";
 import * as Showcases from "../../docs/components/showcases/Tag";
 
 export default {
-	name: "DevPageTag",
-	components: { SnippetSection, ApiSection, VariablesSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			variables,
-			router,
-			Showcases,
-			ClosableCode,
-			ColorsCode,
-			SizesCode,
-			StatesCode,
-			StylesCode,
-		};
-	},
+  name: "DevPageTag",
+  components: { SnippetSection, ApiSection, VariablesSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      variables,
+      router,
+      Showcases,
+      ClosableCode,
+      ColorsCode,
+      SizesCode,
+      StatesCode,
+      StylesCode,
+    };
+  },
 };
 </script>
 

@@ -1,6 +1,6 @@
 <script>
 export default {
-	name: "DevFooter",
+  name: "DevFooter",
 };
 </script>
 

@@ -3,12 +3,12 @@ import { VButton, VDropdown, VDropdownItem } from "@pathscale/vue3-ui";
 import { ref } from "vue";
 
 export default {
-	name: "DevShowcaseDropdown",
-	components: { VDropdown, VDropdownItem, VButton },
-	setup() {
-		const item = ref(null);
-		return { item };
-	},
+  name: "DevShowcaseDropdown",
+  components: { VDropdown, VDropdownItem, VButton },
+  setup() {
+    const item = ref(null);
+    return { item };
+  },
 };
 </script>
 

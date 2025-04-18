@@ -2,8 +2,8 @@
 import { VButton, VImage } from "@pathscale/vue3-ui";
 
 export default {
-	name: "HelloWord",
-	components: { VImage, VButton },
+  name: "HelloWord",
+  components: { VImage, VButton },
 };
 </script>
 

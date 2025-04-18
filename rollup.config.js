@@ -32,54 +32,54 @@ const extensions = [".ts", ".mjs", ".js", ".vue", ".json"];
 const env = dotenv.config({ path: path.join(__dirname, ".env") });
 const prod = process.env.NODE_ENV === "production";
 const watch =
-	Boolean(process.env.ROLLUP_WATCH) || Boolean(process.env.LIVERELOAD);
+  Boolean(process.env.ROLLUP_WATCH) || Boolean(process.env.LIVERELOAD);
 
 const aliases = {
-	"~": path.resolve("src").replaceAll("\\", "/"),
+  "~": path.resolve("src").replaceAll("\\", "/"),
 };
 
 const addVersion = (fileName) => {
-	const ver = prod ? env.parsed.VUE_APP_VERSION_NUMBER : Date.now();
-	const { dir, ext, base } = path.parse(fileName);
-	if (ext === ".html") {
-		return fileName;
-	}
-	const filename = `${base}?v=${ver}`;
-	return dir ? `${dir}/${filename}` : filename;
+  const ver = prod ? env.parsed.VUE_APP_VERSION_NUMBER : Date.now();
+  const { dir, ext, base } = path.parse(fileName);
+  if (ext === ".html") {
+    return fileName;
+  }
+  const filename = `${base}?v=${ver}`;
+  return dir ? `${dir}/${filename}` : filename;
 };
 
 const template = ({ attributes, files, meta, publicPath, title }) => {
-	const scripts = (files.js || [])
-		.map(({ fileName }) => {
-			const file = addVersion(fileName);
-			const attrs = makeHtmlAttributes(attributes.script);
-			return `<script data-src="${publicPath}${file}"${attrs}></script>`;
-		})
-		.join("\n");
+  const scripts = (files.js || [])
+    .map(({ fileName }) => {
+      const file = addVersion(fileName);
+      const attrs = makeHtmlAttributes(attributes.script);
+      return `<script data-src="${publicPath}${file}"${attrs}></script>`;
+    })
+    .join("\n");
 
-	const links = (files.css || [])
-		.map(({ fileName }) => {
-			const file = addVersion(fileName);
-			const attrs = makeHtmlAttributes(attributes.link);
-			return `<link data-href="${publicPath}${file}" rel="stylesheet"${attrs}>`;
-		})
-		.join("\n");
+  const links = (files.css || [])
+    .map(({ fileName }) => {
+      const file = addVersion(fileName);
+      const attrs = makeHtmlAttributes(attributes.link);
+      return `<link data-href="${publicPath}${file}" rel="stylesheet"${attrs}>`;
+    })
+    .join("\n");
 
-	const metas = meta
-		.map((input) => {
-			const attrs = makeHtmlAttributes(input);
-			return `<meta${attrs}>`;
-		})
-		.join("\n");
-	const name = "Vue3-ui";
-	const description =
-		"Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS | Vue3-ui";
-	const socialTitle =
-		"Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS | Vue3-ui";
-	const url = "https://vue3.dev";
-	const imageUrl = `${url}/vue3-ui.png`;
+  const metas = meta
+    .map((input) => {
+      const attrs = makeHtmlAttributes(input);
+      return `<meta${attrs}>`;
+    })
+    .join("\n");
+  const name = "Vue3-ui";
+  const description =
+    "Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS | Vue3-ui";
+  const socialTitle =
+    "Very clean Vue3 components styled with love and care to integrate nicely with Bulma CSS | Vue3-ui";
+  const url = "https://vue3.dev";
+  const imageUrl = `${url}/vue3-ui.png`;
 
-	return `
+  return `
 <!doctype html>
 <html${makeHtmlAttributes(attributes.html)}>
   <head>
@@ -131,102 +131,102 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
 </html>`;
 };
 const config = [
-	{
-		input: "src/main.ts",
-		output: [
-			{
-				format: "iife",
-				file: "dist/app.js",
-				entryFileNames: "[name].js",
-				chunkFileNames: "[name].js",
-				assetFileNames: "[name][extname]",
-			},
-		],
+  {
+    input: "src/main.ts",
+    output: [
+      {
+        format: "iife",
+        file: "dist/app.js",
+        entryFileNames: "[name].js",
+        chunkFileNames: "[name].js",
+        assetFileNames: "[name][extname]",
+      },
+    ],
 
-		plugins: [
-			string({
-				include: "**/*.txt",
-			}),
-			replace({
-				values: {
-					"process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
-					"process.env.VUE_APP_VERSION_NUMBER": JSON.stringify(
-						env.parsed.VUE_APP_VERSION_NUMBER,
-					),
-					__VUE_OPTIONS_API__: "false",
-					__VUE_PROD_DEVTOOLS__: "false",
-				},
-				preventAssignment: true,
-			}),
-			json(),
-			alias({
-				entries: [{ find: "vue", replacement: "@vue/runtime-dom" }],
-			}),
-			resolve({
-				dedupe: [
-					"vue",
-					"@vue/compiler-core",
-					"@vue/compiler-dom",
-					"@vue/compiler-sfc",
-					"@vue/compiler-ssr",
-					"@vue/reactivity",
-					"@vue/runtime-core",
-					"@vue/runtime-dom",
-					"@vue/shared",
-					"vuex",
-				],
-				preferBuiltins: true,
-				extensions,
-			}),
-			commonjs(),
-			vue3svg(),
-			prod && vue3uiPurge({ alias: aliases, debug: false }),
-			vue(),
-			styles({
-				mode: prod ? "extract" : "inject",
-				url: {
-					hash: "[name][extname]",
-					publicPath: env.parsed.BASE_URL,
-					inline: true,
-				},
-				minimize: prod && {
-					preset: ["default", { discardComments: { removeAll: true } }],
-				},
-			}),
-			image(),
-			sucrase({ exclude: ["**/node_modules/**"], transforms: ["typescript"] }),
+    plugins: [
+      string({
+        include: "**/*.txt",
+      }),
+      replace({
+        values: {
+          "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
+          "process.env.VUE_APP_VERSION_NUMBER": JSON.stringify(
+            env.parsed.VUE_APP_VERSION_NUMBER,
+          ),
+          __VUE_OPTIONS_API__: "false",
+          __VUE_PROD_DEVTOOLS__: "false",
+        },
+        preventAssignment: true,
+      }),
+      json(),
+      alias({
+        entries: [{ find: "vue", replacement: "@vue/runtime-dom" }],
+      }),
+      resolve({
+        dedupe: [
+          "vue",
+          "@vue/compiler-core",
+          "@vue/compiler-dom",
+          "@vue/compiler-sfc",
+          "@vue/compiler-ssr",
+          "@vue/reactivity",
+          "@vue/runtime-core",
+          "@vue/runtime-dom",
+          "@vue/shared",
+          "vuex",
+        ],
+        preferBuiltins: true,
+        extensions,
+      }),
+      commonjs(),
+      vue3svg(),
+      prod && vue3uiPurge({ alias: aliases, debug: false }),
+      vue(),
+      styles({
+        mode: prod ? "extract" : "inject",
+        url: {
+          hash: "[name][extname]",
+          publicPath: env.parsed.BASE_URL,
+          inline: true,
+        },
+        minimize: prod && {
+          preset: ["default", { discardComments: { removeAll: true } }],
+        },
+      }),
+      image(),
+      sucrase({ exclude: ["**/node_modules/**"], transforms: ["typescript"] }),
 
-			prod && terser({ format: { comments: false } }),
-			prod &&
-				gzip({
-					fileName: ".br",
-					customCompression: (content) =>
-						zlib.brotliCompressSync(Buffer.from(content), {
-							params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 },
-						}),
-				}),
-			html({
-				publicPath: env.parsed.BASE_URL,
-				title: "Vue3-ui",
-				template,
-			}),
+      prod && terser({ format: { comments: false } }),
+      prod &&
+        gzip({
+          fileName: ".br",
+          customCompression: (content) =>
+            zlib.brotliCompressSync(Buffer.from(content), {
+              params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 },
+            }),
+        }),
+      html({
+        publicPath: env.parsed.BASE_URL,
+        title: "Vue3-ui",
+        template,
+      }),
 
-			watch &&
-				serve({
-					host: "0.0.0.0",
-					contentBase: "dist",
-					historyApiFallback: true,
-					port: 5000,
-				}),
+      watch &&
+        serve({
+          host: "0.0.0.0",
+          contentBase: "dist",
+          historyApiFallback: true,
+          port: 5000,
+        }),
 
-			watch && livereload({ watch: "dist" }),
-			prod && analyzer(),
-			prod && visualizer(),
-			copy({
-				targets: [{ src: "public/**/*", dest: "dist/" }],
-			}),
-		].filter(Boolean),
-	},
+      watch && livereload({ watch: "dist" }),
+      prod && analyzer(),
+      prod && visualizer(),
+      copy({
+        targets: [{ src: "public/**/*", dest: "dist/" }],
+      }),
+    ].filter(Boolean),
+  },
 ];
 
 export default config;

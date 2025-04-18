@@ -11,19 +11,19 @@ import BreadcrumbSizesCode from "../../docs/components/raw/Breadcrumb/Breadcrumb
 import * as Showcases from "../../docs/components/showcases/Breadcrumb";
 
 export default {
-	name: "DevPageBreadcrumb",
-	components: { SnippetSection, ApiSection },
-	setup() {
-		const router = useRouter();
-		return {
-			api,
-			router,
-			Showcases,
-			BreadcrumbBasicCode,
-			BreadcrumbSizesCode,
-			BreadcrumbSeparatorCode,
-		};
-	},
+  name: "DevPageBreadcrumb",
+  components: { SnippetSection, ApiSection },
+  setup() {
+    const router = useRouter();
+    return {
+      api,
+      router,
+      Showcases,
+      BreadcrumbBasicCode,
+      BreadcrumbSizesCode,
+      BreadcrumbSeparatorCode,
+    };
+  },
 };
 </script>
 

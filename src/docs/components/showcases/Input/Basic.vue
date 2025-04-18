@@ -3,19 +3,19 @@ import { VField, VIcon, VInput } from "@pathscale/vue3-ui";
 import { reactive } from "vue";
 
 export default {
-	name: "DevShowcaseInput",
-	components: { VField, VInput, VIcon },
-	setup() {
-		const state = reactive({
-			name: "John Wick",
-			email: "boogeyman@",
-			username: "the_boogeyman",
-			// eslint-disable-next-line sonarjs/no-hardcoded-passwords -- Demo purpose
-			password: "Daisy",
-			message: "Guns. Lots of guns.",
-		});
-		return { state };
-	},
+  name: "DevShowcaseInput",
+  components: { VField, VInput, VIcon },
+  setup() {
+    const state = reactive({
+      name: "John Wick",
+      email: "boogeyman@",
+      username: "the_boogeyman",
+      // eslint-disable-next-line sonarjs/no-hardcoded-passwords -- Demo purpose
+      password: "Daisy",
+      message: "Guns. Lots of guns.",
+    });
+    return { state };
+  },
 };
 </script>
 

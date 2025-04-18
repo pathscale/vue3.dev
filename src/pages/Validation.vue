@@ -7,12 +7,12 @@ import BasicCode from "../docs/components/raw/Validation/Basic.txt";
 import * as Showcases from "../docs/components/showcases/Validation";
 
 export default {
-	name: "DevPageValidation",
-	components: { SnippetSection },
-	setup() {
-		const router = useRouter();
-		return { router, Showcases, BasicCode };
-	},
+  name: "DevPageValidation",
+  components: { SnippetSection },
+  setup() {
+    const router = useRouter();
+    return { router, Showcases, BasicCode };
+  },
 };
 </script>
 

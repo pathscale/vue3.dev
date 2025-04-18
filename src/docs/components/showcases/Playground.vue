@@ -2,8 +2,8 @@
 import Steps from "./Steps/Basic.vue";
 
 export default {
-	name: "DevShowcasePlayground",
-	components: { Steps },
+  name: "DevShowcasePlayground",
+  components: { Steps },
 };
 </script>
 
