@@ -1,6 +1,6 @@
-import path from "path";
-import { fileURLToPath } from "url";
-import zlib from "zlib";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import zlib from "node:zlib";
 import vue3uiPurge from "@pathscale/rollup-plugin-vue3-ui-css-purge";
 import vue3svg from "@pathscale/vue3-svg-icons";
 import alias from "@rollup/plugin-alias";
@@ -44,7 +44,7 @@ const addVersion = (fileName) => {
 	if (ext === ".html") {
 		return fileName;
 	}
-	const filename = base + `?v=${ver}`;
+	const filename = `${base}?v=${ver}`;
 	return dir ? `${dir}/${filename}` : filename;
 };
 

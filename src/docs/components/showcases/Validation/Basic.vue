@@ -21,14 +21,14 @@ export default {
 			if (!validators.username(state.username)) {
 				errors.username = "Must be at least 2 chars long";
 			} else {
-				delete errors.username;
+				errors.username = undefined;
 			}
 
 			if (!validators.password(state.password)) {
 				// eslint-disable-next-line sonarjs/no-hardcoded-passwords -- Not a real password
 				errors.password = "Must be at least 5 chars long and contain no spaces";
 			} else {
-				delete errors.password;
+				errors.password = undefined;
 			}
 		});
 
@@ -43,10 +43,10 @@ export default {
 </script>
 
 <template>
-  <v-field label="Username" :message="errors.username" :type="types.username">
-    <v-input v-model="state.username" type="text" :color="types.username" />
-  </v-field>
-  <v-field label="Password" :message="errors.password" :type="types.password">
-    <v-input v-model="state.password" type="password" :color="types.password" />
-  </v-field>
+	<v-field label="Username" :message="errors.username" :type="types.username">
+		<v-input v-model="state.username" type="text" :color="types.username" />
+	</v-field>
+	<v-field label="Password" :message="errors.password" :type="types.password">
+		<v-input v-model="state.password" type="password" :color="types.password" />
+	</v-field>
 </template>

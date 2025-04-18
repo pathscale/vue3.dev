@@ -4,19 +4,19 @@ import { VIcon, VTab, VTabs, VTag, VTooltip } from "@pathscale/vue3-ui";
 import { ref } from "vue";
 
 export default {
-	name: "DevAPI",
-	components: { VTag, VTab, VTabs, VTooltip, VIcon },
-	props: {
-		api: Object,
-	},
-	setup(props) {
-		const components = [];
-		props.api.forEach(() => {
-			components.push(0);
-		});
-		const tab = ref(components);
-		return { tab };
-	},
+  name: "DevAPI",
+  components: { VTag, VTab, VTabs, VTooltip, VIcon },
+  props: {
+    api: Object,
+  },
+  setup(props) {
+    const components = [];
+    for (const _ of props.api) {
+      components.push(0);
+    }
+    const tab = ref(components);
+    return { tab };
+  },
 };
 </script>
 

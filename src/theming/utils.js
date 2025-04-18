@@ -41,9 +41,9 @@ const setTheme = (theme) => {
 	// for every variable with hex value, create h, s, l, a variables as well
 	const hslaVariables = [];
 
-	finalVariables.forEach((variable) => {
+	for (const variable of finalVariables) {
 		if (!variable.value.includes("#")) {
-			return;
+			continue;
 		}
 
 		// this variable has got an hex value
@@ -51,19 +51,19 @@ const setTheme = (theme) => {
 
 		hslaVariables.push(
 			{
-				name: variable.name + "-h",
+				name: `${variable.name}-h`,
 				value: h.toString(),
 			},
 			{
-				name: variable.name + "-s",
-				value: s.toString() + "%",
+				name: `${variable.name}-s`,
+				value: `${s.toString()}%`,
 			},
 			{
-				name: variable.name + "-l",
-				value: l.toString() + "%",
+				name: `${variable.name}-l`,
+				value: `${l.toString()}%`,
 			},
 		);
-	});
+	}
 
 	finalVariables.push(...hslaVariables);
 
@@ -74,29 +74,29 @@ const setTheme = (theme) => {
 // https://css-tricks.com/converting-color-spaces-in-javascript/
 const hexToHSL = (H) => {
 	// Convert hex to RGB first
-	let r = 0,
-		g = 0,
-		b = 0;
+	let r = 0;
+	let g = 0;
+	let b = 0;
 	if (H.length === 4) {
-		r = "0x" + H[1] + H[1];
-		g = "0x" + H[2] + H[2];
-		b = "0x" + H[3] + H[3];
+		r = `0x${H[1]}${H[1]}`;
+		g = `0x${H[2]}${H[2]}`;
+		b = `0x${H[3]}${H[3]}`;
 	} else if (H.length === 7) {
-		r = "0x" + H[1] + H[2];
-		g = "0x" + H[3] + H[4];
-		b = "0x" + H[5] + H[6];
+		r = `0x${H[1]}${H[2]}`;
+		g = `0x${H[3]}${H[4]}`;
+		b = `0x${H[5]}${H[6]}`;
 	}
 	// Then to HSL
 	r /= 255;
 	g /= 255;
 	b /= 255;
-	const cmin = Math.min(r, g, b),
-		cmax = Math.max(r, g, b),
-		delta = cmax - cmin;
+	const cmin = Math.min(r, g, b);
+	const cmax = Math.max(r, g, b);
+	const delta = cmax - cmin;
 
-	let h = 0,
-		s = 0,
-		l = 0;
+	let h = 0;
+	let s = 0;
+	let l = 0;
 
 	if (delta === 0) {
 		// eslint-disable-next-line sonarjs/no-redundant-assignments -- For clarity

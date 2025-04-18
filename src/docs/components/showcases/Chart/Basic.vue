@@ -58,7 +58,7 @@ export default {
 
 			tooltipOptions: {
 				formatTooltipX: (d) => String(d).toUpperCase(),
-				formatTooltipY: (d) => d + " pts",
+				formatTooltipY: (d) => `${d} pts`,
 			},
 		}));
 
@@ -70,7 +70,7 @@ export default {
 </script>
 
 <template>
-  <div>
-    <v-chart v-bind="{ ...candleChart }" />
-  </div>
+	<div>
+		<v-chart v-bind="{ ...candleChart }" />
+	</div>
 </template>

@@ -2,7 +2,7 @@
 const showcaseDir = "src/docs/components/showcases";
 const rawDir = "src/docs/components/raw";
 
-const path = require("path");
+const path = require("node:path");
 const sh = require("shelljs");
 
 // Change working dir to project root
@@ -14,7 +14,7 @@ sh.cp("-R", showcaseDir, rawDir);
 
 const vue = sh.find([rawDir]).filter((v) => /\.vue$/i.test(v));
 for (const v of vue) {
-	sh.mv("-f", v, v.slice(0, -4) + ".txt");
+	sh.mv("-f", v, `${v.slice(0, -4)}.txt`);
 }
 
 console.log("Snippets build - done!");

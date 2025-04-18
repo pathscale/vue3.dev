@@ -14,9 +14,12 @@ globalThis.smoothScroll = (target) => {
 			break;
 		}
 		targetY += target.offsetTop;
+	// biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
+	// biome-ignore lint/style/noParameterAssign: <explanation>
 	} while ((target = target.offsetParent));
 
 	const scroll = (c, a, b, i) => {
+		// biome-ignore lint/style/noParameterAssign: <explanation>
 		i++;
 		if (i > 30) {
 			return;
