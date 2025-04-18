@@ -106,7 +106,7 @@ class="hidden-language-menu"
       <div class="is-flex pt-2">
         <v-navbar-item
           v-for="l in intl.locales.value" :key="l"
-          :value="l"
+          :data-value="l"
           class="mx-3 is-size-6 has-text-centered"
           @click="changeLanguage(l)">
           {{
