@@ -23,7 +23,10 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,ts,vue}": ["biome check --write", "biome lint --write"]
+    "*.{js,ts,vue}": [
+      "biome check --write",
+      "biome lint --write"
+    ]
   },
   "devDependencies": {
     "@babel/core": "7.26.10",
@@ -71,7 +74,8 @@
     "typescript": "^5.8.3",
     "vue": "^3.5.13",
     "vue-composable": "^1.0.0-beta.24",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.5.0",
+    "vue3-colorpicker": "2.3.0"
   },
   "engines": {
     "bun": ">=1.0.0"

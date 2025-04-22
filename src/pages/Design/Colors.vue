@@ -1,5 +1,7 @@
 <script>
 import { VColumn, VColumns, VField, VInput, VSwitch } from "@pathscale/vue3-ui";
+import { ColorPicker } from "vue3-colorpicker";
+import "vue3-colorpicker/style.css";
 import tinycolor from "tinycolor2";
 import { computed, ref, watchEffect } from "vue";
 import ComponentShowcase from "../../components/ComponentShowcase.vue";
@@ -13,6 +15,7 @@ export default {
     VColumns,
     VColumn,
     ComponentShowcase,
+    ColorPicker,
   },
   setup() {
     const theme = ref("light");
@@ -159,53 +162,62 @@ export default {
 </script>
 
 <template>
-	<div class="section">
-		<h1 class="title">
-			Color Palette
-		</h1>
+  <div class="section">
+    <h1 class="title">
+      Color Palette
+    </h1>
 
-		<div class="block mt-5">
-			<v-switch v-model="theme" type="is-success" passive-type="is-success" true-value="dark" false-value="light">
-				{{ theme === 'light' ? '🌞 Light' : '🌙 Dark' }}
-			</v-switch>
-		</div>
+    <div class="block mt-5">
+      <v-switch v-model="theme" type="is-success" passive-type="is-success" true-value="dark" false-value="light">
+        {{ theme === 'light' ? '🌞 Light' : '🌙 Dark' }}
+      </v-switch>
+    </div>
 
-		<div class="columns is-variable is-4 mt-5">
-			<div class="column">
-				<v-field label="Accent">
-					<v-input v-model="accent" type="text" color="is-primary" />
-				</v-field>
-			</div>
+    <div class="columns is-variable is-4 mt-5">
+      <div class="column">
+        <v-field label="Accent">
+          <div class="is-flex is-align-items-center">
+            <ColorPicker v-model:pureColor="accent" format="hex" />
+            <v-input v-model="accent" type="text" color="is-primary" class="ml-2" />
+          </div>
+        </v-field>
+      </div>
 
-			<div class="column">
-				<v-field label="Gray">
-					<v-input v-model="gray" type="text" color="is-primary" />
-				</v-field>
-			</div>
+      <div class="column">
+        <v-field label="Gray">
+          <div class="is-flex is-align-items-center">
+            <ColorPicker v-model:pureColor="gray" format="hex" />
+            <v-input v-model="gray" type="text" color="is-primary" class="ml-2" />
+          </div>
+        </v-field>
+      </div>
 
-			<div class="column">
-				<v-field label="Background">
-					<v-input v-model="background" type="text" color="is-primary" />
-				</v-field>
-			</div>
-		</div>
-		<v-columns v-for="(scale, scaleName) in colorScales" :key="scaleName">
-			<v-column hcentered v-for="(colors, category) in scale" :key="category" narrow>
-				<span v-if="scaleName === 'accent'" class="mb-4 is-capitalized">{{ category }}</span>
-				<div class="columns">
-					<v-column narrow v-for="color in colors" :key="color.id" class="column">
-						<div class="box has-text-centered p-4" :style="{
-							backgroundColor: theme === 'light' ? color.light : color.dark,
-							width: '80px',
-							minWidth: '80px'
-						}">
-							<span class="has-text-white has-text-weight-bold is-size-4">{{ color.id }}</span>
-						</div>
-					</v-column>
-				</div>
-			</v-column>
-		</v-columns>
+      <div class="column">
+        <v-field label="Background">
+          <div class="is-flex is-align-items-center">
+            <ColorPicker v-model:pureColor="background" format="hex" />
+            <v-input v-model="background" type="text" color="is-primary" class="ml-2" />
+          </div>
+        </v-field>
+      </div>
+    </div>
+    <v-columns v-for="(scale, scaleName) in colorScales" :key="scaleName">
+      <v-column hcentered v-for="(colors, category) in scale" :key="category" narrow>
+        <span v-if="scaleName === 'accent'" class="mb-4 is-capitalized">{{ category }}</span>
+        <div class="columns">
+          <v-column narrow v-for="color in colors" :key="color.id" class="column">
+            <div class="box has-text-centered p-4" :style="{
+              backgroundColor: theme === 'light' ? color.light : color.dark,
+              width: '80px',
+              minWidth: '80px'
+            }">
+              <span class="has-text-white has-text-weight-bold is-size-4">{{ color.id }}</span>
+            </div>
+          </v-column>
+        </div>
+      </v-column>
+    </v-columns>
 
-		<component-showcase />
-	</div>
+    <component-showcase />
+  </div>
 </template>
