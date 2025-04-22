@@ -53,7 +53,7 @@ export default {
 </script>
 
 <template>
-  <section class="has-background-white pt-6">
+  <section class="has-background-color pt-6">
     <v-columns class="pt-5 mx-0">
       <v-column size="is-2">
         <div class="pt-6 px-5">

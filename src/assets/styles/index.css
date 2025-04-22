@@ -121,3 +121,8 @@ body {
 .is-fullwidth {
   width: 100%;
 }
+
+
+.has-background-color {
+  background-color: var(--background-color, white) 
+}
