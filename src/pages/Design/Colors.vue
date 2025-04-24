@@ -22,15 +22,15 @@ export default {
     const theme = ref("light");
     const accent = reactive({
       light: "#3D63DD",
-      dark: "#4cb050",
+      dark: "#3D63DD",
     });
     const gray = reactive({
       light: "#8B8D98",
-      dark: "#aa47bc",
+      dark: "#8B8D98",
     });
     const background = reactive({
-      light: "#F9FAFB",
-      dark: "#1F1F1F",
+      light: "#FFFFFF",
+      dark: "#111111",
     });
 
     const { colorScales } = useColorPalette(
@@ -74,7 +74,7 @@ export default {
     </h1>
 
     <div class="block mt-5">
-      <v-switch v-model="theme" type="is-success" passive-type="is-success" true-value="dark" false-value="light">
+      <v-switch v-model="theme" type="is-primary" passive-type="is-primary" true-value="dark" false-value="light">
         {{ theme === 'light' ? '🌞 Light' : '🌙 Dark' }}
       </v-switch>
     </div>
