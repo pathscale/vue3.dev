@@ -15,7 +15,7 @@
         "@pathscale/frappe-charts": "^0.0.2",
         "@pathscale/rollup-plugin-vue3-ui-css-purge": "^0.0.41",
         "@pathscale/vue3-svg-icons": "^0.0.12",
-        "@pathscale/vue3-ui": "1.0.15",
+        "@pathscale/vue3-ui": "1.0.16",
         "@rollup/plugin-alias": "^5.1.1",
         "@rollup/plugin-commonjs": "^28.0.3",
         "@rollup/plugin-html": "^2.0.0",
@@ -374,7 +374,7 @@
 
     "@pathscale/vue3-svg-icons": ["@pathscale/vue3-svg-icons@0.0.12", "", { "dependencies": { "@rollup/pluginutils": "^4.0.0", "cheerio": "^0.22.0", "fs-extra": "^9.0.1", "query-string": "^6.13.5", "tslib": "^2.0.3" }, "peerDependencies": { "rollup": "^2.2.0" } }, "sha512-jeqUXvK/75v9eVLluTISXvRGgthz31gcMNifMkqSrjfyga6o6D0S/1gpyZ+ql5iHmzrkTgmAMaHxTYzXHwUp4Q=="],
 
-    "@pathscale/vue3-ui": ["@pathscale/vue3-ui@1.0.15", "", {}, "sha512-dfX7BmIk/MVo+FElB3RqCoS6fMPBm5kjSuZhBfvJVq5iHkl9CVTlgTGa2bK1CMnwZ/7sfEx2cMC0ok22fhXTJQ=="],
+    "@pathscale/vue3-ui": ["@pathscale/vue3-ui@1.0.16", "", {}, "sha512-nTks9DDDKfXtz+AMvVxARZFR1JiPDmcO4w2bkn1T21iHfCUiNzUPbkVB6JMjlhbm/hyQA9fVRX4NMFC556SZ/Q=="],
 
     "@pkgjs/parseargs": ["@pkgjs/parseargs@0.11.0", "", {}, "sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg=="],
 
