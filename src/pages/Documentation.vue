@@ -106,7 +106,7 @@ export default {
                 <v-menu-item label="Textarea" :active="current.textarea" @click="redirect('textarea')" />
                 <v-menu-item label="Select" :active="current.select" @click="redirect('select')" />
                 <!-- <v-menu-item label="Radio" /> -->
-                <v-menu-item label="Upload" :active="current.file" @click="redirect('upload')" />
+                <v-menu-item label="Upload" :active="current.upload" @click="redirect('upload')" />
                 <v-menu-item label="Switch" :active="current.switch" @click="redirect('switch')" />
                 <v-menu-item label="Field" :active="current.field" @click="redirect('field')" />
                 <v-menu-item label="Checkbox" :active="current.checkbox" @click="redirect('checkbox')" />

@@ -30,7 +30,7 @@ export default {
 
 <template>
   <v-field grouped group-multiline>
-    <v-field label="Total">
+    <v-field label="Total" class="mr-1">
       <v-input v-model="state.total" type="number" />
     </v-field>
     <v-field label="Items per page">
@@ -38,7 +38,7 @@ export default {
     </v-field>
   </v-field>
   <v-field grouped group-multiline>
-    <v-field label="Show buttons before current">
+    <v-field label="Show buttons before current" class="mr-1">
       <v-input v-model="state.rangeBefore" type="number" min="0" />
     </v-field>
     <v-field label="Show buttons after current">
@@ -46,7 +46,7 @@ export default {
     </v-field>
   </v-field>
   <v-field grouped group-multiline>
-    <v-field label="Order">
+    <v-field label="Order" class="mr-1">
       <v-select v-model="state.order">
         <option value="">
           default
@@ -87,18 +87,8 @@ export default {
   </div>
 
   <hr />
-  <v-pagination
-    v-model:current="state.current"
-    :total="state.total"
-    :range-before="state.rangeBefore"
-    :range-after="state.rangeAfter"
-    :order="state.order"
-    :size="state.size"
-    :simple="state.isSimple"
-    :rounded="state.isRounded"
-    :per-page="state.perPage"
-    aria-next-label="Next page"
-    aria-previous-label="Previous page"
-    aria-page-label="Page"
-    aria-current-label="Current page" />
+  <v-pagination v-model:current="state.current" :total="state.total" :range-before="state.rangeBefore"
+    :range-after="state.rangeAfter" :order="state.order" :size="state.size" :simple="state.isSimple"
+    :rounded="state.isRounded" :per-page="state.perPage" aria-next-label="Next page" aria-previous-label="Previous page"
+    aria-page-label="Page" aria-current-label="Current page" />
 </template>

@@ -13,7 +13,7 @@ export default {
       <div class="container">
         <v-columns vcentered hcentered>
           <v-column size="is-full-touch is-half has-text-centered" style="z-index: 1;">
-            <p class="title has-text-white">
+            <p class="title">
               Why Vue3-ui?
             </p>
           </v-column>
@@ -71,7 +71,8 @@ export default {
               <v-icon custom-class="feature-icon" name="format-color-fill-icon" bundle="icons" />
             </div>
             <span class="has-text-white">
-              Create <a href="/documentation/theming" target="_blank" rel="noopener">themes</a> with CSS variables support
+              Create <a href="/documentation/theming" target="_blank" rel="noopener">themes</a> with CSS variables
+              support
             </span>
           </div>
         </v-column>
