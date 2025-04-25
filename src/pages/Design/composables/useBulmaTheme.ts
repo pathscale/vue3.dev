@@ -1,3 +1,4 @@
+import tinycolor from "tinycolor2";
 import type { ComputedRef, Ref } from "vue";
 
 export type ThemeValue = "light" | "dark";
@@ -32,6 +33,16 @@ export function useBulmaTheme(
   colorScales: ComputedRef<ColorScales>,
   theme: Ref<ThemeValue>,
 ) {
+  const setHSLVariables = (prefix: string, color: string) => {
+    const root = document.documentElement;
+    const tc = tinycolor(color);
+    const hsl = tc.toHsl();
+    root.style.setProperty(`--${prefix}-h`, Math.round(hsl.h).toString());
+    root.style.setProperty(`--${prefix}-s`, `${Math.round(hsl.s * 100)}%`);
+    root.style.setProperty(`--${prefix}-l`, `${Math.round(hsl.l * 100)}%`);
+    root.style.setProperty(`--${prefix}-a`, `${Math.round(hsl.a * 100) / 100}`);
+  };
+
   const applyTheme = (): void => {
     const root = document.documentElement;
     const currentTheme = theme.value;
@@ -281,8 +292,6 @@ export function useBulmaTheme(
       "input-disabled-placeholder-color",
       "input-icon-color",
       "input-placeholder-color",
-      "invert-dark-color",
-      "invert-light-color",
       "label-color",
       "menu-item-color",
       "menu-label-color",
@@ -338,6 +347,12 @@ export function useBulmaTheme(
       vars[`--${key}`] = get("gray", "interactive", 1);
     });
 
+    // Grupo de solid colors
+    const solidVars: string[] = ["menu-item-active-background-color"];
+    solidVars.forEach((key) => {
+      vars[`--${key}`] = vars["--primary"];
+    });
+
     textVars.forEach((key) => {
       vars[`--${key}`] = get("gray", "solid", 1);
     });
@@ -347,6 +362,65 @@ export function useBulmaTheme(
         root.style.setProperty(key, value);
       }
     }
+
+    const bulmaBaseColors = [
+      "white",
+      "black",
+      "light",
+      "dark",
+      "primary",
+      "link",
+      "info",
+      "success",
+      "warning",
+      "danger",
+    ];
+    const bulmaShades = [
+      "black-bis",
+      "black-ter",
+      "grey-darker",
+      "grey-dark",
+      "grey",
+      "grey-light",
+      "grey-lighter",
+      "grey-lightest",
+      "white-ter",
+      "white-bis",
+    ];
+
+    bulmaBaseColors.forEach((color) => {
+      const baseColor = vars[`--${color}`];
+      if (baseColor) {
+        setHSLVariables(color, baseColor);
+        const invertVar = vars[`--${color}-invert`];
+        if (invertVar) {
+          setHSLVariables(`${color}-invert`, invertVar);
+        } else if (
+          ["primary", "link", "info", "success", "warning", "danger"].includes(
+            color,
+          )
+        ) {
+          const tc = tinycolor(baseColor);
+          const invertColor = tc.isLight() ? "#000000" : "#ffffff";
+          setHSLVariables(`${color}-invert`, invertColor);
+        }
+        const lightVar = vars[`--${color}-light`];
+        if (lightVar) {
+          setHSLVariables(`${color}-light`, lightVar);
+        }
+        const darkVar = vars[`--${color}-dark`];
+        if (darkVar) {
+          setHSLVariables(`${color}-dark`, darkVar);
+        }
+      }
+    });
+
+    bulmaShades.forEach((shade) => {
+      const shadeColor = vars[`--${shade}`];
+      if (shadeColor) {
+        setHSLVariables(shade, shadeColor);
+      }
+    });
   };
 
   return {
