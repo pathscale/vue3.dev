@@ -84,6 +84,8 @@ export function useBulmaTheme(
       "--primary-dark": get("accent", "accessible", 0),
       "--link": get("accent", "borders", 1),
       "--info": get("accent", "interactive", 0),
+      // Ensure menu-item-active-color is always light (using the same value as --white)
+      "--menu-item-active-color": get("gray", "backgrounds", 0),
     };
 
     const backgroundVars: string[] = [
@@ -219,7 +221,6 @@ export function useBulmaTheme(
       "input-hover-border-color",
       "input-hover-color",
       "input-icon-active-color",
-      "menu-item-active-color",
       "menu-item-hover-color",
       "navbar-dropdown-item-active-color",
       "navbar-dropdown-item-hover-color",
