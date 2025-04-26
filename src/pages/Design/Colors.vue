@@ -19,7 +19,7 @@ export default {
     ColorPicker,
   },
   setup() {
-    const theme = ref("light");
+    const theme = ref(localStorage.getItem('theme') || 'light');
     const accent = reactive({
       light: "#3D63DD",
       dark: "#3D63DD",
@@ -54,6 +54,7 @@ export default {
 
     watchEffect(() => {
       applyTheme();
+      localStorage.setItem('theme', theme.value);
     });
 
     return {

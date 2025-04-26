@@ -110,7 +110,7 @@ export default {
                 <v-menu-item label="Switch" :active="current.switch" @click="redirect('switch')" />
                 <v-menu-item label="Field" :active="current.field" @click="redirect('field')" />
                 <v-menu-item label="Checkbox" :active="current.checkbox" @click="redirect('checkbox')" />
-                <v-menu-item label="Calendar" @click="redirect('calendar')" :active="current.calendar" />
+                <!-- <v-menu-item label="Calendar" @click="redirect('calendar')" :active="current.calendar" /> -->
               </v-menu-item>
               <v-menu-item label="Components" expanded>
                 <v-menu-item label="Breadcrumb" :active="current.breadcrumb" @click="redirect('breadcrumb')" />
