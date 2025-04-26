@@ -39,7 +39,7 @@ export default {
   <section id="client" class="hero section">
     <div class="hero-body">
       <div class="container">
-        <p class="title has-text-white has-text-centered">
+        <p class="title has-text-centered">
           {{ intl.$ts('clients.title') }}
         </p>
         <v-columns vcentered class="reverse-columns px-2">
