@@ -432,7 +432,12 @@ export const router = createRouter({
         el: to.hash,
       };
     }
-    return { top: 0 };
+
+    const app = document.getElementById("app");
+
+    if (app) {
+      app.scrollIntoView({ behavior: "smooth" });
+    }
   },
 });
 
