@@ -34,7 +34,8 @@ export default {
 
     <div class="content">
       <p>
-        The easy way to get started with Vue3-ui is use our <a href="https://github.com/pathscale/vue3-starter" target="_blank" rel="noopener">Vue3 Starter</a> template to create a Vue3-ui ready app using
+        The easy way to get started with Vue3-ui is use our <a href="https://github.com/pathscale/vue3-starter"
+          target="_blank" rel="noopener">Vue3 Starter</a> template to create a Vue3-ui ready app using
         Rollup.
       </p>
     </div>
@@ -70,7 +71,7 @@ export default {
         <div class="subtitle content">
           Create a new project based on our Vue3 Starter template
         </div>
-        <div class="box has-background-light is-family-code">
+        <div class="box is-family-code">
           git clone git@github.com:pathscale/vue3-starter.git --depth 1
           <br />
           cd vue3-starter
@@ -78,13 +79,14 @@ export default {
         <div class="subtitle content">
           Install packages and run the app
         </div>
-        <div class="box has-background-light is-family-code">
+        <div class="box is-family-code">
           npm i
           <br />
           npm start
         </div>
         <div class="content">
-          You should see something like the example below in <a href="http://localhost:5000/" target="_blank" rel="noopener">http://localhost:5000/</a>
+          You should see something like the example below in <a href="http://localhost:5000/" target="_blank"
+            rel="noopener">http://localhost:5000/</a>
         </div>
       </template>
     </v-accordion>
@@ -93,12 +95,20 @@ export default {
     </div>
     <div class="content">
       <ul>
-        <li><a href="https://github.com/pathscale/rollup-plugin-vue3-ui-css-purge" target="_blank" rel="noopener">@pathscale/rollup-plugin-vue3-ui-css-purge</a>: remove unused css.</li>
-        <li><a href="https://github.com/pathscale/vue3-svg-icons" target="_blank" rel="noopener">@pathscale/vue3-svg-icons</a>: mega compilation of svg icons.</li>
-        <li><a href="https://github.com/pathscale/rollup-plugin-tsickle" target="_blank" rel="noopener">@pathscale/rollup-plugin-tsickle</a>: typescript transpiler.</li>
-        <li><a href="https://github.com/pathscale/eslint-plugin-vue3" target="_blank" rel="noopener">@pathscale/eslint-plugin-vue3</a>: linting rules to help enforce our rather limited view of the world. Highly opinionated and not for everyone.</li>
+        <li><a href="https://github.com/pathscale/rollup-plugin-vue3-ui-css-purge" target="_blank"
+            rel="noopener">@pathscale/rollup-plugin-vue3-ui-css-purge</a>: remove unused css.</li>
+        <li><a href="https://github.com/pathscale/vue3-svg-icons" target="_blank"
+            rel="noopener">@pathscale/vue3-svg-icons</a>: mega compilation of svg icons.</li>
+        <li><a href="https://github.com/pathscale/rollup-plugin-tsickle" target="_blank"
+            rel="noopener">@pathscale/rollup-plugin-tsickle</a>: typescript transpiler.</li>
+        <li><a href="https://github.com/pathscale/eslint-plugin-vue3" target="_blank"
+            rel="noopener">@pathscale/eslint-plugin-vue3</a>: linting rules to help enforce our rather limited view of
+          the
+          world. Highly opinionated and not for everyone.</li>
       </ul>
-      To see them working together and more advance config, check out this project <a href="https://github.com/pathscale/vue3.dev/blob/master/rollup.config.js" target="_blank" rel="noopener">rollup.config.js</a>
+      To see them working together and more advance config, check out this project <a
+        href="https://github.com/pathscale/vue3.dev/blob/master/rollup.config.js" target="_blank"
+        rel="noopener">rollup.config.js</a>
     </div>
     <snippet-section title="" :code="ShowcaseCode" :component="Showcase" :path="router.currentRoute.value.path" />
   </div>

@@ -1,8 +1,11 @@
 <script>
 import { VButton, VTab, VTabs } from "@pathscale/vue3-ui";
-import { computed, ref } from "vue";
+import { computed, onMounted, ref, watchEffect } from "vue";
+import { useTheme } from "../../composables/useTheme";
 
+// Import both themes but we'll control them via disabled attribute
 import "highlight.js/styles/github.css";
+import "highlight.js/styles/vs2015.css";
 
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
@@ -10,6 +13,32 @@ import xml from "highlight.js/lib/languages/xml";
 
 hljs.registerLanguage("javascript", javascript);
 hljs.registerLanguage("xml", xml);
+
+// Add theme stylesheets to head
+const githubTheme = document.createElement("link");
+githubTheme.rel = "stylesheet";
+githubTheme.href =
+  "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css";
+githubTheme.title = "github";
+
+const vsTheme = document.createElement("link");
+vsTheme.rel = "stylesheet";
+vsTheme.href =
+  "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/vs2015.min.css";
+vsTheme.title = "vs2015";
+
+document.head.appendChild(githubTheme);
+document.head.appendChild(vsTheme);
+
+function updateHighlightTheme(theme) {
+  if (theme === "dark") {
+    githubTheme.setAttribute("disabled", "disabled");
+    vsTheme.removeAttribute("disabled");
+  } else {
+    vsTheme.setAttribute("disabled", "disabled");
+    githubTheme.removeAttribute("disabled");
+  }
+}
 
 export default {
   name: "Demo",
@@ -51,6 +80,12 @@ export default {
     isHalfWidth: Boolean,
   },
   setup(props) {
+    const { theme } = useTheme();
+    updateHighlightTheme(theme.value);
+    watchEffect(() => {
+      updateHighlightTheme(theme.value);
+    });
+
     const getDemoLink = () => {
       return `${props.path}#${props.title.toLowerCase()}`;
     };
@@ -84,7 +119,7 @@ export default {
     <h1 v-if="title" class="title is-size-4 mt-4">
       <a :href="getDemoLink()" class="is-active">#</a> {{ title }}
     </h1>
-    <div v-if="component" :class="{'is-40': isHalfWidth}">
+    <div v-if="component" :class="{ 'is-40': isHalfWidth }">
       <component :is="component" />
     </div>
     <v-tabs v-model="activeTab" type="is-boxed" class="mt-4">

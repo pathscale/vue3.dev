@@ -260,6 +260,7 @@ export function useBulmaTheme(
       "tabs-toggle-link-focus-active-border-color",
       "tabs-toggle-link-focus-border-color",
       "tabs-toggle-link-hover-border-color",
+      "pre-background",
     ];
 
     const textVars: string[] = [

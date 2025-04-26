@@ -2,8 +2,10 @@
 import { VColumn, VColumns, VField, VInput, VSwitch } from "@pathscale/vue3-ui";
 import { ColorPicker } from "vue3-colorpicker";
 import "vue3-colorpicker/style.css";
-import { reactive, ref, watchEffect } from "vue";
+import { computed, reactive, ref, watchEffect } from "vue";
 import ComponentShowcase from "../../components/ComponentShowcase.vue";
+import { useColorState } from "../../composables/useColorState";
+import { useTheme } from "../../composables/useTheme";
 import { useBulmaTheme } from "./composables/useBulmaTheme";
 import { useColorPalette } from "./composables/useColorPalette";
 
@@ -19,19 +21,12 @@ export default {
     ColorPicker,
   },
   setup() {
-    const theme = ref(localStorage.getItem('theme') || 'light');
-    const accent = reactive({
-      light: "#3D63DD",
-      dark: "#3D63DD",
+    const { theme, setTheme } = useTheme();
+    const themeModel = computed({
+      get: () => theme.value,
+      set: (val) => setTheme(val),
     });
-    const gray = reactive({
-      light: "#8B8D98",
-      dark: "#8B8D98",
-    });
-    const background = reactive({
-      light: "#FFFFFF",
-      dark: "#111111",
-    });
+    const { accent, gray, background } = useColorState();
 
     const { colorScales } = useColorPalette(
       {
@@ -54,11 +49,10 @@ export default {
 
     watchEffect(() => {
       applyTheme();
-      localStorage.setItem('theme', theme.value);
     });
 
     return {
-      theme,
+      theme: themeModel,
       accent,
       gray,
       background,

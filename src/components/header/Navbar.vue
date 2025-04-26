@@ -1,6 +1,13 @@
 <script>
-import { VIcon, VImage, VNavbar, VNavbarItem } from "@pathscale/vue3-ui";
+import {
+  VIcon,
+  VImage,
+  VNavbar,
+  VNavbarItem,
+  VSwitch,
+} from "@pathscale/vue3-ui";
 import { useI18n } from "vue-composable";
+import { useTheme } from "../../composables/useTheme";
 
 import { ref, watchEffect } from "vue";
 import { useRouter } from "vue-router";
@@ -14,6 +21,7 @@ export default {
     VNavbarItem,
     VIcon,
     VImage,
+    VSwitch,
   },
   setup(/* props, { emit } */) {
     const languages = {
@@ -26,6 +34,7 @@ export default {
     const isMenuOpen = ref(false);
     const showLanguageMenu = ref(false);
     const intl = useI18n();
+    const { theme } = useTheme();
 
     const closeMenu = () => {
       isMenuOpen.value = false;
@@ -93,6 +102,7 @@ export default {
       getLanguageMenuHeight,
       // closeMenu,
       redirect,
+      theme,
     };
   },
 };
@@ -100,14 +110,9 @@ export default {
 
 <template>
   <div class="big-menu">
-    <div
-class="hidden-language-menu"
-         :style="getLanguageMenuHeight()">
+    <div class="hidden-language-menu" :style="getLanguageMenuHeight()">
       <div class="is-flex pt-2">
-        <v-navbar-item
-          v-for="l in intl.locales.value" :key="l"
-          :value="l"
-          class="mx-3 is-size-6 has-text-centered"
+        <v-navbar-item v-for="l in intl.locales.value" :key="l" :value="l" class="mx-3 is-size-6 has-text-centered"
           @click="changeLanguage(l)">
           {{
             languages[l]
@@ -115,39 +120,32 @@ class="hidden-language-menu"
         </v-navbar-item>
       </div>
     </div>
-    <v-navbar v-model="isMenuOpen">
+    <v-navbar v-model="isMenuOpen" type="is-dark">
       <template #brand>
         <v-navbar-item class="ml-6" @click="redirect('home')">
           <v-image :src="logo" alt="vue3-ui logo" size="is-64x64" custom-class="is-fullwidth" />
         </v-navbar-item>
       </template>
       <template #start>
-        <v-navbar-item
-          class="mx-3 is-size-5 py-4 has-text-centered"
-          :class="{'is-active-item': isActive('home') }"
-          :active="isActive('home')"
-          @click="redirect('home')">
+        <v-navbar-item class="mx-3 is-size-5 py-4 has-text-centered" :class="{ 'is-active-item': isActive('home') }"
+          :active="isActive('home')" @click="redirect('home')">
           {{ intl.$ts('home.title') }}
         </v-navbar-item>
-        <v-navbar-item
-          class="mx-3 is-size-5 py-4 has-text-centered"
-          :class="{'is-active-item': isActive('documentation') }"
-          :active="isActive('documentation')"
+        <v-navbar-item class="mx-3 is-size-5 py-4 has-text-centered"
+          :class="{ 'is-active-item': isActive('documentation') }" :active="isActive('documentation')"
           @click="redirect('documentation')">
           Documentation
         </v-navbar-item>
-        <v-navbar-item
-          class="mx-3 is-size-5 py-4 has-text-centered"
-          :class="{'is-active-item': isActive('demo') }"
-          :active="isActive('demo')"
-          @click="redirect('demo')">
+        <v-navbar-item class="mx-3 is-size-5 py-4 has-text-centered" :class="{ 'is-active-item': isActive('demo') }"
+          :active="isActive('demo')" @click="redirect('demo')">
           Demo
         </v-navbar-item>
       </template>
       <template #end>
-        <v-navbar-item
-          tag="div"
-          class="mx-3 is-size-5 py-4 has-text-centered">
+        <v-navbar-item tag="div" class="mx-3 is-size-5 py-4 has-text-centered">
+          <v-switch v-model="theme" type="is-primary" passive-type="is-primary" true-value="dark" false-value="light">
+            {{ theme === 'light' ? '🌞' : '🌙' }}
+          </v-switch>
           <a class="mx-4" href="https://github.com/pathscale/vue3-ui" target="_blank" rel="noopener">
             <v-icon custom-class="navbar-icon" name="github-icon" bundle="icons" />
           </a>

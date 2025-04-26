@@ -18,7 +18,7 @@ export default {
       </div>
     </v-column>
     <v-column>
-      <div class="has-background-light px-4 py-4">
+      <div class="has-background-primary px-4 py-4">
         <p class="title is-5">
           Flexible column
         </p>

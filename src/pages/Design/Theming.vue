@@ -4,7 +4,7 @@ import { useRouter } from "vue-router";
 import { VButton, VDropdown, VDropdownItem } from "@pathscale/vue3-ui";
 import { computed, onUnmounted, ref, watch } from "vue";
 
-const NAVBAR_BACKGROUND_COLOR = "--navbar-background-color";
+const NAVBAR_BACKGROUND_COLOR = "--dark";
 
 export default {
   name: "DevPageTheming",
@@ -49,13 +49,11 @@ export default {
   </h4>
 
   <p>
-    You can add styles to Vue3-ui quickly by installing <a
-href="https://www.npmjs.com/package/@bulvar/bulma"
+    You can add styles to Vue3-ui quickly by installing <a href="https://www.npmjs.com/package/@bulvar/bulma"
       target="_blank" rel="noopener">@bulvar/bulma</a>, getting support for CSS
     Variables and theming changes in running time.
     <br /><br /> Additionally, if you want to use <b>Accordion</b>, <b>Sidebar</b>, <b>Switch</b> or <b>Tooltip</b>, you
-    have to install <a
-href="https://www.npmjs.com/package/@pathscale/bulma-extensions-css-var" target="_blank"
+    have to install <a href="https://www.npmjs.com/package/@pathscale/bulma-extensions-css-var" target="_blank"
       rel="noopener">bulma-extensions-css-var</a>, because those components are not in the Bulma core.
   </p>
 
@@ -63,7 +61,7 @@ href="https://www.npmjs.com/package/@pathscale/bulma-extensions-css-var" target=
     Installation
   </h5>
 
-  <div class="box has-background-light is-family-code">
+  <div class="box is-family-code">
     npm i @bulvar/bulma @pathscale/bulma-extensions-css-var
   </div>
 
@@ -71,7 +69,7 @@ href="https://www.npmjs.com/package/@pathscale/bulma-extensions-css-var" target=
     Usage
   </h5>
 
-  <div class="box has-background-light is-family-code">
+  <div class="box is-family-code">
     import { createApp } from 'vue'
     <br />
     import App from 'App.vue'
@@ -110,8 +108,7 @@ href="https://www.npmjs.com/package/@pathscale/bulma-extensions-css-var" target=
       </v-button>
     </template>
 
-    <v-dropdown-item
-v-for="clr in colors" :key="clr" :value="clr" :style="`background-color: ${clr}`"
+    <v-dropdown-item v-for="clr in colors" :key="clr" :value="clr" :style="`background-color: ${clr}`"
       class="has-text-white">
       {{ clr }}
     </v-dropdown-item>
@@ -123,7 +120,7 @@ v-for="clr in colors" :key="clr" :value="clr" :style="`background-color: ${clr}`
 
   <code>
   element.style {
-  <br />&nbsp; --navbar-background-color: {{ color }};
+  <br />&nbsp; --dark: {{ color }};
   <br />
   }
 </code>
@@ -136,10 +133,10 @@ v-for="clr in colors" :key="clr" :value="clr" :style="`background-color: ${clr}`
     You can assign values to a css variable by appending properties to your root DOM node
   </p>
 
-  <div class="box has-background-light is-family-code">
+  <div class="box is-family-code">
     const root = document.documentElement
     <br />
-    root.style.setProperty('--navbar-background-color', '#000')
+    root.style.setProperty('--dark', '#000')
   </div>
 
   <h6 class="title is-6 mt-6">
@@ -153,7 +150,7 @@ v-for="clr in colors" :key="clr" :value="clr" :style="`background-color: ${clr}`
     For this you will need to add vue-composable as a dependency.
   </p>
 
-  <div class="box has-background-light is-family-code">
+  <div class="box is-family-code">
     npm i vue-composable
   </div>
 
@@ -161,10 +158,10 @@ v-for="clr in colors" :key="clr" :value="clr" :style="`background-color: ${clr}`
     You can now use vue-composable <strong>useCssVariables</strong> method to set your variables
   </p>
 
-  <div class="box has-background-light is-family-code">
+  <div class="box is-family-code">
     import { useCssVariables } from 'vue-composable'
     <br />
     <br />
-    useCssVariables([{ name: '--navbar-background-color', value: '#000' }])
+    useCssVariables([{ name: '--dark', value: '#000' }])
   </div>
 </template>
