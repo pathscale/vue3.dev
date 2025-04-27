@@ -36,6 +36,10 @@ export default {
     const intl = useI18n();
     const { theme } = useTheme();
 
+    const toggleTheme = () => {
+      theme.value = theme.value === "light" ? "dark" : "light";
+    };
+
     const closeMenu = () => {
       isMenuOpen.value = false;
     };
@@ -103,6 +107,7 @@ export default {
       // closeMenu,
       redirect,
       theme,
+      toggleTheme,
     };
   },
 };
@@ -143,10 +148,12 @@ export default {
       </template>
       <template #end>
         <v-navbar-item tag="div" class="mx-3 is-size-5 py-4 has-text-centered">
-          <v-switch v-model="theme" type="is-primary" passive-type="is-primary" true-value="dark" false-value="light">
-            {{ theme === 'light' ? '🌞' : '🌙' }}
-          </v-switch>
-          <a class="mx-4" href="https://github.com/pathscale/vue3-ui" target="_blank" rel="noopener">
+          <button class="theme-toggle-button mx-4" type="button" aria-label="Toggle theme" @click="toggleTheme">
+            <span style="color: white; font-size: 32px; line-height: 32px;">
+              {{ theme === 'light' ? '\u2600' : '\u263D' }}
+            </span>
+          </button>
+          <a class=" mx-4" href="https://github.com/pathscale/vue3-ui" target="_blank" rel="noopener">
             <v-icon custom-class="navbar-icon" name="github-icon" bundle="icons" />
           </a>
           <a class="mx-4" href="https://discord.com/invite/8ygCBpS" target="_blank" rel="noopener">
@@ -157,3 +164,16 @@ export default {
     </v-navbar>
   </div>
 </template>
+
+<style scoped>
+.theme-toggle-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+</style>
