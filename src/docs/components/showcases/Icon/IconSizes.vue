@@ -8,9 +8,8 @@ export default {
 </script>
 
 <template>
-  <v-icon name="github-icon" bundle="icons" size="is-small" />
-  <v-icon name="vuejs-icon" bundle="icons" />
-  <v-icon name="discord-icon" bundle="icons" size="is-medium" />
-  <v-icon name="github-icon" bundle="icons" size="is-large" />
+  <v-icon name="github-icon" bundle="icons" size="is-small" fill="currentColor" />
+  <v-icon name="vuejs-icon" bundle="icons" fill="currentColor" />
+  <v-icon name="discord-icon" bundle="icons" size="is-medium" fill="currentColor" />
+  <v-icon name="github-icon" bundle="icons" size="is-large" fill="currentColor" />
 </template>
-
