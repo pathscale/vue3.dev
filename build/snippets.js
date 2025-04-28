@@ -2,8 +2,8 @@
 const showcaseDir = "src/docs/components/showcases";
 const rawDir = "src/docs/components/raw";
 
-const path = require("node:path");
-const sh = require("shelljs");
+import path from "node:path";
+import sh from "shelljs";
 
 // Change working dir to project root
 const root = path.resolve(__dirname, "..");
