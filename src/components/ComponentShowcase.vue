@@ -38,6 +38,37 @@ export default {
 
 <template>
   <h2 class="title mt-6">Component Showcase</h2>
+
+  <div class="buttons">
+    <v-button type="is-primary">
+      Primary
+    </v-button>
+    <v-button type="is-success">
+      Success
+    </v-button>
+    <v-button type="is-danger">
+      Danger
+    </v-button>
+    <v-button type="is-warning">
+      Warning
+    </v-button>
+    <v-button type="is-info">
+      Info
+    </v-button>
+    <v-button type="is-link">
+      Link
+    </v-button>
+    <v-button type="is-light">
+      Light
+    </v-button>
+    <v-button type="is-dark">
+      Dark
+    </v-button>
+    <v-button type="is-text">
+      Text
+    </v-button>
+  </div>
+
   <div class="columns mt-4">
     <div class="column">
       <v-field class="mb-4">

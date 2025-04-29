@@ -56,6 +56,16 @@ export function useBulmaTheme(
     ): string | undefined =>
       colorScales.value[scale][category][index]?.[currentTheme];
 
+    // Helper function to create derived colors with fixed hues
+    const createDerivedColor = (hue: number): string => {
+      const baseAccent = tinycolor(baseColors.accent[currentTheme]);
+      return tinycolor({
+        h: hue,
+        s: baseAccent.toHsv().s,
+        v: baseAccent.toHsv().v,
+      }).toHexString();
+    };
+
     const vars: Record<string, string | undefined> = {
       "--background-color": baseColors.background[currentTheme],
 
@@ -85,7 +95,15 @@ export function useBulmaTheme(
       "--primary-light": get("accent", "interactive", 1),
       "--primary-dark": get("accent", "accessible", 0),
       "--link": get("accent", "borders", 1),
-      "--info": get("accent", "interactive", 0),
+
+      // Derived Bulma variables with fixed hues
+      "--info": createDerivedColor(204), // Info blue
+      "--success": createDerivedColor(141), // Green
+      "--warning": createDerivedColor(48), // Yellow
+      "--danger": createDerivedColor(350), // Red
+      "--light": get("gray", "interactive", 0),
+      "--dark": get("gray", "solid", 0),
+
       // Ensure menu-item-active-color is always light (using the same value as --white)
       "--menu-item-active-color": get("gray", "backgrounds", 0),
     };
