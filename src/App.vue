@@ -1,11 +1,10 @@
 <script>
-import { computed, reactive, watchEffect } from "vue";
+import { watchEffect } from "vue";
 import { setI18n } from "vue-composable";
 import { useColorState } from "./composables/useColorState";
 import { useTheme } from "./composables/useTheme";
 import { useBulmaTheme } from "./pages/Design/composables/useBulmaTheme";
 import { useColorPalette } from "./pages/Design/composables/useColorPalette";
-import { defaultTheme, setTheme } from "./theming";
 
 // TODO: bundling .json + code splitting -> copying .json + fetching
 import en from "./locales/en.json";
@@ -46,7 +45,6 @@ export default {
     watchEffect(() => {
       applyTheme();
     });
-    watchEffect(() => setTheme(defaultTheme));
   },
 };
 </script>

@@ -1,6 +1,8 @@
 import tinycolor from "tinycolor2";
 import type { ComputedRef, Ref } from "vue";
 
+import { defaultTheme, setTheme } from "../../../theming";
+
 export type ThemeValue = "light" | "dark";
 
 interface BaseColors {
@@ -423,6 +425,8 @@ export function useBulmaTheme(
         setHSLVariables(shade, shadeColor);
       }
     });
+
+    setTheme(defaultTheme);
   };
 
   return {

@@ -125,7 +125,7 @@ export default {
         </v-navbar-item>
       </div>
     </div>
-    <v-navbar v-model="isMenuOpen" type="is-dark">
+    <v-navbar v-model="isMenuOpen">
       <template #brand>
         <v-navbar-item class="ml-6" @click="redirect('home')">
           <v-image :src="logo" alt="vue3-ui logo" size="is-64x64" custom-class="is-fullwidth" />
@@ -147,7 +147,7 @@ export default {
         </v-navbar-item>
       </template>
       <template #end>
-        <v-navbar-item tag="div" class="mx-3 is-size-5 py-4 has-text-centered">
+        <v-navbar-item tag="div" class="mx-3 is-size-5 py-4 has-text-centered flex is-justified-center is-align-items-center">
           <button class="theme-toggle-button mx-4" type="button" aria-label="Toggle theme" @click="toggleTheme">
             <span style="color: white; font-size: 32px; line-height: 32px;">
               {{ theme === 'light' ? '\u2600' : '\u263D' }}
