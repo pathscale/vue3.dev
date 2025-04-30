@@ -10,7 +10,7 @@
         "@commitlint/cli": "19.8.0",
         "@commitlint/config-conventional": "19.8.0",
         "@pathscale/appstate-fast": "^0.0.4",
-        "@pathscale/bulma-extensions-css-var": "0.1.2",
+        "@pathscale/bulma-extensions-css-var": "0.1.3",
         "@pathscale/fonts-metroclean": "^1.0.8",
         "@pathscale/frappe-charts": "^0.0.2",
         "@pathscale/rollup-plugin-vue3-ui-css-purge": "^0.0.41",
@@ -364,7 +364,7 @@
 
     "@pathscale/appstate-fast": ["@pathscale/appstate-fast@0.0.4", "", { "peerDependencies": { "vue": "^3.0.1" } }, "sha512-0J9iOXzY0tRSvlMoVl7VAMwUu3r7TAd+2Gpug67gXYpciFbnEivizWXg/8G2UnIgfnf+bSSyakNlOFt6uwnThw=="],
 
-    "@pathscale/bulma-extensions-css-var": ["@pathscale/bulma-extensions-css-var@0.1.2", "", {}, "sha512-xIf8cXLnya6bKB+SdmZElToAa3kbLsLLsP982TX4ObizTcocckQR1XoSLxM90JkzVErYy3jM5/ZOlGM5YGUTzQ=="],
+    "@pathscale/bulma-extensions-css-var": ["@pathscale/bulma-extensions-css-var@0.1.3", "", {}, "sha512-EsY2gxtMWRVz/IEBZsXDxBRlSE24LRpvGfQr+lIFpHuPbBuMi7Pvx/4EBQbnhT4P23tr3O6fUihrU8k9Fg3lsg=="],
 
     "@pathscale/fonts-metroclean": ["@pathscale/fonts-metroclean@1.0.8", "", {}, "sha512-xdLWuIWs25lxvE7mQPFWH5orGoRjT3waW9M+7Lil7GwVHKAZTsx8brymavrXJBveoURVvmDHNgCNhypHfxxzZg=="],
 
