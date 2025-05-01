@@ -1,47 +1,77 @@
 import tinycolor from "tinycolor2";
 import type { ComputedRef, Ref } from "vue";
-import groupDefinitions from "../../../bulmaThemeDefinitions.json"; // Corrected path
+import groupDefinitions from "../../../bulmaThemeDefinitions.json";
 import { defaultTheme, setTheme } from "../../../theming";
-// Import the utility function and the definitions
-import { setHSLVariables } from "../../../utils/color"; // Corrected path
+import { setHSLVariables } from "../../../utils/color";
 
 export type ThemeValue = "light" | "dark";
 
+/**
+ * Defines the base colors provided for theme generation.
+ */
 interface BaseColors {
+  /** Base accent color for light and dark themes. */
   accent: Record<ThemeValue, string>;
+  /** Base gray color for light and dark themes. */
   gray: Record<ThemeValue, string>;
+  /** Base background color (typically near white/black) for light and dark themes. */
   background: Record<ThemeValue, string>;
 }
 
+/** Represents a single color shade within a category for both light and dark modes. */
 interface ColorCategory {
+  /** Identifier (often corresponds to the 0-based index). */
   id: number;
+  /** Color value for light mode. */
   light: string;
+  /** Color value for dark mode. */
   dark: string;
 }
 
+/** Defines the structure of a 12-step color scale, categorized by usage. */
 interface ColorScale {
+  /** Background colors (Levels 1-2). */
   backgrounds: ColorCategory[];
+  /** Interactive component colors (Levels 3-5). */
   interactive: ColorCategory[];
+  /** Border and separator colors (Levels 6-8). */
   borders: ColorCategory[];
+  /** Solid colors, often for active states (Levels 9-10). */
   solid: ColorCategory[];
+  /** High-contrast text colors (Levels 11-12). */
   accessible: ColorCategory[];
 }
 
+/** Contains the accent and gray color scales. */
 interface ColorScales {
+  /** The 12-step accent color scale. */
   accent: ColorScale;
+  /** The 12-step gray color scale. */
   gray: ColorScale;
 }
 
-// Define the type for the imported JSON structure
-interface GroupDefinition {
-  type: "base" | "scale" | "primary" | "derived";
+// Updated interface reflecting the current JSON structure
+interface ThemeGroupDefinition {
+  type: "base" | "scale";
   vars: string[];
-  scale?: keyof ColorScales;
-  category?: keyof ColorScale;
-  level?: number;
-  hue?: number;
+  scale?: keyof ColorScales; // Optional: only for type 'scale'
+  category?: keyof ColorScale; // Optional: only for type 'scale'
+  level?: number; // Optional: only for type 'scale'
 }
 
+/**
+ * Composable hook to manage and apply a dynamic Bulma theme based on 12 color scales.
+ *
+ * This hook takes base colors and computed color scales, reads definitions from
+ * `bulmaThemeDefinitions.json` to map Bulma CSS variables to specific levels (1-12)
+ * of the gray or accent scales, calculates derived colors (info, success, etc.),
+ * and applies all necessary CSS variables (including HSL components) to the document root.
+ *
+ * @param baseColors - Reactive object containing the base accent, gray, and background colors.
+ * @param colorScales - Computed ref containing the generated 12-step accent and gray scales.
+ * @param theme - Ref indicating the current theme ('light' or 'dark').
+ * @returns An object containing the `applyTheme` function.
+ */
 export function useBulmaTheme(
   baseColors: BaseColors,
   colorScales: ComputedRef<ColorScales>,
@@ -49,11 +79,23 @@ export function useBulmaTheme(
 ) {
   // setHSLVariables is now imported
 
+  /**
+   * Calculates and applies all Bulma theme CSS variables to the document root.
+   *
+   * It uses the `groupDefinitions` imported from JSON to determine which color scale
+   * level and category to use for each CSS variable. It handles base background,
+   * scaled colors (gray and accent), derived colors, and primary color overrides.
+   * Finally, it calculates and sets HSL component variables for Bulma compatibility.
+   */
   const applyTheme = (): void => {
     const root = document.documentElement;
+    if (!root) return;
     const currentTheme = theme.value;
 
-    // --- Get Color Function (Maps 1-12 levels to 0-based indices) ---
+    /**
+     * Internal helper to retrieve a specific color from the scales based on a 1-12 level.
+     * Maps the 1-12 level to the correct 0-based index for the given category.
+     */
     const get = (
       scale: keyof ColorScales,
       category: keyof ColorScale,
@@ -77,7 +119,10 @@ export function useBulmaTheme(
       return undefined;
     };
 
-    // --- Derived Color Function ---
+    /**
+     * Internal helper to create derived colors (like info, success) with a fixed hue
+     * but matching the saturation and value of the current theme's base accent color.
+     */
     const createDerivedColor = (hue: number): string => {
       const baseAccent = tinycolor(baseColors.accent[currentTheme]);
       return tinycolor({
@@ -89,57 +134,36 @@ export function useBulmaTheme(
 
     const finalVars: Record<string, string | undefined> = {};
 
-    // --- Use imported groupDefinitions ---
-    // (The large inline array is removed)
-
-    // Pre-calculate primary color
-    const primaryColorValue = get("accent", "solid", 9);
-
     // Single loop to apply all groups from the imported JSON
-    (groupDefinitions as GroupDefinition[]).forEach((group) => {
+    // Cast directly to the accurate ThemeGroupDefinition
+    (groupDefinitions as ThemeGroupDefinition[]).forEach((group) => {
       let value: string | undefined;
 
+      // No longer need the outer if check, type assertion handles it.
       switch (group.type) {
         case "base":
           value = baseColors.background[currentTheme];
           break;
         case "scale":
+          // Ensure scale, category, and level exist for this type
           if (group.scale && group.category && group.level) {
             value = get(group.scale, group.category, group.level);
-          }
-          break;
-        case "primary":
-          // Assign primary color later in a separate step to ensure overrides
-          value = primaryColorValue; // Get the value but don't assign yet for non-'primary' keys
-          break;
-        case "derived":
-          if (group.hue !== undefined) {
-            value = createDerivedColor(group.hue);
           }
           break;
       }
 
       if (value !== undefined) {
         group.vars.forEach((key) => {
-          // Assign the calculated value unless it's a primary override variable
-          // The actual primary override happens after this loop
-          if (group.type !== "primary") {
-            finalVars[`--${key}`] = value;
-          }
+          finalVars[`--${key}`] = value;
         });
       }
     });
 
-    // Apply primary overrides explicitly after initial calculations
-    // Find the primary definition to get its variables
-    const primaryGroup = (groupDefinitions as GroupDefinition[]).find(
-      (g) => g.type === "primary",
-    );
-    if (primaryColorValue && primaryGroup) {
-      primaryGroup.vars.forEach((key) => {
-        finalVars[`--${key}`] = primaryColorValue;
-      });
-    }
+    // Apply Derived Colors directly
+    finalVars["--info"] = createDerivedColor(204);
+    finalVars["--success"] = createDerivedColor(141);
+    finalVars["--warning"] = createDerivedColor(48);
+    finalVars["--danger"] = createDerivedColor(350);
 
     // --- Final Step: Apply all calculated variables to the DOM ---
     for (const [key, value] of Object.entries(finalVars)) {
@@ -177,7 +201,7 @@ export function useBulmaTheme(
     bulmaBaseColors.forEach((color) => {
       const baseColor = finalVars[`--${color}`];
       if (baseColor) {
-        setHSLVariables(color, baseColor); // Use imported function
+        setHSLVariables(color, baseColor);
         if (
           ["primary", "link", "info", "success", "warning", "danger"].includes(
             color,
@@ -189,7 +213,7 @@ export function useBulmaTheme(
             ? get("gray", "solid", 10) || "#000"
             : get("gray", "backgrounds", 1) || "#FFF";
           finalVars[`--${color}-invert`] = invertColor;
-          setHSLVariables(`${color}-invert`, invertColor); // Use imported function
+          setHSLVariables(`${color}-invert`, invertColor);
         }
       }
     });
@@ -197,7 +221,7 @@ export function useBulmaTheme(
     bulmaShades.forEach((shade) => {
       const shadeColor = finalVars[`--${shade}`];
       if (shadeColor) {
-        setHSLVariables(shade, shadeColor); // Use imported function
+        setHSLVariables(shade, shadeColor);
       }
     });
 

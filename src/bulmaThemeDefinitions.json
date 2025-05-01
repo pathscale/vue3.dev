@@ -351,25 +351,8 @@
     "scale": "accent",
     "category": "solid",
     "level": 9,
-    "vars": ["primary"]
-  },
-  {
-    "type": "scale",
-    "scale": "accent",
-    "category": "solid",
-    "level": 10,
-    "vars": []
-  },
-  {
-    "type": "scale",
-    "scale": "accent",
-    "category": "accessible",
-    "level": 11,
-    "vars": []
-  },
-  {
-    "type": "primary",
     "vars": [
+      "primary",
       "menu-item-active-background-color",
       "tabs-link-active-border-bottom-color",
       "tabs-link-focus-active-border-bottom-color",
@@ -403,23 +386,17 @@
     ]
   },
   {
-    "type": "derived",
-    "vars": ["info"],
-    "hue": 204
+    "type": "scale",
+    "scale": "accent",
+    "category": "solid",
+    "level": 10,
+    "vars": []
   },
   {
-    "type": "derived",
-    "vars": ["success"],
-    "hue": 141
-  },
-  {
-    "type": "derived",
-    "vars": ["warning"],
-    "hue": 48
-  },
-  {
-    "type": "derived",
-    "vars": ["danger"],
-    "hue": 350
+    "type": "scale",
+    "scale": "accent",
+    "category": "accessible",
+    "level": 11,
+    "vars": []
   }
 ]
