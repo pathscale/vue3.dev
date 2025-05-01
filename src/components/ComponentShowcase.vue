@@ -128,7 +128,7 @@ export default {
     </div>
 
     <div class="column">
-      <v-tabs v-model="activeTab" type="is-boxed">
+      <v-tabs v-model="activeTab">
         <v-tab label="Overview">
           <div class="p-4">
             <p>Overview content goes here</p>

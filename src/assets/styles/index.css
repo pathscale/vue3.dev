@@ -124,5 +124,5 @@ body {
 
 
 .has-background-color {
-  background-color: var(--background-color, white) 
+  background-color: var(--background-color, white);
 }

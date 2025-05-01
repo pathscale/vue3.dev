@@ -103,6 +103,9 @@ export function useBulmaTheme(
       "--danger": createDerivedColor(350), // Red
       "--light": get("gray", "interactive", 0),
       "--dark": get("gray", "solid", 0),
+      // Specific overrides for tabs that need different values
+      "--tabs-border-bottom-color": get("gray", "interactive", 2),
+      "--tabs-link-active-color": get("gray", "accessible", 1),
 
       // Ensure menu-item-active-color is always light (using the same value as --white)
       "--menu-item-active-color": get("gray", "backgrounds", 0),
@@ -178,11 +181,8 @@ export function useBulmaTheme(
       "table-striped-row-even-background-color",
       "table-striped-row-even-hover-background-color",
       "tabs-boxed-link-active-background-color",
-      "tabs-boxed-link-focus-active-background-color",
       "tabs-boxed-link-focus-background-color",
       "tabs-boxed-link-hover-background-color",
-      "tabs-toggle-link-active-background-color",
-      "tabs-toggle-link-focus-active-background-color",
       "tabs-toggle-link-focus-background-color",
       "tabs-toggle-link-hover-background-color",
       "tag-active-background-color",
@@ -213,6 +213,7 @@ export function useBulmaTheme(
       "select-disabled-border-color",
       "sidebar-shadow-color",
       "tabs-toggle-link-border-color",
+      "tabs-boxed-link-active-border-color",
     ];
 
     const interactiveVars: string[] = [
@@ -264,21 +265,9 @@ export function useBulmaTheme(
       "select-hover-color",
       "steps-active-color",
       "table-row-active-color",
-      "tabs-boxed-link-active-border-bottom-color",
-      "tabs-boxed-link-active-border-color",
-      "tabs-boxed-link-focus-active-border-bottom-color",
-      "tabs-boxed-link-focus-border-bottom-color",
       "tabs-boxed-link-hover-border-bottom-color",
-      "tabs-link-active-border-bottom-color",
-      "tabs-link-active-color",
-      "tabs-link-focus-active-border-bottom-color",
-      "tabs-link-focus-border-bottom-color",
       "tabs-link-hover-border-bottom-color",
       "tabs-link-hover-color",
-      "tabs-toggle-link-active-border-color",
-      "tabs-toggle-link-active-color",
-      "tabs-toggle-link-focus-active-border-color",
-      "tabs-toggle-link-focus-border-color",
       "tabs-toggle-link-hover-border-color",
       "pre-background",
     ];
@@ -350,13 +339,21 @@ export function useBulmaTheme(
       "table-color",
       "table-foot-cell-color",
       "table-head-cell-color",
-      "tabs-border-bottom-color",
       "tabs-link-color",
       "tag-color",
       "title-color",
       "title-strong-color",
     ];
 
+    const solidVars: string[] = [
+      "menu-item-active-background-color",
+      "tabs-link-active-border-bottom-color",
+      "tabs-link-focus-active-border-bottom-color",
+      "tabs-toggle-link-active-background-color",
+      "tabs-toggle-link-active-border-color",
+    ];
+
+    // Apply variables based on their categories
     backgroundVars.forEach((key) => {
       vars[`--${key}`] = get("gray", "backgrounds", 0);
     });
@@ -369,8 +366,6 @@ export function useBulmaTheme(
       vars[`--${key}`] = get("gray", "interactive", 1);
     });
 
-    // Grupo de solid colors
-    const solidVars: string[] = ["menu-item-active-background-color"];
     solidVars.forEach((key) => {
       vars[`--${key}`] = vars["--primary"];
     });
