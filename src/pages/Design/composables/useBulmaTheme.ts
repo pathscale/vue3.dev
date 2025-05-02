@@ -206,7 +206,6 @@ export function useBulmaTheme(
         "--base-color",
         baseColors.accent[currentTheme] || "",
       );
-      console.log("baseColor", baseColor);
       // Set base color
       document.documentElement.style.setProperty(
         "--base-color",

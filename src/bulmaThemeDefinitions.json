@@ -16,7 +16,6 @@
       "button-disabled-background-color",
       "button-static-background-color",
       "button-text-hover-background-color",
-      "card-background-color",
       "card-content-background-color",
       "card-footer-background-color",
       "card-header-background-color",
@@ -96,7 +95,13 @@
     "scale": "gray",
     "category": "interactive",
     "level": 3,
-    "vars": ["light"]
+    "vars": [
+      "light",
+      "card-background-color",
+      "card-content-background-color",
+      "card-footer-background-color",
+      "card-header-background-color"
+    ]
   },
   {
     "type": "scale",
@@ -167,6 +172,7 @@
     "category": "borders",
     "level": 6,
     "vars": [
+      "color"
     ]
   },
   {
@@ -338,14 +344,18 @@
     "scale": "accent",
     "category": "interactive",
     "level": 4,
-    "vars": []
+    "vars": [
+      "button-hover-color"
+    ]
   },
   {
     "type": "scale",
     "scale": "accent",
     "category": "interactive",
     "level": 5,
-    "vars": []
+    "vars": [
+ 
+    ]
   },
   {
     "type": "scale",

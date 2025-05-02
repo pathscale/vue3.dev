@@ -511,12 +511,8 @@ export default {
   <div class="block mt-4">
     <v-card>
       <v-card-header title="User" />
-      <v-image src="https://vue3.dev/128x128.png" alt="placeholder image" />
       <v-card-content>
         <v-media>
-          <template #left>
-            <v-image src="https://vue3.dev/128x128.png" size="is-48x48" rounded alt="placeholder image" />
-          </template>
           <template #content>
             <p class="title is-4">
               John Smith
