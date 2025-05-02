@@ -1,5 +1,17 @@
-import tinycolor from "tinycolor2";
+import Color from "colorjs.io";
 import { type ComputedRef, type Ref, computed } from "vue";
+import {
+  getButtonHoverColor,
+  getScaleFromColor,
+  getStep9Colors,
+} from "../../../utils/color";
+import {
+  type ArrayOf12,
+  darkColors,
+  darkGrayColors,
+  lightColors,
+  lightGrayColors,
+} from "../../../utils/color-scale-references";
 
 export type ThemeValue = "light" | "dark";
 
@@ -7,6 +19,77 @@ interface BaseColors {
   accent: Record<ThemeValue, string>;
   gray: Record<ThemeValue, string>;
   background: Record<ThemeValue, string>;
+}
+
+function generatePaletteScale(
+  baseColorHex: string,
+  backgroundColorHex: string,
+  scaleType: "accent" | "gray",
+  appearance: ThemeValue,
+): ArrayOf12<string> {
+  try {
+    const sourceColor = new Color(baseColorHex).to("oklch");
+    const backgroundColor = new Color(backgroundColorHex).to("oklch");
+
+    const referenceScales =
+      scaleType === "gray"
+        ? appearance === "light"
+          ? lightGrayColors
+          : darkGrayColors
+        : appearance === "light"
+          ? lightColors
+          : darkColors;
+
+    const generatedScaleOklch = getScaleFromColor(
+      sourceColor,
+      referenceScales,
+      backgroundColor,
+    );
+
+    const [step9Color] = getStep9Colors(generatedScaleOklch, sourceColor);
+    generatedScaleOklch[8] = step9Color;
+
+    const allReferenceScales =
+      appearance === "light" ? lightColors : darkColors;
+    generatedScaleOklch[9] = getButtonHoverColor(
+      step9Color,
+      Object.values(allReferenceScales),
+    );
+
+    const chromaStep8 = generatedScaleOklch[7].coords[1];
+    const chromaStep9 = generatedScaleOklch[8].coords[1];
+    const maxChromaForText = Math.max(chromaStep8, chromaStep9);
+
+    generatedScaleOklch[10].coords[1] = Math.min(
+      maxChromaForText,
+      generatedScaleOklch[10].coords[1],
+    );
+    generatedScaleOklch[11].coords[1] = Math.min(
+      maxChromaForText,
+      generatedScaleOklch[11].coords[1],
+    );
+
+    if (scaleType === "gray" && sourceColor.coords[1] < 0.01) {
+      generatedScaleOklch.forEach((color) => {
+        color.coords[1] = 0;
+      });
+    }
+
+    const finalHexScale = generatedScaleOklch.map((color) =>
+      color.to("srgb").toString({ format: "hex" }),
+    ) as ArrayOf12<string>;
+
+    return finalHexScale;
+  } catch (error) {
+    console.error(
+      `Error generating scale for ${scaleType} (${appearance}):`,
+      baseColorHex,
+      backgroundColorHex,
+      error,
+    );
+    const fallbackColor = appearance === "light" ? "#808080" : "#808080";
+    return Array(12).fill(fallbackColor) as ArrayOf12<string>;
+  }
 }
 
 interface ColorCategory {
@@ -28,103 +111,68 @@ interface ColorScales {
   gray: ColorScale;
 }
 
+function mapScaleToCategories(scale: ArrayOf12<string>): ColorScale {
+  if (!scale || scale.length !== 12) {
+    console.error("Invalid scale passed to mapScaleToCategories");
+    const fallbackCat = { id: 0, light: "#808080", dark: "#808080" };
+    return {
+      backgrounds: [fallbackCat, fallbackCat],
+      interactive: [fallbackCat, fallbackCat, fallbackCat],
+      borders: [fallbackCat, fallbackCat, fallbackCat],
+      solid: [fallbackCat, fallbackCat],
+      accessible: [fallbackCat, fallbackCat],
+    };
+  }
+  const createCat = (id: number, value: string): ColorCategory => ({
+    id,
+    light: value,
+    dark: value,
+  });
+
+  return {
+    backgrounds: [createCat(1, scale[0]), createCat(2, scale[1])],
+    interactive: [
+      createCat(3, scale[2]),
+      createCat(4, scale[3]),
+      createCat(5, scale[4]),
+    ],
+    borders: [
+      createCat(6, scale[5]),
+      createCat(7, scale[6]),
+      createCat(8, scale[7]),
+    ],
+    solid: [createCat(9, scale[8]), createCat(10, scale[9])],
+    accessible: [createCat(11, scale[10]), createCat(12, scale[11])],
+  };
+}
+
 export function useColorPalette(
   baseColors: BaseColors,
   theme: Ref<ThemeValue>,
 ): { colorScales: ComputedRef<ColorScales> } {
-  const generateColorScale = (baseColor: string, steps: number): string[] => {
-    const tColor = tinycolor(baseColor);
-    const scale: string[] = [];
-    const isLightTheme = theme.value === "light";
-
-    // Set base color at position 9
-    scale[9] = baseColor;
-
-    // Generate lighter or darker colors depending on the theme
-    if (isLightTheme) {
-      // Light theme: positions 2-8 are lighter than base color with gradual adjustment
-      for (let i = 8; i >= 2; i--) {
-        const amount = ((9 - i) / 9) * 0.5; // Gradually adjust to make colors lighter
-        scale[i] = tinycolor(baseColor)
-          .lighten(amount * 100)
-          .toHexString();
-      }
-
-      // Calculate color 1 based on color 2 to ensure it's lighter but not too white
-      const color2 = tinycolor(scale[2]);
-      scale[1] = color2.lighten(5).toHexString(); // Lighten color 2 slightly for color 1
-
-      // Light theme: positions 10-12 are darker than base color
-      for (let i = 10; i <= 12; i++) {
-        const amount = ((i - 9) / 4) * 0.4; // Gradually adjust to make colors darker
-        scale[i] = tinycolor(baseColor)
-          .darken(amount * 100)
-          .toHexString();
-      }
-    } else {
-      // Dark theme: positions 1-8 are darker and less saturated than base color
-      for (let i = 8; i >= 1; i--) {
-        const amount = ((9 - i) / 9) * 0.5; // Gradually adjust darkness (Reverted)
-        const desaturationAmount = ((9 - i) / 9) * 15; // Gradually adjust desaturation (Reverted)
-        scale[i] = tinycolor(baseColor)
-          .darken(amount * 100)
-          .desaturate(desaturationAmount)
-          .toHexString();
-      }
-
-      // Dark theme: positions 10-12 are lighter than base color
-      for (let i = 10; i <= 12; i++) {
-        const amount = ((i - 9) / 4) * 0.4; // Gradually adjust to make colors lighter
-        scale[i] = tinycolor(baseColor)
-          .lighten(amount * 100)
-          .toHexString();
-      }
-    }
-
-    return scale;
-  };
-
   const colorScales = computed<ColorScales>(() => {
     const currentTheme = theme.value;
-
-    // Generate color scales for accent
     const accentBase = baseColors.accent[currentTheme];
-    const accentScale = generateColorScale(accentBase, 12);
-
-    // Generate color scales for gray
     const grayBase = baseColors.gray[currentTheme];
-    const grayScale = generateColorScale(grayBase, 12);
+    const background = baseColors.background[currentTheme];
 
-    const createCategory = (scale: string[]): ColorScale => {
-      return {
-        backgrounds: [
-          { id: 1, light: scale[1], dark: scale[1] },
-          { id: 2, light: scale[2], dark: scale[2] },
-        ],
-        interactive: [
-          { id: 3, light: scale[3], dark: scale[3] },
-          { id: 4, light: scale[4], dark: scale[4] },
-          { id: 5, light: scale[5], dark: scale[5] },
-        ],
-        borders: [
-          { id: 6, light: scale[6], dark: scale[6] },
-          { id: 7, light: scale[7], dark: scale[7] },
-          { id: 8, light: scale[8], dark: scale[8] },
-        ],
-        solid: [
-          { id: 9, light: scale[9], dark: scale[9] },
-          { id: 10, light: scale[10], dark: scale[10] },
-        ],
-        accessible: [
-          { id: 11, light: scale[11], dark: scale[11] },
-          { id: 12, light: scale[12], dark: scale[12] },
-        ],
-      };
-    };
+    const accentScaleHex = generatePaletteScale(
+      accentBase,
+      background,
+      "accent",
+      currentTheme,
+    );
+
+    const grayScaleHex = generatePaletteScale(
+      grayBase,
+      background,
+      "gray",
+      currentTheme,
+    );
 
     return {
-      accent: createCategory(accentScale),
-      gray: createCategory(grayScale),
+      accent: mapScaleToCategories(accentScaleHex),
+      gray: mapScaleToCategories(grayScaleHex),
     };
   });
 
