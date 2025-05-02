@@ -90,9 +90,7 @@
     "scale": "gray",
     "category": "backgrounds",
     "level": 2,
-    "vars": [
-      "input-icon"
-    ]
+    "vars": []
   },
   {
     "type": "scale",
@@ -319,6 +317,7 @@
     "category": "backgrounds",
     "level": 1,
     "vars": [
+      "input-background-color"
     ]
   },
   {
@@ -326,9 +325,7 @@
     "scale": "accent",
     "category": "backgrounds",
     "level": 2,
-    "vars": [
-      "input-background-color"
-    ]
+    "vars": []
   },
   {
     "type": "scale",

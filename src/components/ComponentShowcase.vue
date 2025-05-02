@@ -1,67 +1,16 @@
 <script>
 import {
-  VAccordion,
-  VAvatar,
-  VBreadcrumb,
-  VBreadcrumbItem,
   VButton,
   VCard,
   VCardContent,
-  VCheckbox,
-  VColumns,
-  VDataTable,
-  VDropdowm,
-  VDropdown,
   VField,
-  VFooter,
-  VHero,
-  VHeroBody,
-  VHeroFooter,
-  VHeroHeader,
-  VIcon,
-  VImage,
   VInput,
-  VLevel,
-  VLevelItem,
-  VLevelLeft,
-  VLevelRight,
-  VList,
-  VListItem,
   VMenu,
   VMenuItem,
   VMenuList,
-  VModal,
-  VNavbar,
-  VNavbarBrand,
-  VNavbarBurger,
-  VNavbarDropdown,
-  VNavbarItem,
-  VNavbarLink,
-  VNotification,
-  VPagination,
-  VPanel,
-  VPanelBlock,
-  VPanelHeader,
-  VPanelIcon,
-  VPanelTabs,
-  VProgress,
-  VRadio,
-  VSelect,
-  VSidebar,
-  VSlider,
-  VStep,
-  VSteps,
-  VSubtitle,
-  VSwitch,
   VTab,
-  VTable,
-  VTableColumn,
   VTabs,
   VTag,
-  VTextarea,
-  VTitle,
-  VTooltip,
-  VUpload,
 } from "@pathscale/vue3-ui";
 import { ref } from "vue";
 
@@ -79,7 +28,6 @@ export default {
     VTag,
     VTabs,
     VTab,
-    VAccordion,
   },
   setup() {
     const activeTab = ref(0);
@@ -89,25 +37,10 @@ export default {
 </script>
 
 <template>
-
   <h2 class="title mt-6">Component Showcase</h2>
-  <v-field>
-    <v-accordion header-is-trigger>
-      <template #header>
-        <div class="py-3 px-3 has-text-danger">
-          Click me
-        </div>
-      </template>
-      <template #content>
-        <div class="py-3 px-3">
-          Content
-        </div>
-      </template>
-    </v-accordion>
-  </v-field>
-  
-    <div class="buttons">
-      <v-button type="is-primary">
+
+  <div class="buttons">
+    <v-button type="is-primary">
       Primary
     </v-button>
     <v-button type="is-success">
@@ -135,8 +68,6 @@ export default {
       Text
     </v-button>
   </div>
-
-
 
   <div class="columns mt-4">
     <div class="column">
