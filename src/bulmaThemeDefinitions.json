@@ -352,7 +352,7 @@
     "scale": "accent",
     "category": "borders",
     "level": 6,
-    "vars": ["color"]
+    "vars": []
   },
   {
     "type": "scale",
