@@ -1,5 +1,5 @@
-import * as RadixColors from "@radix-ui/colors";
 import Color from "colorjs.io";
+import * as BaseColors from "./base-colors";
 
 type ArrayOf12<T> = [T, T, T, T, T, T, T, T, T, T, T, T];
 
@@ -51,7 +51,7 @@ export const lightColors: Record<
 > = Object.fromEntries(
   scaleNames.map((scaleName) => [
     scaleName,
-    Object.values(RadixColors[`${scaleName}P3`]).map((str) =>
+    Object.values(BaseColors[`${scaleName}P3`]).map((str) =>
       new Color(str).to("oklch"),
     ),
   ]),
@@ -63,7 +63,7 @@ export const lightGrayColors: Record<
 > = Object.fromEntries(
   grayScaleNames.map((scaleName) => [
     scaleName,
-    Object.values(RadixColors[`${scaleName}P3`]).map((str) =>
+    Object.values(BaseColors[`${scaleName}P3`]).map((str) =>
       new Color(str).to("oklch"),
     ),
   ]),
@@ -77,7 +77,7 @@ export const darkColors: Record<
 > = Object.fromEntries(
   scaleNames.map((scaleName) => [
     scaleName,
-    Object.values(RadixColors[`${scaleName}DarkP3`]).map((str) =>
+    Object.values(BaseColors[`${scaleName}DarkP3`]).map((str) =>
       new Color(str).to("oklch"),
     ),
   ]),
@@ -89,7 +89,7 @@ export const darkGrayColors: Record<
 > = Object.fromEntries(
   grayScaleNames.map((scaleName) => [
     scaleName,
-    Object.values(RadixColors[`${scaleName}DarkP3`]).map((str) =>
+    Object.values(BaseColors[`${scaleName}DarkP3`]).map((str) =>
       new Color(str).to("oklch"),
     ),
   ]),

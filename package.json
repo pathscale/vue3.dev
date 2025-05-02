@@ -41,7 +41,6 @@
     "@pathscale/rollup-plugin-vue3-ui-css-purge": "^0.0.41",
     "@pathscale/vue3-svg-icons": "^0.0.12",
     "@pathscale/vue3-ui": "1.0.18",
-    "@radix-ui/colors": "3.0.0",
     "@rollup/plugin-alias": "^5.1.1",
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-html": "^2.0.0",

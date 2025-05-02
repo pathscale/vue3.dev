@@ -126,7 +126,6 @@
       "input-hover-border-color",
       "input-hover-color",
       "input-icon-active-color",
-      "menu-item-hover-color",
       "navbar-dropdown-item-hover-color",
       "navbar-item-hover-color",
       "navbar-tab-hover-border-bottom-color",
@@ -157,7 +156,8 @@
       "panel-block-active-color",
       "panel-tab-active-border-bottom-color",
       "panel-tab-active-color",
-      "table-row-active-color"
+      "table-row-active-color",
+      "menu-item-hover-background-color"
     ]
   },
   {
@@ -302,7 +302,7 @@
     "scale": "gray",
     "category": "accessible",
     "level": 11,
-    "vars": []
+    "vars": ["menu-item-hover-color"]
   },
   {
     "type": "scale",
