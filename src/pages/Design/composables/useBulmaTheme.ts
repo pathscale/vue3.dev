@@ -200,43 +200,6 @@ export function useBulmaTheme(
 
     bulmaBaseColors.forEach((color) => {
       const baseColor = finalVars[`--${color}`];
-      // base color
-      const root = document.documentElement;
-      root.style.setProperty(
-        "--base-color",
-        baseColors.accent[currentTheme] || "",
-      );
-      // Set base color
-      document.documentElement.style.setProperty(
-        "--base-color",
-        baseColors.accent[currentTheme] || "",
-      );
-      // Extract HSL values (hue, saturation, lightness)
-      const [h, s, l] = baseColors.accent[currentTheme]
-        ?.match(/\d+/g)
-        ?.map(Number) ?? [0, 0, 0];
-
-      // Ensure lightness and saturation are within range
-      const clamp = (value: number, min = 0, max = 100): number =>
-        Math.min(Math.max(value, min), max);
-      const light = (lValue: number): number => clamp(lValue, 0, 100);
-      const saturate = (sValue: number) => clamp(sValue, 0, 100);
-      // Set primary color (using the base color)
-      document.documentElement.style.setProperty(
-        "--primary",
-        baseColors.accent[currentTheme] || "",
-      );
-      // Dynamically derive other colors from the base color
-      // document.documentElement.style.setProperty('--primary', `hsl(${h}, ${saturate(s)}%, ${light(l + 20)}%)`);
-      // document.documentElement.style.setProperty('--danger', `hsl(${h + 10}, ${saturate(s)}%, ${light(l - 10)}%)`);
-      // document.documentElement.style.setProperty('--success', `hsl(${h + 30}, ${saturate(s)}%, ${light(l + 15)}%)`);
-      // document.documentElement.style.setProperty('--warning', `hsl(${h + 60}, ${saturate(s)}%, ${light(l + 25)}%)`);
-      // document.documentElement.style.setProperty('--info', `hsl(${h + 90}, ${saturate(s)}%, ${light(l + 10)}%)`);
-      // document.documentElement.style.setProperty('--link', `hsl(${h}, ${saturate(s)}%, ${light(l + 10)}%)`);
-      // document.documentElement.style.setProperty('--text', `hsl(${h}, ${saturate(s)}%, ${light(l + 50)}%)`);
-      // document.documentElement.style.setProperty('--dark', `hsl(${h}, ${saturate(s)}%, ${light(l - 50)}%)`);
-      // document.documentElement.style.setProperty('--light', `hsl(${h}, ${saturate(s)}%, ${light(l + 75)}%)`);
-
       if (baseColor) {
         setHSLVariables(color, baseColor);
         if (

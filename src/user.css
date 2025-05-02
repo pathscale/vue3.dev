@@ -1,15 +1,7 @@
 /* stylelint-disable comment-empty-line-before */
 
 :root {
-   /*  dynamic "source" colors*/
-  /* --base-color: hsl(220, 90%, 60%);
-  --primary: var(--base-color);
-  --info: hsl(200, 90%, 55%);
-  --success: hsl(140, 60%, 45%);
-  --warning: hsl(45, 100%, 60%);
-  --danger: hsl(0, 80%, 60%);
-  --text: hsl(0, 0%, 15%);
-  --background: hsl(0, 0%, 100%); */
+
   /******************** GENERIC VARIABLES ********************/
   /* Primary colors */
   /* --blm-prim: #111; */
