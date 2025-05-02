@@ -4,6 +4,7 @@ import {
   VBreadcrumb,
   VBreadcrumbItem,
   VButton,
+  VCalendar,
   VCard,
   VCardContent,
   VChart,
@@ -16,7 +17,8 @@ import {
   VTabs,
   VTag,
 } from "@pathscale/vue3-ui";
-import { computed, ref } from "vue";
+import bulmaCalendar from "bulma-calendar/dist/js/bulma-calendar.min";
+import { computed, provide, reactive, ref } from "vue";
 
 export default {
   name: "ComponentShowcase",
@@ -36,10 +38,12 @@ export default {
     VBreadcrumb,
     VBreadcrumbItem,
     VChart,
+    VCalendar,
   },
 
   setup() {
     const activeTab = ref(0);
+    //chart data
     const basicChart = computed(() => ({
       data: {
         labels: [
@@ -80,7 +84,7 @@ export default {
           .trim(),
       ],
     }));
-
+    // candle chart data
     const candleChart = computed(() => ({
       data: {
         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
@@ -114,10 +118,30 @@ export default {
           .trim(),
       ],
     }));
+    // calendar data:
+    provide("$bulmaCalendar", bulmaCalendar);
+    const state = reactive({
+      date: [null, null],
+      options: {
+        dateFormat: "dd.MM.yyyy",
+        labelFrom: "From",
+        labelTo: "To",
+      },
+    });
+
+    const displayDate = computed(() => {
+      if (!state.date || !state.date[0] || !state.date[1]) {
+        return "- n/a -";
+      }
+      return `${state.date[0]} to ${state.date[1]}`;
+    });
+
     return {
       activeTab,
       basicChart,
       candleChart,
+      state,
+      displayDate,
     };
   },
 };
@@ -154,6 +178,16 @@ export default {
       Text
     </v-button>
   </div>
+  <!-- Breadcrumb showcase -->
+  <div class="block mt-4">
+    <h3 class="title is-4">Breadcrumb Navigation</h3>
+    <v-breadcrumb>
+      <v-breadcrumb-item label="Home" icon="home" />
+      <v-breadcrumb-item label="Products" icon="shopping-bag" />
+      <v-breadcrumb-item label="Electronics" icon="laptop" />
+      <v-breadcrumb-item label="Laptops" icon="laptop" />
+    </v-breadcrumb>
+  </div>
   <!-- New compoenents showcase Start -->
   <div class="columns mt-4">
     <div class="column">
@@ -164,6 +198,18 @@ export default {
       <h3 class="title is-4">Candle Chart</h3>
       <v-chart v-bind="{ ...candleChart }" />
     </div>
+  </div>
+  <!-- Calendar showcase -->
+  <div class="block mt-4">
+    <h3 class="title is-4">Calendar</h3>
+    <v-field label="Date">
+		<v-calendar v-model="state.date" type="date" :options="state.options" range />
+	</v-field>
+	<v-field label="Range">
+		<div class="field">
+			Selected Range: {{ displayDate }}
+		</div>
+	</v-field>
   </div>
   <!-- New compoenents showcase End-->
   <div class="columns mt-4">

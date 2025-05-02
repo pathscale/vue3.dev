@@ -317,7 +317,10 @@
     "category": "backgrounds",
     "level": 1,
     "vars": [
-      "input-background-color"
+      "input-background-color",
+      "datepicker-item-selected-background-color",
+      "datepicker-item-hover-background-color",
+      "datepicker-item-selected-background-color"
     ]
   },
   {
