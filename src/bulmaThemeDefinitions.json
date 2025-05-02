@@ -9,6 +9,7 @@
     "category": "backgrounds",
     "level": 1,
     "vars": [
+      "input-background-color",
       "menu-item-active-color",
       "body-background-color",
       "box-background-color",
@@ -32,7 +33,6 @@
       "file-cta-hover-background-color",
       "footer-background-color",
       "hr-background-color",
-      "input-background-color",
       "input-disabled-background-color",
       "message-background-color",
       "message-body-pre-background-color",
@@ -182,6 +182,11 @@
     "category": "borders",
     "level": 7,
     "vars": [
+      "input-focus-border-color",
+      "input-focus-box-shadow-color",
+      "input-focus-color",
+      "input-hover-border-color",
+      "input-hover-color",
       "-navbar-dropdown-boxed-shadow-color",
       "button-border-color",
       "button-disabled-border-color",
@@ -190,9 +195,6 @@
       "checkbox-border-color",
       "file-border-color",
       "file-name-border-color",
-      "input-border-color",
-      "input-disabled-border-color",
-      "input-shadow-color",
       "media-border-color",
       "message-body-border-color",
       "navbar-box-shadow-color",
@@ -318,7 +320,9 @@
     "scale": "accent",
     "category": "backgrounds",
     "level": 1,
-    "vars": []
+    "vars": [
+      "input-background-color"
+    ]
   },
   {
     "type": "scale",
@@ -347,7 +351,9 @@
     "scale": "accent",
     "category": "interactive",
     "level": 5,
-    "vars": []
+    "vars": [
+ 
+    ]
   },
   {
     "type": "scale",
@@ -361,7 +367,13 @@
     "scale": "accent",
     "category": "borders",
     "level": 7,
-    "vars": []
+    "vars": [
+      "input-focus-border-color",
+      "input-focus-box-shadow-color",
+      "input-focus-color",
+      "input-hover-border-color",
+      "input-hover-color"
+    ]
   },
   {
     "type": "scale",
