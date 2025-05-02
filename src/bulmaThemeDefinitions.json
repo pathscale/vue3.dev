@@ -172,7 +172,9 @@
     "scale": "gray",
     "category": "borders",
     "level": 6,
-    "vars": []
+    "vars": [
+      "input-border-color"
+    ]
   },
   {
     "type": "scale",
@@ -188,9 +190,7 @@
       "checkbox-border-color",
       "file-border-color",
       "file-name-border-color",
-      "input-border-color",
-      "input-disabled-border-color",
-      "input-shadow-color",
+ 
       "media-border-color",
       "message-body-border-color",
       "navbar-box-shadow-color",
@@ -317,7 +317,6 @@
     "category": "backgrounds",
     "level": 1,
     "vars": [
-      "input-background-color",
       "datepicker-item-selected-background-color",
       "datepicker-item-hover-background-color",
       "datepicker-item-selected-background-color"
@@ -378,6 +377,9 @@
     "category": "solid",
     "level": 9,
     "vars": [
+      "input-hover-border-color",
+      "input-focus-color",
+      "input-focus-border-color",
       "primary",
       "menu-item-active-background-color",
       "tabs-link-active-border-bottom-color",

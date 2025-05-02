@@ -94,6 +94,15 @@ export default {
   },
 
   setup() {
+    const stateInputTest = reactive({
+      name: "John Wick",
+      email: "boogeyman@",
+      username: "the_boogeyman",
+      // eslint-disable-next-line sonarjs/no-hardcoded-passwords -- Demo purpose
+      password: "Daisy",
+      message: "Guns. Lots of guns.",
+    });
+
     const activeTab = ref(0);
     //chart data
     const basicChart = computed(() => ({
@@ -338,6 +347,7 @@ export default {
       close,
       datagridTable,
       activeTabN,
+      stateInputTest,
       stages: [
         { title: "Create Account" },
         { title: "Complete profile", active: true },
@@ -351,6 +361,44 @@ export default {
 <template>
   <h2 class="title mt-6">Component Showcase</h2>
 
+  <v-field label="Email" type="is-danger" message="This email is invalid">
+    <v-input v-model="stateInputTest.email" type="email" maxlength="30" color="is-danger">
+      <template #leftIcon>
+        <v-icon custom-class="input-icon" name="email-icon" bundle="icons" />
+      </template>
+      <template #rightIcon>
+        <v-icon custom-class="input-icon" name="alert-icon" bundle="icons" />
+      </template>
+    </v-input>
+  </v-field>
+  <v-field label="Username" type="is-success" message="This username is available">
+    <v-input v-model="stateInputTest.username" maxlength="30" color="is-success">
+      <template #leftIcon>
+        <v-icon custom-class="input-icon" name="account-icon" bundle="icons" />
+      </template>
+      <template #rightIcon>
+        <v-icon custom-class="input-icon" name="check-icon" bundle="icons" />
+      </template>
+    </v-input>
+  </v-field>
+
+  <v-field label="Password" type="is-warning" message="This password is weak">
+    <v-input v-model="stateInputTest.password" type="password" color="is-warning" password-reveal />
+  </v-field>
+
+  <v-field label="Recovery passphrase">
+    <v-input v-model="stateInputTest.message" maxlength="144" type="textarea" size="is-large" />
+  </v-field>
+
+  <v-field label="Amount">
+    <v-input v-model="stateInputTest.amount" min="0" type="number" placeholder="Enter amount">
+      <template #leftIcon>
+        <span>
+          &#36;
+        </span>
+      </template>
+    </v-input>
+  </v-field>
   <div class="buttons">
       <v-button type="is-primary">
       Primary
