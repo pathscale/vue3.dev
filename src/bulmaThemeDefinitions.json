@@ -16,6 +16,7 @@
       "button-disabled-background-color",
       "button-static-background-color",
       "button-text-hover-background-color",
+      "card-background-color",
       "card-content-background-color",
       "card-footer-background-color",
       "card-header-background-color",
@@ -95,13 +96,7 @@
     "scale": "gray",
     "category": "interactive",
     "level": 3,
-    "vars": [
-      "light",
-      "card-background-color",
-      "card-content-background-color",
-      "card-footer-background-color",
-      "card-header-background-color"
-    ]
+    "vars": ["light"]
   },
   {
     "type": "scale",
@@ -171,9 +166,7 @@
     "scale": "gray",
     "category": "borders",
     "level": 6,
-    "vars": [
-      "color"
-    ]
+    "vars": []
   },
   {
     "type": "scale",
@@ -319,11 +312,7 @@
     "scale": "accent",
     "category": "backgrounds",
     "level": 1,
-    "vars": [
-      "datepicker-item-selected-background-color",
-      "datepicker-item-hover-background-color",
-      "datepicker-item-selected-background-color"
-    ]
+    "vars": []
   },
   {
     "type": "scale",
@@ -344,9 +333,7 @@
     "scale": "accent",
     "category": "interactive",
     "level": 4,
-    "vars": [
-      "button-hover-color"
-    ]
+    "vars": []
   },
   {
     "type": "scale",
@@ -362,7 +349,7 @@
     "scale": "accent",
     "category": "borders",
     "level": 6,
-    "vars": []
+    "vars": ["color"]
   },
   {
     "type": "scale",
