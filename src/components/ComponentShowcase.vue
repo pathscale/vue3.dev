@@ -39,6 +39,9 @@ import {
   VTabs,
   VTag,
   VTextarea,
+  VTimeline,
+  VTooltip,
+  VUpload,
 } from "@pathscale/vue3-ui";
 import bulmaCalendar from "bulma-calendar/dist/js/bulma-calendar.min";
 import { computed, provide, reactive, ref } from "vue";
@@ -85,6 +88,9 @@ export default {
     VProgress,
     VSidebar,
     VSlider,
+    VUpload,
+    VTimeline,
+    VTooltip,
   },
 
   setup() {
@@ -248,7 +254,7 @@ export default {
       lastName: "Barney",
       color: "Blue",
     });
-
+    // Pagination showcase data
     const statePagination = reactive({
       total: 200,
       current: 10,
@@ -260,6 +266,7 @@ export default {
       isSimple: false,
       isRounded: false,
     });
+    // Sidebar showcase data
     const stateSidebar = reactive({
       open: false,
       overlay: false,
@@ -271,6 +278,48 @@ export default {
       stateSidebar.overlay = false;
       stateSidebar.reduced = false;
     }
+
+    // Table showcase data
+    const datagridTable = ref(new DataGrid());
+
+    datagridTable.value.addColumn("id", "ID", "number");
+    datagridTable.value.addColumn("firstName", "First Name", "string");
+    datagridTable.value.addColumn("lastName", "Last Name", "string");
+    datagridTable.value.addColumn("color", "Color", "custom");
+
+    datagridTable.value.addRow({
+      id: 1,
+      firstName: "John",
+      lastName: "Doe",
+      color: "Blue",
+    });
+    datagridTable.value.addRow({
+      id: 2,
+      firstName: "Sheri",
+      lastName: "Adamin ",
+      color: "Green",
+    });
+    datagridTable.value.addRow({
+      id: 3,
+      firstName: "Kristopher",
+      lastName: "Amos",
+      color: "Blue",
+    });
+    datagridTable.value.addRow({
+      id: 4,
+      firstName: "Nelly",
+      lastName: "Derby",
+      color: "Green",
+    });
+    datagridTable.value.addRow({
+      id: 5,
+      firstName: "Philander",
+      lastName: "Barney",
+      color: "Blue",
+    });
+
+    const activeTabN = ref(0);
+
     return {
       activeTab,
       basicChart,
@@ -287,6 +336,13 @@ export default {
       statePagination,
       stateSidebar,
       close,
+      datagridTable,
+      activeTabN,
+      stages: [
+        { title: "Create Account" },
+        { title: "Complete profile", active: true },
+        { title: "Apply to jobs" },
+      ],
     };
   },
 };
@@ -692,6 +748,142 @@ export default {
   <v-slider type="is-warning" />
   <v-slider type="is-danger" />
   <v-slider type="is-info" />
+   <!-- Table showcase -->
+   <h4 class="is-size-5 mb-4">
+    Table with custom header and footer
+  </h4>
+  <v-table :data="datagridTable" fullwidth>
+    <template #header>
+      <p>This is the header</p>
+    </template>
+    <template #footer>
+      <p>This is the footer</p>
+    </template>
+  </v-table>
+
+  <h4 class="is-size-5 mb-4 mt-6">
+    Table with custom component
+  </h4>
+  <v-table :data="datagridTable" fullwidth>
+    <template #color="props">
+      <v-select v-model="props.row.color" color="is-dark" placeholder="primary" class="darkText">
+        <option value="Blue">
+          Blue
+        </option>
+        <option value="Green">
+          Green
+        </option>
+      </v-select>
+    </template>
+  </v-table>
+
+  <h4 class="is-size-5 mb-4 mt-6">
+    Table with expandable rows
+  </h4>
+  <v-table :data="datagridTable" fullwidth expandable>
+    <template #expanded="props">
+      <v-card>
+        <v-card-content>
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <v-image src="https://via.placeholder.com/96" alt="Placeholder image" />
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">
+                {{ props.row.firstName }}
+              </p>
+              <p class="subtitle is-6">
+                {{ props.row.lastName }}
+              </p>
+            </div>
+          </div>
+          Whose favorite color is <a>@{{ props.row.color }}</a>
+        </v-card-content>
+      </v-card>
+    </template>
+  </v-table>
+
+   <!-- Tabs showcase -->
+
+  <v-tabs v-model="activeTabN" type="is-boxed">
+    <v-tab label="Monday" />
+    <v-tab label="Tuesday" />
+    <v-tab label="Wednesday" />
+  </v-tabs>
+
+  <v-tabs v-model="activeTabN" type="is-toggle">
+    <v-tab label="Monday" />
+    <v-tab label="Tuesday" />
+    <v-tab label="Wednesday" />
+  </v-tabs>
+
+  <v-tabs v-model="activeTabN" type="is-toggle-rounded">
+    <v-tab label="Monday" />
+    <v-tab label="Tuesday" />
+    <v-tab label="Wednesday" />
+  </v-tabs>
+
+   <!-- Tags showcase -->
+
+  <v-field grouped group-multiline>
+    <v-tag class="control" type="is-primary" closable attached>
+      Primary
+    </v-tag>
+    <v-tag class="control" type="is-link" closable>
+      Link
+    </v-tag>
+  </v-field>
+   <!-- TextArea showcase -->
+
+  <v-field>
+    <v-textarea v-model="text" color="is-info" />
+  </v-field>
+
+  <v-field>
+    <v-textarea v-model="text" color="is-success" />
+  </v-field>
+
+  <v-field>
+    <v-textarea v-model="text" color="is-warning" />
+  </v-field>
+
+  <v-field>
+    <v-textarea v-model="text" color="is-danger" />
+  </v-field>
+
+   <!-- Timeline showcase -->
+
+  <v-timeline :stages="stages">
+    <template #default="props">
+      <h1>{{ props.stage.title }}</h1>
+    </template>
+  </v-timeline>
+
+   <!-- Upload showcase -->
+  <v-field>
+    <v-upload type="is-success">
+      <template #icon>
+        <v-icon name="upload-icon" bundle="icons" fill="white" />
+      </template>
+
+      <template #label>
+        File
+      </template>
+      <template #name>
+        This is a file name
+      </template>
+    </v-upload>
+  </v-field>
+   <!-- Tooltip showcase -->
+
+   <v-tooltip type="is-success" label="Always" always position="is-right">
+    <v-button type="is-success">
+      Always
+    </v-button>
+  </v-tooltip>
+  
   <!-- New compoenents showcase End-->
   <div class="columns mt-4">
     <div class="column">
