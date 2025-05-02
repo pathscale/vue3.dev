@@ -9,6 +9,7 @@
     "category": "backgrounds",
     "level": 1,
     "vars": [
+      "input-background-color",
       "menu-item-active-color",
       "body-background-color",
       "box-background-color",
@@ -312,7 +313,9 @@
     "scale": "accent",
     "category": "backgrounds",
     "level": 1,
-    "vars": []
+    "vars": [
+      "input-background-color"
+    ]
   },
   {
     "type": "scale",
