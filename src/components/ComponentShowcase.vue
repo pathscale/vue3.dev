@@ -1,5 +1,6 @@
 <script>
 import {
+  DataGrid,
   VAccordion,
   VAutocomplete,
   VAvatar,
@@ -14,6 +15,10 @@ import {
   VCardHeader,
   VChart,
   VCheckbox,
+  VColumn,
+  VColumns,
+  VDropdown,
+  VDropdownItem,
   VField,
   VIcon,
   VImage,
@@ -22,9 +27,12 @@ import {
   VMenu,
   VMenuItem,
   VMenuList,
+  VSelect,
   VTab,
+  VTable,
   VTabs,
   VTag,
+  VTextarea,
 } from "@pathscale/vue3-ui";
 import bulmaCalendar from "bulma-calendar/dist/js/bulma-calendar.min";
 import { computed, provide, reactive, ref } from "vue";
@@ -57,6 +65,14 @@ export default {
     VCardFooterItem,
     VMedia,
     VCheckbox,
+    VColumns,
+    VColumn,
+    VTable,
+    VDropdown,
+    VDropdownItem,
+    DataGrid,
+    VSelect,
+    VTextarea,
   },
 
   setup() {
@@ -182,6 +198,45 @@ export default {
       return value.value.toString();
     }
 
+    // datagrid data
+    const datagrid = ref(new DataGrid());
+
+    datagrid.value.addColumn("id", "ID", "number");
+    datagrid.value.addColumn("firstName", "First Name", "string");
+    datagrid.value.addColumn("lastName", "Last Name", "string");
+    datagrid.value.addColumn("color", "Color", "custom");
+
+    datagrid.value.addRow({
+      id: 1,
+      firstName: "John",
+      lastName: "Doe",
+      color: "Blue",
+    });
+    datagrid.value.addRow({
+      id: 2,
+      firstName: "Sheri",
+      lastName: "Adamin ",
+      color: "Green",
+    });
+    datagrid.value.addRow({
+      id: 3,
+      firstName: "Kristopher",
+      lastName: "Amos",
+      color: "Blue",
+    });
+    datagrid.value.addRow({
+      id: 4,
+      firstName: "Nelly",
+      lastName: "Derby",
+      color: "Green",
+    });
+    datagrid.value.addRow({
+      id: 5,
+      firstName: "Philander",
+      lastName: "Barney",
+      color: "Blue",
+    });
+
     return {
       activeTab,
       basicChart,
@@ -194,6 +249,7 @@ export default {
       onClick,
       value,
       getValue,
+      datagrid,
     };
   },
 };
@@ -358,6 +414,122 @@ export default {
       Disabled checkbox
     </v-checkbox>
   </v-field>
+  <!-- Columns showcase -->
+  <v-columns>
+    <v-column>
+      <p class="has-background-link has-text-white px-4 py-4">
+        First Column
+      </p>
+    </v-column>
+    <v-column>
+      <p class="has-background-success has-text-white px-4 py-4">
+        Second Column
+      </p>
+    </v-column>
+    <v-column>
+      <p class="has-background-primary has-text-white px-4 py-4">
+        Third Column
+      </p>
+    </v-column>
+  </v-columns>
+  <!-- Datagrid showcase -->
+  <v-table :data="datagrid" />
+  <!-- Dropdown showcase -->
+  <v-dropdown>
+    <template #trigger>
+      <v-button type="is-primary">
+        Click me
+      </v-button>
+    </template>
+    <v-dropdown-item> Blue </v-dropdown-item>
+    <v-dropdown-item> Green </v-dropdown-item>
+  </v-dropdown>
+  <!-- Field showcase -->
+  <v-field>
+    <v-field addons>
+      <v-input />
+      <v-button type="is-info">
+        Search
+      </v-button>
+    </v-field>
+    <v-field addons position="has-addons-centered">
+      <v-select placeholder="Category">
+        <option>New</option>
+        <option>Used</option>
+      </v-select>
+      <v-input placeholder="Product name" />
+      <v-button type="is-info">
+        Search
+      </v-button>
+    </v-field>
+    <v-field addons position="has-addons-right">
+      <v-input placeholder="Your email" />
+      <v-button type="is-static">
+        @gmail.com
+      </v-button>
+    </v-field>
+  </v-field>
+  <!-- Media showcase -->
+  <v-media>
+    <template #left>
+      <v-image
+        size="is-64x64" rounded
+        src="https://avatars0.githubusercontent.com/u/29805241?s=460&u=efe58fc5bb0ee7ad11fb7fc976820a7cda3f0c77&v=4" 
+      />
+    </template>
+    <template #content>
+      <div class="content">
+        <p>
+          <strong>Oscar Albornoz</strong>
+          <br />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta eros lacus, nec ultricies elit blandit non.
+          <br /> Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.
+          <br />
+          <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
+        </p>
+      </div>
+
+      <v-media>
+        <template #left>
+          <v-image
+            size="is-48x48" rounded
+            src="https://avatars0.githubusercontent.com/u/17007165?s=460&u=45b8448bece9d199a3096a07a0ff90e25530802b&v=4" 
+          />
+        </template>
+        <template #content>
+          <div class="content">
+            <p>
+              <strong>Radu Pasparuga</strong>
+              <br />
+              Morbi tellus est, consectetur sit amet dui facilisis, imperdiet pellentesque lorem
+              <br />
+              Mauris sit amet velit commodo, semper felis sed, sodales ante.
+              <br />
+              <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+            </p>
+          </div>
+        </template>
+      </v-media>
+    </template>
+  </v-media>
+  <v-media>
+    <template #left>
+      <v-image
+        size="is-64x64" rounded
+        src="https://avatars3.githubusercontent.com/u/11345792?s=460&u=497fb860444eef3f36843047804181c35ff9a763&v=4" 
+      />
+    </template>
+    <template #content>
+      <v-field>
+        <v-textarea placeholder="Add a comment Anton Kudryavtsev" />
+      </v-field>
+      <v-field>
+        <v-button type="is-info">
+          Post comment
+        </v-button>
+      </v-field>
+    </template>
+  </v-media>
 
   <!-- New compoenents showcase End-->
   <div class="columns mt-4">
