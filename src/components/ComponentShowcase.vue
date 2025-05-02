@@ -1,8 +1,12 @@
 <script>
 import {
+  VAccordion,
+  VBreadcrumb,
+  VBreadcrumbItem,
   VButton,
   VCard,
   VCardContent,
+  VChart,
   VField,
   VInput,
   VMenu,
@@ -12,7 +16,7 @@ import {
   VTabs,
   VTag,
 } from "@pathscale/vue3-ui";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 export default {
   name: "ComponentShowcase",
@@ -28,19 +32,92 @@ export default {
     VTag,
     VTabs,
     VTab,
+    VAccordion,
+    VBreadcrumb,
+    VBreadcrumbItem,
+    VChart,
   },
   setup() {
     const activeTab = ref(0);
-    return { activeTab };
+
+    const basicChart = computed(() => ({
+      data: {
+        labels: [
+          "12am-3am",
+          "3am-6am",
+          "6am-9am",
+          "9am-12pm",
+          "12pm-3pm",
+          "3pm-6pm",
+          "6pm-9pm",
+          "9pm-12am",
+        ],
+        datasets: [
+          {
+            name: "Some Data",
+            chartType: "bar",
+            values: [25, 40, 30, 35, 8, 52, 17, -4],
+          },
+          {
+            name: "Another Set",
+            chartType: "bar",
+            values: [25, 50, -10, 15, 18, 32, 27, 14],
+          },
+        ],
+      },
+      title: "Basic Chart Example",
+      type: "axis-mixed",
+      height: 300,
+      colors: [
+        getComputedStyle(document.documentElement)
+          .getPropertyValue("--ligth")
+          .trim(),
+        getComputedStyle(document.documentElement)
+          .getPropertyValue("--primary")
+          .trim(),
+        getComputedStyle(document.documentElement)
+          .getPropertyValue("--link")
+          .trim(),
+      ],
+    }));
+
+    const candleChart = computed(() => ({
+      data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+        datasets: [
+          {
+            name: "Candle Data",
+            chartType: "candle",
+            values: [
+              [100, 120, 90, 110],
+              [110, 130, 100, 120],
+              [120, 140, 110, 130],
+              [130, 150, 120, 140],
+              [140, 160, 130, 150],
+              [150, 170, 140, 160],
+            ],
+          },
+        ],
+      },
+      title: "Candle Chart Example",
+      type: "candle",
+      height: 300,
+      colors: ["#26a69a", "#ef5350"],
+    }));
+
+    return {
+      activeTab,
+      basicChart,
+      candleChart,
+    };
   },
 };
 </script>
 
 <template>
   <h2 class="title mt-6">Component Showcase</h2>
-
   <div class="buttons">
-    <v-button type="is-primary">
+      <v-button type="is-primary">
       Primary
     </v-button>
     <v-button type="is-success">
@@ -68,7 +145,18 @@ export default {
       Text
     </v-button>
   </div>
-
+  <!-- New compoenents showcase Start -->
+  <div class="columns mt-4">
+    <div class="column">
+      <h3 class="title is-4">Basic Chart</h3>
+      <v-chart v-bind="{ ...basicChart }" />
+    </div>
+    <div class="column">
+      <h3 class="title is-4">Candle Chart</h3>
+      <v-chart v-bind="{ ...candleChart }" />
+    </div>
+  </div>
+  <!-- New compoenents showcase End-->
   <div class="columns mt-4">
     <div class="column">
       <v-field class="mb-4">

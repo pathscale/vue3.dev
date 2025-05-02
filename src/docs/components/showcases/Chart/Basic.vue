@@ -54,7 +54,17 @@ export default {
       title: "My Awesome Chart",
       type: "axis-mixed", // or 'bar', 'line', 'pie', 'percentage'
       height: 300,
-      colors: ["purple", "#ffa3ef", "light-blue"],
+      colors: [
+        getComputedStyle(document.documentElement)
+          .getPropertyValue("--light")
+          .trim(),
+        getComputedStyle(document.documentElement)
+          .getPropertyValue("--primary")
+          .trim(),
+        getComputedStyle(document.documentElement)
+          .getPropertyValue("--light-blue")
+          .trim(),
+      ],
 
       tooltipOptions: {
         formatTooltipX: (d) => String(d).toUpperCase(),
