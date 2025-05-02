@@ -200,7 +200,6 @@ export function useBulmaTheme(
 
     bulmaBaseColors.forEach((color) => {
       const baseColor = finalVars[`--${color}`];
-
       if (baseColor) {
         setHSLVariables(color, baseColor);
         if (
