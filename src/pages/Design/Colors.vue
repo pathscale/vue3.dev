@@ -79,7 +79,7 @@ export default {
         <v-field label="Accent">
           <div class="is-flex is-align-items-center">
             <ColorPicker v-model:pureColor="accent[theme]" format="hex" />
-            <v-input v-model="accent[theme]" type="text" color="is-primary" class="ml-2" />
+            <v-input v-model="accent[theme]" type="text" class="ml-2" />
           </div>
         </v-field>
       </div>
@@ -88,7 +88,7 @@ export default {
         <v-field label="Gray">
           <div class="is-flex is-align-items-center">
             <ColorPicker v-model:pureColor="gray[theme]" format="hex" />
-            <v-input v-model="gray[theme]" type="text" color="is-primary" class="ml-2" />
+            <v-input v-model="gray[theme]" type="text" class="ml-2" />
           </div>
         </v-field>
       </div>
@@ -97,7 +97,7 @@ export default {
         <v-field label="Background">
           <div class="is-flex is-align-items-center">
             <ColorPicker v-model:pureColor="background[theme]" format="hex" />
-            <v-input v-model="background[theme]" type=" text" color="is-primary" class="ml-2" />
+            <v-input v-model="background[theme]" type=" text" class="ml-2" />
           </div>
         </v-field>
       </div>
