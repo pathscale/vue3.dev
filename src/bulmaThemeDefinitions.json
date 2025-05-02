@@ -401,7 +401,7 @@
     "category": "backgrounds",
     "level": 2,
     "vars": [
-      "input-icon"
+      "input-background-color"
     ]
   },
   {
