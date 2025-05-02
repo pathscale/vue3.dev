@@ -27,7 +27,13 @@ import {
   VMenu,
   VMenuItem,
   VMenuList,
+  VPagination,
+  VProgress,
   VSelect,
+  VSidebar,
+  VSlider,
+  VSteps,
+  VSwitch,
   VTab,
   VTable,
   VTabs,
@@ -73,6 +79,12 @@ export default {
     DataGrid,
     VSelect,
     VTextarea,
+    VSwitch,
+    VPagination,
+    VSteps,
+    VProgress,
+    VSidebar,
+    VSlider,
   },
 
   setup() {
@@ -237,6 +249,28 @@ export default {
       color: "Blue",
     });
 
+    const statePagination = reactive({
+      total: 200,
+      current: 10,
+      perPage: 10,
+      rangeBefore: 3,
+      rangeAfter: 1,
+      order: "",
+      size: "",
+      isSimple: false,
+      isRounded: false,
+    });
+    const stateSidebar = reactive({
+      open: false,
+      overlay: false,
+      reduced: false,
+    });
+
+    function close() {
+      stateSidebar.open = false;
+      stateSidebar.overlay = false;
+      stateSidebar.reduced = false;
+    }
     return {
       activeTab,
       basicChart,
@@ -250,6 +284,9 @@ export default {
       value,
       getValue,
       datagrid,
+      statePagination,
+      stateSidebar,
+      close,
     };
   },
 };
@@ -530,7 +567,131 @@ export default {
       </v-field>
     </template>
   </v-media>
+  <!-- Pagination showcase -->
+  <v-field grouped group-multiline>
+    <v-field label="Order" class="mr-1">
+      <v-select v-model="statePagination.order">
+        <option value="">
+          default
+        </option>
+        <option value="is-centered">
+          is-centered
+        </option>
+        <option value="is-right">
+          is-right
+        </option>
+      </v-select>
+    </v-field>
+    <v-field label="Size">
+      <v-select v-model="statePagination.size">
+        <option value="">
+          default
+        </option>
+        <option value="is-small">
+          is-small
+        </option>
+        <option value="is-medium">
+          is-medium
+        </option>
+        <option value="is-large">
+          is-large
+        </option>
+      </v-select>
+    </v-field>
+  </v-field>
+  <div class="block">
+    <v-switch v-model="statePagination.isSimple">
+      Simple
+    </v-switch>
+    <v-switch v-model="statePagination.isRounded">
+      Rounded
+    </v-switch>
+  </div>
+   <!-- Steps showcase -->
 
+  <div class="block">
+    <steps />
+    </div>
+
+  <v-pagination v-model:current="state.current" :total="state.total" :range-before="state.rangeBefore"
+    :range-after="state.rangeAfter" :order="state.order" :size="state.size" :simple="state.isSimple"
+    :rounded="state.isRounded" :per-page="state.perPage" aria-next-label="Next page" aria-previous-label="Previous page"
+    aria-page-label="Page" aria-current-label="Current page" />
+
+       <!-- Progress showcase -->
+  <v-progress type="is-danger" :value="40" />
+  <v-progress type="is-success" :value="60" />
+  <v-progress type="is-info" :value="80" />
+  <v-progress type="is-warning" :value="100" />
+  <hr />
+   <!-- Sidebar showcase -->
+
+    <v-field>
+    <v-select v-model="selected" color="is-info" placeholder="Info" size="is-normal">
+      <option value="1">
+        Option 1
+      </option>
+      <option value="2">
+        Option 2
+      </option>
+    </v-select>
+  </v-field>
+   <!-- Select showcase -->
+   <v-field>
+    <v-switch v-model="state.open" type="is-dark">
+      Open
+    </v-switch>
+    <v-switch v-show="state.open" v-model="state.overlay" type="is-dark">
+      Overlay
+    </v-switch>
+    <v-switch v-show="state.open" v-model="state.reduced" type="is-dark">
+      Reduced
+    </v-switch>
+  </v-field>
+
+  <v-field>
+    <v-switch v-model="stateSidebar.open" type="is-dark">
+      Open
+    </v-switch>
+    <v-switch v-show="stateSidebar.open" v-model="stateSidebar.overlay" type="is-dark">
+      Overlay
+    </v-switch>
+    <v-switch v-show="stateSidebar.open" v-model="stateSidebar.reduced" type="is-dark">
+      Reduced
+    </v-switch>
+  </v-field>
+   <!-- Sidebar showcase -->
+
+  <v-sidebar
+    :open="stateSidebar.open"
+    type="is-light"
+    fullheight
+    :reduce="stateSidebar.reduced"
+    :overlay="stateSidebar.overlay"
+    position="fixed"
+    @close="close">
+    <section class="section px-1">
+      <v-button tag="a" type="is-text" class="is-pulled-right" @click="close">
+        &#x274C;
+      </v-button>
+    </section>
+    <section class="section py-2">
+      <v-menu>
+        <v-menu-list>
+          <v-menu-item :label="stateSidebar.reduced ? '' : 'Home'" icon="&#x1F3E0;" />
+          <v-menu-item :label="stateSidebar.reduced ? '' : 'Contact'" icon="&#x1F4DE;" />
+          <v-menu-item :label="stateSidebar.reduced ? '' : 'Services'" icon="&#9877;" />
+        </v-menu-list>
+      </v-menu>
+    </section>
+  </v-sidebar>
+   <!-- Slider showcase -->
+
+  <v-slider />
+  <v-slider type="is-success" />
+  <v-slider type="is-warning" />
+  <v-slider type="is-danger" />
+  <v-slider type="is-info" />
   <!-- New compoenents showcase End-->
   <div class="columns mt-4">
     <div class="column">
