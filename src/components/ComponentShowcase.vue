@@ -37,9 +37,9 @@ export default {
     VBreadcrumbItem,
     VChart,
   },
+
   setup() {
     const activeTab = ref(0);
-
     const basicChart = computed(() => ({
       data: {
         labels: [
@@ -70,13 +70,13 @@ export default {
       height: 300,
       colors: [
         getComputedStyle(document.documentElement)
-          .getPropertyValue("--ligth")
-          .trim(),
-        getComputedStyle(document.documentElement)
           .getPropertyValue("--primary")
           .trim(),
         getComputedStyle(document.documentElement)
-          .getPropertyValue("--link")
+          .getPropertyValue("--warning")
+          .trim(),
+        getComputedStyle(document.documentElement)
+          .getPropertyValue("--light-blue")
           .trim(),
       ],
     }));
@@ -102,9 +102,18 @@ export default {
       title: "Candle Chart Example",
       type: "candle",
       height: 300,
-      colors: ["#26a69a", "#ef5350"],
+      colors: [
+        getComputedStyle(document.documentElement)
+          .getPropertyValue("--primary")
+          .trim(),
+        getComputedStyle(document.documentElement)
+          .getPropertyValue("--warning")
+          .trim(),
+        getComputedStyle(document.documentElement)
+          .getPropertyValue("--light-blue")
+          .trim(),
+      ],
     }));
-
     return {
       activeTab,
       basicChart,

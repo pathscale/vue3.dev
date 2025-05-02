@@ -56,13 +56,13 @@ export default {
       height: 300,
       colors: [
         getComputedStyle(document.documentElement)
-          .getPropertyValue("--light")
-          .trim(),
-        getComputedStyle(document.documentElement)
           .getPropertyValue("--primary")
           .trim(),
         getComputedStyle(document.documentElement)
-          .getPropertyValue("--light-blue")
+          .getPropertyValue("--warning")
+          .trim(),
+        getComputedStyle(document.documentElement)
+          .getPropertyValue("--light")
           .trim(),
       ],
 
