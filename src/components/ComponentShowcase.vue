@@ -1,15 +1,24 @@
 <script>
 import {
   VAccordion,
+  VAutocomplete,
+  VAvatar,
   VBreadcrumb,
   VBreadcrumbItem,
   VButton,
   VCalendar,
   VCard,
   VCardContent,
+  VCardFooter,
+  VCardFooterItem,
+  VCardHeader,
   VChart,
+  VCheckbox,
   VField,
+  VIcon,
+  VImage,
   VInput,
+  VMedia,
   VMenu,
   VMenuItem,
   VMenuList,
@@ -39,6 +48,15 @@ export default {
     VBreadcrumbItem,
     VChart,
     VCalendar,
+    VAutocomplete,
+    VAvatar,
+    VIcon,
+    VImage,
+    VCardHeader,
+    VCardFooter,
+    VCardFooterItem,
+    VMedia,
+    VCheckbox,
   },
 
   setup() {
@@ -136,12 +154,46 @@ export default {
       return `${state.date[0]} to ${state.date[1]}`;
     });
 
+    // autocomplete data
+    const items = [
+      "Apple",
+      "Banana",
+      "Orange",
+      "Mango",
+      "Pear",
+      "Peach",
+      "Grape",
+      "Tangerine",
+      "Pineapple",
+    ];
+    const result = ref("");
+
+    // button data
+    const isActive = ref(true);
+
+    const onClick = () => {
+      isActive.value = !isActive.value;
+    };
+
+    // checkbox data
+    const value = ref(false);
+    function getValue() {
+      // Need the `toString` to show `false` when indeterminate
+      return value.value.toString();
+    }
+
     return {
       activeTab,
       basicChart,
       candleChart,
       state,
       displayDate,
+      items,
+      result,
+      isActive,
+      onClick,
+      value,
+      getValue,
     };
   },
 };
@@ -149,6 +201,7 @@ export default {
 
 <template>
   <h2 class="title mt-6">Component Showcase</h2>
+
   <div class="buttons">
       <v-button type="is-primary">
       Primary
@@ -176,6 +229,27 @@ export default {
     </v-button>
     <v-button type="is-text">
       Text
+    </v-button>
+    <v-button type="is-primary" outlined>
+      Outlined
+    </v-button>
+    <v-button rounded type="is-info">
+      Rounded
+    </v-button>
+    <v-button type="is-primary" inverted>
+      Inverted
+    </v-button>
+    <v-button type="is-primary" inverted outlined>
+      Invert Outlined
+    </v-button>
+    <v-button disabled type="is-info">
+      Disabled
+    </v-button>
+    <v-button loading type="is-info">
+      Loading
+    </v-button>
+    <v-button type="is-info" focused :inverted="isActive" rounded @click="onClick">
+      Click me
     </v-button>
   </div>
   <!-- Breadcrumb showcase -->
@@ -211,6 +285,80 @@ export default {
 		</div>
 	</v-field>
   </div>
+  <!-- Accordion showcase -->
+  <v-field>
+    <v-accordion header-is-trigger>
+      <template #header>
+        <div class="py-3 px-3 has-text-danger">
+          Click me
+        </div>
+      </template>
+      <template #content>
+        <div class="py-3 px-3">
+          Content
+        </div>
+      </template>
+    </v-accordion>
+  </v-field>
+  <!-- Autocomplete showcase -->
+  <div class="block mt-4">
+    Selected: {{ result }}
+    <v-autocomplete v-model="result" :items="items" />
+  </div>
+  <!-- Avatar showcase -->
+  <div class="is-flex is-justify-content-flex-start is-align-items-center">
+    <v-avatar alt="John Doe" />
+    <v-avatar alt="Marry Jane" background="has-background-warning" text="has-text-black" />
+  </div>
+  <!-- Card showcase -->
+  <div class="block mt-4">
+    <v-card>
+      <v-card-header title="User" />
+      <v-image src="https://vue3.dev/128x128.png" alt="placeholder image" />
+      <v-card-content>
+        <v-media>
+          <template #left>
+            <v-image src="https://vue3.dev/128x128.png" size="is-48x48" rounded alt="placeholder image" />
+          </template>
+          <template #content>
+            <p class="title is-4">
+              John Smith
+            </p>
+            <p class="subtitle is-6">
+              @johnsmith
+            </p>
+          </template>
+        </v-media>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Phasellus nec iaculis mauris. <a>@vue3-ui</a>.
+          <a href="#">#vue3</a> <a href="#">#responsive</a>
+          <br />
+        </div>
+      </v-card-content>
+
+      <v-card-footer>
+        <v-card-footer-item>
+          <time datetime="2020-5-8">11:22 PM - 5 Oct 2020</time>
+        </v-card-footer-item>
+      </v-card-footer>
+    </v-card>
+  </div>
+  <!-- Checkbox showcase -->
+  <v-field>
+    <v-checkbox v-model="value">
+      Active checkbox
+    </v-checkbox>
+    <br />
+    <v-checkbox indeterminate>
+      Indeterminate checkbox
+    </v-checkbox>
+    <br />
+    <v-checkbox disabled>
+      Disabled checkbox
+    </v-checkbox>
+  </v-field>
+
   <!-- New compoenents showcase End-->
   <div class="columns mt-4">
     <div class="column">
