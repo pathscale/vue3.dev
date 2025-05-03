@@ -89,7 +89,12 @@
     "scale": "gray",
     "category": "backgrounds",
     "level": 2,
-    "vars": []
+    "vars": [
+      "card-background-color",
+      "card-content-background-color",
+      "card-footer-background-color",
+      "card-header-background-color"
+    ]
   },
   {
     "type": "scale",
@@ -98,10 +103,6 @@
     "level": 3,
     "vars": [
       "light",
-      "card-background-color",
-      "card-content-background-color",
-      "card-footer-background-color",
-      "card-header-background-color"
     ]
   },
   {
@@ -172,9 +173,7 @@
     "scale": "gray",
     "category": "borders",
     "level": 6,
-    "vars": [
-      "color"
-    ]
+    "vars": []
   },
   {
     "type": "scale",
