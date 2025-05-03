@@ -1,8 +1,14 @@
+/* 
+
+// Define before:
+
 const $__CDN_LIST = [
   window.location.origin,
   // ...
   // ...
 ];
+
+*/
 
 /**!
  * PathScale CONFIDENTIAL
