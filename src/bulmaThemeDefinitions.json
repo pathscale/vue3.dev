@@ -336,7 +336,9 @@
     "scale": "accent",
     "category": "interactive",
     "level": 4,
-    "vars": []
+    "vars": [
+      "button-hover-color"
+    ]
   },
   {
     "type": "scale",
