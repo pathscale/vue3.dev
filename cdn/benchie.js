@@ -70,6 +70,7 @@ async function resolveElementResource(el, cdnBase) {
 
 /**
  * Helper to convert <meta name="pathscale-cdn"> into a real <link>
+ * Expects JSON in the `content` attribute
  */
 async function resolveMetaCdnElement(metaEl, cdnBase) {
   // Ensure the element is the expected <meta name="pathscale-cdn">
@@ -84,11 +85,13 @@ async function resolveMetaCdnElement(metaEl, cdnBase) {
   const content = metaEl.getAttribute('content');
   if (!content) return;
 
-  const params = {};
-  content.split(',').forEach((part) => {
-    const [key, value] = part.split('=').map((s) => s.trim());
-    if (key && value) params[key] = value;
-  });
+  let params;
+  try {
+    params = JSON.parse(content);
+  } catch {
+    console.warn('Invalid JSON in pathscale-cdn meta tag:', content);
+    return;
+  }
 
   if (params.tag !== 'link') return;
 
