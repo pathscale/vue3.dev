@@ -17,7 +17,6 @@
       "button-disabled-background-color",
       "button-static-background-color",
       "button-text-hover-background-color",
-      "card-background-color",
       "card-content-background-color",
       "card-footer-background-color",
       "card-header-background-color",
@@ -90,14 +89,21 @@
     "scale": "gray",
     "category": "backgrounds",
     "level": 2,
-    "vars": []
+    "vars": [
+      "card-background-color",
+      "card-content-background-color",
+      "card-footer-background-color",
+      "card-header-background-color"
+    ]
   },
   {
     "type": "scale",
     "scale": "gray",
     "category": "interactive",
     "level": 3,
-    "vars": ["light"]
+    "vars": [
+      "light",
+    ]
   },
   {
     "type": "scale",
@@ -336,7 +342,8 @@
     "scale": "accent",
     "category": "interactive",
     "level": 4,
-    "vars": []
+    "vars": [
+]
   },
   {
     "type": "scale",
