@@ -61,8 +61,9 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
   const links = (files.css || [])
     .map(({ fileName }) => {
       const file = addVersion(fileName);
-      const attrs = makeHtmlAttributes(attributes.link);
-      return `<link href="${publicPath}${file}" rel="stylesheet"${attrs}>`;
+      const href = `${publicPath}${file}`;
+      // It will be replaces by <link rel="stylesheet" href="..."> by Benchie in browser runtime
+      return `<meta name="pathscale-cdn" content="tag=link, rel=stylesheet, href=${href}">`;
     })
     .join("\n");
 
