@@ -1,6 +1,6 @@
 # Benchie CDN Helper
 
-Benchie is a small helper script that dynamically selects the fastest CDN at runtime, based on response time. It fetches and caches resources like CSS or JS, and injects them into the DOM using blob URLs. This improves performance and flexibility without requiring HTML changes for different CDNs.
+Benchie is a small helper script that dynamically selects the fastest CDN at runtime, based on response time. It fetches and caches resources like images, css or js, and injects them into the DOM using blob URLs. This improves performance and flexibility without requiring HTML changes for different CDNs.
 
 ---
 
