@@ -137,7 +137,7 @@ window.addEventListener("DOMContentLoaded", async function () {
   const dataSrcElements = Array.from(document.querySelectorAll("[data-src]"));
   const dataHrefElements = Array.from(document.querySelectorAll("[data-href]"));
 
-  const metaRewrites = cdnMetaElements.map(el => resolveMetaCdnElement(el));
+  const metaRewrites = cdnMetaElements.map(el => resolveMetaCdnElement(el, $__CDN));
 
   const srcRewrites = dataSrcElements.map(el =>
     fetchAndCache(el.dataset.src, $__CDN).then(blobUrl => el.setAttribute("src", blobUrl))
