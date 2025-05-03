@@ -10,8 +10,8 @@ To enable Benchie, include the following script in your `<head>`:
 
 ```html
 <script>
-// Define a list of CDN base URLs to test.
-// The script will use the fastest one.
+// Define a list of CDN base URLs to test
+// The script will use the fastest one
 const $__CDN_LIST = [
   window.location.origin, // fallback to current origin
   // Add additional CDN origins below
