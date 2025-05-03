@@ -72,6 +72,15 @@ async function resolveElementResource(el, cdnBase) {
  * Helper to convert <meta name="pathscale-cdn"> into a real <link>
  */
 async function resolveMetaCdnElement(metaEl, cdnBase) {
+  // Ensure the element is the expected <meta name="pathscale-cdn">
+  if (
+    !(metaEl instanceof Element) ||
+    metaEl.tagName !== "META" ||
+    metaEl.getAttribute("name") !== "pathscale-cdn"
+  ) {
+    return;
+  }
+
   const content = metaEl.getAttribute('content');
   if (!content) return;
 
