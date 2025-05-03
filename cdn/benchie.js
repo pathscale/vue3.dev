@@ -47,6 +47,12 @@ async function fetchAndCache(url, base) {
 }
 
 /**
+ * Make `fetchAndCache` globally available via `window.t`
+ * Useful for debugging or using manually from external scripts
+ */
+window.t = fetchAndCache
+
+/**
  * Replaces `data-href` and `data-src` with actual working `href`/`src`
  * using fetchAndCache.
  */
@@ -81,6 +87,9 @@ window.addEventListener("DOMContentLoaded", async function () {
 
   $__CDN = await Promise.race(cdnRace);
   abortController.abort();
+
+  // Expose the value to global scope so it won't be renamed
+  window.$__CDN = $__CDN;
 
   // Find elements with data-src and data-href and update them
   const dataSrcElements = Array.from(document.querySelectorAll("[data-src]"));
