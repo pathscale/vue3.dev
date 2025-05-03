@@ -68,6 +68,33 @@ async function resolveElementResource(el, cdnBase) {
   }
 }
 
+/**
+ * Helper to convert <meta name="pathscale-cdn"> into a real <link>
+ */
+async function resolveMetaCdnElement(metaEl, cdnBase) {
+  const content = metaEl.getAttribute('content');
+  if (!content) return;
+
+  const params = {};
+  content.split(',').forEach((part) => {
+    const [key, value] = part.split('=').map((s) => s.trim());
+    if (key && value) params[key] = value;
+  });
+
+  if (params.tag !== 'link') return;
+
+  const rel = params.rel || 'stylesheet';
+  const href = params.href;
+  if (!href) return;
+
+  const blobUrl = await fetchAndCache(href, cdnBase);
+  const linkEl = document.createElement('link');
+  linkEl.setAttribute('rel', rel);
+  linkEl.setAttribute('href', blobUrl);
+
+  metaEl.replaceWith(linkEl);
+}
+
 window.addEventListener("DOMContentLoaded", async function () {
   const abortController = new AbortController();
 
@@ -91,9 +118,14 @@ window.addEventListener("DOMContentLoaded", async function () {
   // Expose the value to global scope so it won't be renamed
   window.$__CDN = $__CDN;
 
-  // Find elements with data-src and data-href and update them
+  // Collect elements for CDN resource resolution:
+  // - <meta name="pathscale-cdn">
+  // - elements with data-src or data-href
+  const cdnMetaElements = Array.from(document.querySelectorAll('meta[name="pathscale-cdn"]'));
   const dataSrcElements = Array.from(document.querySelectorAll("[data-src]"));
   const dataHrefElements = Array.from(document.querySelectorAll("[data-href]"));
+
+  const metaRewrites = cdnMetaElements.map(el => resolveMetaCdnElement(el));
 
   const srcRewrites = dataSrcElements.map(el =>
     fetchAndCache(el.dataset.src, $__CDN).then(blobUrl => el.setAttribute("src", blobUrl))
@@ -103,6 +135,7 @@ window.addEventListener("DOMContentLoaded", async function () {
     fetchAndCache(el.dataset.href, $__CDN).then(blobUrl => el.setAttribute("href", blobUrl))
   );
 
+  await Promise.all(metaRewrites);
   await Promise.all(srcRewrites);
   await Promise.all(hrefRewrites);
 
