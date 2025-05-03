@@ -10,7 +10,7 @@ const $__CDN_LIST = [
 
 */
 
-/**!
+/*!*
  * PathScale CONFIDENTIAL
  * __
  * [2025] PathScale PTE Ltd
