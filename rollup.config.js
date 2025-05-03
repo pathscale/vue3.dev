@@ -61,7 +61,7 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
     .map(({ fileName }) => {
       const file = addVersion(fileName);
       const attrs = makeHtmlAttributes(attributes.link);
-      return `<link data-href="${publicPath}${file}" rel="stylesheet"${attrs}>`;
+      return `<link href="${publicPath}${file}" rel="stylesheet"${attrs}>`;
     })
     .join("\n");
 
