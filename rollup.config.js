@@ -86,8 +86,7 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
   const url = "https://vue3.dev";
   const imageUrl = `${url}/vue3-ui.png`;
 
-  return `
-<!doctype html>
+  return `<!doctype html>
 <html${makeHtmlAttributes(attributes.html)}>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
