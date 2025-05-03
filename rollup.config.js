@@ -63,7 +63,12 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
       const file = addVersion(fileName);
       const href = `${publicPath}${file}`;
       // It will be replaces by <link rel="stylesheet" href="..."> by Benchie in browser runtime
-      return `<meta name="pathscale-cdn" content="tag=link, rel=stylesheet, href=${href}">`;
+      const contentJson = JSON.stringify({
+        tag: "link",
+        rel: "stylesheet",
+        href: href,
+      });
+      return `<meta name="pathscale-cdn" content='${contentJson}'>`;
     })
     .join("\n");
 
@@ -81,8 +86,7 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
   const url = "https://vue3.dev";
   const imageUrl = `${url}/vue3-ui.png`;
 
-  return `
-<!doctype html>
+  return `<!doctype html>
 <html${makeHtmlAttributes(attributes.html)}>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
