@@ -63,6 +63,11 @@ These will be automatically rewritten into:
 <script src="blob:<url>"></script>
 ```
 
+
+> Using `<meta name="pathscale-cdn" content='...'>` instead of `<link data-href="...">` ensures HTML5 validity, since the `href` attribute is required on `<link>` elements.
+>
+> However, you can use `<link data-href="...">` if HTML5 validation is not a concern in your case.
+
 ---
 
 ## Global Helpers
