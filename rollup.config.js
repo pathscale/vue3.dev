@@ -112,8 +112,9 @@ const template = ({ attributes, files, meta, publicPath, title }) => {
     <link rel="preconnect" href="${url}">
     <script>
     const $__CDN_LIST = [
-      window.location.origin
-    ];
+      window.location.origin,
+      'https://vue3--dev.b-cdn.net'  // Fallback CDN
+    ].filter(url => url && typeof url === 'string' && url.startsWith('http'));
     ${fs.readFileSync("cdn/benchie.min.js", "utf8").trim()}
     </script>
     ${links}
