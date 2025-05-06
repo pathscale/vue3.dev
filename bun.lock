@@ -31,6 +31,7 @@
         "@vue/compiler-sfc": "^3.5.13",
         "autoprefixer": "^10.4.21",
         "bezier-easing": "2.1.0",
+        "bulma": "1.0.4",
         "bulma-calendar": "^7.1.1",
         "bun-types": "1.2.12",
         "colorjs.io": "0.5.2",
@@ -546,7 +547,7 @@
 
     "buffer-from": ["buffer-from@1.1.2", "", {}, "sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ=="],
 
-    "bulma": ["bulma@0.9.4", "", {}, "sha512-86FlT5+1GrsgKbPLRRY7cGDg8fsJiP/jzTqXXVqiUZZ2aZT8uemEOHlU1CDU+TxklPEZ11HZNNWclRBBecP4CQ=="],
+    "bulma": ["bulma@1.0.4", "", {}, "sha512-Ffb6YGXDiZYX3cqvSbHWqQ8+LkX6tVoTcZuVB3lm93sbAVXlO0D6QlOTMnV6g18gILpAXqkG2z9hf9z4hCjz2g=="],
 
     "bulma-calendar": ["bulma-calendar@7.1.1", "", { "dependencies": { "@babel/preset-env": "^7.25.4", "date-fns": "^2.21.3", "mkdirp": "^3.0.1" }, "peerDependencies": { "bulma": "^1.0.2" } }, "sha512-E08i25KOfqMKBndgDF3y3eoQ0dUzVkgV9R53EDRM65GQUQKLzt8gcXVJYs3mYnpq6L3DiLuUt47Fl09tSv9OpA=="],
 
