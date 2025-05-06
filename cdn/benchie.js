@@ -30,6 +30,7 @@ let $__CDN;
  * Returns a blob URL.
  */
 async function fetchAndCache(url, base) {
+  console.log('URL construction params:', { url, base });
   const absoluteUrl = new URL(url, base).href;
 
   if (!window.caches) return absoluteUrl;
@@ -110,45 +111,52 @@ window.addEventListener("DOMContentLoaded", async function () {
   // Ping all CDNs in parallel — the first to respond wins
   const cdnRace = $__CDN_LIST.map(url =>
     (async function tryHead(u, signal) {
-      await fetch(u, {
-        signal,
-        cache: "no-store",
-        mode: "no-cors",
-        method: "HEAD",
-        body: null
-      });
-      return u;
+      try {
+        await fetch(u, {
+          signal,
+          cache: "no-store",
+          mode: "no-cors",
+          method: "HEAD",
+          body: null
+        });
+        return u;
+      } catch (e) {
+        return Promise.reject(e);
+      }
     })(url, abortController.signal)
   );
 
-  $__CDN = await Promise.race(cdnRace);
+  try {
+    $__CDN = await Promise.race(cdnRace);
+  } catch (e) {
+    // If all CDNs fail, use the first one that passes our validation
+    $__CDN = $__CDN_LIST[0];
+  }
+  
   abortController.abort();
-
-  // Expose the value to global scope so it won't be renamed
+  
+  // Ensure we have a valid base URL
+  if (!$__CDN) {
+    $__CDN = window.location.origin;
+  }
+  
   window.$__CDN = $__CDN;
 
-  // Collect elements for CDN resource resolution:
-  // - <meta name="pathscale-cdn">
-  // - elements with data-src or data-href
+  // Now that we have a valid CDN URL, proceed with resource resolution
   const cdnMetaElements = Array.from(document.querySelectorAll('meta[name="pathscale-cdn"]'));
   const dataSrcElements = Array.from(document.querySelectorAll("[data-src]"));
   const dataHrefElements = Array.from(document.querySelectorAll("[data-href]"));
 
-  const metaRewrites = cdnMetaElements.map(el => resolveMetaCdnElement(el));
+  // Process meta elements first
+  await Promise.all(cdnMetaElements.map(el => resolveMetaCdnElement(el, $__CDN)));
 
-  const srcRewrites = dataSrcElements.map(el =>
-    fetchAndCache(el.dataset.src, $__CDN).then(blobUrl => el.setAttribute("src", blobUrl))
-  );
+  // Then process src and href elements
+  await Promise.all([
+    ...dataSrcElements.map(el => fetchAndCache(el.dataset.src, $__CDN).then(blobUrl => el.setAttribute("src", blobUrl))),
+    ...dataHrefElements.map(el => fetchAndCache(el.dataset.href, $__CDN).then(blobUrl => el.setAttribute("href", blobUrl)))
+  ]);
 
-  const hrefRewrites = dataHrefElements.map(el =>
-    fetchAndCache(el.dataset.href, $__CDN).then(blobUrl => el.setAttribute("href", blobUrl))
-  );
-
-  await Promise.all(metaRewrites);
-  await Promise.all(srcRewrites);
-  await Promise.all(hrefRewrites);
-
-  // Watch for DOM changes and apply blob URLs if needed
+  // Watch for DOM changes
   new MutationObserver(async (mutations) => {
     for await (const mutation of mutations) {
       if (mutation.type === "attributes") {
