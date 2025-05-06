@@ -32,6 +32,7 @@
         "autoprefixer": "^10.4.21",
         "bezier-easing": "2.1.0",
         "bulma-calendar": "^7.1.1",
+        "bun-types": "1.2.12",
         "colorjs.io": "0.5.2",
         "dotenv": "^16.5.0",
         "highlight.js": "^11.11.1",
@@ -548,6 +549,8 @@
     "bulma": ["bulma@0.9.4", "", {}, "sha512-86FlT5+1GrsgKbPLRRY7cGDg8fsJiP/jzTqXXVqiUZZ2aZT8uemEOHlU1CDU+TxklPEZ11HZNNWclRBBecP4CQ=="],
 
     "bulma-calendar": ["bulma-calendar@7.1.1", "", { "dependencies": { "@babel/preset-env": "^7.25.4", "date-fns": "^2.21.3", "mkdirp": "^3.0.1" }, "peerDependencies": { "bulma": "^1.0.2" } }, "sha512-E08i25KOfqMKBndgDF3y3eoQ0dUzVkgV9R53EDRM65GQUQKLzt8gcXVJYs3mYnpq6L3DiLuUt47Fl09tSv9OpA=="],
+
+    "bun-types": ["bun-types@1.2.12", "", { "dependencies": { "@types/node": "*" } }, "sha512-tvWMx5vPqbRXgE8WUZI94iS1xAYs8bkqESR9cxBB1Wi+urvfTrF1uzuDgBHFAdO0+d2lmsbG3HmeKMvUyj6pWA=="],
 
     "callsites": ["callsites@3.1.0", "", {}, "sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ=="],
 

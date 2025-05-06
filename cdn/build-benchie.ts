@@ -1,9 +1,13 @@
+/// <reference types="bun-types" />
+
 await Bun.build({
-  entrypoints: ['benchie.js'],
-  outdir: '.',                
+  entrypoints: ["./cdn/benchie.js"],
+  outdir: "./cdn",
   minify: true,
-  target: 'browser',
+  target: "browser",
   naming: "[dir]/[name].min.[ext]",
 });
 
-console.log('✅ benchie.min.js built using Bun');
+console.log("✅ benchie.min.js built using Bun");
+
+export {};

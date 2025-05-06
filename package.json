@@ -11,22 +11,20 @@
   "author": "PathScale (https://vue3.dev/)",
   "contributors": [],
   "scripts": {
-    "prebuild": "shx rm -rf dist && shx mkdir dist && bun run build:snippets",
+    "prebuild": "shx rm -rf dist && shx mkdir dist && bun run build:benchie && bun run build:snippets",
     "build": "rollup -c --environment NODE_ENV:production",
     "postbuild": "shx cp serve.json dist",
     "build:snippets": "bun build/snippets.js",
+    "build:benchie": "bun run cdn/build-benchie.ts",
     "fetch-bundle": "./fetchBundle.sh",
-    "prestart": "shx rm -rf dist && bun run build:snippets",
+    "prestart": "shx rm -rf dist && bun run build:benchie && bun run build:snippets",
     "start": "rollup -c -w --environment NODE_ENV:development",
     "lint": "biome lint --write .",
     "lint:fix": "biome check --write .",
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,ts,vue}": [
-      "biome check --write",
-      "biome lint --write"
-    ]
+    "*.{js,ts,vue,json}": ["biome check --write", "biome lint --write"]
   },
   "devDependencies": {
     "@babel/core": "7.26.10",
@@ -57,6 +55,7 @@
     "autoprefixer": "^10.4.21",
     "bezier-easing": "2.1.0",
     "bulma-calendar": "^7.1.1",
+    "bun-types": "1.2.12",
     "colorjs.io": "0.5.2",
     "dotenv": "^16.5.0",
     "highlight.js": "^11.11.1",
