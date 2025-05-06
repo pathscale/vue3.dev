@@ -47,7 +47,7 @@ export default {
       <h2 class="title is-4">
         <a :href="`${router.currentRoute.value.path}#table`" class="is-active">#</a> Table
       </h2>
-      Check out <a @click="router.push({path: 'table'})">here</a> the Table API documentation
+      Check out <a href="table" target="_blank" rel="noopener">here</a> the Table API documentation
     </section>
   </div>
 </template>
