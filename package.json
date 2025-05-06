@@ -24,15 +24,11 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,ts,vue,json}": [
-      "biome check --write",
-      "biome lint --write"
-    ]
+    "*.{js,ts,vue,json}": ["biome check --write", "biome lint --write"]
   },
   "devDependencies": {
     "@babel/core": "7.26.10",
     "@biomejs/biome": "1.9.4",
-    "@bulvar/bulma": "^0.11.24",
     "@commitlint/cli": "19.8.0",
     "@commitlint/config-conventional": "19.8.0",
     "@pathscale/appstate-fast": "^0.0.4",
