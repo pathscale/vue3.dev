@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import zlib from "node:zlib";
-// import vue3uiPurge from "@pathscale/rollup-plugin-vue3-ui-css-purge";
+import vue3uiPurge from "@pathscale/rollup-plugin-vue3-ui-css-purge";
 import vue3svg from "@pathscale/vue3-svg-icons";
 import alias from "@rollup/plugin-alias";
 import commonjs from "@rollup/plugin-commonjs";
@@ -175,7 +175,7 @@ const config = [
       }),
       commonjs(),
       vue3svg(),
-      // prod && vue3uiPurge({ alias: aliases, debug: false }),
+      prod && vue3uiPurge({ alias: aliases, debug: false }),
       vue(),
       styles({
         mode: prod ? "extract" : "inject",
