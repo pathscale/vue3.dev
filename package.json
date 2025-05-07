@@ -24,10 +24,7 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,ts,vue,json}": [
-      "biome check --write",
-      "biome lint --write"
-    ]
+    "*.{js,ts,vue,json}": ["biome check --write", "biome lint --write"]
   },
   "devDependencies": {
     "@babel/core": "7.26.10",
@@ -57,7 +54,6 @@
     "@vue/compiler-sfc": "^3.5.13",
     "autoprefixer": "^10.4.21",
     "bezier-easing": "2.1.0",
-    "bulma": "1.0.4",
     "bulma-calendar": "^7.1.1",
     "bun-types": "1.2.12",
     "colorjs.io": "0.5.2",
