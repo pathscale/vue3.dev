@@ -101,9 +101,7 @@
     "scale": "gray",
     "category": "interactive",
     "level": 3,
-    "vars": [
-      "light"
-    ]
+    "vars": ["light"]
   },
   {
     "type": "scale",
@@ -173,7 +171,7 @@
     "scale": "gray",
     "category": "borders",
     "level": 6,
-    "vars": []
+    "vars": ["input-border-color"]
   },
   {
     "type": "scale",
@@ -181,6 +179,7 @@
     "category": "borders",
     "level": 7,
     "vars": [
+      "input-shadow-color",
       "input-focus-border-color",
       "input-focus-box-shadow-color",
       "input-focus-color",
@@ -319,9 +318,7 @@
     "scale": "accent",
     "category": "backgrounds",
     "level": 1,
-    "vars": [
-      "input-background-color"
-    ]
+    "vars": ["input-background-color"]
   },
   {
     "type": "scale",
@@ -342,17 +339,14 @@
     "scale": "accent",
     "category": "interactive",
     "level": 4,
-    "vars": [
-]
+    "vars": []
   },
   {
     "type": "scale",
     "scale": "accent",
     "category": "interactive",
     "level": 5,
-    "vars": [
- 
-    ]
+    "vars": []
   },
   {
     "type": "scale",
